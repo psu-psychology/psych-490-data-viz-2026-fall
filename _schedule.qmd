@@ -194,7 +194,7 @@
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
 - [Due]{.orange_due}: [Exercise-04](exercises/ex04-sci-of-data-viz.qmd) | [Canvas Dropbox](https://psu.instructure.com/courses/2381584/assignments/16998405)
 - [Due]{.orange_due}: [Final Project](exercises/final-project.qmd) proposal | [Canvas Dropbox](https://psu.instructure.com/courses/2381584/assignments/16998415)
-- [Assigned]{.green_assigned}: [Exercise-05](exercises/ex05-figure-prep-guidelines.qmd)
+
 - [Slides](slides/wk08-2025-03-06-critiquing-figs.qmd)
 
 ### Wed, Oct 14 {-}
@@ -205,11 +205,12 @@
   - @Knaflic2015-wq, pp. ix-33, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927897)
   - @Knaflic2015-wq, pp. 33-69, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927897)
 - Skim: @Woodside2008-yv
+- [Assigned]{.green_assigned}: [Exercise-05](exercises/ex-05-tbd.qmd)
 - [Slides](slides/wk-08-2026-10-12.qmd)
 
 ### Fri, Oct 16 {-}
 
-*Work Session: TidyTuesday*
+*Work Session: TidyTuesday or Exercise 05*
 
 - [Slides](slides/wk-08-2026-10-12.qmd)
 
@@ -218,6 +219,8 @@
 *Visualizing spatial data*
 
 ### Mon, Oct 19 {-}
+
+*Map-making*
 
 - Read: @Wilke2019-mx, Chapter 15
 
@@ -235,15 +238,21 @@
 
 ## Week 10 {- #week-10}
 
-*THEME TBD*
+*Turning the table(s)*
 
 ### Mon, Oct 26 {-}
 
+*Tables in Base R*
+
+- [Due]{.orange_due}: [Exercise-05](exercises/ex-05-tbd.qmd)
+
 ### Wed, Oct 28 {-}
+
+*`gt` and `knitr::kable`*
 
 ### Fri, Oct 30 {-}
 
-*Work Session: TBD*
+*Work Session: Tables*
 
 ## Week 11 {- #week-11}
 
