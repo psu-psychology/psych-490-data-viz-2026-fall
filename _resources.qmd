@@ -1,0 +1,34 @@
+---
+title: "_resources"
+format: html
+---
+
+- *The Economist*, especially the "graphic detail" section: <https://www.economist.com/topics/graphic-detail>
+
+- Pew Research Center: <https://www.pewresearch.org>
+
+- Our World in Data: <https://ourworldindata.org>
+
+- Tidy Tuesday: <https://github.com/rfordatascience/tidytuesday>
+
+- SCORE Sports Data Repository: <https://data.scorenetwork.org/>
+
+- Stats Bomb: <https://github.com/statsbomb/open-data>
+
+- Data.gov: <https://data.gov/>
+
+- The Nation's Report Card: <https://www.nationsreportcard.gov/>
+
+-  Federal Reserve Economic Data (FRED): <https://fred.stlouisfed.org/>
+
+- The Pudding: <https://pudding.cool/>
+
+- The Association of Religion Data Archives (ARDA): <https://www.thearda.com>
+
+- Monitoring the Future: <https://monitoringthefuture.org/results/data-access/>
+
+- Top Public-Use Datasets for Student ProjectsMonitoring the Future (MTF): An annual cross-sectional survey tracking the lifestyles, values, and drug-use behaviors of American 8th, 10th, and 12th graders. It offers massive sample sizes and a rich array of variables perfect for student demographic visualizations.General Social Survey (GSS): The gold standard for undergraduate sociological analysis. It tracks societal trends, political views, and cultural shifts in the U.S. dating back to 1972, making it ideal for historical trend line charts.National Crime Victimization Survey (NCVS): Housed within the National Archive of Criminal Justice Data (NACJD), this dataset includes non-reported criminal activities in America. Students can easily map, clean, and visualize crime types against various demographic groups.National Health and Nutrition Examination Survey (NHANES): Perfect for biology, public health, or pre-med tracks, combining interviews with physical examinations. It contains clean, continuous numeric data that works excellently for scatter plots and distribution curves.One Nation/One Project (ONOP): A newer public-use collection measuring the connection between arts participation, social cohesion, and public wellbeing 
+
+## Data Journalism
+
+- Columbia University Lede Program: <https://ledeprogram.com/>

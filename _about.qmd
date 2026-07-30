@@ -1,0 +1,36 @@
+## Instructor {-}
+
+Rick O. Gilmore, Ph.D. \
+Professor of Psychology \
+rog1 AT-SIGN psu PERIOD edu \
+
+Schedule an appointment: <https://doodle.com/mm/rickgilmore/book-a-time></br>
+
+Lab web site: <https://gilmore-lab.github.io>
+
+## Teaching Assistant {-}
+
+<!-- Sara He \ -->
+<!-- Graduate Student in Social Psychology \ -->
+<!-- cfh5558 AT-SIGN psu PERIOD edu \ -->
+<!-- Meetings by appointment over Zoom \ -->
+
+## Meeting time & location {-}
+
+Monday, Wednesday, & Friday, 3:25 pm - 4:25 pm \
+216 Osmond Lab
+
+## Canvas site
+
+We will use Canvas to submit assignments and grade them.
+The Canvas site may be found here: 
+
+<https://link.to.canvas.site>
+
+Most of the course content will be found on this site.
+
+## Course structure
+
+This is a discussion-focused course.
+On most days we will discuss readings assigned prior to class.
+On many days, we will work together or individually on the assigned [exercises](index.qmd#exercises), the final project, or another assignment.

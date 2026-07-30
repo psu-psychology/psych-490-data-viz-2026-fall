@@ -1,0 +1,63 @@
+---
+title: "slide-template"
+format: revealjs
+---
+
+# Preliminaries
+
+## For fun
+
+::: {#fig-stevie-wonder-superstition}
+<iframe width="1240" height="450" src="https://www.youtube.com/embed/97hwNY3ni10?si=2k0feL7PKLxzhtNm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+@Musikladen2020-id
+:::
+
+## Announcements
+
+## Today's topics
+
+- Warm-up
+- Topic 1
+- Topic 2
+
+# Warm-up
+
+---
+
+::: question
+## What is your name?
+
+- A. Tom
+- B. Dick
+:::
+
+::: fragment
+::: answer
+- A. Tom
+- B. Dick
+:::
+
+# Topic 1
+
+# Topic 2
+
+# Wrap-up
+
+## Main points
+
+## Next time
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.1.0.392.
+
+The source files are in R and R Markdown, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psy-511-scan-fdns-2026-spring) and served by GitHub pages:
+<https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/>
+
+## References

@@ -1,0 +1,7 @@
+---
+title: "Home"
+---
+
+{{< include _index.qmd >}}
+
+{{< include _about.qmd >}}

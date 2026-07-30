@@ -1,0 +1,257 @@
+## Week 01 {- #week-01}
+
+*Surveying the landscape*
+
+### Mon, Aug 24
+
+*Course introduction*
+
+- *Watch*: @PBSoffbook2013-zh
+
+- [Slides](slides/wk-01-2026-08-24-course-intro.qmd)
+
+### Wed, Aug 26 {-}
+
+*The semiotics of data visualization*
+
+- Read: @Cairo2013-hm, Chapter 1-2, [PDF on Canvas]()
+- [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) [assigned]{.green_assigned}
+
+- [Slides](slides/wk-01-2026-08-26-semiotics-data-viz.qmd)
+
+### Fri, Aug 28 {-}
+
+*Work Session: Introducing Quarto*
+
+- Complete: RStudio installation and setup
+
+## Week 02 {- #week-02}
+
+*Who visualizes data and why*
+
+### Mon, Aug 31 {-}
+
+*Visualization in government & business*
+
+- [Results](supplemental/psych-sci-figs.qmd) from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
+
+- [Slides](slides/wk-02-2026-08-31-govt-biz.qmd)
+
+### Wed, Sep 2 {-}
+
+*Visualization in art, sports, and journalism*
+
+- Read (recommended): @Gelman2013-he
+- [Assigned]{.green_assigned}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) 
+
+- [Slides](slides/wk02-2025-09-02-art-sports-journ.qmd)
+
+### Fri, Sep 04 {-}
+
+*Work Session*
+
+- [Due]{.orange_due}: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [Canvas dropbox]()
+
+## Week 03 {- #week-03}
+
+*Understanding figures*
+
+### Mon, Sep 07 {-}
+
+**NO CLASS: Labor Day**
+
+### Wed, Sep 09 {-}
+
+*Making (sense of) data*
+
+- Read: @Stevens1946-sh
+- Optional: 
+  - @Wikipedia-contributors2024-xu
+  - @Tourangeau2012-fr | [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=173503626).
+- [Slides](slides/wk03-2025-01-28-making-data.qmd)
+- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex03-making-data.qmd)
+
+### Fri, Sep 11 {-}
+
+*Work Session*
+
+## Week 04 {- #week-04}
+
+*The anatomy of figures*
+
+### Mon, Sep 14 {-}
+
+*Figure types*
+
+- Explore (pick at least two): 
+  - @RibeccaUnknown-tz
+  - @Hammond2024-ow
+  - @Discovery2024-la
+  - @AtlassianUnknown-ob
+- Watch: @Channel2024-so
+- [Slides](slides/wk03-2025-01-30-figure-types.qmd)
+- [Due]{.orange_due}: [Exercise 02](exercises/ex02-data-viz-outside-psych.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2381584/assignments/16998399) |
+
+### Wed, Sep 16 {-}
+
+- [Slides](slides/wk04-2025-02-04-figure-components.qmd)
+- Review: [Making and visualizing data](tutorials/tutorial-making-data.qmd)
+
+### Fri, Sep 18 {-}
+
+*Work Session*
+
+## Week 05 {- #week-05}
+
+*Visual perception*
+
+### Mon, Sep 21 {-}
+
+<!-- Yom Kippur -->
+
+**NO CLASS**
+
+### Wed, Sep 23 {-}
+
+*From stimulus to sensation*
+
+- Read: @Cairo2013-hm, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
+- [Slides](slides/wk05-2025-02-11-stim-to-sensation.qmd)
+- [Due]{.orange_due}: [Exercise-03](exercises/ex03-making-data.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2381584/assignments/16998400) |
+
+### Fri, Sep 25 {-}
+
+*Work Session*
+
+## Week 06 {- #week-06}
+
+*Visual perception*
+
+### Mon, Sep 28 {-}
+
+*From sensation to perception*
+
+- Read: 
+    - @Cairo2013-hm, Chapter 6, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
+    - @Stephen-Few2004-jv, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=174195660)
+- Optional:
+    - @Cleveland1984-py
+- [Slides](slides/wk05-2025-02-13-sensation-to-perception.qmd)
+
+### Wed, Sep 30 {-}
+
+*From cognition to understanding*
+
+ - Read:
+    - @Franconeri2021-uv, pp. 109-122, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=174557876)
+    - @Cairo2013-hm, Chapter 7, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
+- [Slides](slides/wk06-2025-02-18-cognition-to-understanding.qmd)
+- [Assigned]{.green_assigned}: [Final Project](exercises/final-project.qmd) proposal
+
+### Fri, Oct 02 {-}
+
+*Work Session*
+
+## Week 07 {- #week-07}
+
+### Mon, Oct 05 {-}
+
+### Wed, Oct 07 {-}
+
+### Fri, Oct 09 {-}
+
+*Work Session*
+
+## Week 08 {- #week-08}
+
+### Mon, Oct 12 {-}
+
+### Wed, Oct 14 {-}
+
+### Fri, Oct 16 {-}
+
+*Work Session*
+
+## Week 09 {- #week-09}
+
+### Mon, Oct 19 {-}
+
+### Wed, Oct 21 {-}
+
+### Fri, Oct 23 {-}
+
+*Work Session*
+
+## Week 10 {- #week-10}
+
+### Mon, Oct 26 {-}
+
+### Wed, Oct 28 {-}
+
+### Fri, Oct 30 {-}
+
+*Work Session*
+
+## Week 11 {- #week-11}
+
+### Mon, November 02 {-}
+
+### Wed, November 04 {-}
+
+### Fri, November 06
+
+*Work Session*
+
+## Week 12 {- #week-12}
+
+### Mon, November 09 {-}
+
+### Wed, November 11 {-}
+
+### Fri, November 13
+
+*Work Session*
+
+## Week 13 {- #week-13}
+
+### Mon, November 16 {-}
+
+### Wed, November 18 {-}
+
+### Fri, November 20 {-}
+
+*Work Session*
+
+## Thanksgiving Break
+
+**NO CLASS**
+
+## Week 14 {- #week-14}
+
+### Mon, November 30 {-}
+
+### Wed, December 02 {-}
+
+### Fri, December 04
+
+*Work Session*
+
+## Week 15 {- #week-16}
+
+### Mon, December 07 {-}
+
+*Final Project Presentations*
+
+### Wed, December 09 {-}
+
+*Final Project Presentations*
+
+### Fri, December 11
+
+*Final Project Presentations*
+
+## Finals Week {- #finals-week}
+
+### Wed, Dec 16 {-}
+
+- [Due]{.orange_due}: [Final project](exercises/final-project.qmd) write-up | [Canvas dropbox]()

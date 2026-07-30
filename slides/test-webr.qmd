@@ -1,0 +1,41 @@
+---
+title: "Interactive WebR Slides"
+format: revealjs
+filters:
+  - webr
+---
+
+## Example
+
+```{webr}
+#| edit: true
+#| include: true
+
+fit <- lm(mpg ~ wt, data = mtcars) 
+summary(fit)
+```
+
+---
+
+::: {.panel-tabset}
+
+### Mean 0, SD 1
+
+```{webr}
+#| edit: true
+#| include: true
+
+n0 <- rnorm(n = 1000, mean = 0, sd = 1)
+hist(n0)
+```
+
+### Mean 0.5, sd = 1
+
+```{webr}
+#| edit: true
+#| include: true
+n0_5 <- rnorm(n = 1000, mean = 0.5, sd = 1)
+hist(n0_5)
+```
+
+:::

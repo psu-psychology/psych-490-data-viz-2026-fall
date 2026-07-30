@@ -1,0 +1,7 @@
+---
+title: "Policies"
+---
+
+{{< include _policies.qmd >}}
+
+{{< include _values.qmd >}}

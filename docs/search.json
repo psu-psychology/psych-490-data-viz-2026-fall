@@ -1,0 +1,362 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "The Psychology of Data Visualization",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#the-psychology-of-data-visualization",
+    "href": "index.html#the-psychology-of-data-visualization",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#themes",
+    "href": "index.html#themes",
+    "title": "The Psychology of Data Visualization",
+    "section": "Themes",
+    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "The Psychology of Data Visualization",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\nSchedule an appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-assistant",
+    "href": "index.html#teaching-assistant",
+    "title": "The Psychology of Data Visualization",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#meeting-time-location",
+    "href": "index.html#meeting-time-location",
+    "title": "The Psychology of Data Visualization",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:25 pm - 4:25 pm\n216 Osmond Lab",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#canvas-site",
+    "href": "index.html#canvas-site",
+    "title": "The Psychology of Data Visualization",
+    "section": "Canvas site",
+    "text": "Canvas site\nWe will use Canvas to submit assignments and grade them. The Canvas site may be found here:\nhttps://link.to.canvas.site\nMost of the course content will be found on this site.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment.\n\n\n\n\n\n\nWikipedia contributors. (2024, August). A picture is worth a thousand words. https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words; Wikimedia Foundation, Inc.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week 01\nSurveying the landscape",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-01",
+    "href": "schedule.html#week-01",
+    "title": "Schedule",
+    "section": "",
+    "text": "Mon, Aug 24\nCourse introduction\n\nSlides \n\n\n\nWed, Aug 26\nThe semiotics of data visualization\n\nRead: Cairo (2013), Chapter 1-2, PDF on Canvas\nSlides\n\n\n\nFri, Aug 28\nWork Session: Introducing Quarto",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-02",
+    "href": "schedule.html#week-02",
+    "title": "Schedule",
+    "section": "Week 02",
+    "text": "Week 02\n\nMon, Aug 31, 2026\n\n\nWed, Sep 2\n\n\nFri, Sep 04",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-03",
+    "href": "schedule.html#week-03",
+    "title": "Schedule",
+    "section": "Week 03",
+    "text": "Week 03\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\n\n\nFri, Sep 11",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-04",
+    "href": "schedule.html#week-04",
+    "title": "Schedule",
+    "section": "Week 04",
+    "text": "Week 04\n\nMon, Sep 14\n\n\nWed, Sep 16\n\n\nFri, Sep 18",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-05",
+    "href": "schedule.html#week-05",
+    "title": "Schedule",
+    "section": "Week 05",
+    "text": "Week 05\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\n\n\nFri, Sep 25",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-06",
+    "href": "schedule.html#week-06",
+    "title": "Schedule",
+    "section": "Week 06",
+    "text": "Week 06\n\nMon, Sep 28\n\n\nWed, Sep 30\n\n\nFri, Oct 02",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-07",
+    "href": "schedule.html#week-07",
+    "title": "Schedule",
+    "section": "Week 07",
+    "text": "Week 07\n\nMon, Oct 05\n\n\nWed, Oct 07\n\n\nFri, Oct 09",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-08",
+    "href": "schedule.html#week-08",
+    "title": "Schedule",
+    "section": "Week 08",
+    "text": "Week 08\n\nMon, Oct 12\n\n\nWed, Oct 14\n\n\nFri, Oct 16",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-09",
+    "href": "schedule.html#week-09",
+    "title": "Schedule",
+    "section": "Week 09",
+    "text": "Week 09\n\nMon, Oct 19\n\n\nWed, Oct 21\n\n\nFri, Oct 23",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-10",
+    "href": "schedule.html#week-10",
+    "title": "Schedule",
+    "section": "Week 10",
+    "text": "Week 10\n\nMon, Oct 26\n\n\nWed, Oct 28\n\n\nFri, Oct 30",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-11",
+    "href": "schedule.html#week-11",
+    "title": "Schedule",
+    "section": "Week 11",
+    "text": "Week 11\n\nMon, November 02\n\n\nWed, November 04\n\n\nFri, November 06",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-12",
+    "href": "schedule.html#week-12",
+    "title": "Schedule",
+    "section": "Week 12",
+    "text": "Week 12\n\nMon, November 09\n\n\nWed, November 11\n\n\nFri, November 13",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-13",
+    "href": "schedule.html#week-13",
+    "title": "Schedule",
+    "section": "Week 13",
+    "text": "Week 13\n\nMon, November 16\n\n\nWed, November 18\n\n\nFri, November 20",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#thanksgiving-break",
+    "href": "schedule.html#thanksgiving-break",
+    "title": "Schedule",
+    "section": "Thanksgiving Break",
+    "text": "Thanksgiving Break\nNO CLASS",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-14",
+    "href": "schedule.html#week-14",
+    "title": "Schedule",
+    "section": "Week 14",
+    "text": "Week 14\n\nMon, November 30\n\n\nWed, December 02\n\n\nFri, December 04",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-16",
+    "href": "schedule.html#week-16",
+    "title": "Schedule",
+    "section": "Week 15",
+    "text": "Week 15\n\nMon, December 07\n\n\nWed, December 09\n\n\nFri, December 11",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "schedule.html#finals-week",
+    "href": "schedule.html#finals-week",
+    "title": "Schedule",
+    "section": "Finals Week",
+    "text": "Finals Week\n\n\n\n\n\n\nCairo, A. (2013). The functional art: An introduction to information graphics and visualization. Upper Saddle River, N: New Riders Publishing.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "Evaluation",
+    "section": "",
+    "text": "Elements",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#eval-components",
+    "href": "evaluation.html#eval-components",
+    "title": "Evaluation",
+    "section": "",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 25.\n25\n\n\nExercises\nThere will be seven (7) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or less. Your final project is worth 35 points.\n35\n\n\n\nTOTAL POINTS POSSIBLE\n100\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#grading-scheme",
+    "href": "evaluation.html#grading-scheme",
+    "title": "Evaluation",
+    "section": "Grading Scheme",
+    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n94+\nA\n\n\n90-93\n90-93\nA-\n\n\n87-89\n87-89\nB+\n\n\n84-86\n84-86\nB\n\n\n80-83\n80-83\nB-\n\n\n77-79\n77-70\nC+\n\n\n70-76\n70-76\nC\n\n\n60-69\n60-69\nD\n\n\n&lt;59\n&lt;=59\nF",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "deadlines.html",
+    "href": "deadlines.html",
+    "title": "Deadlines",
+    "section": "",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2025-01-23\nExercise 01\n\n\n2025-01-30\nExercise 02\n\n\n2025-02-11\nExercise 03\n\n\n2025-03-06\nFinal project proposal due\n\n\n2025-03-06\nExercise 04\n\n\n2025-03-27\nExercise 05\n\n\n2025-04-03\nExercise 06\n\n\n2025-04-08\nFinal project survey\n\n\n2025-04-17\nExercise 07\n\n\n2025-05-05\nFinal project writeup due",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Deadlines</span>"
+    ]
+  },
+  {
+    "objectID": "policies.html",
+    "href": "policies.html",
+    "title": "Policies",
+    "section": "",
+    "text": "Academic Integrity\nStudents with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policies</span>"
+    ]
+  },
+  {
+    "objectID": "policies.html#values",
+    "href": "policies.html#values",
+    "title": "Policies",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policies</span>"
+    ]
+  },
+  {
+    "objectID": "meta.html",
+    "href": "meta.html",
+    "title": "Under the hood",
+    "section": "",
+    "text": "About\nThis page describes how the site is created and rendered.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Meta</span>"
+    ]
+  },
+  {
+    "objectID": "meta.html#workflow",
+    "href": "meta.html#workflow",
+    "title": "Under the hood",
+    "section": "Workflow",
+    "text": "Workflow\nThe site is written in Quarto.\nA site-wide YAML file (_quarto.yml) controls the rendering process.\nSeparate directories contain lecture slides (slides/), exercises (exercises/), class-specific R functions (R/), surveys (surveys/), and tutorials (tutorials/). Quarto files with underscores (e.g., _index.qmd, _about.qmd, _evaluation.qmd, _schedule.qmd, and values.qmd) are the main targets for editing and updating. Parent files (e.g., index.qmd, evaluation.qmd, policies.qmd, and schedule.qmd) call upon these child files in the rendering process.\nA separate Quarto file (psych-490.007-2026-fall-syllabus.qmd) generates a PDF version of a syllabus.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Meta</span>"
+    ]
+  },
+  {
+    "objectID": "meta.html#rendering",
+    "href": "meta.html#rendering",
+    "title": "Under the hood",
+    "section": "Rendering",
+    "text": "Rendering\nTo render the full site, quarto render src is executed from the command line. The fully rendered website is written to docs/.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Meta</span>"
+    ]
+  },
+  {
+    "objectID": "meta.html#software",
+    "href": "meta.html#software",
+    "title": "Under the hood",
+    "section": "Software",
+    "text": "Software\nThe site uses the renv package to try to make all computation reproducible.\nIn addition, the site uses softbib to generate a full reference list of the package dependencies. This is saved in src/include/bib.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Meta</span>"
+    ]
+  }
+]

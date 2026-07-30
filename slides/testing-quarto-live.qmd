@@ -1,0 +1,21 @@
+---
+title: "Testing quarto-live"
+format: live-revealjs
+engine: knitr
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+
+## Here
+
+```{webr}
+for (x in 1:5) {
+  print(x ** 2)
+}
+```
+
+```{webr}
+fit <- lm(mpg ~ wt, data = mtcars) 
+summary(fit)
+```
+

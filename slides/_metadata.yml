@@ -1,0 +1,30 @@
+subtitle: "PSY 490.007 Fall 2026"
+execute:
+  freeze: auto  # re-render only when source changes
+format:
+  revealjs:
+    footer: "[PSY 490.007](https://psu-psychology.github.io/psych-490-data-viz-2026-spring) | © 2026 Rick Gilmore under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+    slide-number: true
+    fig-align: center
+    logo: https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg
+    theme: [serif, ../include/css/psu.scss]
+    mainfont: roboto
+    code-fold: true
+    code-tools: true
+    chalkboard: true
+    link-external-icon: true
+    citations-hover: true
+    author: "Rick Gilmore"
+    institute: "Department of Psychology"
+    reference-location: document
+    lightbox: true
+    bibliography: [../include/bib/packages.bib, ../include/bib/data-viz.bib]
+custom-callout:
+  question:
+    icon-symbol: "fa-question"
+    color: "pink"
+  answer:
+    icon-symbol: "fa-check"
+    color: "blue"
+filters:
+  - custom-callout

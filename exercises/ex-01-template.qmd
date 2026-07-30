@@ -1,0 +1,45 @@
+---
+title: "Exercise 01"
+author: ["Rick Gilmore", "Fred Rogers"]
+---
+
+## About
+
+This document summarizes work related to the [PSYCH 490.007](https://psu-psychology.github.io/psych-490-data-viz-2026-spring) assignment on visualization in psychological science.
+
+## Figures
+
+![Caption for figure 01; include citation](https://url-to-figure){#fig-01}
+
+![Caption for figure 02](path/to/local/figure.png){#fig-02}
+
+![Caption for figure 03](https://url-to-figure){#fig-03}
+
+### Professional society or association websites
+
+![Caption for figure 04](https://url-to-figure-04){#fig-04}
+
+![Caption for figure 05](path/to/local/figure.png){#fig-05}
+
+![Caption for figure 06](https://url-to-figure){#fig-06}
+
+### Scientific journals
+
+## Commentary
+
+::: {.callout-note}
+
+*Introduction: What you did and what you found*
+
+*Discussion of one figure*
+
+*Discussion of a second figure*
+
+*Discussion of a third figure*
+
+*Conclusion: What are the one or two main take-home messages?*
+
+:::
+
+## References
+
