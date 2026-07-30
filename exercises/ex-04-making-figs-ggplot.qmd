@@ -1,0 +1,17 @@
+---
+title: "Exercise 04"
+subtitle: "Making figures with `ggplot`"
+format: html
+---
+
+## Dates {-}
+
+We'll work on this exercise in-class on Friday, September 18, and Friday, September 25, 2026.
+
+The write-up is [due]{.orange_due} on [Friday, October 2, 2026](../schedule.qmd#fri-oct-02).
+
+## Goals {-}
+
+1. Create some simple figures in R using the `ggplot2` package.
+2. Gain an appreciation of the costs and benefits of scripting the generation of figures.
+3. Lay the foundation for using `ggplot2` to create more advanced and informative figures.

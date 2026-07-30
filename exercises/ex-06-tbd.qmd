@@ -1,0 +1,14 @@
+---
+title: "Exercise 06"
+subtitle: "TBD"
+format: html
+---
+
+::: {.callout-warning}
+This page is a under construction.
+:::
+
+## Dates {-}
+
+## Goals {-}
+

@@ -48,12 +48,12 @@ The proposal is due on [Thursday, March 6]{.orange_due}.
 
 - Every student or team may make an *optional* presentation to the class about their project. Please indicate whether you are willing to make a presentation when you complete the [survey](final-project.qmd#survey).
 - **Note**: Giving a presentation is worth 5 extra credit points.
-- The presentations will occur during class on April 24, 29, and May 1.
+- The presentations will occur during class on December 7, 9, and 11.
 - If you wish to have your presentation made available publicly on the course website, please let me know. This is also completely optional.
 
 ### Project write-up
     
-- Every student or team must submit a write-up, [due]{.orange_due} during finals week on [Tuesday, May 05](../schedule.qmd#tuesday-may-05).
+- Every student or team must submit a write-up, [due]{.orange_due} during finals week on [Wednesday, December 16](../schedule.qmd#wed-dec-16).
 - Depending on the format of the project (talk, poster, paper), different written materials may be submitted (slides, poster, etc.).
 - For an in-class talk, submit a separate document with your talk text or notes and your slides. You may also submit slides that include presenter notes embedded within them.
 - For a poster, submit a PowerPoint or PDF of your poster along with any talking points.
@@ -64,11 +64,11 @@ The proposal is due on [Thursday, March 6]{.orange_due}.
   - *Tutorial video*: how to make a poster
 <https://www.youtube.com/watch?v=EL5YwkiqBho&ab_channel=SamHertig>
   - *Other basics*: <https://guides.libraries.psu.edu/posters>
-- For research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length.
+- For research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length (~ 7-10 double-spaced pages).
 - For an opinion piece, please submit a document up to 1,500 words in length.
 - For an interactive website or presentation, please submit a complete set of files needed to evaluate your website or presentation.
 - For a lesson plan, please submit a document up up to 1,500 words in length.
 
-## Survey
+<!-- ## Survey -->
 
-- Please provide information about your project via this Google Form: <https://forms.gle/oyotxgnnqchqnSgTA>
+<!-- - Please provide information about your project via this Google Form: <https://forms.gle/oyotxgnnqchqnSgTA> -->

@@ -48,7 +48,7 @@
 
 ### Fri, Sep 04 {-}
 
-*Work Session*
+*Work Session: More Quarto*
 
 - [Due]{.orange_due}: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [Canvas dropbox]()
 
@@ -68,12 +68,15 @@
 - Optional: 
   - @Wikipedia-contributors2024-xu
   - @Tourangeau2012-fr | [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=173503626).
+- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
+
 - [Slides](slides/wk03-2025-01-28-making-data.qmd)
-- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex03-making-data.qmd)
 
 ### Fri, Sep 11 {-}
 
-*Work Session*
+*Work Session: Into to R*
+
+- [Due]{.orange_due}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [Canvas dropbox]() | 
 
 ## Week 04 {- #week-04}
 
@@ -90,7 +93,6 @@
   - @AtlassianUnknown-ob
 - Watch: @Channel2024-so
 - [Slides](slides/wk03-2025-01-30-figure-types.qmd)
-- [Due]{.orange_due}: [Exercise 02](exercises/ex02-data-viz-outside-psych.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2381584/assignments/16998399) |
 
 ### Wed, Sep 16 {-}
 
@@ -99,7 +101,7 @@
 
 ### Fri, Sep 18 {-}
 
-*Work Session*
+*Work Session: Intro to ggplot*
 
 ## Week 05 {- #week-05}
 
@@ -117,11 +119,12 @@
 
 - Read: @Cairo2013-hm, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
 - [Slides](slides/wk05-2025-02-11-stim-to-sensation.qmd)
-- [Due]{.orange_due}: [Exercise-03](exercises/ex03-making-data.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2381584/assignments/16998400) |
 
 ### Fri, Sep 25 {-}
 
-*Work Session*
+*Work Session: More ggplot*
+
+- [Due]{.orange_due}: [Exercise-03](exercises/ex03-making-data.qmd) | [Canvas dropbox]() |
 
 ## Week 06 {- #week-06}
 
@@ -136,6 +139,7 @@
     - @Stephen-Few2004-jv, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=174195660)
 - Optional:
     - @Cleveland1984-py
+    
 - [Slides](slides/wk05-2025-02-13-sensation-to-perception.qmd)
 
 ### Wed, Sep 30 {-}
@@ -145,12 +149,15 @@
  - Read:
     - @Franconeri2021-uv, pp. 109-122, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=174557876)
     - @Cairo2013-hm, Chapter 7, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
-- [Slides](slides/wk06-2025-02-18-cognition-to-understanding.qmd)
 - [Assigned]{.green_assigned}: [Final Project](exercises/final-project.qmd) proposal
+
+- [Slides](slides/wk06-2025-02-18-cognition-to-understanding.qmd)
 
 ### Fri, Oct 02 {-}
 
-*Work Session*
+*Work Session: Visualizing sports data*
+
+- [Due]{.orange_due}: [Exercise-04](exercises/ex04-figs-ggplot.qmd) | [Canvas dropbox]() |
 
 ## Week 07 {- #week-07}
 
@@ -160,7 +167,7 @@
 
 ### Fri, Oct 09 {-}
 
-*Work Session*
+*Work Session: More sports data*
 
 ## Week 08 {- #week-08}
 
@@ -170,7 +177,7 @@
 
 ### Fri, Oct 16 {-}
 
-*Work Session*
+*Work Session: Data viz challenge*
 
 ## Week 09 {- #week-09}
 
@@ -180,7 +187,7 @@
 
 ### Fri, Oct 23 {-}
 
-*Work Session*
+*Work Session: Data viz challenge II*
 
 ## Week 10 {- #week-10}
 
@@ -220,7 +227,7 @@
 
 ### Fri, November 20 {-}
 
-*Work Session*
+*Work Session: Final projects*
 
 ## Thanksgiving Break
 
@@ -234,7 +241,7 @@
 
 ### Fri, December 04
 
-*Work Session*
+*Work Session: Final projects*
 
 ## Week 15 {- #week-16}
 
