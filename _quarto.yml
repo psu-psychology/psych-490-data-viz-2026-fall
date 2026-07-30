@@ -58,7 +58,7 @@ format:
     link-external-icon: true
     date-modified: last-modified
     date: today
-    bibliography: [include/bib/packages.bib, include/bib/data-viz.bib]
+    bibliography: [include/bib/packages.bib, include/bib/data-viz.bib, include/bib/grateful-refs.bib]
     csl: include/bib/apa.csl
     html-math-method: mathjax
     code-fold: true

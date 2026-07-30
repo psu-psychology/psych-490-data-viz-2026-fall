@@ -144,7 +144,7 @@
     "href": "schedule.html#week-06",
     "title": "Schedule",
     "section": "Week 06",
-    "text": "Week 06\nVisual perception\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\nDue: Exercise-04 | Canvas dropbox |",
+    "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\nDue: Exercise-04 | Canvas dropbox |",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "schedule.html#week-07",
     "title": "Schedule",
     "section": "Week 07",
-    "text": "Week 07\n\nMon, Oct 05\n\n\nWed, Oct 07\n\n\nFri, Oct 09\nWork Session: More sports data",
+    "text": "Week 07\n\nMon, Oct 05\nExploring data\n\nRead: Tukey (1977), Chapter 1, PDF on Canvas –&gt;\n\n\n\nWed, Oct 07\nCommunicating uncertainty and risk\n\nRead: Franconeri et al. (2021), pp. 139-150, PDF on Canvas\nRead: Wilke (2019), Ch. 16\nSlides\n\n\n\nFri, Oct 09\nWork Session: More sports data viz",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "schedule.html#week-08",
     "title": "Schedule",
     "section": "Week 08",
-    "text": "Week 08\n\nMon, Oct 12\n\n\nWed, Oct 14\n\n\nFri, Oct 16\nWork Session: Data viz challenge",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nDue: Exercise-04 | Canvas Dropbox\nDue: Final Project proposal | Canvas Dropbox\nAssigned: Exercise-05\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008)\n\n\n\nFri, Oct 16\nWork Session: TidyTuesday",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -174,7 +174,7 @@
     "href": "schedule.html#week-09",
     "title": "Schedule",
     "section": "Week 09",
-    "text": "Week 09\n\nMon, Oct 19\n\n\nWed, Oct 21\n\n\nFri, Oct 23\nWork Session: Data viz challenge II",
+    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\n\nRead: Wilke (2019), Chapter 15\nSlides\n\n\n\nWed, Oct 21\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday II",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\n\nMon, Oct 26\n\n\nWed, Oct 28\n\n\nFri, Oct 30\nWork Session",
+    "text": "Week 10\nTHEME TBD\n\nMon, Oct 26\n\n\nWed, Oct 28\n\n\nFri, Oct 30\nWork Session: TBD",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -194,7 +194,7 @@
     "href": "schedule.html#week-11",
     "title": "Schedule",
     "section": "Week 11",
-    "text": "Week 11\n\nMon, November 02\n\n\nWed, November 04\n\n\nFri, November 06\nWork Session",
+    "text": "Week 11\nData viz and politics\n\nMon, November 02\n\n\nWed, November 04\n\n\nFri, November 06\nWork Session: More TidyTuesday",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -204,7 +204,7 @@
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nMon, November 09\n\n\nWed, November 11\n\n\nFri, November 13\nWork Session",
+    "text": "Week 12\nData viz and inference\n\nMon, November 09\nSynthesize before you analyze\n\n\nWed, November 11\nSample size, effect size, statistical power\n\n\nFri, November 13\nWork Session: Final Projects",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -214,7 +214,7 @@
     "href": "schedule.html#week-13",
     "title": "Schedule",
     "section": "Week 13",
-    "text": "Week 13\n\nMon, November 16\n\n\nWed, November 18\n\n\nFri, November 20\nWork Session: Final projects",
+    "text": "Week 13\nTHEME TBD\n\nMon, November 16\n\n\nWed, November 18\n\n\nFri, November 20\nWork Session: Final projects",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -234,7 +234,7 @@
     "href": "schedule.html#week-14",
     "title": "Schedule",
     "section": "Week 14",
-    "text": "Week 14\n\nMon, November 30\n\n\nWed, December 02\n\n\nFri, December 04\nWork Session: Final projects",
+    "text": "Week 14\n\nMon, November 30\nMaking data dashboards and apps\n\nExplore: Kohler (2024)\nSlides\n\n\n\nWed, December 02\nWork Session: Final projects\n\n\nFri, December 04\nWork Session: Final projects",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
@@ -254,7 +254,7 @@
     "href": "schedule.html#finals-week",
     "title": "Schedule",
     "section": "Finals Week",
-    "text": "Finals Week\n\nWed, Dec 16\n\nDue: Final project write-up | Canvas dropbox\n\n\n\n\n\n\n\nAtlassian. (n.d.). Essential chart types for data visualization. Retrieved January 24, 2025, from https://www.atlassian.com/data/charts/essential-chart-types-for-data-visualization\n\n\nCairo, A. (2013). The functional art: An introduction to information graphics and visualization. Upper Saddle River, N: New Riders Publishing.\n\n\nChannel, M. O. (2024). Every CHART types explained in 12 minutes. Youtube. Retrieved from https://www.youtube.com/watch?v=cuMwWvtNmJ0\n\n\nCleveland, W. S., & McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79, 531–554. https://doi.org/10.1080/01621459.1984.10478080\n\n\nDiscovery, J. S. (2024, January 4). Types of graphs. Retrieved January 24, 2025, from https://www.jmp.com/en_us/statistics-knowledge-portal/exploratory-data-analysis/types-of-graphs.html\n\n\nFew, S. (2004). Show me the numbers: Designing tables and graphs to enlighten. Oakland, CA: Analytics Press.\n\n\nFranconeri, S. L., Padilla, L. M., Shah, P., Zacks, J. M., & Hullman, J. (2021). The science of visual data communication: What works. Psychological Science in the Public Interest: A Journal of the American Psychological Society, 22(3), 110–161. https://doi.org/10.1177/15291006211051956\n\n\nGelman, A., & Unwin, A. (2013). Infovis and statistical graphics: Different goals, different looks. Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America, 22, 2–28. https://doi.org/10.1080/10618600.2012.761137\n\n\nHammond, T. (2024, November 26). 20 types of charts and graphs for data visualization. Retrieved January 24, 2025, from https://www.thoughtspot.com/data-trends/data-visualization/types-of-charts-graphs\n\n\nPBSoffbook. (2013). The art of data visualization | off book | PBS digital studios. Youtube. Retrieved from https://www.youtube.com/watch?v=AdSZJzb-aX8&t=3s\n\n\nRibecca, S. (n.d.). The data visualisation catalogue. Retrieved January 24, 2025, from https://datavizcatalogue.com/index.html\n\n\nStevens, S. S. (1946). On the theory of scales of measurement. Science (New York, N.Y.), 103, 677–680. https://doi.org/10.1126/science.103.2684.677\n\n\nTourangeau, R., Rips, L. J., & Rasinski, K. (2012). The Psychology of Survey Response. Cambridge, England: Cambridge University Press. https://doi.org/10.1017/cbo9780511819322\n\n\nWikipedia contributors. (2024, November 23). Statistical data type. Retrieved from https://en.wikipedia.org/wiki/Statistical_data_type",
+    "text": "Finals Week\n\nWed, Dec 16\n\nDue: Final project write-up | Canvas dropbox\n\n\n\n\n\n\n\nAtlassian. (n.d.). Essential chart types for data visualization. Retrieved January 24, 2025, from https://www.atlassian.com/data/charts/essential-chart-types-for-data-visualization\n\n\nCairo, A. (2013). The functional art: An introduction to information graphics and visualization. Upper Saddle River, N: New Riders Publishing.\n\n\nChannel, M. O. (2024). Every CHART types explained in 12 minutes. Youtube. Retrieved from https://www.youtube.com/watch?v=cuMwWvtNmJ0\n\n\nCleveland, W. S., & McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79, 531–554. https://doi.org/10.1080/01621459.1984.10478080\n\n\nDiscovery, J. S. (2024, January 4). Types of graphs. Retrieved January 24, 2025, from https://www.jmp.com/en_us/statistics-knowledge-portal/exploratory-data-analysis/types-of-graphs.html\n\n\nFew, S. (2004). Show me the numbers: Designing tables and graphs to enlighten. Oakland, CA: Analytics Press.\n\n\nFranconeri, S. L., Padilla, L. M., Shah, P., Zacks, J. M., & Hullman, J. (2021). The science of visual data communication: What works. Psychological Science in the Public Interest: A Journal of the American Psychological Society, 22(3), 110–161. https://doi.org/10.1177/15291006211051956\n\n\nGelman, A., & Unwin, A. (2013). Infovis and statistical graphics: Different goals, different looks. Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America, 22, 2–28. https://doi.org/10.1080/10618600.2012.761137\n\n\nHammond, T. (2024, November 26). 20 types of charts and graphs for data visualization. Retrieved January 24, 2025, from https://www.thoughtspot.com/data-trends/data-visualization/types-of-charts-graphs\n\n\nKnaflic, C. N. (2015). Storytelling with data. Hoboken, NJ: John Wiliey & Sons.\n\n\nKohler, T. (2024, January 10). Psychology for UX: Study guide. Retrieved April 11, 2025, from https://www.nngroup.com/articles/psychology-study-guide/\n\n\nPBSoffbook. (2013). The art of data visualization | off book | PBS digital studios. Youtube. Retrieved from https://www.youtube.com/watch?v=AdSZJzb-aX8&t=3s\n\n\nRibecca, S. (n.d.). The data visualisation catalogue. Retrieved January 24, 2025, from https://datavizcatalogue.com/index.html\n\n\nStevens, S. S. (1946). On the theory of scales of measurement. Science (New York, N.Y.), 103, 677–680. https://doi.org/10.1126/science.103.2684.677\n\n\nTourangeau, R., Rips, L. J., & Rasinski, K. (2012). The Psychology of Survey Response. Cambridge, England: Cambridge University Press. https://doi.org/10.1017/cbo9780511819322\n\n\nTufte, E. R. (2001). The Visual Display of Quantitative Information. Graphics Pr.\n\n\nTukey, J. W. (1977). Exploratory data analysis. Upper Saddle River, NJ: Pearson. Retrieved from https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160\n\n\nWikipedia contributors. (2024, November 23). Statistical data type. Retrieved from https://en.wikipedia.org/wiki/Statistical_data_type\n\n\nWilke, C. O. (2019). Fundamentals of data visualization: A primer on making informative and compelling figures. Sebastopol, CA: O’Reilly Media. Retrieved from https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089\n\n\nWoodside, A. G., Sood, S., & Miller, K. E. (2008). When consumers and brands talk: Storytelling theory and research in psychology and marketing. Psychology & Marketing, 25, 97–145. https://doi.org/10.1002/mar.20203",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
     ]
