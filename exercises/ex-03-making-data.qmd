@@ -6,7 +6,7 @@ format: html
 
 ## Dates {-}
 
-In-class work on Friday, September 11 and Friday, September 18, 2026
+In-class work on Friday, September 11 and Friday, September 18, 2026.
 
 Submit write-up for credit [due]{.orange_due} by [Friday, September 25, 2026](../schedule.qmd#fri-sep-25).
 

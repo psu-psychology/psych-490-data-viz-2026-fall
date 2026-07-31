@@ -22,7 +22,7 @@
 *Work Session: Introducing Quarto*
 
 - Complete: RStudio installation and setup
-- [Slides](slides/wk-01-2026-08-28.qmd)
+- [Slides](slides/wk-01-2026-08-28-introducing-quarto.qmd)
 
 ## Week 02 {- #week-02}
 
@@ -35,7 +35,7 @@
 - [Results]() from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
 - [Slides](slides/wk-02-2026-08-31-govt-biz.qmd)
 
-### Wed, Sep 02 {-}
+### Wed, Sep 2 {-}
 
 *Visualization in art, sports, and journalism*
 
@@ -73,6 +73,7 @@
 
 *Work Session: Intro to R*
 
+- [Due]{.orange_due}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [Canvas dropbox]() | 
 - [Slides](slides/wk-02-2026-09-11.qmd)
 
 ## Week 04 {- #week-04}
@@ -101,7 +102,6 @@
 *Work Session: Intro to ggplot*
 
 - *Review*: [Making and visualizing data](tutorials/tutorial-making-data.qmd)
-- [Due]{.orange_due}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [Canvas dropbox]() | 
 - [Slides](slides/wk-04-2026-09-18.qmd)
 
 ## Week 05 {- #week-05}
@@ -192,6 +192,7 @@
 - Read: 
     - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
+- [Due]{.orange_due}: [Exercise-04](exercises/ex04-sci-of-data-viz.qmd) | [Canvas Dropbox](https://psu.instructure.com/courses/2381584/assignments/16998405)
 - [Due]{.orange_due}: [Final Project](exercises/final-project.qmd) proposal | [Canvas Dropbox](https://psu.instructure.com/courses/2381584/assignments/16998415)
 
 - [Slides](slides/wk08-2025-03-06-critiquing-figs.qmd)
@@ -219,13 +220,15 @@
 
 ### Mon, Oct 19 {-}
 
-*Map-making*
+*Map-reading and map-making*
 
 - Read: @Wilke2019-mx, Chapter 15
 
 - [Slides](slides/wk-09-2026-10-19.qmd)
 
 ### Wed, Oct 21 {-}
+
+*Map-reading and map-making*
 
 - [Slides](slides/wk-09-2026-10-21.qmd)
 
@@ -234,6 +237,7 @@
 *Work Session: TidyTuesday II*
 
 - [Slides](slides/wk-09-2026-10-23.qmd)
+- [Assigned]{.green_assigned}: [Exercise-06](exercises/ex-06-tbd.qmd)
 
 ## Week 10 {- #week-10}
 
@@ -255,9 +259,11 @@
 
 ## Week 11 {- #week-11}
 
-*Data viz and politics*
+*Data viz and your world*
 
 ### Mon, November 02 {-}
+
+*Our World in Data*
 
 ### Wed, November 04 {-}
 
@@ -267,7 +273,7 @@
 
 ## Week 12 {- #week-12}
 
-*Data viz and inference*
+*Data viz and quantitative inference*
 
 ### Mon, November 09 {-}
 
@@ -281,13 +287,13 @@
 
 *Work Session: Final Projects*
 
+- [Due]{.orange_due}: [Exercise-06](exercises/ex-06-tbd.qmd)
+
 ## Week 13 {- #week-13}
 
-*THEME TBD*
+*Students' Choice*
 
 ### Mon, November 16 {-}
-
-- [Due]{.orange_due}: [Exercise-06](exercises/ex-06-tbd.qmd)
 
 ### Wed, November 18 {-}
 
@@ -335,5 +341,3 @@
 ### Wed, Dec 16 {-}
 
 - [Due]{.orange_due}: [Final project](exercises/final-project.qmd) write-up | [Canvas dropbox]()
-
----

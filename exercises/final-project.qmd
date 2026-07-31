@@ -64,7 +64,7 @@ The proposal is due on [Thursday, March 6]{.orange_due}.
   - *Tutorial video*: how to make a poster
 <https://www.youtube.com/watch?v=EL5YwkiqBho&ab_channel=SamHertig>
   - *Other basics*: <https://guides.libraries.psu.edu/posters>
-- For research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length (~ 7-10 double-spaced pages).
+- For a research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length (~ 7-10 double-spaced pages).
 - For an opinion piece, please submit a document up to 1,500 words in length.
 - For an interactive website or presentation, please submit a complete set of files needed to evaluate your website or presentation.
 - For a lesson plan, please submit a document up up to 1,500 words in length.
