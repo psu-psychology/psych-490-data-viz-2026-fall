@@ -2,7 +2,7 @@
 
 *Surveying the landscape*
 
-### Mon, Aug 24
+### Mon, Aug 24 {-}
 
 *Course introduction*
 
@@ -261,7 +261,7 @@
 
 ### Wed, November 04 {-}
 
-### Fri, November 06
+### Fri, November 06 {-}
 
 *Work Session: More TidyTuesday*
 
@@ -277,7 +277,7 @@
 
 *Sample size, effect size, statistical power*
 
-### Fri, November 13
+### Fri, November 13 {-}
 
 *Work Session: Final Projects*
 
@@ -295,7 +295,7 @@
 
 *Work Session: Final projects*
 
-## Thanksgiving Break
+## Thanksgiving Break {-}
 
 **NO CLASS**
 
@@ -312,11 +312,11 @@
 
 *Work Session: Final projects*
 
-### Fri, December 04
+### Fri, December 04 {-}
 
 *Work Session: Final projects*
 
-## Week 15 {- #week-16}
+## Week 15 {- #week-15}
 
 ### Mon, December 07 {-}
 
@@ -326,7 +326,7 @@
 
 *Final Project Presentations*
 
-### Fri, December 11
+### Fri, December 11 {-}
 
 *Final Project Presentations*
 
