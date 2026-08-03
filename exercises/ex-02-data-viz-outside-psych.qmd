@@ -9,7 +9,7 @@ In-class work on Friday, September 4.
 
 [Due]{.orange_due} on [Friday, September 11](../schedule.qmd#fri-sep-11). 
 
-[Canvas dropbox]().
+[Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448429).
 
 ## Goals {-}
 

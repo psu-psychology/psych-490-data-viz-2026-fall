@@ -22,15 +22,18 @@ Monday, Wednesday, & Friday, 3:25 pm - 4:25 pm \
 
 ## Canvas site
 
-We will use Canvas to submit assignments and grade them.
+Most of the course content will be found on this site.
+
+However, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals.
 The Canvas site may be found here: 
 
-<https://link.to.canvas.site>
+<https://psu.instructure.com/courses/2484925>
 
-Most of the course content will be found on this site.
 
 ## Course structure
 
 This is a discussion-focused course.
 On most days we will discuss readings assigned prior to class.
 On many days, we will work together or individually on the assigned [exercises](index.qmd#exercises), the final project, or another assignment.
+Please remember to bring your personal laptop computer.
+If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.

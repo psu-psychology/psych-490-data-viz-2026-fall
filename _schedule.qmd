@@ -47,7 +47,7 @@
 
 *Work Session: More Quarto*
 
-- [Due]{.orange_due}: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [Canvas dropbox]()
+- {{< fa alarm-clock >}} [Due]{.orange_due}: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448425)
 - [Slides](slides/wk-02-2026-09-04.qmd)
 
 ## Week 03 {- #week-03}
@@ -93,6 +93,8 @@
 
 ### Wed, Sep 16 {-}
 
+*More figure types*
+
 - *Review*: [Making and visualizing data](tutorials/tutorial-making-data.qmd)
 - [Slides](slides/wk04-2025-02-04-figure-components.qmd)
 
@@ -101,7 +103,7 @@
 *Work Session: Intro to ggplot*
 
 - *Review*: [Making and visualizing data](tutorials/tutorial-making-data.qmd)
-- [Due]{.orange_due}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [Canvas dropbox]() | 
+- [Due]{.orange_due}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448429) | 
 - [Slides](slides/wk-04-2026-09-18.qmd)
 
 ## Week 05 {- #week-05}
@@ -125,7 +127,7 @@
 
 *Work Session: More ggplot*
 
-- [Due]{.orange_due}: [Exercise-03](exercises/ex03-making-data.qmd) | [Canvas dropbox]() |
+- [Due]{.orange_due}: [Exercise-03](exercises/ex03-making-data.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448437) |
 - [Slides](slides/wk-04-2026-09-18.qmd)
 
 ## Week 06 {- #week-06}
@@ -157,7 +159,7 @@
 
 *Work Session: Visualizing sports data*
 
-- [Due]{.orange_due}: [Exercise-04](exercises/ex04-figs-ggplot.qmd) | [Canvas dropbox]() |
+- [Due]{.orange_due}: [Exercise-04](exercises/ex04-figs-ggplot.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 
 ## Week 07 {- #week-07}
 
@@ -192,7 +194,7 @@
 - Read: 
     - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
-- [Due]{.orange_due}: [Final Project](exercises/final-project.qmd) proposal | [Canvas Dropbox](https://psu.instructure.com/courses/2381584/assignments/16998415)
+- [Due]{.orange_due}: [Final Project](exercises/final-project.qmd) proposal | [Canvas Dropbox](https://psu.instructure.com/courses/2484925/assignments/18448439)
 
 - [Slides](slides/wk08-2025-03-06-critiquing-figs.qmd)
 
