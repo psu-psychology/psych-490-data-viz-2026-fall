@@ -6,14 +6,16 @@
 
 *Course introduction*
 
-- *Watch*: @PBSoffbook2013-zh
+- *Watch*: 
+  - @PBSoffbook2013-zh
 - [Slides](slides/wk-01-2026-08-24-course-intro.qmd)
 
 ### Wed, Aug 26 {-}
 
 *The semiotics of data visualization*
 
-- *Read*: @Cairo2013-hm, Chapter 1-2, [PDF on Canvas]()
+- *Read*: 
+  - @Cairo2013-hm, Chapter 1-2, [PDF on Canvas]()
 - *Assigned*: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) [assigned]{.green_assigned}
 - [Slides](slides/wk-01-2026-08-26-semiotics-data-viz.qmd)
 
@@ -21,7 +23,8 @@
 
 *Work Session: Introducing Quarto*
 
-- Complete: RStudio installation and setup
+- *Complete*: 
+  RStudio installation and setup
 - [Slides](slides/wk-01-2026-08-28.qmd)
 
 ## Week 02 {- #week-02}
@@ -39,7 +42,8 @@
 
 *Visualization in art, sports, and journalism*
 
-- *Read* (recommended): @Gelman2013-he
+- *Read* 
+  - @Gelman2013-he (recommended)
 - [*Assigned*]{.green_assigned}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) 
 - [Slides](slides/wk02-2025-09-02-art-sports-journ.qmd)
 
@@ -47,7 +51,7 @@
 
 *Work Session: More Quarto*
 
-- {{< fa alarm-clock >}} [Due]{.orange_due}: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448425)
+- {{< fa calendar >}} *Due* [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448425)
 - [Slides](slides/wk-02-2026-09-04.qmd)
 
 ## Week 03 {- #week-03}
@@ -62,10 +66,10 @@
 
 *Making (sense of) data*
 
-- *Read*: @Stevens1946-sh
-- *Optional*: 
-  - @Wikipedia-contributors2024-xu
-  - @Tourangeau2012-fr | [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=173503626).
+- *Read*: 
+  - @Stevens1946-sh
+  - @Wikipedia-contributors2024-xu (Optional)
+  - @Tourangeau2012-fr | [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=173503626). (Optional)
 - [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
 - [Slides](slides/wk03-2025-01-28-making-data.qmd)
 
@@ -88,7 +92,8 @@
   - @Hammond2024-ow
   - @Discovery2024-la
   - @AtlassianUnknown-ob
-- *Watch*: @Channel2024-so
+- *Watch*: 
+  - @Channel2024-so
 - [Slides](slides/wk03-2025-01-30-figure-types.qmd)
 
 ### Wed, Sep 16 {-}
@@ -103,7 +108,7 @@
 *Work Session: Intro to ggplot*
 
 - *Review*: [Making and visualizing data](tutorials/tutorial-making-data.qmd)
-- [Due]{.orange_due}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448429) | 
+- {{< fa calendar >}} *Due* [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448429) | 
 - [Slides](slides/wk-04-2026-09-18.qmd)
 
 ## Week 05 {- #week-05}
@@ -120,14 +125,15 @@
 
 *From stimulus to sensation*
 
-- *Read*: @Cairo2013-hm, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
+- *Read*: 
+  - @Cairo2013-hm, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927892)
 - [Slides](slides/wk05-2025-02-11-stim-to-sensation.qmd)
 
 ### Fri, Sep 25 {-}
 
 *Work Session: More ggplot*
 
-- [Due]{.orange_due}: [Exercise-03](exercises/ex03-making-data.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448437) |
+- {{< fa calendar >}} *Due* [Exercise-03](exercises/ex03-making-data.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448437) |
 - [Slides](slides/wk-04-2026-09-18.qmd)
 
 ## Week 06 {- #week-06}
@@ -159,7 +165,7 @@
 
 *Work Session: Visualizing sports data*
 
-- [Due]{.orange_due}: [Exercise-04](exercises/ex04-figs-ggplot.qmd) | [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448438) |
+- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex04-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 
 ## Week 07 {- #week-07}
 
@@ -167,14 +173,15 @@
 
 *Exploring data*
 
-- *Read*: @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927904) -->
+- *Read*: 
+  - @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927904)
 - [Slides](slides/wk-07-2026-10-05.qmd)
 
 ### Wed, Oct 07 {-}
 
 *Communicating uncertainty and risk*  
 
-- Read: 
+- *Read*: 
   - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=174557876)
   - @Wilke2019-mx, Ch. 16
 - [Slides](slides/wk07-2025-02-27-viz-uncertainty-risk.qmd)
@@ -191,18 +198,17 @@
 
 *Critiquing figures*
 
-- Read: 
+- *Read**: 
     - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927901)
-- [Due]{.orange_due}: [Final Project](exercises/final-project.qmd) proposal | [Canvas Dropbox](https://psu.instructure.com/courses/2484925/assignments/18448439)
-
+- {{< fa calendar >}} *Due* [Final Project](exercises/final-project.qmd) proposal | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448439)
 - [Slides](slides/wk08-2025-03-06-critiquing-figs.qmd)
 
 ### Wed, Oct 14 {-}
 
 *Storytelling with data*
 
-- Read:
+- *Read*:
   - @Knaflic2015-wq, pp. ix-33, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927897)
   - @Knaflic2015-wq, pp. 33-69, [PDF on Canvas](https://psu.instructure.com/courses/2381584/files?preview=172927897)
 - Skim: @Woodside2008-yv
@@ -223,7 +229,8 @@
 
 *Map-making*
 
-- Read: @Wilke2019-mx, Chapter 15
+- Read: 
+  - @Wilke2019-mx, Chapter 15
 
 - [Slides](slides/wk-09-2026-10-19.qmd)
 
@@ -245,7 +252,7 @@
 
 *Tables in Base R*
 
-- [Due]{.orange_due}: [Exercise-05](exercises/ex-05-tbd.qmd)
+- {{< fa calendar >}} *Due* [Exercise-05](exercises/ex-05-tbd.qmd)
 
 ### Wed, Oct 28 {-}
 
@@ -259,11 +266,11 @@
 
 *Data viz and politics*
 
-### Mon, November 02 {-}
+### Mon, Nov 02 {-}
 
-### Wed, November 04 {-}
+### Wed, Nov 04 {-}
 
-### Fri, November 06 {-}
+### Fri, Nov 06 {-}
 
 *Work Session: More TidyTuesday*
 
@@ -271,15 +278,15 @@
 
 *Data viz and inference*
 
-### Mon, November 09 {-}
+### Mon, Nov 09 {-}
 
 *Synthesize before you analyze*
 
-### Wed, November 11 {-}
+### Wed, Nov 11 {-}
 
 *Sample size, effect size, statistical power*
 
-### Fri, November 13 {-}
+### Fri, Nov 13 {-}
 
 *Work Session: Final Projects*
 
@@ -287,13 +294,13 @@
 
 *THEME TBD*
 
-### Mon, November 16 {-}
+### Mon, Nov 16 {-}
 
-- [Due]{.orange_due}: [Exercise-06](exercises/ex-06-tbd.qmd)
+- {{< fa calendar >}} *Due* [Exercise-06](exercises/ex-06-tbd.qmd)
 
-### Wed, November 18 {-}
+### Wed, Nov 18 {-}
 
-### Fri, November 20 {-}
+### Fri, Nov 20 {-}
 
 *Work Session: Final projects*
 
@@ -303,32 +310,33 @@
 
 ## Week 14 {- #week-14}
 
-### Mon, November 30 {-}
+### Mon, Nov 30 {-}
 
 *Making data dashboards and apps*
 
-- Explore: @Kohler2024-ig
+- Explore: 
+  - @Kohler2024-ig
 - [Slides](slides/wk13-2025-04-15-dashboards-apps.qmd)
 
-### Wed, December 02 {-}
+### Wed, Dec 02 {-}
 
 *Work Session: Final projects*
 
-### Fri, December 04 {-}
+### Fri, Dec 04 {-}
 
 *Work Session: Final projects*
 
 ## Week 15 {- #week-15}
 
-### Mon, December 07 {-}
+### Mon, Dec 07 {-}
 
 *Final Project Presentations*
 
-### Wed, December 09 {-}
+### Wed, Dec 09 {-}
 
 *Final Project Presentations*
 
-### Fri, December 11 {-}
+### Fri, Dec 11 {-}
 
 *Final Project Presentations*
 
@@ -336,6 +344,6 @@
 
 ### Wed, Dec 16 {-}
 
-- [Due]{.orange_due}: [Final project](exercises/final-project.qmd) write-up | [Canvas dropbox]()
+- {{< fa calendar >}} *Due* [Final project](exercises/final-project.qmd) write-up | [{{< fa folder >}} *Canvas dropbox* ]()
 
 ---

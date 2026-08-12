@@ -5,37 +5,48 @@ format: revealjs
 
 # Preliminaries
 
-## William Playfair
+## William Playfair (1759-1823)
 
 :::: {.columns}
-::: {.column width=50%}
+::: {.column width=30%}
 - "engineer, political economist, and scoundrel" [@Spence2017-hp]
 - Founder of graphical methods of statistics
-- Introduced line, area, and bar chart
-- Likely published first pie chart and circle graphs
 :::
-::: {.column width=50%}
-![By William Playfair - Derivative of File:Playfair TimeSeries.png William Playfair's Time Series of Exports and Imports of Denmark and Norway, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12674977](https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png){#fig-playfair-time-series}
+::: {.column width=70%}
+![By William Playfair - Derivative of File:Playfair TimeSeries.png William Playfair's Time Series of Exports and Imports of Denmark and Norway, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12674977](https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png){#fig-playfair-time-series width="60%"}
 :::
 ::::
 
----
+## William Playfair (1759-1823)
 
-::: {#fig-simulation-of-pluto-collision}
-
-{{< video ../include/vid/41561_2024_1612_MOESM2_ESM.mp4 >}}
-
-@Denton2025-bu
-
+:::: {.columns}
+::: {.column width=30%}
+- Introduced line, area, and bar chart
+- Likely published first pie chart and circle graphs
 :::
+::: {.column width=70%}
+![@fig-playfair-time-series](https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png)
+:::
+::::
+
+<!-- --- -->
+
+<!-- ::: {#fig-simulation-of-pluto-collision} -->
+
+<!-- {{< video ../include/vid/41561_2024_1612_MOESM2_ESM.mp4 >}} -->
+
+<!-- @Denton2025-bu -->
+
+<!-- ::: -->
 
 # Overview
 
 ## Announcements
 
-- Free access to newspapers
-
-![https://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program](../include/img/psu-news-readership.png)
+- Free access to newspapers!
+- <https://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program>
+- Good sources of data visualizations
+  - Data journalism
 
 ## Last time...
 
@@ -52,7 +63,7 @@ format: revealjs
 ## Resources
 
 - [Assignment](../exercises/ex01-figs-in-psych-sci.qmd)
-- [Google Sheet](https://docs.google.com/spreadsheets/d/1X-3kWpGAACdkAJ8-AeqYiu5TS6tRzpfdgXBYyPooCPo/edit?usp=sharing) for capturing & sharing data
+- [Google Sheet](https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing) for capturing & sharing data
 
 ## Measures in $\Psi$ science
 
@@ -68,7 +79,7 @@ format: revealjs
 - Are there common types of visualizations in psychological science?
 - What information is conveyed?
 - How clearly is it conveyed?
-- Do the figures "tell the story"?
+- Do the figures "tell the story" (See [Wk-08 "Storytelling with data"](schedule.qmd#wed-oct-14))
 
 ## More questions
 
@@ -83,7 +94,7 @@ format: revealjs
 
 ![@The-Editors-of-Encyclopedia-Britannica2024-ot](../include/img/semiotics-britannica.png)
 
-## The symbolic animal
+## The *symbolic* animal
 
 - [Ernst Cassirer](https://en.wikipedia.org/wiki/Ernst_Cassirer)
 
@@ -99,7 +110,6 @@ flowchart LR
   A[World] --> B[You]
 ```
 
-
 ## Communication
 
 - From others (direct)
@@ -110,7 +120,7 @@ flowchart LR
 ```
 
 ::: {.fragment}
-- From others (via some medium)
+- From others (via some medium^[*media* is the plural form of medium.])
 
 ```{mermaid}
 flowchart LR
@@ -152,6 +162,18 @@ flowchart LR
 :::
 ::::
 
+---
+
+::: {.question}
+## What sign or symbol systems rely on these channels?
+
+- Haptic (touch)
+- Echoic (sound)
+- Iconic (light)
+- Olfactory (aroma)
+- Gustatory (flavor)
+:::
+
 ## Vary in 'meaningfulness'
 
 :::: {.columns}
@@ -174,7 +196,7 @@ flowchart LR
 
 ![@Steiner1998-al](https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Steiner_AfterBabel.jpg/200px-Steiner_AfterBabel.jpg)
 
-## Sign system grammars^[Orderly system of rules for arranging symbols.]
+## Sign systems grammars^[Orderly system of rules for arranging symbols.]
 
 :::: {.columns}
 ::: {.column width=50%}

@@ -208,6 +208,7 @@ plot(qrcode::qr_code("https://psu-psychology.github.io/psych-490-data-viz-2026-f
 
 - Visualizing data is important
 - Visualizing data is interesting
+- Data visualization encapulates multiple ideas from psychological science
 
 # Next time
 
