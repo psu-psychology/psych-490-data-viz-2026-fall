@@ -689,5 +689,329 @@
       "Slides",
       "Wk 01 • Mon Aug 24"
     ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#visit-the-template",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#visit-the-template",
+    "title": "Work session: Introducing Quarto",
+    "section": "Visit the template",
+    "text": "Visit the template\n\nVisit https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Copy the template text into a new text file",
+    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#render-the-template",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#render-the-template",
+    "title": "Work session: Introducing Quarto",
+    "section": "Render the template",
+    "text": "Render the template\n\n\n\n\n\n\nFigure 9"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#the-psychology-of-data-visualization",
+    "href": "index.html#the-psychology-of-data-visualization",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#themes",
+    "href": "index.html#themes",
+    "title": "The Psychology of Data Visualization",
+    "section": "Themes",
+    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "The Psychology of Data Visualization",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\nSchedule an appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-assistant",
+    "href": "index.html#teaching-assistant",
+    "title": "The Psychology of Data Visualization",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#meeting-time-location",
+    "href": "index.html#meeting-time-location",
+    "title": "The Psychology of Data Visualization",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:25 pm - 4:25 pm\n216 Osmond Lab",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#canvas-site",
+    "href": "index.html#canvas-site",
+    "title": "The Psychology of Data Visualization",
+    "section": "Canvas site",
+    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing Quarto\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim: https://quarto.org/docs/get-started/hello/jupyter.html1\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-01",
+    "href": "schedule.html#week-01",
+    "title": "Schedule",
+    "section": "",
+    "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing Quarto\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim: https://quarto.org/docs/get-started/hello/jupyter.html1\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-02",
+    "href": "schedule.html#week-02",
+    "title": "Schedule",
+    "section": "Week 02",
+    "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nResults from Exercise 01\nSlides\n\n\n\nWed, Sep 02\nVisualization in art, sports, and journalism\n\nRead\n\nGelman & Unwin (2013) (recommended), follow citation link to online version or PDF on Canvas.\n\nAssigned: Exercise 02\nSlides\n\n\n\nFri, Sep 04\nWork Session: More Quarto\n\n Due Exercise 01 |  Canvas dropbox\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-03",
+    "href": "schedule.html#week-03",
+    "title": "Schedule",
+    "section": "Week 03",
+    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nAssigned: Exercise-03\nSlides\n\n\n\nFri, Sep 11\nWork Session: Intro to R\n\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-04",
+    "href": "schedule.html#week-04",
+    "title": "Schedule",
+    "section": "Week 04",
+    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nSlides\n\n\n\nWed, Sep 16\nMore figure types\n\n\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nReview: Making and visualizing data\n Due Exercise 02 |  Canvas dropbox |\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-05",
+    "href": "schedule.html#week-05",
+    "title": "Schedule",
+    "section": "Week 05",
+    "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise-03 |  Canvas dropbox |\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-06",
+    "href": "schedule.html#week-06",
+    "title": "Schedule",
+    "section": "Week 06",
+    "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\n Due Exercise-04 |  Canvas dropbox |\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-07",
+    "href": "schedule.html#week-07",
+    "title": "Schedule",
+    "section": "Week 07",
+    "text": "Week 07\n\nMon, Oct 05\nExploring data\n\nRead:\n\nTukey (1977), Chapter 1, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 07\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 162\n\nSlides\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-08",
+    "href": "schedule.html#week-08",
+    "title": "Schedule",
+    "section": "Week 08",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\n*Read**:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\n Due Final Project proposal |  Canvas dropbox\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: TidyTuesday or Exercise 05\n\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-09",
+    "href": "schedule.html#week-09",
+    "title": "Schedule",
+    "section": "Week 09",
+    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 153\n\nSlides\n\n\n\nWed, Oct 21\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday II\n\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-10",
+    "href": "schedule.html#week-10",
+    "title": "Schedule",
+    "section": "Week 10",
+    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\n Due Exercise-05\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session: Tables\n\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-11",
+    "href": "schedule.html#week-11",
+    "title": "Schedule",
+    "section": "Week 11",
+    "text": "Week 11\nData viz in policy & politics\n\nMon, Nov 02\n\nSlides\n\n\n\nWed, Nov 04\n\nSlides\n\n\n\nFri, Nov 06\nWork Session: More TidyTuesday\n\nSlides",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-12",
+    "href": "schedule.html#week-12",
+    "title": "Schedule",
+    "section": "Week 12",
+    "text": "Week 12\nData viz and inference\n\nMon, Nov 09\nSynthesize before you analyze\n\nSlides\n\n\n\nWed, Nov 11\nSample size, effect size, statistical power\n\nSlides\n\n\n\nFri, Nov 13\nWork Session: Final Projects",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-13",
+    "href": "schedule.html#week-13",
+    "title": "Schedule",
+    "section": "Week 13",
+    "text": "Week 13\nTHEME TBD\n\nMon, Nov 16\n\n Due Exercise-06\n\n\n\nWed, Nov 18\n\n\nFri, Nov 20\nWork Session: Final projects",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#thanksgiving-break",
+    "href": "schedule.html#thanksgiving-break",
+    "title": "Schedule",
+    "section": "Thanksgiving Break",
+    "text": "Thanksgiving Break\nNO CLASS",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-14",
+    "href": "schedule.html#week-14",
+    "title": "Schedule",
+    "section": "Week 14",
+    "text": "Week 14\n\nMon, Nov 30\nMaking data dashboards and apps\n\nExplore:\n\nKohler (2024)\n\nSlides\n\n\n\nWed, Dec 02\nWork Session: Final projects\n\n\nFri, Dec 04\nWork Session: Final projects",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-15",
+    "href": "schedule.html#week-15",
+    "title": "Schedule",
+    "section": "Week 15",
+    "text": "Week 15\n\nMon, Dec 07\nFinal Project Presentations\n\n\nWed, Dec 09\nFinal Project Presentations\n\n\nFri, Dec 11\nFinal Project Presentations",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#finals-week",
+    "href": "schedule.html#finals-week",
+    "title": "Schedule",
+    "section": "Finals Week",
+    "text": "Finals Week\n\nWed, Dec 16\n\n Due Final project write-up |  Canvas dropbox",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#footnotes",
+    "href": "schedule.html#footnotes",
+    "title": "Schedule",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWe won’t use Python in this course, but the basic ideas apply to Python and R.↩︎\nNot on Canvas yet.↩︎\nNot on Cavnas yet.↩︎",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html",
+    "href": "exercises/ex-04-making-figs-ggplot.html",
+    "title": "Exercise 04",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html#dates",
+    "href": "exercises/ex-04-making-figs-ggplot.html#dates",
+    "title": "Exercise 04",
+    "section": "Dates",
+    "text": "Dates\nWe’ll work on this exercise in-class on Friday, September 18, and Friday, September 25, 2026.\nThe write-up is due on Friday, October 2, 2026.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html#goals",
+    "href": "exercises/ex-04-making-figs-ggplot.html#goals",
+    "title": "Exercise 04",
+    "section": "Goals",
+    "text": "Goals\n\nCreate some simple figures in R using the ggplot2 package.\nGain an appreciation of the costs and benefits of scripting the generation of figures.\nLay the foundation for using ggplot2 to create more advanced and informative figures.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
   }
 ]

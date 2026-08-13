@@ -110,11 +110,23 @@ format: revealjs
 
 ![](../include/img/rendered-exercise-01.png)
 
-## Copy Quarto template
-
 # Work on Exercise 01
 
-## 
+## Visit the template
+
+- Visit <https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd>
+
+## Copy the template text into a new text file
+
+- Click inside the text window.
+- Select the text (highlight it)
+- Switch to RStudio, create a new *text* file
+- Paste the text
+- Save the file as `exercise-01-template.qmd`
+
+## Render the template
+
+![](../include/img/rendered-ex-01-template.png){#fig-rendered-ex-01-template}
 
 ## Main points
 
