@@ -298,20 +298,23 @@ Signs and sign systems are *everywhere*!
 ![https://www.lifehack.org/868287/perspective-on-life](https://cdn.lifehack.org/wp-content/uploads/2020/03/perspective.jpeg){height=350px}
 :::
 
-# Main points
+# Wrap-up
 
-## Semiotics of data visualization
+## Main points
 
-- *Semiotics*: study of signs and symbols
-- What meanings do the visual elements of data graphics convey?
-- How do data visualizations relate to other communicative elements?
+- Semiotics of data visualization
+  - *Semiotics*: study of signs and symbols
+  - What meanings do the visual elements of data graphics convey?
+  - How do data visualizations relate to other communicative elements?
 
-## Visualization in psychological science
+## Homework
 
-- Conventions (common patterns) in data visualization
-- Different viz types for different psychological measures?
+- Install R and RStudio
+-  [*Tutorial*](tutorial/tutorial-install-r-rstudio.qmd)
 
-# Next time: Work session
+## Next time
+
+- Work session: Introducing [Quarto](https://quarto.org)
 
 # Resources
 

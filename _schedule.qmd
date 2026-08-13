@@ -18,13 +18,18 @@
   - @Cairo2013-hm, Chapter 1-2, [PDF on Canvas]()
 - *Assigned*: [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) [assigned]{.green_assigned}
 - [Slides](slides/wk-01-2026-08-26-semiotics-data-viz.qmd)
+- *Homework*: 
+  - Install R and [RStudio Desktop](https://docs.posit.co/ide/user/)
+    - [*Tutorial*](tutorial/tutorial-install-r-rstudio.qmd)
+  - (Optional) Install [Quarto](https://quarto.org/docs/get-started/)
 
 ### Fri, Aug 28 {-}
 
 *Work Session: Introducing Quarto*
 
-- *Complete*: 
-  RStudio installation and setup
+- *Complete*: R and RStudio Desktop installation and setup
+- *Read*: [Get Started](https://docs.posit.co/ide/user/ide/get-started/) from the RStudio User Guide.
+- *Skim*: <https://quarto.org/docs/get-started/hello/jupyter.html>^[We won't use Python in this course, but the basic ideas apply to Python and R.]
 - [Slides](slides/wk-01-2026-08-28.qmd)
 
 ## Week 02 {- #week-02}
@@ -35,7 +40,7 @@
 
 *Visualization in government & business*
 
-- [Results]() from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
+- [Results](404.qmd) from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
 - [Slides](slides/wk-02-2026-08-31-govt-biz.qmd)
 
 ### Wed, Sep 02 {-}

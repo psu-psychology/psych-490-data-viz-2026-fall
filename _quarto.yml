@@ -5,12 +5,13 @@ project:
 
 website:
   title: "PSYCH 490.007"
-  # announcement: 
-  #   content: "Please complete the end-of-semester [course evaluations](https://rateteaching.psu.edu/). Thank you!" 
-  #   position: below-navbar
-  #   icon: info-circle
-  #   dismissable: true
+  announcement:
+    content: "Welcome to PSYCH 490.007. Please take some time to familiarize yourself with the course website."
+    position: below-navbar
+    icon: info-circle
+    dismissable: true
   sidebar:
+    collapse-level: 1
     style: "docked"
     search: true
     contents:
@@ -19,14 +20,13 @@ website:
     - href: schedule.qmd
     - href: evaluation.qmd
     - href: deadlines.qmd
-    - href: deadlines.qmd
     - href: policies.qmd
     - href: meta.qmd
     - section: Slides
       contents:
-      - text: "Wk-01 Course Intro"
+      - text: "Wk 01 • Mon Aug 24"
         href: slides/wk-01-2026-08-24-course-intro.qmd
-      - text: "Wk-01 Semiotics of Data Viz"
+      - text: "Wk 01 • Wed Aug 26"
         href: slides/wk-01-2026-08-26-semiotics-data-viz.qmd
     - section: Exercises
       contents:
@@ -37,6 +37,9 @@ website:
         - exercises/ex-05-tbd.qmd
         - exercises/ex-06-tbd.qmd
         - exercises/final-project.qmd
+    - section: Tutorials
+      contents:
+        - tutorials/tutorial-install-r-rstudio.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
   page-footer:

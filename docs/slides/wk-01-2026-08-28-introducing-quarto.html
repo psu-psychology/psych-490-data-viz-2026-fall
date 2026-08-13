@@ -8,15 +8,15 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490.007 – Semiotics of data visualization</title>
+  <title>PSYCH 490.007 – Work session: Introducing Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -37,26 +37,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-445e7e3b1c5f75a9ba11066bf069e70f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -151,9 +132,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
   .reveal div.callout-answer.callout {
     border-left-color: blue;
@@ -188,7 +166,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Semiotics of data visualization</h1>
+  <h1 class="title">Work session: Introducing Quarto</h1>
   <p class="subtitle">PSY 490.007 Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -208,254 +186,26 @@ Rick Gilmore
 <h1>Preliminaries</h1>
 
 </section>
-<section id="william-playfair-1759-1823" class="slide level2">
-<h2>William Playfair (1759-1823)</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<ul>
-<li>“engineer, political economist, and scoundrel” <span class="citation" data-cites="Spence2017-hp">(<a href="#/references" role="doc-biblioref" onclick="">Spence and Wainer 2017</a>)</span></li>
-<li>Founder of graphical methods of statistics</li>
-</ul>
-</div><div class="column" style="width:70%;">
-<div id="fig-playfair-time-series" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-playfair-time-series-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: By William Playfair - Derivative of File:Playfair TimeSeries.png William Playfair’s Time Series of Exports and Imports of Denmark and Norway, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12674977"><img data-src="https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-playfair-time-series-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: By William Playfair - Derivative of File:Playfair TimeSeries.png William Playfair’s Time Series of Exports and Imports of Denmark and Norway, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12674977
-</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="william-playfair-1759-1823-1" class="slide level2">
-<h2>William Playfair (1759-1823)</h2>
-<div class="columns">
-<div class="column" style="width:30%;">
-<ul>
-<li>Introduced line, area, and bar chart</li>
-<li>Likely published first pie chart and circle graphs</li>
-</ul>
-</div><div class="column" style="width:70%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1"><img data-src="https://upload.wikimedia.org/wikipedia/commons/5/52/Playfair_TimeSeries-2.png" alt="Figure&nbsp;1"></a></p>
-<figcaption><a href="#/fig-playfair-time-series" class="quarto-xref">Figure&nbsp;1</a></figcaption>
-</figure>
-</div>
-</div></div>
-<!-- --- -->
-<!-- ::: {#fig-simulation-of-pluto-collision} -->
-<!--  -->
-<!-- @Denton2025-bu -->
-<!-- ::: -->
-</section></section>
-<section>
-<section id="overview" class="title-slide slide level1 center">
-<h1>Overview</h1>
-
-</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Free access to newspapers!</li>
-<li><a href="https://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program" class="uri">https://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program</a></li>
-<li>Good sources of data visualizations
-<ul>
-<li>Data journalism</li>
-</ul></li>
+<li>Exercise 01 due next Friday, September 4, 2026 (midnight).</li>
+<li>Submit Quarto document to <a href="https://psu.instructure.com/courses/2484925/assignments/18448425"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a></li>
 </ul>
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time…</h2>
+<section id="todays-topics" class="slide level2">
+<h2>Today’s topics</h2>
 <ul>
-<li>Course introduction</li>
-</ul>
-</section>
-<section id="today" class="slide level2">
-<h2>Today</h2>
-<ul>
-<li>Visualization in psychological science
-<ul>
-<li><a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise-01</a></li>
-</ul></li>
-<li>Semiotics of data visualization</li>
+<li>Warm-up</li>
+<li>Troubleshooting R and RStudio installations</li>
+<li>Introducing Quarto</li>
+<li>Using Quarto for Exercise 01</li>
 </ul>
 </section></section>
 <section>
-<section id="visualization-in-psychological-science" class="title-slide slide level1 center">
-<h1>Visualization in psychological science</h1>
+<section id="warm-up" class="title-slide slide level1 center">
+<h1>Warm-up</h1>
 
-</section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
-<ul>
-<li><a href="../exercises/ex01-figs-in-psych-sci.qmd">Assignment</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing">Google Sheet</a> for capturing &amp; sharing data</li>
-</ul>
-</section>
-<section id="measures-in-psi-science" class="slide level2">
-<h2>Measures in <span class="math inline">\(\Psi\)</span> science</h2>
-<ul>
-<li class="fragment">Internal states (thoughts, feelings, memories, opinions, decisions, judgments…)</li>
-<li class="fragment">Physiological states</li>
-<li class="fragment">Individual characteristics</li>
-<li class="fragment">Environmental characteristics</li>
-</ul>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions</h2>
-<ul>
-<li>Are there common types of visualizations in psychological science?</li>
-<li>What information is conveyed?</li>
-<li>How clearly is it conveyed?</li>
-<li>Do the figures “tell the story” (See <a href="schedule.qmd#wed-oct-14">Wk-08 “Storytelling with data”</a>)</li>
-</ul>
-</section>
-<section id="more-questions" class="slide level2">
-<h2>More questions</h2>
-<ul>
-<li>How are the following depicted?
-<ul>
-<li>Responses to surveys</li>
-<li>Performance on tasks/tests</li>
-<li>Brain structure or activity</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="semiotics-of-data-visualization" class="title-slide slide level1 center">
-<h1>Semiotics of data visualization</h1>
-
-</section>
-<section id="semi-whatics" class="slide level2">
-<h2>Semi-whatics?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="../include/img/semiotics-britannica.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="@The-Editors-of-Encyclopedia-Britannica2024-ot"><img data-src="../include/img/semiotics-britannica.png" alt="The Editors of Encyclopedia Britannica (2024)"></a></p>
-<figcaption><span class="citation" data-cites="The-Editors-of-Encyclopedia-Britannica2024-ot">The Editors of Encyclopedia Britannica (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="the-symbolic-animal" class="slide level2">
-<h2>The <em>symbolic</em> animal</h2>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Ernst_Cassirer">Ernst Cassirer</a></li>
-</ul>
-<blockquote>
-<p>Cassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination is only one expression of the human instinct to think in symbols. <span class="citation" data-cites="Kirsch2021-fd">Kirsch (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p>
-</blockquote>
-</section>
-<section id="the-communicating-animal" class="slide level2">
-<h2>The communicating animal</h2>
-<ul>
-<li>Communication as transmission of information</li>
-<li>From world</li>
-</ul>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[World] --&gt; B[You]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="communication" class="slide level2">
-<h2>Communication</h2>
-<ul>
-<li>From others (direct)</li>
-</ul>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Me] --&gt; B[You]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<div class="fragment">
-<ul>
-<li>From others (via some medium<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>)</li>
-</ul>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
-  A[Me] --&gt; B((Medium))
-  B --&gt; C[You]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-</div>
-<aside></aside></section>
-<section id="media" class="slide level2">
-<h2>Media</h2>
-<ul>
-<li>Source of <a href="https://en.wikipedia.org/wiki/Sign_(semiotics)"><em>signs</em></a><a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></li>
-<li>Sign relation
-<ul>
-<li>Sign (as a thing) –&gt; Meaning</li>
-<li>Relation is arbitrary, defined by social convention (Sausurre)</li>
-</ul></li>
-</ul>
-<aside></aside></section>
-<section class="slide level2">
-
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://arxiv.org/html/2402.14311v1/x1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="@UnknownUnknown-ey"><img data-src="https://arxiv.org/html/2402.14311v1/x1.png" alt="“Font Style Interpolation with Diffusion Models” (n.d.)"></a></p>
-<figcaption><span class="citation" data-cites="UnknownUnknown-ey"><span>“Font Style Interpolation with Diffusion Models”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="core-qualities-of-sign-systems" class="slide level2">
-<h2>Core qualities of sign systems</h2>
-<ul>
-<li>Semantics
-<ul>
-<li>Relations between signs –&gt; meaning</li>
-</ul></li>
-<li>Syntax (grammar)
-<ul>
-<li>Rules/conventions for arranging signs</li>
-</ul></li>
-</ul>
-</section>
-<section id="multiple-input-channels" class="slide level2">
-<h2>Multiple input channels</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>Acoustic</li>
-<li>Tactile</li>
-<li>Olfactory</li>
-<li>Visual</li>
-</ul>
-</div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://elearningimages.adobe.com/files/2017/12/Sensory-Brain.png-1024x591.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="https://elearning.adobe.com/2018/04/classic-learning-research-practice-sensory-channels-keep-learners-attention/"><img data-src="https://elearningimages.adobe.com/files/2017/12/Sensory-Brain.png-1024x591.png" alt="https://elearning.adobe.com/2018/04/classic-learning-research-practice-sensory-channels-keep-learners-attention/"></a></p>
-<figcaption>https://elearning.adobe.com/2018/04/classic-learning-research-practice-sensory-channels-keep-learners-attention/</figcaption>
-</figure>
-</div>
-</div></div>
 </section>
 <section class="slide level2">
 
@@ -465,308 +215,243 @@ Figure&nbsp;1: By William Playfair - Derivative of File:Playfair TimeSeries.png 
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>What sign or symbol systems rely on these channels?</strong></p>
+<p><strong>What’s a widely recognized sign system in (American) football?</strong></p>
 </div>
 <div class="callout-content">
-<ul>
-<li>Haptic (touch)</li>
-<li>Echoic (sound)</li>
-<li>Iconic (light)</li>
-<li>Olfactory (aroma)</li>
-<li>Gustatory (flavor)</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="vary-in-meaningfulness" class="slide level2">
-<h2>Vary in ‘meaningfulness’</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://www.religious-symbols.net/Pictures/religious-symbols_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="https://www.religious-symbols.net/"><img data-src="https://www.religious-symbols.net/Pictures/religious-symbols_2.png" alt="https://www.religious-symbols.net/"></a></p>
-<figcaption>https://www.religious-symbols.net/</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://static.vecteezy.com/system/resources/previews/038/920/831/non_2x/abstract-collection-2-graphic-geometric-symbols-and-objects-in-y2k-style-templates-for-notes-posters-banners-stickers-business-cards-logo-vector.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="https://www.vecteezy.com/free-vector/symbols"><img data-src="https://static.vecteezy.com/system/resources/previews/038/920/831/non_2x/abstract-collection-2-graphic-geometric-symbols-and-objects-in-y2k-style-templates-for-notes-posters-banners-stickers-business-cards-logo-vector.jpg" alt="https://www.vecteezy.com/free-vector/symbols"></a></p>
-<figcaption>https://www.vecteezy.com/free-vector/symbols</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="communication-between-minds" class="slide level2">
-<h2>Communication between minds</h2>
-<ul>
-<li>Via signs and symbols</li>
-<li>Based on shared social conventions</li>
-<li>About sign relations (what signs “mean” or convey)</li>
-<li>Open vs.&nbsp;closed symbol systems</li>
-</ul>
-</section>
-<section id="sign-systems-can-uniteinform-or-divideconfuse" class="slide level2">
-<h2>Sign systems can unite/inform or divide/confuse</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Steiner_AfterBabel.jpg/200px-Steiner_AfterBabel.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="@Steiner1998-al"><img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Steiner_AfterBabel.jpg/200px-Steiner_AfterBabel.jpg" alt="Steiner (1998)"></a></p>
-<figcaption><span class="citation" data-cites="Steiner1998-al">Steiner (<a href="#/references" role="doc-biblioref" onclick="">1998</a>)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="sign-systems-grammars" class="slide level2">
-<h2>Sign systems grammars<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><span class="math inline">\(2+2*3=4\)</span> vs.&nbsp;<span class="math inline">\(2+(2*3)=4\)</span></li>
-<li>“Up with you I will not put.” vs.&nbsp;“I will not put up with you.”</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div id="fig-yoda" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-yoda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/yoda-failure-teacher.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;2: "><img data-src="../include/img/yoda-failure-teacher.jpg" id="fig-yoda"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-yoda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
-</figcaption>
-</figure>
-</div>
-</div></div>
-<aside></aside></section>
-<section id="grammar-of-graphics" class="slide level2">
-<h2>Grammar of Graphics</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div id="fig-wilkinson-grammar-of-graphics" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-wilkinson-grammar-of-graphics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/wilkinson-grammar-of-graphics.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;3: @Wilkinson2005-do"><img data-src="../include/img/wilkinson-grammar-of-graphics.jpg" height="450"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilkinson-grammar-of-graphics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: <span class="citation" data-cites="Wilkinson2005-do">Wilkinson et al. (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span>
-</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div id="fig-ggplot2-book" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-ggplot2-book-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/ggplot2-cover.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;4: @WickhamUnknown-kj"><img data-src="../include/img/ggplot2-cover.jpg" height="450"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ggplot2-book-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: <span class="citation" data-cites="WickhamUnknown-kj">Wickham et al. (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
-</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="how-scientists-communicate-formally" class="slide level2">
-<h2>How scientists communicate (formally)</h2>
-<ul>
-<li>Papers</li>
-<li>Posters</li>
-<li>Textbooks</li>
-<li>Websites</li>
-<li>Talks</li>
-</ul>
-</section>
-<section id="components-of-a-scientific-papers" class="slide level2">
-<h2>Components of a scientific papers</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Text
-<ul>
-<li>Explanation/argument</li>
-<li>Evidence (statistical summaries)</li>
-</ul></li>
-<li>Figures</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li>Tables
-<ul>
-<li>Evidence (statistical summaries)</li>
-</ul></li>
-<li>References</li>
-<li>Data, materials</li>
-</ul>
-</div></div>
-</section>
-<section id="questions-about-scientific-communication" class="slide level2">
-<h2>Questions about scientific communication</h2>
-<ul>
-<li>What do the words mean?</li>
-<li>What do the numbers/statistics mean?</li>
-<li>What do the figures mean?</li>
-<li>Does the evidence (+ argument) persuade?</li>
-</ul>
-</section>
-<section id="semioticssemiology-of-graphics" class="slide level2">
-<h2>Semiotics/Semiology of Graphics</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="../include/img/bertin-semiology-of-graphics.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="@Bertin2010-dz"><img data-src="../include/img/bertin-semiology-of-graphics.png" alt="Bertin (2010)"></a></p>
-<figcaption><span class="citation" data-cites="Bertin2010-dz">Bertin (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="semiotics-of-data-visualization-1" class="slide level2">
-<h2>Semiotics of data visualization</h2>
-<ul>
-<li>What do the components (of a figure) mean?</li>
-<li>What message is the visualization creator trying to convey?</li>
-</ul>
-</section>
-<section class="slide level2">
 
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-measurement-process" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-measurement-process">flowchart LR
-  A((Person)) ---&gt; B[Measure]
-  F((Researcher)) ---&gt; B
-  F ---&gt; A
-  B ---&gt; G(Text)
-  B ---&gt; C(Data)
-  C ---&gt; D[Statistics]
-  C ---&gt; E[Visualization]
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: The measurement &amp; reporting process
-</figcaption>
-</figure>
 </div>
 </div>
 </div>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-perception-process" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-perception-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-perception-process">flowchart LR
-  C(Data) -.-&gt; D[Statistics]
-  C -.-&gt; F
-  C -.-&gt; E[Visualization]
-  E ---&gt; A((Student))
-  D ---&gt; A
-  A ---&gt; A
-  F[Text] ---&gt; A
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-perception-process-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: The perception process
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="callout callout-warning callout-titled callout-style-default">
+<div class="fragment">
+<div class="callout callout-answer callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Warning</strong></p>
+<p><strong>Answer</strong></p>
 </div>
 <div class="callout-content">
-<p>A semiotic perspective can be infectious and addictive.</p>
-<p>Signs and sign systems are <em>everywhere</em>!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://cdn.lifehack.org/wp-content/uploads/2020/03/perspective.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="https://www.lifehack.org/868287/perspective-on-life"><img data-src="https://cdn.lifehack.org/wp-content/uploads/2020/03/perspective.jpeg" height="350" alt="https://www.lifehack.org/868287/perspective-on-life"></a></p>
-<figcaption>https://www.lifehack.org/868287/perspective-on-life</figcaption>
+<div id="fig-football-signals" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-football-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="283" height="504" src="https://www.youtube.com/embed/slroyCXa9pw" title="Basic Referee signals you need to know #football #football101 #nflsports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-football-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
+</div>
+</section></section>
+<section id="troubleshooting-r-and-rstudio-installations" class="title-slide slide level1 center">
+<h1>Troubleshooting R and RStudio installations</h1>
+
+</section>
+
+<section>
+<section id="introducing-quarto" class="title-slide slide level1 center">
+<h1>Introducing Quarto</h1>
+
+</section>
+<section id="installing-quarto" class="slide level2">
+<h2>Installing Quarto</h2>
+<div id="fig-installing-quarto" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-installing-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/installing-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2: https://quarto.org/docs/get-started/"><img data-src="../include/img/installing-quarto.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-installing-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="launch-rstudio" class="slide level2">
+<h2>Launch RStudio</h2>
+</section>
+<section id="create-new-project" class="slide level2">
+<h2>Create New Project</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div id="fig-file-menu-new-project" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-file-menu-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/file-menu.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: From File Menu"><img data-src="../include/img/file-menu.png" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-file-menu-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: From File Menu
+</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div id="fig-new-project-project-manager" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-new-project-project-manager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/new-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;4: From Project Manager Tab"><img data-src="../include/img/new-project.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-project-manager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: From Project Manager Tab
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div id="fig-create-project-new-directory" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-create-project-new-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/create-project-new-directory.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;5: Create project in a new directory"><img data-src="../include/img/create-project-new-directory.png" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-new-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Create project in a new directory
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="fig-create-project-type-quarto" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-create-project-type-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/create-project-type-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;6: Project Type: Quarto Project"><img data-src="../include/img/create-project-type-quarto.png" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-type-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Project Type: Quarto Project
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="fig-create-project-quarto-name" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-create-project-quarto-name-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/create-project-quarto-name.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Create Quarto Project"><img data-src="../include/img/create-project-quarto-name.png" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-quarto-name-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Create Quarto Project
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Learn from expert practices</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Establish a clear file/project scheme
+<ul>
+<li>Stick with it</li>
+<li>I use: <code>~/rrr/psych-490-exercise-01</code></li>
+<li>Why? Someone who knows more than I do suggested it.</li>
+</ul></li>
+<li>No spaces in files and folder/directory names</li>
+<li>Put info in file/folder name: <code>psych-490-exercise-01</code></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="explore-project-and-document" class="slide level2">
+<h2>Explore project (and document)</h2>
+<p><a href="../include/img/new-quarto-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="../include/img/new-quarto-project.png"></a></p>
+</section>
+<section id="anatomy-of-quarto-document" class="slide level2">
+<h2>Anatomy of Quarto document</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Text, has <code>.qmd</code> extension</li>
+<li>Metadata<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> information (b/w pairs of <code>---</code>)</li>
+<li>Section headers
+<ul>
+<li><code>##</code> means a 2nd level header</li>
+</ul></li>
+<li>Code chunks!</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div id="fig-exercise-01-file" class="quarto-float quarto-figure quarto-figure-center" data-align="right">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-exercise-01-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk."><img data-src="../include/img/exercise-01-detail.png" data-align="right"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exercise-01-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk.
+</figcaption>
+</figure>
+</div>
+</div></div>
+<aside></aside></section>
+<section id="render-the-file" class="slide level2">
+<h2><em>Render</em> the file</h2>
+<ul>
+<li>Turn the text file into something else
+<ul>
+<li>Webpage (HTML)</li>
+<li>Document (PDF, Word)</li>
+<li>Slides</li>
+</ul></li>
+<li>Default is webpage (HTML)</li>
+<li>I recommend checking “Render on Save”</li>
+</ul>
+</section>
+<section id="rendered-file" class="slide level2">
+<h2>Rendered file</h2>
+<p><a href="../include/img/rendered-exercise-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="../include/img/rendered-exercise-01.png"></a></p>
+</section>
+<section id="copy-quarto-template" class="slide level2">
+<h2>Copy Quarto template</h2>
 </section></section>
 <section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap-up</h1>
+<section id="work-on-exercise-01" class="title-slide slide level1 center">
+<h1>Work on Exercise 01</h1>
 
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
 </section>
 <section id="main-points" class="slide level2">
 <h2>Main points</h2>
-<ul>
-<li>Semiotics of data visualization
-<ul>
-<li><em>Semiotics</em>: study of signs and symbols</li>
-<li>What meanings do the visual elements of data graphics convey?</li>
-<li>How do data visualizations relate to other communicative elements?</li>
-</ul></li>
-</ul>
-</section>
-<section id="homework" class="slide level2">
-<h2>Homework</h2>
-<ul>
-<li>Install R and RStudio</li>
-<li><a href="tutorial/tutorial-install-r-rstudio.qmd"><em>Tutorial</em></a></li>
-</ul>
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li>Work session: Introducing <a href="https://quarto.org">Quarto</a></li>
+<li><em>Visualization in government &amp; business</em></li>
+<li>Results of visualization in psychological science exercise</li>
 </ul>
 </section></section>
 <section>
-<section id="resources-1" class="title-slide slide level1 center">
+<section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
 </section>
-<section id="references" class="slide level2 smaller scrollable">
+<section id="about" class="slide level2">
+<h2>About</h2>
+<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.1.0.392.</p>
+<p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psy-511-scan-fdns-2026-spring">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/" class="uri">https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/</a></p>
+</section>
+<section id="references" class="slide level2">
 <h2>References</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Bertin2010-dz" class="csl-entry" role="listitem">
-Bertin, Jacques. 2010. <em>Semiology of Graphics: Diagrams, Networks, Maps</em>. ESRI Press.
-</div>
-<div id="ref-UnknownUnknown-ey" class="csl-entry" role="listitem">
-<span>“Font Style Interpolation with Diffusion Models.”</span> n.d. Accessed January 10, 2025. <a href="https://arxiv.org/html/2402.14311v1">https://arxiv.org/html/2402.14311v1</a>.
-</div>
-<div id="ref-Kirsch2021-fd" class="csl-entry" role="listitem">
-Kirsch, Adam. 2021. <span>“The Symbolic Animal.”</span> March 18. <a href="https://www.nybooks.com/articles/2021/04/08/ernst-cassirer-symbolic-animal/">https://www.nybooks.com/articles/2021/04/08/ernst-cassirer-symbolic-animal/</a>.
-</div>
-<div id="ref-Spence2017-hp" class="csl-entry" role="listitem">
-Spence, Ian, and Howard Wainer. 2017. <span>“William <span>P</span>layfair and the Invention of Statistical Graphs.”</span> In <em>Information Design</em>, 1st Edition. Routledge. <a href="https://doi.org/10.4324/9781315585680-10">https://doi.org/10.4324/9781315585680-10</a>.
-</div>
-<div id="ref-Steiner1998-al" class="csl-entry" role="listitem">
-Steiner, George. 1998. <em>After Babel: Aspects of Language and Translation</em>. 3rd ed. Oxford University Press. <a href="https://www.amazon.com/After-Babel-Aspects-Language-Translation/dp/0192880934">https://www.amazon.com/After-Babel-Aspects-Language-Translation/dp/0192880934</a>.
-</div>
-<div id="ref-The-Editors-of-Encyclopedia-Britannica2024-ot" class="csl-entry" role="listitem">
-The Editors of Encyclopedia Britannica. 2024. <span>“Semiotics.”</span> In <em>Encyclopedia Britannica</em>. December 19. <a href="https://www.britannica.com/science/semiotics">https://www.britannica.com/science/semiotics</a>.
-</div>
-<div id="ref-WickhamUnknown-kj" class="csl-entry" role="listitem">
-Wickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. n.d. <span>“<span class="nocase">ggplot2</span>: Elegant Graphics for Data Analysis (<span>3e</span>).”</span> Accessed January 12, 2025. <a href="https://ggplot2-book.org/">https://ggplot2-book.org/</a>.
-</div>
-<div id="ref-Wilkinson2005-do" class="csl-entry" role="listitem">
-Wilkinson, Leland, D Wills, D Rope, A Norton, and R Dubbs. 2005. <em>The Grammar of Graphics (Statistics and Computing)</em>. 2nd edition. Springer. <a href="https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448">https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448</a>.
-</div>
-</div>
 </section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><em>media</em> is the plural form of medium.</p></li>
-<li id="fn2"><p>more general than language</p></li>
-<li id="fn3"><p>Orderly system of rules for arranging symbols.</p></li>
+<li id="fn1"><p>Data about data.</p></li>
 </ol>
 </section>
     </div>
@@ -1157,7 +842,6 @@ Wilkinson, Leland, D Wills, D Rope, A Norton, and R Dubbs. 2005. <em>The Grammar
         }
       });
       </script>
-    <script>videojs(video_shortcode_videojs_video1);</script>
     <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
     (function() {
       let previousOnload = window.onload;
