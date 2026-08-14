@@ -2,10 +2,10 @@ This page summarizes some of the key deadlines in the course.
 
 | Date      | What's [due]{.orange_due}/happening |
 |-----------|----------------------|
-| [2026-09-04](schedule.qmd#fri-sep-02)   | [Exercise 01](exercises/ex01-figs-in-psych-sci.qmd) |
-| [2026-09-18](schedule.qmd#fri-sep-18) | [Exercise 02](exercises/ex02-data-viz-outside-psych.qmd) |
-| [2026-09-25](schedule.qmd#fri-sep-25) | [Exercise 03](exercises/ex03-making-data.qmd) |
-| [2026-10-04](schedule.qmd#fri-oct-04) | [Exercise 04](exercises/ex04-sci-of-data-viz.qmd) |
+| [2026-09-04](schedule.qmd#fri-sep-02)   | [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) |
+| [2026-09-18](schedule.qmd#fri-sep-18) | [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) |
+| [2026-09-25](schedule.qmd#fri-sep-25) | [Exercise 03](exercises/ex-03-making-data.qmd) |
+| [2026-10-04](schedule.qmd#fri-oct-04) | [Exercise 04](exercises/ex-04-making-figs-ggplot.qmd) |
 | [2026-10-12](schedule.qmd#mon-oct-12) | [Final project proposal](exercises/final-project.qmd) |
 | [2025-10-26](schedule.qmd#mon-oct-26)  | [Exercise 05](exercises/ex-05-tbd.qmd) |
 | [2026-11-16](schedule.qmd#mon-nov-16) | [Exercise 06](exercises/ex-06-tbd.qmd) |

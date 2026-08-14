@@ -286,39 +286,34 @@
 
 ### Fri, Nov 06 {-}
 
+## Week 12 {- #week-12}
+
+### Mon, Nov 09 {-}
+
+### Wed, Nov 11 {-}
+
+### Fri, Nov 13 {-}
+
 *Work Session: More TidyTuesday*
 
 - [Slides](404.qmd)
 
-## Week 12 {- #week-12}
+## Week 13 {- #week-13}
 
-*Data viz and inference*
+*Data viz and quantitative inference*
 
-### Mon, Nov 09 {-}
+### Mon, Nov 16 {-}
 
 *Synthesize before you analyze*
 
 - [Slides](404.qmd)
+- {{< fa calendar >}} *Due* [Exercise-06](exercises/ex-06-tbd.qmd)
 
-### Wed, Nov 11 {-}
+### Wed, Nov 18 {-}
 
 *Sample size, effect size, statistical power*
 
 - [Slides](404.qmd)
-
-### Fri, Nov 13 {-}
-
-*Work Session: Final Projects*
-
-## Week 13 {- #week-13}
-
-*THEME TBD*
-
-### Mon, Nov 16 {-}
-
-- {{< fa calendar >}} *Due* [Exercise-06](exercises/ex-06-tbd.qmd)
-
-### Wed, Nov 18 {-}
 
 ### Fri, Nov 20 {-}
 

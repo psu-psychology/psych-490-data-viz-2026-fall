@@ -54,39 +54,14 @@ format: revealjs
 
 ## Today
 
-- Visualization in psychological science
-  - [Exercise-01](../exercises/ex-01-figs-in-psych-sci.qmd)
 - Semiotics of data visualization
+- Work session
+  - [Exercise-01](../exercises/ex-01-figs-in-psych-sci.qmd)
+  - Install R, RStudio
 
 # Visualization in psychological science
 
 ## Resources
-
-- [Assignment](../exercises/ex01-figs-in-psych-sci.qmd)
-- [Google Sheet](https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing) for capturing & sharing data
-
-## Measures in $\Psi$ science
-
-::: {.incremental}
-- Internal states (thoughts, feelings, memories, opinions, decisions, judgments...)
-- Physiological states
-- Individual characteristics
-- Environmental characteristics
-:::
-
-## Questions
-
-- Are there common types of visualizations in psychological science?
-- What information is conveyed?
-- How clearly is it conveyed?
-- Do the figures "tell the story" (See [Wk-08 "Storytelling with data"](schedule.qmd#wed-oct-14))
-
-## More questions
-
-- How are the following depicted?
-  - Responses to surveys
-  - Performance on tasks/tests
-  - Brain structure or activity
   
 # Semiotics of data visualization
 
@@ -306,11 +281,17 @@ Signs and sign systems are *everywhere*!
   - *Semiotics*: study of signs and symbols
   - What meanings do the visual elements of data graphics convey?
   - How do data visualizations relate to other communicative elements?
+  
+# Work session
 
-## Homework
+## Install R and RStudio
 
-- Install R and RStudio
--  [*Tutorial*](tutorial/tutorial-install-r-rstudio.qmd)
+-  [*Tutorial*](../tutorials/tutorial-install-r-rstudio.qmd)
+
+## Work on Exercise 01
+
+- [Assignment](../exercises/ex-01-figs-in-psych-sci.qmd)
+- [Google Sheet](https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing) for capturing & sharing data
 
 ## Next time
 
