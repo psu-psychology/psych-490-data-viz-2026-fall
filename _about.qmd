@@ -4,7 +4,9 @@ Rick O. Gilmore, Ph.D. \
 Professor of Psychology \
 rog1 AT-SIGN psu PERIOD edu \
 
-Schedule an appointment: <https://doodle.com/mm/rickgilmore/book-a-time></br>
+### Office hours
+
+Monday & Friday, 12:00p - 1:00p in 114 Moore or by appointment: <https://doodle.com/mm/rickgilmore/book-a-time></br>
 
 Lab web site: <https://gilmore-lab.github.io>
 
@@ -18,7 +20,7 @@ kmg7035 AT-SIGN psu PERIOD edu \
 ## Meeting time & location {-}
 
 Monday, Wednesday, & Friday, 3:25 pm - 4:25 pm \
-216 Osmond Lab
+216 [Osmond Lab](https://map.psu.edu/?id=1134#!ct/25403,26748,26749,26750,27255?m/274773?s/Osmond)
 
 ## Canvas site
 
@@ -28,7 +30,6 @@ However, we will use Canvas to track attendance, submit and grade assignments, a
 The Canvas site may be found here: 
 
 <https://psu.instructure.com/courses/2484925>
-
 
 ## Course structure
 
