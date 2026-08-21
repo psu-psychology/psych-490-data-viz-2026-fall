@@ -1,92 +1,12 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Psychology of Data Visualization",
-    "section": "",
-    "text": "The Psychology of Data Visualization",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#the-psychology-of-data-visualization",
-    "href": "index.html#the-psychology-of-data-visualization",
-    "title": "The Psychology of Data Visualization",
-    "section": "",
-    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#themes",
-    "href": "index.html#themes",
-    "title": "The Psychology of Data Visualization",
-    "section": "Themes",
-    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "The Psychology of Data Visualization",
-    "section": "Instructor",
-    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\nSchedule an appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#teaching-assistant",
-    "href": "index.html#teaching-assistant",
-    "title": "The Psychology of Data Visualization",
-    "section": "Teaching Assistant",
-    "text": "Teaching Assistant",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#meeting-time-location",
-    "href": "index.html#meeting-time-location",
-    "title": "The Psychology of Data Visualization",
-    "section": "Meeting time & location",
-    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:25 pm - 4:25 pm\n216 Osmond Lab",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#canvas-site",
-    "href": "index.html#canvas-site",
-    "title": "The Psychology of Data Visualization",
-    "section": "Canvas site",
-    "text": "Canvas site\nWe will use Canvas to submit assignments and grade them. The Canvas site may be found here:\nhttps://link.to.canvas.site\nMost of the course content will be found on this site.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#course-structure",
-    "href": "index.html#course-structure",
-    "title": "The Psychology of Data Visualization",
-    "section": "Course structure",
-    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment.\n\n\n\n\n\n\nWikipedia contributors. (2024, August). A picture is worth a thousand words. https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words; Wikimedia Foundation, Inc.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Home</span>"
-    ]
-  },
-  {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week 01\nSurveying the landscape",
+    "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing Quarto\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim: https://quarto.org/docs/get-started/hello/jupyter.html1\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -94,9 +14,9 @@
     "href": "schedule.html#week-01",
     "title": "Schedule",
     "section": "",
-    "text": "Mon, Aug 24\nCourse introduction\n\nWatch: PBSoffbook (2013)\nSlides\n\n\n\nWed, Aug 26\nThe semiotics of data visualization\n\nRead: Cairo (2013), Chapter 1-2, PDF on Canvas\nExercise 01 assigned\nSlides\n\n\n\nFri, Aug 28\nWork Session: Introducing Quarto\n\nComplete: RStudio installation and setup",
+    "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing Quarto\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim: https://quarto.org/docs/get-started/hello/jupyter.html1\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -104,9 +24,9 @@
     "href": "schedule.html#week-02",
     "title": "Schedule",
     "section": "Week 02",
-    "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nResults from Exercise 01\nSlides\n\n\n\nWed, Sep 2\nVisualization in art, sports, and journalism\n\nRead (recommended): Gelman & Unwin (2013)\nAssigned: Exercise 02\nSlides\n\n\n\nFri, Sep 04\nWork Session: More Quarto\n\nDue: Exercise 01 | Canvas dropbox",
+    "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nResults from Exercise 01\nSlides\n\n\n\nWed, Sep 02\nVisualization in art, sports, and journalism\n\nRead\n\nGelman & Unwin (2013) (recommended), follow citation link to online version or PDF on Canvas.\n\nAssigned: Exercise 02\nSlides\n\n\n\nFri, Sep 04\nWork Session: More Quarto\n\n Due Exercise 01 |  Canvas dropbox\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -114,9 +34,9 @@
     "href": "schedule.html#week-03",
     "title": "Schedule",
     "section": "Week 03",
-    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead: Stevens (1946)\nOptional:\n\nWikipedia contributors (2024)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas.\n\nAssigned: Exercise-03\nSlides\n\n\n\nFri, Sep 11\nWork Session: Into to R\n\nDue: Exercise 02 | Canvas dropbox |",
+    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nAssigned: Exercise-03\nSlides\n\n\n\nFri, Sep 11\nWork Session: Intro to R\n\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -124,9 +44,9 @@
     "href": "schedule.html#week-04",
     "title": "Schedule",
     "section": "Week 04",
-    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch: Channel (2024)\nSlides\n\n\n\nWed, Sep 16\n\nSlides\nReview: Making and visualizing data\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot",
+    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nSlides\n\n\n\nWed, Sep 16\nMore figure types\n\n\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nReview: Making and visualizing data\n Due Exercise 02 |  Canvas dropbox |\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -134,9 +54,9 @@
     "href": "schedule.html#week-05",
     "title": "Schedule",
     "section": "Week 05",
-    "text": "Week 05\nVisual perception\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead: Cairo (2013), Chapter 5, PDF on Canvas\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\nDue: Exercise-03 | Canvas dropbox |",
+    "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise-03 |  Canvas dropbox |\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -144,9 +64,9 @@
     "href": "schedule.html#week-06",
     "title": "Schedule",
     "section": "Week 06",
-    "text": "Week 06\nVisual perception\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\nDue: Exercise-04 | Canvas dropbox |",
+    "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\n Due Exercise-04 |  Canvas dropbox |\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -154,9 +74,9 @@
     "href": "schedule.html#week-07",
     "title": "Schedule",
     "section": "Week 07",
-    "text": "Week 07\n\nMon, Oct 05\n\n\nWed, Oct 07\n\n\nFri, Oct 09\nWork Session: More sports data",
+    "text": "Week 07\n\nMon, Oct 05\nExploring data\n\nRead:\n\nTukey (1977), Chapter 1, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 07\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 162\n\nSlides\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -164,9 +84,9 @@
     "href": "schedule.html#week-08",
     "title": "Schedule",
     "section": "Week 08",
-    "text": "Week 08\n\nMon, Oct 12\n\n\nWed, Oct 14\n\n\nFri, Oct 16\nWork Session: Data viz challenge",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\n*Read**:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\n Due Final Project proposal |  Canvas dropbox\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: TidyTuesday or Exercise 05\n\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -174,9 +94,9 @@
     "href": "schedule.html#week-09",
     "title": "Schedule",
     "section": "Week 09",
-    "text": "Week 09\n\nMon, Oct 19\n\n\nWed, Oct 21\n\n\nFri, Oct 23\nWork Session: Data viz challenge II",
+    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 153\n\nSlides\n\n\n\nWed, Oct 21\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday II\n\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -184,9 +104,9 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\n\nMon, Oct 26\n\n\nWed, Oct 28\n\n\nFri, Oct 30\nWork Session",
+    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\n Due Exercise-05\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session: Tables\n\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -194,9 +114,9 @@
     "href": "schedule.html#week-11",
     "title": "Schedule",
     "section": "Week 11",
-    "text": "Week 11\n\nMon, November 02\n\n\nWed, November 04\n\n\nFri, November 06\nWork Session",
+    "text": "Week 11\nData viz in policy & politics\n\nMon, Nov 02\n\nSlides\n\n\n\nWed, Nov 04\n\nSlides\n\n\n\nFri, Nov 06",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -204,9 +124,9 @@
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nMon, November 09\n\n\nWed, November 11\n\n\nFri, November 13\nWork Session",
+    "text": "Week 12\n\nMon, Nov 09\n\n\nWed, Nov 11\n\n\nFri, Nov 13\nWork Session: More TidyTuesday\n\nSlides",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -214,9 +134,9 @@
     "href": "schedule.html#week-13",
     "title": "Schedule",
     "section": "Week 13",
-    "text": "Week 13\n\nMon, November 16\n\n\nWed, November 18\n\n\nFri, November 20\nWork Session: Final projects",
+    "text": "Week 13\nData viz and quantitative inference\n\nMon, Nov 16\nSynthesize before you analyze\n\nSlides\n Due Exercise-06\n\n\n\nWed, Nov 18\nSample size, effect size, statistical power\n\nSlides\n\n\n\nFri, Nov 20\nWork Session: Final projects",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -226,7 +146,7 @@
     "section": "Thanksgiving Break",
     "text": "Thanksgiving Break\nNO CLASS",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -234,19 +154,19 @@
     "href": "schedule.html#week-14",
     "title": "Schedule",
     "section": "Week 14",
-    "text": "Week 14\n\nMon, November 30\n\n\nWed, December 02\n\n\nFri, December 04\nWork Session: Final projects",
+    "text": "Week 14\n\nMon, Nov 30\nMaking data dashboards and apps\n\nExplore:\n\nKohler (2024)\n\nSlides\n\n\n\nWed, Dec 02\nWork Session: Final projects\n\n\nFri, Dec 04\nWork Session: Final projects",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
-    "objectID": "schedule.html#week-16",
-    "href": "schedule.html#week-16",
+    "objectID": "schedule.html#week-15",
+    "href": "schedule.html#week-15",
     "title": "Schedule",
     "section": "Week 15",
-    "text": "Week 15\n\nMon, December 07\nFinal Project Presentations\n\n\nWed, December 09\nFinal Project Presentations\n\n\nFri, December 11\nFinal Project Presentations",
+    "text": "Week 15\n\nMon, Dec 07\nFinal Project Presentations\n\n\nWed, Dec 09\nFinal Project Presentations\n\n\nFri, Dec 11\nFinal Project Presentations",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
@@ -254,267 +174,109 @@
     "href": "schedule.html#finals-week",
     "title": "Schedule",
     "section": "Finals Week",
-    "text": "Finals Week\n\nWed, Dec 16\n\nDue: Final project write-up | Canvas dropbox\n\n\n\n\n\n\n\nAtlassian. (n.d.). Essential chart types for data visualization. Retrieved January 24, 2025, from https://www.atlassian.com/data/charts/essential-chart-types-for-data-visualization\n\n\nCairo, A. (2013). The functional art: An introduction to information graphics and visualization. Upper Saddle River, N: New Riders Publishing.\n\n\nChannel, M. O. (2024). Every CHART types explained in 12 minutes. Youtube. Retrieved from https://www.youtube.com/watch?v=cuMwWvtNmJ0\n\n\nCleveland, W. S., & McGill, R. (1984). Graphical perception: Theory, experimentation, and application to the development of graphical methods. Journal of the American Statistical Association, 79, 531–554. https://doi.org/10.1080/01621459.1984.10478080\n\n\nDiscovery, J. S. (2024, January 4). Types of graphs. Retrieved January 24, 2025, from https://www.jmp.com/en_us/statistics-knowledge-portal/exploratory-data-analysis/types-of-graphs.html\n\n\nFew, S. (2004). Show me the numbers: Designing tables and graphs to enlighten. Oakland, CA: Analytics Press.\n\n\nFranconeri, S. L., Padilla, L. M., Shah, P., Zacks, J. M., & Hullman, J. (2021). The science of visual data communication: What works. Psychological Science in the Public Interest: A Journal of the American Psychological Society, 22(3), 110–161. https://doi.org/10.1177/15291006211051956\n\n\nGelman, A., & Unwin, A. (2013). Infovis and statistical graphics: Different goals, different looks. Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America, 22, 2–28. https://doi.org/10.1080/10618600.2012.761137\n\n\nHammond, T. (2024, November 26). 20 types of charts and graphs for data visualization. Retrieved January 24, 2025, from https://www.thoughtspot.com/data-trends/data-visualization/types-of-charts-graphs\n\n\nPBSoffbook. (2013). The art of data visualization | off book | PBS digital studios. Youtube. Retrieved from https://www.youtube.com/watch?v=AdSZJzb-aX8&t=3s\n\n\nRibecca, S. (n.d.). The data visualisation catalogue. Retrieved January 24, 2025, from https://datavizcatalogue.com/index.html\n\n\nStevens, S. S. (1946). On the theory of scales of measurement. Science (New York, N.Y.), 103, 677–680. https://doi.org/10.1126/science.103.2684.677\n\n\nTourangeau, R., Rips, L. J., & Rasinski, K. (2012). The Psychology of Survey Response. Cambridge, England: Cambridge University Press. https://doi.org/10.1017/cbo9780511819322\n\n\nWikipedia contributors. (2024, November 23). Statistical data type. Retrieved from https://en.wikipedia.org/wiki/Statistical_data_type",
+    "text": "Finals Week\n\nWed, Dec 16\n\n Due Final project write-up |  Canvas dropbox",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Schedule</span>"
+      "Schedule"
     ]
   },
   {
-    "objectID": "evaluation.html",
-    "href": "evaluation.html",
-    "title": "Evaluation",
+    "objectID": "schedule.html#footnotes",
+    "href": "schedule.html#footnotes",
+    "title": "Schedule",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWe won’t use Python in this course, but the basic ideas apply to Python and R.↩︎\nNot on Canvas yet.↩︎\nNot on Cavnas yet.↩︎",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-install-r-rstudio.html",
+    "href": "tutorials/tutorial-install-r-rstudio.html",
+    "title": "Installing R and RStudio Desktop",
     "section": "",
-    "text": "Elements",
+    "text": "This page provides information about how to install R and RStudio Desktop on your personal computer. These are free, powerful software tools for data visualization and analysis.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Evaluation</span>"
+      "Tutorials",
+      "Installing R and RStudio Desktop"
     ]
   },
   {
-    "objectID": "evaluation.html#eval-components",
-    "href": "evaluation.html#eval-components",
-    "title": "Evaluation",
+    "objectID": "tutorials/tutorial-install-r-rstudio.html#about",
+    "href": "tutorials/tutorial-install-r-rstudio.html#about",
+    "title": "Installing R and RStudio Desktop",
     "section": "",
-    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "text": "This page provides information about how to install R and RStudio Desktop on your personal computer. These are free, powerful software tools for data visualization and analysis.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Evaluation</span>"
+      "Tutorials",
+      "Installing R and RStudio Desktop"
     ]
   },
   {
-    "objectID": "evaluation.html#grading-scheme",
-    "href": "evaluation.html#grading-scheme",
-    "title": "Evaluation",
-    "section": "Grading Scheme",
-    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF",
+    "objectID": "tutorials/tutorial-install-r-rstudio.html#order-of-operations",
+    "href": "tutorials/tutorial-install-r-rstudio.html#order-of-operations",
+    "title": "Installing R and RStudio Desktop",
+    "section": "Order of operations",
+    "text": "Order of operations\n\n\n\n\n\n\nNote\n\n\n\nInstalling R and RStudio Desktop is usually straightforward, but glitches arise from time to time. If something’s not working, try to seek help from an expert friend or the internet. If you get frustrated, stop. We’ll spend time in-class helping with troubleshooting.\n\n\nYou must install R first.\n\nInstalling R\n\nVisit https://lib.stat.cmu.edu/R/CRAN/\n\n\n\n\n\n\n\nFigure 1: https://lib.stat.cmu.edu/R/CRAN/\n\n\n\n\nClick on the “Download R for…” link appropriate for the operating system of your computer, proably Windows or macOS.\n\n\nIf you have a newer Mac, you want the version “For Apple Silicon”: R-4.6.1-arm64\n\n\n\n\n\n\n\nImportantConfirm your macOS operating system and hardware\n\n\n\nClick on the Apple Menu in the upper left hand corner. Open the “About this Mac” menu item. A window will open.\n\n\n\n\n\n\nFigure 2\n\n\n\nNote that the operating system and hardware are displayed here. Under Chip, the “Apple M2 Pro” means that my laptop is using Apple Silicon. The macOS value says “Tahoe 26.6.1”. R-4.6.1 works with all macOS &gt; 14 (Sonoma).\n\n\n\nIf you are on Windows, click on the “install R for the first time” link. Then download R-4.6.1 for Windows.\n\n\nAfter you’ve downloaded the installer program. Open it. It is usually found in the default location for file downloads, often in a folder called “Downloads.”\nOpen the installer program and follow the directions.\n\n\n\nInstalling RStudio Desktop\nNext install RStudio Desktop. Visit https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads.\nMacOS users select RStudio-2026.07.1-147.dmg and Windows Users select RStudio-2026.07.1-147.exe.\nWhen the programs download, run the installation programs.\n\nOpen RStudio Desktop.\n\nIf RStudio Desktop opens successfully, do the computer happy dance.\n\n\n\n\n\n\nFigure 3: giphy.com",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Evaluation</span>"
+      "Tutorials",
+      "Installing R and RStudio Desktop"
     ]
   },
   {
-    "objectID": "deadlines.html",
-    "href": "deadlines.html",
-    "title": "Deadlines",
-    "section": "",
-    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2025-01-23\nExercise 01\n\n\n2025-01-30\nExercise 02\n\n\n2025-02-11\nExercise 03\n\n\n2025-03-06\nFinal project proposal due\n\n\n2025-03-06\nExercise 04\n\n\n2025-03-27\nExercise 05\n\n\n2025-04-03\nExercise 06\n\n\n2025-04-08\nFinal project survey\n\n\n2025-04-17\nExercise 07\n\n\n2025-05-05\nFinal project writeup due",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Deadlines</span>"
-    ]
-  },
-  {
-    "objectID": "policies.html",
-    "href": "policies.html",
-    "title": "Policies",
-    "section": "",
-    "text": "Academic Integrity\nStudents with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policies</span>"
-    ]
-  },
-  {
-    "objectID": "policies.html#values",
-    "href": "policies.html#values",
-    "title": "Policies",
-    "section": "Values",
-    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
-    "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policies</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-01-figs-in-psych-sci.html",
-    "href": "exercises/ex-01-figs-in-psych-sci.html",
+    "objectID": "exercises/ex-01-template.html",
+    "href": "exercises/ex-01-template.html",
     "title": "Exercise 01",
     "section": "",
-    "text": "Dates\nIn-class work on Friday, August 28, 2026.\nWrite-up for credit due on Friday, September 4.\nCanvas dropbox.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exercise 01</span>"
-    ]
+    "text": "This document summarizes work related to the PSYCH 490.007 assignment on visualization in psychological science."
   },
   {
-    "objectID": "exercises/ex-01-figs-in-psych-sci.html#goals",
-    "href": "exercises/ex-01-figs-in-psych-sci.html#goals",
+    "objectID": "exercises/ex-01-template.html#about",
+    "href": "exercises/ex-01-template.html#about",
     "title": "Exercise 01",
-    "section": "Goals",
-    "text": "Goals\nIn this exercise, you may choose to work alone or with a team of no more than two other classmates to find data visualizations from the societies of three (3) professional associations and three (3) journals. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used in psychological science.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exercise 01</span>"
-    ]
+    "section": "",
+    "text": "This document summarizes work related to the PSYCH 490.007 assignment on visualization in psychological science."
   },
   {
-    "objectID": "exercises/ex-01-figs-in-psych-sci.html#assignment",
-    "href": "exercises/ex-01-figs-in-psych-sci.html#assignment",
+    "objectID": "exercises/ex-01-template.html#figures",
+    "href": "exercises/ex-01-template.html#figures",
     "title": "Exercise 01",
-    "section": "Assignment",
-    "text": "Assignment\n\nVisit the websites of at least three (3) professional associations.\n\nThe following are examples. Feel free to choose a different professional society.\n\nAmerican Psychological Association (APA)\nAssociation for Psychological Science (APS)\nVision Sciences Society\nSociety for Personality and Social Psychology\nSociety for Research in Child Development\nSociety for Research on Adolescence\nCognitive Neuroscience Society\nSociety for Neuroscience\nPsychonomics Society\nSociety for Industrial and Organizational Psychology\n\n\nFor each society website, try to find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way.\nWhen you find a visualization you find interesting, capture information about it.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1X-3kWpGAACdkAJ8-AeqYiu5TS6tRzpfdgXBYyPooCPo/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url_to_src field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\nThere is also a url_to_figure field. If you want to add that, right click on the image and see if an option to ‘open image in new tab’ or ‘copy image address’ is available.\n\n\n\n\n\n\nImportant\n\n\n\nYou do not have to use your PSU ID as your identifier.\nGilmore did so just to provide some sample data.\n\n\n\nNext, visit the websites of at least three (3) journals and do the same thing–pick at least one visualization from each of the journals.\n\nNote that some societies publish one or more journals, so you might find a journal that interests you from the society website.\nHere are some additional journal resources that you might find interesting to explore:\n\nScience Magazine\nNature\nNature Human Behavior\nTrends in Cognitive Sciences\nAnnual Reviews\n\nFigures with “psychology” as search term\nFigures with “neuroscience” as search term\nKnowable Magazine has a graphics library\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe goal here is to gather via ‘crowd-sourcing’ a diverse set of visualizations. So, feel free to mix it up.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exercise 01</span>"
-    ]
+    "section": "Figures",
+    "text": "Figures\n\n\n\n\n\n\nFigure 1: Figure 1 from DeWall, C.N & Myers, D.G. (2015, December). Teaching Current Directions in Psychological Science, https://www.psychologicalscience.org/observer/teaching-current-directions-in-psychological-science-27\n\n\n\n\n\n\n\n\n\nFigure 2: Figure 1 from O’Reilly, L. M., Fazel, S., Rickert, M. E., Kuja-Halkola, R., Cederlof, M., Hellner, C., Larsson, H., Lichtenstein, P., & D’Onofrio, B. M. (2025). Evaluating machine learning for predicting youth suicidal behavior up to 1 year after contact with mental-health specialty care. Clinical Psychological Science, 13(3), 614–631. https://doi.org/10.1177/21677026241301298\n\n\n\n\n\n\n\n\n\nFigure 3: Caption for figure 03\n\n\n\n\nProfessional society or association websites\n\n\n\n\n\n\nFigure 4: Caption for figure 04\n\n\n\n\n\n\n\n\n\nFigure 5: Caption for figure 05\n\n\n\n\n\n\n\n\n\nFigure 6: Caption for figure 06\n\n\n\n\n\nScientific journals"
   },
   {
-    "objectID": "exercises/ex-01-figs-in-psych-sci.html#submit",
-    "href": "exercises/ex-01-figs-in-psych-sci.html#submit",
+    "objectID": "exercises/ex-01-template.html#commentary",
+    "href": "exercises/ex-01-template.html#commentary",
     "title": "Exercise 01",
-    "section": "Submit",
-    "text": "Submit\n\nEveryone\nYour data to the shared Google Spreadsheet: https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing.\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA 5 paragraph write-up using the Quarto template where you describe three (3) figures your group found, focusing on these questions:\n\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nStudents who work in teams should submit one (1) write-up with all of the authors’ names. One grade will be assigned.\nNote: Your references section need only include the citation to the source paper or website. You should identify in your text which figure you have chosen to analyze.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exercise 01</span>"
-    ]
+    "section": "Commentary",
+    "text": "Commentary\n\n\n\n\n\n\nNote\n\n\n\nIntroduction: What you did and what you found\nDiscussion of one figure\nQuarto can automatically link to the figure elsewhere in your document by using the figure’s internal name that you create in the brackets ({}). For example, Figure 1.\nDiscussion of a second figure\nDiscussion of a third figure\nConclusion: What are the one or two main take-home messages?"
   },
   {
-    "objectID": "exercises/ex-01-figs-in-psych-sci.html#best-practices",
-    "href": "exercises/ex-01-figs-in-psych-sci.html#best-practices",
+    "objectID": "exercises/ex-01-template.html#references",
+    "href": "exercises/ex-01-template.html#references",
     "title": "Exercise 01",
-    "section": "Best practices",
-    "text": "Best practices\n\nThe best submissions involve a complete essay. That means an introductory paragraph, several body paragraphs, usually one per figure, a conclusion, and a reference section.\nThe best submissions mention the purpose of the exercise: To evaluate how some sample figures from various sources in psychological science communicated information about some topic.\nThe best submissions require reading the papers or websites where the figures are drawn from and provide helpful information about what the figures were depicting.\nEven though we are using Quarto to generate the final document, the best submissions will adhere to the structure of the APA paper format for the Commentary section. Here is a sample template.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Exercise 01</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-02-data-viz-outside-psych.html",
-    "href": "exercises/ex-02-data-viz-outside-psych.html",
-    "title": "Exercise 02",
-    "section": "",
-    "text": "Dates\nIn-class work on Friday, September 4.\nDue on Friday, September 11.\nCanvas dropbox.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exercise 02</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-02-data-viz-outside-psych.html#goals",
-    "href": "exercises/ex-02-data-viz-outside-psych.html#goals",
-    "title": "Exercise 02",
-    "section": "Goals",
-    "text": "Goals\nIn this exercise, you will work alone or a with a team of no more than two other classmates to find and describe data visualizations from business (for profit or not-for-profit), government, the arts, sports, or journalism. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used fields outside of psychological science.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exercise 02</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-02-data-viz-outside-psych.html#assignment",
-    "href": "exercises/ex-02-data-viz-outside-psych.html#assignment",
-    "title": "Exercise 02",
-    "section": "Assignment",
-    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1rLiLBRbDQfInauOUBPNwGYq-0VOjskGNY7Wq2QRTTbc/edit?gid=0#gid=0\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exercise 02</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-02-data-viz-outside-psych.html#submit",
-    "href": "exercises/ex-02-data-viz-outside-psych.html#submit",
-    "title": "Exercise 02",
-    "section": "Submit",
-    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above.\nAdapt the Quarto template used for Exercise 01.\n\n\n\n\n\n\n\nGelman, A., & Unwin, A. (2013). Infovis and statistical graphics: Different goals, different looks. Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America, 22, 2–28. https://doi.org/10.1080/10618600.2012.761137",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Exercise 02</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-03-making-data.html",
-    "href": "exercises/ex-03-making-data.html",
-    "title": "Exercise 03",
-    "section": "",
-    "text": "Dates\nIn-class work on XXXX.\nSubmit write-up for credit due by Tuesday, February 11.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exercise 03</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-03-making-data.html#goals",
-    "href": "exercises/ex-03-making-data.html#goals",
-    "title": "Exercise 03",
-    "section": "Goals",
-    "text": "Goals\nIn this exercise, you will work alone or with a team of no more than two other classmates to create a survey using the Google Forms tool. The survey you create will be used later in the course for data visualizations that you will also create.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Exercise 03</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-04-making-figs-ggplot.html",
-    "href": "exercises/ex-04-making-figs-ggplot.html",
-    "title": "Exercise 04",
-    "section": "",
-    "text": "Dates\nWe’ll work on this exercise in-class on Friday, September 18, and Friday, September 25, 2026.\nThe write-up is due on Friday, October 2, 2026.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercise 04</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-04-making-figs-ggplot.html#goals",
-    "href": "exercises/ex-04-making-figs-ggplot.html#goals",
-    "title": "Exercise 04",
-    "section": "Goals",
-    "text": "Goals\n\nCreate some simple figures in R using the ggplot2 package.\nGain an appreciation of the costs and benefits of scripting the generation of figures.\nLay the foundation for using ggplot2 to create more advanced and informative figures.",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exercise 04</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-05-tbd.html",
-    "href": "exercises/ex-05-tbd.html",
-    "title": "Exercise 05",
-    "section": "",
-    "text": "Dates",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exercise 05</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-05-tbd.html#goals",
-    "href": "exercises/ex-05-tbd.html#goals",
-    "title": "Exercise 05",
-    "section": "Goals",
-    "text": "Goals",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Exercise 05</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-06-tbd.html",
-    "href": "exercises/ex-06-tbd.html",
-    "title": "Exercise 06",
-    "section": "",
-    "text": "Dates",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Exercise 06</span>"
-    ]
-  },
-  {
-    "objectID": "exercises/ex-06-tbd.html#goals",
-    "href": "exercises/ex-06-tbd.html#goals",
-    "title": "Exercise 06",
-    "section": "Goals",
-    "text": "Goals",
-    "crumbs": [
-      "Exercises",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Exercise 06</span>"
-    ]
+    "section": "References",
+    "text": "References\nDeWall, C.N & Myers, D.G. (2015, December). Teaching Current Directions in Psychological Science, https://www.psychologicalscience.org/observer/teaching-current-directions-in-psychological-science-27, retrieved 2026-07-30.\nO’Reilly, L. M., Fazel, S., Rickert, M. E., Kuja-Halkola, R., Cederlof, M., Hellner, C., Larsson, H., Lichtenstein, P., & D’Onofrio, B. M. (2025). Evaluating machine learning for predicting youth suicidal behavior up to 1 year after contact with mental-health specialty care. Clinical Psychological Science, 13(3), 614–631. https://doi.org/10.1177/21677026241301298."
   },
   {
     "objectID": "exercises/final-project.html",
     "href": "exercises/final-project.html",
     "title": "Final Project",
     "section": "",
-    "text": "Background\nYour final project is an opportunity for you to produce a product that shows-off some of what you have learned in the course.\nYou may work alone or with up to two other students in the class. If you work with others, you will need to complete a statement about who did what, and all of the members of your team will get the same grade.",
+    "text": "Your final project is an opportunity for you to produce a product that shows-off some of what you have learned in the course.\nYou may work alone or with up to two other students in the class. If you work with others, you will need to complete a statement about who did what, and all of the members of your team will get the same grade.",
     "crumbs": [
       "Exercises",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Final Project</span>"
+      "Final Project"
+    ]
+  },
+  {
+    "objectID": "exercises/final-project.html#background",
+    "href": "exercises/final-project.html#background",
+    "title": "Final Project",
+    "section": "",
+    "text": "Your final project is an opportunity for you to produce a product that shows-off some of what you have learned in the course.\nYou may work alone or with up to two other students in the class. If you work with others, you will need to complete a statement about who did what, and all of the members of your team will get the same grade.",
+    "crumbs": [
+      "Exercises",
+      "Final Project"
     ]
   },
   {
@@ -525,7 +287,7 @@
     "text": "Dates\n\nProposal assigned Tuesday, February 18\nProposal due Thursday, March 6, 2026\nFinal project survey due Tuesday, April 08\nFinal write-up due Tuesday, May 05",
     "crumbs": [
       "Exercises",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Final Project</span>"
+      "Final Project"
     ]
   },
   {
@@ -536,7 +298,7 @@
     "text": "Topics\nYou may choose any of a wide range of topics for your final project:\n\nA tutorial on a tool or resource for data visualization you find especially useful.\nA discussion of a specific data visualization or type of visualization and how it does or does not accurately and persuasively convey some specific finding.\nA showcase of one or more data visualizations that you have made.",
     "crumbs": [
       "Exercises",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Final Project</span>"
+      "Final Project"
     ]
   },
   {
@@ -547,7 +309,7 @@
     "text": "Formats\nThere are multiple formats for your final project. Choose one of them.\n\nShort (5-10 min) in-class talk\nPoster\nLesson plan/exercise\nTutorial\nResearch project (& write-up)\nOpinion piece",
     "crumbs": [
       "Exercises",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Final Project</span>"
+      "Final Project"
     ]
   },
   {
@@ -555,152 +317,749 @@
     "href": "exercises/final-project.html#components",
     "title": "Final Project",
     "section": "Components",
-    "text": "Components\n\nProject proposal\n\nEvery student or team must submit a one-page single-spaced project proposal. Your proposal should state the aim or objective of your project, the format, and a include a brief description of how you intend to go about achieving your objectives.\n\nThe proposal is due on Thursday, March 6.\n\n\nProject presentation\n\nEvery student or team may make an optional presentation to the class about their project. Please indicate whether you are willing to make a presentation when you complete the survey.\nNote: Giving a presentation is worth 5 extra credit points.\nThe presentations will occur during class on December 7, 9, and 11.\nIf you wish to have your presentation made available publicly on the course website, please let me know. This is also completely optional.\n\n\n\nProject write-up\n\nEvery student or team must submit a write-up, due during finals week on Wednesday, December 16.\nDepending on the format of the project (talk, poster, paper), different written materials may be submitted (slides, poster, etc.).\nFor an in-class talk, submit a separate document with your talk text or notes and your slides. You may also submit slides that include presenter notes embedded within them.\nFor a poster, submit a PowerPoint or PDF of your poster along with any talking points.\n\nRubic: An example of potential grading template we may use: https://commons.erau.edu/db-srs/poster-scoring-rubric.pdf\nArticle: How to make a good scientific poster https://www.nature.com/articles/nj7614-115a\nTutorial video: how to make a poster https://www.youtube.com/watch?v=EL5YwkiqBho&ab_channel=SamHertig\nOther basics: https://guides.libraries.psu.edu/posters\n\nFor research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length (~ 7-10 double-spaced pages).\nFor an opinion piece, please submit a document up to 1,500 words in length.\nFor an interactive website or presentation, please submit a complete set of files needed to evaluate your website or presentation.\nFor a lesson plan, please submit a document up up to 1,500 words in length.",
+    "text": "Components\n\nProject proposal\n\nEvery student or team must submit a one-page single-spaced project proposal. Your proposal should state the aim or objective of your project, the format, and a include a brief description of how you intend to go about achieving your objectives.\n\nThe proposal is due on Thursday, March 6.\n\n\nProject presentation\n\nEvery student or team may make an optional presentation to the class about their project. Please indicate whether you are willing to make a presentation when you complete the survey.\nNote: Giving a presentation is worth 5 extra credit points.\nThe presentations will occur during class on December 7, 9, and 11.\nIf you wish to have your presentation made available publicly on the course website, please let me know. This is also completely optional.\n\n\n\nProject write-up\n\nEvery student or team must submit a write-up, due during finals week on Wednesday, December 16.\nDepending on the format of the project (talk, poster, paper), different written materials may be submitted (slides, poster, etc.).\nFor an in-class talk, submit a separate document with your talk text or notes and your slides. You may also submit slides that include presenter notes embedded within them.\nFor a poster, submit a PowerPoint or PDF of your poster along with any talking points.\n\nRubic: An example of potential grading template we may use: https://commons.erau.edu/db-srs/poster-scoring-rubric.pdf\nArticle: How to make a good scientific poster https://www.nature.com/articles/nj7614-115a\nTutorial video: how to make a poster https://www.youtube.com/watch?v=EL5YwkiqBho&ab_channel=SamHertig\nOther basics: https://guides.libraries.psu.edu/posters\n\nFor a research paper, please submit an APA-formatted manuscript 1,500-2,000 words in length (~ 7-10 double-spaced pages).\nFor an opinion piece, please submit a document up to 1,500 words in length.\nFor an interactive website or presentation, please submit a complete set of files needed to evaluate your website or presentation.\nFor a lesson plan, please submit a document up up to 1,500 words in length.",
     "crumbs": [
       "Exercises",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Final Project</span>"
+      "Final Project"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-screenshots.html",
-    "href": "tutorials/tutorial-screenshots.html",
-    "title": "Capturing images",
+    "objectID": "exercises/ex-01-figs-in-psych-sci.html",
+    "href": "exercises/ex-01-figs-in-psych-sci.html",
+    "title": "Exercise 01",
     "section": "",
-    "text": "About\nThis short tutorial shows how to capture images in web pages and how to make screenshots on Mac OS and Windows OS.",
+    "text": "In-class work on Friday, August 28, 2026.\nWrite-up for credit due on Friday, September 4.\nCanvas dropbox.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Capturing images</span>"
+      "Exercises",
+      "Exercise 01"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-screenshots.html#capturing-images-in-web-pages",
-    "href": "tutorials/tutorial-screenshots.html#capturing-images-in-web-pages",
-    "title": "Capturing images",
-    "section": "Capturing images in web pages",
-    "text": "Capturing images in web pages\nMost browsers support “right-clicking”, clicking on the right button of a multibutton mouse (or the equivalent motion on a trackpad) when you hover over an image.\nUsing Chrome on Mac OS for example, I visited the Penn State homepage at https://www.psu.edu. In mousing over a photo, I right clicked and had the following panel appear:\n\n\n\n\n\n\nFigure 13.1: Image from psu.edu in Chrome using MacOS\n\n\n\nNote that there are several options. I find that these are the most useful:\n\n“Open Image in New Tab”. I often do this to make sure that the web page link (URL) actually contains the image I want it to. Then I switch to that tab for further steps.\n“Save Image As…”. This is useful if you want to download a local copy.\n“Copy Image Address”. Use this for capturing URLs of images, but not the images themselves.\n\nHere is an illustration of the same process on Windows 11:\n\n\n\n\n\n\nFigure 13.2: Image from psu.edu on Chrome using Windows 11\n\n\n\nNot that the pop-up has similar options.\n\n\n\n\n\n\nWarningWord to the wise\n\n\n\nSome websites do not support this feature. That’s why I prefer to use “open image in new tab” to see if I’m actually capturing what I want to capture. As a back-up, you can usually resort to your computer’s built-in screen capture tool that we’ll describe next.",
-    "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Capturing images</span>"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-screenshots.html#capturing-images-on-your-screen",
-    "href": "tutorials/tutorial-screenshots.html#capturing-images-on-your-screen",
-    "title": "Capturing images",
-    "section": "Capturing images on your screen",
-    "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 13.3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 13.4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 13.5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress.",
-    "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Capturing images</span>"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html",
-    "href": "tutorials/tutorial-rstudio-on-pc.html",
-    "title": "Setting up RStudio",
+    "objectID": "exercises/ex-01-figs-in-psych-sci.html#dates",
+    "href": "exercises/ex-01-figs-in-psych-sci.html#dates",
+    "title": "Exercise 01",
     "section": "",
-    "text": "About\nThis page provides help downloading, installing, and running RStudio on your personal computer (Windows, Mac, or Linux).\nYou may also use RStudio from a Penn State computer lab machine. For those instructions, see the accompanying tutorial.",
+    "text": "In-class work on Friday, August 28, 2026.\nWrite-up for credit due on Friday, September 4.\nCanvas dropbox.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
+      "Exercises",
+      "Exercise 01"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html#what-is-rstudio",
-    "href": "tutorials/tutorial-rstudio-on-pc.html#what-is-rstudio",
-    "title": "Setting up RStudio",
-    "section": "What is RStudio?",
-    "text": "What is RStudio?\nRStudio is an integrated development environment (IDE) for doing data science. An IDE is a computer program that provides tools for people who are developing and testing software. You might not think of yourself as a software developer (yet). But RStudio is a powerful tool for beginners, too. It began life as a tool primarily for users writing code in R, hence the name. RStudio supports multiple programming languages, including R and Python.",
+    "objectID": "exercises/ex-01-figs-in-psych-sci.html#goals",
+    "href": "exercises/ex-01-figs-in-psych-sci.html#goals",
+    "title": "Exercise 01",
+    "section": "Goals",
+    "text": "Goals\nIn this exercise, you may choose to work alone or with a team of no more than two other classmates to find data visualizations from the societies of three (3) professional associations and three (3) journals. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used in psychological science.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
+      "Exercises",
+      "Exercise 01"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html#why-install-rstudio",
-    "href": "tutorials/tutorial-rstudio-on-pc.html#why-install-rstudio",
-    "title": "Setting up RStudio",
-    "section": "Why install RStudio?",
-    "text": "Why install RStudio?\nIf you have your own personal computer, it’s very helpful to have RStudio installed on your computer. That way you can work whether you’re connected to the internet or not.",
+    "objectID": "exercises/ex-01-figs-in-psych-sci.html#assignment",
+    "href": "exercises/ex-01-figs-in-psych-sci.html#assignment",
+    "title": "Exercise 01",
+    "section": "Assignment",
+    "text": "Assignment\n\nVisit the websites of at least three (3) professional associations.\n\nThe following are examples. Feel free to choose a different professional society.\n\nAmerican Psychological Association (APA)\nAssociation for Psychological Science (APS)\nVision Sciences Society\nSociety for Personality and Social Psychology\nSociety for Research in Child Development\nSociety for Research on Adolescence\nCognitive Neuroscience Society\nSociety for Neuroscience\nPsychonomics Society\nSociety for Industrial and Organizational Psychology\n\n\nFor each society website, try to find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way.\nWhen you find a visualization you find interesting, capture information about it.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url_to_src field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\nThere is also a url_to_figure field. If you want to add that, right click on the image and see if an option to ‘open image in new tab’ or ‘copy image address’ is available.\n\n\n\n\n\n\nImportant\n\n\n\nYou do not have to use your PSU ID as your identifier.\nGilmore did so just to provide some sample data.\n\n\n\nNext, visit the websites of at least three (3) journals and do the same thing–pick at least one visualization from each of the journals.\n\nNote that some societies publish one or more journals, so you might find a journal that interests you from the society website.\nHere are some additional journal resources that you might find interesting to explore:\n\nScience Magazine\nNature\nNature Human Behavior\nTrends in Cognitive Sciences\nAnnual Reviews\n\nFigures with “psychology” as search term\nFigures with “neuroscience” as search term\nKnowable Magazine has a graphics library\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe goal here is to gather via ‘crowd-sourcing’ a diverse set of visualizations. So, feel free to mix it up.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
+      "Exercises",
+      "Exercise 01"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html#overview",
-    "href": "tutorials/tutorial-rstudio-on-pc.html#overview",
-    "title": "Setting up RStudio",
-    "section": "Overview",
-    "text": "Overview\nInstalling RStudio consists of several steps:\n\nDownloading and installing R.\nDownloading and installing RStudio.\nConfiguring RStudio.\n\nYou can complete these in about 45 minutes, or maybe less if you have a fast internet connection.",
+    "objectID": "exercises/ex-01-figs-in-psych-sci.html#submit",
+    "href": "exercises/ex-01-figs-in-psych-sci.html#submit",
+    "title": "Exercise 01",
+    "section": "Submit",
+    "text": "Submit\n\nEveryone\nYour data to the shared Google Spreadsheet: https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing.\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA 5 paragraph write-up using the Quarto template where you describe three (3) figures your group found, focusing on these questions:\n\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nStudents who work in teams should submit one (1) write-up with all of the authors’ names. One grade will be assigned.\nNote: Your references section need only include the citation to the source paper or website. You should identify in your text which figure you have chosen to analyze.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
+      "Exercises",
+      "Exercise 01"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html#installing-r",
-    "href": "tutorials/tutorial-rstudio-on-pc.html#installing-r",
-    "title": "Setting up RStudio",
-    "section": "Installing R",
-    "text": "Installing R\nRStudio requires you to download and install R even if you ultimately plan to do very little programming in R.\nVisit https://cran.wustl.edu/bin/.\n\n\n\nhttps://cran.wustl.edu/bin/\n\n\nSelect the subdirectory depending on what operating system your computer is running. Windows users will select windows and Mac users will select macosx.\n\nMac users\nHere is the window that opens:\n\nNotice that there are two links under the “Latest release:” section. To decide which version is appropriate for you, you need to select the version of R that is appropriate for your computer’s central processing unit (CPU) and operating system (OS). Here’s how to find out what CPU and OS you’re running:\n\nClick on the Apple icon in the top left corner of your menu bar.\n\n\n\nSelect the ‘About This Mac’ menu item.\nA window will appear with information about your computer.\n\n\nIf the ‘macOS’ field has a number greater than 11 (MacOS Big Sur), then you can download the latest version of R. If the ‘Chip’ field says “Apple M1”, “Apple M2”, “Apple M3”, or “Apple M4”, you will want to select the ARM version, e.g. “R-4.4.2-arm64.pkg”. If the ‘Chip’ field says you have some version of an Intel chip, pick the other version of R, e.g., “R-4.4.2-x86_64.pkg”.\n\nOnce the software has downloaded, open it by double-clicking.",
+    "objectID": "exercises/ex-01-figs-in-psych-sci.html#best-practices",
+    "href": "exercises/ex-01-figs-in-psych-sci.html#best-practices",
+    "title": "Exercise 01",
+    "section": "Best practices",
+    "text": "Best practices\n\nThe best submissions involve a complete essay. That means an introductory paragraph, several body paragraphs, usually one per figure, a conclusion, and a reference section.\nThe best submissions mention the purpose of the exercise: To evaluate how some sample figures from various sources in psychological science communicated information about some topic.\nThe best submissions require reading the papers or websites where the figures are drawn from and provide helpful information about what the figures were depicting.\nEven though we are using Quarto to generate the final document, the best submissions will adhere to the structure of the APA paper format for the Commentary section. Here is a sample template.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
+      "Exercises",
+      "Exercise 01"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html#installing-rstudio",
-    "href": "tutorials/tutorial-rstudio-on-pc.html#installing-rstudio",
-    "title": "Setting up RStudio",
-    "section": "Installing RStudio",
-    "text": "Installing RStudio\n\n\n\n\n\n\nWarningUnder construction\n\n\n\nThis section is a work-in-progress",
-    "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-rstudio-on-pc.html#configuring-rstudio",
-    "href": "tutorials/tutorial-rstudio-on-pc.html#configuring-rstudio",
-    "title": "Setting up RStudio",
-    "section": "Configuring RStudio",
-    "text": "Configuring RStudio\n\n\n\n\n\n\nWarningUnder construction\n\n\n\nThis section is a work-in-progress",
-    "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Setting up RStudio</span>"
-    ]
-  },
-  {
-    "objectID": "tutorials/tutorial-rstudio-on-psu.html",
-    "href": "tutorials/tutorial-rstudio-on-psu.html",
-    "title": "Setting up RStudio @ Penn State",
+    "objectID": "exercises/ex-02-data-viz-outside-psych.html",
+    "href": "exercises/ex-02-data-viz-outside-psych.html",
+    "title": "Exercise 02",
     "section": "",
-    "text": "About\nThis page provides help starting and using RStudio from a Penn State computer lab machine. For instructions on how to install this free progam on your own personal computer, see the accompanying tutorial.",
+    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11.\nCanvas dropbox.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Setting up RStudio @ Penn State</span>"
+      "Exercises",
+      "Exercise 02"
     ]
   },
   {
-    "objectID": "tutorials/tutorial-rstudio-on-psu.html#what-is-rstudio",
-    "href": "tutorials/tutorial-rstudio-on-psu.html#what-is-rstudio",
-    "title": "Setting up RStudio @ Penn State",
-    "section": "What is RStudio?",
-    "text": "What is RStudio?\nRStudio is an integrated development environment (IDE) for doing data science. An IDE is a computer program that provides tools for people who are developing and testing software. You might not think of yourself as a software developer (yet). But RStudio is a powerful tool for beginners, too. It began life as a tool primarily for users writing code in R, hence the name. RStudio supports multiple programming languages, including R and Python.",
+    "objectID": "exercises/ex-02-data-viz-outside-psych.html#dates",
+    "href": "exercises/ex-02-data-viz-outside-psych.html#dates",
+    "title": "Exercise 02",
+    "section": "",
+    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11.\nCanvas dropbox.",
     "crumbs": [
-      "Tutorials",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Setting up RStudio @ Penn State</span>"
+      "Exercises",
+      "Exercise 02"
     ]
+  },
+  {
+    "objectID": "exercises/ex-02-data-viz-outside-psych.html#goals",
+    "href": "exercises/ex-02-data-viz-outside-psych.html#goals",
+    "title": "Exercise 02",
+    "section": "Goals",
+    "text": "Goals\nIn this exercise, you will work alone or a with a team of no more than two other classmates to find and describe data visualizations from business (for profit or not-for-profit), government, the arts, sports, or journalism. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used fields outside of psychological science.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 02"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-02-data-viz-outside-psych.html#assignment",
+    "href": "exercises/ex-02-data-viz-outside-psych.html#assignment",
+    "title": "Exercise 02",
+    "section": "Assignment",
+    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1rLiLBRbDQfInauOUBPNwGYq-0VOjskGNY7Wq2QRTTbc/edit?gid=0#gid=0\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 02"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-02-data-viz-outside-psych.html#submit",
+    "href": "exercises/ex-02-data-viz-outside-psych.html#submit",
+    "title": "Exercise 02",
+    "section": "Submit",
+    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above.\nAdapt the Quarto template used for Exercise 01.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#william-playfair-1759-1823",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#william-playfair-1759-1823",
+    "title": "Semiotics of data visualization",
+    "section": "William Playfair (1759-1823)",
+    "text": "William Playfair (1759-1823)\n\n\n\n“engineer, political economist, and scoundrel” (Spence and Wainer 2017)\nFounder of graphical methods of statistics\n\n\n\n\n\n\n\n\nFigure 1: By William Playfair - Derivative of File:Playfair TimeSeries.png William Playfair’s Time Series of Exports and Imports of Denmark and Norway, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12674977",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#william-playfair-1759-1823-1",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#william-playfair-1759-1823-1",
+    "title": "Semiotics of data visualization",
+    "section": "William Playfair (1759-1823)",
+    "text": "William Playfair (1759-1823)\n\n\n\nIntroduced line, area, and bar chart\nLikely published first pie chart and circle graphs\n\n\n\n\n\nFigure 1",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#announcements",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#announcements",
+    "title": "Semiotics of data visualization",
+    "section": "Announcements",
+    "text": "Announcements\n\nFree access to newspapers!\nhttps://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program\nGood sources of data visualizations\n\nData journalism",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#last-time",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#last-time",
+    "title": "Semiotics of data visualization",
+    "section": "Last time…",
+    "text": "Last time…\n\nCourse introduction",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#today",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#today",
+    "title": "Semiotics of data visualization",
+    "section": "Today",
+    "text": "Today\n\nSemiotics of data visualization\nWork session\n\nExercise-01\nInstall R, RStudio",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#resources",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#resources",
+    "title": "Semiotics of data visualization",
+    "section": "Resources",
+    "text": "Resources",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semi-whatics",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semi-whatics",
+    "title": "Semiotics of data visualization",
+    "section": "Semi-whatics?",
+    "text": "Semi-whatics?\n\n\n\nThe Editors of Encyclopedia Britannica (2024)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-symbolic-animal",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-symbolic-animal",
+    "title": "Semiotics of data visualization",
+    "section": "The symbolic animal",
+    "text": "The symbolic animal\n\nErnst Cassirer\n\n\nCassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination is only one expression of the human instinct to think in symbols. Kirsch (2021)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-communicating-animal",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-communicating-animal",
+    "title": "Semiotics of data visualization",
+    "section": "The communicating animal",
+    "text": "The communicating animal\n\nCommunication as transmission of information\nFrom world\n\n\n\n\n\n\nflowchart LR\n  A[World] --&gt; B[You]",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#communication",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#communication",
+    "title": "Semiotics of data visualization",
+    "section": "Communication",
+    "text": "Communication\n\nFrom others (direct)\n\n\n\n\n\n\nflowchart LR\n  A[Me] --&gt; B[You]\n\n\n\n\n\n\n\n\nFrom others (via some medium1)\n\n\n\n\n\n\nflowchart LR\n  A[Me] --&gt; B((Medium))\n  B --&gt; C[You]",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#media",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#media",
+    "title": "Semiotics of data visualization",
+    "section": "Media",
+    "text": "Media\n\nSource of signs2\nSign relation\n\nSign (as a thing) –&gt; Meaning\nRelation is arbitrary, defined by social convention (Sausurre)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#core-qualities-of-sign-systems",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#core-qualities-of-sign-systems",
+    "title": "Semiotics of data visualization",
+    "section": "Core qualities of sign systems",
+    "text": "Core qualities of sign systems\n\nSemantics\n\nRelations between signs –&gt; meaning\n\nSyntax (grammar)\n\nRules/conventions for arranging signs",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#multiple-input-channels",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#multiple-input-channels",
+    "title": "Semiotics of data visualization",
+    "section": "Multiple input channels",
+    "text": "Multiple input channels\n\n\n\nAcoustic\nTactile\nOlfactory\nVisual\n\n\n\n\n\nhttps://elearning.adobe.com/2018/04/classic-learning-research-practice-sensory-channels-keep-learners-attention/",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#vary-in-meaningfulness",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#vary-in-meaningfulness",
+    "title": "Semiotics of data visualization",
+    "section": "Vary in ‘meaningfulness’",
+    "text": "Vary in ‘meaningfulness’\n\n\n\n\n\nhttps://www.religious-symbols.net/\n\n\n\n\n\n\nhttps://www.vecteezy.com/free-vector/symbols",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#communication-between-minds",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#communication-between-minds",
+    "title": "Semiotics of data visualization",
+    "section": "Communication between minds",
+    "text": "Communication between minds\n\nVia signs and symbols\nBased on shared social conventions\nAbout sign relations (what signs “mean” or convey)\nOpen vs. closed symbol systems",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-can-uniteinform-or-divideconfuse",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-can-uniteinform-or-divideconfuse",
+    "title": "Semiotics of data visualization",
+    "section": "Sign systems can unite/inform or divide/confuse",
+    "text": "Sign systems can unite/inform or divide/confuse\n\n\n\nSteiner (1998)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-grammars",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-grammars",
+    "title": "Semiotics of data visualization",
+    "section": "Sign systems grammars3",
+    "text": "Sign systems grammars3\n\n\n\n\\(2+2*3=4\\) vs. \\(2+(2*3)=4\\)\n“Up with you I will not put.” vs. “I will not put up with you.”\n\n\n\n\n\n\n\n\nFigure 2",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#grammar-of-graphics",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#grammar-of-graphics",
+    "title": "Semiotics of data visualization",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 3: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 4: Wickham et al. (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#how-scientists-communicate-formally",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#how-scientists-communicate-formally",
+    "title": "Semiotics of data visualization",
+    "section": "How scientists communicate (formally)",
+    "text": "How scientists communicate (formally)\n\nPapers\nPosters\nTextbooks\nWebsites\nTalks",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#components-of-a-scientific-papers",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#components-of-a-scientific-papers",
+    "title": "Semiotics of data visualization",
+    "section": "Components of a scientific papers",
+    "text": "Components of a scientific papers\n\n\n\nText\n\nExplanation/argument\nEvidence (statistical summaries)\n\nFigures\n\n\n\nTables\n\nEvidence (statistical summaries)\n\nReferences\nData, materials",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#questions-about-scientific-communication",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#questions-about-scientific-communication",
+    "title": "Semiotics of data visualization",
+    "section": "Questions about scientific communication",
+    "text": "Questions about scientific communication\n\nWhat do the words mean?\nWhat do the numbers/statistics mean?\nWhat do the figures mean?\nDoes the evidence (+ argument) persuade?",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semioticssemiology-of-graphics",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semioticssemiology-of-graphics",
+    "title": "Semiotics of data visualization",
+    "section": "Semiotics/Semiology of Graphics",
+    "text": "Semiotics/Semiology of Graphics\n\n\n\nBertin (2010)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semiotics-of-data-visualization-1",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semiotics-of-data-visualization-1",
+    "title": "Semiotics of data visualization",
+    "section": "Semiotics of data visualization",
+    "text": "Semiotics of data visualization\n\nWhat do the components (of a figure) mean?\nWhat message is the visualization creator trying to convey?",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#main-points",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#main-points",
+    "title": "Semiotics of data visualization",
+    "section": "Main points",
+    "text": "Main points\n\nSemiotics of data visualization\n\nSemiotics: study of signs and symbols\nWhat meanings do the visual elements of data graphics convey?\nHow do data visualizations relate to other communicative elements?",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#install-r-and-rstudio",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#install-r-and-rstudio",
+    "title": "Semiotics of data visualization",
+    "section": "Install R and RStudio",
+    "text": "Install R and RStudio\n\nTutorial",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#work-on-exercise-01",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#work-on-exercise-01",
+    "title": "Semiotics of data visualization",
+    "section": "Work on Exercise 01",
+    "text": "Work on Exercise 01\n\nAssignment\nGoogle Sheet for capturing & sharing data",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#next-time",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#next-time",
+    "title": "Semiotics of data visualization",
+    "section": "Next time",
+    "text": "Next time\n\nWork session: Introducing Quarto",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#references",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#references",
+    "title": "Semiotics of data visualization",
+    "section": "References",
+    "text": "References\n\n\n\n\nBertin, Jacques. 2010. Semiology of Graphics: Diagrams, Networks, Maps. ESRI Press.\n\n\n“Font Style Interpolation with Diffusion Models.” n.d. Accessed January 10, 2025. https://arxiv.org/html/2402.14311v1.\n\n\nKirsch, Adam. 2021. “The Symbolic Animal.” March 18. https://www.nybooks.com/articles/2021/04/08/ernst-cassirer-symbolic-animal/.\n\n\nSpence, Ian, and Howard Wainer. 2017. “William Playfair and the Invention of Statistical Graphs.” In Information Design, 1st Edition. Routledge. https://doi.org/10.4324/9781315585680-10.\n\n\nSteiner, George. 1998. After Babel: Aspects of Language and Translation. 3rd ed. Oxford University Press. https://www.amazon.com/After-Babel-Aspects-Language-Translation/dp/0192880934.\n\n\nThe Editors of Encyclopedia Britannica. 2024. “Semiotics.” In Encyclopedia Britannica. December 19. https://www.britannica.com/science/semiotics.\n\n\nWickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. n.d. “ggplot2: Elegant Graphics for Data Analysis (3e).” Accessed January 12, 2025. https://ggplot2-book.org/.\n\n\nWilkinson, Leland, D Wills, D Rope, A Norton, and R Dubbs. 2005. The Grammar of Graphics (Statistics and Computing). 2nd edition. Springer. https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#footnotes",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#footnotes",
+    "title": "Semiotics of data visualization",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nmedia is the plural form of medium.\nmore general than language\nOrderly system of rules for arranging symbols.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#announcements",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#announcements",
+    "title": "Work session: Introducing Quarto",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise 01 due next Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#todays-topics",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#todays-topics",
+    "title": "Work session: Introducing Quarto",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWarm-up\nTroubleshooting R and RStudio installations\nIntroducing Quarto\nUsing Quarto for Exercise 01"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#installing-quarto",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#installing-quarto",
+    "title": "Work session: Introducing Quarto",
+    "section": "Installing Quarto",
+    "text": "Installing Quarto\n\n\n\n\n\n\nFigure 2: https://quarto.org/docs/get-started/"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#launch-rstudio",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#launch-rstudio",
+    "title": "Work session: Introducing Quarto",
+    "section": "Launch RStudio",
+    "text": "Launch RStudio"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#create-new-project",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#create-new-project",
+    "title": "Work session: Introducing Quarto",
+    "section": "Create New Project",
+    "text": "Create New Project\n\n\n\n\n\n\n\n\nFigure 3: From File Menu\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Project Manager Tab"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#explore-project-and-document",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#explore-project-and-document",
+    "title": "Work session: Introducing Quarto",
+    "section": "Explore project (and document)",
+    "text": "Explore project (and document)"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#anatomy-of-quarto-document",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#anatomy-of-quarto-document",
+    "title": "Work session: Introducing Quarto",
+    "section": "Anatomy of Quarto document",
+    "text": "Anatomy of Quarto document\n\n\n\nText, has .qmd extension\nMetadata1 information (b/w pairs of ---)\nSection headers\n\n## means a 2nd level header\n\nCode chunks!\n\n\n\n\n\n\n\n\nFigure 8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk."
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#render-the-file",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#render-the-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Render the file",
+    "text": "Render the file\n\nTurn the text file into something else\n\nWebpage (HTML)\nDocument (PDF, Word)\nSlides\n\nDefault is webpage (HTML)\nI recommend checking “Render on Save”"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#rendered-file",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#rendered-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Rendered file",
+    "text": "Rendered file"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#visit-the-template",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#visit-the-template",
+    "title": "Work session: Introducing Quarto",
+    "section": "Visit the template",
+    "text": "Visit the template\n\nVisit https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Copy the template text into a new text file",
+    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#render-the-template",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#render-the-template",
+    "title": "Work session: Introducing Quarto",
+    "section": "Render the template",
+    "text": "Render the template\n\n\n\n\n\n\nFigure 9"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#main-points",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#main-points",
+    "title": "Work session: Introducing Quarto",
+    "section": "Main points",
+    "text": "Main points"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#next-time",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#next-time",
+    "title": "Work session: Introducing Quarto",
+    "section": "Next time",
+    "text": "Next time\n\nVisualization in government & business\nResults of visualization in psychological science exercise"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#about",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#about",
+    "title": "Work session: Introducing Quarto",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.1.0.392.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#references",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#references",
+    "title": "Work session: Introducing Quarto",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-quarto.html#footnotes",
+    "href": "slides/wk-01-2026-08-28-introducing-quarto.html#footnotes",
+    "title": "Work session: Introducing Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nData about data."
+  },
+  {
+    "objectID": "policies.html",
+    "href": "policies.html",
+    "title": "Policies",
+    "section": "",
+    "text": "Students with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
+    "crumbs": [
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "policies.html#values",
+    "href": "policies.html#values",
+    "title": "Policies",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
+    "crumbs": [
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "values.html",
+    "href": "values.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "values.html#values",
+    "href": "values.html#values",
+    "title": "",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world."
+  },
+  {
+    "objectID": "xxx.html",
+    "href": "xxx.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "xxx.html#week-01",
+    "href": "xxx.html#week-01",
+    "title": "",
+    "section": "Week 01",
+    "text": "Week 01\nSurveying the landscape\n\nMon, Aug 24\nCourse introduction\n\nWatch: PBSoffbook (2013)\nSlides\n\n\n\nWed, Aug 26\nThe semiotics of data visualization\n\nRead: Cairo (2013), Chapter 1-2, PDF on Canvas\nAssigned: Exercise 01 assigned\nSlides\n\n\n\nFri, Aug 28\nWork Session: Introducing Quarto\n\nComplete: RStudio installation and setup\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-02",
+    "href": "xxx.html#week-02",
+    "title": "",
+    "section": "Week 02",
+    "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nResults from Exercise 01\nSlides\n\n\n\nWed, Sep 2\nVisualization in art, sports, and journalism\n\nRead (recommended): Gelman & Unwin (2013)\nAssigned: Exercise 02\nSlides\n\n\n\nFri, Sep 04\nWork Session: More Quarto\n\nDue: Exercise 01 | Canvas dropbox\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-03",
+    "href": "xxx.html#week-03",
+    "title": "",
+    "section": "Week 03",
+    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead: Stevens (1946)\nOptional:\n\nWikipedia contributors (2024)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas.\n\nAssigned: Exercise-03\nSlides\n\n\n\nFri, Sep 11\nWork Session: Intro to R\n\nDue: Exercise 02 | Canvas dropbox |\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-04",
+    "href": "xxx.html#week-04",
+    "title": "",
+    "section": "Week 04",
+    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch: Channel (2024)\nSlides\n\n\n\nWed, Sep 16\n\nReview: Making and visualizing data\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nReview: Making and visualizing data\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-05",
+    "href": "xxx.html#week-05",
+    "title": "",
+    "section": "Week 05",
+    "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead: Cairo (2013), Chapter 5, PDF on Canvas\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\nDue: Exercise-03 | Canvas dropbox |\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-06",
+    "href": "xxx.html#week-06",
+    "title": "",
+    "section": "Week 06",
+    "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\nDue: Exercise-04 | Canvas dropbox |"
+  },
+  {
+    "objectID": "xxx.html#week-07",
+    "href": "xxx.html#week-07",
+    "title": "",
+    "section": "Week 07",
+    "text": "Week 07\n\nMon, Oct 05\nExploring data\n\nRead: Tukey (1977), Chapter 1, PDF on Canvas –&gt;\nSlides\n\n\n\nWed, Oct 07\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16\n\nSlides\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-08",
+    "href": "xxx.html#week-08",
+    "title": "",
+    "section": "Week 08",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nDue: Exercise-04 | Canvas Dropbox\nDue: Final Project proposal | Canvas Dropbox\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008)\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: TidyTuesday or Exercise 05\n\nSlides"
+  },
+  {
+    "objectID": "xxx.html#week-09",
+    "href": "xxx.html#week-09",
+    "title": "",
+    "section": "Week 09",
+    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-reading and map-making\n\nRead: Wilke (2019), Chapter 15\nSlides\n\n\n\nWed, Oct 21\nMap-reading and map-making\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday II\n\nSlides\nAssigned: Exercise-06"
+  },
+  {
+    "objectID": "xxx.html#week-10",
+    "href": "xxx.html#week-10",
+    "title": "",
+    "section": "Week 10",
+    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\nDue: Exercise-05\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\n\nFri, Oct 30\nWork Session: Tables"
+  },
+  {
+    "objectID": "xxx.html#week-11",
+    "href": "xxx.html#week-11",
+    "title": "",
+    "section": "Week 11",
+    "text": "Week 11\nData viz and your world\n\nMon, November 02\nOur World in Data\n\n\nWed, November 04\n\n\nFri, November 06\nWork Session: More TidyTuesday"
+  },
+  {
+    "objectID": "xxx.html#week-12",
+    "href": "xxx.html#week-12",
+    "title": "",
+    "section": "Week 12",
+    "text": "Week 12\nData viz and quantitative inference\n\nMon, November 09\nSynthesize before you analyze\n\n\nWed, November 11\nSample size, effect size, statistical power\n\n\nFri, November 13\nWork Session: Final Projects\n\nDue: Exercise-06"
+  },
+  {
+    "objectID": "xxx.html#week-13",
+    "href": "xxx.html#week-13",
+    "title": "",
+    "section": "Week 13",
+    "text": "Week 13\nStudents’ Choice\n\nMon, November 16\n\n\nWed, November 18\n\n\nFri, November 20\nWork Session: Final projects"
+  },
+  {
+    "objectID": "xxx.html#thanksgiving-break",
+    "href": "xxx.html#thanksgiving-break",
+    "title": "",
+    "section": "Thanksgiving Break",
+    "text": "Thanksgiving Break\nNO CLASS"
+  },
+  {
+    "objectID": "xxx.html#week-14",
+    "href": "xxx.html#week-14",
+    "title": "",
+    "section": "Week 14",
+    "text": "Week 14\n\nMon, November 30\nMaking data dashboards and apps\n\nExplore: Kohler (2024)\nSlides\n\n\n\nWed, December 02\nWork Session: Final projects\n\n\nFri, December 04\nWork Session: Final projects"
+  },
+  {
+    "objectID": "xxx.html#week-16",
+    "href": "xxx.html#week-16",
+    "title": "",
+    "section": "Week 15",
+    "text": "Week 15\n\nMon, December 07\nFinal Project Presentations\n\n\nWed, December 09\nFinal Project Presentations\n\n\nFri, December 11\nFinal Project Presentations"
+  },
+  {
+    "objectID": "xxx.html#finals-week",
+    "href": "xxx.html#finals-week",
+    "title": "",
+    "section": "Finals Week",
+    "text": "Finals Week\n\nWed, Dec 16\n\nDue: Final project write-up | Canvas dropbox"
   },
   {
     "objectID": "meta.html",
     "href": "meta.html",
     "title": "Under the hood",
     "section": "",
-    "text": "About\nThis page describes how the site is created and rendered.",
+    "text": "This page describes how the site is created and rendered.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Meta</span>"
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#about",
+    "href": "meta.html#about",
+    "title": "Under the hood",
+    "section": "",
+    "text": "This page describes how the site is created and rendered.",
+    "crumbs": [
+      "Under the hood"
     ]
   },
   {
@@ -710,7 +1069,7 @@
     "section": "Workflow",
     "text": "Workflow\nThe site is written in Quarto.\nA site-wide YAML file (_quarto.yml) controls the rendering process.\nSeparate directories contain lecture slides (slides/), exercises (exercises/), class-specific R functions (R/), surveys (surveys/), and tutorials (tutorials/). Quarto files with underscores (e.g., _index.qmd, _about.qmd, _evaluation.qmd, _schedule.qmd, and values.qmd) are the main targets for editing and updating. Parent files (e.g., index.qmd, evaluation.qmd, policies.qmd, and schedule.qmd) call upon these child files in the rendering process.\nA separate Quarto file (psych-490.007-2026-fall-syllabus.qmd) generates a PDF version of a syllabus.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Meta</span>"
+      "Under the hood"
     ]
   },
   {
@@ -720,7 +1079,7 @@
     "section": "Rendering",
     "text": "Rendering\nTo render the full site, quarto render src is executed from the command line. The fully rendered website is written to docs/.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Meta</span>"
+      "Under the hood"
     ]
   },
   {
@@ -730,7 +1089,670 @@
     "section": "Software",
     "text": "Software\nThe site uses the renv package to try to make all computation reproducible.\nIn addition, the site uses softbib to generate a full reference list of the package dependencies. This is saved in src/include/bib.",
     "crumbs": [
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Meta</span>"
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "deadlines.html",
+    "href": "deadlines.html",
+    "title": "Deadlines",
+    "section": "",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "crumbs": [
+      "Deadlines"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#the-psychology-of-data-visualization",
+    "href": "index.html#the-psychology-of-data-visualization",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#themes",
+    "href": "index.html#themes",
+    "title": "The Psychology of Data Visualization",
+    "section": "Themes",
+    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "The Psychology of Data Visualization",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\nSchedule an appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-assistant",
+    "href": "index.html#teaching-assistant",
+    "title": "The Psychology of Data Visualization",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#meeting-time-location",
+    "href": "index.html#meeting-time-location",
+    "title": "The Psychology of Data Visualization",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:25 pm - 4:25 pm\n216 Osmond Lab",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#canvas-site",
+    "href": "index.html#canvas-site",
+    "title": "The Psychology of Data Visualization",
+    "section": "Canvas site",
+    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "Evaluation",
+    "section": "",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "crumbs": [
+      "Evaluation"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#eval-components",
+    "href": "evaluation.html#eval-components",
+    "title": "Evaluation",
+    "section": "",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "crumbs": [
+      "Evaluation"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#grading-scheme",
+    "href": "evaluation.html#grading-scheme",
+    "title": "Evaluation",
+    "section": "Grading Scheme",
+    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF",
+    "crumbs": [
+      "Evaluation"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#a-picture-is-worth-a-thousand-words",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#a-picture-is-worth-a-thousand-words",
+    "title": "The Psychology of Data Visualization",
+    "section": "A picture is worth a thousand words…",
+    "text": "A picture is worth a thousand words…\n\n“An adage in multiple languages…” Wikipedia\nTheme for the course",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#how-many-words",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#how-many-words",
+    "title": "The Psychology of Data Visualization",
+    "section": "How many words?",
+    "text": "How many words?\n\n\n\n\n\n\nFigure 3: Lindsey (2024)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#or-here",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#or-here",
+    "title": "The Psychology of Data Visualization",
+    "section": "Or here?",
+    "text": "Or here?\n\n\n\n\n\n\nFigure 4: Housing affordability in State College, PA. Homeownership cost as a share of median income. Federal Reserve Bank of Atlanta. https://public.tableau.com/shared/FY72B725F?:display_count=n&:origin=viz_share_link&:embed=y",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#today",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#today",
+    "title": "The Psychology of Data Visualization",
+    "section": "Today",
+    "text": "Today\n\nIntroduction to the course\nVisualization in psychological science",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#people",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#people",
+    "title": "The Psychology of Data Visualization",
+    "section": "People",
+    "text": "People\n\n\nRick Gilmore, Professor of Psychology",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#why-this-course-why-now",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#why-this-course-why-now",
+    "title": "The Psychology of Data Visualization",
+    "section": "Why this course, why now",
+    "text": "Why this course, why now",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#my-journey",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#my-journey",
+    "title": "The Psychology of Data Visualization",
+    "section": "My journey",
+    "text": "My journey\n\nCognitive Science major, psycholinguistics & semiotics minor\nIntroduced to vision science via Marr and J.J. Gibson\nResearch in visual development, visual neuroscience, open science",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#many-analysts",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#many-analysts",
+    "title": "The Psychology of Data Visualization",
+    "section": "Many analysts",
+    "text": "Many analysts\n\n\n\n\n\n\nFigure 5: Figure 2 from Silberzahn et al. (2018)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#your-turn",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#your-turn",
+    "title": "The Psychology of Data Visualization",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\n\n\nDoes the overall evidence suggest that the odds ratio is greater than zero?\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do you come to that conclusion?\n\n\n\n\n\n\n\n\n\n\n\nFigure 2 from Silberzahn et al. (2018)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#many-visualization-failures",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#many-visualization-failures",
+    "title": "The Psychology of Data Visualization",
+    "section": "Many visualization failures",
+    "text": "Many visualization failures\n\nVisualizing the ’Many Analysts – Silberzahn et al. (2018) – data",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#plot-your-data",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#plot-your-data",
+    "title": "The Psychology of Data Visualization",
+    "section": "“Plot your data!”",
+    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 6: Gilmore’s graduate statistics professor.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#not-all-plots-are-equivalent",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#not-all-plots-are-equivalent",
+    "title": "The Psychology of Data Visualization",
+    "section": "Not all plots are equivalent",
+    "text": "Not all plots are equivalent\n\n\n\n“The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research” (n.d.); Matejka and Fitzmaurice (2017)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#statistical-measurements-can-be-misleading",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#statistical-measurements-can-be-misleading",
+    "title": "The Psychology of Data Visualization",
+    "section": "Statistical measurements can be misleading!",
+    "text": "Statistical measurements can be misleading!\n\n“Don’t fool yourself, because you are the easiest one to fool.”\n\nFeynman (1974)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#vision-can-be-unreliable-or-ambiguous",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#vision-can-be-unreliable-or-ambiguous",
+    "title": "The Psychology of Data Visualization",
+    "section": "Vision can be unreliable or ambiguous",
+    "text": "Vision can be unreliable or ambiguous",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#purpose-goals",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#purpose-goals",
+    "title": "The Psychology of Data Visualization",
+    "section": "Purpose & goals",
+    "text": "Purpose & goals\n\nWhat are data? Where do data come from?\nWho visualizes data, how do they visualize it, and why?\nHow does vision science inform how we perceive patterns in data?\nWhat’s the relationship between non-visual and visual ways of understanding data?\nWhat makes a data visualization effective?\nWhat makes a data visualization misleading?",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#hands-on-skills",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#hands-on-skills",
+    "title": "The Psychology of Data Visualization",
+    "section": "Hands-on skills",
+    "text": "Hands-on skills\n\nHow can we make better data visualizations?\nMaking figures using the R programming language, especially the ggplot2 package.\nDocumenting scholarly work using Quarto",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#schedule",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#schedule",
+    "title": "The Psychology of Data Visualization",
+    "section": "Schedule",
+    "text": "Schedule\nhttps://psu-psychology.github.io/psych-490-data-viz-2026-fall/schedule.html",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#exercises-evaluation",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#exercises-evaluation",
+    "title": "The Psychology of Data Visualization",
+    "section": "Exercises & evaluation",
+    "text": "Exercises & evaluation\n\nExercises\n\n6 @ 10 pts/each\nTop 4 count\nOthers count toward partial extra credit up to 10 pts\n\nAttendance (up to 40 points)\nFinal project (40 points)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#resources",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#resources",
+    "title": "The Psychology of Data Visualization",
+    "section": "Resources",
+    "text": "Resources\n\nWebsites\n\nCourse site: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/\nCanvas\n\nTracking grades, submitting assignments",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#structure",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Structure",
+    "text": "Structure\n\nMeet 3x weekly\n\nMonday & Wednesday\n\nLecture + discussion (maybe short work session)\n\nFriday (hands-on work session)\n\nDo your homework",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#this-is-a-seminar",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#this-is-a-seminar",
+    "title": "The Psychology of Data Visualization",
+    "section": "This is a seminar…",
+    "text": "This is a seminar…",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#culture-climate",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#culture-climate",
+    "title": "The Psychology of Data Visualization",
+    "section": "Culture & climate",
+    "text": "Culture & climate\n\nCreating a community of inquiry\nEncouraging vigorous & constructive criticism\nCriticism of work/ideas/behaviors vs. people\n\n‘Smith thinks that pigs can fly.’\n‘Smith is an idiot, and should be shot on sight.’\n‘Smith tried to demonstrate that pigs can fly by tossing a few off the roof of Old Main. That’s nonsense, is cruel to animals, and made a huge mess.’",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#your-turn-1",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#your-turn-1",
+    "title": "The Psychology of Data Visualization",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nWhere do data come from?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\nData are the outcome of a process of measurement.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#measures-in-psi-science",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#measures-in-psi-science",
+    "title": "The Psychology of Data Visualization",
+    "section": "Measures in \\(\\Psi\\) science",
+    "text": "Measures in \\(\\Psi\\) science\n\nInternal states (thoughts, feelings, memories, opinions, decisions, judgments…)\nPhysiological states\nIndividual characteristics\nEnvironmental characteristics",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#questions",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#questions",
+    "title": "The Psychology of Data Visualization",
+    "section": "Questions",
+    "text": "Questions\n\nAre there common types of data visualizations in psychological science?\nWhat information is conveyed?\nHow clearly is it conveyed?\nDo the figures “tell the story” (See Wk-08 “Storytelling with data”)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#more-specific-questions",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#more-specific-questions",
+    "title": "The Psychology of Data Visualization",
+    "section": "More specific questions",
+    "text": "More specific questions\n\nHow are the following depicted?\n\nResponses to surveys\nPerformance on tasks/tests\nBrain structure or activity",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#exercise-01",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#exercise-01",
+    "title": "The Psychology of Data Visualization",
+    "section": "Exercise 01",
+    "text": "Exercise 01\n\nVisit Exercise-01",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#references",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#references",
+    "title": "The Psychology of Data Visualization",
+    "section": "References",
+    "text": "References\n\n\n\n\nBBC. 2010. Hans Rosling’s 200 Countries, 200 Years, 4 Minutes - the Joy of Stats - BBC. YouTube. https://www.youtube.com/watch?v=jbkSRLYSojo&t=55s.\n\n\nFeynman, R P. 1974. Cargo Cult Science. https://calteches.library.caltech.edu/51/2/CargoCult.htm.\n\n\nHuff, Darrell. 1993. How to Lie with Statistics. WW Norton. https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728.\n\n\nIso, Aloisio. 2016. Bread - If Original [1971]. YouTube. https://www.youtube.com/watch?v=IQyKMueMFGk.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nMatejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” Paper presented CHI ’17: CHI conference on human factors in computing systems, Denver Colorado USA. Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (New York, NY, USA), May 2. https://doi.org/10.1145/3025453.3025912.\n\n\nMonmonier, Mark. 2018. How to Lie with Maps. 3rd ed. University of Chicago Press. https://doi.org/10.7208/chicago/9780226436081.001.0001.\n\n\nSilberzahn, R, E L Uhlmann, D P Martin, et al. 2018. “Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results.” Advances in Methods and Practices in Psychological Science 1 (September): 337–56. https://doi.org/10.1177/2515245917747646.\n\n\n“The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research.” n.d. Accessed June 2, 2019. https://www.autodeskresearch.com/publications/samestats.\n\n\nWikipedia contributors. 2026. “Anscombe’s Quartet.” Wikimedia Foundation, Inc., July 12. https://en.wikipedia.org/wiki/Anscombe%27s_quartet.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "about.html#instructor",
+    "href": "about.html#instructor",
+    "title": "",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\nSchedule an appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io"
+  },
+  {
+    "objectID": "about.html#teaching-assistant",
+    "href": "about.html#teaching-assistant",
+    "title": "",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant"
+  },
+  {
+    "objectID": "about.html#meeting-time-location",
+    "href": "about.html#meeting-time-location",
+    "title": "",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:25 pm - 4:25 pm\n216 Osmond Lab"
+  },
+  {
+    "objectID": "about.html#canvas-site",
+    "href": "about.html#canvas-site",
+    "title": "",
+    "section": "Canvas site",
+    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925"
+  },
+  {
+    "objectID": "about.html#course-structure",
+    "href": "about.html#course-structure",
+    "title": "",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities."
+  },
+  {
+    "objectID": "exercises/ex-03-making-data.html",
+    "href": "exercises/ex-03-making-data.html",
+    "title": "Exercise 03",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 03"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-03-making-data.html#dates",
+    "href": "exercises/ex-03-making-data.html#dates",
+    "title": "Exercise 03",
+    "section": "Dates",
+    "text": "Dates\nIn-class work on Friday, September 11 and Friday, September 18, 2026.\nSubmit write-up for credit due by Friday, September 25, 2026.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 03"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-03-making-data.html#goals",
+    "href": "exercises/ex-03-making-data.html#goals",
+    "title": "Exercise 03",
+    "section": "Goals",
+    "text": "Goals",
+    "crumbs": [
+      "Exercises",
+      "Exercise 03"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-06-tbd.html",
+    "href": "exercises/ex-06-tbd.html",
+    "title": "Exercise 06",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is a under construction.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 06"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-06-tbd.html#dates",
+    "href": "exercises/ex-06-tbd.html#dates",
+    "title": "Exercise 06",
+    "section": "Dates",
+    "text": "Dates",
+    "crumbs": [
+      "Exercises",
+      "Exercise 06"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-06-tbd.html#goals",
+    "href": "exercises/ex-06-tbd.html#goals",
+    "title": "Exercise 06",
+    "section": "Goals",
+    "text": "Goals",
+    "crumbs": [
+      "Exercises",
+      "Exercise 06"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html",
+    "href": "exercises/ex-04-making-figs-ggplot.html",
+    "title": "Exercise 04",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html#dates",
+    "href": "exercises/ex-04-making-figs-ggplot.html#dates",
+    "title": "Exercise 04",
+    "section": "Dates",
+    "text": "Dates\nWe’ll work on this exercise in-class on Friday, September 18, and Friday, September 25, 2026.\nThe write-up is due on Friday, October 2, 2026.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html#goals",
+    "href": "exercises/ex-04-making-figs-ggplot.html#goals",
+    "title": "Exercise 04",
+    "section": "Goals",
+    "text": "Goals\n\nCreate some simple figures in R using the ggplot2 package.\nGain an appreciation of the costs and benefits of scripting the generation of figures.\nLay the foundation for using ggplot2 to create more advanced and informative figures.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-05-tbd.html",
+    "href": "exercises/ex-05-tbd.html",
+    "title": "Exercise 05",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is a under construction.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 05"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-05-tbd.html#dates",
+    "href": "exercises/ex-05-tbd.html#dates",
+    "title": "Exercise 05",
+    "section": "Dates",
+    "text": "Dates",
+    "crumbs": [
+      "Exercises",
+      "Exercise 05"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-05-tbd.html#goals",
+    "href": "exercises/ex-05-tbd.html#goals",
+    "title": "Exercise 05",
+    "section": "Goals",
+    "text": "Goals",
+    "crumbs": [
+      "Exercises",
+      "Exercise 05"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html",
+    "href": "tutorials/tutorial-screenshots.html",
+    "title": "Capturing images",
+    "section": "",
+    "text": "This short tutorial shows how to capture images in web pages and how to make screenshots on Mac OS and Windows OS."
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html#about",
+    "href": "tutorials/tutorial-screenshots.html#about",
+    "title": "Capturing images",
+    "section": "",
+    "text": "This short tutorial shows how to capture images in web pages and how to make screenshots on Mac OS and Windows OS."
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html#capturing-images-in-web-pages",
+    "href": "tutorials/tutorial-screenshots.html#capturing-images-in-web-pages",
+    "title": "Capturing images",
+    "section": "Capturing images in web pages",
+    "text": "Capturing images in web pages\nMost browsers support “right-clicking”, clicking on the right button of a multibutton mouse (or the equivalent motion on a trackpad) when you hover over an image.\nUsing Chrome on Mac OS for example, I visited the Penn State homepage at https://www.psu.edu. In mousing over a photo, I right clicked and had the following panel appear:\n\n\n\n\n\n\nFigure 1: Image from psu.edu in Chrome using MacOS\n\n\n\nNote that there are several options. I find that these are the most useful:\n\n“Open Image in New Tab”. I often do this to make sure that the web page link (URL) actually contains the image I want it to. Then I switch to that tab for further steps.\n“Save Image As…”. This is useful if you want to download a local copy.\n“Copy Image Address”. Use this for capturing URLs of images, but not the images themselves.\n\nHere is an illustration of the same process on Windows 11:\n\n\n\n\n\n\nFigure 2: Image from psu.edu on Chrome using Windows 11\n\n\n\nNot that the pop-up has similar options.\n\n\n\n\n\n\nWarningWord to the wise\n\n\n\nSome websites do not support this feature. That’s why I prefer to use “open image in new tab” to see if I’m actually capturing what I want to capture. As a back-up, you can usually resort to your computer’s built-in screen capture tool that we’ll describe next."
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html#capturing-images-on-your-screen",
+    "href": "tutorials/tutorial-screenshots.html#capturing-images-on-your-screen",
+    "title": "Capturing images",
+    "section": "Capturing images on your screen",
+    "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#how-to-spot-hogwash",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#how-to-spot-hogwash",
+    "title": "The Psychology of Data Visualization",
+    "section": "How to spot hogwash",
+    "text": "How to spot hogwash\n\n\n\ngiphy.com",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#resources-1",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#resources-1",
+    "title": "The Psychology of Data Visualization",
+    "section": "Resources",
+    "text": "Resources\n\nArticles\n\nRetrieve them yourself via the URL (uniform resource locator) and the digital object identifier (DOI) when you can\nOr retrieve PDFs from Canvas",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement",
+    "title": "The Psychology of Data Visualization",
+    "section": "Visualizing measurement",
+    "text": "Visualizing measurement\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt;|measurement| B[Data]\n\n\n\n\n\nFigure 11: A simple depiction of the process of generating data via measurement.\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n  O[Observer] ---&gt; M[Measurement]\n  P[Procedure] ---&gt; M\n  D[Apparatus] ---&gt; M\n  A((World)) --&gt; M\n  M --&gt; B[Data]\n\n\n\n\nFigure 12: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
     ]
   }
 ]

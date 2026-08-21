@@ -10,7 +10,7 @@ In-class work on Friday, August 28, 2026.
 
 Write-up for credit [due]{.orange_due} on [Friday, September 4](../schedule.qmd#fri-sep-04).
 
-[Canvas dropbox]().
+[Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448425).
 
 ## Goals {-}
 
@@ -42,7 +42,7 @@ When you find a visualization you find interesting, capture information about it
 
 3. Add information about the visualizations to a Google Sheet that all of us will share:
 
-<https://docs.google.com/spreadsheets/d/1X-3kWpGAACdkAJ8-AeqYiu5TS6tRzpfdgXBYyPooCPo/edit?usp=sharing>
+<https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?usp=sharing>
 
 Specifically, enter your team identifier in the `identifier` field, the source in `source_type`, and the URL in the `url_to_src` field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the `comments` field. 
 

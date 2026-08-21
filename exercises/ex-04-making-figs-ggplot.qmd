@@ -4,6 +4,12 @@ subtitle: "Making figures with `ggplot`"
 format: html
 ---
 
+::: {.callout-warning}
+
+This page is under construction.
+
+:::
+
 ## Dates {-}
 
 We'll work on this exercise in-class on Friday, September 18, and Friday, September 25, 2026.

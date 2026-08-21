@@ -2,13 +2,31 @@ This page summarizes some of the key deadlines in the course.
 
 | Date      | What's [due]{.orange_due}/happening |
 |-----------|----------------------|
-| [2025-01-23](schedule.qmd#thursday-january-23)   | [Exercise 01](exercises/ex01-figs-in-psych-sci.qmd) |
-| [2025-01-30](schedule.qmd#thursday-january-30) | [Exercise 02](exercises/ex02-data-viz-outside-psych.qmd) |
-| [2025-02-11](schedule.qmd#tuesday-february-11) | [Exercise 03](exercises/ex03-making-data.qmd) |
-| [2025-03-06](schedule.qmd#thursday-march-06) | [Final project proposal](exercises/final-project.qmd) due |
-| [2025-03-06](schedule.qmd#thursday-march-06) | [Exercise 04](exercises/ex04-sci-of-data-viz.qmd) |
-| [2025-03-27](schedule.qmd#thursday-march-27)  | [Exercise 05](exercises/ex05-figure-prep-guidelines.qmd) |
-| [2025-04-03](schedule.qmd#thursday-april-03) | [Exercise 06](exercises/ex06-figs-w-r.qmd) |
-| [2025-04-08](schedule.qmd#tuesday-april-08) | Final project [survey](exercises/final-project.qmd#survey) |
-| [2025-04-17](schedule.qmd#thursday-april-17) | [Exercise 07](exercises/ex07-figs-w-python.qmd) |
-| [2025-05-05](schedule.qmd#tuesday-may-05)  | [Final project](exercises/final-project.qmd) writeup due |
+| [2026-09-04](schedule.qmd#fri-sep-02)   | [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) |
+| [2026-09-18](schedule.qmd#fri-sep-18) | [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) |
+| [2026-09-25](schedule.qmd#fri-sep-25) | [Exercise 03](exercises/ex-03-making-data.qmd) |
+| [2026-10-04](schedule.qmd#fri-oct-04) | [Exercise 04](exercises/ex-04-making-figs-ggplot.qmd) |
+| [2026-10-12](schedule.qmd#mon-oct-12) | [Final project proposal](exercises/final-project.qmd) |
+| [2025-10-26](schedule.qmd#mon-oct-26)  | [Exercise 05](exercises/ex-05-tbd.qmd) |
+| [2026-11-16](schedule.qmd#mon-nov-16) | [Exercise 06](exercises/ex-06-tbd.qmd) |
+| [2026-12-16](schedule.qmd#we-dec-16)  | [Final project](exercises/final-project.qmd) writeup due |
+
+Figure @fig-deadlines below shows one way to visualize these deadlines. We'll examine it and attempt to improve it at some point in the class.
+
+```{r}
+#| label: fig-deadlines
+#| fig-cap: "Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month."
+#| echo: false
+library(ggplot2)
+library(dplyr)
+
+deadlines <- readr::read_csv("include/csv/assignments.csv", show_col_types = FALSE)
+
+deadlines |>
+    mutate(day = ordered(day, levels = 1:3, labels = c("Mon", "Wed", "Fri"))) |>
+    ggplot() +
+    geom_point(aes(x = day, y = week, color = month)) +
+    scale_y_reverse() +
+    theme(axis.title.x.bottom = element_blank()) +
+    theme(legend.position = "none")
+```

@@ -3,3 +3,5 @@ title: "Schedule"
 ---
 
 {{< include _schedule.qmd >}}
+
+## References

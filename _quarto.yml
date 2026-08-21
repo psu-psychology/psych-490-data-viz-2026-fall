@@ -1,20 +1,35 @@
 project:
-  type: book
+  type: website
   output-dir: "docs"
   lib-dir: site_libs
 
-book:
+website:
   title: "PSYCH 490.007"
-  author: "Rick Gilmore"
-  chapters:
+  announcement:
+    content: "Welcome to PSYCH 490.007. Please take some time to familiarize yourself with the course website."
+    position: below-navbar
+    icon: info-circle
+    dismissable: true
+  sidebar:
+    collapse-level: 1
+    style: "docked"
+    search: true
+    contents:
     - text: "Home"
       href: index.qmd
     - href: schedule.qmd
     - href: evaluation.qmd
     - href: deadlines.qmd
     - href: policies.qmd
-    - part: Exercises
-      chapters:
+    - href: meta.qmd
+    - section: Slides
+      contents:
+      - text: "Wk 01 • Mon Aug 24"
+        href: slides/wk-01-2026-08-24-course-intro.qmd
+      - text: "Wk 01 • Wed Aug 26"
+        href: slides/wk-01-2026-08-26-semiotics-data-viz.qmd
+    - section: Exercises
+      contents:
         - exercises/ex-01-figs-in-psych-sci.qmd
         - exercises/ex-02-data-viz-outside-psych.qmd
         - exercises/ex-03-making-data.qmd
@@ -22,25 +37,11 @@ book:
         - exercises/ex-05-tbd.qmd
         - exercises/ex-06-tbd.qmd
         - exercises/final-project.qmd
-    - part: Tutorials
-      chapters:
-        - tutorials/tutorial-screenshots.qmd
-        - tutorials/tutorial-rstudio-on-pc.qmd
-        - tutorials/tutorial-rstudio-on-psu.qmd
-    # - part: Supplemental
-    #   chapters:
-        # - href: supplemental/ex01-feedback.qmd
-        # - href: supplemental/psych-sci-figs.qmd
-        # - href: supplemental/other-field-figs.qmd
-        # - href: supplemental/ex03-deep-dive.qmd
-        # - href: supplemental/ex03-feedback.qmd
-        # - href: supplemental/gestalt-in-the-wild.qmd
-        # - href: supplemental/presentation-schedule.qmd
-    - text: Meta
-      href: meta.qmd
+    - section: Tutorials
+      contents:
+        - tutorials/tutorial-install-r-rstudio.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
-  # repo-subdir: src
   page-footer:
     left: "Copyright © Rick Gilmore • [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
     center: "Built with [Quarto](https://quarto.org/)"
@@ -48,17 +49,29 @@ book:
       - icon: github
         href: https://github.com/rogilmore
     background: light
+  page-navigation: true
+  bread-crumbs: false
+  
 format:
   html:
     theme: [cosmo, include/css/psu.scss]
+    mainfont: roboto
+    fontsize: 1.1em
+    
+    toc: true
+    toc-depth: 4
+    
+    fig-align: center
+
     number-sections: false
-    citations-hover: false
-    footnotes-hover: false
+    citations-hover: true
+    footnotes-hover: true
     crossrefs-hover: true
+
     link-external-icon: true
     date-modified: last-modified
     date: today
-    bibliography: [include/bib/packages.bib, include/bib/data-viz.bib]
+    bibliography: [include/bib/packages.bib, include/bib/data-viz.bib, include/bib/grateful-refs.bib]
     csl: include/bib/apa.csl
     html-math-method: mathjax
     code-fold: true

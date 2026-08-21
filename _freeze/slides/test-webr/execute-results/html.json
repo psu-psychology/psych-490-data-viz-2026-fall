@@ -1,0 +1,12 @@
+{
+  "hash": "a7d09d1a535406ab6196fbea710d56c5",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Interactive WebR Slides\"\nformat: revealjs\nfilters:\n  - webr\n---\n\n## Example\n\n```{webr}\n#| edit: true\n#| include: true\n\nfit <- lm(mpg ~ wt, data = mtcars) \nsummary(fit)\n```\n\n---\n\n::: {.panel-tabset}\n\n### Mean 0, SD 1\n\n```{webr}\n#| edit: true\n#| include: true\n\nn0 <- rnorm(n = 1000, mean = 0, sd = 1)\nhist(n0)\n```\n\n### Mean 0.5, sd = 1\n\n```{webr}\n#| edit: true\n#| include: true\nn0_5 <- rnorm(n = 1000, mean = 0.5, sd = 1)\nhist(n0_5)\n```\n\n:::\n\n",
+    "supporting": [
+      "test-webr_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

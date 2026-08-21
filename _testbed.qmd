@@ -1,0 +1,16 @@
+---
+title: "Testbed"
+format: html
+---
+
+## About
+
+This file is a place to test code snippets for use elsewhere in the site.
+
+{{< fa thumbs-up >}}
+
+{{< fa alarm-clock >}} 
+
+The `alarm-clock` icon does not appear to be included.
+
+{{< fa clock >}}
