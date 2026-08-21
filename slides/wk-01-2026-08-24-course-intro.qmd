@@ -51,7 +51,7 @@ format: revealjs
 
 ## People
 
-<!-- - Sara He, MS, Graduate Student -->
+- Kalvin Garrah, Graduate Student
 - Rick Gilmore, Professor of Psychology
 
 ## Why this course, why now
@@ -271,6 +271,12 @@ flowchart LR
 ```
 :::
 
+## Your turn
+
+::: {.question}
+## What sorts of things do we measure in psychological science?
+:::
+
 ## Measures in $\Psi$ science
 
 ::: {.incremental}
@@ -278,6 +284,15 @@ flowchart LR
 - Physiological states
 - Individual characteristics
 - Environmental characteristics
+:::
+
+## How do we measure these things?
+
+::: {.incremental}
+- Interviews, questionnaires
+- Observations
+- Behavioral responses
+- EEG, ERP, EKG, salivary assays, brain imaging, ...
 :::
 
 ## Questions

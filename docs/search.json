@@ -44,7 +44,7 @@
     "href": "schedule.html#week-04",
     "title": "Schedule",
     "section": "Week 04",
-    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nSlides\n\n\n\nWed, Sep 16\nMore figure types\n\n\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nReview: Making and visualizing data\n Due Exercise 02 |  Canvas dropbox |\nSlides",
+    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nSlides\n\n\n\nWed, Sep 16\nMore figure types\n\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nReview: Making and visualizing data\n Due Exercise 02 |  Canvas dropbox |\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -515,7 +515,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semi-whatics",
     "title": "Semiotics of data visualization",
     "section": "Semi-whatics?",
-    "text": "Semi-whatics?\n\n\n\nThe Editors of Encyclopedia Britannica (2024)",
+    "text": "Semi-whatics?\n\n\n\n\n\n\nFigure 2: The Editors of Encyclopedia Britannica (2024)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -526,7 +526,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-symbolic-animal",
     "title": "Semiotics of data visualization",
     "section": "The symbolic animal",
-    "text": "The symbolic animal\n\nErnst Cassirer\n\n\nCassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination is only one expression of the human instinct to think in symbols. Kirsch (2021)",
+    "text": "The symbolic animal\n\nErnst Cassirer\n\n\nCassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination1 is only one expression of the human instinct to think in symbols. Kirsch (2021)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -537,7 +537,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-communicating-animal",
     "title": "Semiotics of data visualization",
     "section": "The communicating animal",
-    "text": "The communicating animal\n\nCommunication as transmission of information\nFrom world\n\n\n\n\n\n\nflowchart LR\n  A[World] --&gt; B[You]",
+    "text": "The communicating animal\n\nCommunication as transmission of information\nFrom world\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt; B[You]",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -548,7 +548,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#communication",
     "title": "Semiotics of data visualization",
     "section": "Communication",
-    "text": "Communication\n\nFrom others (direct)\n\n\n\n\n\n\nflowchart LR\n  A[Me] --&gt; B[You]\n\n\n\n\n\n\n\n\nFrom others (via some medium1)\n\n\n\n\n\n\nflowchart LR\n  A[Me] --&gt; B((Medium))\n  B --&gt; C[You]",
+    "text": "Communication\n\nFrom others (direct)\n\n\n\n\n\n\nflowchart LR\n  A[Me] --&gt; B[You]\n\n\n\n\n\n\n\n\nFrom others (via some medium2)\n\n\n\n\n\n\nflowchart LR\n  A[Me] --&gt; B((Medium))\n  B --&gt; C[You]",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -559,7 +559,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#media",
     "title": "Semiotics of data visualization",
     "section": "Media",
-    "text": "Media\n\nSource of signs2\nSign relation\n\nSign (as a thing) –&gt; Meaning\nRelation is arbitrary, defined by social convention (Sausurre)",
+    "text": "Media\n\nSource of signs3\nSign relation\n\nSign (as a thing) –&gt; Meaning\nRelation is arbitrary, defined by social convention (Sausurre)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -636,7 +636,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#grammar-of-graphics",
     "title": "Semiotics of data visualization",
     "section": "Grammar of Graphics",
-    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 3: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 4: Wickham et al. (n.d.)",
+    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 5: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 6: Wickham et al. (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -680,7 +680,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semioticssemiology-of-graphics",
     "title": "Semiotics of data visualization",
     "section": "Semiotics/Semiology of Graphics",
-    "text": "Semiotics/Semiology of Graphics\n\n\n\nBertin (2010)",
+    "text": "Semiotics/Semiology of Graphics\n\n\n\n\n\n\nFigure 7: Bertin (2010)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -757,7 +757,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#footnotes",
     "title": "Semiotics of data visualization",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nmedia is the plural form of medium.\nmore general than language\nOrderly system of rules for arranging symbols.",
+    "text": "Footnotes\n\n\nThe process of exact thinking. https://www.merriam-webster.com/dictionary/ratiocination\nMedia is the plural form of medium.\nmore general than language\nOrderly system of rules for arranging symbols.",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -1147,7 +1147,7 @@
     "href": "index.html#teaching-assistant",
     "title": "The Psychology of Data Visualization",
     "section": "Teaching Assistant",
-    "text": "Teaching Assistant",
+    "text": "Teaching Assistant\nKalvin Garrah\nGraduate Student in Social Psychology\nkmg7035 AT-SIGN psu PERIOD edu",
     "crumbs": [
       "Home"
     ]
@@ -1367,6 +1367,17 @@
     ]
   },
   {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#how-to-spot-hogwash",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#how-to-spot-hogwash",
+    "title": "The Psychology of Data Visualization",
+    "section": "How to spot hogwash",
+    "text": "How to spot hogwash\n\n\n\ngiphy.com",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
     "objectID": "slides/wk-01-2026-08-24-course-intro.html#purpose-goals",
     "href": "slides/wk-01-2026-08-24-course-intro.html#purpose-goals",
     "title": "The Psychology of Data Visualization",
@@ -1422,6 +1433,17 @@
     ]
   },
   {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#resources-1",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#resources-1",
+    "title": "The Psychology of Data Visualization",
+    "section": "Resources",
+    "text": "Resources\n\nArticles\n\nRetrieve them yourself via the URL (uniform resource locator) and the digital object identifier (DOI) when you can\nOr retrieve PDFs from Canvas",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
     "objectID": "slides/wk-01-2026-08-24-course-intro.html#structure",
     "href": "slides/wk-01-2026-08-24-course-intro.html#structure",
     "title": "The Psychology of Data Visualization",
@@ -1460,6 +1482,17 @@
     "title": "The Psychology of Data Visualization",
     "section": "Your turn…",
     "text": "Your turn…\n\n\n\n\n\n\nWhere do data come from?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\nData are the outcome of a process of measurement.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#visualizing-a-process-of-measurement",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#visualizing-a-process-of-measurement",
+    "title": "The Psychology of Data Visualization",
+    "section": "Visualizing a process of measurement",
+    "text": "Visualizing a process of measurement\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt;|measurement| B[Data]\n\n\n\n\n\nFigure 12: A simple depiction of the process of generating data via measurement.\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n  O[Observer] ---&gt; M[Measurement]\n  P[Procedure] ---&gt; M\n  D[Apparatus] ---&gt; M\n  A((World)) --&gt; M\n  M --&gt; B[Data]\n\n\n\n\nFigure 13: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument.",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
@@ -1510,11 +1543,22 @@
     ]
   },
   {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#main-points",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#main-points",
+    "title": "The Psychology of Data Visualization",
+    "section": "Main points",
+    "text": "Main points\n\nVisualizing data is important\nVisualizing data is interesting\nData visualization encapulates multiple ideas from psychological science",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
     "objectID": "slides/wk-01-2026-08-24-course-intro.html#references",
     "href": "slides/wk-01-2026-08-24-course-intro.html#references",
     "title": "The Psychology of Data Visualization",
     "section": "References",
-    "text": "References\n\n\n\n\nBBC. 2010. Hans Rosling’s 200 Countries, 200 Years, 4 Minutes - the Joy of Stats - BBC. YouTube. https://www.youtube.com/watch?v=jbkSRLYSojo&t=55s.\n\n\nFeynman, R P. 1974. Cargo Cult Science. https://calteches.library.caltech.edu/51/2/CargoCult.htm.\n\n\nHuff, Darrell. 1993. How to Lie with Statistics. WW Norton. https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728.\n\n\nIso, Aloisio. 2016. Bread - If Original [1971]. YouTube. https://www.youtube.com/watch?v=IQyKMueMFGk.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nMatejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” Paper presented CHI ’17: CHI conference on human factors in computing systems, Denver Colorado USA. Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (New York, NY, USA), May 2. https://doi.org/10.1145/3025453.3025912.\n\n\nMonmonier, Mark. 2018. How to Lie with Maps. 3rd ed. University of Chicago Press. https://doi.org/10.7208/chicago/9780226436081.001.0001.\n\n\nSilberzahn, R, E L Uhlmann, D P Martin, et al. 2018. “Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results.” Advances in Methods and Practices in Psychological Science 1 (September): 337–56. https://doi.org/10.1177/2515245917747646.\n\n\n“The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research.” n.d. Accessed June 2, 2019. https://www.autodeskresearch.com/publications/samestats.\n\n\nWikipedia contributors. 2026. “Anscombe’s Quartet.” Wikimedia Foundation, Inc., July 12. https://en.wikipedia.org/wiki/Anscombe%27s_quartet.",
+    "text": "References\n\n\n\n\nBBC. 2010. Hans Rosling’s 200 Countries, 200 Years, 4 Minutes - the Joy of Stats - BBC. YouTube. https://www.youtube.com/watch?v=jbkSRLYSojo&t=55s.\n\n\nFeynman, R P. 1974. Cargo Cult Science. https://calteches.library.caltech.edu/51/2/CargoCult.htm.\n\n\nGillespie, Colin, Steph Locke, Rhian Davies, and Lucy D’Agostino McGowan. 2025. datasauRus: Datasets from the Datasaurus Dozen. https://doi.org/10.32614/CRAN.package.datasauRus.\n\n\nHuff, Darrell. 1993. How to Lie with Statistics. WW Norton. https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728.\n\n\nIso, Aloisio. 2016. Bread - If Original [1971]. YouTube. https://www.youtube.com/watch?v=IQyKMueMFGk.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nMatejka, Justin, and George Fitzmaurice. 2017. “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.” Paper presented CHI ’17: CHI conference on human factors in computing systems, Denver Colorado USA. Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (New York, NY, USA), May 2. https://doi.org/10.1145/3025453.3025912.\n\n\nMonmonier, Mark. 2018. How to Lie with Maps. 3rd ed. University of Chicago Press. https://doi.org/10.7208/chicago/9780226436081.001.0001.\n\n\nSilberzahn, R, E L Uhlmann, D P Martin, et al. 2018. “Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results.” Advances in Methods and Practices in Psychological Science 1 (September): 337–56. https://doi.org/10.1177/2515245917747646.\n\n\n“The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research.” n.d. Accessed June 2, 2019. https://www.autodeskresearch.com/publications/samestats.\n\n\nWikipedia contributors. 2026. “Anscombe’s Quartet.” Wikimedia Foundation, Inc., July 12. https://en.wikipedia.org/wiki/Anscombe%27s_quartet.",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
@@ -1723,36 +1767,113 @@
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
   },
   {
-    "objectID": "slides/wk-01-2026-08-24-course-intro.html#how-to-spot-hogwash",
-    "href": "slides/wk-01-2026-08-24-course-intro.html#how-to-spot-hogwash",
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#your-turn-2",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#your-turn-2",
     "title": "The Psychology of Data Visualization",
-    "section": "How to spot hogwash",
-    "text": "How to spot hogwash\n\n\n\ngiphy.com",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nWhat sorts of things do we measure in psychological science?",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
     ]
   },
   {
-    "objectID": "slides/wk-01-2026-08-24-course-intro.html#resources-1",
-    "href": "slides/wk-01-2026-08-24-course-intro.html#resources-1",
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#how-do-we-measure-these-things",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#how-do-we-measure-these-things",
     "title": "The Psychology of Data Visualization",
-    "section": "Resources",
-    "text": "Resources\n\nArticles\n\nRetrieve them yourself via the URL (uniform resource locator) and the digital object identifier (DOI) when you can\nOr retrieve PDFs from Canvas",
+    "section": "How do we measure these things?",
+    "text": "How do we measure these things?\n\nInterviews, questionnaires\nObservations\nBehavioral responses\nEEG, ERP, EKG, salivary assays, brain imaging, …",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
     ]
   },
   {
-    "objectID": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement",
-    "href": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement",
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#section",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#section",
     "title": "The Psychology of Data Visualization",
-    "section": "Visualizing measurement",
-    "text": "Visualizing measurement\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt;|measurement| B[Data]\n\n\n\n\n\nFigure 11: A simple depiction of the process of generating data via measurement.\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n  O[Observer] ---&gt; M[Measurement]\n  P[Procedure] ---&gt; M\n  D[Apparatus] ---&gt; M\n  A((World)) --&gt; M\n  M --&gt; B[Data]\n\n\n\n\nFigure 12: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument.",
+    "section": "",
+    "text": "Housing affordability in State College, PA. Homeownership cost as a share of median income. Federal Reserve Bank of Atlanta. https://public.tableau.com/shared/FY72B725F?:display_count=n&:origin=viz_share_link&:embed=y",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#your-turn",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#your-turn",
+    "title": "Semiotics of data visualization",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nCan you think of another context where the symbol “A” is used in a way that is different from its use in written language?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\\[y=Ax+b\\]",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#signs-vary-in-meaningfulness",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#signs-vary-in-meaningfulness",
+    "title": "Semiotics of data visualization",
+    "section": "Signs vary in ‘meaningfulness’",
+    "text": "Signs vary in ‘meaningfulness’\n\n\n\n\n\nhttps://www.religious-symbols.net/\n\n\n\n\n\n\nhttps://www.vecteezy.com/free-vector/symbols",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-system-grammars",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-system-grammars",
+    "title": "Semiotics of data visualization",
+    "section": "Sign system grammars4",
+    "text": "Sign system grammars4\n\n\n\n\\(2+2*3=4\\) vs. \\(2+(2*3)=4\\)\n“Up with you I will not put.” vs. “I will not put up with you.”\n\n\n\n\n\n\n\n\nFigure 4: Famous Jedi Knight from Star Wars, Yoda is.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#your-turn-1",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#your-turn-1",
+    "title": "Semiotics of data visualization",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nWhat sign or symbol systems rely on these channels?\n\n\n\nHaptic (touch)\nEchoic (sound)\nIconic (light)\nOlfactory (aroma)\nGustatory (flavor)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-serve-many-purposes",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-serve-many-purposes",
+    "title": "Semiotics of data visualization",
+    "section": "Sign systems serve many purposes",
+    "text": "Sign systems serve many purposes\n\n\n\nunite/inform\ndivide/confuse\n\n\n\n\n\n\n\n\nFigure 3: Steiner (1998)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section",
+    "title": "Semiotics of data visualization",
+    "section": "",
+    "text": "flowchart LR\n  A((Person)) ---&gt; B[Measure]\n  F((Researcher)) ---&gt; B\n  F ---&gt; A\n  B ---&gt; G(Text)\n  B ---&gt; C(Data)\n  C ---&gt; D[Statistics]\n  C ---&gt; E[Visualization]\n\n\n\n\nFigure 8: The measurement & reporting process",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section-1",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section-1",
+    "title": "Semiotics of data visualization",
+    "section": "",
+    "text": "flowchart LR\n  C(Data) -.-&gt; D[Statistics]\n  C -.-&gt; F\n  C -.-&gt; E[Visualization]\n  E ---&gt; A((Student))\n  D ---&gt; A\n  A ---&gt; A\n  F[Text] ---&gt; A\n\n\n\n\nFigure 9: The perception process",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
     ]
   }
 ]

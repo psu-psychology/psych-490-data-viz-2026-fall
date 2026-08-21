@@ -105,7 +105,6 @@
 
 *More figure types*
 
-<!-- - *Review*: [Making and visualizing data](tutorials/tutorial-making-data.qmd) -->
 - [Slides](404.qmd)
 
 ### Fri, Sep 18 {-}
@@ -170,7 +169,7 @@
 
 *Work Session: Visualizing sports data*
 
-- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448438) |
+- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 - [Slides](404.qmd)
 
 ## Week 07 {- #week-07}

@@ -58,31 +58,27 @@ format: revealjs
 - Work session
   - [Exercise-01](../exercises/ex-01-figs-in-psych-sci.qmd)
   - Install R, RStudio
-
-# Visualization in psychological science
-
-## Resources
   
 # Semiotics of data visualization
 
 ## Semi-whatics?
 
-![@The-Editors-of-Encyclopedia-Britannica2024-ot](../include/img/semiotics-britannica.png)
+![@The-Editors-of-Encyclopedia-Britannica2024-ot](../include/img/semiotics-britannica.png){#fig-saussure width="60%"}
 
 ## The *symbolic* animal
 
 - [Ernst Cassirer](https://en.wikipedia.org/wiki/Ernst_Cassirer)
 
->Cassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination is only one expression of the human instinct to think in symbols. @Kirsch2021-fd
+>Cassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination^[The process of exact thinking. <https://www.merriam-webster.com/dictionary/ratiocination>] is only one expression of the human instinct to think in symbols. @Kirsch2021-fd
 
-## The communicating animal
+## The *communicating* animal
 
 - Communication as transmission of information
 - From world
 
 ```{mermaid}
 flowchart LR
-  A[World] --> B[You]
+  A((World)) --> B[You]
 ```
 
 ## Communication
@@ -95,7 +91,7 @@ flowchart LR
 ```
 
 ::: {.fragment}
-- From others (via some medium^[*media* is the plural form of medium.])
+- From others (via some medium^[*Media* is the plural form of medium.])
 
 ```{mermaid}
 flowchart LR
@@ -108,13 +104,27 @@ flowchart LR
 ## Media
 
 - Source of [*signs*](https://en.wikipedia.org/wiki/Sign_(semiotics))^[more general than language]
-- Sign relation
+- Sign *relation*
   - Sign (as a thing) --> Meaning
   - Relation is arbitrary, defined by social convention (Sausurre)
   
 ---
   
 ![@UnknownUnknown-ey](https://arxiv.org/html/2402.14311v1/x1.png)
+
+## Your turn
+
+::: {.question}
+## Can you think of another context where the symbol "A" is used in a way that is different from its use in written language?
+:::
+
+::: {.fragment}
+::: {.answer}
+
+$$y=Ax+b$$
+
+:::
+:::
 
 ## Core qualities of sign systems
 
@@ -137,7 +147,7 @@ flowchart LR
 :::
 ::::
 
----
+## Your turn {.center}
 
 ::: {.question}
 ## What sign or symbol systems rely on these channels?
@@ -149,7 +159,7 @@ flowchart LR
 - Gustatory (flavor)
 :::
 
-## Vary in 'meaningfulness'
+## Signs vary in 'meaningfulness'
 
 :::: {.columns}
 ::: {.column width=50%}
@@ -167,11 +177,19 @@ flowchart LR
 - About sign relations (what signs "mean" or convey)
 - Open vs. closed symbol systems
 
-## Sign systems can unite/inform or divide/confuse
+## Sign systems serve many purposes
 
-![@Steiner1998-al](https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Steiner_AfterBabel.jpg/200px-Steiner_AfterBabel.jpg)
+:::: {.columns}
+::: {.column width=50%}
+- unite/inform
+- divide/confuse
+:::
+::: {.column width=50%}
+![@Steiner1998-al](https://upload.wikimedia.org/wikipedia/en/6/67/Steiner_AfterBabel.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-steiner-after-babel}
+:::
+::::
 
-## Sign systems grammars^[Orderly system of rules for arranging symbols.]
+## Sign system grammars^[Orderly system of rules for arranging symbols.]
 
 :::: {.columns}
 ::: {.column width=50%}
@@ -179,7 +197,7 @@ flowchart LR
 - "Up with you I will not put." vs. "I will not put up with you."
 :::
 ::: {.column width=50%}
-![](../include/img/yoda-failure-teacher.jpg){#fig-yoda}
+![Famous Jedi Knight from Star Wars, Yoda is.](../include/img/yoda-failure-teacher.jpg){#fig-yoda width="75%"}
 :::
 ::::
 
@@ -228,14 +246,14 @@ flowchart LR
 
 ## Semiotics/Semiology of Graphics
 
-![@Bertin2010-dz](../include/img/bertin-semiology-of-graphics.png)
+![@Bertin2010-dz](../include/img/bertin-semiology-of-graphics.png){#fig-bertin-semiology width="35%"}
 
 ## Semiotics of data visualization
 
 - What do the components (of a figure) mean?
 - What message is the visualization creator trying to convey?
 
----
+## {.center}
 
 ```{mermaid}
 %%| label: fig-measurement-process
@@ -249,6 +267,8 @@ flowchart LR
   C ---> D[Statistics]
   C ---> E[Visualization]
 ```
+
+## {.center}
 
 ```{mermaid}
 %%| label: fig-perception-process
