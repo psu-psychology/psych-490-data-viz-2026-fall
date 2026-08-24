@@ -504,7 +504,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semi-whatics",
     "title": "Semiotics of data visualization",
     "section": "Semi-whatics?",
-    "text": "Semi-whatics?\n\n\n\n\n\n\nFigure 2: The Editors of Encyclopedia Britannica (2024)",
+    "text": "Semi-whatics?\n\n\n\n\n\n\nFigure 4: The Editors of Encyclopedia Britannica (2024)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -625,7 +625,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-serve-many-purposes",
     "title": "Semiotics of data visualization",
     "section": "Sign systems serve many purposes",
-    "text": "Sign systems serve many purposes\n\n\n\nunite/inform\ndivide/confuse\n\n\n\n\n\n\n\n\nFigure 3: Steiner (1998)",
+    "text": "Sign systems serve many purposes\n\n\n\nunite/inform\ndivide/confuse\n\n\n\n\n\n\n\n\nFigure 5: Steiner (1998)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -636,7 +636,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-system-grammars",
     "title": "Semiotics of data visualization",
     "section": "Sign system grammars4",
-    "text": "Sign system grammars4\n\n\n\n\\(2+2*3=4\\) vs. \\(2+(2*3)=4\\)\n“Up with you I will not put.” vs. “I will not put up with you.”\n\n\n\n\n\n\n\n\nFigure 4: Famous Jedi Knight from Star Wars, Yoda is.",
+    "text": "Sign system grammars4\n\n\n\n\\(2+2*3=4\\) vs. \\(2+(2*3)=4\\)\n“Up with you I will not put.” vs. “I will not put up with you.”\n\n\n\n\n\n\n\n\nFigure 6: Famous Jedi Knight from Star Wars, Yoda is.",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -647,7 +647,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#grammar-of-graphics",
     "title": "Semiotics of data visualization",
     "section": "Grammar of Graphics",
-    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 5: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 6: Wickham et al. (n.d.)",
+    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 7: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 8: Wickham et al. (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -691,7 +691,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semioticssemiology-of-graphics",
     "title": "Semiotics of data visualization",
     "section": "Semiotics/Semiology of Graphics",
-    "text": "Semiotics/Semiology of Graphics\n\n\n\n\n\n\nFigure 7: Bertin (2010)",
+    "text": "Semiotics/Semiology of Graphics\n\n\n\n\n\n\nFigure 9: Bertin (2010)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -713,7 +713,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section",
     "title": "Semiotics of data visualization",
     "section": "",
-    "text": "flowchart LR\n  A((Person)) ---&gt; B[Measure]\n  F((Researcher)) ---&gt; B\n  F ---&gt; A\n  B ---&gt; G(Text)\n  B ---&gt; C(Data)\n  C ---&gt; D[Statistics]\n  C ---&gt; E[Visualization]\n\n\n\n\nFigure 8: The measurement & reporting process",
+    "text": "flowchart LR\n  A((Person)) ---&gt; B[Measure]\n  F((Researcher)) ---&gt; B\n  F ---&gt; A\n  B ---&gt; G(Text)\n  B ---&gt; C(Data)\n  C ---&gt; D[Statistics]\n  C ---&gt; E[Visualization]\n\n\n\n\nFigure 10: The measurement & reporting process",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -724,7 +724,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section-1",
     "title": "Semiotics of data visualization",
     "section": "",
-    "text": "flowchart LR\n  C(Data) -.-&gt; D[Statistics]\n  C -.-&gt; F\n  C -.-&gt; E[Visualization]\n  E ---&gt; A((Student))\n  D ---&gt; A\n  A ---&gt; A\n  F[Text] ---&gt; A\n\n\n\n\nFigure 9: The perception process",
+    "text": "flowchart LR\n  C(Data) -.-&gt; D[Statistics]\n  C -.-&gt; F\n  C -.-&gt; E[Visualization]\n  E ---&gt; A((Student))\n  D ---&gt; A\n  A ---&gt; A\n  F[Text] ---&gt; A\n\n\n\n\nFigure 11: The perception process",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -779,7 +779,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#references",
     "title": "Semiotics of data visualization",
     "section": "References",
-    "text": "References\n\n\n\n\nBertin, Jacques. 2010. Semiology of Graphics: Diagrams, Networks, Maps. ESRI Press.\n\n\n“Font Style Interpolation with Diffusion Models.” n.d. Accessed January 10, 2025. https://arxiv.org/html/2402.14311v1.\n\n\nKirsch, Adam. 2021. “The Symbolic Animal.” March 18. https://www.nybooks.com/articles/2021/04/08/ernst-cassirer-symbolic-animal/.\n\n\nSpence, Ian, and Howard Wainer. 2017. “William Playfair and the Invention of Statistical Graphs.” In Information Design, 1st Edition. Routledge. https://doi.org/10.4324/9781315585680-10.\n\n\nSteiner, George. 1998. After Babel: Aspects of Language and Translation. 3rd ed. Oxford University Press. https://www.amazon.com/After-Babel-Aspects-Language-Translation/dp/0192880934.\n\n\nThe Editors of Encyclopedia Britannica. 2024. “Semiotics.” In Encyclopedia Britannica. December 19. https://www.britannica.com/science/semiotics.\n\n\nWickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. n.d. “ggplot2: Elegant Graphics for Data Analysis (3e).” Accessed January 12, 2025. https://ggplot2-book.org/.\n\n\nWilkinson, Leland, D Wills, D Rope, A Norton, and R Dubbs. 2005. The Grammar of Graphics (Statistics and Computing). 2nd edition. Springer. https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448.",
+    "text": "References\n\n\n\n\nBertin, Jacques. 2010. Semiology of Graphics: Diagrams, Networks, Maps. ESRI Press.\n\n\n“Font Style Interpolation with Diffusion Models.” n.d. Accessed January 10, 2025. https://arxiv.org/html/2402.14311v1.\n\n\nKirsch, Adam. 2021. “The Symbolic Animal.” March 18. https://www.nybooks.com/articles/2021/04/08/ernst-cassirer-symbolic-animal/.\n\n\nSpence, Ian, and Howard Wainer. 2017. “William Playfair and the Invention of Statistical Graphs.” In Information Design, 1st Edition. Routledge. https://doi.org/10.4324/9781315585680-10.\n\n\nSteiner, George. 1998. After Babel: Aspects of Language and Translation. 3rd ed. Oxford University Press. https://www.amazon.com/After-Babel-Aspects-Language-Translation/dp/0192880934.\n\n\nThe Economist. 2026. “How Big Is America’s ‘Obesity Penalty’?” In The Economist. The Economist. https://www.economist.com/graphic-detail/2026/07/26/how-big-is-americas-obesity-penalty.\n\n\nThe Editors of Encyclopedia Britannica. 2024. “Semiotics.” In Encyclopedia Britannica. December 19. https://www.britannica.com/science/semiotics.\n\n\nWickham, Hadley, Danielle Navarro, and Thomas Lin Pedersen. n.d. “ggplot2: Elegant Graphics for Data Analysis (3e).” Accessed January 12, 2025. https://ggplot2-book.org/.\n\n\nWilkinson, Leland, D Wills, D Rope, A Norton, and R Dubbs. 2005. The Grammar of Graphics (Statistics and Computing). 2nd edition. Springer. https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448.",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -1831,5 +1831,16 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#in-the-news",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#in-the-news",
+    "title": "Semiotics of data visualization",
+    "section": "In the news…",
+    "text": "In the news…\n\n\n\n\n\n\nFigure 2: The Economist (2026)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
   }
 ]

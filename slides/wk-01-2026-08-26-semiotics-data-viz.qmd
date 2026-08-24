@@ -47,6 +47,14 @@ format: revealjs
 - <https://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program>
 - Good sources of data visualizations
   - Data journalism
+  
+## In the news...
+
+![@The2026-mw](../include/img/economist-glp-1-02.png){#fig-economist-obesity-penalty}
+
+---
+
+![@The2026-mw](../include/img/economist-glp-1-01.png){#fig-economist-obsesity-data width="70%"}
 
 ## Last time...
 
