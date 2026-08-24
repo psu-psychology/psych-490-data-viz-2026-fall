@@ -1514,7 +1514,7 @@
     "href": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement",
     "title": "The Psychology of Data Visualization",
     "section": "Visualizing measurement",
-    "text": "Visualizing measurement\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt;|measurement| B[Data]\n\n\n\n\n\nFigure 14: A simple depiction of the process of generating data via measurement.",
+    "text": "Visualizing measurement\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt;|measurement| B[Data]\n\n\n\n\n\nFigure 15: A simple depiction of the process of generating data via measurement.",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
@@ -1525,7 +1525,7 @@
     "href": "slides/wk-01-2026-08-24-course-intro.html#section-1",
     "title": "The Psychology of Data Visualization",
     "section": "",
-    "text": "flowchart LR\n  O[Observer] ---&gt; M[Measurement]\n  P[Procedure] ---&gt; M\n  D[Apparatus] ---&gt; M\n  A((World)) --&gt; M\n  M --&gt; B[Data]\n\n\n\n\nFigure 15: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument.",
+    "text": "flowchart LR\n  O[Observer] ---&gt; M[Measurement]\n  P[Procedure] ---&gt; M\n  D[Apparatus] ---&gt; M\n  A((World)) --&gt; M\n  M --&gt; B[Data]\n\n\n\n\nFigure 16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument.",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"

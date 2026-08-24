@@ -205,7 +205,6 @@ ggplot(datasaurus_dozen, aes(x=x, y=y))+
 - Attendance (up to 40 points)
 - Final project (40 points)
 
-
 ## Resources
 
 - Websites
@@ -244,6 +243,10 @@ ggplot(datasaurus_dozen, aes(x=x, y=y))+
   - 'Smith tried to demonstrate that pigs can fly by tossing a few off the 
   roof of Old Main. That's nonsense, is cruel to animals, and made a huge mess.'
 :::
+
+---
+
+![giphy.com](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmk5c29lY2g5eHA3NDQ1OHBhZzFoNzRkeWI1Ynp1aTNjN3pqYXE2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4T189yy4SfUbByZHRu/giphy.gif){#fig-elephant-in-the-room}
 
 # Visualization in psychological science
 

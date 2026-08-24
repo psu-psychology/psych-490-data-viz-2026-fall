@@ -12,6 +12,17 @@ When you complete assignments, remember the **ABC**s to avoid plagiarism: **A**l
 
 Students facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.
 
+### Use of Artificial Intelligence (AI)
+
+You may use AI tools to assist with your work, but you must properly cite any sources used. 
+This includes AI-generated content, such as text, images, data, or code.
+
+Always ensure that your work reflects your own understanding and that you are not relying solely on AI tools to complete assignments.
+
+If you do make use of AI, please cite the AI tool used and provide a brief description of how it was used in your work. Please also save a transcript of your interaction with the AI tool and submit that as an appendix to your assignment.
+
+See <https://integrity.psu.edu/ai> for more details, and when in doubt, please ask the instructor or TA.
+
 ### Absences or late assignments {- #late-missed-assignments}
 
 #### Absence from class
