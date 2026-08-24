@@ -1,0 +1,110 @@
+---
+title: "Hometown map"
+---
+
+## About
+
+This page documents Rick Gilmore's explorations of the best ways to create a map of his hometowns over the years.
+
+## Setup
+
+Load packages.
+
+```{r}
+library(tidyverse)
+library(tidygeocoder)
+library(maps)
+library(ggrepel)
+library(dplyr)
+```
+
+## Load data
+
+```{r}
+homes_df <- readr::read_csv("../include/csv/gilmore-hometowns.csv", show_col_types = FALSE)
+```
+
+## Clean data
+
+```{r}
+homes_df <- homes_df |>
+  mutate(full_address = paste(city, state, "USA", sep = ", ")) |>
+  mutate(n_years )
+```
+
+## Fetch lat/lon
+
+```{r}
+geocoded_homes <- homes_df %>% 
+  geocode(address = full_address, method = 'osm', lat = latitude, 
+          long = longitude)
+```
+
+## Create map
+
+```{r}
+#| label: fig-gilmores-journey
+#| fig-cap: "Rick Gilmore's hometowns. The size of the points is proportional to the number of years lived in each location. Created with assistance from AI."
+us_map <- map_data("state")
+
+# 5. Build and render the visualization
+ggplot() +
+  # Draw the background map layer of the United States
+  geom_polygon(
+    data = us_map,
+    aes(x = long, y = lat, group = group),
+    fill = "#f2f2f2",
+    color = "#d3d3d3",
+    linewidth = 0.3
+  ) +
+  
+  # Draw paths/lines connecting your homes chronologically based on the year
+  geom_path(
+    data = geocoded_homes %>% arrange(year),
+    aes(x = longitude, y = latitude),
+    color = "#4a90e2",
+    linewidth = 1,
+    alpha = 0.7,
+    linetype = "dashed"
+  ) +
+  
+  # Plot points for each home location
+  geom_point(
+    data = geocoded_homes,
+    aes(x = longitude, y = latitude, size = n_years),
+    color = "#e056fd",
+    # size = 4,
+    alpha = 0.9
+  ) +
+  
+  # Add smart labels that show the City name and the Year you moved there
+  geom_label_repel(
+    data = geocoded_homes,
+    aes(
+      x = longitude,
+      y = latitude,
+      label = paste0(city, " (", year, ")")
+    ),
+    box.padding = 0.5,
+    point.padding = 0.5,
+    size = 3.5,
+    fill = "white",
+    color = "#333333"
+  ) +
+  
+  # Configure map projections and clean up visual clutter
+  coord_quickmap() +
+  theme_void() + # Removes grid lines, axis ticks, and backgrounds
+  labs(title = "Places I've Called Home",
+       subtitle = "A chronological journey across the country",
+       caption = "Data mapped using tidygeocoder & ggplot2") +
+  theme(
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5, 
+                              margin = margin(b = 5)),
+    plot.subtitle = element_text(size = 12, hjust = 0.5, 
+                                 color = "gray40", margin = margin(b = 15))
+  ) +
+  theme(legend.position = "none")
+
+```
+

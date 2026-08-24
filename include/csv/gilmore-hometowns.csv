@@ -1,8 +1,10 @@
-city,state,year
-Denver,CO,1963
-Madison,WI,1968
-Denver,CO,1969
-Providence,RI,1982
-Washington,DC,1985
-Pittsburgh,PA,1992
-State College,PA,1997
+city,state,year,n_years
+Denver,CO,1963,2
+Minneapolis,MN,1965,1
+Denver,CO,1966,2
+Madison,WI,1968,1
+Denver,CO,1969,13,
+Providence,RI,1982,3
+Washington,DC,1985,7
+Pittsburgh,PA,1992,5
+State College,PA,1997,29

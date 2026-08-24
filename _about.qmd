@@ -15,11 +15,14 @@ Lab web site: <https://gilmore-lab.github.io>
 Kalvin Garrah \
 Graduate Student in Social Psychology \
 kmg7035 AT-SIGN psu PERIOD edu \
-<!-- Meetings by appointment over Zoom \ -->
+
+### Office hours
+
+TBD
 
 ## Meeting time & location {-}
 
-Monday, Wednesday, & Friday, 3:25 pm - 4:25 pm \
+Monday, Wednesday, & Friday, 3:35 pm - 4:25 pm \
 216 [Osmond Lab](https://map.psu.edu/?id=1134#!ct/25403,26748,26749,26750,27255?m/274773?s/Osmond)
 
 ## Canvas site
