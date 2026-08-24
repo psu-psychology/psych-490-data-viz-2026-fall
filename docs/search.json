@@ -471,7 +471,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#announcements",
     "title": "Semiotics of data visualization",
     "section": "Announcements",
-    "text": "Announcements\n\nFree access to newspapers!\nhttps://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program\nGood sources of data visualizations\n\nData journalism",
+    "text": "Announcements\n\nFree access to newspapers!\nhttps://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program\nGood sources of data visualizations",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -493,7 +493,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#today",
     "title": "Semiotics of data visualization",
     "section": "Today",
-    "text": "Today\n\nSemiotics of data visualization\nWork session\n\nExercise-01\nInstall R, RStudio",
+    "text": "Today\n\nSemiotics of data visualization\nWork session\n\nExercise-01\nInstall R, RStudio, Quarto (if time)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -515,7 +515,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#the-symbolic-animal",
     "title": "Semiotics of data visualization",
     "section": "The symbolic animal",
-    "text": "The symbolic animal\n\nErnst Cassirer\n\n\nCassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination1 is only one expression of the human instinct to think in symbols. Kirsch (2021)",
+    "text": "The symbolic animal\n\n\n\n\n\n\n\n\nFigure 5: Ernst Cassirer\n\n\n\n\n\nCassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination1 is only one expression of the human instinct to think in symbols.\n\nKirsch (2021)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -625,7 +625,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-systems-serve-many-purposes",
     "title": "Semiotics of data visualization",
     "section": "Sign systems serve many purposes",
-    "text": "Sign systems serve many purposes\n\n\n\nunite/inform\ndivide/confuse\n\n\n\n\n\n\n\n\nFigure 5: Steiner (1998)",
+    "text": "Sign systems serve many purposes\n\n\n\nunite/inform\ndivide/confuse\n\n\n\n\n\n\n\n\nFigure 6: Steiner (1998)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -636,7 +636,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#sign-system-grammars",
     "title": "Semiotics of data visualization",
     "section": "Sign system grammars4",
-    "text": "Sign system grammars4\n\n\n\n\\(2+2*3=4\\) vs. \\(2+(2*3)=4\\)\n“Up with you I will not put.” vs. “I will not put up with you.”\n\n\n\n\n\n\n\n\nFigure 6: Famous Jedi Knight from Star Wars, Yoda is.",
+    "text": "Sign system grammars4\n\n\n\n\\(2+2*3=4\\) vs. \\(2+(2*3)=4\\)\n“Up with you I will not put.” vs. “I will not put up with you.”\n\n\n\n\n\n\n\n\nFigure 7: A famous Jedi Knight from Star Wars, Yoda is.",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -647,7 +647,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#grammar-of-graphics",
     "title": "Semiotics of data visualization",
     "section": "Grammar of Graphics",
-    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 7: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 8: Wickham et al. (n.d.)",
+    "text": "Grammar of Graphics\n\n\n\n\n\n\n\n\nFigure 8: Wilkinson et al. (2005)\n\n\n\n\n\n\n\n\n\n\nFigure 9: Wickham et al. (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -691,7 +691,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#semioticssemiology-of-graphics",
     "title": "Semiotics of data visualization",
     "section": "Semiotics/Semiology of Graphics",
-    "text": "Semiotics/Semiology of Graphics\n\n\n\n\n\n\nFigure 9: Bertin (2010)",
+    "text": "Semiotics/Semiology of Graphics\n\n\n\n\n\n\nFigure 10: Bertin (2010)",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -713,7 +713,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section",
     "title": "Semiotics of data visualization",
     "section": "",
-    "text": "flowchart LR\n  A((Person)) ---&gt; B[Measure]\n  F((Researcher)) ---&gt; B\n  F ---&gt; A\n  B ---&gt; G(Text)\n  B ---&gt; C(Data)\n  C ---&gt; D[Statistics]\n  C ---&gt; E[Visualization]\n\n\n\n\nFigure 10: The measurement & reporting process",
+    "text": "flowchart LR\n  A((Person)) ---&gt; B[Measure]\n  F((Researcher)) ---&gt; B\n  F ---&gt; A\n  B ---&gt; G(Text)\n  B ---&gt; C(Data)\n  C ---&gt; D[Statistics]\n  C ---&gt; E[Visualization]\n\n\n\n\nFigure 11: The measurement & reporting process",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -724,7 +724,7 @@
     "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#section-1",
     "title": "Semiotics of data visualization",
     "section": "",
-    "text": "flowchart LR\n  C(Data) -.-&gt; D[Statistics]\n  C -.-&gt; F\n  C -.-&gt; E[Visualization]\n  E ---&gt; A((Student))\n  D ---&gt; A\n  A ---&gt; A\n  F[Text] ---&gt; A\n\n\n\n\nFigure 11: The perception process",
+    "text": "flowchart LR\n  C(Data) -.-&gt; D[Statistics]\n  C -.-&gt; F\n  C -.-&gt; E[Visualization]\n  E ---&gt; A((Student))\n  D ---&gt; A\n  A ---&gt; A\n  F[Text] ---&gt; A\n\n\n\n\nFigure 12: The perception process",
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
@@ -1514,7 +1514,7 @@
     "href": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement",
     "title": "The Psychology of Data Visualization",
     "section": "Visualizing measurement",
-    "text": "Visualizing measurement\n\n\n\n\n\n\nflowchart LR\n  A((World)) --&gt;|measurement| B[Data]\n\n\n\n\n\nFigure 15: A simple depiction of the process of generating data via measurement.",
+    "text": "Visualizing measurement\n\n\n\n\n\n\nFigure 15: A simple depiction of the process of generating data via measurement.",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
@@ -1535,8 +1535,8 @@
     "objectID": "slides/wk-01-2026-08-24-course-intro.html#your-turn-2",
     "href": "slides/wk-01-2026-08-24-course-intro.html#your-turn-2",
     "title": "The Psychology of Data Visualization",
-    "section": "Your turn",
-    "text": "Your turn\n\n\n\n\n\n\nWhat do we measure in psychological science?",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nWhat do we measure in psychological science?",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
@@ -1547,7 +1547,7 @@
     "href": "slides/wk-01-2026-08-24-course-intro.html#measures-in-psi-science",
     "title": "The Psychology of Data Visualization",
     "section": "Measures in \\(\\Psi\\) science",
-    "text": "Measures in \\(\\Psi\\) science\n\nInternal states (thoughts, feelings, memories, opinions, decisions, judgments…)\nPhysiological states\nIndividual characteristics\nEnvironmental characteristics",
+    "text": "Measures in \\(\\Psi\\) science\n\nInternal states (thoughts, feelings, memories, opinions, decisions, judgments…)\nPhysiological states\nIndividual characteristics (height, weight, eye color, etc.)\nEnvironmental characteristics",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"
@@ -1841,6 +1841,50 @@
     "crumbs": [
       "Slides",
       "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#an-aside-about-quarto",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#an-aside-about-quarto",
+    "title": "Semiotics of data visualization",
+    "section": "An aside about Quarto",
+    "text": "An aside about Quarto\n\nQuarto can be used to generate many of the components of a research document\nOne text document combines text, data analysis, links, images, and more\nGenerates multiple outputs: HTML, PDF, Word, PowerPoint, etc.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement-1",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#visualizing-measurement-1",
+    "title": "The Psychology of Data Visualization",
+    "section": "Visualizing measurement",
+    "text": "Visualizing measurement\n\n\n\n\n\n\nFigure 17: “A simple depiction of the process of generating data via measurement.”",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#what-do-the-data-look-like",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#what-do-the-data-look-like",
+    "title": "The Psychology of Data Visualization",
+    "section": "What do the data look like?",
+    "text": "What do the data look like?\n\nMost often…\n\n\n\n\n\nTable 1: Table showing a few of Gilmore’s hometowns\n\n\n\n\n\n\ncity\nstate\nyear\nn_years\n\n\n\n\nDenver\nCO\n1963\n2\n\n\nMinneapolis\nMN\n1965\n1\n\n\nDenver\nCO\n1966\n2\n\n\nMadison\nWI\n1968\n1",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#under-the-hood",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#under-the-hood",
+    "title": "The Psychology of Data Visualization",
+    "section": "Under the hood…",
+    "text": "Under the hood…\n\nA text file in a comma separated value (.csv) or similar tabular format (rows + columns)\n\n\n\n\n\n\n\nFigure 17: A sample CSV file",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
     ]
   }
 ]

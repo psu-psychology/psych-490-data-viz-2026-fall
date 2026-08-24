@@ -55,7 +55,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-445e7e3b1c5f75a9ba11066bf069e70f.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -149,9 +149,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
   .reveal div.callout-answer.callout {
     border-left-color: blue;
@@ -681,53 +678,32 @@ Figure&nbsp;14: giphy.com
 </section>
 <section id="visualizing-measurement" class="slide level2">
 <h2>Visualizing measurement</h2>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-measurement" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-measurement-simple" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-measurement">flowchart LR
-  A((World)) --&gt;|measurement| B[Data]
-
-</pre>
+<div aria-describedby="fig-measurement-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/fig/mermaid-figure-measures-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;15: A simple depiction of the process of generating data via measurement."><img data-src="../include/fig/mermaid-figure-measures-1.png"></a>
 </div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;15: A simple depiction of the process of generating data via measurement.
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
 </section>
-<section id="section-1" class="slide level2 center">
-<h2></h2>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-measurement-detailed" class="quarto-float quarto-figure quarto-figure-center">
+<section class="slide level2">
+
+<div id="fig-measurement-richer" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement-detailed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-measurement-detailed">flowchart LR
-  O[Observer] ---&gt; M[Measurement]
-  P[Procedure] ---&gt; M
-  D[Apparatus] ---&gt; M
-  A((World)) --&gt; M
-  M --&gt; B[Data]
-</pre>
+<div aria-describedby="fig-measurement-richer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/fig/mermaid-figure-measures-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with Figure&nbsp;15"><img data-src="../include/fig/mermaid-figure-measures-2.png"></a>
 </div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-detailed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-richer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with <a href="#/fig-measurement-simple" class="quarto-xref">Figure&nbsp;15</a>
 </figcaption>
 </figure>
 </div>
-</div>
-</div>
 </section>
 <section id="your-turn-2" class="slide level2">
-<h2>Your turn</h2>
+<h2>Your turn…</h2>
 <div class="callout callout-question callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -747,7 +723,7 @@ Figure&nbsp;16: A richer depiction of the process of measurement involving an ob
 <ul>
 <li class="fragment">Internal states (thoughts, feelings, memories, opinions, decisions, judgments…)</li>
 <li class="fragment">Physiological states</li>
-<li class="fragment">Individual characteristics</li>
+<li class="fragment">Individual characteristics (height, weight, eye color, etc.)</li>
 <li class="fragment">Environmental characteristics</li>
 </ul>
 </section>
@@ -759,6 +735,77 @@ Figure&nbsp;16: A richer depiction of the process of measurement involving an ob
 <li class="fragment">Behavioral responses</li>
 <li class="fragment">EEG, ERP, EKG, salivary assays, brain imaging, …</li>
 </ul>
+</section>
+<section id="what-do-the-data-look-like" class="slide level2">
+<h2>What do the data look like?</h2>
+<ul>
+<li>Most often…</li>
+</ul>
+<div class="cell">
+<div id="tbl-gilmore-hometowns" class="cell quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Table showing a few of Gilmore’s hometowns
+</figcaption>
+<div aria-describedby="tbl-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">city</th>
+<th style="text-align: left;">state</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">n_years</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Denver</td>
+<td style="text-align: left;">CO</td>
+<td style="text-align: right;">1963</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minneapolis</td>
+<td style="text-align: left;">MN</td>
+<td style="text-align: right;">1965</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Denver</td>
+<td style="text-align: left;">CO</td>
+<td style="text-align: right;">1966</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Madison</td>
+<td style="text-align: left;">WI</td>
+<td style="text-align: right;">1968</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the hood…</h2>
+<ul>
+<li>A text file in a comma separated value (<code>.csv</code>) or similar <em>tabular</em> format (rows + columns)</li>
+</ul>
+<div id="fig-gilmore-hometowns" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/gilmore-hometowns-csv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;17: A sample CSV file"><img data-src="../include/img/gilmore-hometowns-csv.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: A sample <a href="../include/csv/gilmore-hometowns.csv">CSV file</a>
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
@@ -786,7 +833,7 @@ Figure&nbsp;16: A richer depiction of the process of measurement involving an ob
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="include/fig/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" width="960"></a></p>
+<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="include/fig/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" width="960"></a></p>
 </figure>
 </div>
 </div>

@@ -265,30 +265,13 @@ Data are the outcome of a process of measurement.
 
 ## Visualizing measurement
 
-```{mermaid}
-%%| label: fig-measurement
-%%| fig-cap: "A simple depiction of the process of generating data via measurement."
+![A simple depiction of the process of generating data via measurement.](../include/fig/mermaid-figure-measures-1.png){#fig-measurement-simple}
 
-flowchart LR
-  A((World)) -->|measurement| B[Data]
+---
 
-```
+![A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with @fig-measurement-simple](../include/fig/mermaid-figure-measures-2.png){#fig-measurement-richer}
 
-## {.center}
-
-```{mermaid}
-%%| label: fig-measurement-detailed
-%%| fig-cap: "A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument."
-
-flowchart LR
-  O[Observer] ---> M[Measurement]
-  P[Procedure] ---> M
-  D[Apparatus] ---> M
-  A((World)) --> M
-  M --> B[Data]
-```
-
-## Your turn
+## Your turn...
 
 ::: {.question}
 ## What do we measure in psychological science?
@@ -299,7 +282,7 @@ flowchart LR
 ::: {.incremental}
 - Internal states (thoughts, feelings, memories, opinions, decisions, judgments...)
 - Physiological states
-- Individual characteristics
+- Individual characteristics (height, weight, eye color, etc.)
 - Environmental characteristics
 :::
 
@@ -311,6 +294,26 @@ flowchart LR
 - Behavioral responses
 - EEG, ERP, EKG, salivary assays, brain imaging, ...
 :::
+
+## What do the data look like?
+
+- Most often...
+
+```{r}
+#| label: tbl-gilmore-hometowns
+#| tbl-cap: Table showing a few of Gilmore's hometowns
+#| echo: false
+gilmore_df <- readr::read_csv("../include/csv/gilmore-hometowns.csv")
+gilmore_df |>
+  head(4) |>
+  kableExtra::kable()
+```
+
+## Under the hood...
+
+- A text file in a comma separated value (`.csv`) or similar *tabular* format (rows + columns)
+
+![A sample [CSV file](../include/csv/gilmore-hometowns.csv)](../include/img/gilmore-hometowns-csv.png){#fig-gilmore-hometowns}
 
 ## Questions
 

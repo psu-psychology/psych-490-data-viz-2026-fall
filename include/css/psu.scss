@@ -46,6 +46,11 @@ h4 {
   font-weight: bold;
 }
 
+.reveal .mermaid svg {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+}
 
 /*-- scss:functions --*/
 

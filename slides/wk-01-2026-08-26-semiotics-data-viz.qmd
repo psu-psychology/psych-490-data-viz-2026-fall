@@ -29,16 +29,6 @@ format: revealjs
 :::
 ::::
 
-<!-- --- -->
-
-<!-- ::: {#fig-simulation-of-pluto-collision} -->
-
-<!-- {{< video ../include/vid/41561_2024_1612_MOESM2_ESM.mp4 >}} -->
-
-<!-- @Denton2025-bu -->
-
-<!-- ::: -->
-
 # Overview
 
 ## Announcements
@@ -46,7 +36,6 @@ format: revealjs
 - Free access to newspapers!
 - <https://studentaffairs.psu.edu/involvement-student-life/student-services/student-news-readership-program>
 - Good sources of data visualizations
-  - Data journalism
   
 ## In the news...
 
@@ -65,7 +54,7 @@ format: revealjs
 - Semiotics of data visualization
 - Work session
   - [Exercise-01](../exercises/ex-01-figs-in-psych-sci.qmd)
-  - Install R, RStudio
+  - Install R, RStudio, Quarto (if time)
   
 # Semiotics of data visualization
 
@@ -75,16 +64,24 @@ format: revealjs
 
 ## The *symbolic* animal
 
-- [Ernst Cassirer](https://en.wikipedia.org/wiki/Ernst_Cassirer)
+:::: {.columns}
+::: {.column width=35%}
+![[Ernst Cassirer](https://en.wikipedia.org/wiki/Ernst_Cassirer)](https://upload.wikimedia.org/wikipedia/commons/3/33/Ernst_Cassirer.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-cassirer}
+:::
+::: {.column width=65%}
+>Cassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination^[The process of exact thinking. <https://www.merriam-webster.com/dictionary/ratiocination>] is only one expression of the human instinct to think in symbols. 
 
->Cassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination^[The process of exact thinking. <https://www.merriam-webster.com/dictionary/ratiocination>] is only one expression of the human instinct to think in symbols. @Kirsch2021-fd
+@Kirsch2021-fd
+:::
+::::
 
-## The *communicating* animal
+## The *communicating* animal {.nostretch}
 
 - Communication as transmission of information
 - From world
 
 ```{mermaid}
+%%| fig-width: 10
 flowchart LR
   A((World)) --> B[You]
 ```
@@ -205,7 +202,7 @@ $$y=Ax+b$$
 - "Up with you I will not put." vs. "I will not put up with you."
 :::
 ::: {.column width=50%}
-![Famous Jedi Knight from Star Wars, Yoda is.](../include/img/yoda-failure-teacher.jpg){#fig-yoda width="75%"}
+![A famous Jedi Knight from Star Wars, Yoda is.](../include/img/yoda-failure-teacher.jpg){#fig-yoda width="75%"}
 :::
 ::::
 
@@ -244,6 +241,12 @@ $$y=Ax+b$$
 - Data, materials
 :::
 ::::
+
+## An aside about Quarto
+
+- Quarto can be used to generate many of the components of a research document
+- One text document combines text, data analysis, links, images, and more
+- Generates multiple outputs: HTML, PDF, Word, PowerPoint, etc.
 
 ## Questions about scientific communication
 
