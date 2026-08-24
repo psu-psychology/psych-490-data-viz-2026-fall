@@ -1881,7 +1881,7 @@
     "href": "slides/wk-01-2026-08-24-course-intro.html#under-the-hood",
     "title": "The Psychology of Data Visualization",
     "section": "Under the hood…",
-    "text": "Under the hood…\n\nA text file in a comma separated value (.csv) or similar tabular format (rows + columns)\n\n\n\n\n\n\n\nFigure 17: A sample CSV file",
+    "text": "Under the hood…\n\nA text file in a comma separated value (.csv) or similar tabular format (rows + columns)\n\n\n\n\n\n\n\nFigure 17: A sample CSV file. Link to text file",
     "crumbs": [
       "Slides",
       "Wk 01 • Mon Aug 24"

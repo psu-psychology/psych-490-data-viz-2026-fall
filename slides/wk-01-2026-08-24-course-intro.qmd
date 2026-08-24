@@ -313,7 +313,7 @@ gilmore_df |>
 
 - A text file in a comma separated value (`.csv`) or similar *tabular* format (rows + columns)
 
-![A sample [CSV file](../include/csv/gilmore-hometowns.csv)](../include/img/gilmore-hometowns-csv.png){#fig-gilmore-hometowns}
+![A sample CSV file. [Link to text file](../include/csv/gilmore-hometowns.csv)](../include/img/gilmore-hometowns-csv.png){#fig-gilmore-hometowns}
 
 ## Questions
 
