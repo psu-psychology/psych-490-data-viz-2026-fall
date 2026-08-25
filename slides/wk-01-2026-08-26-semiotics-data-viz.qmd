@@ -45,6 +45,18 @@ format: revealjs
 
 ![@The2026-mw](../include/img/economist-glp-1-01.png){#fig-economist-obsesity-data width="70%"}
 
+## {.center}
+
+![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-01.png){#fig-nyt-el-nino-01 width="50%"}
+
+## 
+
+![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-02.png){#fig-nyt-el-nino-fig-02 width="50%"}
+
+## 
+
+![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-03.png){#fig-nyt-el-nino-fig-03 width="50%"}
+
 ## Last time...
 
 - Course introduction
