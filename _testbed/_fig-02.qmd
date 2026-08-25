@@ -1,0 +1,14 @@
+---
+format:
+  gfm:
+    mermaid-format: png
+---
+
+```{mermaid}
+%%| label: fig-measurement
+%%| fig-cap: "A simple depiction of the process of generating data via measurement."
+
+flowchart LR
+  A((World)) -->|measurement| B[Data]
+
+```

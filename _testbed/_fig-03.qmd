@@ -1,0 +1,17 @@
+---
+format:
+  gfm:
+    mermaid-format: png
+---
+
+```{mermaid}
+%%| label: fig-measurement-detailed
+%%| fig-cap: "A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument."
+
+flowchart LR
+  O[Observer] ---> M[Measurement]
+  P[Procedure] ---> M
+  D[Apparatus] ---> M
+  A((World)) --> M
+  M --> B[Data]
+```

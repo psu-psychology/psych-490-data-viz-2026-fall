@@ -1,13 +1,12 @@
 ---
-title: "mermaid"
+title: "Multiple mermaid figs"
 format:
   gfm:
     mermaid-format: png
 ---
 
-```{mermaid}
-flowchart LR
-  A[Hard edge] --> B(Round edge)
-  B --> C{Decision}
-```
+{{< include _fig-01.qmd >}}
 
+{{< include _fig-02.qmd >}}
+
+{{< include _fig-03.qmd >}}
