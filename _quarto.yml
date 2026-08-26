@@ -6,7 +6,7 @@ project:
 website:
   title: "PSYCH 490.007"
   announcement:
-    content: "Welcome to PSYCH 490.007. Please take some time to familiarize yourself with the course website."
+    content: "Make sure to install R & RStudio on your personal computer. See [this tutorial](tutorials/tutoria-install-r-rstudio.qmd) for help."
     position: below-navbar
     icon: info-circle
     dismissable: true

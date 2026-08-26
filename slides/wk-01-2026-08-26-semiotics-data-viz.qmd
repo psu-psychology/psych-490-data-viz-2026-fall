@@ -51,11 +51,11 @@ format: revealjs
 
 ## 
 
-![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-02.png){#fig-nyt-el-nino-fig-02 width="50%"}
+![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-02.png){#fig-nyt-el-nino-fig-02 width="60%"}
 
 ## 
 
-![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-03.png){#fig-nyt-el-nino-fig-03 width="50%"}
+![@Rojanasakul2026-fv](../include/img/nyt-el-nino-2026-08-25-fig-03.png){#fig-nyt-el-nino-fig-03 width="60%"}
 
 ## Last time...
 
@@ -83,7 +83,7 @@ format: revealjs
 ::: {.column width=65%}
 >Cassirer argues that the classic Aristotelian definition of the human being as a rational animal is wrong, or at least incomplete. Instead we should think of ourselves as “symbolic animals,” since ratiocination^[The process of exact thinking. <https://www.merriam-webster.com/dictionary/ratiocination>] is only one expression of the human instinct to think in symbols. 
 
-@Kirsch2021-fd
+-- @Kirsch2021-fd
 :::
 ::::
 
@@ -92,11 +92,7 @@ format: revealjs
 - Communication as transmission of information
 - From world
 
-```{mermaid}
-%%| fig-width: 10
-flowchart LR
-  A((World)) --> B[You]
-```
+{{< include _communicating-animal-01.qmd >}}
 
 ## Communication
 
@@ -137,6 +133,7 @@ flowchart LR
 
 ::: {.fragment}
 ::: {.answer}
+## One example
 
 $$y=Ax+b$$
 
@@ -164,7 +161,7 @@ $$y=Ax+b$$
 :::
 ::::
 
-## Your turn {.center}
+## Your turn
 
 ::: {.question}
 ## What sign or symbol systems rely on these channels?
@@ -210,7 +207,7 @@ $$y=Ax+b$$
 
 :::: {.columns}
 ::: {.column width=50%}
-- $2+2*3=4$ vs. $2+(2*3)=4$
+- $2+2*3=??$ vs. $2+(2*3)=??$
 - "Up with you I will not put." vs. "I will not put up with you."
 :::
 ::: {.column width=50%}
@@ -254,11 +251,17 @@ $$y=Ax+b$$
 :::
 ::::
 
-## An aside about Quarto
+## 
+
+::: {.important}
+## An aside...
+
+![](https://quarto.org/quarto.png){align="center"}
 
 - Quarto can be used to generate many of the components of a research document
-- One text document combines text, data analysis, links, images, and more
-- Generates multiple outputs: HTML, PDF, Word, PowerPoint, etc.
+- One text document combines $\leftarrow$ text, data analysis, links, images, and more
+- Generates multiple outputs $\rightarrow$ HTML, PDF, Word, PowerPoint, etc.
+:::
 
 ## Questions about scientific communication
 
@@ -327,14 +330,14 @@ Signs and sign systems are *everywhere*!
   
 # Work session
 
-## Install R and RStudio
-
--  [*Tutorial*](../tutorials/tutorial-install-r-rstudio.qmd)
-
 ## Work on Exercise 01
 
 - [Assignment](../exercises/ex-01-figs-in-psych-sci.qmd)
 - [Google Sheet](https://docs.google.com/spreadsheets/d/10B44tuL2ERqGQaJw7vxu1ZFsIOcDbMw3kjfTy-jrFB4/edit?usp=sharing) for capturing & sharing data
+
+## Install R and RStudio
+
+-  [*Tutorial*](../tutorials/tutorial-install-r-rstudio.qmd)
 
 ## Next time
 

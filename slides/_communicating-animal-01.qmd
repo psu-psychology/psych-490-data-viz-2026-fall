@@ -1,0 +1,12 @@
+---
+format:
+  gfm:
+    mermaid-format: png
+---
+
+```{mermaid}
+%%| label: fig-communicating-animal-01
+%%| width: 800px
+flowchart LR
+  A((World)) --> B[You]
+```

@@ -128,12 +128,11 @@ format: revealjs
 
 ![](../include/img/rendered-ex-01-template.png){#fig-rendered-ex-01-template}
 
-## Main points
+## Wrap-up
 
 ## Next time
 
 - *Visualization in government & business*
-- Results of visualization in psychological science exercise
 
 # Resources
 

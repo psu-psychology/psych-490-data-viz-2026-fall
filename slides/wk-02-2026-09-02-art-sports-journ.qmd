@@ -1,0 +1,157 @@
+---
+title: "Data viz in art, sports, & journalism"
+format: revealjs
+---
+
+# Preliminaries
+
+---
+
+{{< video https://www.youtube.com/watch?v=ljGMhDSSGFU width=100% height=70% >}}
+
+@Smalin2011-vr
+
+## Mortality trends by education level
+
+![@Novosad2022-yz](../include/img/novosad-etal-2022-fig-01.png){#fig-mortality-trends width="40%"}
+
+---
+
+![@Novosad2022-yz](../include/img/novosad-etal-2022-fig-05.png){#fig-mortality-trends-fig-05 width="50%"}
+
+# Overview
+
+## Announcements
+
+- Due Friday: [Exercise 01](../exercises/ex-01-figs-in-psych-sci.qmd)
+
+## Last time...
+
+- *Visualization in government and business*
+
+## Today
+
+- *Visualization in art, sports, & journalism*
+
+## Goals
+
+- What sort(s) of visualizations are common in these fields?
+- Apply principles of [semiotics](wk-01-2026-08-26-semiotics-data-viz.qmd#semiotics-of-data-visualization) to these visualizations.
+  - Semantics: Mappings between signs and what they signify?
+  - Syntax: Rules for arrangement/organization
+
+# Data visualization in the arts
+
+## Musical notation
+
+![https://www.britannica.com/art/musical-notation](https://cdn.britannica.com/01/72201-004-2995C318/symbols-notation.jpg){#fig-britannica-musical-notation}
+
+## Antecdents
+
+![https://www.britannica.com/art/musical-notation/Evolution-of-Western-staff-notation](https://cdn.britannica.com/93/2893-004-908441FD/Music-notation-neumes.jpg){#fig-musical-notation-antecedents}
+
+---
+
+![@Wikipedia-contributors2025-rz](https://upload.wikimedia.org/wikipedia/commons/7/7e/Hurritische_hymne.gif){#fig-musical-annotation-antecedents-02}
+
+## Hebrew trope
+
+![@Wikipedia-contributors2025-hl. https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail](https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-hebrew-trope}
+
+## Styles
+
+- [Musical style guide](https://blogs.iu.edu/jsomcomposition/music-notation-style-guide/)
+
+## What is being mapped?
+
+- Pitch
+- Timing, tempo
+- Loudness
+- Stylistic properties
+- etc.
+
+---
+
+::: {#fig-beethoven-9th}
+<iframe width="1240" height="450" src="https://www.youtube.com/embed/ljGMhDSSGFU?si=1I9C5vYt69rF21S1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+@Smalin2011-vr
+:::
+
+## Dance
+
+::: {#fig-dance}
+<iframe width="1240" height="450" src="https://www.youtube.com/embed/VQYuNKvbPDg?si=IsD5u5jYYENDZxkB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+@Flores2021-pt
+:::
+
+## Visual arts
+
+!["Blue Skies and Cloud Cover" by Laura Guertin, [BTAA Data Viz 2024](https://btaa.org/research/love-data-week/2024_Data_Viz_Championship) Champion](https://btaa.org/images/default-source/love-data-week/laura_guertin_thumbnail.webp?sfvrsn=a6a11c8d_1){#fig-btaa-data-viz-2024 width="30%"}
+
+# Data visualization in sports
+
+## Examples
+
+- <https://operations.nfl.com/programs-initiatives/innovation/big-data-bowl>
+- <https://www.tableau.com/sports-data>
+
+# Data visualization in journalism
+
+---
+
+![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig1.png)
+---
+
+![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig2.png)
+
+## Data journalism
+
+- [The Economist](https://impact.economist.com/perspectives/search/infographic?f[0]=type%3Ainfographic&f[1]=)
+- [The New York Times](https://www.nytimes.com/spotlight/graphics)
+
+---
+
+![https://www.foxnews.com/search-results/search 'data'](../include/img/fox-news-search-data.png)
+
+---
+
+![https://www.cnn.com/search?q=data](../include/img/cnn-search-data.png)
+
+## The Washington Post
+
+![@Van-Dam2022-mr](../include/img/wapo-dept-data.png)
+
+---
+
+<iframe src="https://datawrapper.dwcdn.net/j4zy7/7/" width=100% height=80%></iframe>
+
+@Fowers2024-hu
+
+## Accuweather.com
+
+![https://www.accuweather.com/en/us/state-college/16801/weather-forecast/335315?current=true](../include/img/accuweather.png)
+
+## Knowable Magazine
+
+![https://knowablemagazine.org/](../include/img/knowable-magazine.png)
+
+- Graphics [library](https://www.flickr.com/photos/knowablemag/)
+
+# Wrap-up
+
+## Main points
+
+## Data viz outside $\Psi$
+
+- Non-science fields visualize data, too
+- Multiple purposes/uses of data viz
+
+# Next time
+
+- Work session
+
+# Resources
+
+## References

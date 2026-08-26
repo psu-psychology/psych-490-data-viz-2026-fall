@@ -3,8 +3,6 @@ title: "The Psychology of Data Visualization"
 subtitle: "Fall 2026 • MWF 3:35-4:25p"
 ---
 
-## The Psychology of Data Visualization
-
 ![ChatGPT/Dall-E-3 model response to 'an image of "a picture paints a thousand words"' on 2024-09-19](include/img/dall-e-2024-09-19-picture-paints.png){width="50%"}
 
 ## Themes

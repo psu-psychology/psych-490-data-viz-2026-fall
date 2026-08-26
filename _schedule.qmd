@@ -40,8 +40,7 @@
 
 *Visualization in government & business*
 
-- [Results](404.qmd) from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
-- [Slides](404.qmd)
+- [Slides](slides/wk-02-2026-08-31-govt-biz.qmd)
 
 ### Wed, Sep 02 {-}
 
@@ -50,7 +49,8 @@
 - *Read* 
   - @Gelman2013-he (recommended), follow citation link to online version or [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922116).
 - [*Assigned*]{.green_assigned}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) 
-- [Slides](404.qmd)
+- [Slides](slides/wk-02-2026-09-02-art-sports-journalism.qmd)
+- [Results](404.qmd) from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
 
 ### Fri, Sep 04 {-}
 

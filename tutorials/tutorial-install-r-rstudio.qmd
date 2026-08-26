@@ -21,7 +21,7 @@ You must install R first.
 
 ### Installing R
 
-1. Visit <https://lib.stat.cmu.edu/R/CRAN/>
+1. Visit <https://cran.r-project.org>
 
 ![https://lib.stat.cmu.edu/R/CRAN/](../include/img/cran.png){#fig-cran}
 
