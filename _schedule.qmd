@@ -25,12 +25,14 @@
 
 ### Fri, Aug 28 {-}
 
-*Work Session: Introducing Quarto*
+*Work Session: Introducing R & RStudio*
 
 - *Complete*: R and RStudio Desktop installation and setup
 - *Read*: [Get Started](https://docs.posit.co/ide/user/ide/get-started/) from the RStudio User Guide.
-- *Skim*: <https://quarto.org/docs/get-started/hello/jupyter.html>^[We won't use Python in this course, but the basic ideas apply to Python and R.]
-- [Slides](slides/wk-01-2026-08-28-introducing-quarto.qmd)
+- *Skim*: 
+  - <https://quarto.org/docs/get-started/hello/jupyter.html>^[We won't use Python in this course, but the basic ideas apply to Python and R.]
+  - <https://education.rstudio.com/learn/beginner/>
+- [Slides](slides/wk-01-2026-08-28-introducing-r-rstudio.qmd)
 
 ## Week 02 {- #week-02}
 
@@ -49,12 +51,12 @@
 - *Read* 
   - @Gelman2013-he (recommended), follow citation link to online version or [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922116).
 - [*Assigned*]{.green_assigned}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) 
-- [Slides](slides/wk-02-2026-09-02-art-sports-journalism.qmd)
+- [Slides](slides/slides/wk-02-2026-09-02-art-sports-journ.qmd)
 - [Results](404.qmd) from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
 
 ### Fri, Sep 04 {-}
 
-*Work Session: More Quarto*
+*Work Session: Exercise 02 and Quarto*
 
 - {{< fa calendar >}} *Due* [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448425)
 - [Slides](404.qmd)
@@ -111,7 +113,6 @@
 
 *Work Session: Intro to ggplot*
 
-- *Review*: [Making and visualizing data](tutorials/tutorial-making-data.qmd)
 - {{< fa calendar >}} *Due* [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448429) | 
 - [Slides](404.qmd)
 

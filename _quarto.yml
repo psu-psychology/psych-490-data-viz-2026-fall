@@ -28,6 +28,8 @@ website:
         href: slides/wk-01-2026-08-24-course-intro.qmd
       - text: "Wk 01 • Wed Aug 26"
         href: slides/wk-01-2026-08-26-semiotics-data-viz.qmd
+      - text: "Wk 01 • Fri Aug 28"
+        href: slides/wk-01-2026-08-28-introducing-r-rstudio.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

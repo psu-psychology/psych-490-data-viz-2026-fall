@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-24">
+<meta name="dcterms.date" content="2026-08-27">
 
 <title>The Psychology of Data Visualization – PSYCH 490.007</title>
 <style>
@@ -99,7 +99,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dce537a07246f15aaa8534392cf85106.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b798a8be8a3ce4da077f873ae8b6b3e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -151,8 +151,8 @@ div.csl-indent {
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="826df1360df5f1f4d98a3d476d0a1a22" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Welcome to PSYCH 490.007. Please take some time to familiarize yourself with the course website.</p>
+  <div id="quarto-announcement" data-announcement-id="4e80ddc1b1d4040cc99d2e179e229b55" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>Make sure to install R &amp; RStudio on your personal computer. See <a href="tutorials/tutoria-install-r-rstudio.qmd">this tutorial</a> for help.</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
@@ -226,6 +226,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="./slides/wk-01-2026-08-26-semiotics-data-viz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 01 • Wed Aug 26</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./slides/wk-01-2026-08-28-introducing-r-rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Fri Aug 28</span></a>
   </div>
 </li>
       </ul>
@@ -310,8 +316,7 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-psychology-of-data-visualization" id="toc-the-psychology-of-data-visualization" class="nav-link active" data-scroll-target="#the-psychology-of-data-visualization">The Psychology of Data Visualization</a></li>
-  <li><a href="#themes" id="toc-themes" class="nav-link" data-scroll-target="#themes">Themes</a></li>
+  <li><a href="#themes" id="toc-themes" class="nav-link active" data-scroll-target="#themes">Themes</a></li>
   <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a>
   <ul>
   <li><a href="#office-hours" id="toc-office-hours" class="nav-link" data-scroll-target="#office-hours">Office hours</a></li>
@@ -343,7 +348,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 24, 2026</p>
+      <p class="date">August 27, 2026</p>
     </div>
   </div>
   
@@ -361,15 +366,12 @@ div.csl-indent {
 </header>
 
 
-<section id="the-psychology-of-data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="the-psychology-of-data-visualization">The Psychology of Data Visualization</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="include/img/dall-e-2024-09-19-picture-paints.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19"><img src="include/img/dall-e-2024-09-19-picture-paints.png" class="img-fluid figure-img" style="width:50.0%" alt="ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19"></a></p>
 <figcaption>ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19</figcaption>
 </figure>
 </div>
-</section>
 <section id="themes" class="level2">
 <h2 class="anchored" data-anchor-id="themes">Themes</h2>
 <p>If a picture’s worth a thousand words <span class="citation" data-cites="Wikipedia-contributors2024-du">(<a href="#ref-Wikipedia-contributors2024-du" role="doc-biblioref">Wikipedia contributors, 2024</a>)</span>, what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.</p>
