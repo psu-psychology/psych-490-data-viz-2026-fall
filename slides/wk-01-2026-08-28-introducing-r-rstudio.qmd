@@ -182,6 +182,24 @@ age <- 900
 sqrt(age) # Calculate the square root
 ```
 
+## Under the hood
+
+- Programming languages need to know the *type* of thing you're talking about
+  - Numbers (e.g., 900, or 3.14159, or 1e9)
+  - Character strings ("name", "900")
+  - Object names (`age`, `name`)
+- Can do different things with these
+  - Numbers: add (`+`), subtract, etc.
+  - Strings: concatenate ("a", "b" -> "ab")
+  - Object names: recall the *value*
+  
+## Under the hood
+
+- Data types matter because...
+  - Computers store *everything* in sequences of bits (1s and 0s)
+  - Numbers, strings, names, and datasets, audio, video, images, etc.
+- Types tell computer what operations it can do on the bit sequences
+
 ## Where we're going...
 
 ```{r}
@@ -266,8 +284,9 @@ scatter_data |>
 
 # Work on Exercise 01
 
-## Visit the template
+## Exercise 01 details
 
+- [Assignment](../exercises/ex-01-figs-in-psych-sci.qmd)
 - Visit <https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd>
 
 ## Copy the template text into a new text file
@@ -293,11 +312,11 @@ scatter_data |>
 ## About
 
 This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
-Integrated Development Environment (IDE), version 2026.1.0.392.
+Integrated Development Environment (IDE), version 2026.8.2.200.
 
 The source files are in R and R Markdown, then rendered to HTML using the
 [revealJS](https://revealjs.com) framework.
-The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psy-511-scan-fdns-2026-spring) and served by GitHub pages:
-<https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/>
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
+<https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>
 
 ## References

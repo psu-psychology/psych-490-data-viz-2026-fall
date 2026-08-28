@@ -2353,42 +2353,66 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#announcements",
     "title": "Work session: Introducing R & RStudio",
     "section": "Announcements",
-    "text": "Announcements\n\nExercise 01 due next Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox"
+    "text": "Announcements\n\nExercise 01 due next Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#todays-topics",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#todays-topics",
     "title": "Work session: Introducing R & RStudio",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nTroubleshooting R and RStudio installations\nIntroducing R and RStudio\nExercise 01"
+    "text": "Today’s topics\n\nTroubleshooting R and RStudio installations\nIntroducing R and RStudio\nExercise 01",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#r",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#r",
     "title": "Work session: Introducing R & RStudio",
     "section": "R",
-    "text": "R\n\n\n\nProgramming language\nSet of symbols\n\nsyntax/grammar\nsemantics\n\n“Talk” to your computer\n\n\n\n\n\nhttps://www.r-project.org"
+    "text": "R\n\n\n\nProgramming language\nSet of symbols\n\nsyntax/grammar\nsemantics\n\n“Talk” to your computer\n\n\n\n\n\nhttps://www.r-project.org",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio",
     "title": "Work session: Introducing R & RStudio",
     "section": "RStudio",
-    "text": "RStudio\n\n\n\nAn integrated development environment (IDE) for R\nToolbox for R programmers\nYes, mom, I’m a programmer now"
+    "text": "RStudio\n\n\n\nAn integrated development environment (IDE) for R\nToolbox for R programmers\nYes, mom, I’m a programmer now",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio-1",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio-1",
     "title": "Work session: Introducing R & RStudio",
     "section": "RStudio",
-    "text": "RStudio\n\nConsole\n\nTalk to computer using R\n\nEditor\n\nMake text files\n\nFiles\n\nManage (rename, move, delete) files\n\nEdit arrangement via View/Panes/Pane Layout... menu"
+    "text": "RStudio\n\nConsole\n\nTalk to computer using R\n\nEditor\n\nMake text files\n\nFiles\n\nManage (rename, move, delete) files\n\nEdit arrangement via View/Panes/Pane Layout... menu",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#console",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#console",
     "title": "Work session: Introducing R & RStudio",
     "section": "Console",
-    "text": "Console\n\n\n\nSay something (type)\nPress &lt;enter&gt; or &lt;return&gt; key\nGet an answer\n\n\n\nTry this: type date() and hit &lt;enter&gt;\n\n\n\nCode\ndate()\n\n\n[1] \"Thu Aug 27 10:29:35 2026\""
+    "text": "Console\n\n\n\nSay something (type)\nPress &lt;enter&gt; or &lt;return&gt; key\nGet an answer\n\n\n\nTry this: type date() and hit &lt;enter&gt;\n\n\n\nCode\ndate()\n\n\n[1] \"Fri Aug 28 15:10:21 2026\"",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#visit-the-template",
@@ -2402,14 +2426,22 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#copy-the-template-text-into-a-new-text-file",
     "title": "Work session: Introducing R & RStudio",
     "section": "Copy the template text into a new text file",
-    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd"
+    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#render-the-template",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#render-the-template",
     "title": "Work session: Introducing R & RStudio",
     "section": "Render the template",
-    "text": "Render the template\n\n\n\n\n\n\nFigure 4"
+    "text": "Render the template\n\n\n\n\n\n\nFigure 4",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#wrap-up",
@@ -2423,21 +2455,33 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#next-time",
     "title": "Work session: Introducing R & RStudio",
     "section": "Next time",
-    "text": "Next time\n\nVisualization in government & business"
+    "text": "Next time\n\nVisualization in government & business",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#about",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#about",
     "title": "Work session: Introducing R & RStudio",
     "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.1.0.392.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/"
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#references",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#references",
     "title": "Work session: Introducing R & RStudio",
     "section": "References",
-    "text": "References"
+    "text": "References",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#the-semiotics-of-r",
@@ -2451,14 +2495,22 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r",
     "title": "Work session: Introducing R & RStudio",
     "section": "Semiotics of R",
-    "text": "Semiotics of R\n\n\n\nThings\n\nNames\nValues\n\n\n\n\nThings\n\nname\nage\n\nValues\n\nname: “Yoda”\nage: “900 years”1"
+    "text": "Semiotics of R\n\n\n\nThings\n\nNames\nValues\n\n\n\n\nThings\n\nname\nage\n\nValues\n\nname: “Yoda”\nage: “900 years”1",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r-1",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r-1",
     "title": "Work session: Introducing R & RStudio",
     "section": "Semiotics of R",
-    "text": "Semiotics of R\n\n\n\nCommands/functions\n\n\n\nCommand/function\n\ndate()\nname &lt;- \"Yoda\"\nage &lt;- 900\""
+    "text": "Semiotics of R\n\n\n\nCommands/functions\n\n\n\nCommand/function\n\ndate()\nname &lt;- \"Yoda\"\nage &lt;- 900\"",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#live-data-slide",
@@ -2472,42 +2524,66 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#footnotes",
     "title": "Work session: Introducing R & RStudio",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://share.google/aimode/m4uVbqawZD0Gv0ZkS"
+    "text": "Footnotes\n\n\nhttps://share.google/aimode/m4uVbqawZD0Gv0ZkS",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules",
     "title": "Work session: Introducing R & RStudio",
     "section": "Grammatical rules",
-    "text": "Grammatical rules\n\nNames\n\nLetters, underscores, numbers\nNo quotation marks\n\nValues\n\nCharacter strings (inside quotation marks)\nNumeric values (no quotation marks)"
+    "text": "Grammatical rules\n\nNames\n\nLetters, underscores, numbers\nNo quotation marks\n\nValues\n\nCharacter strings (inside quotation marks)\nNumeric values (no quotation marks)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules-1",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules-1",
     "title": "Work session: Introducing R & RStudio",
     "section": "Grammatical rules",
-    "text": "Grammatical rules\n\n\n\nAssignment: &lt;-\n\nGive some value a name\n\nCommands\n\nCommand name plus parentheses (date())\nTell me the value of a named thing (age)"
+    "text": "Grammatical rules\n\n\n\nAssignment: &lt;-\n\nGive some value a name\n\nCommands\n\nCommand name plus parentheses (date())\nTell me the value of a named thing (age)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn",
     "title": "Work session: Introducing R & RStudio",
     "section": "Your turn…",
-    "text": "Your turn…\n\nTry changing the code below to name &lt;- Yoda. What happens?\nChange name &lt;- \"Luke\" or age to 100 What happens?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Your turn…\n\nTry changing the code below to name &lt;- Yoda. What happens?\nChange name &lt;- \"Luke\" or age to 100 What happens?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn-1",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn-1",
     "title": "Work session: Introducing R & RStudio",
     "section": "Your turn…",
-    "text": "Your turn…\n\nTry changing the code below to age &lt;- \"900\". What happens?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Your turn…\n\nTry changing the code below to age &lt;- \"900\". What happens?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#where-were-going",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#where-were-going",
     "title": "Work session: Introducing R & RStudio",
     "section": "Where we’re going…",
-    "text": "Where we’re going…\n\n\n\n\n\n\n\n\nFigure 2: A histogram of a random, normally distributed distribution with mean 0 and standard deviation of 1."
+    "text": "Where we’re going…\n\n\n\n\n\n\n\n\nFigure 2: A histogram of a random, normally distributed distribution with mean 0 and standard deviation of 1.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#section",
@@ -2521,27 +2597,105 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#observation",
     "title": "Work session: Introducing R & RStudio",
     "section": "Observation",
-    "text": "Observation\n\n\n\n\n\n\nThe discipline (and joy) of programming\n\n\n\nComputers are literal to an extraordinary extent.\nThey do exactly what you tell them to do.\nProgramming forces you to think in a disciplined, step-by-step fashion.\nIf you get frustrated, take a break.\nIf you succeed, celebrate!"
+    "text": "Observation\n\n\n\n\n\n\nThe discipline (and joy) of programming\n\n\n\nComputers are literal to an extraordinary extent.\nThey do exactly what you tell them to do.\nProgramming forces you to think in a disciplined, step-by-step fashion.\nIf you get frustrated, take a break.\nIf you succeed, celebrate!",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#code-to-generate-this-figure",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#code-to-generate-this-figure",
     "title": "Work session: Introducing R & RStudio",
     "section": "Code to generate this figure",
-    "text": "Code to generate this figure\n# Generate a random normal distribution using the `rnorm()` function.\n# Assign the distribution a name: `x_norm` so I can use it later.\n\nx_norm &lt;- rnorm(n = 100, mean = 0, sd = 1)\n\n# \"Pipe\" `x_norm` to `ggplot2()` to make a histogram.\n\nx_norm |&gt;\n  as.data.frame() |&gt;          # ggplot requires a tabular data frame\n  ggplot() +                  #  as input\n  aes(x = x_norm) +\n  geom_histogram()"
+    "text": "Code to generate this figure\n# Generate a random normal distribution using the `rnorm()` function.\n# Assign the distribution a name: `x_norm` so I can use it later.\n\nx_norm &lt;- rnorm(n = 100, mean = 0, sd = 1)\n\n# \"Pipe\" `x_norm` to `ggplot2()` to make a histogram.\n\nx_norm |&gt;\n  as.data.frame() |&gt;          # ggplot requires a tabular data frame\n  ggplot() +                  #  as input\n  aes(x = x_norm) +\n  geom_histogram()",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun",
     "title": "Work session: Introducing R & RStudio",
     "section": "Extra fun",
-    "text": "Extra fun\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\n\nscatter_data &lt;- data.frame(x_norm = rnorm(100, 0, 1),\n                           y_norm = rnorm(100, 0, 1))\n\nscatter_data |&gt;\n  ggplot() +\n  aes(x = x_norm, y = y_norm) +\n  geom_point() +\n  geom_smooth() +\n  ggtitle(\"My first scatterplot!\")"
+    "text": "Extra fun\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\n\nscatter_data &lt;- data.frame(x_norm = rnorm(100, 0, 1),\n                           y_norm = rnorm(100, 0, 1))\n\nscatter_data |&gt;\n  ggplot() +\n  aes(x = x_norm, y = y_norm) +\n  geom_point() +\n  geom_smooth() +\n  ggtitle(\"My first scatterplot!\")",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   },
   {
     "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun-1",
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun-1",
     "title": "Work session: Introducing R & RStudio",
     "section": "Extra fun",
-    "text": "Extra fun\n\n\n\n\n\n\n\n\nFigure 3: A scatterplot of two random, normal variables with a best-fitting smooth line. Not very interesting now, but just you wait."
+    "text": "Extra fun\n\n\n\n\n\n\n\n\nFigure 3: A scatterplot of two random, normal variables with a best-fitting smooth line. Not very interesting now, but just you wait.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-26-semiotics-data-viz.html#about",
+    "href": "slides/wk-01-2026-08-26-semiotics-data-viz.html#about",
+    "title": "Semiotics of data visualization",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Wed Aug 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-24-course-intro.html#about",
+    "href": "slides/wk-01-2026-08-24-course-intro.html#about",
+    "title": "The Psychology of Data Visualization",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Mon Aug 24"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#about",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#about",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nProgramming languages need to know the type of thing you’re talking about\n\nNumbers (e.g., 900, or 3.14159, or 1e9)\nCharacter strings (“name”, “900”)\nObject names (age, name)\n\nCan do different things with these\n\nNumbers: add (+), subtract, etc.\nStrings: concatenate (“a”, “b” -&gt; “ab”)\nObject names: recall the value",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nData types matter because…\n\nComputers store everything in sequences of bits (1s and 0s)\nNumbers, strings, names, and datasets, audio, video, images, etc.\n\nTypes tell computer what operations it can do on the bit sequences",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#exercise-01-details",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#exercise-01-details",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Exercise 01 details",
+    "text": "Exercise 01 details\n\nAssignment\nVisit https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
   }
 ]

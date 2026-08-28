@@ -199,19 +199,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -223,6 +210,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
     background-image: none;
   }
   </style>
@@ -2232,7 +2232,7 @@ Figure&nbsp;1
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">date</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Thu Aug 27 10:29:35 2026"</code></pre>
+<pre><code>[1] "Fri Aug 28 15:10:21 2026"</code></pre>
 </div>
 </div>
 </div></div>
@@ -2332,6 +2332,34 @@ Figure&nbsp;1
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the hood</h2>
+<ul>
+<li>Programming languages need to know the <em>type</em> of thing you’re talking about
+<ul>
+<li>Numbers (e.g., 900, or 3.14159, or 1e9)</li>
+<li>Character strings (“name”, “900”)</li>
+<li>Object names (<code>age</code>, <code>name</code>)</li>
+</ul></li>
+<li>Can do different things with these
+<ul>
+<li>Numbers: add (<code>+</code>), subtract, etc.</li>
+<li>Strings: concatenate (“a”, “b” -&gt; “ab”)</li>
+<li>Object names: recall the <em>value</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="under-the-hood-1" class="slide level2">
+<h2>Under the hood</h2>
+<ul>
+<li>Data types matter because…
+<ul>
+<li>Computers store <em>everything</em> in sequences of bits (1s and 0s)</li>
+<li>Numbers, strings, names, and datasets, audio, video, images, etc.</li>
+</ul></li>
+<li>Types tell computer what operations it can do on the bit sequences</li>
+</ul>
+</section>
 <section id="where-were-going" class="slide level2">
 <h2>Where we’re going…</h2>
 <div class="cell">
@@ -2423,9 +2451,10 @@ Figure&nbsp;3: A scatterplot of two random, normal variables with a best-fitting
 <h1>Work on Exercise 01</h1>
 
 </section>
-<section id="visit-the-template" class="slide level2">
-<h2>Visit the template</h2>
+<section id="exercise-01-details" class="slide level2">
+<h2>Exercise 01 details</h2>
 <ul>
+<li><a href="../exercises/ex-01-figs-in-psych-sci.html">Assignment</a></li>
 <li>Visit <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd" class="uri">https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd</a></li>
 </ul>
 </section>
@@ -2470,8 +2499,8 @@ Figure&nbsp;4
 </section>
 <section id="about" class="slide level2">
 <h2>About</h2>
-<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.1.0.392.</p>
-<p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psy-511-scan-fdns-2026-spring">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/" class="uri">https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/</a></p>
+<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.8.2.200.</p>
+<p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/" class="uri">https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/</a></p>
 </section>
 <section id="references" class="slide level2">
 <h2>References</h2>
