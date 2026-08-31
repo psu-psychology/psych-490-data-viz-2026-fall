@@ -51,7 +51,7 @@
 - *Read* 
   - @Gelman2013-he (recommended), follow citation link to online version or [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922116).
 - [*Assigned*]{.green_assigned}: [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) 
-- [Slides](slides/slides/wk-02-2026-09-02-art-sports-journ.qmd)
+- [Slides](slides/wk-02-2026-09-02-art-sports-journ.qmd)
 - [Results](404.qmd) from [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd)
 
 ### Fri, Sep 04 {-}
@@ -59,7 +59,7 @@
 *Work Session: Exercise 02 and Quarto*
 
 - {{< fa calendar >}} *Due* [Exercise 01](exercises/ex-01-figs-in-psych-sci.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448425)
-- [Slides](404.qmd)
+- [Slides](slides/wk-02-2026-09-04-introducing-quarto.amd)
 
 ## Week 03 {- #week-03}
 

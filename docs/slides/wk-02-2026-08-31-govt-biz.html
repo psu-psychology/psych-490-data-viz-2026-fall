@@ -152,19 +152,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-answer.callout {
-    border-left-color: blue;
-  }
-  .reveal div.callout-answer.callout-style-default .callout-title {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\f00c' !important;
-    background-image: none;
-  }
   .reveal div.callout-question.callout {
     border-left-color: pink;
   }
@@ -176,6 +163,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\3f' !important;
+    background-image: none;
+  }
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
     background-image: none;
   }
   </style>
@@ -218,10 +218,12 @@ Figure&nbsp;1: <span class="citation" data-cites="Denton2025-bu">Denton et al. (
 </figure>
 </div>
 </section>
-<section id="last-time" class="slide level2">
-<h2>Last time…</h2>
+<section id="recently" class="slide level2">
+<h2>Recently…</h2>
 <ul>
 <li><em>Semiotics of data visualization</em></li>
+<li><em>Introduction to R &amp; RStudio</em></li>
+<li><em>Exercise 01 - Visualization in Psychological Science</em></li>
 </ul>
 </section>
 <section id="symbol-or-thing-symbolized" class="slide level2">
@@ -231,10 +233,10 @@ Figure&nbsp;1: <span class="citation" data-cites="Denton2025-bu">Denton et al. (
 <div id="fig-central-pa-map" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-central-pa-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/central-pa-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2: "><img data-src="../include/img/central-pa-map.png" id="fig-central-pa-map"></a>
+<a href="../include/img/central-pa-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2: Map view"><img data-src="../include/img/central-pa-map.png"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-central-pa-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-central-pa-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Map view
 </figcaption>
 </figure>
 </div>
@@ -242,19 +244,42 @@ Figure&nbsp;2
 <div id="fig-central-pa-satellite" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-central-pa-satellite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/central-pa-satellite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: "><img data-src="../include/img/central-pa-satellite.png" id="fig-central-pa-satellite"></a>
+<a href="../include/img/central-pa-satellite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: Satellite view"><img data-src="../include/img/central-pa-satellite.png"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-central-pa-satellite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-central-pa-satellite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Satellite view
 </figcaption>
 </figure>
 </div>
 </div></div>
+<div class="fragment">
+<div class="callout callout-answer callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Symbol</strong></p>
+</div>
+<div class="callout-content">
+<p>Why?</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="check-in-on-exercise-01" class="slide level2">
+<h2>Check-in on Exercise 01</h2>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?usp=sharing">Link</a> to spreadsheet</li>
+<li>Preliminary <a href="../supplemental/psych-sci-figs.html">results</a></li>
+</ul>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <ul>
 <li><em>Visualization in government &amp; business</em></li>
+<li>Work session</li>
 </ul>
 </section>
 <section id="goals" class="slide level2">
@@ -300,7 +325,7 @@ Figure&nbsp;3
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Why do governments visualize data?</strong></p>
+<p><strong>Why do governments collect &amp; visualize data?</strong></p>
 </div>
 <div class="callout-content">
 
@@ -314,7 +339,7 @@ Figure&nbsp;3
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>What data <em>should</em> governments visualize?</strong></p>
+<p><strong>What data <em>should</em> governments collect &amp; visualize?</strong></p>
 </div>
 <div class="callout-content">
 
@@ -344,6 +369,10 @@ Figure&nbsp;3
 <ul>
 <li><a href="https://www.gapminder.org/dollar-street">Dollar Street</a></li>
 </ul></li>
+<li><a href="https://usafacts.org">USAFacts</a>
+<ul>
+<li>Founded by former Microsoft Corporation CEO Steve Ballmer</li>
+</ul></li>
 </ul>
 </section>
 <section id="your-turn-1" class="slide level2">
@@ -354,10 +383,25 @@ Figure&nbsp;3
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Why do businesses visualize data?</strong></p>
+<p><strong>Why do for-profit and not-for-profit businesses visualize data?</strong></p>
 </div>
 <div class="callout-content">
 
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>How do we evaluate whether data collected and reported by governments, for-profit, or not-for-profit organizations are <em>credible</em> and <em>reliable</em>?</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
 </div>
 </div>
 </div>
@@ -369,9 +413,24 @@ Figure&nbsp;3
 </section>
 <section id="exercise-01" class="slide level2">
 <h2>Exercise 01</h2>
+<ul>
+<li>Write-up due this Friday</li>
+</ul>
 </section>
-<section id="installing-software" class="slide level2">
-<h2>Installing software</h2>
+<section id="exercise-02" class="slide level2">
+<h2>Exercise 02</h2>
+<ul>
+<li>Get a jump start</li>
+<li><a href="exercises/ex-02-data-viz-outside-psych.qmd">Link</a> to assignment</li>
+<li>Due on <a href="../schedule.html#fri-sep-11">Friday, September 11</a>.</li>
+</ul>
+</section>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
+<ul>
+<li>See slides for <a href="../slides/wk-02-2026-09-04-introducing-quarto.html">this Friday’s class</a></li>
+<li>Also Open Scholarship Bootcamp 2026 <a href="https://penn-state-open-science.github.io/bootcamp-2026-quarto-I/#/title-slide">talk 1</a>, and <a href="https://penn-state-open-science.github.io/bootcamp-2026-quarto-II/#/title-slide">talk 2</a></li>
+</ul>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -400,6 +459,11 @@ Figure&nbsp;3
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
+</section>
+<section id="about" class="slide level2">
+<h2>About</h2>
+<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.8.2.200.</p>
+<p>The source files are in R and Quarto, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/" class="uri">https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/</a></p>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>

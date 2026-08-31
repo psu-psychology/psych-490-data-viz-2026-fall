@@ -14,24 +14,40 @@ format: revealjs
 @Denton2025-bu
 :::
 
-## Last time...
+## Recently...
 
 - *Semiotics of data visualization*
+- *Introduction to R & RStudio*
+- *Exercise 01 - Visualization in Psychological Science*
 
 ## Symbol or thing symbolized?
 
 :::: {.columns}
 ::: {.column width=50%}
-![](../include/img/central-pa-map.png){#fig-central-pa-map}
+![Map view](../include/img/central-pa-map.png){#fig-central-pa-map}
 :::
 ::: {.column width=50%}
-![](../include/img/central-pa-satellite.png){#fig-central-pa-satellite}
+![Satellite view](../include/img/central-pa-satellite.png){#fig-central-pa-satellite}
 :::
 ::::
+
+::: {.fragment}
+::: {.answer}
+## Symbol
+
+Why?
+:::
+:::
+
+## Check-in on Exercise 01
+
+- [Link](https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?usp=sharing) to spreadsheet
+- Preliminary [results](../supplemental/psych-sci-figs.qmd) 
 
 ## Today
 
 - *Visualization in government & business*
+- Work session
 
 ## Goals
 
@@ -59,12 +75,12 @@ https://data.pa.gov
 ## Your turn...
 
 ::: {.question}
-## Why do governments visualize data?
+## Why do governments collect & visualize data?
 :::
 
 ::: {.fragment}
 ::: {.question}
-## What data *should* governments visualize?
+## What data *should* governments collect & visualize?
 :::
 :::
 
@@ -81,18 +97,37 @@ https://data.pa.gov
 - [Our World in Data](https://ourworldindata.org)
 - [Gapminder](https://www.gapminder.org/)
   - [Dollar Street](https://www.gapminder.org/dollar-street)
+- [USAFacts](https://usafacts.org)
+  - Founded by former Microsoft Corporation CEO Steve Ballmer
 
 ## Your turn...
 
 ::: {.question}
-## Why do businesses visualize data?
+## Why do for-profit and not-for-profit businesses visualize data?
+:::
+
+::: {.fragment}
+::: {.question}
+## How do we evaluate whether data collected and reported by governments, for-profit, or not-for-profit organizations are *credible* and *reliable*?
+:::
 :::
 
 # Work session
 
 ## Exercise 01
 
-## Installing software
+- Write-up due this Friday
+
+## Exercise 02
+
+- Get a jump start
+- [Link](exercises/ex-02-data-viz-outside-psych.qmd) to assignment
+- Due on [Friday, September 11](../schedule.qmd#fri-sep-11). 
+
+## Quarto
+
+- See slides for [this Friday's class](wk-02-2026-09-04-introducing-quarto.qmd)
+- Also Open Scholarship Bootcamp 2026 [talk 1](https://penn-state-open-science.github.io/bootcamp-2026-quarto-I/#/title-slide), and [talk 2](https://penn-state-open-science.github.io/bootcamp-2026-quarto-II/#/title-slide)
 
 # Wrap-up
 
@@ -115,7 +150,7 @@ https://data.pa.gov
 This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
 Integrated Development Environment (IDE), version 2026.8.2.200.
 
-The source files are in R and R Markdown, then rendered to HTML using the
+The source files are in R and Quarto, then rendered to HTML using the
 [revealJS](https://revealjs.com) framework.
 The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
 <https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>

@@ -8,15 +8,15 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490.007 – Data viz in government &amp; business</title>
+  <title>PSYCH 490.007 – Work session: Introducing Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -37,26 +37,7 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -152,19 +133,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -178,6 +146,19 @@
     content: '\f00c' !important;
     background-image: none;
   }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
+    background-image: none;
+  }
   </style>
 </head>
 <body class="quarto-light">
@@ -185,8 +166,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data viz in government &amp; business</h1>
-  <p class="subtitle">2025-08-31</p>
+  <h1 class="title">Work session: Introducing Quarto</h1>
+  <p class="subtitle">PSY 490.007 Fall 2026</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -205,104 +186,36 @@ Rick Gilmore
 <h1>Preliminaries</h1>
 
 </section>
-<section id="video-as-data-viz" class="slide level2">
-<h2>Video as data viz</h2>
-<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="../include/vid/41561_2024_1612_MOESM2_ESM.mp4"></video>
-<p><span class="citation" data-cites="Denton2025-bu">Denton et al. (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
-</section>
-<section id="last-time" class="slide level2">
-<h2>Last time…</h2>
+<section id="announcements" class="slide level2">
+<h2>Announcements</h2>
 <ul>
-<li><em>Semiotics of data visualization</em></li>
+<li>Exercise 01 due next Friday, September 4, 2026 (midnight).</li>
+<li>Submit Quarto document to <a href="https://psu.instructure.com/courses/2484925/assignments/18448425"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a></li>
 </ul>
 </section>
-<section id="symbol-or-thing-symbolized" class="slide level2">
-<h2>Symbol or thing symbolized?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div id="fig-central-pa-map" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-central-pa-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/central-pa-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img data-src="../include/img/central-pa-map.png" id="fig-central-pa-map"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-central-pa-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div id="fig-central-pa-satellite" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-central-pa-satellite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/central-pa-satellite.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: "><img data-src="../include/img/central-pa-satellite.png" id="fig-central-pa-satellite"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-central-pa-satellite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
-</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="today" class="slide level2">
-<h2>Today</h2>
+<section id="todays-topics" class="slide level2">
+<h2>Today’s topics</h2>
 <ul>
-<li><em>Visualization in government &amp; business</em></li>
+<li>Warm-up</li>
+<li>Troubleshooting R and RStudio installations</li>
+<li>Introducing Quarto</li>
+<li>Using Quarto for Exercise 01</li>
 </ul>
-</section>
-<section id="goals" class="slide level2">
-<h2>Goals</h2>
-<ul>
-<li>Explore the landscape</li>
-<li>What types of visualizations?</li>
-<li>What types of data?</li>
-<li>Why visualize?</li>
-</ul>
+</section></section>
+<section>
+<section id="warm-up" class="title-slide slide level1 center">
+<h1>Warm-up</h1>
+
 </section>
 <section class="slide level2">
 
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="include/fig/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" width="960"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="section" class="slide level2" data-background-iframe="https://docs.google.com/spreadsheets/d/1rLiLBRbDQfInauOUBPNwGYq-0VOjskGNY7Wq2QRTTbc/edit?gid=0#gid=0">
-<h2></h2>
-</section></section>
-<section>
-<section id="data-visualization-in-government" class="title-slide slide level1 center">
-<h1>Data visualization in government</h1>
-
-</section>
-<section id="what-data-do-governments-visualize" class="slide level2">
-<h2>What data do governments visualize</h2>
-<ul>
-<li>What data are collected?</li>
-<li>Primary sources
-<ul>
-<li><a href="https://data.census.gov">Bureau of the Census</a></li>
-<li><a href="https://data.gov">Data.gov</a></li>
-<li><a href="https://data.pa.gov">Open Data PA</a>: https://data.pa.gov</li>
-</ul></li>
-<li>Secondary sources
-<ul>
-<li><a href="https://datausa.io/profile/geo/state-college-pa?redirect=true" class="uri">https://datausa.io/profile/geo/state-college-pa?redirect=true</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn…</h2>
 <div class="callout callout-question callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Why do governments visualize data?</strong></p>
+<p><strong>What’s a widely recognized sign system in (American) football?</strong></p>
 </div>
 <div class="callout-content">
 
@@ -310,85 +223,236 @@ Figure&nbsp;2
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout callout-answer callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>What data <em>should</em> governments visualize?</strong></p>
+<p><strong>Answer</strong></p>
 </div>
 <div class="callout-content">
-
+<div id="fig-football-signals" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-football-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="283" height="504" src="https://www.youtube.com/embed/slroyCXa9pw" title="Basic Referee signals you need to know #football #football101 #nflsports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-football-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section></section>
+<section id="troubleshooting-r-and-rstudio-installations" class="title-slide slide level1 center">
+<h1>Troubleshooting R and RStudio installations</h1>
+
+</section>
+
 <section>
-<section id="data-visualization-in-business" class="title-slide slide level1 center">
-<h1>Data visualization in business</h1>
+<section id="introducing-quarto" class="title-slide slide level1 center">
+<h1>Introducing Quarto</h1>
 
-</section>
-<section id="what-data-do-not-for-profit-businesses-visualize" class="slide level2">
-<h2>What data do not-for-profit businesses visualize?</h2>
-<ul>
-<li><a href="https://opair.psu.edu/institutional-research/resources/">PSU Office of Planning, Assessment, and Institutional Research</a></li>
-<li><a href="https://ourworldindata.org">Our World in Data</a></li>
-<li><a href="https://www.gapminder.org/">Gapminder</a>
-<ul>
-<li><a href="https://www.gapminder.org/dollar-street">Dollar Street</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="your-turn-1" class="slide level2">
-<h2>Your turn…</h2>
-<div class="callout callout-question callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Why do businesses visualize data?</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="work-session" class="title-slide slide level1 center">
-<h1>Work session</h1>
-
-</section>
-<section id="exercise-01" class="slide level2">
-<h2>Exercise 01</h2>
 </section>
 <section id="installing-quarto" class="slide level2">
 <h2>Installing Quarto</h2>
+<div id="fig-installing-quarto" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-installing-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/installing-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2: https://quarto.org/docs/get-started/"><img data-src="../include/img/installing-quarto.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-installing-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="launch-rstudio" class="slide level2">
+<h2>Launch RStudio</h2>
+</section>
+<section id="create-new-project" class="slide level2">
+<h2>Create New Project</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div id="fig-file-menu-new-project" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-file-menu-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/file-menu.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: From File Menu"><img data-src="../include/img/file-menu.png" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-file-menu-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: From File Menu
+</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div id="fig-new-project-project-manager" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-new-project-project-manager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/new-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;4: From Project Manager Tab"><img data-src="../include/img/new-project.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-project-manager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: From Project Manager Tab
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div id="fig-create-project-new-directory" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-create-project-new-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/create-project-new-directory.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;5: Create project in a new directory"><img data-src="../include/img/create-project-new-directory.png" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-new-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Create project in a new directory
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="fig-create-project-type-quarto" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-create-project-type-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/create-project-type-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;6: Project Type: Quarto Project"><img data-src="../include/img/create-project-type-quarto.png" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-type-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Project Type: Quarto Project
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div id="fig-create-project-quarto-name" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-create-project-quarto-name-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/create-project-quarto-name.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Create Quarto Project"><img data-src="../include/img/create-project-quarto-name.png" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-quarto-name-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Create Quarto Project
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Learn from expert practices</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Establish a clear file/project scheme
+<ul>
+<li>Stick with it</li>
+<li>I use: <code>~/rrr/psych-490-exercise-01</code></li>
+<li>Why? Someone who knows more than I do suggested it.</li>
+</ul></li>
+<li>No spaces in files and folder/directory names</li>
+<li>Put info in file/folder name: <code>psych-490-exercise-01</code></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="explore-project-and-document" class="slide level2">
+<h2>Explore project (and document)</h2>
+<p><a href="../include/img/new-quarto-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="../include/img/new-quarto-project.png"></a></p>
+</section>
+<section id="anatomy-of-quarto-document" class="slide level2">
+<h2>Anatomy of Quarto document</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Text, has <code>.qmd</code> extension</li>
+<li>Metadata<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a> information (b/w pairs of <code>---</code>)</li>
+<li>Section headers
+<ul>
+<li><code>##</code> means a 2nd level header</li>
+</ul></li>
+<li>Code chunks!</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div id="fig-exercise-01-file" class="quarto-float quarto-figure quarto-figure-center" data-align="right">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-exercise-01-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk."><img data-src="../include/img/exercise-01-detail.png" data-align="right"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exercise-01-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk.
+</figcaption>
+</figure>
+</div>
+</div></div>
+<aside></aside></section>
+<section id="render-the-file" class="slide level2">
+<h2><em>Render</em> the file</h2>
+<ul>
+<li>Turn the text file into something else
+<ul>
+<li>Webpage (HTML)</li>
+<li>Document (PDF, Word)</li>
+<li>Slides</li>
+</ul></li>
+<li>Default is webpage (HTML)</li>
+<li>I recommend checking “Render on Save”</li>
+</ul>
+</section>
+<section id="rendered-file" class="slide level2">
+<h2>Rendered file</h2>
+<p><a href="../include/img/rendered-exercise-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="../include/img/rendered-exercise-01.png"></a></p>
 </section></section>
 <section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap-up</h1>
+<section id="work-on-exercise-01" class="title-slide slide level1 center">
+<h1>Work on Exercise 01</h1>
 
 </section>
-<section id="main-points" class="slide level2">
-<h2>Main points</h2>
+<section id="visit-the-template" class="slide level2">
+<h2>Visit the template</h2>
 <ul>
-<li>Governments collect &amp; report on lots of data</li>
-<li>Non-profits collect varied types of data, and many visualize it</li>
-<li>For-profit business entities collect a ton of data, but most visualizations remain private</li>
+<li>Visit <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd" class="uri">https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd</a></li>
 </ul>
+</section>
+<section id="copy-the-template-text-into-a-new-text-file" class="slide level2">
+<h2>Copy the template text into a new text file</h2>
+<ul>
+<li>Click inside the text window.</li>
+<li>Select the text (highlight it)</li>
+<li>Switch to RStudio, create a new <em>text</em> file</li>
+<li>Paste the text</li>
+<li>Save the file as <code>exercise-01-template.qmd</code></li>
+</ul>
+</section>
+<section id="render-the-template" class="slide level2">
+<h2>Render the template</h2>
+<div id="fig-rendered-ex-01-template" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-rendered-ex-01-template-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/rendered-ex-01-template.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: "><img data-src="../include/img/rendered-ex-01-template.png" id="fig-rendered-ex-01-template"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rendered-ex-01-template-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="wrap-up" class="slide level2">
+<h2>Wrap-up</h2>
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li><em>Visualization in art, sports, and journalism</em></li>
-<li><em>Read</em>
-<ul>
-<li><span class="citation" data-cites="Gelman2013-he">Gelman and Unwin (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> (recommended), follow citation link to online version or <a href="https://psu.instructure.com/courses/2484925/files?preview=193922116">PDF on Canvas</a>.</li>
-</ul></li>
+<li><em>Visualization in government &amp; business</em></li>
 </ul>
 </section></section>
 <section>
@@ -396,19 +460,22 @@ Figure&nbsp;2
 <h1>Resources</h1>
 
 </section>
-<section id="references" class="slide level2 smaller scrollable">
+<section id="about" class="slide level2">
+<h2>About</h2>
+<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.1.0.392.</p>
+<p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psy-511-scan-fdns-2026-spring">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/" class="uri">https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/</a></p>
+</section>
+<section id="references" class="slide level2">
 <h2>References</h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Denton2025-bu" class="csl-entry" role="listitem">
-Denton, C Adeene, Erik Asphaug, Alexandre Emsenhuber, and Robert Melikyan. 2025. <span>“Capture of an Ancient Charon Around Pluto.”</span> <em>Nature Geoscience</em> 18 (January): 37–43. <a href="https://doi.org/10.1038/s41561-024-01612-0">https://doi.org/10.1038/s41561-024-01612-0</a>.
-</div>
-<div id="ref-Gelman2013-he" class="csl-entry" role="listitem">
-Gelman, Andrew, and Antony Unwin. 2013. <span>“Infovis and Statistical Graphics: Different Goals, Different Looks.”</span> <em>Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America</em> 22 (January): 2–28. <a href="https://doi.org/10.1080/10618600.2012.761137">https://doi.org/10.1080/10618600.2012.761137</a>.
-</div>
-</div>
 </section></section>
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Data about data.</p></li>
+</ol>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>
@@ -627,44 +694,6 @@ Gelman, Andrew, and Antony Unwin. 2013. <span>“Infovis and Statistical Graphic
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -835,7 +864,6 @@ Gelman, Andrew, and Antony Unwin. 2013. <span>“Infovis and Statistical Graphic
         }
       });
       </script>
-    <script>videojs(video_shortcode_videojs_video1);</script>
     <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
     (function() {
       let previousOnload = window.onload;

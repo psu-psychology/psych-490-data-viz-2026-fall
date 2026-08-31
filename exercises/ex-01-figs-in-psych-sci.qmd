@@ -84,7 +84,10 @@ Your data to the shared Google Spreadsheet: <https://docs.google.com/spreadsheet
 
 Students who want this submission to count for one of their four (4) *required* exercises should submit the following:
 
-- A 5 paragraph write-up using the Quarto [template](ex-01-template.qmd) where you describe three (3) figures your group found, focusing on these questions:
+- A 5 paragraph (introduction, 3-paragraph body, conclusion) write-up.
+  - You may use your favorite Word processing program (e.g., Microsoft Word or Google Docs), OR
+  - You may use the Quarto [template](ex-01-template.qmd) 
+- Describe three (3) figures your group found, focusing on these questions:
     - What graphic elements of the visualization map to which aspects of the data?
     - What prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?
     - Why is the source presenting these data?
@@ -101,11 +104,10 @@ Students who want this submission to count for one of their four (4) *required* 
 
 3. The best submissions require *reading* the papers or websites where the figures are drawn from and provide helpful information about what the figures were depicting.
 
-4. Even though we are using Quarto to generate the final document, the best submissions will adhere to the structure of the APA paper format for the *Commentary* section. Here is a [sample template](https://docs.google.com/document/d/1gkQKBTc7yW03VAndEtX6loWjm7BAmmhO/edit).
+4. If you use the Quarto template to generate the final document, the best submissions will adhere to the structure of the APA paper format for the *Commentary* section.
   
-<!-- ::: {.callout-important} -->
-<!-- ## APA template -->
+::: {.callout-important}
+## American Psychological Association (APA) template
 
-<!-- This [template](https://docs.google.com/document/d/1gkQKBTc7yW03VAndEtX6loWjm7BAmmhO/edit) document  may be helpful. -->
-
-<!-- ::: -->
+This [template](https://docs.google.com/document/d/1cv_MjQVKnGc9sbaYiOUna2155jMEvUxACwyDax-XYWI/edit?tab=t.0) document  may be helpful.
+:::

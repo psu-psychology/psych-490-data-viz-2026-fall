@@ -30,6 +30,12 @@ website:
         href: slides/wk-01-2026-08-26-semiotics-data-viz.qmd
       - text: "Wk 01 • Fri Aug 28"
         href: slides/wk-01-2026-08-28-introducing-r-rstudio.qmd
+      - text: "Wk 02 • Mon Aug 31"
+        href: slides/wk-02-2026-08-31-govt-biz.qmd
+      - text: "Wk 02 • Wed Sep 02"
+        href: slides/wk-02-2026-09-02-art-sports-journ.qmd
+      - text: "Wk 02 • Fri Sep 04"
+        href: slides/wk-02-2026-09-04-introducing-quarto.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd
@@ -42,6 +48,9 @@ website:
     - section: Tutorials
       contents:
         - tutorials/tutorial-install-r-rstudio.qmd
+    - section: Supplemental
+      contents:
+        - supplemental/psych-sci-figs.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
   page-footer:
