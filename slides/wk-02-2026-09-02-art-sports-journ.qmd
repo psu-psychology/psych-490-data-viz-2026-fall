@@ -102,6 +102,10 @@ format: revealjs
 
 # Data visualization in journalism
 
+## Access to U.S. newspapers
+
+- <https://guides.libraries.psu.edu/newspapers/direct>
+
 ---
 
 ![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig1.png){#fig-vaccination-nytimes width="60%"}
