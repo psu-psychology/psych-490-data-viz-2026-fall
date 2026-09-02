@@ -32,6 +32,9 @@ format: revealjs
 ## Today
 
 - *Visualization in art, sports, & journalism*
+- Work session
+  - [Exercise 01](../exercises/ex-01-figs-in-psych-sci.qmd)
+  - [Exercise 02](../exercises/ex-02-data-viz-outside-psych.qmd)
 
 ## Goals
 
@@ -101,10 +104,11 @@ format: revealjs
 
 ---
 
-![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig1.png)
+![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig1.png){#fig-vaccination-nytimes width="60%"}
+
 ---
 
-![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig2.png)
+![@Paris2025-lf](../include/img/paris-nyt-vax-2025-01-13-fig2.png){#fig-change-in-vax-rates width="40%"}
 
 ## Data journalism
 
@@ -113,15 +117,20 @@ format: revealjs
 
 ---
 
-![https://www.foxnews.com/search-results/search 'data'](../include/img/fox-news-search-data.png)
+![https://www.foxnews.com/search-results/search#q=data](../include/img/fox-news-search-term-data.png){#fig-fox-news-data width="75%"}
 
 ---
 
-![https://www.cnn.com/search?q=data](../include/img/cnn-search-data.png)
+![https://www.cnn.com/search?q=data](../include/img/cnn-search-term-data.png){#fig-cnn-data width="60%"}
 
 ## The Washington Post
 
-![@Van-Dam2022-mr](../include/img/wapo-dept-data.png)
+![@Van-Dam2022-mr](../include/img/wapo-dept-data.png){#fig-dept-of-data width="60%"}
+
+## {.scrollable}
+
+![https://www.washingtonpost.com/people/andrew-van-dam/](../include/img/wash-post-dept-of-data-van-dam.png){#fig-andrew-van-dam}
+
 
 ---
 
@@ -131,11 +140,11 @@ format: revealjs
 
 ## Accuweather.com
 
-![https://www.accuweather.com/en/us/state-college/16801/weather-forecast/335315?current=true](../include/img/accuweather.png)
+![https://www.accuweather.com/en/us/state-college/16801/weather-forecast/335315?current=true](../include/img/accuweather.png){#fig-accuweather width="60%"}
 
 ## Knowable Magazine
 
-![https://knowablemagazine.org/](../include/img/knowable-magazine.png)
+![<https://knowablemagazine.org/>](../include/img/knowable-magazine.png){#fig-knowable-magazine width="60%"}
 
 - Graphics [library](https://www.flickr.com/photos/knowablemag/)
 
@@ -148,9 +157,12 @@ format: revealjs
 - Non-science fields visualize data, too
 - Multiple purposes/uses of data viz
 
-# Next time
+## Next time
 
+- Introducing Quarto
 - Work session
+
+# Work session
 
 # Resources
 
