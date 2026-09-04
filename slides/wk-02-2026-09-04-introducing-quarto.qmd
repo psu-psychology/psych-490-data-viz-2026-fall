@@ -7,41 +7,31 @@ format: revealjs
 
 ## Announcements
 
-- Exercise 01 due next Friday, September 4, 2026 (midnight).
+- Exercise 01 due today Friday, September 4, 2026 (midnight).
 - Submit Quarto document to [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448425)
 
 ## Today's topics
 
-- Warm-up
-- Troubleshooting R and RStudio installations
 - Introducing Quarto
-- Using Quarto for Exercise 01
-
-# Warm-up
-
----
-
-::: {.question}
-## What's a widely recognized sign system in (American) football?
-:::
-
-::: {.fragment}
-::: {.answer}
-::: {#fig-football-signals}
-<iframe width="283" height="504" src="https://www.youtube.com/embed/slroyCXa9pw" title="Basic Referee signals you need to know #football #football101 #nflsports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-:::
-:::
-:::
-
-# Troubleshooting R and RStudio installations
+- Using Quarto for Exercise 02
 
 # Introducing Quarto
+
+## Wherefore Quarto
+
+![](../include/img/wherefore-definition.png){#fig-wherefore}
+
+## Quarto
+
+- System for creating documents, reports, and dashboards
+- Combine text, figures, code, links, video, equations
+- Write in text $\rightarrow$ render to html, pdf, docx, pptx and more
 
 ## Installing Quarto
 
 ![<https://quarto.org/docs/get-started/>](../include/img/installing-quarto.png){#fig-installing-quarto}
 
-## Launch RStudio
+# Your turn
 
 ## Create New Project
 
@@ -110,7 +100,47 @@ format: revealjs
 
 ![](../include/img/rendered-exercise-01.png)
 
-# Work on Exercise 01
+## Under the hood (1 of 3)
+
+:::: {.columns}
+::: {.column width=50%}
+- File metadata are at the top between rows of triple dashes `---`
+  - Add a subtitle: `subtitle: "Friday, September 4, 2026"`
+- Clickable web links are surrounded by `<` and `>`
+:::
+::: {.column width=50%}
+![](../include/img/exercise-01-detail.png)
+:::
+::::
+
+## Under the hood (2 of 3)
+
+:::: {.columns}
+::: {.column width=50%}
+- Custom web link labels require this syntax: `[Penn State home page](https://psu.edu)`
+  - Label is inside square brackets `[]`
+  - URL inside parentheses `()`
+  - Renders to: [Penn State home page](https://psu.edu) 
+:::
+::: {.column width=50%}
+![](../include/img/exercise-01-detail.png)
+:::
+::::
+
+## Under the hood (3 of 3)
+
+:::: {.columns}
+::: {.column width=50%}
+- Code in chunks marked by triple backticks "```"
+- Chunk says what language to use in curly braces: `{r}`
+  - Could be other languages Quarto supports
+:::
+::: {.column width=50%}
+![](../include/img/exercise-01-detail.png)
+:::
+::::
+
+# Work on Exercise 02
 
 ## Visit the template
 
@@ -124,15 +154,38 @@ format: revealjs
 - Paste the text
 - Save the file as `exercise-01-template.qmd`
 
-## Render the template
+## Render the template {.scrollable}
 
 ![](../include/img/rendered-ex-01-template.png){#fig-rendered-ex-01-template}
 
-## Wrap-up
+## More under the hood (1 of 3)
+
+- Metadata has an `author field. Change this in your document.
+- Change `title` to `Exercise 02`.
+- Change `About` section to reflect goals of Exercise 02.
+
+## More under the hood (2 of 3)
+
+- Figures use this syntax: `![]()`
+  - Similar to web link, but note initial exclamation point (`!`)
+  - `![This is the figure caption](this_is_the_link_to_the_figure)`
+    - Link to figure can be URL or path to file (`path/to/my_figure.jpg`)
+    
+## More under the hood (3 of 3)
+
+- Quarto converts Quarto file into HTML or PDF or...
+- Writing and reading Quarto should be easier than writing HTML
+- Quarto bundles other tools
+
+# Wrap-up
 
 ## Next time
 
-- *Visualization in government & business*
+- *Making (sense of) data*
+- *Read*: 
+  - @Stevens1946-sh | [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193582608)
+  - @Wikipedia-contributors2024-xu (Optional)
+  - @Tourangeau2012-fr | [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193582611). (Optional)
 
 # Resources
 

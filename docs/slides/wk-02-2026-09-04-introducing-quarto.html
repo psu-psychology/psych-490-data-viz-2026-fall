@@ -37,7 +37,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -133,19 +152,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-answer.callout {
-    border-left-color: blue;
-  }
-  .reveal div.callout-answer.callout-style-default .callout-title {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\f00c' !important;
-    background-image: none;
-  }
   .reveal div.callout-question.callout {
     border-left-color: pink;
   }
@@ -157,6 +163,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\3f' !important;
+    background-image: none;
+  }
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
     background-image: none;
   }
   </style>
@@ -189,90 +208,60 @@ Rick Gilmore
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Exercise 01 due next Friday, September 4, 2026 (midnight).</li>
+<li>Exercise 01 due today Friday, September 4, 2026 (midnight).</li>
 <li>Submit Quarto document to <a href="https://psu.instructure.com/courses/2484925/assignments/18448425"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a></li>
 </ul>
 </section>
 <section id="todays-topics" class="slide level2">
 <h2>Today’s topics</h2>
 <ul>
-<li>Warm-up</li>
-<li>Troubleshooting R and RStudio installations</li>
 <li>Introducing Quarto</li>
-<li>Using Quarto for Exercise 01</li>
+<li>Using Quarto for Exercise 02</li>
 </ul>
 </section></section>
-<section>
-<section id="warm-up" class="title-slide slide level1 center">
-<h1>Warm-up</h1>
-
-</section>
-<section class="slide level2">
-
-<div class="callout callout-question callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>What’s a widely recognized sign system in (American) football?</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="callout callout-answer callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Answer</strong></p>
-</div>
-<div class="callout-content">
-<div id="fig-football-signals" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-football-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<iframe width="283" height="504" src="https://www.youtube.com/embed/slroyCXa9pw" title="Basic Referee signals you need to know #football #football101 #nflsports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-football-signals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section id="troubleshooting-r-and-rstudio-installations" class="title-slide slide level1 center">
-<h1>Troubleshooting R and RStudio installations</h1>
-
-</section>
-
 <section>
 <section id="introducing-quarto" class="title-slide slide level1 center">
 <h1>Introducing Quarto</h1>
 
+</section>
+<section id="wherefore-quarto" class="slide level2">
+<h2>Wherefore Quarto</h2>
+<div id="fig-wherefore" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-wherefore-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/wherefore-definition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img data-src="../include/img/wherefore-definition.png" id="fig-wherefore"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-wherefore-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
+<ul>
+<li>System for creating documents, reports, and dashboards</li>
+<li>Combine text, figures, code, links, video, equations</li>
+<li>Write in text <span class="math inline">\(\rightarrow\)</span> render to html, pdf, docx, pptx and more</li>
+</ul>
 </section>
 <section id="installing-quarto" class="slide level2">
 <h2>Installing Quarto</h2>
 <div id="fig-installing-quarto" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-installing-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/installing-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2: https://quarto.org/docs/get-started/"><img data-src="../include/img/installing-quarto.png"></a>
+<a href="../include/img/installing-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: https://quarto.org/docs/get-started/"><img data-src="../include/img/installing-quarto.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-installing-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="launch-rstudio" class="slide level2">
-<h2>Launch RStudio</h2>
+</section></section>
+<section>
+<section id="your-turn" class="title-slide slide level1 center">
+<h1>Your turn</h1>
+
 </section>
 <section id="create-new-project" class="slide level2">
 <h2>Create New Project</h2>
@@ -281,7 +270,7 @@ Figure&nbsp;2: <a href="https://quarto.org/docs/get-started/" class="uri">https:
 <div id="fig-file-menu-new-project" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-file-menu-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/file-menu.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: From File Menu"><img data-src="../include/img/file-menu.png" class="quarto-figure quarto-figure-center"></a>
+<a href="../include/img/file-menu.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: From File Menu"><img data-src="../include/img/file-menu.png" class="quarto-figure quarto-figure-center"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-file-menu-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: From File Menu
@@ -292,7 +281,7 @@ Figure&nbsp;3: From File Menu
 <div id="fig-new-project-project-manager" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-new-project-project-manager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/new-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;4: From Project Manager Tab"><img data-src="../include/img/new-project.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a>
+<a href="../include/img/new-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: From Project Manager Tab"><img data-src="../include/img/new-project.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-project-manager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: From Project Manager Tab
@@ -306,7 +295,7 @@ Figure&nbsp;4: From Project Manager Tab
 <div id="fig-create-project-new-directory" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-create-project-new-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/create-project-new-directory.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;5: Create project in a new directory"><img data-src="../include/img/create-project-new-directory.png" style="width:75.0%"></a>
+<a href="../include/img/create-project-new-directory.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Create project in a new directory"><img data-src="../include/img/create-project-new-directory.png" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-new-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: Create project in a new directory
@@ -319,7 +308,7 @@ Figure&nbsp;5: Create project in a new directory
 <div id="fig-create-project-type-quarto" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-create-project-type-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/create-project-type-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;6: Project Type: Quarto Project"><img data-src="../include/img/create-project-type-quarto.png" style="width:75.0%"></a>
+<a href="../include/img/create-project-type-quarto.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Project Type: Quarto Project"><img data-src="../include/img/create-project-type-quarto.png" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-type-quarto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;6: Project Type: Quarto Project
@@ -332,7 +321,7 @@ Figure&nbsp;6: Project Type: Quarto Project
 <div id="fig-create-project-quarto-name" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-create-project-quarto-name-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/create-project-quarto-name.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Create Quarto Project"><img data-src="../include/img/create-project-quarto-name.png" style="width:75.0%"></a>
+<a href="../include/img/create-project-quarto-name.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Create Quarto Project"><img data-src="../include/img/create-project-quarto-name.png" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-project-quarto-name-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7: Create Quarto Project
@@ -367,7 +356,7 @@ Figure&nbsp;7: Create Quarto Project
 </section>
 <section id="explore-project-and-document" class="slide level2">
 <h2>Explore project (and document)</h2>
-<p><a href="../include/img/new-quarto-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="../include/img/new-quarto-project.png"></a></p>
+<p><a href="../include/img/new-quarto-project.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="../include/img/new-quarto-project.png"></a></p>
 </section>
 <section id="anatomy-of-quarto-document" class="slide level2">
 <h2>Anatomy of Quarto document</h2>
@@ -386,7 +375,7 @@ Figure&nbsp;7: Create Quarto Project
 <div id="fig-exercise-01-file" class="quarto-float quarto-figure quarto-figure-center" data-align="right">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-exercise-01-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk."><img data-src="../include/img/exercise-01-detail.png" data-align="right"></a>
+<a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk."><img data-src="../include/img/exercise-01-detail.png" data-align="right"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exercise-01-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk.
@@ -410,11 +399,57 @@ Figure&nbsp;8: A simple, template Quarto document with header metadata, a second
 </section>
 <section id="rendered-file" class="slide level2">
 <h2>Rendered file</h2>
-<p><a href="../include/img/rendered-exercise-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="../include/img/rendered-exercise-01.png"></a></p>
+<p><a href="../include/img/rendered-exercise-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="../include/img/rendered-exercise-01.png"></a></p>
+</section>
+<section id="under-the-hood-1-of-3" class="slide level2">
+<h2>Under the hood (1 of 3)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>File metadata are at the top between rows of triple dashes <code>---</code>
+<ul>
+<li>Add a subtitle: <code>subtitle: "Friday, September 4, 2026"</code></li>
+</ul></li>
+<li>Clickable web links are surrounded by <code>&lt;</code> and <code>&gt;</code></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="../include/img/exercise-01-detail.png"></a></p>
+</div></div>
+</section>
+<section id="under-the-hood-2-of-3" class="slide level2">
+<h2>Under the hood (2 of 3)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Custom web link labels require this syntax: <code>[Penn State home page](https://psu.edu)</code>
+<ul>
+<li>Label is inside square brackets <code>[]</code></li>
+<li>URL inside parentheses <code>()</code></li>
+<li>Renders to: <a href="https://psu.edu">Penn State home page</a></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="../include/img/exercise-01-detail.png"></a></p>
+</div></div>
+</section>
+<section id="under-the-hood-3-of-3" class="slide level2">
+<h2>Under the hood (3 of 3)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Code in chunks marked by triple backticks “```”</li>
+<li>Chunk says what language to use in curly braces: <code>{r}</code>
+<ul>
+<li>Could be other languages Quarto supports</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><a href="../include/img/exercise-01-detail.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="../include/img/exercise-01-detail.png"></a></p>
+</div></div>
 </section></section>
 <section>
-<section id="work-on-exercise-01" class="title-slide slide level1 center">
-<h1>Work on Exercise 01</h1>
+<section id="work-on-exercise-02" class="title-slide slide level1 center">
+<h1>Work on Exercise 02</h1>
 
 </section>
 <section id="visit-the-template" class="slide level2">
@@ -433,12 +468,12 @@ Figure&nbsp;8: A simple, template Quarto document with header metadata, a second
 <li>Save the file as <code>exercise-01-template.qmd</code></li>
 </ul>
 </section>
-<section id="render-the-template" class="slide level2">
+<section id="render-the-template" class="slide level2 scrollable">
 <h2>Render the template</h2>
 <div id="fig-rendered-ex-01-template" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-rendered-ex-01-template-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/rendered-ex-01-template.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: "><img data-src="../include/img/rendered-ex-01-template.png" id="fig-rendered-ex-01-template"></a>
+<a href="../include/img/rendered-ex-01-template.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;9: "><img data-src="../include/img/rendered-ex-01-template.png" id="fig-rendered-ex-01-template"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-rendered-ex-01-template-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;9
@@ -446,13 +481,50 @@ Figure&nbsp;9
 </figure>
 </div>
 </section>
-<section id="wrap-up" class="slide level2">
-<h2>Wrap-up</h2>
+<section id="more-under-the-hood-1-of-3" class="slide level2">
+<h2>More under the hood (1 of 3)</h2>
+<ul>
+<li>Metadata has an `author field. Change this in your document.</li>
+<li>Change <code>title</code> to <code>Exercise 02</code>.</li>
+<li>Change <code>About</code> section to reflect goals of Exercise 02.</li>
+</ul>
+</section>
+<section id="more-under-the-hood-2-of-3" class="slide level2">
+<h2>More under the hood (2 of 3)</h2>
+<ul>
+<li>Figures use this syntax: <code>![]()</code>
+<ul>
+<li>Similar to web link, but note initial exclamation point (<code>!</code>)</li>
+<li><code>![This is the figure caption](this_is_the_link_to_the_figure)</code>
+<ul>
+<li>Link to figure can be URL or path to file (<code>path/to/my_figure.jpg</code>)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="more-under-the-hood-3-of-3" class="slide level2">
+<h2>More under the hood (3 of 3)</h2>
+<ul>
+<li>Quarto converts Quarto file into HTML or PDF or…</li>
+<li>Writing and reading Quarto should be easier than writing HTML</li>
+<li>Quarto bundles other tools</li>
+</ul>
+</section></section>
+<section>
+<section id="wrap-up" class="title-slide slide level1 center">
+<h1>Wrap-up</h1>
+
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li><em>Visualization in government &amp; business</em></li>
+<li><em>Making (sense of) data</em></li>
+<li><em>Read</em>:
+<ul>
+<li><span class="citation" data-cites="Stevens1946-sh">Stevens (<a href="#/references" role="doc-biblioref" onclick="">1946</a>)</span> | <a href="https://psu.instructure.com/courses/2484925/files?preview=193582608">PDF on Canvas</a></li>
+<li><span class="citation" data-cites="Wikipedia-contributors2024-xu">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span> (Optional)</li>
+<li><span class="citation" data-cites="Tourangeau2012-fr">Tourangeau et al. (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span> | <a href="https://psu.instructure.com/courses/2484925/files?preview=193582611">PDF on Canvas</a>. (Optional)</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
@@ -465,10 +537,21 @@ Figure&nbsp;9
 <p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.1.0.392.</p>
 <p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psy-511-scan-fdns-2026-spring">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/" class="uri">https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/</a></p>
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Stevens1946-sh" class="csl-entry" role="listitem">
+Stevens, S S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science (New York, N.Y.)</em> 103 (June): 677–80. <a href="https://doi.org/10.1126/science.103.2684.677">https://doi.org/10.1126/science.103.2684.677</a>.
+</div>
+<div id="ref-Tourangeau2012-fr" class="csl-entry" role="listitem">
+Tourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. <em>The <span>P</span>sychology of <span>S</span>urvey <span>R</span>esponse</em>. Cambridge University Press. <a href="https://doi.org/10.1017/cbo9780511819322">https://doi.org/10.1017/cbo9780511819322</a>.
+</div>
+<div id="ref-Wikipedia-contributors2024-xu" class="csl-entry" role="listitem">
+Wikipedia contributors. 2024. <span>“Statistical Data Type.”</span> Wikimedia Foundation, Inc., November 23. <a href="https://en.wikipedia.org/wiki/Statistical_data_type">https://en.wikipedia.org/wiki/Statistical_data_type</a>.
+</div>
+</div>
 </section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 

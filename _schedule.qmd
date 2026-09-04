@@ -77,7 +77,6 @@
   - @Stevens1946-sh | [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193582608)
   - @Wikipedia-contributors2024-xu (Optional)
   - @Tourangeau2012-fr | [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193582611). (Optional)
-- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
 - [Slides](404.qmd)
 
 ### Fri, Sep 11 {-}
@@ -85,6 +84,7 @@
 *Work Session: Intro to R*
 
 - [Slides](404.qmd)
+- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
 
 ## Week 04 {- #week-04}
 
