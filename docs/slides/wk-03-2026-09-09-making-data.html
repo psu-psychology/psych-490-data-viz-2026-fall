@@ -14,7 +14,7 @@
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490.007 – Data viz in art, sports, &amp; journalism</title>
+  <title>PSYCH 490.007 – Making Data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -149,6 +149,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
   .reveal div.callout-answer.callout {
     border-left-color: blue;
@@ -183,7 +186,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Data viz in art, sports, &amp; journalism</h1>
+  <h1 class="title">Making Data</h1>
   <p class="subtitle">PSY 490.007 Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -205,330 +208,352 @@ Rick Gilmore
 </section>
 <section class="slide level2">
 
-<iframe data-external="1" src="https://www.youtube.com/embed/ljGMhDSSGFU" width="100%" height="70%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<p><span class="citation" data-cites="Smalin2011-vr"><span class="nocase">smalin</span> (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></p>
-</section>
-<section id="mortality-trends-by-education-level" class="slide level2">
-<h2>Mortality trends by education level</h2>
-<div id="fig-mortality-trends" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-antibiotics" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-mortality-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/novosad-etal-2022-fig-01.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: @Novosad2022-yz"><img data-src="../include/img/novosad-etal-2022-fig-01.png" style="width:40.0%"></a>
+<div aria-describedby="fig-antibiotics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/7a759276-92f3-4912-7d32-78d2ebd52c00/w=1350.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: @Dattani2024-yr"><img data-src="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/7a759276-92f3-4912-7d32-78d2ebd52c00/w=1350.png" style="width:60.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mortality-trends-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="citation" data-cites="Novosad2022-yz">Novosad et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-antibiotics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <span class="citation" data-cites="Dattani2024-yr">Dattani and Roser (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>
 </figcaption>
 </figure>
 </div>
-</section>
-<section class="slide level2">
-
-<div id="fig-mortality-trends-fig-05" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-mortality-trends-fig-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/novosad-etal-2022-fig-05.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: @Novosad2022-yz"><img data-src="../include/img/novosad-etal-2022-fig-05.png" style="width:50.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mortality-trends-fig-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: <span class="citation" data-cites="Novosad2022-yz">Novosad et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section></section>
-<section>
-<section id="overview" class="title-slide slide level1 center">
-<h1>Overview</h1>
-
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Due Friday: <a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise 01</a></li>
+<li><a href="../exercises/ex02-data-viz-outside-psych.qmd">Exercise-02</a> write-up <a href="../schedule.html#thursday-january-30" class="orange_due">due Thursday, January 30</a>.</li>
 </ul>
 </section>
 <section id="last-time" class="slide level2">
 <h2>Last time…</h2>
 <ul>
-<li><em>Visualization in government and business</em></li>
+<li>Introducing Quarto</li>
+<li><em>Visualization in the arts, sports, &amp; journalism</em></li>
+</ul>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn</h2>
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Are there characteristic features of data visualizations in different fields?</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+</section>
+<section id="preliminary-findings" class="slide level2">
+<h2>Preliminary findings</h2>
+<ul>
+<li>Visualization of Exercise 01</li>
+<li><a href="../supplemental/other-field-figs.qmd">Visualization</a> of <a href="../exercises/ex02-data-viz-outside-psych.qmd">Exercise 02</a> results</li>
 </ul>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <ul>
-<li><em>Visualization in art, sports, &amp; journalism</em></li>
-<li>Work session
-<ul>
-<li><a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise 01</a></li>
-<li><a href="../exercises/ex-02-data-viz-outside-psych.html">Exercise 02</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="goals" class="slide level2">
-<h2>Goals</h2>
-<ul>
-<li>What sort(s) of visualizations are common in these fields?</li>
-<li>Apply principles of <a href="../slides/wk-01-2026-08-26-semiotics-data-viz.html#semiotics-of-data-visualization">semiotics</a> to these visualizations.
-<ul>
-<li>Semantics: Mappings between signs and what they signify?</li>
-<li>Syntax: Rules for arrangement/organization</li>
-</ul></li>
+<li>Making Data</li>
+<li>Types of data</li>
 </ul>
 </section></section>
 <section>
-<section id="data-visualization-in-the-arts" class="title-slide slide level1 center">
-<h1>Data visualization in the arts</h1>
+<section id="making-data" class="title-slide slide level1 center">
+<h1>Making Data</h1>
 
 </section>
-<section id="musical-notation" class="slide level2">
-<h2>Musical notation</h2>
-<div id="fig-britannica-musical-notation" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-britannica-musical-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://cdn.britannica.com/01/72201-004-2995C318/symbols-notation.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: https://www.britannica.com/art/musical-notation"><img data-src="https://cdn.britannica.com/01/72201-004-2995C318/symbols-notation.jpg"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-britannica-musical-notation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: https://www.britannica.com/art/musical-notation
-</figcaption>
-</figure>
-</div>
+<section class="slide level2">
+
+<blockquote>
+<p>Data are made, not born.</p>
+</blockquote>
+<p>Gilmore 2025</p>
 </section>
-<section id="antecdents" class="slide level2">
-<h2>Antecdents</h2>
-<div id="fig-musical-notation-antecedents" class="quarto-float quarto-figure quarto-figure-center">
+<section class="slide level2">
+
+<blockquote>
+<p>No one really knows how the game is played…<br>
+The art of the trade<br>
+How the sausage gets made<br>
+We just assume that it happens<br>
+But no one else is in the room where it happens</p>
+</blockquote>
+<p>“The Room Where it Happens”, Leslie Odom Jr.&nbsp;and Lin-Manuel Miranda, “Hamilton”</p>
+</section>
+<section id="how-are-data-made" class="slide level2">
+<h2>How are data made?</h2>
+<blockquote>
+
+<ul>
+<li>By measurement</li>
+</ul>
+
+</blockquote>
+</section>
+<section class="slide level2">
+
+<div id="fig-history-of-measurement" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-musical-notation-antecedents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://cdn.britannica.com/93/2893-004-908441FD/Music-notation-neumes.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: https://www.britannica.com/art/musical-notation/Evolution-of-Western-staff-notation"><img data-src="https://cdn.britannica.com/93/2893-004-908441FD/Music-notation-neumes.jpg"></a>
+<div aria-describedby="fig-history-of-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coud%C3%A9e-turin_detail.jpg/500px-Coud%C3%A9e-turin_detail.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: https://en.wikipedia.org/wiki/History_of_measurement"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coud%C3%A9e-turin_detail.jpg/500px-Coud%C3%A9e-turin_detail.jpg"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-musical-notation-antecedents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: https://www.britannica.com/art/musical-notation/Evolution-of-Western-staff-notation
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-history-of-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: https://en.wikipedia.org/wiki/History_of_measurement
 </figcaption>
 </figure>
 </div>
 </section>
 <section class="slide level2">
 
-<div id="fig-musical-annotation-antecedents-02" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-measurement-guide" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-musical-annotation-antecedents-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/7/7e/Hurritische_hymne.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: @Wikipedia-contributors2025-rz"><img data-src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Hurritische_hymne.gif"></a>
+<div aria-describedby="fig-measurement-guide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://cdn.shopify.com/s/files/1/1008/5120/files/womens_measurementguideWEB3_2048x2048.jpg?v=1485592505" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: https://www.ritual.fashion/pages/measurement-guide"><img data-src="https://cdn.shopify.com/s/files/1/1008/5120/files/womens_measurementguideWEB3_2048x2048.jpg?v=1485592505" style="width:65.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-musical-annotation-antecedents-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: <span class="citation" data-cites="Wikipedia-contributors2025-rz">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2025b</a>)</span>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-guide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: https://www.ritual.fashion/pages/measurement-guide
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="hebrew-trope" class="slide level2">
-<h2>Hebrew trope</h2>
-<div id="fig-hebrew-trope" class="quarto-float quarto-figure quarto-figure-center">
+<section id="what-is-measurement" class="slide level2">
+<h2>What is measurement?</h2>
+<blockquote>
+
+<ul>
+<li>A <em>procedure for mapping</em> properties of X onto some numerical standard or scale Y</li>
+<li><a href="https://en.wikipedia.org/wiki/Metrology"><em>Metrology</em></a>: The science of measurement</li>
+<li><a href="https://en.wikipedia.org/wiki/Psychometrics"><em>Psychometrics</em></a>: The study of psychological measurement</li>
+</ul>
+
+</blockquote>
+</section>
+<section id="why-mapping" class="slide level2">
+<h2>Why ‘mapping’?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-measurement-mapping" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-hebrew-trope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: @Wikipedia-contributors2025-hl. https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"></a>
+<div aria-describedby="fig-measurement-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-measurement-mapping">flowchart TB
+  A[Thing/Person]-- Procedure  --&gt;B(Instrument)
+  B --&gt; C{Data}
+</pre>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hebrew-trope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: <span class="citation" data-cites="Wikipedia-contributors2025-hl">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2025a</a>)</span>. https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Illustration of a mapping from observed entity to data
 </figcaption>
 </figure>
 </div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-measurement-mapping-2" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-measurement-mapping-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-measurement-mapping-2">flowchart TB
+  A[Thing/Person]-- Procedure  --&gt;B(Instrument)
+  A[Thing/Person]-- Procedure-2  --&gt;C(Instrument-2)
+  B --&gt; E{Data}
+  C --&gt; D{Data-2}
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-mapping-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Illustration of multiple mappings from an observed entity to data
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
 </section>
-<section id="styles" class="slide level2">
-<h2>Styles</h2>
+<section id="procedures-are" class="slide level2">
+<h2>Procedures are</h2>
 <ul>
-<li><a href="https://blogs.iu.edu/jsomcomposition/music-notation-style-guide/">Musical style guide</a></li>
+<li>Sequences of behaviors</li>
 </ul>
 </section>
-<section id="what-is-being-mapped" class="slide level2">
-<h2>What is being mapped?</h2>
+<section id="data-quantitative-terminology" class="slide level2">
+<h2>Data ~ quantitative terminology</h2>
 <ul>
-<li>Pitch</li>
-<li>Timing, tempo</li>
-<li>Loudness</li>
-<li>Stylistic properties</li>
-<li>etc.</li>
+<li>Data a <em>symbol</em> of the thing measured, not the thing itself</li>
+<li>E.g., words are a <em>symbol</em> of the things they refer to</li>
 </ul>
+<div class="cell" data-reveal="true" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-semantic-mapping" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-semantic-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-semantic-mapping">flowchart TB
+  A[Cute animal with fur that purrs] --&gt; B('cat')
+  A ---&gt; C('gato')
+  A ---&gt; D('chatte/chat')
+  A ---&gt; E('猫')
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-semantic-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Mapping from concept/entity to a word.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="symbols-reflect-select-and-deflect" class="slide level2">
+<h2>Symbols reflect, select, and deflect</h2>
+<blockquote>
+<p>Even if any given terminology is a <em>reflection</em> of reality, by its very nature as a terminology, it must be a <em>selection</em> of reality; and to this extent must also as a <em>deflection</em> of reality</p>
+</blockquote>
+<p><span class="citation" data-cites="Burke1968-ye">Burke (<a href="#/references" role="doc-biblioref" onclick="">1968</a>)</span></p>
+</section>
+<section id="what-is" class="slide level2">
+<h2>What is</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>reflected, selected, deflected?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="@Lindsey2024-ob"><img data-src="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" alt="Lindsey (2024)"></a></p>
+<figcaption><span class="citation" data-cites="Lindsey2024-ob">Lindsey (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section class="slide level2">
 
-<div id="fig-beethoven-9th" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-aviv-etal" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-beethoven-9th-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<iframe width="1240" height="450" src="https://www.youtube.com/embed/ljGMhDSSGFU?si=1I9C5vYt69rF21S1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
+<div aria-describedby="fig-aviv-etal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/aviv-etal-2024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;7: @Aviv2024-vh; https://public-exchange.org/usc/wp-content/uploads/sites/2/2025/09/PX_FairPlay-Final-Report_Dec2024-2.pdf"><img data-src="../include/img/aviv-etal-2024.png" style="width:60.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-beethoven-9th-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: <span class="citation" data-cites="Smalin2011-vr"><span class="nocase">smalin</span> (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aviv-etal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: <span class="citation" data-cites="Aviv2024-vh">Aviv et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>; https://public-exchange.org/usc/wp-content/uploads/sites/2/2025/09/PX_FairPlay-Final-Report_Dec2024-2.pdf
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="dance" class="slide level2">
-<h2>Dance</h2>
-<div id="fig-dance" class="quarto-float quarto-figure quarto-figure-center">
+<section id="stevens-scales-of-measurement" class="slide level2">
+<h2>Stevens’ scales of measurement</h2>
+<div id="fig-stevens-1946" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-dance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<iframe width="1240" height="450" src="https://www.youtube.com/embed/VQYuNKvbPDg?si=IsD5u5jYYENDZxkB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
-</iframe>
+<div aria-describedby="fig-stevens-1946-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/stevens-1946-fig.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;8: @Stevens1946-sh"><img data-src="../include/img/stevens-1946-fig.png" style="width:65.0%"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: <span class="citation" data-cites="Flores2021-pt">Flores (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stevens-1946-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: <span class="citation" data-cites="Stevens1946-sh">Stevens (<a href="#/references" role="doc-biblioref" onclick="">1946</a>)</span>
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="visual-arts" class="slide level2">
-<h2>Visual arts</h2>
-<div id="fig-btaa-data-viz-2024" class="quarto-float quarto-figure quarto-figure-center">
+<section id="questions-about-measurement" class="slide level2">
+<h2>Questions about measurement</h2>
+<ul>
+<li>What’s the procedure for making this mapping?</li>
+<li>What are the rules for assigning numbers/categories?</li>
+<li>What can we do with the assigned numbers (summarize, depict)?</li>
+</ul>
+</section>
+<section id="why-does-measurement-matter" class="slide level2">
+<h2>Why does measurement matter?</h2>
+<div id="fig-gigo" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-btaa-data-viz-2024-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://btaa.org/images/default-source/love-data-week/laura_guertin_thumbnail.webp?sfvrsn=a6a11c8d_1" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;9: “Blue Skies and Cloud Cover” by Laura Guertin, BTAA Data Viz 2024 Champion"><img data-src="https://btaa.org/images/default-source/love-data-week/laura_guertin_thumbnail.webp?sfvrsn=a6a11c8d_1" style="width:30.0%"></a>
+<div aria-describedby="fig-gigo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/gigo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;9: Garbage in, garbage out"><img data-src="../include/img/gigo.png"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-btaa-data-viz-2024-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: “Blue Skies and Cloud Cover” by Laura Guertin, <a href="https://btaa.org/research/love-data-week/2024_Data_Viz_Championship">BTAA Data Viz 2024</a> Champion
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gigo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Garbage in, garbage out
 </figcaption>
 </figure>
 </div>
 </section></section>
 <section>
-<section id="data-visualization-in-sports" class="title-slide slide level1 center">
-<h1>Data visualization in sports</h1>
+<section id="types-of-data" class="title-slide slide level1 center">
+<h1>Types of data</h1>
 
 </section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
+<section id="in-other-domains" class="slide level2">
+<h2>In other domains</h2>
 <ul>
-<li><a href="https://operations.nfl.com/programs-initiatives/innovation/big-data-bowl" class="uri">https://operations.nfl.com/programs-initiatives/innovation/big-data-bowl</a></li>
-<li><a href="https://www.tableau.com/sports-data" class="uri">https://www.tableau.com/sports-data</a></li>
-</ul>
-</section></section>
-<section>
-<section id="data-visualization-in-journalism" class="title-slide slide level1 center">
-<h1>Data visualization in journalism</h1>
-
-</section>
-<section id="access-to-u.s.-newspapers" class="slide level2">
-<h2>Access to U.S. newspapers</h2>
-<ul>
-<li><a href="https://guides.libraries.psu.edu/newspapers/direct" class="uri">https://guides.libraries.psu.edu/newspapers/direct</a></li>
+<li>Business/economics</li>
+<li>Politics</li>
+<li>Sports</li>
+<li>Entertainment</li>
+<li>Weather</li>
 </ul>
 </section>
-<section class="slide level2">
-
-<div id="fig-vaccination-nytimes" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-vaccination-nytimes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/paris-nyt-vax-2025-01-13-fig1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;10: @Paris2025-lf"><img data-src="../include/img/paris-nyt-vax-2025-01-13-fig1.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vaccination-nytimes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: <span class="citation" data-cites="Paris2025-lf">Paris (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="fig-change-in-vax-rates" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-change-in-vax-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/paris-nyt-vax-2025-01-13-fig2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;11: @Paris2025-lf"><img data-src="../include/img/paris-nyt-vax-2025-01-13-fig2.png" style="width:40.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-change-in-vax-rates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: <span class="citation" data-cites="Paris2025-lf">Paris (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="data-journalism" class="slide level2">
-<h2>Data journalism</h2>
+<section id="in-psychology" class="slide level2">
+<h2>In psychology</h2>
 <ul>
-<li><a href="https://impact.economist.com/perspectives/search/infographic?f%5B0%5D=type%3Ainfographic&amp;f%5B1%5D=">The Economist</a></li>
-<li><a href="https://www.nytimes.com/spotlight/graphics">The New York Times</a></li>
+<li>Internal mental states</li>
+<li>Behaviors</li>
+<li>Physiological processes</li>
+<li>Physical characteristics</li>
+<li>Environmental properties</li>
 </ul>
 </section>
-<section class="slide level2">
-
-<div id="fig-fox-news-data" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-fox-news-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/fox-news-search-term-data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;12: https://www.foxnews.com/search-results/search#q=data"><img data-src="../include/img/fox-news-search-term-data.png" style="width:75.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fox-news-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: https://www.foxnews.com/search-results/search#q=data
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="fig-cnn-data" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-cnn-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/cnn-search-term-data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;13: https://www.cnn.com/search?q=data"><img data-src="../include/img/cnn-search-term-data.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cnn-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13: https://www.cnn.com/search?q=data
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="the-washington-post" class="slide level2">
-<h2>The Washington Post</h2>
-<div id="fig-dept-of-data" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-dept-of-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/wapo-dept-data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;14: @Van-Dam2022-mr"><img data-src="../include/img/wapo-dept-data.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dept-of-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14: <span class="citation" data-cites="Van-Dam2022-mr">Van Dam (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="section" class="slide level2 scrollable">
-<h2></h2>
-<div id="fig-andrew-van-dam" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-andrew-van-dam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/wash-post-dept-of-data-van-dam.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;15: https://www.washingtonpost.com/people/andrew-van-dam/"><img data-src="../include/img/wash-post-dept-of-data-van-dam.png"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-andrew-van-dam-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15: https://www.washingtonpost.com/people/andrew-van-dam/
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="slide level2">
-
-<iframe src="https://datawrapper.dwcdn.net/j4zy7/7/" width="100%" height="80%">
-</iframe>
-<p><span class="citation" data-cites="Fowers2024-hu">Fowers and Van Dam (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></p>
-</section>
-<section id="accuweather.com" class="slide level2">
-<h2>Accuweather.com</h2>
-<div id="fig-accuweather" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-accuweather-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/accuweather.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;16: https://www.accuweather.com/en/us/state-college/16801/weather-forecast/335315?current=true"><img data-src="../include/img/accuweather.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-accuweather-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;16: https://www.accuweather.com/en/us/state-college/16801/weather-forecast/335315?current=true
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="knowable-magazine" class="slide level2">
-<h2>Knowable Magazine</h2>
-<div id="fig-knowable-magazine" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-knowable-magazine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/knowable-magazine.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;17: https://knowablemagazine.org/"><img data-src="../include/img/knowable-magazine.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-knowable-magazine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17: <a href="https://knowablemagazine.org/" class="uri">https://knowablemagazine.org/</a>
-</figcaption>
-</figure>
-</div>
+<section id="examples-of" class="slide level2">
+<h2>Examples of…</h2>
 <ul>
-<li>Graphics <a href="https://www.flickr.com/photos/knowablemag/">library</a></li>
+<li>Internal mental states</li>
+<li>Behaviors</li>
+<li>Physiological processes</li>
+<li>Physical characteristics</li>
+<li>Environmental properties</li>
 </ul>
+</section>
+<section id="how-to-measure" class="slide level2">
+<h2>How to measure…</h2>
+<ul>
+<li>Internal mental states</li>
+<li>Behaviors</li>
+<li>Physiological processes</li>
+<li>Physical characteristics</li>
+<li>Environmental properties</li>
+</ul>
+</section>
+<section id="psychology-of-survey-response" class="slide level2">
+<h2>Psychology of survey response</h2>
+<div id="fig-tourangeau-2012" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-tourangeau-2012-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/tourangeau-etal-table-1.1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;10: @Tourangeau2012-fr Table 1.1"><img data-src="../include/img/tourangeau-etal-table-1.1.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tourangeau-2012-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: <span class="citation" data-cites="Tourangeau2012-fr">Tourangeau et al. (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span> Table 1.1
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="scales-of-measurement" class="slide level2">
+<h2>Scales of measurement</h2>
+<div id="fig-stevens-table-01" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stevens-table-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/stevens-1946-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;11: @Stevens1946-sh"><img data-src="../include/img/stevens-1946-table.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stevens-table-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: <span class="citation" data-cites="Stevens1946-sh">Stevens (<a href="#/references" role="doc-biblioref" onclick="">1946</a>)</span>
+</figcaption>
+</figure>
+</div>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -537,64 +562,51 @@ Figure&nbsp;17: <a href="https://knowablemagazine.org/" class="uri">https://know
 </section>
 <section id="main-points" class="slide level2">
 <h2>Main points</h2>
-</section>
-<section id="data-viz-outside-psi" class="slide level2">
-<h2>Data viz outside <span class="math inline">\(\Psi\)</span></h2>
 <ul>
-<li>Non-science fields visualize data, too</li>
-<li>Multiple purposes/uses of data viz</li>
+<li>Data are <em>made</em>
+<ul>
+<li>Map characteristics to quantities</li>
+<li>By some measurement procedure</li>
+<li>Reflect, but also select and deflect</li>
+</ul></li>
+<li>Mappings have different scale types <span class="citation" data-cites="Stevens1946-sh">(<a href="#/references" role="doc-biblioref" onclick="">Stevens 1946</a>)</span></li>
+<li>Scales determine i) permissible/logical stats &amp; ii) best visualizations</li>
 </ul>
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li>Introducing Quarto</li>
-<li>Work session</li>
+<li><em>Work session: Making data with R</em></li>
+<li><a href="../exercises/ex-02-data-viz-outside-psych.html">Exercise 02</a></li>
 </ul>
 </section></section>
-<section id="work-session" class="title-slide slide level1 center">
-<h1>Work session</h1>
-
-</section>
-
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
-</section>
-<section id="about" class="slide level2">
-<h2>About</h2>
-<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.8.2.200.</p>
-<p>The source files are in R and Quarto, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/" class="uri">https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/</a></p>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Flores2021-pt" class="csl-entry" role="listitem">
-Flores, Moises S. 2021. <em>Graph Dance 2021 (<span>STEM</span> Ingenuity Grp 2)</em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=VQYuNKvbPDg">https://www.youtube.com/watch?v=VQYuNKvbPDg</a>.
+<div id="ref-Aviv2024-vh" class="csl-entry" role="listitem">
+Aviv, Lizzie, Darby Saxbe, Doug Messer, and Sujeet Rao. 2024. <em>The Fair Play Method</em>. Technical report. University of Southern California. <a href="https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf">https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf</a>.
 </div>
-<div id="ref-Fowers2024-hu" class="csl-entry" role="listitem">
-Fowers, Alyssa, and Andrew Van Dam. 2024. <span>“Unraveling America’s Great Puritan-Name Resurgence.”</span> In <em>The Washington Post</em>. The Washington Post. <a href="https://www.washingtonpost.com/business/2024/12/13/virtue-names-hope-faith-charity/">https://www.washingtonpost.com/business/2024/12/13/virtue-names-hope-faith-charity/</a>.
+<div id="ref-Burke1968-ye" class="csl-entry" role="listitem">
+Burke, Kenneth. 1968. <em>Language as <span>S</span>ymbolic <span>A</span>ction</em>. University of California Press. <a href="https://www.ucpress.edu/books/language-as-symbolic-action/paper">https://www.ucpress.edu/books/language-as-symbolic-action/paper</a>.
 </div>
-<div id="ref-Novosad2022-yz" class="csl-entry" role="listitem">
-Novosad, Paul, Charlie Rafkin, and Sam Asher. 2022. <span>“Mortality Change Among Less Educated Americans.”</span> <em>American Economic Journal. Applied Economics</em> 14 (October): 1–34. <a href="https://doi.org/10.1257/app.20190297">https://doi.org/10.1257/app.20190297</a>.
+<div id="ref-Dattani2024-yr" class="csl-entry" role="listitem">
+Dattani, Saloni, and Max Roser. 2024. <span>“What Was the Golden Age of Antibiotics, and How Can We Spark a New One?”</span> <em>Our World in Data</em>, December 21. <a href="https://ourworldindata.org/golden-age-antibiotics">https://ourworldindata.org/golden-age-antibiotics</a>.
 </div>
-<div id="ref-Paris2025-lf" class="csl-entry" role="listitem">
-Paris, Francesca. 2025. <span>“Childhood Vaccination Rates Were Falling Even Before the Rise of <span>R</span>.<span>F</span>.<span>K</span>. Jr.”</span> In <em>The New York Times</em>. The New York Times. <a href="https://www.nytimes.com/interactive/2025/01/13/upshot/vaccination-rates.html">https://www.nytimes.com/interactive/2025/01/13/upshot/vaccination-rates.html</a>.
+<div id="ref-Lindsey2024-ob" class="csl-entry" role="listitem">
+Lindsey, Rebecca. 2024. <span>“Climate Change: Atmospheric Carbon Dioxide.”</span> April 9. <a href="http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide">http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide</a>.
 </div>
-<div id="ref-Smalin2011-vr" class="csl-entry" role="listitem">
-<span class="nocase">smalin</span>. 2011. <em>Beethoven, Symphony 9, <span>4th</span> Movement (Complete) Ode to Joy, Presto, Philharmonia Baroque</em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=ljGMhDSSGFU">https://www.youtube.com/watch?v=ljGMhDSSGFU</a>.
+<div id="ref-Stevens1946-sh" class="csl-entry" role="listitem">
+Stevens, S S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science (New York, N.Y.)</em> 103 (June): 677–80. <a href="https://doi.org/10.1126/science.103.2684.677">https://doi.org/10.1126/science.103.2684.677</a>.
 </div>
-<div id="ref-Van-Dam2022-mr" class="csl-entry" role="listitem">
-Van Dam, Andrew. 2022. <span>“Where Fun Facts Are Serious Business.”</span> In <em>The Washington Post</em>. The Washington Post. <a href="https://www.washingtonpost.com/business/2022/06/29/dept-of-data/">https://www.washingtonpost.com/business/2022/06/29/dept-of-data/</a>.
-</div>
-<div id="ref-Wikipedia-contributors2025-hl" class="csl-entry" role="listitem">
-Wikipedia contributors. 2025a. <span>“Hebrew Cantillation.”</span> Wikimedia Foundation, Inc., January 5. <a href="https://en.wikipedia.org/wiki/Hebrew_cantillation">https://en.wikipedia.org/wiki/Hebrew_cantillation</a>.
-</div>
-<div id="ref-Wikipedia-contributors2025-rz" class="csl-entry" role="listitem">
-Wikipedia contributors. 2025b. <span>“Musical Notation.”</span> Wikimedia Foundation, Inc., January 12. <a href="https://en.wikipedia.org/wiki/Musical_notation">https://en.wikipedia.org/wiki/Musical_notation</a>.
+<div id="ref-Tourangeau2012-fr" class="csl-entry" role="listitem">
+Tourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. <em>The <span>P</span>sychology of <span>S</span>urvey <span>R</span>esponse</em>. Cambridge University Press. <a href="https://doi.org/10.1017/cbo9780511819322">https://doi.org/10.1017/cbo9780511819322</a>.
 </div>
 </div>
 </section></section>

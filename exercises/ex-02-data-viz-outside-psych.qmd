@@ -27,7 +27,7 @@ Try to pick visualizations that are interesting to you in some way. You may also
 
 3. Add information about the visualizations to a Google Sheet that all of us will share:
 
-<https://docs.google.com/spreadsheets/d/1rLiLBRbDQfInauOUBPNwGYq-0VOjskGNY7Wq2QRTTbc/edit?gid=0#gid=0>
+<https://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing>
 
 Specifically, enter your team identifier in the `identifier` field, the source in `source_type`, and the URL in the `url` field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the `comments` field.
 
@@ -56,4 +56,5 @@ The visualizations you choose to write about may be the ones you found yourself 
 Students who want this submission to count for one of their four (4) *required* exercises should submit the following:
 
 - A commentary where you describe three (3) figures your group found, answering the questions in 4. above.
-- Adapt the Quarto [template](ex-01-template.qmd) used for Exercise 01.
+- Adapt the Quarto [template](ex-01-template.qmd) for Exercise 01.
+

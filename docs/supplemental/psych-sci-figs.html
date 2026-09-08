@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-31">
+<meta name="dcterms.date" content="2026-09-08">
 
 <title>Findings: Data viz in psych sci – PSYCH 490.007</title>
 <style>
@@ -131,9 +131,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="4e80ddc1b1d4040cc99d2e179e229b55" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>Make sure to install R &amp; RStudio on your personal computer. See <a href="tutorials/tutoria-install-r-rstudio.qmd">this tutorial</a> for help.</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
@@ -230,6 +227,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../slides/wk-02-2026-09-04-introducing-quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 02 • Fri Sep 04</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-03-2026-09-09-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 03 • Wed Sep 09</span></a>
   </div>
 </li>
       </ul>
@@ -382,6 +385,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#figure-41" id="toc-figure-41" class="nav-link" data-scroll-target="#figure-41">Figure 41</a></li>
   <li><a href="#figure-42" id="toc-figure-42" class="nav-link" data-scroll-target="#figure-42">Figure 42</a></li>
   <li><a href="#figure-43" id="toc-figure-43" class="nav-link" data-scroll-target="#figure-43">Figure 43</a></li>
+  <li><a href="#figure-44" id="toc-figure-44" class="nav-link" data-scroll-target="#figure-44">Figure 44</a></li>
+  <li><a href="#figure-45" id="toc-figure-45" class="nav-link" data-scroll-target="#figure-45">Figure 45</a></li>
+  <li><a href="#figure-46" id="toc-figure-46" class="nav-link" data-scroll-target="#figure-46">Figure 46</a></li>
+  <li><a href="#figure-47" id="toc-figure-47" class="nav-link" data-scroll-target="#figure-47">Figure 47</a></li>
+  <li><a href="#figure-48" id="toc-figure-48" class="nav-link" data-scroll-target="#figure-48">Figure 48</a></li>
+  <li><a href="#figure-49" id="toc-figure-49" class="nav-link" data-scroll-target="#figure-49">Figure 49</a></li>
+  <li><a href="#figure-50" id="toc-figure-50" class="nav-link" data-scroll-target="#figure-50">Figure 50</a></li>
+  <li><a href="#figure-51" id="toc-figure-51" class="nav-link" data-scroll-target="#figure-51">Figure 51</a></li>
+  <li><a href="#figure-52" id="toc-figure-52" class="nav-link" data-scroll-target="#figure-52">Figure 52</a></li>
+  <li><a href="#figure-53" id="toc-figure-53" class="nav-link" data-scroll-target="#figure-53">Figure 53</a></li>
+  <li><a href="#figure-54" id="toc-figure-54" class="nav-link" data-scroll-target="#figure-54">Figure 54</a></li>
+  <li><a href="#figure-55" id="toc-figure-55" class="nav-link" data-scroll-target="#figure-55">Figure 55</a></li>
+  <li><a href="#figure-56" id="toc-figure-56" class="nav-link" data-scroll-target="#figure-56">Figure 56</a></li>
+  <li><a href="#figure-57" id="toc-figure-57" class="nav-link" data-scroll-target="#figure-57">Figure 57</a></li>
+  <li><a href="#figure-58" id="toc-figure-58" class="nav-link" data-scroll-target="#figure-58">Figure 58</a></li>
+  <li><a href="#figure-59" id="toc-figure-59" class="nav-link" data-scroll-target="#figure-59">Figure 59</a></li>
+  <li><a href="#figure-60" id="toc-figure-60" class="nav-link" data-scroll-target="#figure-60">Figure 60</a></li>
+  <li><a href="#figure-61" id="toc-figure-61" class="nav-link" data-scroll-target="#figure-61">Figure 61</a></li>
+  <li><a href="#figure-62" id="toc-figure-62" class="nav-link" data-scroll-target="#figure-62">Figure 62</a></li>
+  <li><a href="#figure-63" id="toc-figure-63" class="nav-link" data-scroll-target="#figure-63">Figure 63</a></li>
+  <li><a href="#figure-64" id="toc-figure-64" class="nav-link" data-scroll-target="#figure-64">Figure 64</a></li>
+  <li><a href="#figure-65" id="toc-figure-65" class="nav-link" data-scroll-target="#figure-65">Figure 65</a></li>
+  <li><a href="#figure-66" id="toc-figure-66" class="nav-link" data-scroll-target="#figure-66">Figure 66</a></li>
+  <li><a href="#figure-67" id="toc-figure-67" class="nav-link" data-scroll-target="#figure-67">Figure 67</a></li>
+  <li><a href="#figure-68" id="toc-figure-68" class="nav-link" data-scroll-target="#figure-68">Figure 68</a></li>
+  <li><a href="#figure-69" id="toc-figure-69" class="nav-link" data-scroll-target="#figure-69">Figure 69</a></li>
+  <li><a href="#figure-70" id="toc-figure-70" class="nav-link" data-scroll-target="#figure-70">Figure 70</a></li>
+  <li><a href="#figure-71" id="toc-figure-71" class="nav-link" data-scroll-target="#figure-71">Figure 71</a></li>
+  <li><a href="#figure-72" id="toc-figure-72" class="nav-link" data-scroll-target="#figure-72">Figure 72</a></li>
+  <li><a href="#figure-73" id="toc-figure-73" class="nav-link" data-scroll-target="#figure-73">Figure 73</a></li>
+  <li><a href="#figure-74" id="toc-figure-74" class="nav-link" data-scroll-target="#figure-74">Figure 74</a></li>
+  <li><a href="#figure-75" id="toc-figure-75" class="nav-link" data-scroll-target="#figure-75">Figure 75</a></li>
+  <li><a href="#figure-76" id="toc-figure-76" class="nav-link" data-scroll-target="#figure-76">Figure 76</a></li>
+  <li><a href="#figure-77" id="toc-figure-77" class="nav-link" data-scroll-target="#figure-77">Figure 77</a></li>
+  <li><a href="#figure-78" id="toc-figure-78" class="nav-link" data-scroll-target="#figure-78">Figure 78</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/supplemental/psych-sci-figs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -402,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 31, 2026</p>
+      <p class="date">September 8, 2026</p>
     </div>
   </div>
   
@@ -422,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="about" class="level2">
 <h2 class="anchored" data-anchor-id="about">About</h2>
-<p>This page extracts information about the data visualizations we explored in <a href="../exercises/ex01-figs-in-psych-sci.qmd">Exercise-01</a> from the shared Google Sheet.</p>
+<p>This page extracts information about the data visualizations we explored in <a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise-01</a> from the shared Google Sheet.</p>
 </section>
 <section id="survey" class="level2">
 <h2 class="anchored" data-anchor-id="survey">Survey</h2>
@@ -459,8 +497,8 @@ Important
 <div class="cell-output cell-output-stdout">
 <pre><code>function (...) 
 capture_output(.f(...))
-&lt;bytecode: 0xb777fc7b0&gt;
-&lt;environment: 0xb777fc4d8&gt;</code></pre>
+&lt;bytecode: 0x8c5f21b60&gt;
+&lt;environment: 0x8c5f21888&gt;</code></pre>
 </div>
 </div>
 </section>
@@ -533,7 +571,7 @@ Note
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>There are 69 responses.</p>
+<p>There are 93 responses.</p>
 <p>These are the column/variable names.</p>
 <div class="cell">
 <details class="code-fold">
@@ -559,8 +597,8 @@ Note
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(url_to_figure))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>There were <em>n</em>=16 unique respondents.</p>
-<p>Of the 69 responses from these individuals or teams, <em>n</em>=43 had URLs we could link to directly.</p>
+<p>There were <em>n</em>=20 unique respondents.</p>
+<p>Of the 93 responses from these individuals or teams, <em>n</em>=78 had URLs we could link to directly.</p>
 </section>
 <section id="figures-found" class="level2">
 <h2 class="anchored" data-anchor-id="figures-found">Figures found</h2>
@@ -888,8 +926,8 @@ Note
 </section>
 <section id="figure-10" class="level3">
 <h3 class="anchored" data-anchor-id="figure-10">Figure 10</h3>
-<p><strong>Source</strong>: <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1" class="uri">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1</a></p>
-<p><a href="https://www.frontiersin.org/files/Articles/138665/xml-images/fpsyg-06-00825-g001.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://www.frontiersin.org/files/Articles/138665/xml-images/fpsyg-06-00825-g001.webp" class="img-fluid"></a></p>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/10.1177/21677026251365933" class="uri">https://journals.sagepub.com/doi/10.1177/21677026251365933</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -905,9 +943,9 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Eddie</td>
-<td>article</td>
-<td>Red Bull as a cultural symbol and the process of sublimiinal advertising are interesting</td>
+<td>George</td>
+<td>Article</td>
+<td>Plots out behaviors and types of children in a nominal way</td>
 </tr>
 </tbody>
 </table>
@@ -919,15 +957,201 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>NA</td>
+<td>Interest in the comparison between a questionnaire and personality</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="figure-11" class="level3">
 <h3 class="anchored" data-anchor-id="figure-11">Figure 11</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1458/8499506" class="uri">https://academic.oup.com/chidev/article/97/5/1458/8499506</a></p>
+<p><a href="https://academic.oup.com/view-large/572715349.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://academic.oup.com/view-large/572715349.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Article</td>
+<td>Rather than separate out into one categorization, allows different types of characterizations</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Also a comparison to a Harvard Study in results</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-12" class="level3">
+<h3 class="anchored" data-anchor-id="figure-12">Figure 12</h3>
+<p><strong>Source</strong>: <a href="https://psycnet.apa.org/fulltext/2024-78627-001.pdf?auth_token=1875ac169bf3391e4e21111bd71257e4b9ebb8d2" class="uri">https://psycnet.apa.org/fulltext/2024-78627-001.pdf?auth_token=1875ac169bf3391e4e21111bd71257e4b9ebb8d2</a></p>
+<p><a href="Page 350 - Figure 4 (No available option to place as a link).png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="Page 350 - Figure 4 (No available option to place as a link).png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Article</td>
+<td>Interesting visual for brain sensation</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>There is both a graph and a visual with heads to signify the brain responses</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-13" class="level3">
+<h3 class="anchored" data-anchor-id="figure-13">Figure 13</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41539-025-00386-3?fromPaywallRec=true" class="uri">https://www.nature.com/articles/s41539-025-00386-3?fromPaywallRec=true</a></p>
+<p><a href="https://www.nature.com/articles/s41539-025-00386-3/figures/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://www.nature.com/articles/s41539-025-00386-3/figures/1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Journal</td>
+<td>A visualization to show the sequence participants were asked to use</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It allows others to follow what was done simply from a visual glance, not reading a paragraph of text</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-14" class="level3">
+<h3 class="anchored" data-anchor-id="figure-14">Figure 14</h3>
+<p><strong>Source</strong>: <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00051-6" class="uri">https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00051-6</a></p>
+<p><a href="https://www.cell.com/cms/10.1016/j.tics.2021.02.007/asset/c4c69f8e-7cac-46d6-803b-8ae9ba9e8eb2/main.assets/gr1_lrg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://www.cell.com/cms/10.1016/j.tics.2021.02.007/asset/c4c69f8e-7cac-46d6-803b-8ae9ba9e8eb2/main.assets/gr1_lrg.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Journal</td>
+<td>Compares on multiple levels of understanding vs.&nbsp;belief</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares the belief and discernment of fake news from viewers</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-15" class="level3">
+<h3 class="anchored" data-anchor-id="figure-15">Figure 15</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408#dataandmedia</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Journal</td>
+<td>The vast range the bar graphs encompass</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Importance of spouces with no prior intercourse</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-16" class="level3">
+<h3 class="anchored" data-anchor-id="figure-16">Figure 16</h3>
 <p><strong>Source</strong>: <a href="https://direct.mit.edu/jocn/article/38/5/1055/134299/From-Forest-to-Focus-The-Interactive-Effects-of" class="uri">https://direct.mit.edu/jocn/article/38/5/1055/134299/From-Forest-to-Focus-The-Interactive-Effects-of</a></p>
-<p><a href="https://direct.mit.edu/view-large/figure/6060255/JOCN.a.2416_f002.tif" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://direct.mit.edu/view-large/figure/6060255/JOCN.a.2416_f002.tif" class="img-fluid"></a></p>
+<p><a href="https://direct.mit.edu/view-large/figure/6060255/JOCN.a.2416_f002.tif" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://direct.mit.edu/view-large/figure/6060255/JOCN.a.2416_f002.tif" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -950,6 +1174,9 @@ Note
 </tbody>
 </table>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Comments</th>
@@ -957,15 +1184,212 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>NA</td>
+<td>Study utilizes EEGs and other methods to investigate effects of nature on attention and mood</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="figure-12" class="level3">
-<h3 class="anchored" data-anchor-id="figure-12">Figure 12</h3>
+<section id="figure-17" class="level3">
+<h3 class="anchored" data-anchor-id="figure-17">Figure 17</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/10.1177/09567976261453813" class="uri">https://journals.sagepub.com/doi/10.1177/09567976261453813</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>The combination of the dot plot, dot and whisker plot, and bar chart into its own figure made up of sub-panels is extremely effective!</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about different methods for improving media literacy in adults</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-18" class="level3">
+<h3 class="anchored" data-anchor-id="figure-18">Figure 18</h3>
+<p><strong>Source</strong>: <a href="https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/" class="uri">https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/</a></p>
+<p><a href="https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Jittered scatter plot with mean error bars</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about reduced mental health in parents of transgender youth after 2025 Presidential Inauguration</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-19" class="level3">
+<h3 class="anchored" data-anchor-id="figure-19">Figure 19</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.12581" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.12581</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/05818b1a-d2b6-49eb-9336-ed24e77101b7/jora12581-fig-0005-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://onlinelibrary.wiley.com/cms/asset/05818b1a-d2b6-49eb-9336-ed24e77101b7/jora12581-fig-0005-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Integrated MRI photo for clarity was an interesting choice that I have never seen before</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about how older sibling risk taking behavior impacts younger siblings</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-20" class="level3">
+<h3 class="anchored" data-anchor-id="figure-20">Figure 20</h3>
+<p><strong>Source</strong>: <a href="https://pubmed.ncbi.nlm.nih.gov/39343080/" class="uri">https://pubmed.ncbi.nlm.nih.gov/39343080/</a></p>
+<p><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0441/12208374/9aa06f8b3d00/nihms-2092883-f0004.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0441/12208374/9aa06f8b3d00/nihms-2092883-f0004.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Combining MRI scans side by side into one figure is much easier to read than having them as their own individual photos (which is more common in my experience)</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Systematic review of studies interested in connection between psychopathy and brain activity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-21" class="level3">
+<h3 class="anchored" data-anchor-id="figure-21">Figure 21</h3>
+<p><strong>Source</strong>: <a href="https://pubmed.ncbi.nlm.nih.gov/26483461/" class="uri">https://pubmed.ncbi.nlm.nih.gov/26483461/</a></p>
+<p><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/91a8/4655522/022a15d2f42f/pnas.1506451112fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/91a8/4655522/022a15d2f42f/pnas.1506451112fig01.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Combining the line graphs makes for an easy side-by-side comparison and is particularly helpful for data like this</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about how sibling order and family size effects personality and intelligence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-22" class="level3">
+<h3 class="anchored" data-anchor-id="figure-22">Figure 22</h3>
 <p><strong>Source</strong>: <a href="https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S019745801600213X#" class="uri">https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S019745801600213X#</a></p>
-<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S019745801600213X-gr3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S019745801600213X-gr3.jpg" class="img-fluid"></a></p>
+<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S019745801600213X-gr3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S019745801600213X-gr3.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1000,10 +1424,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-13" class="level3">
-<h3 class="anchored" data-anchor-id="figure-13">Figure 13</h3>
+<section id="figure-23" class="level3">
+<h3 class="anchored" data-anchor-id="figure-23">Figure 23</h3>
 <p><strong>Source</strong>: <a href="https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0028393222001166" class="uri">https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0028393222001166</a></p>
-<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0028393222001166-gr2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0028393222001166-gr2.jpg" class="img-fluid"></a></p>
+<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0028393222001166-gr2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0028393222001166-gr2.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1041,10 +1465,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-14" class="level3">
-<h3 class="anchored" data-anchor-id="figure-14">Figure 14</h3>
+<section id="figure-24" class="level3">
+<h3 class="anchored" data-anchor-id="figure-24">Figure 24</h3>
 <p><strong>Source</strong>: <a href="https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0304394012015133" class="uri">https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0304394012015133</a></p>
-<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0304394012015133-gr2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0304394012015133-gr2.jpg" class="img-fluid"></a></p>
+<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0304394012015133-gr2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0304394012015133-gr2.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1079,10 +1503,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-15" class="level3">
-<h3 class="anchored" data-anchor-id="figure-15">Figure 15</h3>
+<section id="figure-25" class="level3">
+<h3 class="anchored" data-anchor-id="figure-25">Figure 25</h3>
 <p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/abs/10.1177/21677026241301298" class="uri">https://journals.sagepub.com/doi/abs/10.1177/21677026241301298</a></p>
-<p><a href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs44184-026-00237-y/MediaObjects/44184_2026_237_Figa_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs44184-026-00237-y/MediaObjects/44184_2026_237_Figa_HTML.png?as=webp" class="img-fluid"></a></p>
+<p><a href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs44184-026-00237-y/MediaObjects/44184_2026_237_Figa_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs44184-026-00237-y/MediaObjects/44184_2026_237_Figa_HTML.png?as=webp" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1117,10 +1541,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-16" class="level3">
-<h3 class="anchored" data-anchor-id="figure-16">Figure 16</h3>
+<section id="figure-26" class="level3">
+<h3 class="anchored" data-anchor-id="figure-26">Figure 26</h3>
 <p><strong>Source</strong>: <a href="https://www.nature.com/articles/s44184-026-00228-z" class="uri">https://www.nature.com/articles/s44184-026-00228-z</a></p>
-<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-026-00228-z/MediaObjects/44184_2026_228_Fig3_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-026-00228-z/MediaObjects/44184_2026_228_Fig3_HTML.png?as=webp" class="img-fluid"></a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-026-00228-z/MediaObjects/44184_2026_228_Fig3_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-026-00228-z/MediaObjects/44184_2026_228_Fig3_HTML.png?as=webp" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1155,10 +1579,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-17" class="level3">
-<h3 class="anchored" data-anchor-id="figure-17">Figure 17</h3>
+<section id="figure-27" class="level3">
+<h3 class="anchored" data-anchor-id="figure-27">Figure 27</h3>
 <p><strong>Source</strong>: <a href="https://www.nature.com/articles/s44184-025-00173-3" class="uri">https://www.nature.com/articles/s44184-025-00173-3</a></p>
-<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-025-00173-3/MediaObjects/44184_2025_173_Fig1_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-025-00173-3/MediaObjects/44184_2025_173_Fig1_HTML.png?as=webp" class="img-fluid"></a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-025-00173-3/MediaObjects/44184_2025_173_Fig1_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-025-00173-3/MediaObjects/44184_2025_173_Fig1_HTML.png?as=webp" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1193,10 +1617,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-18" class="level3">
-<h3 class="anchored" data-anchor-id="figure-18">Figure 18</h3>
+<section id="figure-28" class="level3">
+<h3 class="anchored" data-anchor-id="figure-28">Figure 28</h3>
 <p><strong>Source</strong>: <a href="https://www.researchgate.net/publication/374739075_Research_on_the_influence_of_physical_games_in_the_process_of_preschool_children's_psychological_development" class="uri">https://www.researchgate.net/publication/374739075_Research_on_the_influence_of_physical_games_in_the_process_of_preschool_children's_psychological_development</a></p>
-<p><a href="https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png" class="img-fluid"></a></p>
+<p><a href="https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1231,54 +1655,11 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-19" class="level3">
-<h3 class="anchored" data-anchor-id="figure-19">Figure 19</h3>
-<p><strong>Source</strong>: <a href="https://statmodeling.stat.columbia.edu/2017/07/16/graphs-comparisons-case-study/" class="uri">https://statmodeling.stat.columbia.edu/2017/07/16/graphs-comparisons-case-study/</a></p>
-<p><a href="https://statmodeling.stat.columbia.edu/wp-content/uploads/2017/05/Screen-Shot-2017-05-23-at-12.40.49-PM-1024x724.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://statmodeling.stat.columbia.edu/wp-content/uploads/2017/05/Screen-Shot-2017-05-23-at-12.40.49-PM-1024x724.png" class="img-fluid"></a></p>
+<section id="figure-29" class="level3">
+<h3 class="anchored" data-anchor-id="figure-29">Figure 29</h3>
+<p><strong>Source</strong>: &lt;Sleep deprivation increases formation of false memory - Lo - 2016 - Journal of Sleep Research - Wiley Online Library&gt;</p>
+<p><a href="spotlight-issue-28-figure_tcm7-179665_w1024_n.gif (500×250)" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="spotlight-issue-28-figure_tcm7-179665_w1024_n.gif (500×250)" class="img-fluid"></a></p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Analyst</th>
-<th>Source Type</th>
-<th>Why Selected</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Elizabeth</td>
-<td>website</td>
-<td>Comparison made between the graphs. The graphs themselves seemed to be legible, and the description of the graphs is sufficient to understand what this figure is trying to show.</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Comments</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>NA</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="figure-20" class="level3">
-<h3 class="anchored" data-anchor-id="figure-20">Figure 20</h3>
-<p><strong>Source</strong>: <a href="https://www.sciencedirect.com/science/article/pii/S0022096516000023?via%3Dihub" class="uri">https://www.sciencedirect.com/science/article/pii/S0022096516000023?via%3Dihub</a></p>
-<p><a href="https://ars.els-cdn.com/content/image/1-s2.0-S0022096516000023-gr1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0022096516000023-gr1.jpg" class="img-fluid"></a></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Analyst</th>
@@ -1290,7 +1671,7 @@ Note
 <tr class="odd">
 <td>Elizabeth</td>
 <td>Article</td>
-<td>Many aspects of the graph can be interpreted as it moves in two directions</td>
+<td>NA</td>
 </tr>
 </tbody>
 </table>
@@ -1307,10 +1688,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-21" class="level3">
-<h3 class="anchored" data-anchor-id="figure-21">Figure 21</h3>
+<section id="figure-30" class="level3">
+<h3 class="anchored" data-anchor-id="figure-30">Figure 30</h3>
 <p><strong>Source</strong>: <a href="https://www.pnas.org/doi/10.1073/pnas.2516655123" class="uri">https://www.pnas.org/doi/10.1073/pnas.2516655123</a></p>
-<p><a href="https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg" class="img-fluid"></a></p>
+<p><a href="https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1328,7 +1709,7 @@ Note
 <tr class="odd">
 <td>Daniel</td>
 <td>Article</td>
-<td>They use a bar graph to represent blindness to absence of minority groups</td>
+<td>They use a pictogram chart to represent blindness to absence of minority groups</td>
 </tr>
 </tbody>
 </table>
@@ -1343,15 +1724,15 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>They use a bar graph to represent blindness to absence of minority groups</td>
+<td>They use a pictogra, chart to represent blindness to absence of minority groups</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="figure-22" class="level3">
-<h3 class="anchored" data-anchor-id="figure-22">Figure 22</h3>
+<section id="figure-31" class="level3">
+<h3 class="anchored" data-anchor-id="figure-31">Figure 31</h3>
 <p><strong>Source</strong>: <a href="https://www.sciencedirect.com/science/article/pii/S2214782925000570?via%3Dihub#s0040" class="uri">https://www.sciencedirect.com/science/article/pii/S2214782925000570?via%3Dihub#s0040</a></p>
-<p><a href="https://ars.els-cdn.com/content/image/1-s2.0-S2214782925000570-gr4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S2214782925000570-gr4.jpg" class="img-fluid"></a></p>
+<p><a href="https://ars.els-cdn.com/content/image/1-s2.0-S2214782925000570-gr4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S2214782925000570-gr4.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1386,10 +1767,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-23" class="level3">
-<h3 class="anchored" data-anchor-id="figure-23">Figure 23</h3>
+<section id="figure-32" class="level3">
+<h3 class="anchored" data-anchor-id="figure-32">Figure 32</h3>
 <p><strong>Source</strong>: <a href="https://www.apa.org/pubs/reports/stress-in-america/2025" class="uri">https://www.apa.org/pubs/reports/stress-in-america/2025</a></p>
-<p><a href="https://www.apa.org/pubs/reports/stress-in-america/2025/infographic-loneliness-general.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="https://www.apa.org/pubs/reports/stress-in-america/2025/infographic-loneliness-general.png" class="img-fluid"></a></p>
+<p><a href="https://www.apa.org/pubs/reports/stress-in-america/2025/infographic-loneliness-general.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="https://www.apa.org/pubs/reports/stress-in-america/2025/infographic-loneliness-general.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1424,11 +1805,16 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-24" class="level3">
-<h3 class="anchored" data-anchor-id="figure-24">Figure 24</h3>
+<section id="figure-33" class="level3">
+<h3 class="anchored" data-anchor-id="figure-33">Figure 33</h3>
 <p><strong>Source</strong>: <a href="https://www.pnas.org/doi/full/10.1073/pnas.2105061118" class="uri">https://www.pnas.org/doi/full/10.1073/pnas.2105061118</a></p>
-<p><a href="https://www.pnas.org/cms/10.1073/pnas.2105061118/asset/253632d8-6031-42d3-a783-fa8cc5b6697e/assets/images/large/pnas.202105061fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="https://www.pnas.org/cms/10.1073/pnas.2105061118/asset/253632d8-6031-42d3-a783-fa8cc5b6697e/assets/images/large/pnas.202105061fig01.jpg" class="img-fluid"></a></p>
+<p><a href="https://www.pnas.org/cms/10.1073/pnas.2105061118/asset/253632d8-6031-42d3-a783-fa8cc5b6697e/assets/images/large/pnas.202105061fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="https://www.pnas.org/cms/10.1073/pnas.2105061118/asset/253632d8-6031-42d3-a783-fa8cc5b6697e/assets/images/large/pnas.202105061fig01.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Analyst</th>
@@ -1440,11 +1826,14 @@ Note
 <tr class="odd">
 <td>Daniel</td>
 <td>Article</td>
-<td>NA</td>
+<td>I found the topic at hand interesting and the bar chart also represents the findings in a way that is easier to understand</td>
 </tr>
 </tbody>
 </table>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Comments</th>
@@ -1452,15 +1841,97 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>NA</td>
+<td>The bar chart has two 2 experiments of the study in the chart making it so that one can compare and understand the two more easily.</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="figure-25" class="level3">
-<h3 class="anchored" data-anchor-id="figure-25">Figure 25</h3>
+<section id="figure-34" class="level3">
+<h3 class="anchored" data-anchor-id="figure-34">Figure 34</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/full/10.1177/0956797618774253" class="uri">https://journals.sagepub.com/doi/full/10.1177/0956797618774253</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/0956797618774253/asset/27865930-3f69-4bcc-a3e6-df85359dc005/assets/images/large/10.1177_0956797618774253-fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="https://journals.sagepub.com/cms/10.1177/0956797618774253/asset/27865930-3f69-4bcc-a3e6-df85359dc005/assets/images/large/10.1177_0956797618774253-fig1.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>Have never seen a scatter plot presented in this manner</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It is actually 2 scatter plots comparing the control group with the one that did have changes, making it an interest visualization to look at and look at the differences in data</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-35" class="level3">
+<h3 class="anchored" data-anchor-id="figure-35">Figure 35</h3>
+<p><strong>Source</strong>: <a href="https://link.springer.com/article/10.1007/s40593-025-00521-6" class="uri">https://link.springer.com/article/10.1007/s40593-025-00521-6</a></p>
+<p><a href="https://link.springer.com/article/10.1007/s40593-025-00521-6/figures/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="https://link.springer.com/article/10.1007/s40593-025-00521-6/figures/1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>Topic was interesting and I wanted to see how thye would be able to visualize their findings</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It shows the mean grades from the 1st assignment and 5th assignment, comparing what effects the LLMs had on the mean grades for each aspect measured.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-36" class="level3">
+<h3 class="anchored" data-anchor-id="figure-36">Figure 36</h3>
 <p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/4/1068/8653055" class="uri">https://academic.oup.com/chidev/article/97/4/1068/8653055</a></p>
-<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/4/10.1093_chidev_aacag031/1/m_aacag031f2.jpeg?Expires=1789714160&amp;Signature=qavOyuQIKk9aH~Qg5FRO6BHfPD9jFqnmxDcN-7SVUWEPYW8hvFssdNdO8k7YsQmPkwuL6iyrvdsCw0Fs2~xxsQ7ZpcyDVn91VC0TefJJEoiAuNhE6PxOGGhSPRqbFeTBDiOIuBeb9fzZpW7PM3PUySz9tXG~J17z1caf70F9nwvTJoahF6Z4R8xbjhHAWUcSbBNIYVH2gtHPMIx4atJEaKg8CffA5ThExHhK3pVSHtHBLNACn61Qrjzy9n44Jo~9Hf-Rr7HlWQ-z~ui9GQHJlB-85l4OLtsIipxvy8T35pt8KcdkSmbIbmWDyrOQ0l4lfQMvZP4dpyy3XZ7Xul7s6g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/4/10.1093_chidev_aacag031/1/m_aacag031f2.jpeg?Expires=1789714160&amp;Signature=qavOyuQIKk9aH~Qg5FRO6BHfPD9jFqnmxDcN-7SVUWEPYW8hvFssdNdO8k7YsQmPkwuL6iyrvdsCw0Fs2~xxsQ7ZpcyDVn91VC0TefJJEoiAuNhE6PxOGGhSPRqbFeTBDiOIuBeb9fzZpW7PM3PUySz9tXG~J17z1caf70F9nwvTJoahF6Z4R8xbjhHAWUcSbBNIYVH2gtHPMIx4atJEaKg8CffA5ThExHhK3pVSHtHBLNACn61Qrjzy9n44Jo~9Hf-Rr7HlWQ-z~ui9GQHJlB-85l4OLtsIipxvy8T35pt8KcdkSmbIbmWDyrOQ0l4lfQMvZP4dpyy3XZ7Xul7s6g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
+<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/4/10.1093_chidev_aacag031/1/m_aacag031f2.jpeg?Expires=1789714160&amp;Signature=qavOyuQIKk9aH~Qg5FRO6BHfPD9jFqnmxDcN-7SVUWEPYW8hvFssdNdO8k7YsQmPkwuL6iyrvdsCw0Fs2~xxsQ7ZpcyDVn91VC0TefJJEoiAuNhE6PxOGGhSPRqbFeTBDiOIuBeb9fzZpW7PM3PUySz9tXG~J17z1caf70F9nwvTJoahF6Z4R8xbjhHAWUcSbBNIYVH2gtHPMIx4atJEaKg8CffA5ThExHhK3pVSHtHBLNACn61Qrjzy9n44Jo~9Hf-Rr7HlWQ-z~ui9GQHJlB-85l4OLtsIipxvy8T35pt8KcdkSmbIbmWDyrOQ0l4lfQMvZP4dpyy3XZ7Xul7s6g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/4/10.1093_chidev_aacag031/1/m_aacag031f2.jpeg?Expires=1789714160&amp;Signature=qavOyuQIKk9aH~Qg5FRO6BHfPD9jFqnmxDcN-7SVUWEPYW8hvFssdNdO8k7YsQmPkwuL6iyrvdsCw0Fs2~xxsQ7ZpcyDVn91VC0TefJJEoiAuNhE6PxOGGhSPRqbFeTBDiOIuBeb9fzZpW7PM3PUySz9tXG~J17z1caf70F9nwvTJoahF6Z4R8xbjhHAWUcSbBNIYVH2gtHPMIx4atJEaKg8CffA5ThExHhK3pVSHtHBLNACn61Qrjzy9n44Jo~9Hf-Rr7HlWQ-z~ui9GQHJlB-85l4OLtsIipxvy8T35pt8KcdkSmbIbmWDyrOQ0l4lfQMvZP4dpyy3XZ7Xul7s6g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1498,10 +1969,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-26" class="level3">
-<h3 class="anchored" data-anchor-id="figure-26">Figure 26</h3>
+<section id="figure-37" class="level3">
+<h3 class="anchored" data-anchor-id="figure-37">Figure 37</h3>
 <p><strong>Source</strong>: <a href="https://www.apa.org/monitor/2025/11-12/ai-use-early-career-psychologists" class="uri">https://www.apa.org/monitor/2025/11-12/ai-use-early-career-psychologists</a></p>
-<p><a href="https://www.apa.org/monitor/2025/11-12/infographics-datapoint.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="https://www.apa.org/monitor/2025/11-12/infographics-datapoint.png" class="img-fluid"></a></p>
+<p><a href="https://www.apa.org/monitor/2025/11-12/infographics-datapoint.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="https://www.apa.org/monitor/2025/11-12/infographics-datapoint.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1517,7 +1988,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Maria</td>
+<td>Maria/Elaina/olivia</td>
 <td>Article</td>
 <td>Clearly compares AI use among psychologists at different career stages</td>
 </tr>
@@ -1539,10 +2010,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-27" class="level3">
-<h3 class="anchored" data-anchor-id="figure-27">Figure 27</h3>
+<section id="figure-38" class="level3">
+<h3 class="anchored" data-anchor-id="figure-38">Figure 38</h3>
 <p><strong>Source</strong>: <a href="https://spsp.org/news-center/character-context-blog/look-sunny-side-optimism-increases-people-get-older" class="uri">https://spsp.org/news-center/character-context-blog/look-sunny-side-optimism-increases-people-get-older</a></p>
-<p><a href="https://spsp.org/sites/default/files/styles/large/public/schwaba-optimism-aging-image.png?itok=Mbz_QRyt" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="https://spsp.org/sites/default/files/styles/large/public/schwaba-optimism-aging-image.png?itok=Mbz_QRyt" class="img-fluid"></a></p>
+<p><a href="https://spsp.org/sites/default/files/styles/large/public/schwaba-optimism-aging-image.png?itok=Mbz_QRyt" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="https://spsp.org/sites/default/files/styles/large/public/schwaba-optimism-aging-image.png?itok=Mbz_QRyt" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1558,7 +2029,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Maria</td>
+<td>Maria/Elaina/olivia</td>
 <td>Article</td>
 <td>I found this graph really interesting because it shows how optimism changes as people get older.</td>
 </tr>
@@ -1580,10 +2051,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-28" class="level3">
-<h3 class="anchored" data-anchor-id="figure-28">Figure 28</h3>
+<section id="figure-39" class="level3">
+<h3 class="anchored" data-anchor-id="figure-39">Figure 39</h3>
 <p><strong>Source</strong>: <a href="https://www.cdc.gov/nchs/products/databriefs/db513.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db513.htm</a></p>
-<p><a href="https://www.cdc.gov/nchs/images/databriefs/501-550/db513-fig1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="https://www.cdc.gov/nchs/images/databriefs/501-550/db513-fig1.gif" class="img-fluid"></a></p>
+<p><a href="https://www.cdc.gov/nchs/images/databriefs/501-550/db513-fig1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="https://www.cdc.gov/nchs/images/databriefs/501-550/db513-fig1.gif" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1599,7 +2070,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Maria</td>
+<td>Maria/Elaina/olivia</td>
 <td>Article</td>
 <td>I found this graph interesting because social media continues to grow and this shows that about half of teenagers spend 4 or more hours a day on screens.</td>
 </tr>
@@ -1621,10 +2092,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-29" class="level3">
-<h3 class="anchored" data-anchor-id="figure-29">Figure 29</h3>
+<section id="figure-40" class="level3">
+<h3 class="anchored" data-anchor-id="figure-40">Figure 40</h3>
 <p><strong>Source</strong>: <a href="https://www.apa.org/monitor/2024/01/trends-pathways-access-mental-health-care" class="uri">https://www.apa.org/monitor/2024/01/trends-pathways-access-mental-health-care</a></p>
-<p><a href="https://www.apa.org/images/2024-01-trends-mental-health-crisis-graph_tcm7-323425.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="https://www.apa.org/images/2024-01-trends-mental-health-crisis-graph_tcm7-323425.png" class="img-fluid"></a></p>
+<p><a href="https://www.apa.org/images/2024-01-trends-mental-health-crisis-graph_tcm7-323425.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="https://www.apa.org/images/2024-01-trends-mental-health-crisis-graph_tcm7-323425.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1662,10 +2133,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-30" class="level3">
-<h3 class="anchored" data-anchor-id="figure-30">Figure 30</h3>
+<section id="figure-41" class="level3">
+<h3 class="anchored" data-anchor-id="figure-41">Figure 41</h3>
 <p><strong>Source</strong>: <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics-z/alcohol-facts-and-statistics/alcohol-and-older-adults-ages-65" class="uri">https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics-z/alcohol-facts-and-statistics/alcohol-and-older-adults-ages-65</a></p>
-<p><a href="https://www.niaaa.nih.gov/sites/default/files/styles/image_425/public/2024%20NSDUH%20Older%20Adults%20Binge.png?itok=oqz-kpXW" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="https://www.niaaa.nih.gov/sites/default/files/styles/image_425/public/2024%20NSDUH%20Older%20Adults%20Binge.png?itok=oqz-kpXW" class="img-fluid"></a></p>
+<p><a href="https://www.niaaa.nih.gov/sites/default/files/styles/image_425/public/2024%20NSDUH%20Older%20Adults%20Binge.png?itok=oqz-kpXW" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="https://www.niaaa.nih.gov/sites/default/files/styles/image_425/public/2024%20NSDUH%20Older%20Adults%20Binge.png?itok=oqz-kpXW" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1700,10 +2171,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-31" class="level3">
-<h3 class="anchored" data-anchor-id="figure-31">Figure 31</h3>
+<section id="figure-42" class="level3">
+<h3 class="anchored" data-anchor-id="figure-42">Figure 42</h3>
 <p><strong>Source</strong>: <a href="https://link.springer.com/article/10.1007/s40519-026-01855-3" class="uri">https://link.springer.com/article/10.1007/s40519-026-01855-3</a></p>
-<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs40519-026-01855-3/MediaObjects/40519_2026_1855_Fig1_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs40519-026-01855-3/MediaObjects/40519_2026_1855_Fig1_HTML.png?as=webp" class="img-fluid"></a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs40519-026-01855-3/MediaObjects/40519_2026_1855_Fig1_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs40519-026-01855-3/MediaObjects/40519_2026_1855_Fig1_HTML.png?as=webp" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1738,10 +2209,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-32" class="level3">
-<h3 class="anchored" data-anchor-id="figure-32">Figure 32</h3>
+<section id="figure-43" class="level3">
+<h3 class="anchored" data-anchor-id="figure-43">Figure 43</h3>
 <p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.70224" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.70224</a></p>
-<p><a href="https://onlinelibrary.wiley.com/cms/asset/13e2dca0-fb38-401d-8fdb-e9a32b0973fb/jora70224-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="https://onlinelibrary.wiley.com/cms/asset/13e2dca0-fb38-401d-8fdb-e9a32b0973fb/jora70224-fig-0002-m.jpg" class="img-fluid"></a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/13e2dca0-fb38-401d-8fdb-e9a32b0973fb/jora70224-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="https://onlinelibrary.wiley.com/cms/asset/13e2dca0-fb38-401d-8fdb-e9a32b0973fb/jora70224-fig-0002-m.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1779,10 +2250,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-33" class="level3">
-<h3 class="anchored" data-anchor-id="figure-33">Figure 33</h3>
+<section id="figure-44" class="level3">
+<h3 class="anchored" data-anchor-id="figure-44">Figure 44</h3>
 <p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1502/8550827" class="uri">https://academic.oup.com/chidev/article/97/5/1502/8550827</a></p>
-<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacag016/2/m_aacag016f2.jpeg?Expires=1791159563&amp;Signature=mm3ohQXUqOmbDFPkKw6abmvY0wRbfLkMuJM-xN8e6AIXginUhaox0ZlDrGDDe5NN18Vq8nc8yqz~jaqG003H97eG4rfi1F3B-qsSyclcTBhM9SikJEKaNqn2o5v71mlyN~14~zbic3nfqRT4SoU26pYQ2-culIqOmeFt-M6lgeN12gNtSdEJ45J0OmqPM3k9~eIEby8-fC9x4BnZ~E5h13Qnbf5WRe5o5~-decnlmNeWZ1r5v5BR2LPsIeTY~avoz4Mm-UMJW1uyZ5MXX2YmNR6vEEQ2b3cLMWe2hexMTkp5paZ3Je7bvwvYBJnr5w3jiTfJ~xn4w94Li8KzE9G33g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacag016/2/m_aacag016f2.jpeg?Expires=1791159563&amp;Signature=mm3ohQXUqOmbDFPkKw6abmvY0wRbfLkMuJM-xN8e6AIXginUhaox0ZlDrGDDe5NN18Vq8nc8yqz~jaqG003H97eG4rfi1F3B-qsSyclcTBhM9SikJEKaNqn2o5v71mlyN~14~zbic3nfqRT4SoU26pYQ2-culIqOmeFt-M6lgeN12gNtSdEJ45J0OmqPM3k9~eIEby8-fC9x4BnZ~E5h13Qnbf5WRe5o5~-decnlmNeWZ1r5v5BR2LPsIeTY~avoz4Mm-UMJW1uyZ5MXX2YmNR6vEEQ2b3cLMWe2hexMTkp5paZ3Je7bvwvYBJnr5w3jiTfJ~xn4w94Li8KzE9G33g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
+<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacag016/2/m_aacag016f2.jpeg?Expires=1791159563&amp;Signature=mm3ohQXUqOmbDFPkKw6abmvY0wRbfLkMuJM-xN8e6AIXginUhaox0ZlDrGDDe5NN18Vq8nc8yqz~jaqG003H97eG4rfi1F3B-qsSyclcTBhM9SikJEKaNqn2o5v71mlyN~14~zbic3nfqRT4SoU26pYQ2-culIqOmeFt-M6lgeN12gNtSdEJ45J0OmqPM3k9~eIEby8-fC9x4BnZ~E5h13Qnbf5WRe5o5~-decnlmNeWZ1r5v5BR2LPsIeTY~avoz4Mm-UMJW1uyZ5MXX2YmNR6vEEQ2b3cLMWe2hexMTkp5paZ3Je7bvwvYBJnr5w3jiTfJ~xn4w94Li8KzE9G33g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacag016/2/m_aacag016f2.jpeg?Expires=1791159563&amp;Signature=mm3ohQXUqOmbDFPkKw6abmvY0wRbfLkMuJM-xN8e6AIXginUhaox0ZlDrGDDe5NN18Vq8nc8yqz~jaqG003H97eG4rfi1F3B-qsSyclcTBhM9SikJEKaNqn2o5v71mlyN~14~zbic3nfqRT4SoU26pYQ2-culIqOmeFt-M6lgeN12gNtSdEJ45J0OmqPM3k9~eIEby8-fC9x4BnZ~E5h13Qnbf5WRe5o5~-decnlmNeWZ1r5v5BR2LPsIeTY~avoz4Mm-UMJW1uyZ5MXX2YmNR6vEEQ2b3cLMWe2hexMTkp5paZ3Je7bvwvYBJnr5w3jiTfJ~xn4w94Li8KzE9G33g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1820,10 +2291,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-34" class="level3">
-<h3 class="anchored" data-anchor-id="figure-34">Figure 34</h3>
+<section id="figure-45" class="level3">
+<h3 class="anchored" data-anchor-id="figure-45">Figure 45</h3>
 <p><strong>Source</strong>: <a href="https://psycnet.apa.org/fulltext/2022-16907-001.html" class="uri">https://psycnet.apa.org/fulltext/2022-16907-001.html</a></p>
-<p><a href="https://psycnet.apa.org/ftasset/journals/bdb/27/1-2/images/thumb_bdb_27_1-2_1_fig4a.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="https://psycnet.apa.org/ftasset/journals/bdb/27/1-2/images/thumb_bdb_27_1-2_1_fig4a.jpg" class="img-fluid"></a></p>
+<p><a href="https://psycnet.apa.org/ftasset/journals/bdb/27/1-2/images/thumb_bdb_27_1-2_1_fig4a.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="https://psycnet.apa.org/ftasset/journals/bdb/27/1-2/images/thumb_bdb_27_1-2_1_fig4a.jpg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1861,10 +2332,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-35" class="level3">
-<h3 class="anchored" data-anchor-id="figure-35">Figure 35</h3>
+<section id="figure-46" class="level3">
+<h3 class="anchored" data-anchor-id="figure-46">Figure 46</h3>
 <p><strong>Source</strong>: <a href="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="uri">https://psycnet.apa.org/fulltext/2026-89350-001.pdf</a></p>
-<p><a href="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><embed src="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="img-fluid"></a></p>
+<p><a href="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><embed src="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1899,10 +2370,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-36" class="level3">
-<h3 class="anchored" data-anchor-id="figure-36">Figure 36</h3>
-<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911</a></p>
-<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/69/1/ps690299.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="https://www.annualreviews.org/docserver/fulltext/psych/69/1/ps690299.f1.gif" class="img-fluid"></a></p>
+<section id="figure-47" class="level3">
+<h3 class="anchored" data-anchor-id="figure-47">Figure 47</h3>
+<p><strong>Source</strong>: <a href="https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/" class="uri">https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/</a></p>
+<p><a href="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1919,8 +2390,8 @@ Note
 <tbody>
 <tr class="odd">
 <td>Callie</td>
-<td>Review Article</td>
-<td>I was curious to understand more about the graph and because I enjoy learning about attitudes.</td>
+<td>Article</td>
+<td>I selcted this graph because I am interested in I-O psychology and the future of AI</td>
 </tr>
 </tbody>
 </table>
@@ -1932,15 +2403,15 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>NA</td>
+<td>Frequency of Use of GenAI Across All Participants</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="figure-37" class="level3">
-<h3 class="anchored" data-anchor-id="figure-37">Figure 37</h3>
-<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia</a></p>
-<p><a href="https://www.annualreviews.org/docserver/fulltext/devpsych/1/1/dp10177.f4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="https://www.annualreviews.org/docserver/fulltext/devpsych/1/1/dp10177.f4.gif" class="img-fluid"></a></p>
+<section id="figure-48" class="level3">
+<h3 class="anchored" data-anchor-id="figure-48">Figure 48</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/journals/releases/law-0000037.pdf" class="uri">https://www.apa.org/pubs/journals/releases/law-0000037.pdf</a></p>
+<p><a href="https://www.researchgate.net/publication/272407118/figure/fig6/AS:11431281656648820@1759257199217/Reported-crime-rates-before-during-and-after-US-Department-of-Education-audits.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="https://www.researchgate.net/publication/272407118/figure/fig6/AS:11431281656648820@1759257199217/Reported-crime-rates-before-during-and-after-US-Department-of-Education-audits.gif" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1956,7 +2427,212 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Maria</td>
+<td>Callie</td>
+<td>Journal Article</td>
+<td>I selected this graph because it relates to colleges and universities</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crimes reported on cmapus throughout the years in relation to the audit</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-49" class="level3">
+<h3 class="anchored" data-anchor-id="figure-49">Figure 49</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/journals/features/sgd-0000050.pdf" class="uri">https://www.apa.org/pubs/journals/features/sgd-0000050.pdf</a></p>
+<p><a href="https://www.apa.org/images/spotlight-issue-28-figure_tcm7-179665_w1024_n.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="https://www.apa.org/images/spotlight-issue-28-figure_tcm7-179665_w1024_n.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Journal Article</td>
+<td>I was curious to see the biases in the hiring proccess and it relates to the field I want to go into</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Three-way interaction between sexual orientation, marital status, and gender.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-50" class="level3">
+<h3 class="anchored" data-anchor-id="figure-50">Figure 50</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/69/1/ps690299.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="https://www.annualreviews.org/docserver/fulltext/psych/69/1/ps690299.f1.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I was curious to understand more about the graph and because I enjoy learning about attitudes.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Showing the proportion of attitude related articles over time. It is focused on the research of attitudes not people’s attitudes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-51" class="level3">
+<h3 class="anchored" data-anchor-id="figure-51">Figure 51</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I found this graph interesting because it included multiple different countries and both male and female preferences in spouse</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the importance of no sexual intercourse in a potential spouse between different countries</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-52" class="level3">
+<h3 class="anchored" data-anchor-id="figure-52">Figure 52</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-clinpsy-050212-185526" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-clinpsy-050212-185526</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/clinpsy/9/1/cp90327.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="https://www.annualreviews.org/docserver/fulltext/clinpsy/9/1/cp90327.f1.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I was curious to see the relation between depression and cardiovascular disorders</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prevalence of depression among patients with cardiovascular disorders in the United States.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-53" class="level3">
+<h3 class="anchored" data-anchor-id="figure-53">Figure 53</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/devpsych/1/1/dp10177.f4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="https://www.annualreviews.org/docserver/fulltext/devpsych/1/1/dp10177.f4.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
 <td>Journal</td>
 <td>Shows how cognitve abilities change as people get older</td>
 </tr>
@@ -1975,10 +2651,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-38" class="level3">
-<h3 class="anchored" data-anchor-id="figure-38">Figure 38</h3>
+<section id="figure-54" class="level3">
+<h3 class="anchored" data-anchor-id="figure-54">Figure 54</h3>
 <p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-110721-045646#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-110721-045646#dataandmedia</a></p>
-<p><a href="https://www.annualreviews.org/docserver/fulltext/organ/11/1/op110453.f2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="https://www.annualreviews.org/docserver/fulltext/organ/11/1/op110453.f2.gif" class="img-fluid"></a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/organ/11/1/op110453.f2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="https://www.annualreviews.org/docserver/fulltext/organ/11/1/op110453.f2.gif" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1994,7 +2670,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Maria</td>
+<td>Maria/Elaina/olivia</td>
 <td>Journal</td>
 <td>I found this graph interesting because it shows which topics are studied the most.</td>
 </tr>
@@ -2013,10 +2689,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-39" class="level3">
-<h3 class="anchored" data-anchor-id="figure-39">Figure 39</h3>
+<section id="figure-55" class="level3">
+<h3 class="anchored" data-anchor-id="figure-55">Figure 55</h3>
 <p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-030222-031142#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-soc-030222-031142#dataandmedia</a></p>
-<p><a href="https://www.annualreviews.org/docserver/fulltext/soc/50/1/so500191.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="https://www.annualreviews.org/docserver/fulltext/soc/50/1/so500191.f1.gif" class="img-fluid"></a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/soc/50/1/so500191.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="https://www.annualreviews.org/docserver/fulltext/soc/50/1/so500191.f1.gif" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2032,7 +2708,7 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td>Maria</td>
+<td>Maria/Elaina/olivia</td>
 <td>Journal</td>
 <td>This graph is interesting because it shows how research on fake news and conspiracy theories has changed over time.</td>
 </tr>
@@ -2054,10 +2730,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-40" class="level3">
-<h3 class="anchored" data-anchor-id="figure-40">Figure 40</h3>
+<section id="figure-56" class="level3">
+<h3 class="anchored" data-anchor-id="figure-56">Figure 56</h3>
 <p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41598-024-55064-y?fromPaywallRec=true" class="uri">https://www.nature.com/articles/s41598-024-55064-y?fromPaywallRec=true</a></p>
-<p><a href="https://www.nature.com/articles/s41598-024-55064-y/figures/3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="https://www.nature.com/articles/s41598-024-55064-y/figures/3.png" class="img-fluid"></a></p>
+<p><a href="https://www.nature.com/articles/s41598-024-55064-y/figures/3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="https://www.nature.com/articles/s41598-024-55064-y/figures/3.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2095,10 +2771,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-41" class="level3">
-<h3 class="anchored" data-anchor-id="figure-41">Figure 41</h3>
+<section id="figure-57" class="level3">
+<h3 class="anchored" data-anchor-id="figure-57">Figure 57</h3>
 <p><strong>Source</strong>: <a href="https://www.nature.com/articles/nature06288" class="uri">https://www.nature.com/articles/nature06288</a></p>
-<p><a href="https://www.nature.com/articles/nature06288/figures/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="https://www.nature.com/articles/nature06288/figures/2.png" class="img-fluid"></a></p>
+<p><a href="https://www.nature.com/articles/nature06288/figures/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="https://www.nature.com/articles/nature06288/figures/2.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2133,10 +2809,10 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-42" class="level3">
-<h3 class="anchored" data-anchor-id="figure-42">Figure 42</h3>
+<section id="figure-58" class="level3">
+<h3 class="anchored" data-anchor-id="figure-58">Figure 58</h3>
 <p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41598-019-44977-8" class="uri">https://www.nature.com/articles/s41598-019-44977-8</a></p>
-<p><a href="https://www.nature.com/articles/s41598-019-44977-8/figures/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="https://www.nature.com/articles/s41598-019-44977-8/figures/2.png" class="img-fluid"></a></p>
+<p><a href="https://www.nature.com/articles/s41598-019-44977-8/figures/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="https://www.nature.com/articles/s41598-019-44977-8/figures/2.png" class="img-fluid"></a></p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -2174,11 +2850,130 @@ Note
 </tbody>
 </table>
 </section>
-<section id="figure-43" class="level3">
-<h3 class="anchored" data-anchor-id="figure-43">Figure 43</h3>
-<p><strong>Source</strong>: <na></na></p>
-<p><a href="https://onlinelibrary.wiley.com/cms/asset/906046fc-3ead-4df9-ab98-567863c67183/jora70228-fig-0001-m.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="https://onlinelibrary.wiley.com/cms/asset/906046fc-3ead-4df9-ab98-567863c67183/jora70228-fig-0001-m.png" class="img-fluid"></a></p>
+<section id="figure-59" class="level3">
+<h3 class="anchored" data-anchor-id="figure-59">Figure 59</h3>
+<p><strong>Source</strong>: <a href="https://www.siop.org/tip-article/navigating-the-landscape-key-findings-from-the-2022-practitioner-needs-survey/?" class="uri">https://www.siop.org/tip-article/navigating-the-landscape-key-findings-from-the-2022-practitioner-needs-survey/?</a></p>
+<p><a href="https://www.siop.org/wp-content/uploads/2024/11/Figure-2-Mean-Ratings.png?" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="https://www.siop.org/wp-content/uploads/2024/11/Figure-2-Mean-Ratings.png?" class="img-fluid"></a></p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hiya</td>
+<td>Article</td>
+<td>I like it because compares satisfaction across 12 aspects of SIOP between 2019 and 2022, and makes changes over time easy to identify.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comaprison of SIOP practioner satisfaction, 2019 vs.&nbsp;2022</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-60" class="level3">
+<h3 class="anchored" data-anchor-id="figure-60">Figure 60</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/news/press/releases/stress/2020/infographics" class="uri">https://www.apa.org/news/press/releases/stress/2020/infographics</a></p>
+<p><a href="https://www.apa.org/news/press/releases/stress/2020/infographics.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="https://www.apa.org/news/press/releases/stress/2020/infographics.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hiya</td>
+<td>Article</td>
+<td>I find it intriguing how parents reported substantially higher COVID-19-related stress than non-parents using a simple 1–10 scale.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Covid-19 Stress Level Comparison: Parents vs.&nbsp;Non-Parents</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-61" class="level3">
+<h3 class="anchored" data-anchor-id="figure-61">Figure 61</h3>
+<p><strong>Source</strong>: <a href="https://featuredcontent.psychonomic.org/why-you-should-check-not-just-test-your-statistical-assumptions/" class="uri">https://featuredcontent.psychonomic.org/why-you-should-check-not-just-test-your-statistical-assumptions/</a></p>
+<p><a href="https://i0.wp.com/featuredcontent.psychonomic.org/wp-content/uploads/Shatz2023fig1.png?resize=665%2C179&amp;ssl=1" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="https://i0.wp.com/featuredcontent.psychonomic.org/wp-content/uploads/Shatz2023fig1.png?resize=665%2C179&amp;ssl=1" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hiya</td>
+<td>Article</td>
+<td>Interesting to me because it shows how distributions that visibly violate normality can still pass a statistical normality test, and why visual inspection matters alongside statistical testing.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Demonstrates how normal statistical tests hide abnormal data</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-62" class="level3">
+<h3 class="anchored" data-anchor-id="figure-62">Figure 62</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.70228" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.70228</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/704bb770-5532-4c00-b092-b8bf85927de3/jora70228-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="https://onlinelibrary.wiley.com/cms/asset/704bb770-5532-4c00-b092-b8bf85927de3/jora70228-fig-0001-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Analyst</th>
@@ -2190,7 +2985,590 @@ Note
 <tr class="odd">
 <td>Natalie</td>
 <td>Journal Article</td>
+<td>Shows the increased positive impact on social connectedness for female adolescents with high adverse childhood experiences using two different types of interventions (school-based / breathwork)</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Trajectories of social connectedness over time for high- and low-adverse childhood experiences groups of female adolesents participating in school-based and breathwork interventions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-63" class="level3">
+<h3 class="anchored" data-anchor-id="figure-63">Figure 63</h3>
+<p><strong>Source</strong>: <a href="https://link.springer.com/article/10.3758/s13415-025-01376-z" class="uri">https://link.springer.com/article/10.3758/s13415-025-01376-z</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.3758%2Fs13415-025-01376-z/MediaObjects/13415_2025_1376_Fig2_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.3758%2Fs13415-025-01376-z/MediaObjects/13415_2025_1376_Fig2_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natalie</td>
+<td>Journal Article</td>
+<td>Interesting to see differences in verbal metaphor processing by type of metaphor</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Metaphors elicit more negative N400 (negativity in time window post word onset) than literal counterparts, but results vary greatly in different time windows</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-64" class="level3">
+<h3 class="anchored" data-anchor-id="figure-64">Figure 64</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1489/8501050" class="uri">https://academic.oup.com/chidev/article/97/5/1489/8501050</a></p>
+<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacaf055/2/m_aacaf055f2.jpeg?Expires=1791350597&amp;Signature=k22YCZwoQp7YPxX5XcXw35juO23afVLe6IPtTBOinYtchrtgosDKdTJD3zFinC57dk-DJHzrQqSLkxEu8j0KeEJhoqjasC~~SLw-t50cyAOzVBVmL5LJ1IMHrRWxetqvaappImnwkQZm7MApbh3nXjfkgT53OJGqBR1I~8m440ZJ9KrvBxhnJisPijFfNgc5hQHjDfeQCGRV0ZCgJ~9W-nywESVwE2h3P939309mHpre1lj0tAq0WpNViLHuxqMsbD4o5XoP5SM14eAgnIBPhMJy8vhQXbQs1IFqeZ3I~GeOYEgzSQGOFsEfJA6e8uMthPrKbxkW6ZMhC9JlzIcBZw__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacaf055/2/m_aacaf055f2.jpeg?Expires=1791350597&amp;Signature=k22YCZwoQp7YPxX5XcXw35juO23afVLe6IPtTBOinYtchrtgosDKdTJD3zFinC57dk-DJHzrQqSLkxEu8j0KeEJhoqjasC~~SLw-t50cyAOzVBVmL5LJ1IMHrRWxetqvaappImnwkQZm7MApbh3nXjfkgT53OJGqBR1I~8m440ZJ9KrvBxhnJisPijFfNgc5hQHjDfeQCGRV0ZCgJ~9W-nywESVwE2h3P939309mHpre1lj0tAq0WpNViLHuxqMsbD4o5XoP5SM14eAgnIBPhMJy8vhQXbQs1IFqeZ3I~GeOYEgzSQGOFsEfJA6e8uMthPrKbxkW6ZMhC9JlzIcBZw__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natalie</td>
+<td>Journal Article</td>
+<td>Shows changes across different age and syndrome groups, highlighted by different color lines</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows changes in challenging behaviors pre and post pandemic for children of different ages and syndrome types</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-65" class="level3">
+<h3 class="anchored" data-anchor-id="figure-65">Figure 65</h3>
+<p><strong>Source</strong>: <a href="https://www.psychologicalscience.org/observer/covid-19-psycorona-global-psychological-response" class="uri">https://www.psychologicalscience.org/observer/covid-19-psycorona-global-psychological-response</a></p>
+<p><a href="https://www.psychologicalscience.org/redesign/wp-content/uploads/2020/07/Psycorona-graphic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2020/07/Psycorona-graphic.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Shows a connections between several emotions in an interesting pattern</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the different emotions people were feeling during the Covid pandemic</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-66" class="level3">
+<h3 class="anchored" data-anchor-id="figure-66">Figure 66</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.70240" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.70240</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/79b2c317-641f-4257-ac62-355398093645/jora70240-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="https://onlinelibrary.wiley.com/cms/asset/79b2c317-641f-4257-ac62-355398093645/jora70240-fig-0001-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_1</td>
+<td>Journal Article</td>
+<td>i found it interesting becuase</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Neural and psychological predictors of digital status-seeking in adolescence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-67" class="level3">
+<h3 class="anchored" data-anchor-id="figure-67">Figure 67</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1564/8725406" class="uri">https://academic.oup.com/chidev/article/97/5/1564/8725406</a></p>
+<p><a href="https://academic.oup.com/view-large/figure/572715188/aacag114f2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="https://academic.oup.com/view-large/figure/572715188/aacag114f2.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_1</td>
+<td>Journal Article</td>
 <td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-68" class="level3">
+<h3 class="anchored" data-anchor-id="figure-68">Figure 68</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/news/press/releases/stress/2022/march-2022-survival-mode" class="uri">https://www.apa.org/news/press/releases/stress/2022/march-2022-survival-mode</a></p>
+<p><a href="https://www.apa.org/images/race-closer-look-economic-stress_tcm7-302720_w1024_n.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="https://www.apa.org/images/race-closer-look-economic-stress_tcm7-302720_w1024_n.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_1</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-69" class="level3">
+<h3 class="anchored" data-anchor-id="figure-69">Figure 69</h3>
+<p><strong>Source</strong>: <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00127-0#f0005" class="uri">https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00127-0#f0005</a></p>
+<p><a href="https://www.cell.com/cms/10.1016/j.tics.2026.05.008/asset/d7ef5ea7-45df-4bbe-8711-1d50cfc9b80c/main.assets/gr1_lrg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="https://www.cell.com/cms/10.1016/j.tics.2026.05.008/asset/d7ef5ea7-45df-4bbe-8711-1d50cfc9b80c/main.assets/gr1_lrg.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_2</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-70" class="level3">
+<h3 class="anchored" data-anchor-id="figure-70">Figure 70</h3>
+<p><strong>Source</strong>: <a href="https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use" class="uri">https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use</a></p>
+<p><a href="https://knowablemagazine.org/docserver/froala-uploads/g-ai-water-footprint-projected.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="https://knowablemagazine.org/docserver/froala-uploads/g-ai-water-footprint-projected.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_2</td>
+<td>Magazine article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-71" class="level3">
+<h3 class="anchored" data-anchor-id="figure-71">Figure 71</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41562-026-02559-5" class="uri">https://www.nature.com/articles/s41562-026-02559-5</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-026-02559-5/MediaObjects/41562_2026_2559_Fig3_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-026-02559-5/MediaObjects/41562_2026_2559_Fig3_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_2</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-72" class="level3">
+<h3 class="anchored" data-anchor-id="figure-72">Figure 72</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/monitor/2026/04-05/ai-psychologists-experience-concerns" class="uri">https://www.apa.org/monitor/2026/04-05/ai-psychologists-experience-concerns</a></p>
+<p><a href="https://www.apa.org/images/2026-04-05-datapoint-graph-tile_tcm7-348266_w1024_n.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="https://www.apa.org/images/2026-04-05-datapoint-graph-tile_tcm7-348266_w1024_n.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Interesting comparison of AI by usage level</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>shows differences in concerns about acuracy, privacy, and bias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-73" class="level3">
+<h3 class="anchored" data-anchor-id="figure-73">Figure 73</h3>
+<p><strong>Source</strong>: <a href="https://www.eneuro.org/content/11/11/ENEURO.0124-24.2024?_gl=1*1mx7k9w*_gcl_au*MTYyNDYzMTY1OS4xNzg3OTQ4NjgwLi0uLS4xNzg3OTQ4NjgwLjgyOTI4MDY2Ny4xNzg4NDU3MDAwLjE3ODg1NDA2Njc." class="uri">https://www.eneuro.org/content/11/11/ENEURO.0124-24.2024?_gl=1*1mx7k9w*_gcl_au*MTYyNDYzMTY1OS4xNzg3OTQ4NjgwLi0uLS4xNzg3OTQ4NjgwLjgyOTI4MDY2Ny4xNzg4NDU3MDAwLjE3ODg1NDA2Njc.</a></p>
+<p><a href="https://www.eneuro.org/content/eneuro/11/11/ENEURO.0124-24.2024/F1.large.jpg?width=800&amp;height=600&amp;carousel=1" class="lightbox" data-gallery="quarto-lightbox-gallery-73"><img src="https://www.eneuro.org/content/eneuro/11/11/ENEURO.0124-24.2024/F1.large.jpg?width=800&amp;height=600&amp;carousel=1" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Journal</td>
+<td>shows behavioral changes accross experimental sessions</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>shows trends in nose poke rats with error bars for veriability</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-74" class="level3">
+<h3 class="anchored" data-anchor-id="figure-74">Figure 74</h3>
+<p><strong>Source</strong>: <a href="https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/" class="uri">https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/</a></p>
+<p><a href="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-74"><img src="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Shows comparison of how often profetionals use generative AI</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows which AI use frequencies are most common among SIOP members</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-75" class="level3">
+<h3 class="anchored" data-anchor-id="figure-75">Figure 75</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cdev.14134" class="uri">https://onlinelibrary.wiley.com/doi/full/10.1111/cdev.14134</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/467de127-41f0-4d31-b3cb-403c76b916fb/cdev14134-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img src="https://onlinelibrary.wiley.com/cms/asset/467de127-41f0-4d31-b3cb-403c76b916fb/cdev14134-fig-0001-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Interesting comparison of brain responses between reading groups</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows differences in print speech processing and brain activity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-76" class="level3">
+<h3 class="anchored" data-anchor-id="figure-76">Figure 76</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jora.70030" class="uri">https://onlinelibrary.wiley.com/doi/full/10.1111/jora.70030</a></p>
+<p><a href="http://pmc.ncbi.nlm.nih.gov/articles/PMC12070023/figure/jora70030-fig-0001/.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img src="http://pmc.ncbi.nlm.nih.gov/articles/PMC12070023/figure/jora70030-fig-0001/.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Interesting comparison of psychological symptoms across age and gender</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-77" class="level3">
+<h3 class="anchored" data-anchor-id="figure-77">Figure 77</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/reports/stress-in-america/2025" class="uri">https://www.apa.org/pubs/reports/stress-in-america/2025</a></p>
+<p><a href="https://www.apa.org/images/infographic-loneliness-signs_tcm7-343552_w1024_n.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-77"><img src="https://www.apa.org/images/infographic-loneliness-signs_tcm7-343552_w1024_n.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>jackson</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-78" class="level3">
+<h3 class="anchored" data-anchor-id="figure-78">Figure 78</h3>
+<p><strong>Source</strong>: <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1" class="uri">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1</a></p>
+<p><a href="https://www.frontiersin.org/files/Articles/138665/xml-images/fpsyg-06-00825-g001.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-78"><img src="https://www.frontiersin.org/files/Articles/138665/xml-images/fpsyg-06-00825-g001.webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Eddie</td>
+<td>article</td>
+<td>Red Bull as a cultural symbol and the process of sublimiinal advertising are interesting</td>
 </tr>
 </tbody>
 </table>
@@ -2686,7 +4064,7 @@ Note
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## About</span></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>This page extracts information about the data visualizations we explored in <span class="co">[</span><span class="ot">Exercise-01</span><span class="co">](../exercises/ex01-figs-in-psych-sci.qmd)</span> from the shared Google Sheet.</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>This page extracts information about the data visualizations we explored in <span class="co">[</span><span class="ot">Exercise-01</span><span class="co">](../exercises/ex-01-figs-in-psych-sci.qmd)</span> from the shared Google Sheet.</span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Survey</span></span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>

@@ -4,11 +4,8 @@ subtitle: "Making data with R"
 format: html
 ---
 
-
 ::: {.callout-warning}
-
 This page is under construction.
-
 :::
 
 ## Dates {-}
@@ -19,3 +16,6 @@ Submit write-up for credit [due]{.orange_due} by [Friday, September 25, 2026](..
 
 ## Goals {-}
 
+1. To gain deeper understanding about different types of data and their strengths and weaknesses.
+2. To gain experience using R to generate simulated data corresponding to different data types.
+3. To gain experience using Google Forms to create surveys that collect data of different data types.

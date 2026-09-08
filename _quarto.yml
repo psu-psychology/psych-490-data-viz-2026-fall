@@ -5,11 +5,11 @@ project:
 
 website:
   title: "PSYCH 490.007"
-  announcement:
-    content: "Make sure to install R & RStudio on your personal computer. See [this tutorial](tutorials/tutoria-install-r-rstudio.qmd) for help."
-    position: below-navbar
-    icon: info-circle
-    dismissable: true
+  # announcement:
+  #   content: "Make sure to install R & RStudio on your personal computer. See [this tutorial](tutorials/tutorial-install-r-rstudio.qmd) for help."
+  #   position: below-navbar
+  #   icon: info-circle
+  #   dismissable: true
   sidebar:
     collapse-level: 1
     style: "docked"
@@ -36,6 +36,8 @@ website:
         href: slides/wk-02-2026-09-02-art-sports-journ.qmd
       - text: "Wk 02 • Fri Sep 04"
         href: slides/wk-02-2026-09-04-introducing-quarto.qmd
+      - text: "Wk 03 • Wed Sep 09"
+        href: slides/wk-03-2026-09-09-making-data.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

@@ -34,7 +34,7 @@
     "href": "schedule.html#week-03",
     "title": "Schedule",
     "section": "Week 03",
-    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nAssigned: Exercise-03\nSlides\n\n\n\nFri, Sep 11\nWork Session: Intro to R\n\nSlides",
+    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nSlides\n\n\n\nFri, Sep 11\nWork Session: Making data with R\n\nSlides\nAssigned: Exercise-03",
     "crumbs": [
       "Schedule"
     ]
@@ -427,7 +427,7 @@
     "href": "exercises/ex-02-data-viz-outside-psych.html#assignment",
     "title": "Exercise 02",
     "section": "Assignment",
-    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1rLiLBRbDQfInauOUBPNwGYq-0VOjskGNY7Wq2QRTTbc/edit?gid=0#gid=0\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared.",
+    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared.",
     "crumbs": [
       "Exercises",
       "Exercise 02"
@@ -438,7 +438,7 @@
     "href": "exercises/ex-02-data-viz-outside-psych.html#submit",
     "title": "Exercise 02",
     "section": "Submit",
-    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above.\nAdapt the Quarto template used for Exercise 01.",
+    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above.\nAdapt the Quarto template for Exercise 01.",
     "crumbs": [
       "Exercises",
       "Exercise 02"
@@ -1598,33 +1598,361 @@
     ]
   },
   {
-    "objectID": "evaluation.html",
-    "href": "evaluation.html",
-    "title": "Evaluation",
-    "section": "",
-    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#announcements",
+    "href": "slides/wk-03-2026-09-09-making-data.html#announcements",
+    "title": "Making Data",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-02 write-up due Thursday, January 30.",
     "crumbs": [
-      "Evaluation"
+      "Slides",
+      "Wk 03 • Wed Sep 09"
     ]
   },
   {
-    "objectID": "evaluation.html#eval-components",
-    "href": "evaluation.html#eval-components",
-    "title": "Evaluation",
-    "section": "",
-    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#last-time",
+    "href": "slides/wk-03-2026-09-09-making-data.html#last-time",
+    "title": "Making Data",
+    "section": "Last time…",
+    "text": "Last time…\n\nIntroducing Quarto\nVisualization in the arts, sports, & journalism",
     "crumbs": [
-      "Evaluation"
+      "Slides",
+      "Wk 03 • Wed Sep 09"
     ]
   },
   {
-    "objectID": "evaluation.html#grading-scheme",
-    "href": "evaluation.html#grading-scheme",
-    "title": "Evaluation",
-    "section": "Grading Scheme",
-    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF",
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#your-turn",
+    "href": "slides/wk-03-2026-09-09-making-data.html#your-turn",
+    "title": "Making Data",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nAre there characteristic features of data visualizations in different fields?",
     "crumbs": [
-      "Evaluation"
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#preliminary-findings",
+    "href": "slides/wk-03-2026-09-09-making-data.html#preliminary-findings",
+    "title": "Making Data",
+    "section": "Preliminary findings",
+    "text": "Preliminary findings\n\nVisualization of Exercise 01\nVisualization of Exercise 02 results",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#today",
+    "href": "slides/wk-03-2026-09-09-making-data.html#today",
+    "title": "Making Data",
+    "section": "Today",
+    "text": "Today\n\nMaking Data\nTypes of data",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#how-are-data-made",
+    "href": "slides/wk-03-2026-09-09-making-data.html#how-are-data-made",
+    "title": "Making Data",
+    "section": "How are data made?",
+    "text": "How are data made?\n\n\n\nBy measurement",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#what-is-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#what-is-measurement",
+    "title": "Making Data",
+    "section": "What is measurement?",
+    "text": "What is measurement?\n\n\n\nA procedure for mapping properties of X onto some numerical standard or scale Y\nMetrology: The science of measurement\nPsychometrics: The study of psychological measurement",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#why-mapping",
+    "href": "slides/wk-03-2026-09-09-making-data.html#why-mapping",
+    "title": "Making Data",
+    "section": "Why ‘mapping’?",
+    "text": "Why ‘mapping’?\n\n\n\n\n\n\n\n\nflowchart TB\n  A[Thing/Person]-- Procedure  --&gt;B(Instrument)\n  B --&gt; C{Data}\n\n\n\n\nFigure 4: Illustration of a mapping from observed entity to data\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\n  A[Thing/Person]-- Procedure  --&gt;B(Instrument)\n  A[Thing/Person]-- Procedure-2  --&gt;C(Instrument-2)\n  B --&gt; E{Data}\n  C --&gt; D{Data-2}\n\n\n\n\nFigure 5: Illustration of multiple mappings from an observed entity to data",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#procedures-are",
+    "href": "slides/wk-03-2026-09-09-making-data.html#procedures-are",
+    "title": "Making Data",
+    "section": "Procedures are",
+    "text": "Procedures are\n\nSequences of behaviors",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#data-quantitative-terminology",
+    "href": "slides/wk-03-2026-09-09-making-data.html#data-quantitative-terminology",
+    "title": "Making Data",
+    "section": "Data ~ quantitative terminology",
+    "text": "Data ~ quantitative terminology\n\nData a symbol of the thing measured, not the thing itself\nE.g., words are a symbol of the things they refer to\n\n\n\n\n\n\n\nflowchart TB\n  A[Cute animal with fur that purrs] --&gt; B('cat')\n  A ---&gt; C('gato')\n  A ---&gt; D('chatte/chat')\n  A ---&gt; E('猫')\n\n\n\n\nFigure 6: Mapping from concept/entity to a word.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#symbols-reflect-select-and-deflect",
+    "href": "slides/wk-03-2026-09-09-making-data.html#symbols-reflect-select-and-deflect",
+    "title": "Making Data",
+    "section": "Symbols reflect, select, and deflect",
+    "text": "Symbols reflect, select, and deflect\n\nEven if any given terminology is a reflection of reality, by its very nature as a terminology, it must be a selection of reality; and to this extent must also as a deflection of reality\n\nBurke (1968)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#what-is",
+    "href": "slides/wk-03-2026-09-09-making-data.html#what-is",
+    "title": "Making Data",
+    "section": "What is",
+    "text": "What is\n\n\n\nreflected, selected, deflected?\n\n\n\n\n\nLindsey (2024)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#stevens-scales-of-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#stevens-scales-of-measurement",
+    "title": "Making Data",
+    "section": "Stevens’ scales of measurement",
+    "text": "Stevens’ scales of measurement\n\n\n\n\n\n\nFigure 8: Stevens (1946)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#questions-about-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#questions-about-measurement",
+    "title": "Making Data",
+    "section": "Questions about measurement",
+    "text": "Questions about measurement\n\nWhat’s the procedure for making this mapping?\nWhat are the rules for assigning numbers/categories?\nWhat can we do with the assigned numbers (summarize, depict)?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#why-does-measurement-matter",
+    "href": "slides/wk-03-2026-09-09-making-data.html#why-does-measurement-matter",
+    "title": "Making Data",
+    "section": "Why does measurement matter?",
+    "text": "Why does measurement matter?\n\n\n\n\n\n\nFigure 9: Garbage in, garbage out",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#in-other-domains",
+    "href": "slides/wk-03-2026-09-09-making-data.html#in-other-domains",
+    "title": "Making Data",
+    "section": "In other domains",
+    "text": "In other domains\n\nBusiness/economics\nPolitics\nSports\nEntertainment\nWeather",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#in-psychology",
+    "href": "slides/wk-03-2026-09-09-making-data.html#in-psychology",
+    "title": "Making Data",
+    "section": "In psychology",
+    "text": "In psychology\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#examples-of",
+    "href": "slides/wk-03-2026-09-09-making-data.html#examples-of",
+    "title": "Making Data",
+    "section": "Examples of…",
+    "text": "Examples of…\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#how-to-measure",
+    "href": "slides/wk-03-2026-09-09-making-data.html#how-to-measure",
+    "title": "Making Data",
+    "section": "How to measure…",
+    "text": "How to measure…\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#psychology-of-survey-response",
+    "href": "slides/wk-03-2026-09-09-making-data.html#psychology-of-survey-response",
+    "title": "Making Data",
+    "section": "Psychology of survey response",
+    "text": "Psychology of survey response\n\n\n\n\n\n\nFigure 10: Tourangeau et al. (2012) Table 1.1",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#scales-of-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#scales-of-measurement",
+    "title": "Making Data",
+    "section": "Scales of measurement",
+    "text": "Scales of measurement\n\n\n\n\n\n\nFigure 11: Stevens (1946)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#main-points",
+    "href": "slides/wk-03-2026-09-09-making-data.html#main-points",
+    "title": "Making Data",
+    "section": "Main points",
+    "text": "Main points\n\nData are made\n\nMap characteristics to quantities\nBy some measurement procedure\nReflect, but also select and deflect\n\nMappings have different scale types (Stevens 1946)\nScales determine i) permissible/logical stats & ii) best visualizations",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#next-time",
+    "href": "slides/wk-03-2026-09-09-making-data.html#next-time",
+    "title": "Making Data",
+    "section": "Next time",
+    "text": "Next time\n\nWork session: Making data with R\nExercise 02",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#references",
+    "href": "slides/wk-03-2026-09-09-making-data.html#references",
+    "title": "Making Data",
+    "section": "References",
+    "text": "References\n\n\n\n\nAviv, Lizzie, Darby Saxbe, Doug Messer, and Sujeet Rao. 2024. The Fair Play Method. Technical report. University of Southern California. https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf.\n\n\nBurke, Kenneth. 1968. Language as Symbolic Action. University of California Press. https://www.ucpress.edu/books/language-as-symbolic-action/paper.\n\n\nDattani, Saloni, and Max Roser. 2024. “What Was the Golden Age of Antibiotics, and How Can We Spark a New One?” Our World in Data, December 21. https://ourworldindata.org/golden-age-antibiotics.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nStevens, S S. 1946. “On the Theory of Scales of Measurement.” Science (New York, N.Y.) 103 (June): 677–80. https://doi.org/10.1126/science.103.2684.677.\n\n\nTourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. The Psychology of Survey Response. Cambridge University Press. https://doi.org/10.1017/cbo9780511819322.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "policies.html",
+    "href": "policies.html",
+    "title": "Policies",
+    "section": "",
+    "text": "Students with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
+    "crumbs": [
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "policies.html#values",
+    "href": "policies.html#values",
+    "title": "Policies",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
+    "crumbs": [
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "values.html",
+    "href": "values.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "values.html#values",
+    "href": "values.html#values",
+    "title": "",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world."
+  },
+  {
+    "objectID": "meta.html",
+    "href": "meta.html",
+    "title": "Under the hood",
+    "section": "",
+    "text": "This page describes how the site is created and rendered.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#about",
+    "href": "meta.html#about",
+    "title": "Under the hood",
+    "section": "",
+    "text": "This page describes how the site is created and rendered.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#workflow",
+    "href": "meta.html#workflow",
+    "title": "Under the hood",
+    "section": "Workflow",
+    "text": "Workflow\nThe site is written in Quarto.\nA site-wide YAML file (_quarto.yml) controls the rendering process.\nSeparate directories contain lecture slides (slides/), exercises (exercises/), class-specific R functions (R/), surveys (surveys/), and tutorials (tutorials/). Quarto files with underscores (e.g., _index.qmd, _about.qmd, _evaluation.qmd, _schedule.qmd, and values.qmd) are the main targets for editing and updating. Parent files (e.g., index.qmd, evaluation.qmd, policies.qmd, and schedule.qmd) call upon these child files in the rendering process.\nA separate Quarto file (psych-490.007-2026-fall-syllabus.qmd) generates a PDF version of a syllabus.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#rendering",
+    "href": "meta.html#rendering",
+    "title": "Under the hood",
+    "section": "Rendering",
+    "text": "Rendering\nTo render the full site, quarto render src is executed from the command line. The fully rendered website is written to docs/.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#software",
+    "href": "meta.html#software",
+    "title": "Under the hood",
+    "section": "Software",
+    "text": "Software\nThe site uses the renv package to try to make all computation reproducible.\nIn addition, the site uses softbib to generate a full reference list of the package dependencies. This is saved in src/include/bib.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "deadlines.html",
+    "href": "deadlines.html",
+    "title": "Deadlines",
+    "section": "",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "crumbs": [
+      "Deadlines"
     ]
   },
   {
@@ -1698,97 +2026,33 @@
     ]
   },
   {
-    "objectID": "deadlines.html",
-    "href": "deadlines.html",
-    "title": "Deadlines",
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "Evaluation",
     "section": "",
-    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
     "crumbs": [
-      "Deadlines"
+      "Evaluation"
     ]
   },
   {
-    "objectID": "meta.html",
-    "href": "meta.html",
-    "title": "Under the hood",
+    "objectID": "evaluation.html#eval-components",
+    "href": "evaluation.html#eval-components",
+    "title": "Evaluation",
     "section": "",
-    "text": "This page describes how the site is created and rendered.",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
     "crumbs": [
-      "Under the hood"
+      "Evaluation"
     ]
   },
   {
-    "objectID": "meta.html#about",
-    "href": "meta.html#about",
-    "title": "Under the hood",
-    "section": "",
-    "text": "This page describes how the site is created and rendered.",
+    "objectID": "evaluation.html#grading-scheme",
+    "href": "evaluation.html#grading-scheme",
+    "title": "Evaluation",
+    "section": "Grading Scheme",
+    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF",
     "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#workflow",
-    "href": "meta.html#workflow",
-    "title": "Under the hood",
-    "section": "Workflow",
-    "text": "Workflow\nThe site is written in Quarto.\nA site-wide YAML file (_quarto.yml) controls the rendering process.\nSeparate directories contain lecture slides (slides/), exercises (exercises/), class-specific R functions (R/), surveys (surveys/), and tutorials (tutorials/). Quarto files with underscores (e.g., _index.qmd, _about.qmd, _evaluation.qmd, _schedule.qmd, and values.qmd) are the main targets for editing and updating. Parent files (e.g., index.qmd, evaluation.qmd, policies.qmd, and schedule.qmd) call upon these child files in the rendering process.\nA separate Quarto file (psych-490.007-2026-fall-syllabus.qmd) generates a PDF version of a syllabus.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#rendering",
-    "href": "meta.html#rendering",
-    "title": "Under the hood",
-    "section": "Rendering",
-    "text": "Rendering\nTo render the full site, quarto render src is executed from the command line. The fully rendered website is written to docs/.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#software",
-    "href": "meta.html#software",
-    "title": "Under the hood",
-    "section": "Software",
-    "text": "Software\nThe site uses the renv package to try to make all computation reproducible.\nIn addition, the site uses softbib to generate a full reference list of the package dependencies. This is saved in src/include/bib.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "values.html",
-    "href": "values.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
-  },
-  {
-    "objectID": "values.html#values",
-    "href": "values.html#values",
-    "title": "",
-    "section": "Values",
-    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world."
-  },
-  {
-    "objectID": "policies.html",
-    "href": "policies.html",
-    "title": "Policies",
-    "section": "",
-    "text": "Students with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
-    "crumbs": [
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "policies.html#values",
-    "href": "policies.html#values",
-    "title": "Policies",
-    "section": "Values",
-    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
-    "crumbs": [
-      "Policies"
+      "Evaluation"
     ]
   },
   {
@@ -1814,11 +2078,11 @@
     ]
   },
   {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#check-in-in-exercise-01",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#check-in-in-exercise-01",
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
     "title": "Data viz in government & business",
-    "section": "Check-in in Exercise 01",
-    "text": "Check-in in Exercise 01\n\nLink to spreadsheet\nPreliminary results",
+    "section": "Check-in on Exercise 01",
+    "text": "Check-in on Exercise 01\n\nLink to spreadsheet\nPreliminary results",
     "crumbs": [
       "Slides",
       "Wk 02 • Mon Aug 31"
@@ -2012,22 +2276,33 @@
     ]
   },
   {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
     "title": "Work session: Introducing Quarto",
-    "section": "Installing Quarto",
-    "text": "Installing Quarto\n\n\n\n\n\n\nFigure 2: https://quarto.org/docs/get-started/",
+    "section": "Wherefore Quarto",
+    "text": "Wherefore Quarto\n\n\n\n\n\n\nFigure 1",
     "crumbs": [
       "Slides",
       "Wk 02 • Fri Sep 04"
     ]
   },
   {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#launch-rstudio",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#launch-rstudio",
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
     "title": "Work session: Introducing Quarto",
-    "section": "Launch RStudio",
-    "text": "Launch RStudio",
+    "section": "Quarto",
+    "text": "Quarto\n\nSystem for creating documents, reports, and dashboards\nCombine text, figures, code, links, video, equations\nWrite in text \\(\\rightarrow\\) render to html, pdf, docx, pptx and more",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
+    "title": "Work session: Introducing Quarto",
+    "section": "Installing Quarto",
+    "text": "Installing Quarto\n\n\n\n\n\n\nFigure 2: https://quarto.org/docs/get-started/",
     "crumbs": [
       "Slides",
       "Wk 02 • Fri Sep 04"
@@ -2089,6 +2364,39 @@
     ]
   },
   {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "Under the hood (1 of 3)",
+    "text": "Under the hood (1 of 3)\n\n\n\nFile metadata are at the top between rows of triple dashes ---\n\nAdd a subtitle: subtitle: \"Friday, September 4, 2026\"\n\nClickable web links are surrounded by &lt; and &gt;",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "Under the hood (2 of 3)",
+    "text": "Under the hood (2 of 3)\n\n\n\nCustom web link labels require this syntax: [Penn State home page](https://psu.edu)\n\nLabel is inside square brackets []\nURL inside parentheses ()\nRenders to: Penn State home page",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "Under the hood (3 of 3)",
+    "text": "Under the hood (3 of 3)\n\n\n\nCode in chunks marked by triple backticks “```”\nChunk says what language to use in curly braces: {r}\n\nCould be other languages Quarto supports",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
     "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#visit-the-template",
     "href": "slides/wk-02-2026-09-04-introducing-quarto.html#visit-the-template",
     "title": "Work session: Introducing Quarto",
@@ -2122,11 +2430,33 @@
     ]
   },
   {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#wrap-up",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#wrap-up",
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
     "title": "Work session: Introducing Quarto",
-    "section": "Wrap-up",
-    "text": "Wrap-up",
+    "section": "More under the hood (1 of 3)",
+    "text": "More under the hood (1 of 3)\n\nMetadata has an `author field. Change this in your document.\nChange title to Exercise 02.\nChange About section to reflect goals of Exercise 02.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "More under the hood (2 of 3)",
+    "text": "More under the hood (2 of 3)\n\nFigures use this syntax: ![]()\n\nSimilar to web link, but note initial exclamation point (!)\n![This is the figure caption](this_is_the_link_to_the_figure)\n\nLink to figure can be URL or path to file (path/to/my_figure.jpg)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "More under the hood (3 of 3)",
+    "text": "More under the hood (3 of 3)\n\nQuarto converts Quarto file into HTML or PDF or…\nWriting and reading Quarto should be easier than writing HTML\nQuarto bundles other tools",
     "crumbs": [
       "Slides",
       "Wk 02 • Fri Sep 04"
@@ -2320,11 +2650,11 @@
     ]
   },
   {
-    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#paris2025-lf",
-    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#paris2025-lf",
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#access-to-u.s.-newspapers",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#access-to-u.s.-newspapers",
     "title": "Data viz in art, sports, & journalism",
-    "section": "",
-    "text": "Paris (2025)",
+    "section": "Access to U.S. newspapers",
+    "text": "Access to U.S. newspapers\n\nhttps://guides.libraries.psu.edu/newspapers/direct",
     "crumbs": [
       "Slides",
       "Wk 02 • Wed Sep 02"
@@ -2347,6 +2677,17 @@
     "title": "Data viz in art, sports, & journalism",
     "section": "The Washington Post",
     "text": "The Washington Post\n\n\n\n\n\n\nFigure 14: Van Dam (2022)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#section",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#section",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "",
+    "text": "Figure 15: https://www.washingtonpost.com/people/andrew-van-dam/",
     "crumbs": [
       "Slides",
       "Wk 02 • Wed Sep 02"
@@ -2391,6 +2732,17 @@
     "title": "Data viz in art, sports, & journalism",
     "section": "Data viz outside \\(\\Psi\\)",
     "text": "Data viz outside \\(\\Psi\\)\n\nNon-science fields visualize data, too\nMultiple purposes/uses of data viz",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#next-time",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#next-time",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Next time",
+    "text": "Next time\n\nIntroducing Quarto\nWork session",
     "crumbs": [
       "Slides",
       "Wk 02 • Wed Sep 02"
@@ -2456,7 +2808,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xb777fc7b0&gt;\n&lt;environment: 0xb777fc4d8&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8c5f21b60&gt;\n&lt;environment: 0x8c5f21888&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -2478,7 +2830,7 @@
     "href": "supplemental/psych-sci-figs.html#cleaning",
     "title": "Findings: Data viz in psych sci",
     "section": "Cleaning",
-    "text": "Cleaning\nNext we load the saved data file, and then proceed to clean it.\n\n\nCode\nex01 &lt;-\n  readr::read_csv(file.path(\"csv\", params$fn), show_col_types = FALSE)\n\n\nThere are 69 responses.\nThese are the column/variable names.\n\n\nCode\n# Google Forms puts the full question in the top row of the data file.\n# We use the names() function to extract and print the original questions.\nex01_qs &lt;- names(ex01)\nex01_qs\n\n\n[1] \"identifier\"    \"source_type\"   \"url_to_src\"    \"why_selected\" \n[5] \"comment\"       \"other\"         \"url_to_figure\"\n\n\nFor simplicity, we visualize below only those with non-empty URLs to the specific figure.",
+    "text": "Cleaning\nNext we load the saved data file, and then proceed to clean it.\n\n\nCode\nex01 &lt;-\n  readr::read_csv(file.path(\"csv\", params$fn), show_col_types = FALSE)\n\n\nThere are 93 responses.\nThese are the column/variable names.\n\n\nCode\n# Google Forms puts the full question in the top row of the data file.\n# We use the names() function to extract and print the original questions.\nex01_qs &lt;- names(ex01)\nex01_qs\n\n\n[1] \"identifier\"    \"source_type\"   \"url_to_src\"    \"why_selected\" \n[5] \"comment\"       \"other\"         \"url_to_figure\"\n\n\nFor simplicity, we visualize below only those with non-empty URLs to the specific figure.",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -2489,7 +2841,7 @@
     "href": "supplemental/psych-sci-figs.html#summary-data",
     "title": "Findings: Data viz in psych sci",
     "section": "Summary data",
-    "text": "Summary data\n\n\nCode\nfigs_w_urls &lt;- ex01 |&gt;\n  filter(!is.na(url_to_figure))\n\n\nThere were n=16 unique respondents.\nOf the 69 responses from these individuals or teams, n=43 had URLs we could link to directly.",
+    "text": "Summary data\n\n\nCode\nfigs_w_urls &lt;- ex01 |&gt;\n  filter(!is.na(url_to_figure))\n\n\nThere were n=20 unique respondents.\nOf the 93 responses from these individuals or teams, n=78 had URLs we could link to directly.",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -2500,7 +2852,7 @@
     "href": "supplemental/psych-sci-figs.html#figures-found",
     "title": "Findings: Data viz in psych sci",
     "section": "Figures found",
-    "text": "Figures found\n\nCode\nthese_figs &lt;- ex01 |&gt;\n  filter(!is.na(url_to_figure))\n\nres &lt;- invisible(lapply(1:dim(these_figs)[1], return_img_chunk, df = these_figs))\ncat(unlist(res), sep = \"\\n\")\n\n\nFigure 1\nSource: https://www.psychologicalscience.org/observer/teaching-current-directions-in-psychological-science-27#lives\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nrog1\nweb_site\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 2\nSource: https://journals.sagepub.com/doi/full/10.1177/21677026241301298\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nrog1\narticle\nROC figures are used only in specialized contexts\n\n\n\n\n\n\nComments\n\n\n\n\nMore info about sensitivity and specificity: https://en.wikipedia.org/wiki/Sensitivity_and_specificity\n\n\n\n\n\nFigure 3\nSource: https://doi.org/10.2147/prbm.s529004\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nkalvin1\narticle\nCurvilinear graphs are interesting!\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nRelationship between fear intensity and enjoyment - moderately intense fear is more enjoyable than low or high intensity fear\n\n\n\n\n\nFigure 4\nSource: https://www.apa.org/pubs/reports/practitioner/2023-psychologist-reach-limits\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nreport\ncompares two different datasets\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\npercentage of psychologist reporting an increase in their patients mental health conditions\n\n\n\n\n\nFigure 5\nSource: https://spsp.org/news/character-and-context-blog/liu-dubey-a-better-way-to-talk-about-climate-change\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\narticle\nscatter plot between two different datasets\n\n\n\n\n\n\nComments\n\n\n\n\na better way to talk about climate change\n\n\n\n\n\nFigure 6\nSource: https://featuredcontent.psychonomic.org/so-long-for-now-thinking-back-on-our-digital-journey/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\narticle\nshows a map graph to explain\n\n\n\n\n\n\nComments\n\n\n\n\nSo long: thinking back on our digitial journey\n\n\n\n\n\nFigure 7\nSource: https://www.science.org/doi/10.1126/sciimmunol.aec9853\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nresearch article\nit highlights several types of graphs for the data\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nPlatelet-derived serotonin drives age-related lung pathology in SARS-CoV-2 infection\n\n\n\n\n\nFigure 8\nSource: https://www.cell.com/patterns/fulltext/S2666-3899(23)00270-2\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nresearch article\nshows research and results over time\n\n\n\n\n\n\nComments\n\n\n\n\nThe roles, challenges, and merits of the p value\n\n\n\n\n\nFigure 9\nSource: https://www.nature.com/articles/d41586-026-02469-6\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\narticle\nscatter plot with several datasets\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nVaporization trick enables ‘tandem’ solar cells to be made at lower temperatures\n\n\n\n\n\nFigure 10\nSource: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nEddie\narticle\nRed Bull as a cultural symbol and the process of sublimiinal advertising are interesting\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 11\nSource: https://direct.mit.edu/jocn/article/38/5/1055/134299/From-Forest-to-Focus-The-Interactive-Effects-of\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nComparison of data sets and shading of confidence interval is interesting!\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 12\nSource: https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S019745801600213X#\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\njournal\nThey used scatter plot with a bar that represents mean value\n\n\n\n\n\n\nComments\n\n\n\n\nsuccessful associative memory encoding\n\n\n\n\n\nFigure 13\nSource: https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0028393222001166\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\njournal\nUsing scatter plot in the bar graph is interesting\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nemoitonal schema effects on associative memory across different emotion\n\n\n\n\n\nFigure 14\nSource: https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0304394012015133\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\njournal\nIt was interesting that they used both line and bar graph to interpret brain activity\n\n\n\n\n\n\nComments\n\n\n\n\npragmatic inferences modulate N400 during sentence comprehension\n\n\n\n\n\nFigure 15\nSource: https://journals.sagepub.com/doi/abs/10.1177/21677026241301298\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\narticle\nThe topic itself was interesting, and the data shows how their association increases throughout the years\n\n\n\n\n\n\nComments\n\n\n\n\nsocial media use and depression\n\n\n\n\n\nFigure 16\nSource: https://www.nature.com/articles/s44184-026-00228-z\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\narticle\nThe bar graph clearly compares changes between pre and post test\n\n\n\n\n\n\nComments\n\n\n\n\npersonality changes following first-time psychedelic use\n\n\n\n\n\nFigure 17\nSource: https://www.nature.com/articles/s44184-025-00173-3\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\narticle\nUsing different colors for bars gives clear distinction between two symptoms\n\n\n\n\n\n\nComments\n\n\n\n\nmental health texting intervention using reinforcement learning\n\n\n\n\n\nFigure 18\nSource: https://www.researchgate.net/publication/374739075_Research_on_the_influence_of_physical_games_in_the_process_of_preschool_children's_psychological_development\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nElizabeth\nArticle\nI found this topic intersting also the graph seemed to really by having both bar and line graph\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 19\nSource: https://statmodeling.stat.columbia.edu/2017/07/16/graphs-comparisons-case-study/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nElizabeth\nwebsite\nComparison made between the graphs. The graphs themselves seemed to be legible, and the description of the graphs is sufficient to understand what this figure is trying to show.\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 20\nSource: https://www.sciencedirect.com/science/article/pii/S0022096516000023?via%3Dihub\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nElizabeth\nArticle\nMany aspects of the graph can be interpreted as it moves in two directions\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 21\nSource: https://www.pnas.org/doi/10.1073/pnas.2516655123\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nThey use a bar graph to represent blindness to absence of minority groups\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nThey use a bar graph to represent blindness to absence of minority groups\n\n\n\n\n\nFigure 22\nSource: https://www.sciencedirect.com/science/article/pii/S2214782925000570?via%3Dihub#s0040\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nThe topic is interesting and it compares and looks at data from a lot of different studies\n\n\n\n\n\n\nComments\n\n\n\n\nCompares different psychological interventions on loneliness\n\n\n\n\n\nFigure 23\nSource: https://www.apa.org/pubs/reports/stress-in-america/2025\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nWebsite\nThe bar chart serves as a great help to visualize how many people are reporting the different signs of loneliness and put it into perspective for the reader\n\n\n\n\n\n\nComments\n\n\n\n\nShows adult reports in the United States on lonliness\n\n\n\n\n\nFigure 24\nSource: https://www.pnas.org/doi/full/10.1073/pnas.2105061118\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 25\nSource: https://academic.oup.com/chidev/article/97/4/1068/8653055\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\njackson\narticle\ncompares performance across multiple differnet statistical learning tasks\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\ncomopares the trajectory of statisitcal learning of children across a number of different task s\n\n\n\n\n\nFigure 26\nSource: https://www.apa.org/monitor/2025/11-12/ai-use-early-career-psychologists\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria\nArticle\nClearly compares AI use among psychologists at different career stages\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the frequency of AI use in the past 12 months by career stage in 2024.\n\n\n\n\n\nFigure 27\nSource: https://spsp.org/news-center/character-context-blog/look-sunny-side-optimism-increases-people-get-older\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria\nArticle\nI found this graph really interesting because it shows how optimism changes as people get older.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows that optimism increases in middle age, then decreases later in life depending on positive life events.\n\n\n\n\n\nFigure 28\nSource: https://www.cdc.gov/nchs/products/databriefs/db513.htm\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria\nArticle\nI found this graph interesting because social media continues to grow and this shows that about half of teenagers spend 4 or more hours a day on screens.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the difference in percentage of screen time in teenagers aged 12-17\n\n\n\n\n\nFigure 29\nSource: https://www.apa.org/monitor/2024/01/trends-pathways-access-mental-health-care\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nArticle\nThe bar graph used is unique in its incredible way to relay information on mental health within different sectors\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nOutlines mental health issues broadly, specifically, and how a need for a solution exists\n\n\n\n\n\nFigure 30\nSource: https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics-z/alcohol-facts-and-statistics/alcohol-and-older-adults-ages-65\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nWeb_site\nThis pie chart makes visualizing the issues being discussed very easy to understand for viewers and covers and interesting topic\n\n\n\n\n\n\nComments\n\n\n\n\nPercent of elederly that consider themselves binge drinkers\n\n\n\n\n\nFigure 31\nSource: https://link.springer.com/article/10.1007/s40519-026-01855-3\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nEmpirical Journal\nI used this bar chart because I think it covers a very relevant and erious topic and is multifacted in the data it presents\n\n\n\n\n\n\nComments\n\n\n\n\nTrends in eating disorders over a recent 8 year span\n\n\n\n\n\nFigure 32\nSource: https://onlinelibrary.wiley.com/doi/10.1111/jora.70224\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nempirical article\nI find this area of psychology, adolescent psych, one of the most intresting topics in this field. This article evaluates parent-adolescent relationships as context for daily relations and mood\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nthe left graph shows the conflict sensitization while the right graph shows the widespread effect\n\n\n\n\n\nFigure 33\nSource: https://academic.oup.com/chidev/article/97/5/1502/8550827\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\njournal article\nI found the topic very intresting and they use dfferent kinds of graphs to depict changes in young childrens behavior after COVID-19\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nshows how four year old childrens scores in Pittsburgh, PA increased after the pandemic on all five behavioral problems\n\n\n\n\n\nFigure 34\nSource: https://psycnet.apa.org/fulltext/2022-16907-001.html\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\njournal article\nUses multiple types of graphs and figures to help better understand whether caregivers are able to integrate stimulus avoidance assesment procedures while still maintaining fidelity\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nthis graph shows us the difference between results based on who adminstered the procedures, the impact this had on destructive behavior, and the clinical implementation\n\n\n\n\n\nFigure 35\nSource: https://psycnet.apa.org/fulltext/2026-89350-001.pdf\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nArnesh\nArticle\nThis forest plot shows effect sizes grouped up in 3 different mental illiness groups, which is very interesting to see\n\n\n\n\n\n\nComments\n\n\n\n\nPlots data from multiple studies into the forest plot\n\n\n\n\n\nFigure 36\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nReview Article\nI was curious to understand more about the graph and because I enjoy learning about attitudes.\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 37\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria\nJournal\nShows how cognitve abilities change as people get older\n\n\n\n\n\n\nComments\n\n\n\n\nCompares cognitive function and dementia screening scores by age\n\n\n\n\n\nFigure 38\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-110721-045646#dataandmedia\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria\nJournal\nI found this graph interesting because it shows which topics are studied the most.\n\n\n\n\n\n\nComments\n\n\n\n\nPercentage of studies covering each of the 14 topics\n\n\n\n\n\nFigure 39\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-soc-030222-031142#dataandmedia\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria\nJournal\nThis graph is interesting because it shows how research on fake news and conspiracy theories has changed over time.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the number of published articles of fake news has increased over the years\n\n\n\n\n\nFigure 40\nSource: https://www.nature.com/articles/s41598-024-55064-y?fromPaywallRec=true\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nArticle\nShows that people’s social media habits can change depending on where they are and who they are with\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nCompares social media use across different social and physical contexts, looking at both frequency and duration of use\n\n\n\n\n\nFigure 41\nSource: https://www.nature.com/articles/nature06288\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nArticle\nShows infants’ preferences based on how helpful or harmful someone is\n\n\n\n\n\n\nComments\n\n\n\n\nCompares infants’ social preferences and social evaluation\n\n\n\n\n\nFigure 42\nSource: https://www.nature.com/articles/s41598-019-44977-8\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nArticle\nInteresting that differences in social behaviour can be connected to differences in brain activity\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nCompares individuals’ eye fixation behaviour with their brain activity during social perception\n\n\n\n\n\nFigure 43\nSource: \n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nNatalie\nJournal Article\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA",
+    "text": "Figures found\n\nCode\nthese_figs &lt;- ex01 |&gt;\n  filter(!is.na(url_to_figure))\n\nres &lt;- invisible(lapply(1:dim(these_figs)[1], return_img_chunk, df = these_figs))\ncat(unlist(res), sep = \"\\n\")\n\n\nFigure 1\nSource: https://www.psychologicalscience.org/observer/teaching-current-directions-in-psychological-science-27#lives\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nrog1\nweb_site\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 2\nSource: https://journals.sagepub.com/doi/full/10.1177/21677026241301298\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nrog1\narticle\nROC figures are used only in specialized contexts\n\n\n\n\n\n\nComments\n\n\n\n\nMore info about sensitivity and specificity: https://en.wikipedia.org/wiki/Sensitivity_and_specificity\n\n\n\n\n\nFigure 3\nSource: https://doi.org/10.2147/prbm.s529004\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nkalvin1\narticle\nCurvilinear graphs are interesting!\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nRelationship between fear intensity and enjoyment - moderately intense fear is more enjoyable than low or high intensity fear\n\n\n\n\n\nFigure 4\nSource: https://www.apa.org/pubs/reports/practitioner/2023-psychologist-reach-limits\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nreport\ncompares two different datasets\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\npercentage of psychologist reporting an increase in their patients mental health conditions\n\n\n\n\n\nFigure 5\nSource: https://spsp.org/news/character-and-context-blog/liu-dubey-a-better-way-to-talk-about-climate-change\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\narticle\nscatter plot between two different datasets\n\n\n\n\n\n\nComments\n\n\n\n\na better way to talk about climate change\n\n\n\n\n\nFigure 6\nSource: https://featuredcontent.psychonomic.org/so-long-for-now-thinking-back-on-our-digital-journey/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\narticle\nshows a map graph to explain\n\n\n\n\n\n\nComments\n\n\n\n\nSo long: thinking back on our digitial journey\n\n\n\n\n\nFigure 7\nSource: https://www.science.org/doi/10.1126/sciimmunol.aec9853\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nresearch article\nit highlights several types of graphs for the data\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nPlatelet-derived serotonin drives age-related lung pathology in SARS-CoV-2 infection\n\n\n\n\n\nFigure 8\nSource: https://www.cell.com/patterns/fulltext/S2666-3899(23)00270-2\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nresearch article\nshows research and results over time\n\n\n\n\n\n\nComments\n\n\n\n\nThe roles, challenges, and merits of the p value\n\n\n\n\n\nFigure 9\nSource: https://www.nature.com/articles/d41586-026-02469-6\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\narticle\nscatter plot with several datasets\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nVaporization trick enables ‘tandem’ solar cells to be made at lower temperatures\n\n\n\n\n\nFigure 10\nSource: https://journals.sagepub.com/doi/10.1177/21677026251365933\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGeorge\nArticle\nPlots out behaviors and types of children in a nominal way\n\n\n\n\n\n\nComments\n\n\n\n\nInterest in the comparison between a questionnaire and personality\n\n\n\n\n\nFigure 11\nSource: https://academic.oup.com/chidev/article/97/5/1458/8499506\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGeorge\nArticle\nRather than separate out into one categorization, allows different types of characterizations\n\n\n\n\n\n\nComments\n\n\n\n\nAlso a comparison to a Harvard Study in results\n\n\n\n\n\nFigure 12\nSource: https://psycnet.apa.org/fulltext/2024-78627-001.pdf?auth_token=1875ac169bf3391e4e21111bd71257e4b9ebb8d2\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGeorge\nArticle\nInteresting visual for brain sensation\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nThere is both a graph and a visual with heads to signify the brain responses\n\n\n\n\n\nFigure 13\nSource: https://www.nature.com/articles/s41539-025-00386-3?fromPaywallRec=true\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGeorge\nJournal\nA visualization to show the sequence participants were asked to use\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nIt allows others to follow what was done simply from a visual glance, not reading a paragraph of text\n\n\n\n\n\nFigure 14\nSource: https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00051-6\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGeorge\nJournal\nCompares on multiple levels of understanding vs. belief\n\n\n\n\n\n\nComments\n\n\n\n\nCompares the belief and discernment of fake news from viewers\n\n\n\n\n\nFigure 15\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408#dataandmedia\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGeorge\nJournal\nThe vast range the bar graphs encompass\n\n\n\n\n\n\nComments\n\n\n\n\nImportance of spouces with no prior intercourse\n\n\n\n\n\nFigure 16\nSource: https://direct.mit.edu/jocn/article/38/5/1055/134299/From-Forest-to-Focus-The-Interactive-Effects-of\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nComparison of data sets and shading of confidence interval is interesting!\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nStudy utilizes EEGs and other methods to investigate effects of nature on attention and mood\n\n\n\n\n\nFigure 17\nSource: https://journals.sagepub.com/doi/10.1177/09567976261453813\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nThe combination of the dot plot, dot and whisker plot, and bar chart into its own figure made up of sub-panels is extremely effective!\n\n\n\n\n\n\nComments\n\n\n\n\nStudy about different methods for improving media literacy in adults\n\n\n\n\n\nFigure 18\nSource: https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nJittered scatter plot with mean error bars\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nStudy about reduced mental health in parents of transgender youth after 2025 Presidential Inauguration\n\n\n\n\n\nFigure 19\nSource: https://onlinelibrary.wiley.com/doi/10.1111/jora.12581\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nIntegrated MRI photo for clarity was an interesting choice that I have never seen before\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nStudy about how older sibling risk taking behavior impacts younger siblings\n\n\n\n\n\nFigure 20\nSource: https://pubmed.ncbi.nlm.nih.gov/39343080/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nCombining MRI scans side by side into one figure is much easier to read than having them as their own individual photos (which is more common in my experience)\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nSystematic review of studies interested in connection between psychopathy and brain activity\n\n\n\n\n\nFigure 21\nSource: https://pubmed.ncbi.nlm.nih.gov/26483461/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nGabbi\nJournal\nCombining the line graphs makes for an easy side-by-side comparison and is particularly helpful for data like this\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nStudy about how sibling order and family size effects personality and intelligence\n\n\n\n\n\nFigure 22\nSource: https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S019745801600213X#\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\njournal\nThey used scatter plot with a bar that represents mean value\n\n\n\n\n\n\nComments\n\n\n\n\nsuccessful associative memory encoding\n\n\n\n\n\nFigure 23\nSource: https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0028393222001166\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\njournal\nUsing scatter plot in the bar graph is interesting\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nemoitonal schema effects on associative memory across different emotion\n\n\n\n\n\nFigure 24\nSource: https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0304394012015133\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\njournal\nIt was interesting that they used both line and bar graph to interpret brain activity\n\n\n\n\n\n\nComments\n\n\n\n\npragmatic inferences modulate N400 during sentence comprehension\n\n\n\n\n\nFigure 25\nSource: https://journals.sagepub.com/doi/abs/10.1177/21677026241301298\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\narticle\nThe topic itself was interesting, and the data shows how their association increases throughout the years\n\n\n\n\n\n\nComments\n\n\n\n\nsocial media use and depression\n\n\n\n\n\nFigure 26\nSource: https://www.nature.com/articles/s44184-026-00228-z\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\narticle\nThe bar graph clearly compares changes between pre and post test\n\n\n\n\n\n\nComments\n\n\n\n\npersonality changes following first-time psychedelic use\n\n\n\n\n\nFigure 27\nSource: https://www.nature.com/articles/s44184-025-00173-3\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMinjoo\narticle\nUsing different colors for bars gives clear distinction between two symptoms\n\n\n\n\n\n\nComments\n\n\n\n\nmental health texting intervention using reinforcement learning\n\n\n\n\n\nFigure 28\nSource: https://www.researchgate.net/publication/374739075_Research_on_the_influence_of_physical_games_in_the_process_of_preschool_children's_psychological_development\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nElizabeth\nArticle\nI found this topic intersting also the graph seemed to really by having both bar and line graph\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 29\nSource: &lt;Sleep deprivation increases formation of false memory - Lo - 2016 - Journal of Sleep Research - Wiley Online Library&gt;\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nElizabeth\nArticle\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 30\nSource: https://www.pnas.org/doi/10.1073/pnas.2516655123\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nThey use a pictogram chart to represent blindness to absence of minority groups\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nThey use a pictogra, chart to represent blindness to absence of minority groups\n\n\n\n\n\nFigure 31\nSource: https://www.sciencedirect.com/science/article/pii/S2214782925000570?via%3Dihub#s0040\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nThe topic is interesting and it compares and looks at data from a lot of different studies\n\n\n\n\n\n\nComments\n\n\n\n\nCompares different psychological interventions on loneliness\n\n\n\n\n\nFigure 32\nSource: https://www.apa.org/pubs/reports/stress-in-america/2025\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nWebsite\nThe bar chart serves as a great help to visualize how many people are reporting the different signs of loneliness and put it into perspective for the reader\n\n\n\n\n\n\nComments\n\n\n\n\nShows adult reports in the United States on lonliness\n\n\n\n\n\nFigure 33\nSource: https://www.pnas.org/doi/full/10.1073/pnas.2105061118\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nI found the topic at hand interesting and the bar chart also represents the findings in a way that is easier to understand\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nThe bar chart has two 2 experiments of the study in the chart making it so that one can compare and understand the two more easily.\n\n\n\n\n\nFigure 34\nSource: https://journals.sagepub.com/doi/full/10.1177/0956797618774253\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nHave never seen a scatter plot presented in this manner\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nIt is actually 2 scatter plots comparing the control group with the one that did have changes, making it an interest visualization to look at and look at the differences in data\n\n\n\n\n\nFigure 35\nSource: https://link.springer.com/article/10.1007/s40593-025-00521-6\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nArticle\nTopic was interesting and I wanted to see how thye would be able to visualize their findings\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nIt shows the mean grades from the 1st assignment and 5th assignment, comparing what effects the LLMs had on the mean grades for each aspect measured.\n\n\n\n\n\nFigure 36\nSource: https://academic.oup.com/chidev/article/97/4/1068/8653055\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\njackson\narticle\ncompares performance across multiple differnet statistical learning tasks\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\ncomopares the trajectory of statisitcal learning of children across a number of different task s\n\n\n\n\n\nFigure 37\nSource: https://www.apa.org/monitor/2025/11-12/ai-use-early-career-psychologists\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria/Elaina/olivia\nArticle\nClearly compares AI use among psychologists at different career stages\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the frequency of AI use in the past 12 months by career stage in 2024.\n\n\n\n\n\nFigure 38\nSource: https://spsp.org/news-center/character-context-blog/look-sunny-side-optimism-increases-people-get-older\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria/Elaina/olivia\nArticle\nI found this graph really interesting because it shows how optimism changes as people get older.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows that optimism increases in middle age, then decreases later in life depending on positive life events.\n\n\n\n\n\nFigure 39\nSource: https://www.cdc.gov/nchs/products/databriefs/db513.htm\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria/Elaina/olivia\nArticle\nI found this graph interesting because social media continues to grow and this shows that about half of teenagers spend 4 or more hours a day on screens.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the difference in percentage of screen time in teenagers aged 12-17\n\n\n\n\n\nFigure 40\nSource: https://www.apa.org/monitor/2024/01/trends-pathways-access-mental-health-care\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nArticle\nThe bar graph used is unique in its incredible way to relay information on mental health within different sectors\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nOutlines mental health issues broadly, specifically, and how a need for a solution exists\n\n\n\n\n\nFigure 41\nSource: https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics-z/alcohol-facts-and-statistics/alcohol-and-older-adults-ages-65\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nWeb_site\nThis pie chart makes visualizing the issues being discussed very easy to understand for viewers and covers and interesting topic\n\n\n\n\n\n\nComments\n\n\n\n\nPercent of elederly that consider themselves binge drinkers\n\n\n\n\n\nFigure 42\nSource: https://link.springer.com/article/10.1007/s40519-026-01855-3\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nEmpirical Journal\nI used this bar chart because I think it covers a very relevant and erious topic and is multifacted in the data it presents\n\n\n\n\n\n\nComments\n\n\n\n\nTrends in eating disorders over a recent 8 year span\n\n\n\n\n\nFigure 43\nSource: https://onlinelibrary.wiley.com/doi/10.1111/jora.70224\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nempirical article\nI find this area of psychology, adolescent psych, one of the most intresting topics in this field. This article evaluates parent-adolescent relationships as context for daily relations and mood\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nthe left graph shows the conflict sensitization while the right graph shows the widespread effect\n\n\n\n\n\nFigure 44\nSource: https://academic.oup.com/chidev/article/97/5/1502/8550827\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\njournal article\nI found the topic very intresting and they use dfferent kinds of graphs to depict changes in young childrens behavior after COVID-19\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nshows how four year old childrens scores in Pittsburgh, PA increased after the pandemic on all five behavioral problems\n\n\n\n\n\nFigure 45\nSource: https://psycnet.apa.org/fulltext/2022-16907-001.html\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\njournal article\nUses multiple types of graphs and figures to help better understand whether caregivers are able to integrate stimulus avoidance assesment procedures while still maintaining fidelity\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nthis graph shows us the difference between results based on who adminstered the procedures, the impact this had on destructive behavior, and the clinical implementation\n\n\n\n\n\nFigure 46\nSource: https://psycnet.apa.org/fulltext/2026-89350-001.pdf\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nArnesh\nArticle\nThis forest plot shows effect sizes grouped up in 3 different mental illiness groups, which is very interesting to see\n\n\n\n\n\n\nComments\n\n\n\n\nPlots data from multiple studies into the forest plot\n\n\n\n\n\nFigure 47\nSource: https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nArticle\nI selcted this graph because I am interested in I-O psychology and the future of AI\n\n\n\n\n\n\nComments\n\n\n\n\nFrequency of Use of GenAI Across All Participants\n\n\n\n\n\nFigure 48\nSource: https://www.apa.org/pubs/journals/releases/law-0000037.pdf\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nJournal Article\nI selected this graph because it relates to colleges and universities\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nCrimes reported on cmapus throughout the years in relation to the audit\n\n\n\n\n\nFigure 49\nSource: https://www.apa.org/pubs/journals/features/sgd-0000050.pdf\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nJournal Article\nI was curious to see the biases in the hiring proccess and it relates to the field I want to go into\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nThree-way interaction between sexual orientation, marital status, and gender.\n\n\n\n\n\nFigure 50\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nArticle\nI was curious to understand more about the graph and because I enjoy learning about attitudes.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShowing the proportion of attitude related articles over time. It is focused on the research of attitudes not people’s attitudes\n\n\n\n\n\nFigure 51\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nArticle\nI found this graph interesting because it included multiple different countries and both male and female preferences in spouse\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the importance of no sexual intercourse in a potential spouse between different countries\n\n\n\n\n\nFigure 52\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-clinpsy-050212-185526\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nCallie\nArticle\nI was curious to see the relation between depression and cardiovascular disorders\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nPrevalence of depression among patients with cardiovascular disorders in the United States.\n\n\n\n\n\nFigure 53\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria/Elaina/olivia\nJournal\nShows how cognitve abilities change as people get older\n\n\n\n\n\n\nComments\n\n\n\n\nCompares cognitive function and dementia screening scores by age\n\n\n\n\n\nFigure 54\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-110721-045646#dataandmedia\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria/Elaina/olivia\nJournal\nI found this graph interesting because it shows which topics are studied the most.\n\n\n\n\n\n\nComments\n\n\n\n\nPercentage of studies covering each of the 14 topics\n\n\n\n\n\nFigure 55\nSource: https://www.annualreviews.org/content/journals/10.1146/annurev-soc-030222-031142#dataandmedia\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nMaria/Elaina/olivia\nJournal\nThis graph is interesting because it shows how research on fake news and conspiracy theories has changed over time.\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the number of published articles of fake news has increased over the years\n\n\n\n\n\nFigure 56\nSource: https://www.nature.com/articles/s41598-024-55064-y?fromPaywallRec=true\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nArticle\nShows that people’s social media habits can change depending on where they are and who they are with\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nCompares social media use across different social and physical contexts, looking at both frequency and duration of use\n\n\n\n\n\nFigure 57\nSource: https://www.nature.com/articles/nature06288\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nArticle\nShows infants’ preferences based on how helpful or harmful someone is\n\n\n\n\n\n\nComments\n\n\n\n\nCompares infants’ social preferences and social evaluation\n\n\n\n\n\nFigure 58\nSource: https://www.nature.com/articles/s41598-019-44977-8\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nArticle\nInteresting that differences in social behaviour can be connected to differences in brain activity\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nCompares individuals’ eye fixation behaviour with their brain activity during social perception\n\n\n\n\n\nFigure 59\nSource: https://www.siop.org/tip-article/navigating-the-landscape-key-findings-from-the-2022-practitioner-needs-survey/?\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nHiya\nArticle\nI like it because compares satisfaction across 12 aspects of SIOP between 2019 and 2022, and makes changes over time easy to identify.\n\n\n\n\n\n\nComments\n\n\n\n\nComaprison of SIOP practioner satisfaction, 2019 vs. 2022\n\n\n\n\n\nFigure 60\nSource: https://www.apa.org/news/press/releases/stress/2020/infographics\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nHiya\nArticle\nI find it intriguing how parents reported substantially higher COVID-19-related stress than non-parents using a simple 1–10 scale.\n\n\n\n\n\n\nComments\n\n\n\n\nCovid-19 Stress Level Comparison: Parents vs. Non-Parents\n\n\n\n\n\nFigure 61\nSource: https://featuredcontent.psychonomic.org/why-you-should-check-not-just-test-your-statistical-assumptions/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nHiya\nArticle\nInteresting to me because it shows how distributions that visibly violate normality can still pass a statistical normality test, and why visual inspection matters alongside statistical testing.\n\n\n\n\n\n\nComments\n\n\n\n\nDemonstrates how normal statistical tests hide abnormal data\n\n\n\n\n\nFigure 62\nSource: https://onlinelibrary.wiley.com/doi/10.1111/jora.70228\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nNatalie\nJournal Article\nShows the increased positive impact on social connectedness for female adolescents with high adverse childhood experiences using two different types of interventions (school-based / breathwork)\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nTrajectories of social connectedness over time for high- and low-adverse childhood experiences groups of female adolesents participating in school-based and breathwork interventions\n\n\n\n\n\nFigure 63\nSource: https://link.springer.com/article/10.3758/s13415-025-01376-z\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nNatalie\nJournal Article\nInteresting to see differences in verbal metaphor processing by type of metaphor\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nMetaphors elicit more negative N400 (negativity in time window post word onset) than literal counterparts, but results vary greatly in different time windows\n\n\n\n\n\nFigure 64\nSource: https://academic.oup.com/chidev/article/97/5/1489/8501050\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nNatalie\nJournal Article\nShows changes across different age and syndrome groups, highlighted by different color lines\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows changes in challenging behaviors pre and post pandemic for children of different ages and syndrome types\n\n\n\n\n\nFigure 65\nSource: https://www.psychologicalscience.org/observer/covid-19-psycorona-global-psychological-response\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nArticle\nShows a connections between several emotions in an interesting pattern\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nShows the different emotions people were feeling during the Covid pandemic\n\n\n\n\n\nFigure 66\nSource: https://onlinelibrary.wiley.com/doi/10.1111/jora.70240\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nhashika_1\nJournal Article\ni found it interesting becuase\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nNeural and psychological predictors of digital status-seeking in adolescence\n\n\n\n\n\nFigure 67\nSource: https://academic.oup.com/chidev/article/97/5/1564/8725406\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nhashika_1\nJournal Article\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 68\nSource: https://www.apa.org/news/press/releases/stress/2022/march-2022-survival-mode\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nhashika_1\nJournal Article\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 69\nSource: https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00127-0#f0005\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nhashika_2\nJournal Article\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 70\nSource: https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nhashika_2\nMagazine article\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 71\nSource: https://www.nature.com/articles/s41562-026-02559-5\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nhashika_2\nJournal Article\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 72\nSource: https://www.apa.org/monitor/2026/04-05/ai-psychologists-experience-concerns\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nArticle\nInteresting comparison of AI by usage level\n\n\n\n\n\n\nComments\n\n\n\n\nshows differences in concerns about acuracy, privacy, and bias\n\n\n\n\n\nFigure 73\nSource: https://www.eneuro.org/content/11/11/ENEURO.0124-24.2024?_gl=1*1mx7k9w*_gcl_au*MTYyNDYzMTY1OS4xNzg3OTQ4NjgwLi0uLS4xNzg3OTQ4NjgwLjgyOTI4MDY2Ny4xNzg4NDU3MDAwLjE3ODg1NDA2Njc.\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nJournal\nshows behavioral changes accross experimental sessions\n\n\n\n\n\n\nComments\n\n\n\n\nshows trends in nose poke rats with error bars for veriability\n\n\n\n\n\nFigure 74\nSource: https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nArticle\nShows comparison of how often profetionals use generative AI\n\n\n\n\n\n\nComments\n\n\n\n\nShows which AI use frequencies are most common among SIOP members\n\n\n\n\n\nFigure 75\nSource: https://onlinelibrary.wiley.com/doi/full/10.1111/cdev.14134\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nArticle\nInteresting comparison of brain responses between reading groups\n\n\n\n\n\n\nComments\n\n\n\n\nShows differences in print speech processing and brain activity\n\n\n\n\n\nFigure 76\nSource: https://onlinelibrary.wiley.com/doi/full/10.1111/jora.70030\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nArticle\nInteresting comparison of psychological symptoms across age and gender\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 77\nSource: https://www.apa.org/pubs/reports/stress-in-america/2025\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\njackson\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 78\nSource: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nEddie\narticle\nRed Bull as a cultural symbol and the process of sublimiinal advertising are interesting\n\n\n\n\n\n\nComments\n\n\n\n\nNA",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -2533,7 +2885,7 @@
     "href": "exercises/ex-03-making-data.html#goals",
     "title": "Exercise 03",
     "section": "Goals",
-    "text": "Goals",
+    "text": "Goals\n\nTo gain deeper understanding about different types of data and their strengths and weaknesses.\nTo gain experience using R to generate simulated data corresponding to different data types.\nTo gain experience using Google Forms to create surveys that collect data of different data types.",
     "crumbs": [
       "Exercises",
       "Exercise 03"
@@ -2665,181 +3017,5 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
-    "title": "Data viz in government & business",
-    "section": "Check-in on Exercise 01",
-    "text": "Check-in on Exercise 01\n\nLink to spreadsheet\nPreliminary results",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#section",
-    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#section",
-    "title": "Data viz in art, sports, & journalism",
-    "section": "",
-    "text": "Figure 15: https://www.washingtonpost.com/people/andrew-van-dam/",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Wed Sep 02"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#next-time",
-    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#next-time",
-    "title": "Data viz in art, sports, & journalism",
-    "section": "Next time",
-    "text": "Next time\n\nIntroducing Quarto\nWork session",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Wed Sep 02"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#access-to-u.s.-newspapers",
-    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#access-to-u.s.-newspapers",
-    "title": "Data viz in art, sports, & journalism",
-    "section": "Access to U.S. newspapers",
-    "text": "Access to U.S. newspapers\n\nhttps://guides.libraries.psu.edu/newspapers/direct",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Wed Sep 02"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
-    "title": "Work session: Introducing Quarto",
-    "section": "Wherefore Quarto",
-    "text": "Wherefore Quarto\n\n\n\n\n\n\nFigure 1",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
-    "title": "Work session: Introducing Quarto",
-    "section": "Quarto",
-    "text": "Quarto\n\nSystem for creating documents, reports, and dashboards\nCombine text, figures, code, links, video, equations\nWrite in text \\(\\rightarrow\\) render to html, pdf, docx, pptx and more",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood",
-    "text": "Under the hood\n\n\n\nFile metadata are at the top between rows of triple dashes ---\n\nAdd a subtitle: subtitle: \"Friday, September 4, 2026\"\n\nClickable web links are surrounded by &lt; and &gt;",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood",
-    "text": "Under the hood\n\n\n\nCustom web link labels require this syntax: [Penn State home page](https://psu.edu)\n\nLabel is inside square brackets []\nURL inside parentheses ()\nRenders to: Penn State home page",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood (3 of 3)",
-    "text": "Under the hood (3 of 3)\n\n\n\nCode in chunks marked by triple backticks “```”\nChunk says what language to use in curly braces: {r}\n\nCould be other languages Quarto supports",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood (1 of 3)",
-    "text": "Under the hood (1 of 3)\n\n\n\nFile metadata are at the top between rows of triple dashes ---\n\nAdd a subtitle: subtitle: \"Friday, September 4, 2026\"\n\nClickable web links are surrounded by &lt; and &gt;",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood (2 of 3)",
-    "text": "Under the hood (2 of 3)\n\n\n\nCustom web link labels require this syntax: [Penn State home page](https://psu.edu)\n\nLabel is inside square brackets []\nURL inside parentheses ()\nRenders to: Penn State home page",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-2",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-2",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (1 of 2)",
-    "text": "More under the hood (1 of 2)\n\nMetadata has an `author field. Change this in your document.\nChange title to Exercise 02.\nChange About section to reflect goals of Exercise 02.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-2",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-2",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (2 of 2)",
-    "text": "More under the hood (2 of 2)\n\nFigures use this syntax: ![]()\n\nSimilar to web link, but note initial exclamation point !\n![This is the figure caption](link_to_figure)\n\nLink to figure can be URL or path to file (path/to/my_figure.jpg)",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (1 of 3)",
-    "text": "More under the hood (1 of 3)\n\nMetadata has an `author field. Change this in your document.\nChange title to Exercise 02.\nChange About section to reflect goals of Exercise 02.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (2 of 3)",
-    "text": "More under the hood (2 of 3)\n\nFigures use this syntax: ![]()\n\nSimilar to web link, but note initial exclamation point (!)\n![This is the figure caption](this_is_the_link_to_the_figure)\n\nLink to figure can be URL or path to file (path/to/my_figure.jpg)",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (3 of 3)",
-    "text": "More under the hood (3 of 3)\n\nQuarto converts Quarto file into HTML or PDF or…\nWriting and reading Quarto should be easier than writing HTML\nQuarto bundles other tools",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
   }
 ]
