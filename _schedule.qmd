@@ -83,7 +83,7 @@
 
 *Work Session: Making data with R*
 
-- [Slides](404.qmd)
+- [Slides](slides/wk-03-2026-09-11-making-data-with-r.qmd)
 - [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
 
 ## Week 04 {- #week-04}

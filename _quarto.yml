@@ -38,6 +38,8 @@ website:
         href: slides/wk-02-2026-09-04-introducing-quarto.qmd
       - text: "Wk 03 • Wed Sep 09"
         href: slides/wk-03-2026-09-09-making-data.qmd
+      - text: "Wk 03 • Fri Sep 11"
+        href: slides/wk-03-2026-09-11-making-data-with-r.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

@@ -1191,6 +1191,915 @@
     ]
   },
   {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#announcements",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#announcements",
+    "title": "Work session: Introducing Quarto",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise 01 due today Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#todays-topics",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#todays-topics",
+    "title": "Work session: Introducing Quarto",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nIntroducing Quarto\nUsing Quarto for Exercise 02",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
+    "title": "Work session: Introducing Quarto",
+    "section": "Wherefore Quarto",
+    "text": "Wherefore Quarto\n\n\n\n\n\n\nFigure 1",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
+    "title": "Work session: Introducing Quarto",
+    "section": "Quarto",
+    "text": "Quarto\n\nSystem for creating documents, reports, and dashboards\nCombine text, figures, code, links, video, equations\nWrite in text \\(\\rightarrow\\) render to html, pdf, docx, pptx and more",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
+    "title": "Work session: Introducing Quarto",
+    "section": "Installing Quarto",
+    "text": "Installing Quarto\n\n\n\n\n\n\nFigure 2: https://quarto.org/docs/get-started/",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#create-new-project",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#create-new-project",
+    "title": "Work session: Introducing Quarto",
+    "section": "Create New Project",
+    "text": "Create New Project\n\n\n\n\n\n\n\n\nFigure 3: From File Menu\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Project Manager Tab",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#explore-project-and-document",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#explore-project-and-document",
+    "title": "Work session: Introducing Quarto",
+    "section": "Explore project (and document)",
+    "text": "Explore project (and document)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#anatomy-of-quarto-document",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#anatomy-of-quarto-document",
+    "title": "Work session: Introducing Quarto",
+    "section": "Anatomy of Quarto document",
+    "text": "Anatomy of Quarto document\n\n\n\nText, has .qmd extension\nMetadata1 information (b/w pairs of ---)\nSection headers\n\n## means a 2nd level header\n\nCode chunks!\n\n\n\n\n\n\n\n\nFigure 8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-file",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Render the file",
+    "text": "Render the file\n\nTurn the text file into something else\n\nWebpage (HTML)\nDocument (PDF, Word)\nSlides\n\nDefault is webpage (HTML)\nI recommend checking “Render on Save”",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#rendered-file",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#rendered-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Rendered file",
+    "text": "Rendered file",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "Under the hood (1 of 3)",
+    "text": "Under the hood (1 of 3)\n\n\n\nFile metadata are at the top between rows of triple dashes ---\n\nAdd a subtitle: subtitle: \"Friday, September 4, 2026\"\n\nClickable web links are surrounded by &lt; and &gt;",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "Under the hood (2 of 3)",
+    "text": "Under the hood (2 of 3)\n\n\n\nCustom web link labels require this syntax: [Penn State home page](https://psu.edu)\n\nLabel is inside square brackets []\nURL inside parentheses ()\nRenders to: Penn State home page",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "Under the hood (3 of 3)",
+    "text": "Under the hood (3 of 3)\n\n\n\nCode in chunks marked by triple backticks “```”\nChunk says what language to use in curly braces: {r}\n\nCould be other languages Quarto supports",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#visit-the-template",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#visit-the-template",
+    "title": "Work session: Introducing Quarto",
+    "section": "Visit the template",
+    "text": "Visit the template\n\nVisit https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
+    "title": "Work session: Introducing Quarto",
+    "section": "Copy the template text into a new text file",
+    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-template",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-template",
+    "title": "Work session: Introducing Quarto",
+    "section": "Render the template",
+    "text": "Render the template\n\n\n\n\n\n\nFigure 9",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "More under the hood (1 of 3)",
+    "text": "More under the hood (1 of 3)\n\nMetadata has an `author field. Change this in your document.\nChange title to Exercise 02.\nChange About section to reflect goals of Exercise 02.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "More under the hood (2 of 3)",
+    "text": "More under the hood (2 of 3)\n\nFigures use this syntax: ![]()\n\nSimilar to web link, but note initial exclamation point (!)\n![This is the figure caption](this_is_the_link_to_the_figure)\n\nLink to figure can be URL or path to file (path/to/my_figure.jpg)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
+    "title": "Work session: Introducing Quarto",
+    "section": "More under the hood (3 of 3)",
+    "text": "More under the hood (3 of 3)\n\nQuarto converts Quarto file into HTML or PDF or…\nWriting and reading Quarto should be easier than writing HTML\nQuarto bundles other tools",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#next-time",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#next-time",
+    "title": "Work session: Introducing Quarto",
+    "section": "Next time",
+    "text": "Next time\n\nMaking (sense of) data\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau et al. (2012) | PDF on Canvas. (Optional)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#about",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#about",
+    "title": "Work session: Introducing Quarto",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.1.0.392.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#references",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#references",
+    "title": "Work session: Introducing Quarto",
+    "section": "References",
+    "text": "References\n\n\n\n\nStevens, S S. 1946. “On the Theory of Scales of Measurement.” Science (New York, N.Y.) 103 (June): 677–80. https://doi.org/10.1126/science.103.2684.677.\n\n\nTourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. The Psychology of Survey Response. Cambridge University Press. https://doi.org/10.1017/cbo9780511819322.\n\n\nWikipedia contributors. 2024. “Statistical Data Type.” Wikimedia Foundation, Inc., November 23. https://en.wikipedia.org/wiki/Statistical_data_type.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#footnotes",
+    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#footnotes",
+    "title": "Work session: Introducing Quarto",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nData about data.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Fri Sep 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#recently",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#recently",
+    "title": "Data viz in government & business",
+    "section": "Recently…",
+    "text": "Recently…\n\nSemiotics of data visualization\nIntroduction to R & RStudio\nExercise 01 - Visualization in Psychological Science",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#symbol-or-thing-symbolized",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#symbol-or-thing-symbolized",
+    "title": "Data viz in government & business",
+    "section": "Symbol or thing symbolized?",
+    "text": "Symbol or thing symbolized?\n\n\n\n\n\n\n\n\nFigure 2: Map view\n\n\n\n\n\n\n\n\n\n\nFigure 3: Satellite view\n\n\n\n\n\n\n\n\n\n\n\nSymbol\n\n\nWhy?",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
+    "title": "Data viz in government & business",
+    "section": "Check-in on Exercise 01",
+    "text": "Check-in on Exercise 01\n\nLink to spreadsheet\nPreliminary results",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#today",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#today",
+    "title": "Data viz in government & business",
+    "section": "Today",
+    "text": "Today\n\nVisualization in government & business\nWork session",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#goals",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#goals",
+    "title": "Data viz in government & business",
+    "section": "Goals",
+    "text": "Goals\n\nExplore the landscape\nWhat types of visualizations?\nWhat types of data?\nWhy visualize?",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-governments-collect",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-governments-collect",
+    "title": "Data viz in government & business",
+    "section": "What data do governments collect?",
+    "text": "What data do governments collect?\n\nWhat data are collected?\nPrimary sources\n\nBureau of the Census\nData.gov\nOpen Data PA: https://data.pa.gov",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#data-governments-collect",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#data-governments-collect",
+    "title": "Data viz in government & business",
+    "section": "Data governments collect",
+    "text": "Data governments collect\n\nSecondary sources\n\nhttps://datausa.io/profile/geo/state-college-pa?redirect=true",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#your-turn",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#your-turn",
+    "title": "Data viz in government & business",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nWhy do governments collect & visualize data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat data should governments collect & visualize?",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#who-benefits",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#who-benefits",
+    "title": "Data viz in government & business",
+    "section": "Who benefits?",
+    "text": "Who benefits?\n\nQuery to Google Chrome:“What U.S. businesses benefit from data collected and shared by the U.S. government?”\nResults",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-not-for-profit-businesses-visualize",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-not-for-profit-businesses-visualize",
+    "title": "Data viz in government & business",
+    "section": "What data do not-for-profit businesses visualize?",
+    "text": "What data do not-for-profit businesses visualize?\n\nPSU Office of Planning, Assessment, and Institutional Research\nOur World in Data\nGapminder\n\nDollar Street\n\nUSAFacts\n\nFounded by former Microsoft Corporation CEO Steve Ballmer",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#your-turn-1",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#your-turn-1",
+    "title": "Data viz in government & business",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nWhy do for-profit and not-for-profit businesses visualize data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do we evaluate whether data collected and reported by governments, for-profit, or not-for-profit organizations are credible and reliable?",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#exercise-01",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#exercise-01",
+    "title": "Data viz in government & business",
+    "section": "Exercise 01",
+    "text": "Exercise 01\n\nWrite-up due this Friday",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#exercise-02",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#exercise-02",
+    "title": "Data viz in government & business",
+    "section": "Exercise 02",
+    "text": "Exercise 02\n\nGet a jump start\nLink to assignment\nDue on Friday, September 11.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#quarto",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#quarto",
+    "title": "Data viz in government & business",
+    "section": "Quarto",
+    "text": "Quarto\n\nSee slides for this Friday’s class\nAlso Open Scholarship Bootcamp 2026 talk 1, and talk 2",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#main-points",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#main-points",
+    "title": "Data viz in government & business",
+    "section": "Main points",
+    "text": "Main points\n\nGovernments collect & report on lots of data\nNon-profits collect varied types of data, and many visualize it\nFor-profit business entities collect a ton of data, but most visualizations remain private",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#next-time",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#next-time",
+    "title": "Data viz in government & business",
+    "section": "Next time",
+    "text": "Next time\n\nVisualization in art, sports, and journalism\nRead\n\nGelman and Unwin (2013) (recommended), follow citation link to online version or PDF on Canvas.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#about",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#about",
+    "title": "Data viz in government & business",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#references",
+    "href": "slides/wk-02-2026-08-31-govt-biz.html#references",
+    "title": "Data viz in government & business",
+    "section": "References",
+    "text": "References\n\n\n\n\nDenton, C Adeene, Erik Asphaug, Alexandre Emsenhuber, and Robert Melikyan. 2025. “Capture of an Ancient Charon Around Pluto.” Nature Geoscience 18 (January): 37–43. https://doi.org/10.1038/s41561-024-01612-0.\n\n\nGelman, Andrew, and Antony Unwin. 2013. “Infovis and Statistical Graphics: Different Goals, Different Looks.” Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America 22 (January): 2–28. https://doi.org/10.1080/10618600.2012.761137.",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Mon Aug 31"
+    ]
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "Evaluation",
+    "section": "",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "crumbs": [
+      "Evaluation"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#eval-components",
+    "href": "evaluation.html#eval-components",
+    "title": "Evaluation",
+    "section": "",
+    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
+    "crumbs": [
+      "Evaluation"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#grading-scheme",
+    "href": "evaluation.html#grading-scheme",
+    "title": "Evaluation",
+    "section": "Grading Scheme",
+    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF",
+    "crumbs": [
+      "Evaluation"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#themes",
+    "href": "index.html#themes",
+    "title": "The Psychology of Data Visualization",
+    "section": "Themes",
+    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "The Psychology of Data Visualization",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\n\nOffice hours\nMonday & Friday, 12:00p - 1:00p in 114 Moore or by appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-assistant",
+    "href": "index.html#teaching-assistant",
+    "title": "The Psychology of Data Visualization",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant\nKalvin Garrah\nGraduate Student in Social Psychology\nkmg7035 AT-SIGN psu PERIOD edu\n\n\nOffice hours\nTBD",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#meeting-time-location",
+    "href": "index.html#meeting-time-location",
+    "title": "The Psychology of Data Visualization",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:35 pm - 4:25 pm\n216 Osmond Lab",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#canvas-site",
+    "href": "index.html#canvas-site",
+    "title": "The Psychology of Data Visualization",
+    "section": "Canvas site",
+    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "deadlines.html",
+    "href": "deadlines.html",
+    "title": "Deadlines",
+    "section": "",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "crumbs": [
+      "Deadlines"
+    ]
+  },
+  {
+    "objectID": "meta.html",
+    "href": "meta.html",
+    "title": "Under the hood",
+    "section": "",
+    "text": "This page describes how the site is created and rendered.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#about",
+    "href": "meta.html#about",
+    "title": "Under the hood",
+    "section": "",
+    "text": "This page describes how the site is created and rendered.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#workflow",
+    "href": "meta.html#workflow",
+    "title": "Under the hood",
+    "section": "Workflow",
+    "text": "Workflow\nThe site is written in Quarto.\nA site-wide YAML file (_quarto.yml) controls the rendering process.\nSeparate directories contain lecture slides (slides/), exercises (exercises/), class-specific R functions (R/), surveys (surveys/), and tutorials (tutorials/). Quarto files with underscores (e.g., _index.qmd, _about.qmd, _evaluation.qmd, _schedule.qmd, and values.qmd) are the main targets for editing and updating. Parent files (e.g., index.qmd, evaluation.qmd, policies.qmd, and schedule.qmd) call upon these child files in the rendering process.\nA separate Quarto file (psych-490.007-2026-fall-syllabus.qmd) generates a PDF version of a syllabus.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#rendering",
+    "href": "meta.html#rendering",
+    "title": "Under the hood",
+    "section": "Rendering",
+    "text": "Rendering\nTo render the full site, quarto render src is executed from the command line. The fully rendered website is written to docs/.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "meta.html#software",
+    "href": "meta.html#software",
+    "title": "Under the hood",
+    "section": "Software",
+    "text": "Software\nThe site uses the renv package to try to make all computation reproducible.\nIn addition, the site uses softbib to generate a full reference list of the package dependencies. This is saved in src/include/bib.",
+    "crumbs": [
+      "Under the hood"
+    ]
+  },
+  {
+    "objectID": "values.html",
+    "href": "values.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "values.html#values",
+    "href": "values.html#values",
+    "title": "",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world."
+  },
+  {
+    "objectID": "policies.html",
+    "href": "policies.html",
+    "title": "Policies",
+    "section": "",
+    "text": "Students with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
+    "crumbs": [
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "policies.html#values",
+    "href": "policies.html#values",
+    "title": "Policies",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
+    "crumbs": [
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#announcements",
+    "href": "slides/wk-03-2026-09-09-making-data.html#announcements",
+    "title": "Making Data",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-02 write-up due Thursday, January 30.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#last-time",
+    "href": "slides/wk-03-2026-09-09-making-data.html#last-time",
+    "title": "Making Data",
+    "section": "Last time…",
+    "text": "Last time…\n\nIntroducing Quarto\nVisualization in the arts, sports, & journalism",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#your-turn",
+    "href": "slides/wk-03-2026-09-09-making-data.html#your-turn",
+    "title": "Making Data",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nAre there characteristic features of data visualizations in different fields?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#preliminary-findings",
+    "href": "slides/wk-03-2026-09-09-making-data.html#preliminary-findings",
+    "title": "Making Data",
+    "section": "Preliminary findings",
+    "text": "Preliminary findings\n\nVisualization of Exercise 01\nVisualization of Exercise 02 results",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#today",
+    "href": "slides/wk-03-2026-09-09-making-data.html#today",
+    "title": "Making Data",
+    "section": "Today",
+    "text": "Today\n\nMaking Data\nTypes of data",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#how-are-data-made",
+    "href": "slides/wk-03-2026-09-09-making-data.html#how-are-data-made",
+    "title": "Making Data",
+    "section": "How are data made?",
+    "text": "How are data made?\n\n\n\nBy measurement",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#what-is-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#what-is-measurement",
+    "title": "Making Data",
+    "section": "What is measurement?",
+    "text": "What is measurement?\n\n\n\nA procedure for mapping properties of X onto some numerical standard or scale Y\nMetrology: The science of measurement\nPsychometrics: The study of psychological measurement",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#why-mapping",
+    "href": "slides/wk-03-2026-09-09-making-data.html#why-mapping",
+    "title": "Making Data",
+    "section": "Why ‘mapping’?",
+    "text": "Why ‘mapping’?\n\n\n\n\n\n\n\n\nflowchart TB\n  A[Thing/Person]-- Procedure  --&gt;B(Instrument)\n  B --&gt; C{Data}\n\n\n\n\nFigure 4: Illustration of a mapping from observed entity to data\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\n  A[Thing/Person]-- Procedure  --&gt;B(Instrument)\n  A[Thing/Person]-- Procedure-2  --&gt;C(Instrument-2)\n  B --&gt; E{Data}\n  C --&gt; D{Data-2}\n\n\n\n\nFigure 5: Illustration of multiple mappings from an observed entity to data",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#procedures-are",
+    "href": "slides/wk-03-2026-09-09-making-data.html#procedures-are",
+    "title": "Making Data",
+    "section": "Procedures are",
+    "text": "Procedures are\n\nSequences of behaviors",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#data-quantitative-terminology",
+    "href": "slides/wk-03-2026-09-09-making-data.html#data-quantitative-terminology",
+    "title": "Making Data",
+    "section": "Data ~ quantitative terminology",
+    "text": "Data ~ quantitative terminology\n\nData a symbol of the thing measured, not the thing itself\nE.g., words are a symbol of the things they refer to\n\n\n\n\n\n\n\nflowchart TB\n  A[Cute animal with fur that purrs] --&gt; B('cat')\n  A ---&gt; C('gato')\n  A ---&gt; D('chatte/chat')\n  A ---&gt; E('猫')\n\n\n\n\nFigure 6: Mapping from concept/entity to a word.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#symbols-reflect-select-and-deflect",
+    "href": "slides/wk-03-2026-09-09-making-data.html#symbols-reflect-select-and-deflect",
+    "title": "Making Data",
+    "section": "Symbols reflect, select, and deflect",
+    "text": "Symbols reflect, select, and deflect\n\nEven if any given terminology is a reflection of reality, by its very nature as a terminology, it must be a selection of reality; and to this extent must also as a deflection of reality\n\nBurke (1968)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#what-is",
+    "href": "slides/wk-03-2026-09-09-making-data.html#what-is",
+    "title": "Making Data",
+    "section": "What is",
+    "text": "What is\n\n\n\nreflected, selected, deflected?\n\n\n\n\n\nLindsey (2024)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#stevens-scales-of-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#stevens-scales-of-measurement",
+    "title": "Making Data",
+    "section": "Stevens’ scales of measurement",
+    "text": "Stevens’ scales of measurement\n\n\n\n\n\n\nFigure 8: Stevens (1946)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#questions-about-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#questions-about-measurement",
+    "title": "Making Data",
+    "section": "Questions about measurement",
+    "text": "Questions about measurement\n\nWhat’s the procedure for making this mapping?\nWhat are the rules for assigning numbers/categories?\nWhat can we do with the assigned numbers (summarize, depict)?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#why-does-measurement-matter",
+    "href": "slides/wk-03-2026-09-09-making-data.html#why-does-measurement-matter",
+    "title": "Making Data",
+    "section": "Why does measurement matter?",
+    "text": "Why does measurement matter?\n\n\n\n\n\n\nFigure 9: Garbage in, garbage out",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#in-other-domains",
+    "href": "slides/wk-03-2026-09-09-making-data.html#in-other-domains",
+    "title": "Making Data",
+    "section": "In other domains",
+    "text": "In other domains\n\nBusiness/economics\nPolitics\nSports\nEntertainment\nWeather",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#in-psychology",
+    "href": "slides/wk-03-2026-09-09-making-data.html#in-psychology",
+    "title": "Making Data",
+    "section": "In psychology",
+    "text": "In psychology\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#examples-of",
+    "href": "slides/wk-03-2026-09-09-making-data.html#examples-of",
+    "title": "Making Data",
+    "section": "Examples of…",
+    "text": "Examples of…\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#how-to-measure",
+    "href": "slides/wk-03-2026-09-09-making-data.html#how-to-measure",
+    "title": "Making Data",
+    "section": "How to measure…",
+    "text": "How to measure…\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#psychology-of-survey-response",
+    "href": "slides/wk-03-2026-09-09-making-data.html#psychology-of-survey-response",
+    "title": "Making Data",
+    "section": "Psychology of survey response",
+    "text": "Psychology of survey response\n\n\n\n\n\n\nFigure 10: Tourangeau et al. (2012) Table 1.1",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#scales-of-measurement",
+    "href": "slides/wk-03-2026-09-09-making-data.html#scales-of-measurement",
+    "title": "Making Data",
+    "section": "Scales of measurement",
+    "text": "Scales of measurement\n\n\n\n\n\n\nFigure 11: Stevens (1946)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#main-points",
+    "href": "slides/wk-03-2026-09-09-making-data.html#main-points",
+    "title": "Making Data",
+    "section": "Main points",
+    "text": "Main points\n\nData are made\n\nMap characteristics to quantities\nBy some measurement procedure\nReflect, but also select and deflect\n\nMappings have different scale types (Stevens 1946)\nScales determine i) permissible/logical stats & ii) best visualizations",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#next-time",
+    "href": "slides/wk-03-2026-09-09-making-data.html#next-time",
+    "title": "Making Data",
+    "section": "Next time",
+    "text": "Next time\n\nWork session: Making data with R\nExercise 02",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-09-making-data.html#references",
+    "href": "slides/wk-03-2026-09-09-making-data.html#references",
+    "title": "Making Data",
+    "section": "References",
+    "text": "References\n\n\n\n\nAviv, Lizzie, Darby Saxbe, Doug Messer, and Sujeet Rao. 2024. The Fair Play Method. Technical report. University of Southern California. https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf.\n\n\nBurke, Kenneth. 1968. Language as Symbolic Action. University of California Press. https://www.ucpress.edu/books/language-as-symbolic-action/paper.\n\n\nDattani, Saloni, and Max Roser. 2024. “What Was the Golden Age of Antibiotics, and How Can We Spark a New One?” Our World in Data, December 21. https://ourworldindata.org/golden-age-antibiotics.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nStevens, S S. 1946. “On the Theory of Scales of Measurement.” Science (New York, N.Y.) 103 (June): 677–80. https://doi.org/10.1126/science.103.2684.677.\n\n\nTourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. The Psychology of Survey Response. Cambridge University Press. https://doi.org/10.1017/cbo9780511819322.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Wed Sep 09"
+    ]
+  },
+  {
     "objectID": "slides/wk-01-2026-08-24-course-intro.html#a-picture-is-worth-a-thousand-words",
     "href": "slides/wk-01-2026-08-24-course-intro.html#a-picture-is-worth-a-thousand-words",
     "title": "The Psychology of Data Visualization",
@@ -1598,912 +2507,278 @@
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#announcements",
-    "href": "slides/wk-03-2026-09-09-making-data.html#announcements",
-    "title": "Making Data",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#announcements",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#announcements",
+    "title": "Making data with R",
     "section": "Announcements",
-    "text": "Announcements\n\nExercise-02 write-up due Thursday, January 30.",
+    "text": "Announcements\n\n Due Exercise 02 |  Canvas dropbox |",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#last-time",
-    "href": "slides/wk-03-2026-09-09-making-data.html#last-time",
-    "title": "Making Data",
-    "section": "Last time…",
-    "text": "Last time…\n\nIntroducing Quarto\nVisualization in the arts, sports, & journalism",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#todays-topics",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#todays-topics",
+    "title": "Making data with R",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWork session: Making data with R\nIntroducing Exercise-03",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#your-turn",
-    "href": "slides/wk-03-2026-09-09-making-data.html#your-turn",
-    "title": "Making Data",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#why-make-data",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#why-make-data",
+    "title": "Making data with R",
+    "section": "Why make data?",
+    "text": "Why make data?\n\nGood way to learn R syntax\nGood way to generate synthetic data (see Week 13)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#making-nominalcategorical-data",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#making-nominalcategorical-data",
+    "title": "Making data with R",
+    "section": "Making nominal/categorical data",
+    "text": "Making nominal/categorical data\n\nWhat are the categories?\nHow many instances of each category",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#example-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#example-1",
+    "title": "Making data with R",
+    "section": "Example 1",
+    "text": "Example 1\n\nUse the c() function to ‘concatenate’ members of your target category\nR returns an ‘array’\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#extracting-items-from-the-array",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#extracting-items-from-the-array",
+    "title": "Making data with R",
+    "section": "Extracting items from the array",
+    "text": "Extracting items from the array\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEach item has an ‘index’ or address\nUse square brackets [] to extract the element at that address",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-1-of-3",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-1-of-3",
+    "title": "Making data with R",
+    "section": "Words for the wise (1 of 3)",
+    "text": "Words for the wise (1 of 3)\n\nArray addresses must be numbers\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNA means not applicable or no data",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3",
+    "title": "Making data with R",
+    "section": "Words for the wise (2 of 3)",
+    "text": "Words for the wise (2 of 3)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWait, what happened?\nmeals[-1] dropped the first element breakfast\nHow would you drop snack?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3-1",
+    "title": "Making data with R",
+    "section": "Words for the wise (2 of 3)",
+    "text": "Words for the wise (2 of 3)\n\nAddresses must be less than the length of the array\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-3-of-3",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-3-of-3",
+    "title": "Making data with R",
+    "section": "Words for the wise (3 of 3)",
+    "text": "Words for the wise (3 of 3)\n\nWe can select a subset of elements\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#copying-arrays",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#copying-arrays",
+    "title": "Making data with R",
+    "section": "Copying arrays",
+    "text": "Copying arrays\n\nMake copies of arrays with the rep() (replicate) function\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn",
+    "title": "Making data with R",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\n\n\nAre there characteristic features of data visualizations in different fields?",
+    "text": "Your turn\n\n\n\n\n\n\nQuestion\n\n\nWhy would we want to do this?",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#preliminary-findings",
-    "href": "slides/wk-03-2026-09-09-making-data.html#preliminary-findings",
-    "title": "Making Data",
-    "section": "Preliminary findings",
-    "text": "Preliminary findings\n\nVisualization of Exercise 01\nVisualization of Exercise 02 results",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#one-answer",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#one-answer",
+    "title": "Making data with R",
+    "section": "One answer",
+    "text": "One answer\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#today",
-    "href": "slides/wk-03-2026-09-09-making-data.html#today",
-    "title": "Making Data",
-    "section": "Today",
-    "text": "Today\n\nMaking Data\nTypes of data",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#under-the-hood",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#under-the-hood",
+    "title": "Making data with R",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nTRUE and FALSE are ‘logical’ values\nWe generated an array of values using the sample() function\nAssumption: There’s a .6 probability of eating any given meal",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#how-are-data-made",
-    "href": "slides/wk-03-2026-09-09-making-data.html#how-are-data-made",
-    "title": "Making Data",
-    "section": "How are data made?",
-    "text": "How are data made?\n\n\n\nBy measurement",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-1-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-1-of-2",
+    "title": "Making data with R",
+    "section": "Putting it all together (1 of 2)",
+    "text": "Putting it all together (1 of 2)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#what-is-measurement",
-    "href": "slides/wk-03-2026-09-09-making-data.html#what-is-measurement",
-    "title": "Making Data",
-    "section": "What is measurement?",
-    "text": "What is measurement?\n\n\n\nA procedure for mapping properties of X onto some numerical standard or scale Y\nMetrology: The science of measurement\nPsychometrics: The study of psychological measurement",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-2-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-2-of-2",
+    "title": "Making data with R",
+    "section": "Putting it all together (2 of 2)",
+    "text": "Putting it all together (2 of 2)\n\nShow the variable in a data frame using the $ operator\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#why-mapping",
-    "href": "slides/wk-03-2026-09-09-making-data.html#why-mapping",
-    "title": "Making Data",
-    "section": "Why ‘mapping’?",
-    "text": "Why ‘mapping’?\n\n\n\n\n\n\n\n\nflowchart TB\n  A[Thing/Person]-- Procedure  --&gt;B(Instrument)\n  B --&gt; C{Data}\n\n\n\n\nFigure 4: Illustration of a mapping from observed entity to data\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\n  A[Thing/Person]-- Procedure  --&gt;B(Instrument)\n  A[Thing/Person]-- Procedure-2  --&gt;C(Instrument-2)\n  B --&gt; E{Data}\n  C --&gt; D{Data-2}\n\n\n\n\nFigure 5: Illustration of multiple mappings from an observed entity to data",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn-1",
+    "title": "Making data with R",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nIs day_of_wk nominal?\n\n\n\n\n\n\n\n\n\n\n\n\nIs it ordinal?\n\n\n\n\n\n\n\n\n\n\n\n\nIs ate_it ordinal?",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#procedures-are",
-    "href": "slides/wk-03-2026-09-09-making-data.html#procedures-are",
-    "title": "Making Data",
-    "section": "Procedures are",
-    "text": "Procedures are\n\nSequences of behaviors",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-1-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-1-of-2",
+    "title": "Making data with R",
+    "section": "Visualizing… (1 of 2)",
+    "text": "Visualizing… (1 of 2)\n\nUse the xtabs function to generate a cross-tabulated table\nformula syntax says show my_meals by meal and ate_it\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#data-quantitative-terminology",
-    "href": "slides/wk-03-2026-09-09-making-data.html#data-quantitative-terminology",
-    "title": "Making Data",
-    "section": "Data ~ quantitative terminology",
-    "text": "Data ~ quantitative terminology\n\nData a symbol of the thing measured, not the thing itself\nE.g., words are a symbol of the things they refer to\n\n\n\n\n\n\n\nflowchart TB\n  A[Cute animal with fur that purrs] --&gt; B('cat')\n  A ---&gt; C('gato')\n  A ---&gt; D('chatte/chat')\n  A ---&gt; E('猫')\n\n\n\n\nFigure 6: Mapping from concept/entity to a word.",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-2-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-2-of-2",
+    "title": "Making data with R",
+    "section": "Visualizing… (2 of 2)",
+    "text": "Visualizing… (2 of 2)\n\n\n\n\n\n\nHow would you show a table showing the meals eaten by day_of_wk?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#symbols-reflect-select-and-deflect",
-    "href": "slides/wk-03-2026-09-09-making-data.html#symbols-reflect-select-and-deflect",
-    "title": "Making Data",
-    "section": "Symbols reflect, select, and deflect",
-    "text": "Symbols reflect, select, and deflect\n\nEven if any given terminology is a reflection of reality, by its very nature as a terminology, it must be a selection of reality; and to this extent must also as a deflection of reality\n\nBurke (1968)",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#final-comments",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#final-comments",
+    "title": "Making data with R",
+    "section": "Final comments",
+    "text": "Final comments\n\nWhat order does the table present meal in?\nWhat order is day_of_wk presented in?\nHave we told R which of these are ordinal?",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#what-is",
-    "href": "slides/wk-03-2026-09-09-making-data.html#what-is",
-    "title": "Making Data",
-    "section": "What is",
-    "text": "What is\n\n\n\nreflected, selected, deflected?\n\n\n\n\n\nLindsey (2024)",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#stevens-scales-of-measurement",
-    "href": "slides/wk-03-2026-09-09-making-data.html#stevens-scales-of-measurement",
-    "title": "Making Data",
-    "section": "Stevens’ scales of measurement",
-    "text": "Stevens’ scales of measurement\n\n\n\n\n\n\nFigure 8: Stevens (1946)",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#questions-about-measurement",
-    "href": "slides/wk-03-2026-09-09-making-data.html#questions-about-measurement",
-    "title": "Making Data",
-    "section": "Questions about measurement",
-    "text": "Questions about measurement\n\nWhat’s the procedure for making this mapping?\nWhat are the rules for assigning numbers/categories?\nWhat can we do with the assigned numbers (summarize, depict)?",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#why-does-measurement-matter",
-    "href": "slides/wk-03-2026-09-09-making-data.html#why-does-measurement-matter",
-    "title": "Making Data",
-    "section": "Why does measurement matter?",
-    "text": "Why does measurement matter?\n\n\n\n\n\n\nFigure 9: Garbage in, garbage out",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#in-other-domains",
-    "href": "slides/wk-03-2026-09-09-making-data.html#in-other-domains",
-    "title": "Making Data",
-    "section": "In other domains",
-    "text": "In other domains\n\nBusiness/economics\nPolitics\nSports\nEntertainment\nWeather",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#in-psychology",
-    "href": "slides/wk-03-2026-09-09-making-data.html#in-psychology",
-    "title": "Making Data",
-    "section": "In psychology",
-    "text": "In psychology\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#examples-of",
-    "href": "slides/wk-03-2026-09-09-making-data.html#examples-of",
-    "title": "Making Data",
-    "section": "Examples of…",
-    "text": "Examples of…\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#how-to-measure",
-    "href": "slides/wk-03-2026-09-09-making-data.html#how-to-measure",
-    "title": "Making Data",
-    "section": "How to measure…",
-    "text": "How to measure…\n\nInternal mental states\nBehaviors\nPhysiological processes\nPhysical characteristics\nEnvironmental properties",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#psychology-of-survey-response",
-    "href": "slides/wk-03-2026-09-09-making-data.html#psychology-of-survey-response",
-    "title": "Making Data",
-    "section": "Psychology of survey response",
-    "text": "Psychology of survey response\n\n\n\n\n\n\nFigure 10: Tourangeau et al. (2012) Table 1.1",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#scales-of-measurement",
-    "href": "slides/wk-03-2026-09-09-making-data.html#scales-of-measurement",
-    "title": "Making Data",
-    "section": "Scales of measurement",
-    "text": "Scales of measurement\n\n\n\n\n\n\nFigure 11: Stevens (1946)",
-    "crumbs": [
-      "Slides",
-      "Wk 03 • Wed Sep 09"
-    ]
-  },
-  {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#main-points",
-    "href": "slides/wk-03-2026-09-09-making-data.html#main-points",
-    "title": "Making Data",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#main-points",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#main-points",
+    "title": "Making data with R",
     "section": "Main points",
-    "text": "Main points\n\nData are made\n\nMap characteristics to quantities\nBy some measurement procedure\nReflect, but also select and deflect\n\nMappings have different scale types (Stevens 1946)\nScales determine i) permissible/logical stats & ii) best visualizations",
+    "text": "Main points\n\nUse c() to make arrays\nUse rep() to make copies of elements or arrays\nUse data.frame() to make data frames",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#next-time",
-    "href": "slides/wk-03-2026-09-09-making-data.html#next-time",
-    "title": "Making Data",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#next-time",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#next-time",
+    "title": "Making data with R",
     "section": "Next time",
-    "text": "Next time\n\nWork session: Making data with R\nExercise 02",
+    "text": "Next time\n\nFigure types",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-03-2026-09-09-making-data.html#references",
-    "href": "slides/wk-03-2026-09-09-making-data.html#references",
-    "title": "Making Data",
-    "section": "References",
-    "text": "References\n\n\n\n\nAviv, Lizzie, Darby Saxbe, Doug Messer, and Sujeet Rao. 2024. The Fair Play Method. Technical report. University of Southern California. https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf.\n\n\nBurke, Kenneth. 1968. Language as Symbolic Action. University of California Press. https://www.ucpress.edu/books/language-as-symbolic-action/paper.\n\n\nDattani, Saloni, and Max Roser. 2024. “What Was the Golden Age of Antibiotics, and How Can We Spark a New One?” Our World in Data, December 21. https://ourworldindata.org/golden-age-antibiotics.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nStevens, S S. 1946. “On the Theory of Scales of Measurement.” Science (New York, N.Y.) 103 (June): 677–80. https://doi.org/10.1126/science.103.2684.677.\n\n\nTourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. The Psychology of Survey Response. Cambridge University Press. https://doi.org/10.1017/cbo9780511819322.",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#about",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#about",
+    "title": "Making data with R",
+    "section": "About",
+    "text": "About",
     "crumbs": [
       "Slides",
-      "Wk 03 • Wed Sep 09"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "policies.html",
-    "href": "policies.html",
-    "title": "Policies",
-    "section": "",
-    "text": "Students with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.",
-    "crumbs": [
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "policies.html#values",
-    "href": "policies.html#values",
-    "title": "Policies",
-    "section": "Values",
-    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world.",
-    "crumbs": [
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "values.html",
-    "href": "values.html",
-    "title": "",
-    "section": "",
-    "text": "Code"
-  },
-  {
-    "objectID": "values.html#values",
-    "href": "values.html#values",
-    "title": "",
-    "section": "Values",
-    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world."
-  },
-  {
-    "objectID": "meta.html",
-    "href": "meta.html",
-    "title": "Under the hood",
-    "section": "",
-    "text": "This page describes how the site is created and rendered.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#about",
-    "href": "meta.html#about",
-    "title": "Under the hood",
-    "section": "",
-    "text": "This page describes how the site is created and rendered.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#workflow",
-    "href": "meta.html#workflow",
-    "title": "Under the hood",
-    "section": "Workflow",
-    "text": "Workflow\nThe site is written in Quarto.\nA site-wide YAML file (_quarto.yml) controls the rendering process.\nSeparate directories contain lecture slides (slides/), exercises (exercises/), class-specific R functions (R/), surveys (surveys/), and tutorials (tutorials/). Quarto files with underscores (e.g., _index.qmd, _about.qmd, _evaluation.qmd, _schedule.qmd, and values.qmd) are the main targets for editing and updating. Parent files (e.g., index.qmd, evaluation.qmd, policies.qmd, and schedule.qmd) call upon these child files in the rendering process.\nA separate Quarto file (psych-490.007-2026-fall-syllabus.qmd) generates a PDF version of a syllabus.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#rendering",
-    "href": "meta.html#rendering",
-    "title": "Under the hood",
-    "section": "Rendering",
-    "text": "Rendering\nTo render the full site, quarto render src is executed from the command line. The fully rendered website is written to docs/.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "meta.html#software",
-    "href": "meta.html#software",
-    "title": "Under the hood",
-    "section": "Software",
-    "text": "Software\nThe site uses the renv package to try to make all computation reproducible.\nIn addition, the site uses softbib to generate a full reference list of the package dependencies. This is saved in src/include/bib.",
-    "crumbs": [
-      "Under the hood"
-    ]
-  },
-  {
-    "objectID": "deadlines.html",
-    "href": "deadlines.html",
-    "title": "Deadlines",
-    "section": "",
-    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
-    "crumbs": [
-      "Deadlines"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "The Psychology of Data Visualization",
-    "section": "",
-    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#themes",
-    "href": "index.html#themes",
-    "title": "The Psychology of Data Visualization",
-    "section": "Themes",
-    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#instructor",
-    "href": "index.html#instructor",
-    "title": "The Psychology of Data Visualization",
-    "section": "Instructor",
-    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\n\nOffice hours\nMonday & Friday, 12:00p - 1:00p in 114 Moore or by appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#teaching-assistant",
-    "href": "index.html#teaching-assistant",
-    "title": "The Psychology of Data Visualization",
-    "section": "Teaching Assistant",
-    "text": "Teaching Assistant\nKalvin Garrah\nGraduate Student in Social Psychology\nkmg7035 AT-SIGN psu PERIOD edu\n\n\nOffice hours\nTBD",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#meeting-time-location",
-    "href": "index.html#meeting-time-location",
-    "title": "The Psychology of Data Visualization",
-    "section": "Meeting time & location",
-    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:35 pm - 4:25 pm\n216 Osmond Lab",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#canvas-site",
-    "href": "index.html#canvas-site",
-    "title": "The Psychology of Data Visualization",
-    "section": "Canvas site",
-    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#course-structure",
-    "href": "index.html#course-structure",
-    "title": "The Psychology of Data Visualization",
-    "section": "Course structure",
-    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "evaluation.html",
-    "href": "evaluation.html",
-    "title": "Evaluation",
-    "section": "",
-    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
-    "crumbs": [
-      "Evaluation"
-    ]
-  },
-  {
-    "objectID": "evaluation.html#eval-components",
-    "href": "evaluation.html#eval-components",
-    "title": "Evaluation",
-    "section": "",
-    "text": "Component\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises.",
-    "crumbs": [
-      "Evaluation"
-    ]
-  },
-  {
-    "objectID": "evaluation.html#grading-scheme",
-    "href": "evaluation.html#grading-scheme",
-    "title": "Evaluation",
-    "section": "Grading Scheme",
-    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF",
-    "crumbs": [
-      "Evaluation"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#recently",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#recently",
-    "title": "Data viz in government & business",
-    "section": "Recently…",
-    "text": "Recently…\n\nSemiotics of data visualization\nIntroduction to R & RStudio\nExercise 01 - Visualization in Psychological Science",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#symbol-or-thing-symbolized",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#symbol-or-thing-symbolized",
-    "title": "Data viz in government & business",
-    "section": "Symbol or thing symbolized?",
-    "text": "Symbol or thing symbolized?\n\n\n\n\n\n\n\n\nFigure 2: Map view\n\n\n\n\n\n\n\n\n\n\nFigure 3: Satellite view\n\n\n\n\n\n\n\n\n\n\n\nSymbol\n\n\nWhy?",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#check-in-on-exercise-01",
-    "title": "Data viz in government & business",
-    "section": "Check-in on Exercise 01",
-    "text": "Check-in on Exercise 01\n\nLink to spreadsheet\nPreliminary results",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#today",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#today",
-    "title": "Data viz in government & business",
-    "section": "Today",
-    "text": "Today\n\nVisualization in government & business\nWork session",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#goals",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#goals",
-    "title": "Data viz in government & business",
-    "section": "Goals",
-    "text": "Goals\n\nExplore the landscape\nWhat types of visualizations?\nWhat types of data?\nWhy visualize?",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-governments-collect",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-governments-collect",
-    "title": "Data viz in government & business",
-    "section": "What data do governments collect?",
-    "text": "What data do governments collect?\n\nWhat data are collected?\nPrimary sources\n\nBureau of the Census\nData.gov\nOpen Data PA: https://data.pa.gov",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#data-governments-collect",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#data-governments-collect",
-    "title": "Data viz in government & business",
-    "section": "Data governments collect",
-    "text": "Data governments collect\n\nSecondary sources\n\nhttps://datausa.io/profile/geo/state-college-pa?redirect=true",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#your-turn",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#your-turn",
-    "title": "Data viz in government & business",
-    "section": "Your turn…",
-    "text": "Your turn…\n\n\n\n\n\n\nWhy do governments collect & visualize data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat data should governments collect & visualize?",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#who-benefits",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#who-benefits",
-    "title": "Data viz in government & business",
-    "section": "Who benefits?",
-    "text": "Who benefits?\n\nQuery to Google Chrome:“What U.S. businesses benefit from data collected and shared by the U.S. government?”\nResults",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-not-for-profit-businesses-visualize",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#what-data-do-not-for-profit-businesses-visualize",
-    "title": "Data viz in government & business",
-    "section": "What data do not-for-profit businesses visualize?",
-    "text": "What data do not-for-profit businesses visualize?\n\nPSU Office of Planning, Assessment, and Institutional Research\nOur World in Data\nGapminder\n\nDollar Street\n\nUSAFacts\n\nFounded by former Microsoft Corporation CEO Steve Ballmer",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#your-turn-1",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#your-turn-1",
-    "title": "Data viz in government & business",
-    "section": "Your turn…",
-    "text": "Your turn…\n\n\n\n\n\n\nWhy do for-profit and not-for-profit businesses visualize data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow do we evaluate whether data collected and reported by governments, for-profit, or not-for-profit organizations are credible and reliable?",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#exercise-01",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#exercise-01",
-    "title": "Data viz in government & business",
-    "section": "Exercise 01",
-    "text": "Exercise 01\n\nWrite-up due this Friday",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#exercise-02",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#exercise-02",
-    "title": "Data viz in government & business",
-    "section": "Exercise 02",
-    "text": "Exercise 02\n\nGet a jump start\nLink to assignment\nDue on Friday, September 11.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#quarto",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#quarto",
-    "title": "Data viz in government & business",
-    "section": "Quarto",
-    "text": "Quarto\n\nSee slides for this Friday’s class\nAlso Open Scholarship Bootcamp 2026 talk 1, and talk 2",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#main-points",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#main-points",
-    "title": "Data viz in government & business",
-    "section": "Main points",
-    "text": "Main points\n\nGovernments collect & report on lots of data\nNon-profits collect varied types of data, and many visualize it\nFor-profit business entities collect a ton of data, but most visualizations remain private",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#next-time",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#next-time",
-    "title": "Data viz in government & business",
-    "section": "Next time",
-    "text": "Next time\n\nVisualization in art, sports, and journalism\nRead\n\nGelman and Unwin (2013) (recommended), follow citation link to online version or PDF on Canvas.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#about",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#about",
-    "title": "Data viz in government & business",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#about-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#about-1",
+    "title": "Making data with R",
     "section": "About",
     "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
     "crumbs": [
       "Slides",
-      "Wk 02 • Mon Aug 31"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
-    "objectID": "slides/wk-02-2026-08-31-govt-biz.html#references",
-    "href": "slides/wk-02-2026-08-31-govt-biz.html#references",
-    "title": "Data viz in government & business",
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#references",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#references",
+    "title": "Making data with R",
     "section": "References",
-    "text": "References\n\n\n\n\nDenton, C Adeene, Erik Asphaug, Alexandre Emsenhuber, and Robert Melikyan. 2025. “Capture of an Ancient Charon Around Pluto.” Nature Geoscience 18 (January): 37–43. https://doi.org/10.1038/s41561-024-01612-0.\n\n\nGelman, Andrew, and Antony Unwin. 2013. “Infovis and Statistical Graphics: Different Goals, Different Looks.” Journal of Computational and Graphical Statistics: A Joint Publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America 22 (January): 2–28. https://doi.org/10.1080/10618600.2012.761137.",
+    "text": "References",
     "crumbs": [
       "Slides",
-      "Wk 02 • Mon Aug 31"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#announcements",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#announcements",
-    "title": "Work session: Introducing Quarto",
-    "section": "Announcements",
-    "text": "Announcements\n\nExercise 01 due today Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#todays-topics",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#todays-topics",
-    "title": "Work session: Introducing Quarto",
-    "section": "Today’s topics",
-    "text": "Today’s topics\n\nIntroducing Quarto\nUsing Quarto for Exercise 02",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#wherefore-quarto",
-    "title": "Work session: Introducing Quarto",
-    "section": "Wherefore Quarto",
-    "text": "Wherefore Quarto\n\n\n\n\n\n\nFigure 1",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#quarto",
-    "title": "Work session: Introducing Quarto",
-    "section": "Quarto",
-    "text": "Quarto\n\nSystem for creating documents, reports, and dashboards\nCombine text, figures, code, links, video, equations\nWrite in text \\(\\rightarrow\\) render to html, pdf, docx, pptx and more",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#installing-quarto",
-    "title": "Work session: Introducing Quarto",
-    "section": "Installing Quarto",
-    "text": "Installing Quarto\n\n\n\n\n\n\nFigure 2: https://quarto.org/docs/get-started/",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#create-new-project",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#create-new-project",
-    "title": "Work session: Introducing Quarto",
-    "section": "Create New Project",
-    "text": "Create New Project\n\n\n\n\n\n\n\n\nFigure 3: From File Menu\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Project Manager Tab",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#explore-project-and-document",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#explore-project-and-document",
-    "title": "Work session: Introducing Quarto",
-    "section": "Explore project (and document)",
-    "text": "Explore project (and document)",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#anatomy-of-quarto-document",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#anatomy-of-quarto-document",
-    "title": "Work session: Introducing Quarto",
-    "section": "Anatomy of Quarto document",
-    "text": "Anatomy of Quarto document\n\n\n\nText, has .qmd extension\nMetadata1 information (b/w pairs of ---)\nSection headers\n\n## means a 2nd level header\n\nCode chunks!\n\n\n\n\n\n\n\n\nFigure 8: A simple, template Quarto document with header metadata, a second level header, and an R code chunk.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-file",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-file",
-    "title": "Work session: Introducing Quarto",
-    "section": "Render the file",
-    "text": "Render the file\n\nTurn the text file into something else\n\nWebpage (HTML)\nDocument (PDF, Word)\nSlides\n\nDefault is webpage (HTML)\nI recommend checking “Render on Save”",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#rendered-file",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#rendered-file",
-    "title": "Work session: Introducing Quarto",
-    "section": "Rendered file",
-    "text": "Rendered file",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-1-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood (1 of 3)",
-    "text": "Under the hood (1 of 3)\n\n\n\nFile metadata are at the top between rows of triple dashes ---\n\nAdd a subtitle: subtitle: \"Friday, September 4, 2026\"\n\nClickable web links are surrounded by &lt; and &gt;",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-2-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood (2 of 3)",
-    "text": "Under the hood (2 of 3)\n\n\n\nCustom web link labels require this syntax: [Penn State home page](https://psu.edu)\n\nLabel is inside square brackets []\nURL inside parentheses ()\nRenders to: Penn State home page",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#under-the-hood-3-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "Under the hood (3 of 3)",
-    "text": "Under the hood (3 of 3)\n\n\n\nCode in chunks marked by triple backticks “```”\nChunk says what language to use in curly braces: {r}\n\nCould be other languages Quarto supports",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#visit-the-template",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#visit-the-template",
-    "title": "Work session: Introducing Quarto",
-    "section": "Visit the template",
-    "text": "Visit the template\n\nVisit https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#copy-the-template-text-into-a-new-text-file",
-    "title": "Work session: Introducing Quarto",
-    "section": "Copy the template text into a new text file",
-    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-template",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#render-the-template",
-    "title": "Work session: Introducing Quarto",
-    "section": "Render the template",
-    "text": "Render the template\n\n\n\n\n\n\nFigure 9",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-1-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (1 of 3)",
-    "text": "More under the hood (1 of 3)\n\nMetadata has an `author field. Change this in your document.\nChange title to Exercise 02.\nChange About section to reflect goals of Exercise 02.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-2-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (2 of 3)",
-    "text": "More under the hood (2 of 3)\n\nFigures use this syntax: ![]()\n\nSimilar to web link, but note initial exclamation point (!)\n![This is the figure caption](this_is_the_link_to_the_figure)\n\nLink to figure can be URL or path to file (path/to/my_figure.jpg)",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#more-under-the-hood-3-of-3",
-    "title": "Work session: Introducing Quarto",
-    "section": "More under the hood (3 of 3)",
-    "text": "More under the hood (3 of 3)\n\nQuarto converts Quarto file into HTML or PDF or…\nWriting and reading Quarto should be easier than writing HTML\nQuarto bundles other tools",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#next-time",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#next-time",
-    "title": "Work session: Introducing Quarto",
-    "section": "Next time",
-    "text": "Next time\n\nMaking (sense of) data\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau et al. (2012) | PDF on Canvas. (Optional)",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#about",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#about",
-    "title": "Work session: Introducing Quarto",
-    "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.1.0.392.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/psy-511-scan-fdns-2026-spring/",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#references",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#references",
-    "title": "Work session: Introducing Quarto",
-    "section": "References",
-    "text": "References\n\n\n\n\nStevens, S S. 1946. “On the Theory of Scales of Measurement.” Science (New York, N.Y.) 103 (June): 677–80. https://doi.org/10.1126/science.103.2684.677.\n\n\nTourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. The Psychology of Survey Response. Cambridge University Press. https://doi.org/10.1017/cbo9780511819322.\n\n\nWikipedia contributors. 2024. “Statistical Data Type.” Wikimedia Foundation, Inc., November 23. https://en.wikipedia.org/wiki/Statistical_data_type.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#footnotes",
-    "href": "slides/wk-02-2026-09-04-introducing-quarto.html#footnotes",
-    "title": "Work session: Introducing Quarto",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nData about data.",
-    "crumbs": [
-      "Slides",
-      "Wk 02 • Fri Sep 04"
+      "Wk 03 • Fri Sep 11"
     ]
   },
   {
@@ -2808,7 +3083,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8c5f21b60&gt;\n&lt;environment: 0x8c5f21888&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8c2265cb0&gt;\n&lt;environment: 0x8c22659d8&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -2863,7 +3138,7 @@
     "href": "exercises/ex-03-making-data.html",
     "title": "Exercise 03",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction.",
+    "text": "In-class work on Friday, September 11 and Friday, September 18, 2026.\nSubmit write-up for credit due by Friday, September 25, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 03"
@@ -2873,8 +3148,8 @@
     "objectID": "exercises/ex-03-making-data.html#dates",
     "href": "exercises/ex-03-making-data.html#dates",
     "title": "Exercise 03",
-    "section": "Dates",
-    "text": "Dates\nIn-class work on Friday, September 11 and Friday, September 18, 2026.\nSubmit write-up for credit due by Friday, September 25, 2026.",
+    "section": "",
+    "text": "In-class work on Friday, September 11 and Friday, September 18, 2026.\nSubmit write-up for credit due by Friday, September 25, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 03"
@@ -2885,7 +3160,29 @@
     "href": "exercises/ex-03-making-data.html#goals",
     "title": "Exercise 03",
     "section": "Goals",
-    "text": "Goals\n\nTo gain deeper understanding about different types of data and their strengths and weaknesses.\nTo gain experience using R to generate simulated data corresponding to different data types.\nTo gain experience using Google Forms to create surveys that collect data of different data types.",
+    "text": "Goals\nIn this exercise, you will work alone or with a team of no more than two other classmates to create a survey using the Google Forms tool. The survey you create will be used later in the course for data visualizations that you will also create.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 03"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-03-making-data.html#assignment",
+    "href": "exercises/ex-03-making-data.html#assignment",
+    "title": "Exercise 03",
+    "section": "Assignment",
+    "text": "Assignment\n\nSign-in to the Google drive account associated with your Penn State Access ID. This will make it somewhat easier for us to share forms.\nOpen Google Forms by visiting https://forms.google.com.\nCreate a new form by clicking on the ‘Blank Form’ button.\n\n{fig-google-form-blank-form} 3. Give your form a useful title, for example, ‘PSYCH-490.007-2026-spring-team-A’ or ‘PSYCH-490.007-2026-spring-rog1’.\n\n\n\n\n\n\nImportant\n\n\n\nYou can be assigned a team name/letter if you choose.\n\n\n\nCustomize the theme if you wish by clicking on the palette icon.\nCreate a survey with 8 questions. Your questions should be ones that your classmates can answer without embarrassment or loss of privacy and which meet the following criteria:\n\n\nGenerate two questions with nominal (un-ordered) answers (e.g., favorite color).\nGenerate two questions with ordinal (e.g., 1-5) answers analogous to a Likert scale.\nGenerate two questions with continuous answers (e.g., age and shoe size). It doesn’t matter if these are interval or ratio scaled.\nGenerate one question with a date or time as an answer (e.g., a favorite relative’s birthday).\nInclude one field for comments.\n\n\nWhen you are happy with a draft of your survey, conduct a quality assurance (QA) review of it by having your team or someone else take the survey. The easiest way to do this is to use the ‘Send’ button to send your survey to you collaborator(s).\n\n\n\n\nGoogle Forms ‘Send’\n\n\nMake sure to have your QA testers answer the Comments question with the same response, e.g., ‘test-response’. This will make it easier later to filter-out the test responses.\n\nMake sure that all of your collaborators have edit privileges on the form. Click on the ‘more’ button with three dots and add collaborators.\n\n\n\n\nAdd collaborators",
+    "crumbs": [
+      "Exercises",
+      "Exercise 03"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-03-making-data.html#submit",
+    "href": "exercises/ex-03-making-data.html#submit",
+    "title": "Exercise 03",
+    "section": "Submit",
+    "text": "Submit\nWhether or not you are submitting a write-up for Exercise 03, please add Dr. Gilmore (rog1@psu.edu) and Kalvin Garrah (cfh5558@psu.edu) as collaborators on the survey so that we can all benefit from your good work.\nPlease also add the URL to your survey to this Google Sheet:\nhttps://docs.google.com/spreadsheets/d/1DmJcXqJsdaO6rflVnq5DoQpTpgC7u8gmMRlnzlLqGJc/edit?usp=sharing\nIf you are submitting a short 2-4 page write-up via Canvas, please provide answers to the following questions:\n\nWhat is a defining feature of data items that are nominal?\n\nWhat assumptions might analysts make about ordinal data when it comes time to visualize or analyze the results?\n\nWhat assumptions must a researcher make when conducting survey research of this sort?\n\nFocusing on those available within Google Forms, what user interface(s) work best for different types of data?\n\nIf you’ve used Qualtics previously to generate surveys, briefly compare Qualtrics with Google Forms.",
     "crumbs": [
       "Exercises",
       "Exercise 03"

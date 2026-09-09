@@ -1,0 +1,241 @@
+---
+title: "Making data with R"
+format: revealjs
+filters:
+  - webr
+engine: knitr
+---
+
+# Preliminaries
+
+## Announcements
+
+- {{< fa calendar >}} *Due* [Exercise 02](../exercises/ex-02-data-viz-outside-psych.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448429) | 
+
+## Today's topics
+
+- Work session: Making data with R
+- Introducing [Exercise-03](../exercises/ex-03-making-data.qmd)
+
+# Making data with R
+
+## Why make data?
+
+- Good way to learn R syntax
+- Good way to generate synthetic data ([see Week 13](../schedule.qmd#week-13))
+
+## Making nominal/categorical data
+
+- What are the categories?
+- How many instances of each category
+
+## Example 1
+
+- Use the `c()` function to 'concatenate' members of your target category
+- R returns an 'array'
+
+```{webr-r}
+meals <- c("breakfast", "lunch", "dinner", "snack", "dessert")
+meals
+```
+
+## Extracting items from the array
+
+```{webr}
+length(meals)
+```
+
+```{webr-r}
+meals[4]
+```
+
+- Each item has an 'index' or address
+- Use square brackets `[]` to extract the element at that address
+
+## Words for the wise (1 of 3)
+
+- Array addresses must be numbers
+
+```{webr-r}
+meals['first']
+```
+
+- `NA` means not applicable or no data
+
+## Words for the wise (2 of 3)
+
+```{webr-r}
+meals[-1]
+```
+
+- Wait, what happened? 
+- `meals[-1]` dropped the first element `breakfast`
+- How would you drop `snack`?
+
+## Words for the wise (2 of 3)
+
+- Addresses must be less than the length of the array
+
+```{webr-r}
+length(meals)
+meals[6]
+```
+
+## Words for the wise (3 of 3)
+
+- We can select a subset of elements
+
+```{webr-r}
+meals[1:2]
+
+meals[c(1, 3, 5)]
+```
+
+## Copying arrays
+
+- Make copies of arrays with the `rep()` (replicate) function
+
+```{webr-r}
+weekly_meals <- rep(meals, 7)
+weekly_meals
+```
+
+## Your turn
+
+::: {.question}
+Why would we want to do this?
+:::
+
+## One answer
+
+```{webr-r}
+days <- c("sun", "mon", "tue", "wed", "thu", "fri", "sat")
+meal_days <- rep(days, each = length(meals))
+meal_days
+```
+
+```{webr-r}
+length(meal_days)
+length(weekly_meals)
+```
+
+---
+
+- When arrays have equal length, we can make a rectangular data frame
+
+```{webr-r}
+my_meals <- data.frame(day_of_wk = meal_days, meal = weekly_meals)
+my_meals
+```
+
+---
+
+- One more thing makes this potentially useful.
+
+::: {.question}
+## What is that thing?
+:::
+
+::: {.fragment}
+::: {.answer}
+```{webr-r}
+ate_it <- sample(c(TRUE, FALSE), size = 35, 
+                 replace = TRUE, prob = c(.6, .4))
+ate_it
+```
+:::
+:::
+
+## Under the hood
+
+- `TRUE` and `FALSE` are 'logical' values
+- We generated an array of values using the `sample()` function
+- Assumption: There's a .6 probability of eating any given meal
+
+## Putting it all together (1 of 2)
+
+```{webr-r}
+my_meals$ate_it <- ate_it
+my_meals
+```
+
+## Putting it all together (2 of 2)
+
+- Show the variable in a data frame using the `$` operator
+
+```{webr-r}
+my_meals$day_of_wk
+```
+
+## Your turn
+
+::: {.question}
+## Is `day_of_wk` nominal?
+:::
+
+::: {.question}
+## Is it *ordinal*?
+:::
+
+::: {.question}
+## Is `ate_it` ordinal?
+:::
+
+## Visualizing... (1 of 2)
+
+- Use the `xtabs` function to generate a cross-tabulated table
+- `formula` syntax says show `my_meals` by `meal` and `ate_it`
+
+```{webr-r}
+xtabs(formula = ~ meal + ate_it, data = my_meals)
+```
+
+## Visualizing... (2 of 2)
+
+::: {.question}
+## How would you show a table showing the meals eaten by `day_of_wk`?
+:::
+
+::: {.fragment}
+::: {.answer}
+```{webr-r}
+xtabs(formula = ~ day_of_wk + ate_it, data = my_meals)
+```
+:::
+:::
+
+## Final comments
+
+- What order does the table present `meal` in?
+- What order is `day_of_wk` presented in?
+- Have we told R which of these are *ordinal*?
+
+# Introducing Exercise 03
+
+# Wrap-up
+
+## Main points
+
+- Use `c()` to make arrays
+- Use `rep()` to make copies of elements or arrays
+- Use `data.frame()` to make data frames
+
+## Next time
+
+- *Figure types*
+
+# Resources
+
+## About
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.8.2.200.
+
+The source files are in R and Quarto, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
+<https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>
+
+## References
