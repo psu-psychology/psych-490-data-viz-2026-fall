@@ -1746,7 +1746,7 @@
     "href": "deadlines.html",
     "title": "Deadlines",
     "section": "",
-    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-02\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
     "crumbs": [
       "Deadlines"
     ]
@@ -3083,7 +3083,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8c2265cb0&gt;\n&lt;environment: 0x8c22659d8&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x945a09ab8&gt;\n&lt;environment: 0x945a097e0&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
