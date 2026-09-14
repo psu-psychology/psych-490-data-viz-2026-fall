@@ -1,9 +1,12 @@
 ---
 title: "Intro to `ggplot`"
-format: revealjs
+format: 
+  revealjs:
+    code-fold: false
 filters:
   - webr
 engine: knitr
+
 ---
 
 # Preliminaries
@@ -47,7 +50,7 @@ install.packages("ggplot2")
 
 ## Let's make some data
 
-```{webr-r}
+```{r}
 days <- factor(
   c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
   levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
@@ -67,7 +70,7 @@ my_meals <- data.frame(day_of_wk = meal_days,
 
 ## Let's make some data
 
-```{webr-r}
+```{r}
 ate_skipped <- sample(c("ate", "skipped"), size = 35, 
                  replace = TRUE, prob = c(.6, .4))
 ate <- ate_skipped == "ate"
@@ -76,7 +79,7 @@ ate
 
 ## Let's make some data
 
-```{webr-r}
+```{r}
 ratings <- sample(c(1, 2, 3, 4, 5), size = 35,
                  replace = TRUE)
 
@@ -85,14 +88,14 @@ ratings[!ate] <- NA
 
 ## Let's make some data
 
-```{webr-r}
+```{r}
 my_meals$ate_skipped <- ate_skipped
 my_meals$rating <- ratings
 ```
 
 ## How'd we do?
 
-```{webr-r}
+```{r}
 my_meals
 ```
 
@@ -108,7 +111,100 @@ my_meals
 :::
 :::
 
-## 
+## Meal ratings
+
+```{r}
+# Do this once each time you start work
+library(ggplot2)
+```
+
+## Figure 0
+
+```{r}
+#| echo: true
+#| output-location: slide
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+## Figure 1.0
+
+```{r}
+#| label: fig-barplot-ate_skipped
+#| fig-cap: "A barplot of meals eaten and skipped."
+#| echo: true
+#| output-location: slide
+#| code-line-numbers: "1|2|3|4"
+my_meals |> 
+  ggplot() + 
+  aes(x = ate_skipped) + 
+  geom_bar() 
+```
+
+## Figure 1.1
+
+- Add a `fill` aesthetic to fill the bars with colors 
+
+```{r}
+#| label: fig-barplot-ate_skipped-fill
+#| fig-cap: "A barplot of meals eaten and skipped."
+#| echo: true
+#| output-location: slide
+#| code-line-numbers: "|3"
+my_meals |>
+  ggplot() +
+  aes(x = ate_skipped, fill = ate_skipped) +
+  geom_bar()
+```
+
+::: {.fragment}
+- If we fill from `ate_skipped`
+  - ggplot will map a color to each distinct value of `ate_skipped`
+  - and add a legend, so we know what the colors represent
+  
+:::
+
+## Figure 2
+
+```{r}
+#| label: fig-barplot-ratings
+#| fig-cap: "A barplot of meal ratings"
+ggplot(data = my_meals, 
+       aes(x = rating)) +
+  geom_bar()
+```
+
+## Figure 2
+
+```{r}
+#| label: fig-2
+#| fig-cap: "A plot of ratings for each meal using  `geom_point`"
+my_meals |>
+ggplot() +
+  aes(x = meal, y = rating) +
+  geom_point()
+```
+
+## Figure 3
+
+```{r}
+#| label: fig-3
+
+my_meals |>
+ggplot() +
+  aes(x = day_of_wk, y = rating) +
+  geom_point()
+```
+
+## Basic ggplot components
+
+- A data frame
+- Function call to `ggplot()`
+- Add layers to plot with `+` operator
+- Add aesthetics (mappings between data and graphic elements) using `aes()` with x (and often y) mappings
+- A `geom_` layer
 
 # Wrap-up
 

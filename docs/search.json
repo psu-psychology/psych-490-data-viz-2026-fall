@@ -865,7 +865,7 @@
     "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types",
     "title": "Figure types",
     "section": "What data type(s)?",
-    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8",
+    "text": "What data type(s)?\n\n\n\n\n\n\nFigure 3: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8",
     "crumbs": [
       "Slides",
       "Wk 04 • Mon Sep 14"
@@ -876,7 +876,7 @@
     "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-1",
     "title": "Figure types",
     "section": "What data type(s)?",
-    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8",
+    "text": "What data type(s)?\n\n\n\n\n\n\nFigure 4: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-10",
     "crumbs": [
       "Slides",
       "Wk 04 • Mon Sep 14"
@@ -887,7 +887,7 @@
     "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-2",
     "title": "Figure types",
     "section": "What data type(s)?",
-    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-17",
+    "text": "What data type(s)?\n\n\n\n\n\n\nFigure 5: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-17",
     "crumbs": [
       "Slides",
       "Wk 04 • Mon Sep 14"
@@ -898,7 +898,7 @@
     "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-3",
     "title": "Figure types",
     "section": "What data type(s)?",
-    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-28",
+    "text": "What data type(s)?\n\n\n\n\n\n\nFigure 6: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-28",
     "crumbs": [
       "Slides",
       "Wk 04 • Mon Sep 14"
@@ -909,7 +909,7 @@
     "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-4",
     "title": "Figure types",
     "section": "What data types",
-    "text": "What data types\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-30",
+    "text": "What data types\n\n\n\n\n\n\nFigure 7: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-30",
     "crumbs": [
       "Slides",
       "Wk 04 • Mon Sep 14"
@@ -3896,21 +3896,21 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Let’s make some data"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Let’s make some data\n\n\n [1] FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE\n[13]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE\n[25]  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Let’s make some data"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#section",
@@ -3952,13 +3952,108 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-3",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Let’s make some data"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
     "href": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
     "title": "Intro to ggplot",
     "section": "How’d we do?",
-    "text": "How’d we do?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "How’d we do?\n\n\n   day_of_wk      meal ate_skipped rating\n1        sun breakfast     skipped     NA\n2        sun     lunch         ate      5\n3        sun    dinner         ate      5\n4        sun     snack     skipped     NA\n5        sun   dessert         ate      1\n6        mon breakfast         ate      1\n7        mon     lunch     skipped     NA\n8        mon    dinner     skipped     NA\n9        mon     snack         ate      1\n10       mon   dessert         ate      1\n11       tue breakfast         ate      4\n12       tue     lunch         ate      1\n13       tue    dinner         ate      4\n14       tue     snack     skipped     NA\n15       tue   dessert         ate      1\n16       wed breakfast         ate      2\n17       wed     lunch     skipped     NA\n18       wed    dinner         ate      5\n19       wed     snack         ate      1\n20       wed   dessert     skipped     NA\n21       thu breakfast     skipped     NA\n22       thu     lunch         ate      4\n23       thu    dinner     skipped     NA\n24       thu     snack         ate      1\n25       thu   dessert         ate      5\n26       fri breakfast         ate      2\n27       fri     lunch     skipped     NA\n28       fri    dinner         ate      4\n29       fri     snack         ate      5\n30       fri   dessert     skipped     NA\n31       sat breakfast         ate      5\n32       sat     lunch     skipped     NA\n33       sat    dinner     skipped     NA\n34       sat     snack         ate      4\n35       sat   dessert         ate      4"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#meal-ratings",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#meal-ratings",
+    "title": "Intro to ggplot",
+    "section": "Meal ratings",
+    "text": "Meal ratings"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2",
+    "title": "Intro to ggplot",
+    "section": "Figure 2",
+    "text": "Figure 2\n\n\n\n\n\n\n\n\nFigure 3: A barplot of meal ratings"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-3",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-3",
+    "title": "Intro to ggplot",
+    "section": "Figure 3",
+    "text": "Figure 3\n\n\n\n\n\n\n\n\nFigure 5"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#basic-ggplot-components",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#basic-ggplot-components",
+    "title": "Intro to ggplot",
+    "section": "Basic ggplot components",
+    "text": "Basic ggplot components\n\nA data frame\nFunction call to ggplot()\nAdd layers to plot with + operator\nAdd aesthetics (mappings between data and graphic elements) using aes() with x (and often y) mappings\nA geom_ layer"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1",
+    "title": "Intro to ggplot",
+    "section": "Figure 1",
+    "text": "Figure 1\n\n\n\n\n\n\n\n\nFigure 1: A barplot of meal ratings"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-0",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-0",
+    "title": "Intro to ggplot",
+    "section": "Figure 0",
+    "text": "Figure 0\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-0-output",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-0-output",
+    "title": "Intro to ggplot",
+    "section": "Figure 0",
+    "text": "Figure 0"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0",
+    "title": "Intro to ggplot",
+    "section": "Figure 1.0",
+    "text": "Figure 1.0\n\nmy_meals |&gt; \n  ggplot() + \n  aes(x = ate_skipped) + \n  geom_bar()"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1",
+    "title": "Intro to ggplot",
+    "section": "Figure 1.1",
+    "text": "Figure 1.1\n\nAdd a fill aesthetic to fill the bars with colors\n\n\nmy_meals |&gt;\n  ggplot() +\n  aes(x = ate_skipped, fill = ate_skipped) +\n  geom_bar()\n\n\n\n\nIf we fill from ate_skipped\n\nggplot will map a color to each distinct value of ate_skipped\nand add a legend, so we know what the colors represent"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2-1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2-1",
+    "title": "Intro to ggplot",
+    "section": "Figure 2",
+    "text": "Figure 2\n\n\n\n\n\n\n\n\nFigure 4: A plot of ratings for each meal using geom_point"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0-output",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0-output",
+    "title": "Intro to ggplot",
+    "section": "Figure 1.0",
+    "text": "Figure 1.0\n\n\n\n\n\n\n\nFigure 1: A barplot of meals eaten and skipped."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1-output",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1-output",
+    "title": "Intro to ggplot",
+    "section": "Figure 1.1",
+    "text": "Figure 1.1\n\n\n\n\n\n\n\nFigure 2: A barplot of meals eaten and skipped."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#introducing-exercise-03",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#introducing-exercise-03",
+    "title": "Figure types",
+    "section": "Introducing Exercise 03",
+    "text": "Introducing Exercise 03\n\nExercise 03 Making Data\nMapping data types to figures",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Mon Sep 14"
+    ]
   }
 ]

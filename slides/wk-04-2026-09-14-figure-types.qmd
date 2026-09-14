@@ -139,25 +139,25 @@ flowchart TD
 - Spatial data
 :::
 
-## What data type(s)? 
+## What data type(s)? {.scrollable}
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8>](https://www.cell.com/cms/10.1016/j.patter.2023.100878/asset/d1fda139-36a5-4aa2-9539-7c9a0305e4b4/main.assets/gr1_lrg.jpg)
-
-## What data type(s)?
-
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8>](https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8>](https://www.cell.com/cms/10.1016/j.patter.2023.100878/asset/d1fda139-36a5-4aa2-9539-7c9a0305e4b4/main.assets/gr1_lrg.jpg){#fig-8 width="60%"}
 
 ## What data type(s)?
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-17>](https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-10>](https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg){#fig-10 width="60%"}
 
 ## What data type(s)?
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-28>](https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-17>](https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg){#fig-17 width="60%"}
+
+## What data type(s)?
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-28>](https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png){#fig-28 width="60%"}
 
 ## What data types
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-30>](https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-30>](https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg){#fig-30 width="60%"}
 
 # Figure types
 
@@ -172,7 +172,7 @@ flowchart TD
 
 ## Introducing Exercise 03
 
-- [Exercise 03 Making Data](../exercises/ex03-making-data.qmd)
+- [Exercise 03 Making Data](../exercises/ex-03-making-data.qmd)
 - Mapping data types to figures
 
 ## Goals
