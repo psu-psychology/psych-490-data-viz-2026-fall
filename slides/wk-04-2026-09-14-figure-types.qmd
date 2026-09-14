@@ -170,7 +170,7 @@ flowchart TD
 @Channel2024-so
 :::
 
-## Exercise 03
+## Introducing Exercise 03
 
 - [Exercise 03 Making Data](../exercises/ex03-making-data.qmd)
 - Mapping data types to figures

@@ -3855,5 +3855,110 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#announcements",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#announcements",
+    "title": "Intro to ggplot",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise 02 due today\nNo class Monday, September 21"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#todays-topics",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#todays-topics",
+    "title": "Intro to ggplot",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nIntro to ggplot\nAs time permits\n\nExercise 02\nExercise 03"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#what-is-it",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#what-is-it",
+    "title": "Intro to ggplot",
+    "section": "What is it?",
+    "text": "What is it?\n\nR package that implements Cleveland’s “grammar of graphics”\n\nWritten by Hadley Wickham, CTO of Posit.co\n\nMap data to figure components\n\nPosition\nColor, shape, size\n\nAdd layers to figures"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#why-code-your-figures",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#why-code-your-figures",
+    "title": "Intro to ggplot",
+    "section": "Why ‘code’ your figures?",
+    "text": "Why ‘code’ your figures?\n\nEasier to reproduce\nEasier to edit\nTry out different styles, pick the best\nBe kind to your future (forgetful) self\nMakes programming more fun"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#installing-ggplot",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#installing-ggplot",
+    "title": "Intro to ggplot",
+    "section": "Installing ggplot",
+    "text": "Installing ggplot\ninstall.packages(\"ggplot2\")"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#section",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#section",
+    "title": "Intro to ggplot",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#your-turn",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#your-turn",
+    "title": "Intro to ggplot",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nHow would you visualize this sort of data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat questions would you want your visualization to answer?"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#next-time",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#next-time",
+    "title": "Intro to ggplot",
+    "section": "Next time",
+    "text": "Next time\n\nFigure components\nWork session: Exercises 02 and 03"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#about",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#about",
+    "title": "Intro to ggplot",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.9.0.174.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#references",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#references",
+    "title": "Intro to ggplot",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-3",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-3",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
+    "title": "Intro to ggplot",
+    "section": "How’d we do?",
+    "text": "How’d we do?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]

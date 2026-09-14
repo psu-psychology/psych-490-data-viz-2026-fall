@@ -1,0 +1,132 @@
+---
+title: "Intro to `ggplot`"
+format: revealjs
+filters:
+  - webr
+engine: knitr
+---
+
+# Preliminaries
+
+## Announcements
+
+- Exercise 02 due today
+- No class Monday, September 21
+
+## Today's topics
+
+- Intro to ggplot
+- As time permits
+  - [Exercise 02](../exercises/ex-02-data-viz-outside-psych.qmd)
+  - [Exercise 03](../exercises/ex-03-making-data.qmd)
+
+# Intro to ggplot
+
+## What is it?
+
+- R package that implements Cleveland's "grammar of graphics"
+  - Written by Hadley Wickham, CTO of Posit.co
+- Map data to figure components
+  - Position
+  - Color, shape, size
+- Add layers to figures
+
+## Why 'code' your figures?
+
+- Easier to reproduce
+- Easier to edit
+- Try out different styles, pick the best
+- Be kind to your future (forgetful) self
+- Makes programming more fun
+
+## Installing ggplot
+
+```r
+install.packages("ggplot2")
+```
+
+## Let's make some data
+
+```{webr-r}
+days <- factor(
+  c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
+  levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
+  ordered = TRUE
+)
+meals <- factor(
+  c("breakfast", "lunch", "dinner", "snack", "dessert"),
+  levels = c("breakfast", "lunch", "snack", "dinner", "dessert"),
+  ordered = TRUE
+)
+meal_days <- rep(days, each = length(meals))
+weekly_meals <- rep(meals, 7)
+
+my_meals <- data.frame(day_of_wk = meal_days, 
+                       meal = weekly_meals)
+```
+
+## Let's make some data
+
+```{webr-r}
+ate_skipped <- sample(c("ate", "skipped"), size = 35, 
+                 replace = TRUE, prob = c(.6, .4))
+ate <- ate_skipped == "ate"
+ate
+```
+
+## Let's make some data
+
+```{webr-r}
+ratings <- sample(c(1, 2, 3, 4, 5), size = 35,
+                 replace = TRUE)
+
+ratings[!ate] <- NA
+```
+
+## Let's make some data
+
+```{webr-r}
+my_meals$ate_skipped <- ate_skipped
+my_meals$rating <- ratings
+```
+
+## How'd we do?
+
+```{webr-r}
+my_meals
+```
+
+## Your turn...
+
+::: {.question}
+## How would you visualize this sort of data?
+:::
+
+::: {.fragment}
+::: {.question}
+## What questions would you want your visualization to answer?
+:::
+:::
+
+## 
+
+# Wrap-up
+
+## Next time
+
+- Figure components
+- Work session: Exercises 02 and 03
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.9.0.174.
+
+The source files are in R and Quarto, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
+<https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>
+
+## References
