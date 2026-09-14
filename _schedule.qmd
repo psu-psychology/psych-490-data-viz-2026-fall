@@ -84,7 +84,6 @@
 *Work Session: Making data with R*
 
 - [Slides](slides/wk-03-2026-09-11-making-data-with-r.qmd)
-- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
 
 ## Week 04 {- #week-04}
 
@@ -101,6 +100,7 @@
   - @AtlassianUnknown-ob
 - *Watch*: 
   - @Channel2024-so
+- [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
 - [Slides](404.qmd)
 
 ### Wed, Sep 16 {-}

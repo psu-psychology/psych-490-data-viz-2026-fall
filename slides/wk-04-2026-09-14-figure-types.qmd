@@ -1,0 +1,200 @@
+---
+title: "Figure types"
+format: revealjs
+filters:
+  - webr
+engine: knitr
+---
+
+# Preliminaries
+
+## Announcements
+
+- Exercise 02 due this Friday
+- No class next Monday, September 21
+
+## Today's topics
+
+- Making ordinal variables
+- Data/scale types review
+- Figure types
+- Introducing Exercise 03
+
+## Making ordinal variables (1 of 3)
+
+- Use `factor()` function
+- Specify categories, `levels`, and `ordered = TRUE`
+
+```{webr-r}
+days <- factor(
+  c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
+  levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
+  ordered = TRUE
+)
+
+days
+```
+
+## Making ordinal variables (2 of 3)
+
+```{webr-r}
+meals <- factor(
+  c("breakfast", "lunch", "dinner", "snack", "dessert"),
+  levels = c("breakfast", "lunch", "snack", "dinner", "dessert"),
+  ordered = TRUE
+)
+
+meals
+```
+
+## Making ordinal variables (3 of 3)
+
+```{webr-r}
+meal_days <- rep(days, each = length(meals))
+weekly_meals <- rep(meals, 7)
+
+my_meals <- data.frame(day_of_wk = meal_days, 
+                       meal = weekly_meals)
+
+my_meals
+```
+
+## Bonus
+
+```{webr-r}
+ate_it <- sample(c(TRUE, FALSE), size = 35, 
+                 replace = TRUE, prob = c(.6, .4))
+my_meals$ate_it <- ate_it
+
+my_meals
+```
+
+## Your turn...
+
+::: {.question}
+## How would you visualize this sort of data?
+:::
+
+::: {.fragment}
+::: {.question}
+## What questions would you want your visualization to answer?
+:::
+:::
+
+# Last week...
+
+## Core ideas
+
+- Data are *made*
+  - Map characteristics (of people, things) to quantities/categories
+    - By some measurement procedure
+  - Reflect, but also select and deflect [@Burke1968-ye]
+- Mappings have different scale types [@Stevens1946-sh]
+- Scales determine i) permissible/logical stats & ii) best visualizations
+
+---
+
+:::: {.columns}
+::: {.column width=50%}
+```{mermaid}
+%%| label: fig-measurement-mapping
+%%| fig-cap: "Illustration of mappings from observed entity to data figure"
+flowchart TD
+  Z[Researcher] -- Measures --> B[Thing/Person]
+  B -- Makes --> C{Data}
+```
+:::
+::: {.column width=50%}
+```{mermaid}
+%%| label: fig-measurement-mapping-2
+%%| fig-cap: "Illustration of mappings from observed entity to data figure"
+flowchart TD
+  C{Data} -- Enlightens --> D[Analyst]
+  D -- Creates --> E(Figure)
+  E -- Informs --> F[Student/Reader]
+```
+:::
+::::
+
+## Data types/scales (1 of 2)
+
+- Extending @Stevens1946-sh, see also @Wikipedia-contributors2024-xu
+
+::: {.incremental}
+- Nominal
+  - Binary (0,1)
+  - Categorical
+- Ordinal
+  - e.g., 1st, 2nd, 3rd, ...
+:::
+
+## Data types/scales (2 of 2)
+
+::: {.incremental}
+- Counts
+  - e.g., 1, 2, 3, 4, ...
+- Continuous/Real-valued
+  - Interval
+  - Ratio
+- Spatial data
+:::
+
+## What data type(s)? 
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-1>](https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg)
+
+## What data type(s)?
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-3>](https://www.sfn.org/-/media/SfN/Images/NEW-SfN/Publications/2020/January/20200127_Brain_Needs_Iron_Cognitive_Dev.png)
+
+## What data type(s)?
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-26>](https://media.springernature.com/lw685/springer-static/image/art%3A10.3758%2Fs13421-017-0708-1/MediaObjects/13421_2017_708_Fig3_HTML.gif?)
+
+## What data type(s)?
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/other-field-figs.html#figure-15>](https://fivethirtyeight.com/wp-content/uploads/2019/05/SPRAWLBALL_Fig_013_kg_edit.png?resize=590,450)
+
+# Figure types
+
+---
+
+::: {#fig-100-chart-types}
+
+{{< video https://www.youtube.com/watch?v=cuMwWvtNmJ0 width=100% height=70% >}}
+
+@Channel2024-so
+:::
+
+## Exercise 03
+
+- [Exercise 03 Making Data](../exercises/ex03-making-data.qmd)
+- Mapping data types to figures
+
+## Goals
+
+- Practice making instruments for different data types
+- Understand how different data types map to 
+  - different types of data visualizations
+  - different types of data summaries
+- Gain an appreciation of the variety of data visualizations
+
+# Wrap-up
+
+## Main points
+
+## Next time
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.9.0.174.
+
+The source files are in R and Quarto, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
+<https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>
+
+## References

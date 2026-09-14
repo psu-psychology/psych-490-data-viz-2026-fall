@@ -3314,5 +3314,264 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#for-fun",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#for-fun",
+    "title": "slide-template",
+    "section": "For fun",
+    "text": "For fun\n\n\n\n\n\n\n\nFigure 1: (Musikladen2020-id?)"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#announcements",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#announcements",
+    "title": "Figure types",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise 02 due this Friday\nNo class next Monday, September 21"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#todays-topics",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#todays-topics",
+    "title": "Figure types",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nMaking ordinal variables\nData/scale types review\nFigure types\nIntroducing Exercise 03"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-1-of-2",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-1-of-2",
+    "title": "Figure types",
+    "section": "Making ordinal variables (1 of 2)",
+    "text": "Making ordinal variables (1 of 2)\n\nUse factor() function; specify categories and levels\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-2-of-2",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-2-of-2",
+    "title": "Figure types",
+    "section": "Making ordinal variables (2 of 2)",
+    "text": "Making ordinal variables (2 of 2)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#main-points",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#main-points",
+    "title": "Figure types",
+    "section": "Main points",
+    "text": "Main points"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#next-time",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#next-time",
+    "title": "Figure types",
+    "section": "Next time",
+    "text": "Next time"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#about",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#about",
+    "title": "Figure types",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.9.0.174.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#about-1",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#about-1",
+    "title": "Figure types",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#references",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#references",
+    "title": "Figure types",
+    "section": "References",
+    "text": "References\n\n\n\n\nBurke, Kenneth. 1968. Language as Symbolic Action. University of California Press. https://www.ucpress.edu/books/language-as-symbolic-action/paper.\n\n\nChannel, Mconsultingprep Official. 2024. Every CHART Types Explained in 12 Minutes. YouTube. https://www.youtube.com/watch?v=cuMwWvtNmJ0.\n\n\nStevens, S S. 1946. “On the Theory of Scales of Measurement.” Science (New York, N.Y.) 103 (June): 677–80. https://doi.org/10.1126/science.103.2684.677.\n\n\nWikipedia contributors. 2024. “Statistical Data Type.” Wikimedia Foundation, Inc., November 23. https://en.wikipedia.org/wiki/Statistical_data_type."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-1-of-3",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-1-of-3",
+    "title": "Figure types",
+    "section": "Making ordinal variables (1 of 3)",
+    "text": "Making ordinal variables (1 of 3)\n\nUse factor() function\nSpecify categories, levels, and ordered = TRUE\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-2-of-3",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-2-of-3",
+    "title": "Figure types",
+    "section": "Making ordinal variables (2 of 3)",
+    "text": "Making ordinal variables (2 of 3)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-3-of-3",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#making-ordinal-variables-3-of-3",
+    "title": "Figure types",
+    "section": "Making ordinal variables (3 of 3)",
+    "text": "Making ordinal variables (3 of 3)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#announcements-1",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#announcements-1",
+    "title": "Figure types",
+    "section": "Announcements",
+    "text": "Announcements\n\nDue on Tuesday, February 11: Exercise-03 | Canvas dropbox\nExercise 01 feedback"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#last-time",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#last-time",
+    "title": "Figure types",
+    "section": "Last time…",
+    "text": "Last time…\nMaking data"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#core-ideas",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#core-ideas",
+    "title": "Figure types",
+    "section": "Core ideas",
+    "text": "Core ideas\n\nData are made\n\nMap characteristics (of people, things) to quantities/categories\n\nBy some measurement procedure\n\nReflect, but also select and deflect (Burke 1968)\n\nMappings have different scale types (Stevens 1946)\nScales determine i) permissible/logical stats & ii) best visualizations"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#data-typesscales",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#data-typesscales",
+    "title": "Figure types",
+    "section": "Data types/scales",
+    "text": "Data types/scales\n\nExtending Stevens (1946), see also Wikipedia contributors (2024)\n\n\nNominal\n\nBinary (0,1)\nCategorical\n\nOrdinal\n\ne.g., 1st, 2nd, 3rd, …"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#data-types-continued",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#data-types-continued",
+    "title": "Figure types",
+    "section": "Data types (continued)",
+    "text": "Data types (continued)\n\nCounts\n\ne.g., 1, 2, 3, 4, …\n\nContinuous/Real-valued\n\nInterval\nRatio\n\nSpatial data"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#what-data-types",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types",
+    "title": "Figure types",
+    "section": "What data type(s)?",
+    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-1"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-1",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-1",
+    "title": "Figure types",
+    "section": "What data type(s)?",
+    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-3"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-2",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-2",
+    "title": "Figure types",
+    "section": "What data type(s)?",
+    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-26"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-3",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-3",
+    "title": "Figure types",
+    "section": "What data type(s)?",
+    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/other-field-figs.html#figure-15"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-4",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#what-data-types-4",
+    "title": "Figure types",
+    "section": "What data type(s)?",
+    "text": "What data type(s)?\n\n\n\nhttps://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/other-field-figs.html#figure-21"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#today",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#today",
+    "title": "Figure types",
+    "section": "Today",
+    "text": "Today\n\nExercise 03 Making Data\nMapping data types to figures"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#goals",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#goals",
+    "title": "Figure types",
+    "section": "Goals",
+    "text": "Goals\n\nPractice making instruments for different data types\nUnderstand how different data types map to\n\ndifferent types of data visualizations\ndifferent types of data summaries\n\nGain an appreciation of the variety of data visualizations"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#considerations",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#considerations",
+    "title": "Figure types",
+    "section": "Considerations",
+    "text": "Considerations\n\nWhat figure type(s) are appropriate for the data type\nWhat figure type(s) are most informative/least misleading"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#nominal-data",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#nominal-data",
+    "title": "Figure types",
+    "section": "Nominal data",
+    "text": "Nominal data\n\nBar chart\nPie chart\nRing/donut chart\nMosaic chart (2 variables)"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#ordinal-data",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#ordinal-data",
+    "title": "Figure types",
+    "section": "Ordinal data",
+    "text": "Ordinal data\n\nAll of the nominal types…\nSorted in some order based on the ordinal variable"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#some-examples",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#some-examples",
+    "title": "Figure types",
+    "section": "Some examples",
+    "text": "Some examples\n\nUsing data created here"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#bar-chart",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#bar-chart",
+    "title": "Figure types",
+    "section": "Bar chart",
+    "text": "Bar chart"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#httpspsu-psychology.github.iopsych-490-data-viz-2025-springtutorialstutorial-making-data.htmlvisualizing",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#httpspsu-psychology.github.iopsych-490-data-viz-2025-springtutorialstutorial-making-data.htmlvisualizing",
+    "title": "Figure types",
+    "section": "",
+    "text": "https://psu-psychology.github.io/psych-490-data-viz-2025-spring/tutorials/tutorial-making-data.html#horizontal-barplot"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#bar-lollipop-chart-mappings",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#bar-lollipop-chart-mappings",
+    "title": "Figure types",
+    "section": "Bar, lollipop chart mappings",
+    "text": "Bar, lollipop chart mappings\n\nWhat data component maps to what figure dimension?\n\n\n\n\nNumber of observations in category \\(\\rightarrow\\) height/length\nColor-category \\(\\rightarrow\\) fill color\nSchool \\(\\rightarrow\\) position on horizontal axis"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#exercise-03",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#exercise-03",
+    "title": "Figure types",
+    "section": "Exercise 03",
+    "text": "Exercise 03\n\nExercise 03 Making Data\nMapping data types to figures"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#data-typesscales-1-of-2",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#data-typesscales-1-of-2",
+    "title": "Figure types",
+    "section": "Data types/scales (1 of 2)",
+    "text": "Data types/scales (1 of 2)\n\nExtending Stevens (1946), see also Wikipedia contributors (2024)\n\n\nNominal\n\nBinary (0,1)\nCategorical\n\nOrdinal\n\ne.g., 1st, 2nd, 3rd, …"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#data-typesscales-2-of-2",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#data-typesscales-2-of-2",
+    "title": "Figure types",
+    "section": "Data types/scales (2 of 2)",
+    "text": "Data types/scales (2 of 2)\n\nCounts\n\ne.g., 1, 2, 3, 4, …\n\nContinuous/Real-valued\n\nInterval\nRatio\n\nSpatial data"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#bonus",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#bonus",
+    "title": "Figure types",
+    "section": "Bonus",
+    "text": "Bonus\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-14-figure-types.html#your-turn",
+    "href": "slides/wk-04-2026-09-14-figure-types.html#your-turn",
+    "title": "Figure types",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nHow would you visualize this sort of data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat questions would you want your visualization to answer?"
   }
 ]
