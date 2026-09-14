@@ -40,6 +40,10 @@ website:
         href: slides/wk-03-2026-09-09-making-data.qmd
       - text: "Wk 03 • Fri Sep 11"
         href: slides/wk-03-2026-09-11-making-data-with-r.qmd
+      - text: "Wk 04 • Mon Sep 14"
+        href: slides/wk-04-2026-09-14-figure-types.qmd
+      - text: "Wk 04 • Wed Sep 16"
+        href: slides/wk-04-2026-09-16-figure-components.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

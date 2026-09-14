@@ -141,19 +141,23 @@ flowchart TD
 
 ## What data type(s)? 
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-1>](https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8>](https://www.cell.com/cms/10.1016/j.patter.2023.100878/asset/d1fda139-36a5-4aa2-9539-7c9a0305e4b4/main.assets/gr1_lrg.jpg)
 
 ## What data type(s)?
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-3>](https://www.sfn.org/-/media/SfN/Images/NEW-SfN/Publications/2020/January/20200127_Brain_Needs_Iron_Cognitive_Dev.png)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-8>](https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg)
 
 ## What data type(s)?
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/psych-sci-figs.html#figure-26>](https://media.springernature.com/lw685/springer-static/image/art%3A10.3758%2Fs13421-017-0708-1/MediaObjects/13421_2017_708_Fig3_HTML.gif?)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-17>](https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg)
 
 ## What data type(s)?
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2025-spring/supplemental/other-field-figs.html#figure-15>](https://fivethirtyeight.com/wp-content/uploads/2019/05/SPRAWLBALL_Fig_013_kg_edit.png?resize=590,450)
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-28>](https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png)
+
+## What data types
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/supplemental/psych-sci-figs.html#figure-30>](https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg)
 
 # Figure types
 
@@ -161,7 +165,7 @@ flowchart TD
 
 ::: {#fig-100-chart-types}
 
-{{< video https://www.youtube.com/watch?v=cuMwWvtNmJ0 width=100% height=70% >}}
+<iframe width="1280" height="450" src="https://www.youtube.com/embed/cuMwWvtNmJ0?si=O4gQ1oZ1Bf5G_PMj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 @Channel2024-so
 :::
@@ -181,9 +185,10 @@ flowchart TD
 
 # Wrap-up
 
-## Main points
-
 ## Next time
+
+- Figure components
+- Work session: Exercises 02 and 03
 
 # Resources
 

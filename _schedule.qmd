@@ -101,13 +101,14 @@
 - *Watch*: 
   - @Channel2024-so
 - [Assigned]{.green_assigned}: [Exercise-03](exercises/ex-03-making-data.qmd)
-- [Slides](404.qmd)
+- [Slides](slides/wk-04-2026-09-14-figure-types.qmd)
 
 ### Wed, Sep 16 {-}
 
-*More figure types*
+*More figure types and figure components*
 
-- [Slides](404.qmd)
+- Read: [Tutorial: Making data](tutorials/tutorial-making-data.qmd)
+- [Slides](slides/wk-04-2026-09-16-figure-components.qmd)
 
 ### Fri, Sep 18 {-}
 
