@@ -491,7 +491,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#considerations-when-making",
     "title": "Figure components",
     "section": "Considerations when making",
-    "text": "Considerations when making\n\nNominal/discrete\n\nWhich categories\nOrder\nNumber of categories\n\nOne vs. Two or more\n\n\nOrdinal",
+    "text": "Considerations when making\n\nNominal/discrete\n\nWhich categories\nOrder\n\nNatural (Monday &gt; Tuesday)\nConventional (red, orange, yellow, green, …)\nArbitrary\nData-based (user manipulates)\n\nNumber of categories\n\nOne vs. Two or more",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -700,7 +700,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#your-turn-2",
     "title": "Figure components",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\n\n\nWhich type(s) work better?\n\n\n\nViolin plots\nCombo-plots with scatter points\nWhy?",
+    "text": "Your turn\n\n\n\n\n\n\nWhat elements of the data are mapped to which components of the figure?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat are some natural data pictures to explore with nominal/ordinal data where there is more than one variable (e.g., rating, color, school)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat are the advantages and disadvantages of having so many figure type choices?",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -3889,28 +3889,28 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#installing-ggplot",
     "title": "Intro to ggplot",
     "section": "Installing ggplot",
-    "text": "Installing ggplot\ninstall.packages(\"ggplot2\")"
+    "text": "Installing ggplot\n\nOpen RStudio\nEnter the following in your R console\n\ninstall.packages(\"ggplot2\")"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data"
+    "text": "Let’s make some data\n\n\nCode\ndays &lt;- factor(\n  c(\"sun\", \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\"),\n  levels = c(\"sun\", \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\"),\n  ordered = TRUE\n)\nmeals &lt;- factor(\n  c(\"breakfast\", \"lunch\", \"dinner\", \"snack\", \"dessert\"),\n  levels = c(\"breakfast\", \"lunch\", \"snack\", \"dinner\", \"dessert\"),\n  ordered = TRUE\n)\nmeal_days &lt;- rep(days, each = length(meals))\nweekly_meals &lt;- rep(meals, 7)\n\nmy_meals &lt;- data.frame(day_of_wk = meal_days, \n                       meal = weekly_meals)"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data\n\n\n [1] FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE\n[13]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE\n[25]  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE"
+    "text": "Let’s make some data\n\nI created a new ate_skipped variable\nThis let’s me create a new logical variable called ate that is TRUE if ate_skipped == TRUE\n\n\n\nCode\nate_skipped &lt;- sample(c(\"ate\", \"skipped\"), size = 35, \n                 replace = TRUE, prob = c(.6, .4))\nate &lt;- ate_skipped == \"ate\"\nate\n\n\n [1]  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE\n[13]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE\n[25]  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data"
+    "text": "Let’s make some data\n\nWhy do this?\nIt makes it easy to assign a NA value to all of the ratings where ate==FALSE\n\n\n\nCode\nratings &lt;- sample(c(1, 2, 3, 4, 5), size = 35,\n                 replace = TRUE)\n\nratings[ate == FALSE] &lt;- NA"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#section",
@@ -3931,7 +3931,7 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#next-time",
     "title": "Intro to ggplot",
     "section": "Next time",
-    "text": "Next time\n\nFigure components\nWork session: Exercises 02 and 03"
+    "text": "Next time\n\nWednesday, not Monday\nPerceptual foundations"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#about",
@@ -3952,28 +3952,28 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-3",
     "title": "Intro to ggplot",
     "section": "Let’s make some data",
-    "text": "Let’s make some data"
+    "text": "Let’s make some data\n\n\nCode\nmy_meals$ate_skipped &lt;- ate_skipped\nmy_meals$rating &lt;- ratings"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
     "href": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
     "title": "Intro to ggplot",
     "section": "How’d we do?",
-    "text": "How’d we do?\n\n\n   day_of_wk      meal ate_skipped rating\n1        sun breakfast     skipped     NA\n2        sun     lunch         ate      5\n3        sun    dinner         ate      5\n4        sun     snack     skipped     NA\n5        sun   dessert         ate      1\n6        mon breakfast         ate      1\n7        mon     lunch     skipped     NA\n8        mon    dinner     skipped     NA\n9        mon     snack         ate      1\n10       mon   dessert         ate      1\n11       tue breakfast         ate      4\n12       tue     lunch         ate      1\n13       tue    dinner         ate      4\n14       tue     snack     skipped     NA\n15       tue   dessert         ate      1\n16       wed breakfast         ate      2\n17       wed     lunch     skipped     NA\n18       wed    dinner         ate      5\n19       wed     snack         ate      1\n20       wed   dessert     skipped     NA\n21       thu breakfast     skipped     NA\n22       thu     lunch         ate      4\n23       thu    dinner     skipped     NA\n24       thu     snack         ate      1\n25       thu   dessert         ate      5\n26       fri breakfast         ate      2\n27       fri     lunch     skipped     NA\n28       fri    dinner         ate      4\n29       fri     snack         ate      5\n30       fri   dessert     skipped     NA\n31       sat breakfast         ate      5\n32       sat     lunch     skipped     NA\n33       sat    dinner     skipped     NA\n34       sat     snack         ate      4\n35       sat   dessert         ate      4"
+    "text": "How’d we do?\n\n\nCode\nmy_meals\n\n\n   day_of_wk      meal ate_skipped rating\n1        sun breakfast         ate      3\n2        sun     lunch         ate      2\n3        sun    dinner         ate      1\n4        sun     snack     skipped     NA\n5        sun   dessert         ate      1\n6        mon breakfast         ate      4\n7        mon     lunch     skipped     NA\n8        mon    dinner         ate      3\n9        mon     snack         ate      5\n10       mon   dessert         ate      5\n11       tue breakfast     skipped     NA\n12       tue     lunch         ate      5\n13       tue    dinner         ate      4\n14       tue     snack     skipped     NA\n15       tue   dessert         ate      4\n16       wed breakfast         ate      5\n17       wed     lunch         ate      3\n18       wed    dinner         ate      4\n19       wed     snack     skipped     NA\n20       wed   dessert         ate      5\n21       thu breakfast         ate      5\n22       thu     lunch         ate      3\n23       thu    dinner     skipped     NA\n24       thu     snack     skipped     NA\n25       thu   dessert         ate      2\n26       fri breakfast     skipped     NA\n27       fri     lunch     skipped     NA\n28       fri    dinner         ate      5\n29       fri     snack     skipped     NA\n30       fri   dessert     skipped     NA\n31       sat breakfast         ate      4\n32       sat     lunch     skipped     NA\n33       sat    dinner     skipped     NA\n34       sat     snack         ate      3\n35       sat   dessert         ate      4"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#meal-ratings",
     "href": "slides/wk-04-2026-09-18-ggplot.html#meal-ratings",
     "title": "Intro to ggplot",
     "section": "Meal ratings",
-    "text": "Meal ratings"
+    "text": "Meal ratings\n\n\nCode\n# Do this once each time you start work\nlibrary(ggplot2)"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2",
     "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2",
     "title": "Intro to ggplot",
     "section": "Figure 2",
-    "text": "Figure 2\n\n\n\n\n\n\n\n\nFigure 3: A barplot of meal ratings"
+    "text": "Figure 2\n\n\n\n\n\n\nWhat is the distribution of meal ratings?\n\n\n\n\n\n\n\n\nCode\nggplot(data = my_meals, \n       aes(x = rating)) +\n  geom_bar()"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-3",
@@ -4001,7 +4001,7 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#figure-0",
     "title": "Intro to ggplot",
     "section": "Figure 0",
-    "text": "Figure 0\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")"
+    "text": "Figure 0\n\n\n\n\n\n\nNote\n\n\nThis is a simple ggplot2 figure using data already available in R.\nClick on the arrow to view the code.\nThe rendered figure is on the next slide.\n\n\n\n\n\nCode\nlibrary(ggplot2)\n\nggplot(data = airquality) + \n  aes(x = Temp, y = Ozone) +\n  geom_point() + \n  geom_smooth(method = \"loess\")"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-0-output",
@@ -4015,14 +4015,14 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0",
     "title": "Intro to ggplot",
     "section": "Figure 1.0",
-    "text": "Figure 1.0\n\nmy_meals |&gt; \n  ggplot() + \n  aes(x = ate_skipped) + \n  geom_bar()"
+    "text": "Figure 1.0\n\n\n\n\n\n\nHow many meals were eaten vs. skipped?\n\n\n\n\n\n\n\n\nCode\nmy_meals |&gt; \n  ggplot() + \n  aes(x = ate_skipped) + \n  geom_bar()"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1",
     "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1",
     "title": "Intro to ggplot",
     "section": "Figure 1.1",
-    "text": "Figure 1.1\n\nAdd a fill aesthetic to fill the bars with colors\n\n\nmy_meals |&gt;\n  ggplot() +\n  aes(x = ate_skipped, fill = ate_skipped) +\n  geom_bar()\n\n\n\n\nIf we fill from ate_skipped\n\nggplot will map a color to each distinct value of ate_skipped\nand add a legend, so we know what the colors represent"
+    "text": "Figure 1.1\n\nAdd a fill aesthetic to fill the bars with colors\n\n\n\nCode\nmy_meals |&gt;\n  ggplot() +\n  aes(x = ate_skipped, fill = ate_skipped) +\n  geom_bar()\n\n\n\n\n\nIf we fill from ate_skipped\n\nggplot will map a color to each distinct value of ate_skipped\nand add a legend, so we know what the colors represent"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2-1",
@@ -4094,7 +4094,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare",
     "title": "Figure components",
     "section": "Let’s compare",
-    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        3         5         4         5         2 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        4         6         2         4         1 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -4149,7 +4149,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare-them",
     "title": "Figure components",
     "section": "Let’s compare them",
-    "text": "Let’s compare them\n\nTablePieRing\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    28     28     19     17     12     20     21     17     14     24 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data",
+    "text": "Let’s compare them\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    22     14     16     17     17     22     25     21     26     20 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: A barplot of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: A colorful barplot of the random favorite color data sorted by the number of responses.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -4160,7 +4160,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#meals-eaten-vs.-not-eaten",
     "title": "Figure components",
     "section": "Meals eaten vs. not-eaten",
-    "text": "Meals eaten vs. not-eaten",
+    "text": "Meals eaten vs. not-eaten\n\nSee slides from 2026-09-11, 2026-09-14.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -4198,5 +4198,40 @@
       "Slides",
       "Wk 04 • Wed Sep 16"
     ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-0-playground",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-0-playground",
+    "title": "Intro to ggplot",
+    "section": "Figure 0 playground",
+    "text": "Figure 0 playground\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2-output",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2-output",
+    "title": "Intro to ggplot",
+    "section": "Figure 2",
+    "text": "Figure 2\n\n\n\n\n\n\n\nFigure 3: A barplot of meal ratings"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2.0",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2.0",
+    "title": "Intro to ggplot",
+    "section": "Figure 2.0",
+    "text": "Figure 2.0\n\n\n\n\n\n\nWhat is the distribution of meal ratings?\n\n\n\n\n\n\n\n\nCode\nggplot(data = my_meals) + \n  aes(x = rating) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2.0-output",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2.0-output",
+    "title": "Intro to ggplot",
+    "section": "Figure 2.0",
+    "text": "Figure 2.0\n\n\n\n\n\n\n\nFigure 3: A barplot of meal ratings."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2.1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2.1",
+    "title": "Intro to ggplot",
+    "section": "Figure 2.1",
+    "text": "Figure 2.1\n\n\n\n\n\n\n\n\nFigure 4: A plot of ratings for each meal using geom_point"
   }
 ]

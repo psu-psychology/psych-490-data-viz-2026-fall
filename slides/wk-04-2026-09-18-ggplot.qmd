@@ -2,7 +2,7 @@
 title: "Intro to `ggplot`"
 format: 
   revealjs:
-    code-fold: false
+    code-fold: true
 filters:
   - webr
 engine: knitr
@@ -44,6 +44,9 @@ engine: knitr
 
 ## Installing ggplot
 
+- Open RStudio
+- Enter the following in your R console
+
 ```r
 install.packages("ggplot2")
 ```
@@ -51,6 +54,7 @@ install.packages("ggplot2")
 ## Let's make some data
 
 ```{r}
+#| echo: true
 days <- factor(
   c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
   levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
@@ -70,7 +74,11 @@ my_meals <- data.frame(day_of_wk = meal_days,
 
 ## Let's make some data
 
+- I created a new `ate_skipped` variable
+- This let's me create a new logical variable called `ate` that is `TRUE` if `ate_skipped == TRUE`
+
 ```{r}
+#| echo: true
 ate_skipped <- sample(c("ate", "skipped"), size = 35, 
                  replace = TRUE, prob = c(.6, .4))
 ate <- ate_skipped == "ate"
@@ -79,16 +87,21 @@ ate
 
 ## Let's make some data
 
+- Why do this?
+- It makes it easy to assign a NA value to all of the ratings where `ate==FALSE`
+
 ```{r}
+#| echo: true
 ratings <- sample(c(1, 2, 3, 4, 5), size = 35,
                  replace = TRUE)
 
-ratings[!ate] <- NA
+ratings[ate == FALSE] <- NA
 ```
 
 ## Let's make some data
 
 ```{r}
+#| echo: true
 my_meals$ate_skipped <- ate_skipped
 my_meals$rating <- ratings
 ```
@@ -96,6 +109,7 @@ my_meals$rating <- ratings
 ## How'd we do?
 
 ```{r}
+#| echo: true
 my_meals
 ```
 
@@ -111,25 +125,32 @@ my_meals
 :::
 :::
 
-## Meal ratings
-
-```{r}
-# Do this once each time you start work
-library(ggplot2)
-```
-
 ## Figure 0
+
+::: {.callout-note}
+This is a simple `ggplot2` figure using data already available in R.
+
+Click on the arrow to view the code.
+
+The rendered figure is on the next slide.
+:::
 
 ```{r}
 #| echo: true
 #| output-location: slide
 library(ggplot2)
-ggplot(airquality, aes(Temp, Ozone)) + 
+
+ggplot(data = airquality) + 
+  aes(x = Temp, y = Ozone) +
   geom_point() + 
   geom_smooth(method = "loess")
 ```
 
 ## Figure 1.0
+
+::: {.question}
+## How many meals were eaten vs. skipped?
+:::
 
 ```{r}
 #| label: fig-barplot-ate_skipped
@@ -142,6 +163,15 @@ my_meals |>
   aes(x = ate_skipped) + 
   geom_bar() 
 ```
+
+---
+
+::: {.callout-important}
+## Nominal data often require processing before plotting
+
+This is most often a count of the number of instances per category.
+It could be the relative proportion, but this is calculated from the number of instances.
+:::
 
 ## Figure 1.1
 
@@ -166,20 +196,27 @@ my_meals |>
   
 :::
 
-## Figure 2
+## Figure 2.0
+
+::: {.question}
+## What is the distribution of meal ratings?
+:::
 
 ```{r}
-#| label: fig-barplot-ratings
-#| fig-cap: "A barplot of meal ratings"
-ggplot(data = my_meals, 
-       aes(x = rating)) +
+#| label: fig-barplot-ratings-2.0
+#| fig-cap: "A barplot of meal ratings."
+#| echo: true
+#| output-location: slide
+#| code-line-numbers: "|2"
+ggplot(data = my_meals) + 
+  aes(x = rating) +
   geom_bar()
 ```
 
-## Figure 2
+## Figure 2.1
 
 ```{r}
-#| label: fig-2
+#| label: fig-2.1
 #| fig-cap: "A plot of ratings for each meal using  `geom_point`"
 my_meals |>
 ggplot() +
@@ -210,8 +247,8 @@ ggplot() +
 
 ## Next time
 
-- Figure components
-- Work session: Exercises 02 and 03
+- Wednesday, not Monday
+- Perceptual foundations
 
 # Resources
 

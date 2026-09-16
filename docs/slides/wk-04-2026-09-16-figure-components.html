@@ -221,13 +221,18 @@ Rick Gilmore
 <li class="fragment">Nominal/discrete
 <ul>
 <li class="fragment">Which categories</li>
-<li class="fragment">Order</li>
+<li class="fragment">Order
+<ul>
+<li class="fragment">Natural (Monday &gt; Tuesday)</li>
+<li class="fragment">Conventional (red, orange, yellow, green, …)</li>
+<li class="fragment">Arbitrary</li>
+<li class="fragment">Data-based (user manipulates)</li>
+</ul></li>
 <li class="fragment">Number of categories
 <ul>
 <li class="fragment">One vs.&nbsp;Two or more</li>
 </ul></li>
 </ul></li>
-<li class="fragment">Ordinal</li>
 </ul>
 </section>
 <section id="today" class="slide level2">
@@ -321,14 +326,14 @@ Figure&nbsp;3: <a href="https://psu-psychology.github.io/psych-490-data-viz-2026
 <section id="lets-compare-them" class="slide level2">
 <h2>Let’s compare them</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Table</a></li><li><a href="#tabset-1-2">Pie</a></li><li><a href="#tabset-1-3">Ring</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Table</a></li><li><a href="#tabset-1-2">Pie</a></li><li><a href="#tabset-1-3">Ring</a></li><li><a href="#tabset-1-4">Barplot-1</a></li><li><a href="#tabset-1-5">Barplot-2</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>favorite_color
  black   blue   cyan   gray  green orange    red violet  white yellow 
-    28     28     19     17     12     20     21     17     14     24 </code></pre>
+    22     14     16     17     17     22     25     21     26     20 </code></pre>
 </div>
 </div>
 <div class="callout callout-question callout-titled callout-style-default">
@@ -351,10 +356,10 @@ Figure&nbsp;3: <a href="https://psu-psychology.github.io/psych-490-data-viz-2026
 <div id="fig-nominal-piechart" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-nominal-piechart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-nominal-piechart-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: A pie chart of the random favorite color data"><img data-src="include/fig/fig-nominal-piechart-1.png" style="width:70.0%"></a>
+<a href="include/fig/fig-nominal-piechart-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: A pie chart of the random favorite color data."><img data-src="include/fig/fig-nominal-piechart-1.png" style="width:70.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nominal-piechart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: A pie chart of the random favorite color data
+Figure&nbsp;4: A pie chart of the random favorite color data.
 </figcaption>
 </figure>
 </div>
@@ -367,38 +372,33 @@ Figure&nbsp;4: A pie chart of the random favorite color data
 <div id="fig-nominal-ring-chart" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-nominal-ring-chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-nominal-ring-chart-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: A ring/donut chart of the random favorite color data"><img data-src="include/fig/fig-nominal-ring-chart-1.png" style="width:70.0%"></a>
+<a href="include/fig/fig-nominal-ring-chart-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: A ring/donut chart of the random favorite color data."><img data-src="include/fig/fig-nominal-ring-chart-1.png" style="width:70.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nominal-ring-chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: A ring/donut chart of the random favorite color data
+Figure&nbsp;5: A ring/donut chart of the random favorite color data.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</section>
-<section id="barplot-1" class="slide level2">
-<h2>Barplot-1</h2>
+<div id="tabset-1-4">
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-nominal-barplot" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-nominal-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-nominal-barplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: A colorful barplot of the random favorite color data"><img data-src="include/fig/fig-nominal-barplot-1.png" style="width:70.0%"></a>
+<a href="include/fig/fig-nominal-barplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: A barplot of the random favorite color data."><img data-src="include/fig/fig-nominal-barplot-1.png" style="width:70.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nominal-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: A colorful barplot of the random favorite color data
+Figure&nbsp;6: A barplot of the random favorite color data.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="barplot-2" class="slide level2">
-<h2>Barplot-2</h2>
+</div>
+<div id="tabset-1-5">
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-nominal-barplot-ordered" class="quarto-float quarto-figure quarto-figure-center">
@@ -413,6 +413,9 @@ Figure&nbsp;7: A colorful barplot of the random favorite color data sorted by th
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="nominal-example-2" class="title-slide slide level1 center">
@@ -421,6 +424,9 @@ Figure&nbsp;7: A colorful barplot of the random favorite color data sorted by th
 </section>
 <section id="meals-eaten-vs.-not-eaten" class="slide level2">
 <h2>Meals eaten vs.&nbsp;not-eaten</h2>
+<ul>
+<li>See slides from <a href="wk-03-2026-09-11-making-data.qmd">2026-09-11</a>, <a href="../slides/wk-04-2026-09-14-figure-types.html">2026-09-14</a>.</li>
+</ul>
 </section>
 <section id="lets-compare" class="slide level2">
 <h2>Let’s compare</h2>
@@ -432,7 +438,7 @@ Figure&nbsp;7: A colorful barplot of the random favorite color data sorted by th
 <div class="cell-output cell-output-stdout">
 <pre><code>meal
 breakfast     lunch     snack    dinner   dessert 
-        3         5         4         5         2 </code></pre>
+        4         6         2         4         1 </code></pre>
 </div>
 </div>
 </div>
@@ -537,19 +543,19 @@ Figure&nbsp;11: A colorful barplot of the random favorite color data sorted by t
 <section id="some-thoughts" class="slide level2">
 <h2>Some thoughts</h2>
 <ul>
-<li>Tables are useful<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
+<li class="fragment">Tables are useful<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
 <ul>
-<li>But make relative differences between categories harder to see</li>
+<li class="fragment">But make relative differences between categories <a href="../slides/wk-04-2026-09-16-figure-components.html#">harder to see</a></li>
 </ul></li>
-<li>Bar charts are easier to read than pie or ring charts</li>
-<li>Sorting bars by magnitude helps reveal differences between categories</li>
-<li>Color coding bars (sometimes) eliminates the need for a legend</li>
-<li><a href="../tutorials/tutorial-making-data.html#barcolumn-with-textures">Textures</a> can get ugly</li>
+<li class="fragment">Bar charts are easier to read than pie or ring charts</li>
+<li class="fragment">Sorting bars by magnitude helps reveal differences between categories</li>
+<li class="fragment">Color coding bars (sometimes) eliminates the need for a legend</li>
+<li class="fragment"><a href="../tutorials/tutorial-making-data.html#barcolumn-with-textures">Textures</a> can get ugly</li>
 </ul>
 <aside></aside></section></section>
 <section>
-<section id="ordinal-data" class="title-slide slide level1 center">
-<h1>Ordinal data</h1>
+<section id="visualizing-ordinal-data" class="title-slide slide level1 center">
+<h1>Visualizing Ordinal data</h1>
 
 </section>
 <section class="slide level2">
@@ -591,21 +597,48 @@ Figure&nbsp;14: <a href="https://psu-psychology.github.io/psych-490-data-viz-202
 </figure>
 </div>
 </section>
-<section class="slide level2">
-
-<div class="callout callout-important callout-titled callout-style-default">
+<section id="your-turn-2" class="slide level2">
+<h2>Your turn</h2>
+<div class="callout callout-question callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Your turn</strong></p>
+<p><strong>What elements of the data are mapped to which components of the figure?</strong></p>
 </div>
 <div class="callout-content">
-<ul>
-<li>What elements of the data are mapped to which components of the figure?</li>
-<li>What are the advantages and disadvantages of having so many choices of figures?</li>
-</ul>
+
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What are some natural data pictures to explore with nominal/ordinal data where there is more than one variable (e.g., rating, color, school)</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>What are the advantages and disadvantages of having so many figure type choices?</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
 </div>
 </div>
 </div>

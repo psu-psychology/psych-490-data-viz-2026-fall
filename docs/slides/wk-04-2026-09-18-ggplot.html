@@ -300,66 +300,125 @@ Rick Gilmore
 </section>
 <section id="installing-ggplot" class="slide level2">
 <h2>Installing ggplot</h2>
+<ul>
+<li>Open RStudio</li>
+<li>Enter the following in your R console</li>
+</ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="lets-make-some-data" class="slide level2">
 <h2>Let’s make some data</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>days <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb2-2"><a></a>  <span class="fu">c</span>(<span class="st">"sun"</span>, <span class="st">"mon"</span>, <span class="st">"tue"</span>, <span class="st">"wed"</span>, <span class="st">"thu"</span>, <span class="st">"fri"</span>, <span class="st">"sat"</span>),</span>
+<span id="cb2-3"><a></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"sun"</span>, <span class="st">"mon"</span>, <span class="st">"tue"</span>, <span class="st">"wed"</span>, <span class="st">"thu"</span>, <span class="st">"fri"</span>, <span class="st">"sat"</span>),</span>
+<span id="cb2-4"><a></a>  <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-5"><a></a>)</span>
+<span id="cb2-6"><a></a>meals <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb2-7"><a></a>  <span class="fu">c</span>(<span class="st">"breakfast"</span>, <span class="st">"lunch"</span>, <span class="st">"dinner"</span>, <span class="st">"snack"</span>, <span class="st">"dessert"</span>),</span>
+<span id="cb2-8"><a></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"breakfast"</span>, <span class="st">"lunch"</span>, <span class="st">"snack"</span>, <span class="st">"dinner"</span>, <span class="st">"dessert"</span>),</span>
+<span id="cb2-9"><a></a>  <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-10"><a></a>)</span>
+<span id="cb2-11"><a></a>meal_days <span class="ot">&lt;-</span> <span class="fu">rep</span>(days, <span class="at">each =</span> <span class="fu">length</span>(meals))</span>
+<span id="cb2-12"><a></a>weekly_meals <span class="ot">&lt;-</span> <span class="fu">rep</span>(meals, <span class="dv">7</span>)</span>
+<span id="cb2-13"><a></a></span>
+<span id="cb2-14"><a></a>my_meals <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">day_of_wk =</span> meal_days, </span>
+<span id="cb2-15"><a></a>                       <span class="at">meal =</span> weekly_meals)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
 <section id="lets-make-some-data-1" class="slide level2">
 <h2>Let’s make some data</h2>
+<ul>
+<li>I created a new <code>ate_skipped</code> variable</li>
+<li>This let’s me create a new logical variable called <code>ate</code> that is <code>TRUE</code> if <code>ate_skipped == TRUE</code></li>
+</ul>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>ate_skipped <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"ate"</span>, <span class="st">"skipped"</span>), <span class="at">size =</span> <span class="dv">35</span>, </span>
+<span id="cb3-2"><a></a>                 <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(.<span class="dv">6</span>, .<span class="dv">4</span>))</span>
+<span id="cb3-3"><a></a>ate <span class="ot">&lt;-</span> ate_skipped <span class="sc">==</span> <span class="st">"ate"</span></span>
+<span id="cb3-4"><a></a>ate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
-[13]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE  TRUE
-[25]  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE</code></pre>
+<pre><code> [1]  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE
+[13]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE
+[25]  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE</code></pre>
 </div>
 </div>
 </section>
 <section id="lets-make-some-data-2" class="slide level2">
 <h2>Let’s make some data</h2>
+<ul>
+<li>Why do this?</li>
+<li>It makes it easy to assign a NA value to all of the ratings where <code>ate==FALSE</code></li>
+</ul>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>ratings <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="at">size =</span> <span class="dv">35</span>,</span>
+<span id="cb5-2"><a></a>                 <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a>ratings[ate <span class="sc">==</span> <span class="cn">FALSE</span>] <span class="ot">&lt;-</span> <span class="cn">NA</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
 <section id="lets-make-some-data-3" class="slide level2">
 <h2>Let’s make some data</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>my_meals<span class="sc">$</span>ate_skipped <span class="ot">&lt;-</span> ate_skipped</span>
+<span id="cb6-2"><a></a>my_meals<span class="sc">$</span>rating <span class="ot">&lt;-</span> ratings</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
 </section>
 <section id="howd-we-do" class="slide level2">
 <h2>How’d we do?</h2>
 <div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>my_meals</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   day_of_wk      meal ate_skipped rating
-1        sun breakfast     skipped     NA
-2        sun     lunch         ate      5
-3        sun    dinner         ate      5
+1        sun breakfast         ate      3
+2        sun     lunch         ate      2
+3        sun    dinner         ate      1
 4        sun     snack     skipped     NA
 5        sun   dessert         ate      1
-6        mon breakfast         ate      1
+6        mon breakfast         ate      4
 7        mon     lunch     skipped     NA
-8        mon    dinner     skipped     NA
-9        mon     snack         ate      1
-10       mon   dessert         ate      1
-11       tue breakfast         ate      4
-12       tue     lunch         ate      1
+8        mon    dinner         ate      3
+9        mon     snack         ate      5
+10       mon   dessert         ate      5
+11       tue breakfast     skipped     NA
+12       tue     lunch         ate      5
 13       tue    dinner         ate      4
 14       tue     snack     skipped     NA
-15       tue   dessert         ate      1
-16       wed breakfast         ate      2
-17       wed     lunch     skipped     NA
-18       wed    dinner         ate      5
-19       wed     snack         ate      1
-20       wed   dessert     skipped     NA
-21       thu breakfast     skipped     NA
-22       thu     lunch         ate      4
+15       tue   dessert         ate      4
+16       wed breakfast         ate      5
+17       wed     lunch         ate      3
+18       wed    dinner         ate      4
+19       wed     snack     skipped     NA
+20       wed   dessert         ate      5
+21       thu breakfast         ate      5
+22       thu     lunch         ate      3
 23       thu    dinner     skipped     NA
-24       thu     snack         ate      1
-25       thu   dessert         ate      5
-26       fri breakfast         ate      2
+24       thu     snack     skipped     NA
+25       thu   dessert         ate      2
+26       fri breakfast     skipped     NA
 27       fri     lunch     skipped     NA
-28       fri    dinner         ate      4
-29       fri     snack         ate      5
+28       fri    dinner         ate      5
+29       fri     snack     skipped     NA
 30       fri   dessert     skipped     NA
-31       sat breakfast         ate      5
+31       sat breakfast         ate      4
 32       sat     lunch     skipped     NA
 33       sat    dinner     skipped     NA
-34       sat     snack         ate      4
+34       sat     snack         ate      3
 35       sat   dessert         ate      4</code></pre>
 </div>
 </div>
@@ -395,16 +454,33 @@ Rick Gilmore
 </div>
 </div>
 </section>
-<section id="meal-ratings" class="slide level2">
-<h2>Meal ratings</h2>
-</section>
 <section id="figure-0" class="slide level2">
 <h2>Figure 0</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>This is a simple <code>ggplot2</code> figure using data already available in R.</p>
+<p>Click on the arrow to view the code.</p>
+<p>The rendered figure is on the next slide.</p>
+</div>
+</div>
+</div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-2"><a></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb4-3"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb4-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> airquality) <span class="sc">+</span> </span>
+<span id="cb9-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> Temp, <span class="at">y =</span> Ozone) <span class="sc">+</span></span>
+<span id="cb9-5"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb9-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 
 </section>
@@ -412,17 +488,33 @@ Rick Gilmore
 <div class="cell-output-display">
 <div>
 <figure>
-<p><a href="include/fig/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="include/fig/unnamed-chunk-7-1.png" width="960"></a></p>
+<p><a href="include/fig/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="include/fig/unnamed-chunk-6-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
 </div></section><section id="figure-1.0" class="slide level2">
 <h2>Figure 1.0</h2>
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>How many meals were eaten vs.&nbsp;skipped?</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-code-line-numbers="1|2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>my_meals <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> ate_skipped) <span class="sc">+</span> </span>
-<span id="cb5-4"><a></a>  <span class="fu">geom_bar</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" data-code-line-numbers="1|2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>my_meals <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb10-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> ate_skipped) <span class="sc">+</span> </span>
+<span id="cb10-4"><a></a>  <span class="fu">geom_bar</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 
 </section>
@@ -439,16 +531,35 @@ Figure&nbsp;1: A barplot of meals eaten and skipped.
 </figure>
 </div>
 </div>
-</div></section><section id="figure-1.1" class="slide level2">
+</div></section><section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nominal data often require processing before plotting</strong></p>
+</div>
+<div class="callout-content">
+<p>This is most often a count of the number of instances per category. It could be the relative proportion, but this is calculated from the number of instances.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="figure-1.1" class="slide level2">
 <h2>Figure 1.1</h2>
 <ul>
 <li>Add a <code>fill</code> aesthetic to fill the bars with colors</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>my_meals <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> ate_skipped, <span class="at">fill =</span> ate_skipped) <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>my_meals <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> ate_skipped, <span class="at">fill =</span> ate_skipped) <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 
 <div class="fragment">
@@ -474,33 +585,54 @@ Figure&nbsp;2: A barplot of meals eaten and skipped.
 </figure>
 </div>
 </div>
-</div></section><section id="figure-2" class="slide level2">
-<h2>Figure 2</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-barplot-ratings" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-barplot-ratings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-barplot-ratings-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: A barplot of meal ratings"><img data-src="include/fig/fig-barplot-ratings-1.png" width="960"></a>
+</div></section><section id="figure-2.0" class="slide level2">
+<h2>Figure 2.0</h2>
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barplot-ratings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: A barplot of meal ratings
+<p><strong>What is the distribution of meal ratings?</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_meals) <span class="sc">+</span> </span>
+<span id="cb12-2"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> rating) <span class="sc">+</span></span>
+<span id="cb12-3"><a></a>  <span class="fu">geom_bar</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+
+</section>
+<section id="figure-2.0-output" class="slide level2 output-location-slide"><h2>Figure 2.0</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-barplot-ratings-2.0" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-barplot-ratings-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-barplot-ratings-2.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: A barplot of meal ratings."><img data-src="include/fig/fig-barplot-ratings-2.0-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barplot-ratings-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A barplot of meal ratings.
 </figcaption>
 </figure>
 </div>
 </div>
-</div>
-</section>
-<section id="figure-2-1" class="slide level2">
-<h2>Figure 2</h2>
+</div></section><section id="figure-2.1" class="slide level2">
+<h2>Figure 2.1</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-2" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-2.1" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: A plot of ratings for each meal using geom_point"><img data-src="include/fig/fig-2-1.png" width="960"></a>
+<div aria-describedby="fig-2.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-2.1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: A plot of ratings for each meal using geom_point"><img data-src="include/fig/fig-2.1-1.png" width="960"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: A plot of ratings for each meal using <code>geom_point</code>
 </figcaption>
 </figure>
@@ -543,8 +675,8 @@ Figure&nbsp;5
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li>Figure components</li>
-<li>Work session: Exercises 02 and 03</li>
+<li>Wednesday, not Monday</li>
+<li>Perceptual foundations</li>
 </ul>
 </section></section>
 <section>

@@ -19,9 +19,12 @@ format: revealjs
 - Nominal/discrete
   - Which categories
   - Order
+    - Natural (Monday > Tuesday)
+    - Conventional (red, orange, yellow, green, ...)
+    - Arbitrary
+    - Data-based (user manipulates)
   - Number of categories
     - One vs. Two or more
-- Ordinal
 :::
 
 ## Today
@@ -90,7 +93,7 @@ xtabs(formula = ~favorite_color, data = colors_df)
 
 ```{r}
 #| label: fig-nominal-piechart
-#| fig-cap: "A pie chart of the random favorite color data"
+#| fig-cap: "A pie chart of the random favorite color data."
 #| out-width: "70%"
 colors_xtab <- data.frame(table(colors_df))
 names(colors_xtab) <- c("favorite_color", "count")
@@ -106,7 +109,7 @@ colors_xtab |>
 
 ```{r}
 #| label: fig-nominal-ring-chart
-#| fig-cap: "A ring/donut chart of the random favorite color data"
+#| fig-cap: "A ring/donut chart of the random favorite color data."
 #| out-width: "70%"
 
 # https://r-graph-gallery.com/128-ring-or-donut-plot.html
@@ -135,13 +138,11 @@ colors_xtab |>
   scale_fill_identity()
 ```
 
-:::
-
 ## Barplot-1
 
 ```{r}
 #| label: fig-nominal-barplot
-#| fig-cap: "A colorful barplot of the random favorite color data"
+#| fig-cap: "A barplot of the random favorite color data."
 #| out-width: "70%"
 colors_df |>
   ggplot() +
@@ -166,12 +167,17 @@ colors_df |>
   scale_fill_identity()
 ```
 
+:::
+
 # Nominal example 2
 
 ## Meals eaten vs. not-eaten
 
+- See slides from [2026-09-11](wk-03-2026-09-11-making-data.qmd), [2026-09-14](wk-04-2026-09-14-figure-types.qmd).
+
 ```{r}
 #| label: setup-meals-example
+#| code-fold: true
 days <- factor(
   c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
   levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
@@ -295,14 +301,17 @@ meals_xtab |>
 
 ## Some thoughts
 
+::: {.incremental}
 - Tables are useful^[Most readers have lots of experience comparing the magnitude of numbers.]
-  - But make relative differences between categories harder to see
+  - But make relative differences between categories [harder to see](wk-04-2026-09-16-figure-components.qmd#)
 - Bar charts are easier to read than pie or ring charts
 - Sorting bars by magnitude helps reveal differences between categories
 - Color coding bars (sometimes) eliminates the need for a legend
 - [Textures](../tutorials/tutorial-making-data.qmd#barcolumn-with-textures) can get ugly
 
-# Ordinal data
+:::
+
+# Visualizing Ordinal data
 
 ---
 
@@ -316,12 +325,22 @@ meals_xtab |>
 
 ![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal-stacked-alternative>](../include/fig/fig-ordinal-barplot-stacked-alt-1.png){#fig-pie-charts width="60%"}
 
----
-
-::: {.callout-important}
 ## Your turn
-- What elements of the data are mapped to which components of the figure?
-- What are the advantages and disadvantages of having so many choices of figures?
+
+::: {.question}
+## What elements of the data are mapped to which components of the figure?
+:::
+
+::: {.fragment}
+::: {.question}
+## What are some natural data pictures to explore with nominal/ordinal data where there is more than one variable (e.g., rating, color, school)
+:::
+:::
+
+::: {.fragment}
+::: {.question}
+## What are the advantages and disadvantages of having so many figure type choices?
+:::
 :::
 
 ## Continuous data
