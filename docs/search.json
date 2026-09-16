@@ -480,7 +480,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#last-time",
     "title": "Figure components",
     "section": "Last time…",
-    "text": "Last time…\n\nMaking data & Figure types",
+    "text": "Last time…\n\nFigure types",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -491,7 +491,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#considerations-when-making",
     "title": "Figure components",
     "section": "Considerations when making",
-    "text": "Considerations when making\n\nNominal/discrete\n\nWhich categories\nOrder\nOther?\n\nOrdinal",
+    "text": "Considerations when making\n\nNominal/discrete\n\nWhich categories\nOrder\nNumber of categories\n\nOne vs. Two or more\n\n\nOrdinal",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -513,7 +513,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#today",
     "title": "Figure components",
     "section": "Today",
-    "text": "Today\n\nMore on figure types\n\nOrdinal data\nContinuous data\n\nComponents of data figures",
+    "text": "Today\n\nVisualizing figure types\n\nNominal\nOrdinal\nContinuous\n\nComponents of data figures",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -524,7 +524,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#more-nominal-types",
     "title": "Figure components",
     "section": "More nominal types…",
-    "text": "More nominal types…",
+    "text": "More nominal types…\n\nCover story\n\nLink to making data tutorial",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -557,7 +557,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#mosaic-chart",
     "title": "Figure components",
     "section": "Mosaic chart",
-    "text": "Mosaic chart\n\n\n\n\n\n\nFigure 3: &lt;../tutorial-making-data.html#mosaic-plot&gt;",
+    "text": "Mosaic chart\n\n\n\n\n\n\nFigure 3: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorial-making-data.html#mosaic-plot",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -579,7 +579,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#ordinal-data",
     "title": "Figure components",
     "section": "Ordinal data",
-    "text": "Ordinal data\n\n\n\n\n\n\nFigure 4: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal",
+    "text": "Ordinal data\n\n\n\n\n\n\nFigure 8: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -601,7 +601,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#scatterplot",
     "title": "Figure components",
     "section": "Scatterplot",
-    "text": "Scatterplot\n\n\n\n\n\n\nFigure 7: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot",
+    "text": "Scatterplot\n\n\n\n\n\n\nFigure 15: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -612,7 +612,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#histogram",
     "title": "Figure components",
     "section": "Histogram",
-    "text": "Histogram\n\n\n\n\n\n\n\n\nFigure 8: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms\n\n\n\n\n\n\n\n\n\n\nFigure 9: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms",
+    "text": "Histogram\n\n\n\n\n\n\n\n\nFigure 16: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms\n\n\n\n\n\n\n\n\n\n\nFigure 17: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -623,7 +623,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#boxplot",
     "title": "Figure components",
     "section": "Boxplot",
-    "text": "Boxplot\n\n\n\n\n\n\n\n\nFigure 10: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot\n\n\n\n\n\n\n\n\n\n\nFigure 11: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot",
+    "text": "Boxplot\n\n\n\n\n\n\n\n\nFigure 18: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot\n\n\n\n\n\n\n\n\n\n\nFigure 19: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -645,7 +645,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#boxplot-limitations",
     "title": "Figure components",
     "section": "Boxplot limitations",
-    "text": "Boxplot limitations\n\n\n\n\n\n\nFigure 12: “The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research” (n.d.); Matejka and Fitzmaurice (2017)",
+    "text": "Boxplot limitations\n\n\n\n\n\n\nFigure 20: “The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research” (n.d.); Matejka and Fitzmaurice (2017)",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -656,7 +656,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#violin-plots",
     "title": "Figure components",
     "section": "Violin plots",
-    "text": "Violin plots\n\n\n\n\n\n\n\n\nFigure 13: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-plots\n\n\n\n\n\n\n\n\n\n\nFigure 14: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot",
+    "text": "Violin plots\n\n\n\n\n\n\n\n\nFigure 21: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-plots\n\n\n\n\n\n\n\n\n\n\nFigure 22: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -667,7 +667,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#violin-boxplot",
     "title": "Figure components",
     "section": "Violin + Boxplot",
-    "text": "Violin + Boxplot\n\n\n{#fig-continuous-violin-boxplot age width=“70%”}\n\n{#fig-continuous-violin-boxplot-temp age width=“70%”}",
+    "text": "Violin + Boxplot\n\n\n{#fig-continuous-violin-boxplot age width=“60%”}\n\n{#fig-continuous-violin-boxplot-temp age width=“60%”}",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -678,7 +678,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#violin-boxplot-scatter",
     "title": "Figure components",
     "section": "Violin + Boxplot + Scatter",
-    "text": "Violin + Boxplot + Scatter\n\n\n\n\n\n\n\n\nFigure 15: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter\n\n\n\n\n\n\n\n\n\n\nFigure 16: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter",
+    "text": "Violin + Boxplot + Scatter\n\n\n\n\n\n\n\n\nFigure 23: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter\n\n\n\n\n\n\n\n\n\n\nFigure 24: https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -689,7 +689,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#your-turn-1",
     "title": "Figure components",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\n\n\nWhich type(s) work better?\n\n\n\nViolin plots\nCombo-plots with scatter points\nWhy?",
+    "text": "Your turn\n\n\n\n\n\n\nWhich of these better tells the story of these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat have we learned?",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -700,7 +700,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#your-turn-2",
     "title": "Figure components",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\n\n\nWhich of these is most, least informative?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat prior knowledge do viewers need to understand the figures?",
+    "text": "Your turn\n\n\n\n\n\n\nWhich type(s) work better?\n\n\n\nViolin plots\nCombo-plots with scatter points\nWhy?",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -4054,6 +4054,149 @@
     "crumbs": [
       "Slides",
       "Wk 04 • Mon Sep 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#your-turn",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#your-turn",
+    "title": "Figure components",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nCan you see differences between the categories?",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#your-turn-3",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#your-turn-3",
+    "title": "Figure components",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nWhich type(s) work better?\n\n\n\nViolin plots\nCombo-plots with scatter points\nWhy?",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#lets-play",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#lets-play",
+    "title": "Figure components",
+    "section": "Let’s play",
+    "text": "Let’s play\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    23     14     16     19     22     20     28     19     20     19 \n\n\n\nTableBarplotPieRing\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    23     14     16     19     22     20     28     19     20     19 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#lets-compare",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare",
+    "title": "Figure components",
+    "section": "Let’s compare",
+    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        3         5         4         5         2 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#barplot-1",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#barplot-1",
+    "title": "Figure components",
+    "section": "Barplot-1",
+    "text": "Barplot-1\n\n\n\n\n\n\n\n\nFigure 6: A colorful barplot of the random favorite color data",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#barplot-2",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#barplot-2",
+    "title": "Figure components",
+    "section": "Barplot-2",
+    "text": "Barplot-2\n\n\n\n\n\n\n\n\nFigure 7: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#your-turn-4",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#your-turn-4",
+    "title": "Figure components",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nWhich of these is most, least informative?\n\n\n\n\n\n\n\n\n\n\n\n\nWhat prior knowledge do viewers need to understand the figures?",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#more-on-nominal-types",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#more-on-nominal-types",
+    "title": "Figure components",
+    "section": "More on nominal types…",
+    "text": "More on nominal types…\n\nCover story\n\nLink to making data tutorial",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#lets-compare-them",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare-them",
+    "title": "Figure components",
+    "section": "Let’s compare them",
+    "text": "Let’s compare them\n\nTablePieRing\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    28     28     19     17     12     20     21     17     14     24 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#meals-eaten-vs.-not-eaten",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#meals-eaten-vs.-not-eaten",
+    "title": "Figure components",
+    "section": "Meals eaten vs. not-eaten",
+    "text": "Meals eaten vs. not-eaten",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#some-thoughts",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#some-thoughts",
+    "title": "Figure components",
+    "section": "Some thoughts",
+    "text": "Some thoughts\n\nTables are useful1\n\nBut make relative differences between categories harder to see\n\nBar charts are easier to read than pie or ring charts\nSorting bars by magnitude helps reveal differences between categories\nColor coding bars (sometimes) eliminates the need for a legend\nTextures can get ugly",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#footnotes",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#footnotes",
+    "title": "Figure components",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nMost readers have lots of experience comparing the magnitude of numbers.",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-16-figure-components.html#nominal-example-1",
+    "href": "slides/wk-04-2026-09-16-figure-components.html#nominal-example-1",
+    "title": "Figure components",
+    "section": "Nominal Example 1",
+    "text": "Nominal Example 1\n\nCover story\n\nLink to making data tutorial",
+    "crumbs": [
+      "Slides",
+      "Wk 04 • Wed Sep 16"
     ]
   }
 ]

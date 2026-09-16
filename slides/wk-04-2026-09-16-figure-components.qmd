@@ -11,7 +11,7 @@ format: revealjs
 
 ## Last time...
 
-- *Making data* & *Figure types*
+- *Figure types*
 
 ## Considerations when making
 
@@ -19,57 +19,302 @@ format: revealjs
 - Nominal/discrete
   - Which categories
   - Order
-  - Other?
+  - Number of categories
+    - One vs. Two or more
 - Ordinal
-:::
-
-## More considerations
-
-::: {.incremental}
-- Continuous
-  - Continuous or grouped?
-- Free response
 :::
 
 ## Today
 
-- More on figure types
-  - Ordinal data
-  - Continuous data
+- Visualizing figure types
+  - Nominal
+  - Ordinal
+  - Continuous
 - Components of data figures
 
-# More on figure types
+# Visualizing nominal data
 
-## More nominal types...
+## Nominal Example 1
+
+- Cover story
+  - [Link to making data tutorial](../tutorials/tutorial-making-data.qmd#generating)
 
 ## Pie charts
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#pie-chart>](../include/fig/fig-nominal-pie-chart-1.png){#fig-pie-charts width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#pie-chart>](../include/fig/fig-nominal-pie-chart-1.png){#fig-pie-charts width="60%"}
 
 ## Ring charts
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#ring-chart>](../include/fig/fig-nominal-ring-chart-1.png){#fig-ring-charts width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#ring-chart>](../include/fig/fig-nominal-ring-chart-1.png){#fig-ring-charts width="60%"}
 
 ## Mosaic chart
 
-![<../tutorial-making-data.html#mosaic-plot>](../include/fig/fig-nominal-mosaic-chart-1.png){#fig-mosaic-charts width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorial-making-data.html#mosaic-plot>](../include/fig/fig-nominal-mosaic-chart-1.png){#fig-mosaic-charts width="60%"}
 
 ## Pie, ring, mosaic chart mappings
 
 - Heights & widths $\rightarrow$ counts (or proportions)
 - Areas $\rightarrow$ counts (or proportions)
 
-## Ordinal data
+## Your turn...
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal>](../include/fig/fig-ordinal-barplot-dodge-1.png){#fig-bar-plot-ordinal width="70%"}
+::: {.question}
+## Can you see differences between the categories?
+:::
+
+## Let's compare them
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(forcats)
+
+colors <- c("red", "orange", "yellow", "green", "cyan", "blue", "violet", "white", "black", "gray")
+our_color_sample <- sample(colors, size=200, replace=TRUE)
+colors_df <- data.frame(favorite_color = our_color_sample)
+```
+
+::: {.panel-tabset}
+
+## Table
+
+```{r}
+xtabs(formula = ~favorite_color, data = colors_df)
+```
+
+::: {.question}
+## What's the 'story' with these data?
+:::
+
+## Pie
+
+```{r}
+#| label: fig-nominal-piechart
+#| fig-cap: "A pie chart of the random favorite color data"
+#| out-width: "70%"
+colors_xtab <- data.frame(table(colors_df))
+names(colors_xtab) <- c("favorite_color", "count")
+
+colors_xtab |>
+  ggplot(aes(x = "", y = count, fill = favorite_color)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  scale_fill_identity()
+```
+
+## Ring
+
+```{r}
+#| label: fig-nominal-ring-chart
+#| fig-cap: "A ring/donut chart of the random favorite color data"
+#| out-width: "70%"
+
+# https://r-graph-gallery.com/128-ring-or-donut-plot.html
+
+# Compute percentages
+colors_xtab$fraction = colors_xtab$count / sum(colors_xtab$count)
+
+# Compute the cumulative percentages (top of each rectangle)
+colors_xtab$ymax = cumsum(colors_xtab$fraction)
+
+# Compute the bottom of each rectangle
+colors_xtab$ymin = c(0, head(colors_xtab$ymax, n = -1))
+
+# Make the plot
+colors_xtab |>
+  ggplot(aes(
+    ymax = ymax,
+    ymin = ymin,
+    xmax = 4,
+    xmin = 3,
+    fill = favorite_color
+  )) +
+  geom_rect() +
+  coord_polar(theta = "y") + # Try to remove that to understand how the chart is built initially
+  xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
+  scale_fill_identity()
+```
+
+:::
+
+## Barplot-1
+
+```{r}
+#| label: fig-nominal-barplot
+#| fig-cap: "A colorful barplot of the random favorite color data"
+#| out-width: "70%"
+colors_df |>
+  ggplot() +
+  aes(x = favorite_color, fill = favorite_color) +
+  geom_bar() +
+  scale_discrete_manual(aesthetics = c("color", "fill"),
+                        values = sort(colors))
+```
+
+## Barplot-2
+
+```{r}
+#| label: fig-nominal-barplot-ordered
+#| fig-cap: "A colorful barplot of the random favorite color data sorted by the number of responses."
+#| out-width: "70%"
+colors_df |>
+  dplyr::count(favorite_color) |>
+  dplyr::arrange(desc(n)) |>
+  dplyr::mutate(favorite_color = factor(favorite_color, levels = favorite_color)) |>
+  ggplot() +
+  geom_bar(aes(x = favorite_color, y = n, fill = favorite_color), stat = "identity") +
+  scale_fill_identity()
+```
+
+# Nominal example 2
+
+## Meals eaten vs. not-eaten
+
+```{r}
+#| label: setup-meals-example
+days <- factor(
+  c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
+  levels = c("sun", "mon", "tue", "wed", "thu", "fri", "sat"),
+  ordered = TRUE
+)
+meals <- factor(
+  c("breakfast", "lunch", "dinner", "snack", "dessert"),
+  levels = c("breakfast", "lunch", "snack", "dinner", "dessert"),
+  ordered = TRUE
+)
+meal_days <- rep(days, each = length(meals))
+weekly_meals <- rep(meals, 7)
+
+my_meals <- data.frame(day_of_wk = meal_days, 
+                       meal = weekly_meals)
+ate_it <- sample(c(TRUE, FALSE), size = 35, 
+                 replace = TRUE, prob = c(.6, .4))
+my_meals$ate_it <- ate_it
+
+meals_eaten <- my_meals$meal[my_meals$ate_it == TRUE]
+meals_eaten_df <- data.frame(meal = meals_eaten)
+```
+
+
+## Let's compare
+
+::: {.panel-tabset}
+
+## Table
+
+```{r}
+xtabs(formula = ~meal, data = meals_eaten_df)
+```
+
+## Pie
+
+```{r}
+#| label: fig-nominal-piechart-meals
+#| fig-cap: "A pie chart of the random meals data"
+#| out-width: "70%"
+meals_xtab <- data.frame(table(meals_eaten_df))
+
+meals_xtab |>
+  ggplot(aes(x = "", y = Freq, fill = meal)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0)
+```
+
+
+## Ring
+
+```{r}
+#| label: fig-nominal-ring-chart-meals
+#| fig-cap: "A ring/donut chart of the random meals data"
+#| out-width: "70%"
+
+# https://r-graph-gallery.com/128-ring-or-donut-plot.html
+
+# Compute percentages
+meals_xtab$fraction = meals_xtab$Freq / sum(meals_xtab$Freq)
+
+# Compute the cumulative percentages (top of each rectangle)
+meals_xtab$ymax = cumsum(meals_xtab$fraction)
+
+# Compute the bottom of each rectangle
+meals_xtab$ymin = c(0, head(meals_xtab$ymax, n = -1))
+
+# Make the plot
+meals_xtab |>
+  ggplot(aes(
+    ymax = ymax,
+    ymin = ymin,
+    xmax = 4,
+    xmin = 3,
+    fill = meal
+  )) +
+  geom_rect() +
+  coord_polar(theta = "y") + # Try to remove that to understand how the chart is built initially
+  xlim(c(2, 4))  # Try to remove that to see how to make a pie chart
+```
+
+## Barplot-1
+
+```{r}
+#| label: fig-nominal-barplot-meals
+#| fig-cap: "A colorful barplot of the random favorite color data"
+#| out-width: "70%"
+meals_xtab |>
+  ggplot() +
+  aes(x = meal, y = Freq, fill = meal) +
+  geom_bar(stat = "identity")
+```
+
+
+## Barplot-2
+
+```{r}
+#| label: fig-nominal-barplot-ordered-meals
+#| fig-cap: "A colorful barplot of the random favorite color data sorted by the number of responses."
+#| out-width: "70%"
+meals_xtab |>
+  mutate(ordered_meal = forcats::fct_reorder(meal, desc(Freq))) |>
+  ggplot() +
+  geom_bar(aes(x = ordered_meal, y = Freq, fill = meal), stat = "identity")
+```
+
+:::
+
+
+## Your turn
+
+::: {.question}
+## Which of these better tells the story of these data?
+:::
+
+::: {.fragment}
+::: {.question}
+## What have we learned?
+:::
+:::
+
+## Some thoughts
+
+- Tables are useful^[Most readers have lots of experience comparing the magnitude of numbers.]
+  - But make relative differences between categories harder to see
+- Bar charts are easier to read than pie or ring charts
+- Sorting bars by magnitude helps reveal differences between categories
+- Color coding bars (sometimes) eliminates the need for a legend
+- [Textures](../tutorials/tutorial-making-data.qmd#barcolumn-with-textures) can get ugly
+
+# Ordinal data
 
 ---
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#fig-ordinal-barplot-stacked>](../include/fig/fig-ordinal-barplot-stacked-1.png){#fig-barplot-stacked width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal>](../include/fig/fig-ordinal-barplot-dodge-1.png){#fig-bar-plot-ordinal width="60%"}
 
 ---
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal-stacked-alternative>](../include/fig/fig-ordinal-barplot-stacked-alt-1.png){#fig-pie-charts width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#fig-ordinal-barplot-stacked>](../include/fig/fig-ordinal-barplot-stacked-1.png){#fig-barplot-stacked width="60%"}
+
+---
+
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal-stacked-alternative>](../include/fig/fig-ordinal-barplot-stacked-alt-1.png){#fig-pie-charts width="60%"}
 
 ---
 
@@ -86,16 +331,16 @@ format: revealjs
   
 ## Scatterplot
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../include/fig/fig-continuous-scatter-1.png){#fig-continuous-scatter width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../include/fig/fig-continuous-scatter-1.png){#fig-continuous-scatter width="60%"}
 
 ## Histogram
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../include/fig/fig-continuous-histogram-age-1.png){#fig-continuous-histogram-age width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../include/fig/fig-continuous-histogram-age-1.png){#fig-continuous-histogram-age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../include/fig/fig-continuous-histogram-temp-1.png){#fig-continuous-histogram-temp width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../include/fig/fig-continuous-histogram-temp-1.png){#fig-continuous-histogram-temp width="60%"}
 :::
 ::::
 
@@ -103,10 +348,10 @@ format: revealjs
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../include/fig/fig-continuous-boxplot-age-1.png){#fig-continuous-boxplot-age width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../include/fig/fig-continuous-boxplot-age-1.png){#fig-continuous-boxplot-age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../include/fig/fig-continuous-boxplot-temp-1.png){#fig-continuous-boxplot-temp width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../include/fig/fig-continuous-boxplot-temp-1.png){#fig-continuous-boxplot-temp width="60%"}
 :::
 ::::
 
@@ -123,10 +368,10 @@ format: revealjs
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-plots>](../include/fig/fig-continuous-violin-age-1.png){#fig-continuous-violin-age width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-plots>](../include/fig/fig-continuous-violin-age-1.png){#fig-continuous-violin-age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../include/fig/fig-continuous-violin-temp-1.png){#fig-continuous-violin-temp width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../include/fig/fig-continuous-violin-temp-1.png){#fig-continuous-violin-temp width="60%"}
 :::
 ::::
 
@@ -134,10 +379,10 @@ format: revealjs
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../include/fig/fig-continuous-violin-boxplot-age-1.png){#fig-continuous-violin-boxplot age width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../include/fig/fig-continuous-violin-boxplot-age-1.png){#fig-continuous-violin-boxplot age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../include/fig/fig-continuous-violin-boxplot-temp-1.png){#fig-continuous-violin-boxplot-temp age width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../include/fig/fig-continuous-violin-boxplot-temp-1.png){#fig-continuous-violin-boxplot-temp age width="60%"}
 :::
 ::::
 
@@ -145,10 +390,10 @@ format: revealjs
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../include/fig/fig-continuous-violin-boxplot-scatter-age-1.png){#fig-continuous-violin-boxplot-scatter-age width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../include/fig/fig-continuous-violin-boxplot-scatter-age-1.png){#fig-continuous-violin-boxplot-scatter-age width="60%"}
 :::
 :::  {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../include/fig/fig-continuous-violin-boxplot-scatter-temp-1.png){#fig-continuous-violin-boxplot-scatter-temp width="70%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../include/fig/fig-continuous-violin-boxplot-scatter-temp-1.png){#fig-continuous-violin-boxplot-scatter-temp width="60%"}
 :::
 ::::
 
