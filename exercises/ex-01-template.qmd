@@ -2,7 +2,9 @@
 title: "Exercise 01"
 subtitle: "Visualization in psychological science"
 author: ["Rick Gilmore", "Fred Rogers"]
-format: html
+format: 
+  html:
+    self-contained: true
 ---
 
 ## About

@@ -8,7 +8,7 @@ format: html
 
 In-class work on Friday, September 4.
 
-[Due]{.orange_due} on [Friday, September 11](../schedule.qmd#fri-sep-11). 
+Due on ~~[Friday, September 11](../schedule.qmd#fri-sep-11)~~ [Friday, September 25, 2026](../schedule.qmd#fri-sep-26). 
 
 [Canvas dropbox](https://psu.instructure.com/courses/2484925/assignments/18448429).
 
@@ -55,6 +55,5 @@ The visualizations you choose to write about may be the ones you found yourself 
 
 Students who want this submission to count for one of their four (4) *required* exercises should submit the following:
 
-- A commentary where you describe three (3) figures your group found, answering the questions in 4. above.
-- Adapt the Quarto [template](ex-01-template.qmd) for Exercise 01.
-
+- A commentary where you describe three (3) figures your group found, answering the questions in 4. above. As with Exercise 01, use write a complete five paragraph essay structure. APA document format is *strongly* recommended.
+- If you wish to submit a Quarto document (worth 3 extra credit points), adapt the Quarto [template](ex-01-template.qmd) for Exercise 01. Embed the figures using the template code sequences, e.g. `![Figure caption here](link_to_figure_here)`. If you use the Quarto template, you do *not* follow the APA formatting guidelines except for your reference section.

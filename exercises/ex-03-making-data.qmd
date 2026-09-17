@@ -7,7 +7,7 @@ subtitle: "Making data"
 
 In-class work on Friday, September 11 and Friday, September 18, 2026.
 
-Submit write-up for credit [due]{.orange_due} by [Friday, September 25, 2026](../schedule.qmd#fri-sep-25).
+Submit write-up for credit [due]{.orange_due} by ~~[Friday, September 25, 2026](../schedule.qmd#fri-sep-25)~~ [Friday, October 2, 2026](../schedule.qmd#fri-oct-02).
 
 ## Goals {-}
 
@@ -20,7 +20,7 @@ The survey you create will be used later in the course for data visualizations t
 1. Open Google Forms by visiting <https://forms.google.com>.
 2. Create a new form by clicking on the 'Blank Form' button.
 
-![Blank form button](../include/img/google-forms-blank-form.png){fig-google-form-blank-form}
+![Blank form button](../include/img/google-forms-blank-form.png){#fig-google-form-blank-form width="50%"}
 3. Give your form a useful title, for example, 'PSYCH-490.007-2026-spring-team-A' or 'PSYCH-490.007-2026-spring-rog1'.
 
 ::: {.callout-important}
@@ -39,13 +39,13 @@ You can be assigned a team name/letter if you choose.
 
 6. When you are happy with a draft of your survey, conduct a quality assurance (QA) review of it by having your team or someone else take the survey. The easiest way to do this is to use the 'Send' button to send your survey to you collaborator(s).
 
-![Google Forms 'Send'](../include/img/google-forms-send-button.png)
+![Google Forms 'Send'](../include/img/google-forms-send-button.png){#fig-google-forms-send width="50%"}
 
 Make sure to have your QA testers answer the Comments question with the same response, e.g., 'test-response'. This will make it easier later to filter-out the test responses.
 
 7. Make sure that all of your collaborators have edit privileges on the form. Click on the 'more' button with three dots and add collaborators.
 
-![Add collaborators](../include/img/google-forms-add-collaborators.png)
+![Add collaborators](../include/img/google-forms-add-collaborators.png){#fig-add-collaborators width="50%"}
 
 ## Submit {-}
 
@@ -62,4 +62,3 @@ If you are submitting a short 2-4 page write-up via Canvas, please provide answe
 3. What assumptions must a researcher make when conducting survey research of this sort? \
 4. Focusing on those available within Google Forms, what user interface(s) work best for different types of data? \
 5. If you've used Qualtics previously to generate surveys, briefly compare Qualtrics with Google Forms.
-

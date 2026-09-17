@@ -5,11 +5,11 @@ project:
 
 website:
   title: "PSYCH 490.007"
-  # announcement:
-  #   content: "Make sure to install R & RStudio on your personal computer. See [this tutorial](tutorials/tutorial-install-r-rstudio.qmd) for help."
-  #   position: below-navbar
-  #   icon: info-circle
-  #   dismissable: true
+  announcement:
+    content: "No class on Monday, September 21, 2026."
+    position: below-navbar
+    icon: info-circle
+    dismissable: true
   sidebar:
     collapse-level: 1
     style: "docked"
@@ -61,6 +61,7 @@ website:
     - section: Supplemental
       contents:
         - supplemental/psych-sci-figs.qmd
+        - supplemental/other-field-figs.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
   page-footer:
