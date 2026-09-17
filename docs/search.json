@@ -188,5 +188,75 @@
     "crumbs": [
       "Schedule"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Psychology of Data Visualization",
+    "section": "",
+    "text": "ChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#themes",
+    "href": "index.html#themes",
+    "title": "The Psychology of Data Visualization",
+    "section": "Themes",
+    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructor",
+    "href": "index.html#instructor",
+    "title": "The Psychology of Data Visualization",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\n\nOffice hours\nMonday & Friday, 12:00p - 1:00p in 114 Moore or by appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-assistant",
+    "href": "index.html#teaching-assistant",
+    "title": "The Psychology of Data Visualization",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant\nKalvin Garrah\nGraduate Student in Social Psychology\nkmg7035 AT-SIGN psu PERIOD edu\n\n\nOffice hours\nTuesday, 12:00p - 2:00p, in 473 Moore or by appointment (email).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#meeting-time-location",
+    "href": "index.html#meeting-time-location",
+    "title": "The Psychology of Data Visualization",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:35 pm - 4:25 pm\n216 Osmond Lab",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#canvas-site",
+    "href": "index.html#canvas-site",
+    "title": "The Psychology of Data Visualization",
+    "section": "Canvas site",
+    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-structure",
+    "href": "index.html#course-structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]
