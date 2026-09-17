@@ -1,26 +1,25 @@
 ---
-title: "ggplot2 Tutorial"
-format: html
+title: "*ggplot2* tutorial I"
 ---
 
 ## About
 
-This page provides some activities for beginning users of the `ggplot2` package.
+This page provides some activities for beginning users of the *ggplot2* [@ggplot2] package.
 
 ## Get ready
 
 ### Create a new project
 
-Let's open project to capture our work with `ggplot2`.
+Let's open project to capture our work with *ggplot2*.
 
 I suggest calling the project `ggplot-2026-09-18` or something similar.
 
 :::: {.columns}
 ::: {.column width=50%}
-![From File Menu](../include/img/file-menu.png){fig-align="center" #fig-file-menu-new-project width="25%"}
+![From File Menu](../include/img/file-menu.png){fig-align="center" #fig-file-menu-new-project width="75%"}
 :::
 ::: {.column width=50%}
-![From Project Manager Tab](../include/img/new-project.png){fig-align="center" #fig-new-project-project-manager width="25%"}
+![From Project Manager Tab](../include/img/new-project.png){fig-align="center" #fig-new-project-project-manager width="75%"}
 :::
 ::::
 
@@ -92,9 +91,9 @@ I also recommend checking the `Render on Save` box in RStudio.
 That way every time you save, the document re-renders and opens in your browser.
 :::
 
-## Install `ggplot2`
+## Install *ggplot2*
 
-Base R has many useful functions, but `ggplot2` is not one of them.
+Base R has many useful functions, but *ggplot2* is not one of them.
 So, you will need to install it using the `install.packages()` function.
 
 Switch to the R console, and install the package as follows:
@@ -105,7 +104,7 @@ install.packages("ggplot2")
 
 You'll only need to do this once.
 
-## Using Quarto as a lab notebook
+## Quarto as a lab notebook
 
 We're going to use Quarto as a lab notebook.
 
@@ -128,7 +127,7 @@ Below the setup header, we're going to add an R code chunk like this:
 library(ggplot2)
 ````
 
-The `library()` command brings the package into the computational environment^[This is akin to bringing something into your working memory.] and lets us call the other functions and commands in `ggplot2` by their "first" names.
+The `library()` command brings the package into the computational environment^[This is akin to bringing something into your working memory.] and lets us call the other functions and commands in *ggplot2* by their "first" names.
 
 ## Our first plot
 
@@ -140,15 +139,20 @@ Add a new section called `My First Plot` or `Figure 01` or something like that.
 
 Then you might add some text explaining what the first plot is about. For example, you could describe the data being visualized and the purpose of the plot.
 
-Here, we're going to use the `diamonds` dataset the is built in to `ggplot2`.
+Here, we're going to use the `diamonds` dataset the is built in to *ggplot2*.
 
-Create an R chunk as follows
+Create an R chunk as follows:
+
+::: {#fig-plot-diamonds-price}
 
 ````{{r}}
 ggplot(data = diamonds) +
   aes(x = price) +
   geom_histogram()
 ````
+
+Simple *ggplot2* syntax to plot a histogram of the price variable in the diamonds dataset.
+:::
 
 ::: {.callout-warning}
 ## Syntax slip-ups
@@ -168,37 +172,21 @@ The resulting web page should look something like this:
 
 ![](../include/img/ggplot-tutorial-fig-01.png){width="50%" #fig-01}
 
-### Unpacking `ggplot` syntax
+### Unpacking *ggplot* syntax
 
-:::: {.columns}
-::: {.column width=60%}
 To make a figure, we need a dataset formatted as a data frame. The `diamonds` dataset is already in the right format.
 
-In our plotting code, we call the `ggplot()` function and specify the dataset to plot using the `data=diamonds` command.
+In our plotting code illustrated in @fig-plot-diamonds-price, we call the `ggplot()` function and specify the dataset to plot using the `data=diamonds` parameter^[A parameter is a value that we send to a function to help the function do the job we want it to do.].
 
 Next, we 'add' a layer to our figure using the `+` command.
-That layer contains the 'aesthetics' or mapping between our dataset and some feature of the figur e (e.g., x position, y position, fill color, etc.)
+That layer contains the 'aesthetics' or mapping between our dataset and some feature of the figure (e.g., x position, y position, fill color, etc.)
 We specify these mappings using the `aes()` command.
 For this specific figure, we're mapping x position on the figure to the `price` variable in the dataset.
 
 Finally, our figure needs a 'geom', a geometric object or format for the figure.
 We have a single variable (`price`), and we want to plot a histogram of it, so we add (`+`) use the `geom_histogram()`.
-:::
-::: {.column width=40%}
 
-::: {#fig-ggplot-diamonds}
-
-````{{r}}
-ggplot(data = diamonds) +
-  aes(x = price) +
-  geom_histogram()
-````
-
-:::
-:::
-::::
-
-## Plot another variable
+## Another variable
 
 Let's plot another variable from the `diamonds` datasets.
 
@@ -230,11 +218,12 @@ Code to generate a histogram of the `carat` variable from the `diamonds` dataset
 
 Save and render the Quarto document.
 
-## Make violin plots
+## Violin plots
 
 There are other 'geoms' we can use with continuous data like `price` and `carat`.
+A violin plot is one of them.
 
-Again, make a 'Figure 03' section in your Quarto document.
+Again, make a new `Figure 03` section in your Quarto document.
 Then, make a new code chunk with the following:
 
 ::: {#fig-violin-plots}
@@ -252,16 +241,20 @@ ggplot(data = diamonds) +
 Code to create violin plots of both the `price` and `carat` variables.
 :::
 
+Yes, this should make two different violin plots.
+
 Save and render the Quarto document
 
-Notice that `geom_violin()` requires us to both `x` and `y` aesthetics even if we only want to plot one variable. 
-We tell `ggplot` to ignore the other mapping by setting `y=""`.
+Notice that `geom_violin()` requires us to specify both `x` and `y` aesthetics even if we only want to plot one variable. 
+We tell *ggplot* to ignore the other mapping by setting `y=""`.
 
-## Make a scatterplot
+## Scatterplots
 
-To wrap up this tutorial, let's make a scatterplot of `price` and `carat` using `geom_point` and setting the x and y aesthetics.
+Let's make a scatterplot of `price` and `carat` using `geom_point` and set the `x` and `y` aesthetics.
+That will put `price` on the `x` or horizontal axis and `carat` on the `y` or vertical axis.
+You could switch them; it doesn't really matter.
 
-Make a Figure 04 section in your Quarto document, then add a code chunk with the following:
+Make a `Figure 04` section in your Quarto document, then add a code chunk with the following:
 
 ::: {#fig-diamonds-scatterplot}
 
@@ -269,10 +262,9 @@ Make a Figure 04 section in your Quarto document, then add a code chunk with the
 ggplot(data = diamonds) +
   aes(x = price, y = carat) +
   geom_point()
+````
   
 Code to create a scatterplot of the `price` and `carat` variables from the diamonds dataset.
-````
-
 :::
 
 ## Multiple violin plots
@@ -293,3 +285,50 @@ ggplot(data = diamonds) +
 
 Code to generate multiple violin plots, one for each value of the discrete (ordinal) variable `cut`. Note the use of new aesthetics `fill` and `color`, customized axis labels using `xlab()` and `ylab()` and a title using `ggtitle()`.
 :::
+
+## Combination plot
+
+Let's implement a version of the combination plot from the [Making and visualizing data tutorial](tutorial-making-data.html#violin-boxplot-scatter).
+
+Create a `Figure 06` section in your Quarto document, add this chunk of code, save, and render.
+
+````{{r}}
+ggplot(data = diamonds) +
+  aes(x = price, y = "") +
+  geom_violin() +
+  geom_boxplot(alpha = .4) +
+  geom_jitter(width = 0, height = .2, alpha = .05) +
+  ylab("")
+````
+
+::: {.callout-important}
+## What are those new parameters?
+
+Note that there is an `alpha` parameter in the `geom_boxplot()` function. What does it do?
+There is an `alpha` parameter in the `geom_jitter()` function, too.
+
+One way to answer this is to create new versions of the figures with different values of `alpha`.
+You could do this by creating new subsections in your Quarto document, say one like this:
+
+````markdown
+### `alpha = 1`
+
+The following figure shows what happens to Figure 06 when we set `alpha` in `geom_boxplot` to 1.
+````
+
+Then, copy the Figure 06 code to a new code chunk but change the `alpha` value.
+
+Try the same experiment to determine what the other parameters do.
+:::
+
+## You did it!
+
+You made a bunch of figures using *ggplot*!
+And you documented all of your work in a Quarto document.
+You're one step closer to being a *ggplot* master.
+
+Here's a happy dance animated gif I found, but you can find one you like yourself at [giphy.com](https://giphy.com).
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJkbmd2dGZwODlxYjdwaTJ2NGN4djUwYXl2ZW03a2RzMW44MzNqayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EkPicGgIeyNAQ/giphy.gif)
+
+## References

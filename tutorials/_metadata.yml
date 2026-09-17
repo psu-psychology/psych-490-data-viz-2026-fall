@@ -1,0 +1,9 @@
+execute:
+  freeze: auto  # re-render only when source changes
+format:
+  html:
+    fig-align: center
+    citations-hover: true
+    reference-location: document
+    lightbox: true
+    bibliography: [../include/bib/packages.bib, ../include/bib/data-viz.bib, ../include/bib/grateful-refs.bib]

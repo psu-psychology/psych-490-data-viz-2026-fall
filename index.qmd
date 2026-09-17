@@ -5,3 +5,7 @@ title: "Home"
 {{< include _index.qmd >}}
 
 {{< include _about.qmd >}}
+
+```{r}
+grateful::cite_packages(output="file", out.dir = "include/bib")
+```

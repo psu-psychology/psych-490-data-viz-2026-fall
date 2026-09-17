@@ -254,9 +254,1667 @@
     "href": "index.html#course-structure",
     "title": "The Psychology of Data Visualization",
     "section": "Course structure",
-    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.\n\n\nCode\ngrateful::cite_packages(output=\"file\", out.dir = \"include/bib\")\n\n\nA large number of files (1786 in total) have been discovered.\nIt may take renv a long time to scan these files for dependencies.\nConsider using .renvignore to ignore irrelevant files.\nSee `\u001b]8;;x-r-help:renv::dependencies\u0007?renv::dependencies\u001b]8;;\u0007` for more information.\nSet `options(renv.config.dependencies.limit = Inf)` to disable this warning.\n\n\n\nCitation report available at include/bib/grateful-report.html\n\n\n[1] \"include/bib/grateful-report.html\"",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-install-r-rstudio.html",
+    "href": "tutorials/tutorial-install-r-rstudio.html",
+    "title": "Installing R and RStudio Desktop",
+    "section": "",
+    "text": "This page provides information about how to install R and RStudio Desktop on your personal computer. These are free, powerful software tools for data visualization and analysis.",
+    "crumbs": [
+      "Tutorials",
+      "Installing R and RStudio Desktop"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-install-r-rstudio.html#about",
+    "href": "tutorials/tutorial-install-r-rstudio.html#about",
+    "title": "Installing R and RStudio Desktop",
+    "section": "",
+    "text": "This page provides information about how to install R and RStudio Desktop on your personal computer. These are free, powerful software tools for data visualization and analysis.",
+    "crumbs": [
+      "Tutorials",
+      "Installing R and RStudio Desktop"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-install-r-rstudio.html#order-of-operations",
+    "href": "tutorials/tutorial-install-r-rstudio.html#order-of-operations",
+    "title": "Installing R and RStudio Desktop",
+    "section": "Order of operations",
+    "text": "Order of operations\n\n\n\n\n\n\nNote\n\n\n\nInstalling R and RStudio Desktop is usually straightforward, but glitches arise from time to time. If something’s not working, try to seek help from an expert friend or the internet. If you get frustrated, stop. We’ll spend time in-class helping with troubleshooting.\n\n\nYou must install R first.\n\nInstalling R\n\nVisit https://cran.r-project.org\n\n\n\n\n\n\n\nFigure 1: https://lib.stat.cmu.edu/R/CRAN/\n\n\n\n\nClick on the “Download R for…” link appropriate for the operating system of your computer, proably Windows or macOS.\n\n\nIf you have a newer Mac, you want the version “For Apple Silicon”: R-4.6.1-arm64\n\n\n\n\n\n\n\nImportantConfirm your macOS operating system and hardware\n\n\n\nClick on the Apple Menu in the upper left hand corner. Open the “About this Mac” menu item. A window will open.\n\n\n\n\n\n\nFigure 2\n\n\n\nNote that the operating system and hardware are displayed here. Under Chip, the “Apple M2 Pro” means that my laptop is using Apple Silicon. The macOS value says “Tahoe 26.6.1”. R-4.6.1 works with all macOS &gt; 14 (Sonoma).\n\n\n\nIf you are on Windows, click on the “install R for the first time” link. Then download R-4.6.1 for Windows.\n\n\nAfter you’ve downloaded the installer program. Open it. It is usually found in the default location for file downloads, often in a folder called “Downloads.”\nOpen the installer program and follow the directions.\n\n\n\nInstalling RStudio Desktop\nNext install RStudio Desktop. Visit https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads.\nMacOS users select RStudio-2026.07.1-147.dmg and Windows Users select RStudio-2026.07.1-147.exe.\nWhen the programs download, run the installation programs.\n\nOpen RStudio Desktop.\n\nIf RStudio Desktop opens successfully, do the computer happy dance.\n\n\n\n\n\n\nFigure 3: giphy.com",
+    "crumbs": [
+      "Tutorials",
+      "Installing R and RStudio Desktop"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html",
+    "href": "tutorials/tutorial-screenshots.html",
+    "title": "Capturing images",
+    "section": "",
+    "text": "This short tutorial shows how to capture images in web pages and how to make screenshots on Mac OS and Windows OS."
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html#about",
+    "href": "tutorials/tutorial-screenshots.html#about",
+    "title": "Capturing images",
+    "section": "",
+    "text": "This short tutorial shows how to capture images in web pages and how to make screenshots on Mac OS and Windows OS."
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html#capturing-images-in-web-pages",
+    "href": "tutorials/tutorial-screenshots.html#capturing-images-in-web-pages",
+    "title": "Capturing images",
+    "section": "Capturing images in web pages",
+    "text": "Capturing images in web pages\nMost browsers support “right-clicking”, clicking on the right button of a multibutton mouse (or the equivalent motion on a trackpad) when you hover over an image.\nUsing Chrome on Mac OS for example, I visited the Penn State homepage at https://www.psu.edu. In mousing over a photo, I right clicked and had the following panel appear:\n\n\n\n\n\n\nFigure 1: Image from psu.edu in Chrome using MacOS\n\n\n\nNote that there are several options. I find that these are the most useful:\n\n“Open Image in New Tab”. I often do this to make sure that the web page link (URL) actually contains the image I want it to. Then I switch to that tab for further steps.\n“Save Image As…”. This is useful if you want to download a local copy.\n“Copy Image Address”. Use this for capturing URLs of images, but not the images themselves.\n\nHere is an illustration of the same process on Windows 11:\n\n\n\n\n\n\nFigure 2: Image from psu.edu on Chrome using Windows 11\n\n\n\nNot that the pop-up has similar options.\n\n\n\n\n\n\nWarningWord to the wise\n\n\n\nSome websites do not support this feature. That’s why I prefer to use “open image in new tab” to see if I’m actually capturing what I want to capture. As a back-up, you can usually resort to your computer’s built-in screen capture tool that we’ll describe next."
+  },
+  {
+    "objectID": "tutorials/tutorial-screenshots.html#capturing-images-on-your-screen",
+    "href": "tutorials/tutorial-screenshots.html#capturing-images-on-your-screen",
+    "title": "Capturing images",
+    "section": "Capturing images on your screen",
+    "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "",
+    "text": "Exercise 01 due next Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox\n\n\n\n\n\nTroubleshooting R and RStudio installations\nIntroducing R and RStudio\nExercise 01",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#announcements",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#announcements",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "",
+    "text": "Exercise 01 due next Friday, September 4, 2026 (midnight).\nSubmit Quarto document to  Canvas dropbox",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#todays-topics",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#todays-topics",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "",
+    "text": "Troubleshooting R and RStudio installations\nIntroducing R and RStudio\nExercise 01",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#r",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#r",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "R",
+    "text": "R\n\n\n\nProgramming language\nSet of symbols\n\nsyntax/grammar\nsemantics\n\n“Talk” to your computer\n\n\n\n\n\nhttps://www.r-project.org",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "RStudio",
+    "text": "RStudio\n\n\n\nAn integrated development environment (IDE) for R\nToolbox for R programmers\nYes, mom, I’m a programmer now",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#rstudio-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "RStudio",
+    "text": "RStudio\n\nConsole\n\nTalk to computer using R\n\nEditor\n\nMake text files\n\nFiles\n\nManage (rename, move, delete) files\n\nEdit arrangement via View/Panes/Pane Layout... menu",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#console",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#console",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Console",
+    "text": "Console\n\n\n\nSay something (type)\nPress &lt;enter&gt; or &lt;return&gt; key\nGet an answer\n\n\n\nTry this: type date() and hit &lt;enter&gt;\n\n\n\nCode\ndate()\n\n\n[1] \"Mon Aug 31 08:44:18 2026\"",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Semiotics of R",
+    "text": "Semiotics of R\n\n\n\nThings\n\nNames\nValues\n\n\n\n\nThings\n\nname\nage\n\nValues\n\nname: “Yoda”\nage: “900 years”1",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#semiotics-of-r-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Semiotics of R",
+    "text": "Semiotics of R\n\n\n\nCommands/functions\n\n\n\nCommand/function\n\ndate()\nname &lt;- \"Yoda\"\nage &lt;- 900\"",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Grammatical rules",
+    "text": "Grammatical rules\n\nNames\n\nLetters, underscores, numbers\nNo quotation marks\n\nValues\n\nCharacter strings (inside quotation marks)\nNumeric values (no quotation marks)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#grammatical-rules-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Grammatical rules",
+    "text": "Grammatical rules\n\n\n\nAssignment: &lt;-\n\nGive some value a name\n\nCommands\n\nCommand name plus parentheses (date())\nTell me the value of a named thing (age)",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Your turn…",
+    "text": "Your turn…\n\nTry changing the code below to name &lt;- Yoda. What happens?\nChange name &lt;- \"Luke\" or age to 100 What happens?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#your-turn-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Your turn…",
+    "text": "Your turn…\n\nTry changing the code below to age &lt;- \"900\". What happens?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nProgramming languages need to know the type of thing you’re talking about\n\nNumbers (e.g., 900, or 3.14159, or 1e9)\nCharacter strings (“name”, “900”)\nObject names (age, name)\n\nCan do different things with these\n\nNumbers: add (+), subtract, etc.\nStrings: concatenate (“a”, “b” -&gt; “ab”)\nObject names: recall the value",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#under-the-hood-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nData types matter because…\n\nComputers store everything in sequences of bits (1s and 0s)\nNumbers, strings, names, and datasets, audio, video, images, etc.\n\nTypes tell computer what operations it can do on the bit sequences",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#where-were-going",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#where-were-going",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Where we’re going…",
+    "text": "Where we’re going…\n\n\n\n\n\n\n\n\nFigure 2: A histogram of a random, normally distributed distribution with mean 0 and standard deviation of 1.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#code-to-generate-this-figure",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#code-to-generate-this-figure",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Code to generate this figure",
+    "text": "Code to generate this figure\n# Generate a random normal distribution using the `rnorm()` function.\n# Assign the distribution a name: `x_norm` so I can use it later.\n\nx_norm &lt;- rnorm(n = 100, mean = 0, sd = 1)\n\n# \"Pipe\" `x_norm` to `ggplot2()` to make a histogram.\n\nx_norm |&gt;\n  as.data.frame() |&gt;          # ggplot requires a tabular data frame\n  ggplot() +                  #  as input\n  aes(x = x_norm) +\n  geom_histogram()",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Extra fun",
+    "text": "Extra fun\ninstall.packages(\"ggplot2\")\nlibrary(ggplot2)\n\nscatter_data &lt;- data.frame(x_norm = rnorm(100, 0, 1),\n                           y_norm = rnorm(100, 0, 1))\n\nscatter_data |&gt;\n  ggplot() +\n  aes(x = x_norm, y = y_norm) +\n  geom_point() +\n  geom_smooth() +\n  ggtitle(\"My first scatterplot!\")",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun-1",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#extra-fun-1",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Extra fun",
+    "text": "Extra fun\n\n\n\n\n\n\n\n\nFigure 3: A scatterplot of two random, normal variables with a best-fitting smooth line. Not very interesting now, but just you wait.",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#observation",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#observation",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Observation",
+    "text": "Observation\n\n\n\n\n\n\nImportantThe discipline (and joy) of programming\n\n\n\n\nComputers are literal to an extraordinary extent.\nThey do exactly what you tell them to do.\nProgramming forces you to think in a disciplined, step-by-step fashion.\nIf you get frustrated, take a break.\nIf you succeed, celebrate!",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#exercise-01-details",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#exercise-01-details",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Exercise 01 details",
+    "text": "Exercise 01 details\n\nAssignment\nVisit https://github.com/psu-psychology/psych-490-data-viz-2026-fall/blob/main/exercises/ex-01-template.qmd",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#copy-the-template-text-into-a-new-text-file",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#copy-the-template-text-into-a-new-text-file",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Copy the template text into a new text file",
+    "text": "Copy the template text into a new text file\n\nClick inside the text window.\nSelect the text (highlight it)\nSwitch to RStudio, create a new text file\nPaste the text\nSave the file as exercise-01-template.qmd",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#render-the-template",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#render-the-template",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Render the template",
+    "text": "Render the template\n\n\n\n\n\n\nFigure 4",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#next-time",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#next-time",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Next time",
+    "text": "Next time\n\nVisualization in government & business",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#about",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#about",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#references",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#references",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#footnotes",
+    "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#footnotes",
+    "title": "Work session: Introducing R & RStudio",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://share.google/aimode/m4uVbqawZD0Gv0ZkS↩︎",
+    "crumbs": [
+      "Slides",
+      "Wk 01 • Fri Aug 28"
+    ]
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html",
+    "href": "slides/wk-04-2026-09-18-ggplot.html",
+    "title": "Intro to ggplot",
+    "section": "",
+    "text": "Exercise 02 due today\nNo class Monday, September 21\n\n\n\n\n\nIntro to ggplot\nAs time permits\n\nExercise 02\nExercise 03"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#announcements",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#announcements",
+    "title": "Intro to ggplot",
+    "section": "",
+    "text": "Exercise 02 due today\nNo class Monday, September 21"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#todays-topics",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#todays-topics",
+    "title": "Intro to ggplot",
+    "section": "",
+    "text": "Intro to ggplot\nAs time permits\n\nExercise 02\nExercise 03"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#what-is-it",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#what-is-it",
+    "title": "Intro to ggplot",
+    "section": "What is it?",
+    "text": "What is it?\n\nR package that implements Cleveland’s “grammar of graphics”\n\nWritten by Hadley Wickham, CTO of Posit.co\n\nMap data to figure components\n\nPosition\nColor, shape, size\n\nAdd layers to figures"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#why-code-your-figures",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#why-code-your-figures",
+    "title": "Intro to ggplot",
+    "section": "Why ‘code’ your figures?",
+    "text": "Why ‘code’ your figures?\n\nEasier to reproduce\nEasier to edit\nTry out different styles, pick the best\nBe kind to your future (forgetful) self\nMakes programming more fun"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#installing-ggplot",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#installing-ggplot",
+    "title": "Intro to ggplot",
+    "section": "Installing ggplot",
+    "text": "Installing ggplot\n\nOpen RStudio\nEnter the following in your R console\n\ninstall.packages(\"ggplot2\")"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\n\nCode\ndays &lt;- factor(\n  c(\"sun\", \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\"),\n  levels = c(\"sun\", \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\"),\n  ordered = TRUE\n)\nmeals &lt;- factor(\n  c(\"breakfast\", \"lunch\", \"dinner\", \"snack\", \"dessert\"),\n  levels = c(\"breakfast\", \"lunch\", \"snack\", \"dinner\", \"dessert\"),\n  ordered = TRUE\n)\nmeal_days &lt;- rep(days, each = length(meals))\nweekly_meals &lt;- rep(meals, 7)\n\nmy_meals &lt;- data.frame(day_of_wk = meal_days, \n                       meal = weekly_meals)"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-1",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nI created a new ate_skipped variable\nThis let’s me create a new logical variable called ate that is TRUE if ate_skipped == TRUE\n\n\n\nCode\nate_skipped &lt;- sample(c(\"ate\", \"skipped\"), size = 35, \n                 replace = TRUE, prob = c(.6, .4))\nate &lt;- ate_skipped == \"ate\"\nate\n\n\n [1]  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE\n[13]  TRUE FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE\n[25]  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-2",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nWhy do this?\nIt makes it easy to assign a NA value to all of the ratings where ate==FALSE\n\n\n\nCode\nratings &lt;- sample(c(1, 2, 3, 4, 5), size = 35,\n                 replace = TRUE)\n\nratings[ate == FALSE] &lt;- NA"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-3",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#lets-make-some-data-3",
+    "title": "Intro to ggplot",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\n\nCode\nmy_meals$ate_skipped &lt;- ate_skipped\nmy_meals$rating &lt;- ratings"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#howd-we-do",
+    "title": "Intro to ggplot",
+    "section": "How’d we do?",
+    "text": "How’d we do?\n\n\nCode\nmy_meals\n\n\n   day_of_wk      meal ate_skipped rating\n1        sun breakfast         ate      3\n2        sun     lunch         ate      2\n3        sun    dinner         ate      1\n4        sun     snack     skipped     NA\n5        sun   dessert         ate      1\n6        mon breakfast         ate      4\n7        mon     lunch     skipped     NA\n8        mon    dinner         ate      3\n9        mon     snack         ate      5\n10       mon   dessert         ate      5\n11       tue breakfast     skipped     NA\n12       tue     lunch         ate      5\n13       tue    dinner         ate      4\n14       tue     snack     skipped     NA\n15       tue   dessert         ate      4\n16       wed breakfast         ate      5\n17       wed     lunch         ate      3\n18       wed    dinner         ate      4\n19       wed     snack     skipped     NA\n20       wed   dessert         ate      5\n21       thu breakfast         ate      5\n22       thu     lunch         ate      3\n23       thu    dinner     skipped     NA\n24       thu     snack     skipped     NA\n25       thu   dessert         ate      2\n26       fri breakfast     skipped     NA\n27       fri     lunch     skipped     NA\n28       fri    dinner         ate      5\n29       fri     snack     skipped     NA\n30       fri   dessert     skipped     NA\n31       sat breakfast         ate      4\n32       sat     lunch     skipped     NA\n33       sat    dinner     skipped     NA\n34       sat     snack         ate      3\n35       sat   dessert         ate      4"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#your-turn",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#your-turn",
+    "title": "Intro to ggplot",
+    "section": "Your turn…",
+    "text": "Your turn…\n\n\n\n\n\n\nQuestionHow would you visualize this sort of data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestionWhat questions would you want your visualization to answer?"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-0",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-0",
+    "title": "Intro to ggplot",
+    "section": "Figure 0",
+    "text": "Figure 0\n\n\n\n\n\n\nNote\n\n\n\nThis is a simple ggplot2 figure using data already available in R.\nClick on the arrow to view the code.\nThe rendered figure is on the next slide.\n\n\n\n\nCode\nlibrary(ggplot2)\n\nggplot(data = airquality) + \n  aes(x = Temp, y = Ozone) +\n  geom_point() + \n  geom_smooth(method = \"loess\")"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.0",
+    "title": "Intro to ggplot",
+    "section": "Figure 1.0",
+    "text": "Figure 1.0\n\n\n\n\n\n\nQuestionHow many meals were eaten vs. skipped?\n\n\n\n\n\n\n\n\nCode\nmy_meals |&gt; \n  ggplot() + \n  aes(x = ate_skipped) + \n  geom_bar() \n\n\n\n\n\n\n\n\nFigure 1: A barplot of meals eaten and skipped.\n\n\n\n\n\n\n\n\n\n\n\n\nImportantNominal data often require processing before plotting\n\n\n\nThis is most often a count of the number of instances per category. It could be the relative proportion, but this is calculated from the number of instances."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-1.1",
+    "title": "Intro to ggplot",
+    "section": "Figure 1.1",
+    "text": "Figure 1.1\n\nAdd a fill aesthetic to fill the bars with colors\n\n\n\nCode\nmy_meals |&gt;\n  ggplot() +\n  aes(x = ate_skipped, fill = ate_skipped) +\n  geom_bar()\n\n\n\n\n\n\n\n\nFigure 2: A barplot of meals eaten and skipped.\n\n\n\n\n\n\n\nIf we fill from ate_skipped\n\nggplot will map a color to each distinct value of ate_skipped\nand add a legend, so we know what the colors represent"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2.0",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2.0",
+    "title": "Intro to ggplot",
+    "section": "Figure 2.0",
+    "text": "Figure 2.0\n\n\n\n\n\n\nQuestionWhat is the distribution of meal ratings?\n\n\n\n\n\n\n\n\nCode\nggplot(data = my_meals) + \n  aes(x = rating) +\n  geom_bar()\n\n\n\n\n\n\n\n\nFigure 3: A barplot of meal ratings."
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-2.1",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-2.1",
+    "title": "Intro to ggplot",
+    "section": "Figure 2.1",
+    "text": "Figure 2.1\n\n\n\n\n\n\n\n\nFigure 4: A plot of ratings for each meal using geom_point"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-3",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#figure-3",
+    "title": "Intro to ggplot",
+    "section": "Figure 3",
+    "text": "Figure 3\n\n\n\n\n\n\n\n\nFigure 5"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#basic-ggplot-components",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#basic-ggplot-components",
+    "title": "Intro to ggplot",
+    "section": "Basic ggplot components",
+    "text": "Basic ggplot components\n\nA data frame\nFunction call to ggplot()\nAdd layers to plot with + operator\nAdd aesthetics (mappings between data and graphic elements) using aes() with x (and often y) mappings\nA geom_ layer"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#next-time",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#next-time",
+    "title": "Intro to ggplot",
+    "section": "Next time",
+    "text": "Next time\n\nWednesday, not Monday\nPerceptual foundations"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#about",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#about",
+    "title": "Intro to ggplot",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.9.0.174.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+  },
+  {
+    "objectID": "slides/wk-04-2026-09-18-ggplot.html#references",
+    "href": "slides/wk-04-2026-09-18-ggplot.html#references",
+    "title": "Intro to ggplot",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html",
+    "title": "Making data with R",
+    "section": "",
+    "text": "Due Exercise 02 |  Canvas dropbox |\n\n\n\n\n\nWork session: Making data with R\nIntroducing Exercise-03",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#announcements",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#announcements",
+    "title": "Making data with R",
+    "section": "",
+    "text": "Due Exercise 02 |  Canvas dropbox |",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#todays-topics",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#todays-topics",
+    "title": "Making data with R",
+    "section": "",
+    "text": "Work session: Making data with R\nIntroducing Exercise-03",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#why-make-data",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#why-make-data",
+    "title": "Making data with R",
+    "section": "Why make data?",
+    "text": "Why make data?\n\nGood way to learn R syntax\nGood way to generate synthetic data (see Week 13)",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#making-nominalcategorical-data",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#making-nominalcategorical-data",
+    "title": "Making data with R",
+    "section": "Making nominal/categorical data",
+    "text": "Making nominal/categorical data\n\nWhat are the categories?\nHow many instances of each category",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#example-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#example-1",
+    "title": "Making data with R",
+    "section": "Example 1",
+    "text": "Example 1\n\nUse the c() function to ‘concatenate’ members of your target category\nR returns an ‘array’\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#extracting-items-from-the-array",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#extracting-items-from-the-array",
+    "title": "Making data with R",
+    "section": "Extracting items from the array",
+    "text": "Extracting items from the array\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nEach item has an ‘index’ or address\nUse square brackets [] to extract the element at that address",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-1-of-3",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-1-of-3",
+    "title": "Making data with R",
+    "section": "Words for the wise (1 of 3)",
+    "text": "Words for the wise (1 of 3)\n\nArray addresses must be numbers\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNA means not applicable or no data",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3",
+    "title": "Making data with R",
+    "section": "Words for the wise (2 of 3)",
+    "text": "Words for the wise (2 of 3)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nWait, what happened?\nmeals[-1] dropped the first element breakfast\nHow would you drop snack?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-2-of-3-1",
+    "title": "Making data with R",
+    "section": "Words for the wise (2 of 3)",
+    "text": "Words for the wise (2 of 3)\n\nAddresses must be less than the length of the array\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-3-of-3",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#words-for-the-wise-3-of-3",
+    "title": "Making data with R",
+    "section": "Words for the wise (3 of 3)",
+    "text": "Words for the wise (3 of 3)\n\nWe can select a subset of elements\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#copying-arrays",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#copying-arrays",
+    "title": "Making data with R",
+    "section": "Copying arrays",
+    "text": "Copying arrays\n\nMake copies of arrays with the rep() (replicate) function\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn",
+    "title": "Making data with R",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nQuestionQuestion\n\n\n\nWhy would we want to do this?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#one-answer",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#one-answer",
+    "title": "Making data with R",
+    "section": "One answer",
+    "text": "One answer\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWhen arrays have equal length, we can make a rectangular data frame\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nOne more thing makes this potentially useful.\n\n\n\n\n\n\n\nQuestionWhat is that thing?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswerAnswer\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#under-the-hood",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#under-the-hood",
+    "title": "Making data with R",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nTRUE and FALSE are ‘logical’ values\nWe generated an array of values using the sample() function\nAssumption: There’s a .6 probability of eating any given meal",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-1-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-1-of-2",
+    "title": "Making data with R",
+    "section": "Putting it all together (1 of 2)",
+    "text": "Putting it all together (1 of 2)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-2-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#putting-it-all-together-2-of-2",
+    "title": "Making data with R",
+    "section": "Putting it all together (2 of 2)",
+    "text": "Putting it all together (2 of 2)\n\nShow the variable in a data frame using the $ operator\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#your-turn-1",
+    "title": "Making data with R",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nQuestionIs day_of_wk nominal?\n\n\n\n\n\n\n\n\n\n\n\n\nQuestionIs it ordinal?\n\n\n\n\n\n\n\n\n\n\n\n\nQuestionIs ate_it ordinal?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-1-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-1-of-2",
+    "title": "Making data with R",
+    "section": "Visualizing… (1 of 2)",
+    "text": "Visualizing… (1 of 2)\n\nUse the xtabs function to generate a cross-tabulated table\nformula syntax says show my_meals by meal and ate_it\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-2-of-2",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#visualizing-2-of-2",
+    "title": "Making data with R",
+    "section": "Visualizing… (2 of 2)",
+    "text": "Visualizing… (2 of 2)\n\n\n\n\n\n\nQuestionHow would you show a table showing the meals eaten by day_of_wk?\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnswerAnswer\n\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#final-comments",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#final-comments",
+    "title": "Making data with R",
+    "section": "Final comments",
+    "text": "Final comments\n\nWhat order does the table present meal in?\nWhat order is day_of_wk presented in?\nHave we told R which of these are ordinal?",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#main-points",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#main-points",
+    "title": "Making data with R",
+    "section": "Main points",
+    "text": "Main points\n\nUse c() to make arrays\nUse rep() to make copies of elements or arrays\nUse data.frame() to make data frames",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#next-time",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#next-time",
+    "title": "Making data with R",
+    "section": "Next time",
+    "text": "Next time\n\nFigure types",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#about",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#about",
+    "title": "Making data with R",
+    "section": "About",
+    "text": "About",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#about-1",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#about-1",
+    "title": "Making data with R",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html#references",
+    "href": "slides/wk-03-2026-09-11-making-data-with-r.html#references",
+    "title": "Making data with R",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Slides",
+      "Wk 03 • Fri Sep 11"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "",
+    "text": "smalin (2011)\n\n\n\n\n\n\n\n\nFigure 1: Novosad, Rafkin, & Asher (2022)\n\n\n\n\n\n\n\n\n\n\nFigure 2: Novosad et al. (2022)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#mortality-trends-by-education-level",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#mortality-trends-by-education-level",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "",
+    "text": "Figure 1: Novosad, Rafkin, & Asher (2022)\n\n\n\n\n\n\n\n\n\n\nFigure 2: Novosad et al. (2022)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#announcements",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#announcements",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Announcements",
+    "text": "Announcements\n\nDue Friday: Exercise 01",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#last-time",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#last-time",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Last time…",
+    "text": "Last time…\n\nVisualization in government and business",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#today",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#today",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Today",
+    "text": "Today\n\nVisualization in art, sports, & journalism\nWork session\n\nExercise 01\nExercise 02",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#goals",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#goals",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Goals",
+    "text": "Goals\n\nWhat sort(s) of visualizations are common in these fields?\nApply principles of semiotics to these visualizations.\n\nSemantics: Mappings between signs and what they signify?\nSyntax: Rules for arrangement/organization",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#musical-notation",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#musical-notation",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Musical notation",
+    "text": "Musical notation\n\n\n\n\n\n\nFigure 3: https://www.britannica.com/art/musical-notation",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#antecdents",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#antecdents",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Antecdents",
+    "text": "Antecdents\n\n\n\n\n\n\nFigure 4: https://www.britannica.com/art/musical-notation/Evolution-of-Western-staff-notation\n\n\n\n\n\n\n\n\n\n\nFigure 5: Wikipedia contributors (2025b)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#hebrew-trope",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#hebrew-trope",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Hebrew trope",
+    "text": "Hebrew trope\n\n\n\n\n\n\nFigure 6: Wikipedia contributors (2025a). https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Example_of_biblical_Hebrew_trope.svg/3840px-Example_of_biblical_Hebrew_trope.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#styles",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#styles",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Styles",
+    "text": "Styles\n\nMusical style guide",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#what-is-being-mapped",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#what-is-being-mapped",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "What is being mapped?",
+    "text": "What is being mapped?\n\nPitch\nTiming, tempo\nLoudness\nStylistic properties\netc.\n\n\n\n\n\n\n\n\n\nFigure 7: smalin (2011)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#dance",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#dance",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Dance",
+    "text": "Dance\n\n\n\n\n\n\n\nFigure 8: Flores (2021)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#visual-arts",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#visual-arts",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Visual arts",
+    "text": "Visual arts\n\n\n\n\n\n\nFigure 9: “Blue Skies and Cloud Cover” by Laura Guertin, BTAA Data Viz 2024 Champion",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#examples",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#examples",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Examples",
+    "text": "Examples\n\nhttps://operations.nfl.com/programs-initiatives/innovation/big-data-bowl\nhttps://www.tableau.com/sports-data",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#access-to-u.s.-newspapers",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#access-to-u.s.-newspapers",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Access to U.S. newspapers",
+    "text": "Access to U.S. newspapers\n\nhttps://guides.libraries.psu.edu/newspapers/direct\n\n\n\n\n\n\n\n\nFigure 10: Paris (2025)\n\n\n\n\n\n\n\n\n\n\nFigure 11: Paris (2025)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#data-journalism",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#data-journalism",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Data journalism",
+    "text": "Data journalism\n\nThe Economist\nThe New York Times\n\n\n\n\n\n\n\n\nFigure 12: https://www.foxnews.com/search-results/search#q=data\n\n\n\n\n\n\n\n\n\n\nFigure 13: https://www.cnn.com/search?q=data",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#the-washington-post",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#the-washington-post",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "The Washington Post",
+    "text": "The Washington Post\n\n\n\n\n\n\nFigure 14: Van Dam (2022)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#section",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#section",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "",
+    "text": "Figure 15: https://www.washingtonpost.com/people/andrew-van-dam/\n\n\n\n\n\n\nFowers & Van Dam (2024)",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#accuweather.com",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#accuweather.com",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Accuweather.com",
+    "text": "Accuweather.com\n\n\n\n\n\n\nFigure 16: https://www.accuweather.com/en/us/state-college/16801/weather-forecast/335315?current=true",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#knowable-magazine",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#knowable-magazine",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Knowable Magazine",
+    "text": "Knowable Magazine\n\n\n\n\n\n\nFigure 17: https://knowablemagazine.org/\n\n\n\n\nGraphics library",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#main-points",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#main-points",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Main points",
+    "text": "Main points",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#data-viz-outside-psi",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#data-viz-outside-psi",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Data viz outside \\(\\Psi\\)",
+    "text": "Data viz outside \\(\\Psi\\)\n\nNon-science fields visualize data, too\nMultiple purposes/uses of data viz",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#next-time",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#next-time",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "Next time",
+    "text": "Next time\n\nIntroducing Quarto\nWork session",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#about",
+    "href": "slides/wk-02-2026-09-02-art-sports-journ.html#about",
+    "title": "Data viz in art, sports, & journalism",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 02 • Wed Sep 02"
+    ]
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#the-psychology-of-data-visualization",
+    "href": "psych-490.007-2026-fall-syllabus.html#the-psychology-of-data-visualization",
+    "title": "The Psychology of Data Visualization",
+    "section": "The Psychology of Data Visualization",
+    "text": "The Psychology of Data Visualization\n\n\n\nChatGPT/Dall-E-3 model response to ‘an image of “a picture paints a thousand words”’ on 2024-09-19"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#themes",
+    "href": "psych-490.007-2026-fall-syllabus.html#themes",
+    "title": "The Psychology of Data Visualization",
+    "section": "Themes",
+    "text": "Themes\nIf a picture’s worth a thousand words (Wikipedia contributors, 2024a), what exactly does it say? This course will focus on the psychology of data visualization—how to read, critique, and generate meaningful figures that inform but don’t mislead. We’ll take inspiration from recognized classic figures and unpack what makes them exemplary. We’ll critique figures that deliberately or inadvertently mislead or confuse. We’ll learn what 150 years of vision science, the foundation of experimental psychology, has to say about data visualization. And we’ll learn how to build our own reproducible figures using Python, R, and JavaScript. No prior programming experience is required."
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#instructor",
+    "href": "psych-490.007-2026-fall-syllabus.html#instructor",
+    "title": "The Psychology of Data Visualization",
+    "section": "Instructor",
+    "text": "Instructor\nRick O. Gilmore, Ph.D. \nProfessor of Psychology\nrog1 AT-SIGN psu PERIOD edu\n\nSchedule an appointment: https://doodle.com/mm/rickgilmore/book-a-time\nLab web site: https://gilmore-lab.github.io"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#teaching-assistant",
+    "href": "psych-490.007-2026-fall-syllabus.html#teaching-assistant",
+    "title": "The Psychology of Data Visualization",
+    "section": "Teaching Assistant",
+    "text": "Teaching Assistant"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#meeting-time-location",
+    "href": "psych-490.007-2026-fall-syllabus.html#meeting-time-location",
+    "title": "The Psychology of Data Visualization",
+    "section": "Meeting time & location",
+    "text": "Meeting time & location\nMonday, Wednesday, & Friday, 3:25 pm - 4:25 pm\n216 Osmond Lab"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#canvas-site",
+    "href": "psych-490.007-2026-fall-syllabus.html#canvas-site",
+    "title": "The Psychology of Data Visualization",
+    "section": "Canvas site",
+    "text": "Canvas site\nMost of the course content will be found on this site.\nHowever, we will use Canvas to track attendance, submit and grade assignments, and provide ongoing summaries about grade point totals. The Canvas site may be found here:\nhttps://psu.instructure.com/courses/2484925"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#course-structure",
+    "href": "psych-490.007-2026-fall-syllabus.html#course-structure",
+    "title": "The Psychology of Data Visualization",
+    "section": "Course structure",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities."
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-01",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-01",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 01",
+    "text": "Week 01\nSurveying the landscape\n\nMon, Aug 24\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\nWed, Aug 26\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\n\n\n\nFri, Aug 28\nWork Session: Introducing Quarto\n\nComplete: RStudio installation and setup\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-02",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-02",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 02",
+    "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nResults from Exercise 01\nSlides\n\n\n\nWed, Sep 02\nVisualization in art, sports, and journalism\n\nRead\n\nGelman & Unwin (2013) (recommended)\n\nAssigned: Exercise 02\nSlides\n\n\n\nFri, Sep 04\nWork Session: More Quarto\n\n Due Exercise 01 |  Canvas dropbox\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-03",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-03",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 03",
+    "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946)\nWikipedia contributors (2024b) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nAssigned: Exercise-03\nSlides\n\n\n\nFri, Sep 11\nWork Session: Intro to R\n\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-04",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-04",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 04",
+    "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nSlides\n\n\n\nWed, Sep 16\nMore figure types\n\nReview: Making and visualizing data\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nReview: Making and visualizing data\n Due Exercise 02 |  Canvas dropbox |\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-05",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-05",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 05",
+    "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise-03 |  Canvas dropbox |\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-06",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-06",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 06",
+    "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\n Due Exercise-04 |  Canvas dropbox |"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-07",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-07",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 07",
+    "text": "Week 07\n\nMon, Oct 05\nExploring data\n\nRead:\n\nTukey (1977), Chapter 1, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 07\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16\n\nSlides\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-08",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-08",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 08",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\n*Read**:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\n Due Final Project proposal |  Canvas dropbox\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008)\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: TidyTuesday or Exercise 05\n\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-09",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-09",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 09",
+    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 15\n\nSlides\n\n\n\nWed, Oct 21\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday II\n\nSlides"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-10",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-10",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 10",
+    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\n Due Exercise-05\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\n\nFri, Oct 30\nWork Session: Tables"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-11",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-11",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 11",
+    "text": "Week 11\nData viz and politics\n\nMon, November 02\n\n\nWed, November 04\n\n\nFri, November 06\nWork Session: More TidyTuesday"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-12",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-12",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 12",
+    "text": "Week 12\nData viz and inference\n\nMon, November 09\nSynthesize before you analyze\n\n\nWed, November 11\nSample size, effect size, statistical power\n\n\nFri, November 13\nWork Session: Final Projects"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-13",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-13",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 13",
+    "text": "Week 13\nTHEME TBD\n\nMon, November 16\n\n Due Exercise-06\n\n\n\nWed, November 18\n\n\nFri, November 20\nWork Session: Final projects"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#thanksgiving-break",
+    "href": "psych-490.007-2026-fall-syllabus.html#thanksgiving-break",
+    "title": "The Psychology of Data Visualization",
+    "section": "Thanksgiving Break",
+    "text": "Thanksgiving Break\nNO CLASS"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-14",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-14",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 14",
+    "text": "Week 14\n\nMon, November 30\nMaking data dashboards and apps\n\nExplore:\n\nKohler (2024)\n\nSlides\n\n\n\nWed, December 02\nWork Session: Final projects\n\n\nFri, December 04\nWork Session: Final projects"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#week-15",
+    "href": "psych-490.007-2026-fall-syllabus.html#week-15",
+    "title": "The Psychology of Data Visualization",
+    "section": "Week 15",
+    "text": "Week 15\n\nMon, December 07\nFinal Project Presentations\n\n\nWed, December 09\nFinal Project Presentations\n\n\nFri, December 11\nFinal Project Presentations"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#finals-week",
+    "href": "psych-490.007-2026-fall-syllabus.html#finals-week",
+    "title": "The Psychology of Data Visualization",
+    "section": "Finals Week",
+    "text": "Finals Week\n\nWed, Dec 16\n\n Due Final project write-up |  Canvas dropbox"
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#eval-components",
+    "href": "psych-490.007-2026-fall-syllabus.html#eval-components",
+    "title": "The Psychology of Data Visualization",
+    "section": "Elements",
+    "text": "Elements\n\n\n\nComponent\nDescription\nPoints\n\n\n\n\nAttendance\nYou will receive 1 point for each class you attend up to a maximum of 40.\n40\n\n\nExercises\nThere will be six (6) exercises that we will work on. Each exercise is worth 10 points. You are required to submit four (4) toward your final grade.\n40\n\n\nFinal project\nYou will complete a final project, either on your own, or with a small group of 3 or fewer. Your final project is worth 40 points.\n40\n\n\n\nTOTAL POINTS POSSIBLE\n120\n\n\nExtra Credit\nIf you submit more than four (4) exercise write-ups, you may earn up to 10 extra credit points for these exercises."
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#grading-scheme",
+    "href": "psych-490.007-2026-fall-syllabus.html#grading-scheme",
+    "title": "The Psychology of Data Visualization",
+    "section": "Grading Scheme",
+    "text": "Grading Scheme\n\n\n\nPercent\nPoints\nGrade\n\n\n\n\n94+\n113+\nA\n\n\n90-93\n108-112\nA-\n\n\n87-89\n104-107\nB+\n\n\n84-86\n100-103\nB\n\n\n80-83\n96-100\nB-\n\n\n77-79\n92-95\nC+\n\n\n70-76\n84-91\nC\n\n\n60-69\n72-83\nD\n\n\n&lt;59\n&lt;=71\nF\n\n\n\nThis page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-18\nExercise 02\n\n\n2026-09-25\nExercise 03\n\n\n2026-10-04\nExercise 04\n\n\n2026-10-12\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.\n\n\n\n\n\n\nAcademic Integrity\nStudents with questions about academic integrity should visit http://www.la.psu.edu/current-students/undergraduate-students/education/academic-integrity.\nPenn State defines academic integrity as the pursuit of scholarly activity in an open, honest and responsible manner. All students should act with personal integrity, respect others dignity, rights and property, and help create and maintain an environment in which all can succeed through the fruits of their efforts (Faculty Senate Policy 49-20). Sanctions for academic misconduct can include a grade of F for the course as well as other penalties.\nUnless you are told otherwise, you must complete all course work entirely on your own, using only sources that have been permitted by your instructor, and you may not assist other students with papers, quizzes, exams, or other assessments. If I allow you to use ideas, images, or word phrases created by another person (e.g., from Course Hero or Chegg) or by generative technology, such as ChatGPT, you must identify their source.\nWhen you complete assignments, remember the ABCs to avoid plagiarism: Always place copied information within quotation marks, include information about the quoted or paraphrased source in a Bibliography, and Cite the source in the body (in the text) of your paper immediately after the quoted or paraphrased information. When in doubt, cite in the text and include the source in a bibliography.\nStudents with questions about academic integrity should ask me or the TA before submitting work.\nStudents facing allegations of academic misconduct may not drop/withdraw from the affected course unless they are cleared of wrongdoing (see G-9: Academic Integrity). Attempted drops will be prevented or reversed, and students will be expected to complete course work and meet course deadlines. Students who are found responsible for academic integrity violations face academic outcomes, which can be severe, and put themselves at jeopardy for other outcomes which may include ineligibility for Dean’s List, pass/fail elections, and grade forgiveness. Students may also face consequences from their home/major program and/or The Schreyer Honors College.\n\n\nAbsences or late assignments\n\nAbsence from class\nYour absence from class may be excused under unusual circumstances such as (a) an interview for graduate school or a job, (b) illness, (c) religious observance, (d) the death of a family member, or (e) any other event recognized by the university as a valid excuse for absence from class.\nIf you must miss class, you must contact the instructor and the TA in advance.\nUp to three (3) excused absences will be permitted.\n\n\nLate exercises\nExercises submitted after the published deadlines will not be eligible for full credit unless the instructor has given specific permission.\n\n\nLate final projects\nFinal projects submitted after the published deadline will not be eligible for full credit unless the instructor has given specific permission.\n\n\nAccommodation for persons with disabilities\nPenn State welcomes students with disabilities into the University’s educational programs. Please refer to the information provided by Student Disability Resources (SDR) at http://equity.psu.edu/student-disability-resources/ for information about the procedures required to obtain reasonable accommodations in this course. Students should discussSDR-approved accommodations with their instructor as early in the semester as possible, even if they have taken another course with the instructor. Please note: students are not required to provide their instructor with information about the nature of their condition.\nPenn State students are also welcome to contact other units for assistance with personal concerns that interfere with academic progress, including: Counseling and Psychological Services (CAPS; http://studentaffairs.psu.edu/counseling/), the Office of Student Affairs (http://studentaffairs.psu.edu/), Career Services (http://studentaffairs.psu.edu/career/), the Center for Women Students (http://studentaffairs.psu.edu/womenscenter/), the LGBTQA Student Resource Center (http://studentaffairs.psu.edu/lgbtqa/), the Office of Sexual Misconduct Prevention and Response (http://titleix.psu.edu/), Penn State Educational Equity (http://equity.psu.edu/), the Multicultural Resource Center (http://equity.psu.edu/mrc), and University Health Services (http://studentaffairs.psu.edu/health/).\n\n\n\nNondiscrimination Statement\nThe Pennsylvania State University is committed to equal access to programs, facilities, admission and employment for all persons. It is the policy of the University to maintain an environment free of harassment and free of discrimination against any person because of age, race, color, ancestry, national origin, religion, creed, service in the uniformed services (as defined in state and federal law), veteran status, sex, sexual orientation, marital or family status, pregnancy, pregnancy-related conditions, physical or mental disability, gender, perceived gender, gender identity, genetic information or political ideas.\nDiscriminatory conduct and harassment, as well as sexual misconduct and relationship violence, violates the dignity of individuals, impedes the realization of the University’s educational mission, and will not be tolerated.\nDirect all inquiries regarding the nondiscrimination policy to:\nSuzanne C. Adair Associate Vice President for Equal Opportunity and Access Office of Equal Opportunity and Access The Pennsylvania State University 328 Boucke Building University Park, PA 16802-5901 Email: sca917@psu.edu Tel (814) 863-0471\n\n\nDiversity Statement\nThis classroom is a place where you will be treated with respect. All members of this class are expected to contribute to a respectful, welcoming and inclusive environment for every other member of the class.\nPenn State is committed to creating an educational environment which is free from intolerance directed toward individuals or groups and strives to create and maintain an environment that fosters respect for others as stated in Policy AD29 Statement on Intolerance.\n\n\nMandated Reporting Statement\nPenn State’s policies require me, as a faculty member, to share information about incidents of sex-based discrimination and harassment (discrimination, harassment, sexual harassment, sexual misconduct, dating violence, domestic violence, stalking, and retaliation) with Penn State’s Title IX coordinator or deputy coordinators, regardless of whether the incidents are stated to me in person or shared by students as part of their coursework. For more information regarding the University’s policies and procedures for responding to reports of sexual or gender-based harassment or misconduct, please visit http://titleix.psu.edu.\nAdditionally, I am required to make a report on any reasonable suspicion of child abuse in accordance with the Pennsylvania Child Protective Services Law.\n\n\nZoom\nAt some point in the semester, I may decide to use Zoom to allow students who are unable to attend class in person to participate.\nWhile you are on Zoom, keep in mind that this is a classroom environment and others should be treated with respect. Please keep your microphone muted unless you want to ask a question or interact with someone. If your microphone is not muted, the entire class will be able to hear what is going on in your environment. As an instructor, I personally like to see people’s faces. As a participant, I am more involved when I have my camera on. I realize, however, that there are many reasons why you might not want to turn on your camera such as poor internet connection, joining via phone, or other privacy concerns. It is your choice as to whether you would like to have the camera on or not."
+  },
+  {
+    "objectID": "psych-490.007-2026-fall-syllabus.html#values",
+    "href": "psych-490.007-2026-fall-syllabus.html#values",
+    "title": "The Psychology of Data Visualization",
+    "section": "Values",
+    "text": "Values\n\nPenn State Principles\nThe Pennsylvania State University is a community dedicated to personal and academic excellence. The Penn State Principles were developed to embody the values that we hope our students, faculty, staff, administration, and alumni possess. At the same time, the University is strongly committed to freedom of expression. Consequently, these Principles do not constitute University policy and are not intended to interfere in any way with an individual’s academic or personal freedoms. We hope, however, that individuals will voluntarily endorse these common principles, thereby contributing to the traditions and scholarly heritage left by those who preceded them, and will thus leave Penn State a better place for those who follow.\nI will respect the dignity of all individuals within the Penn State community. The University is committed to creating and maintaining an educational environment that respects the right of all individuals to participate fully in the community. Actions motivated by hate, prejudice, or intolerance violate this principle. I will not engage in any behaviors that compromise or demean the dignity of individuals or groups, including intimidation, stalking, harassment, discrimination, taunting, ridiculing, insulting, or acts of violence. I will demonstrate respect for others by striving to learn from differences between people, ideas, and opinions and by avoiding behaviors that inhibit the ability of other community members to feel safe or welcome as they pursue their academic goals.\nI will practice academic integrity. Academic integrity is a basic guiding principle for all academic activity at Penn State University, allowing the pursuit of scholarly activity in an open, honest, and responsible manner. In accordance with the University Code of Conduct, I will practice integrity in regard to all academic assignments. I will not engage in or tolerate acts of falsification, misrepresentation or deception because such acts of dishonesty violate the fundamental ethical principles of the University community and compromise the worth of work completed by others.\nI will demonstrate social and personal responsibility. The University is a community that promotes learning; any behaviors that are inconsistent with that goal are unacceptable. Irresponsible behaviors, including alcohol or drug abuse and the use of violence against people or property, undermine the educational climate by threatening the physical and mental health of members of the community. I will exercise personal responsibility for my actions and I will make sure that my actions do not interfere with the academic and social environment of the University. I will maintain a high standard of behavior by adhering to the Code of Conduct and respecting the rights of others.\nI will be responsible for my own academic progress and agree to comply with all University policies. The University allows students to identify and achieve their academic goals by providing the information needed to plan the chosen program of study and the necessary educational opportunities, but students assume final responsibility for course scheduling, program planning, and the successful completion of graduation requirements. I will be responsible for seeking the academic and career information needed to meet my educational goals by becoming knowledgeable about the relevant policies, procedures, and rules of the University and academic program, by consulting and meeting with my adviser, and by successfully completing all of the requirements for graduation.\n\n\nPenn State Values\nIntegrity: We act with integrity and honesty in accordance with the highest academic, professional, and ethical standards.\nRespect: We respect and honor the dignity of each person, embrace civil discourse, and foster a diverse and inclusive community.\nResponsibility: We act responsibly, and we are accountable for our decisions, actions, and their consequences.\nDiscovery: We seek and create new knowledge and understanding, and foster creativity and innovation, for the benefit of our communities, society, and the environment.\nExcellence: We strive for excellence in all our endeavors as individuals, an institution, and a leader in higher education.\nCommunity: We work together for the betterment of our University, the communities we serve, and the world."
+  },
+  {
+    "objectID": "tutorials/tutorial-making-data.html",
+    "href": "tutorials/tutorial-making-data.html",
+    "title": "Making and visualizing data",
+    "section": "",
+    "text": "This tutorial shows how we can construct data of different types.\n\n\nCode\n# Load required package dependencies \"quietly\"\nsuppressPackageStartupMessages(library(ggplot2))\nsuppressPackageStartupMessages(library(ggmosaic))\nsuppressPackageStartupMessages(library(dplyr))\nsuppressPackageStartupMessages(library(ggpattern))\nsuppressPackageStartupMessages(library(fillpattern))",
+    "crumbs": [
+      "Tutorials",
+      "Making and visualizing data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-making-data.html#about",
+    "href": "tutorials/tutorial-making-data.html#about",
+    "title": "Making and visualizing data",
+    "section": "",
+    "text": "This tutorial shows how we can construct data of different types.\n\n\nCode\n# Load required package dependencies \"quietly\"\nsuppressPackageStartupMessages(library(ggplot2))\nsuppressPackageStartupMessages(library(ggmosaic))\nsuppressPackageStartupMessages(library(dplyr))\nsuppressPackageStartupMessages(library(ggpattern))\nsuppressPackageStartupMessages(library(fillpattern))",
+    "crumbs": [
+      "Tutorials",
+      "Making and visualizing data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-making-data.html#nominal-data",
+    "href": "tutorials/tutorial-making-data.html#nominal-data",
+    "title": "Making and visualizing data",
+    "section": "Nominal data",
+    "text": "Nominal data\nLet’s focus on nominal or categorical data, specifically the favorite colors of some imaginary set of people.\n\n\nCode\n# Make an array of color names\ncolors &lt;- c(\"red\", \"orange\", \"yellow\", \"green\", \"cyan\", \"blue\", \"violet\", \"white\", \"black\", \"gray\")\n\n\nThere are n=10 colors in this set.\n\n\n\n\n\n\nNoteYour turn\n\n\n\nWhy are these data nominal or nominally scaled? Or rather, why aren’t they ordinal, interval, or ratio?\n\n\n\nGenerating\nFor demonstration purposes, we want to take some number of random samples of these colors. Let’s pick n=200 and sample with replacement (replace=TRUE in the code below), meaning that we could have any number of colors in our sample of 200 imaginary people.\n\n\nCode\n# Use `sample()` to pick a random sample of these *with* replacement so that \n# the numbers/color differ.\nour_color_sample &lt;- sample(colors, size=200, replace=TRUE)\nour_color_sample\n\n\n  [1] \"gray\"   \"cyan\"   \"yellow\" \"violet\" \"green\"  \"yellow\" \"white\"  \"orange\"\n  [9] \"red\"    \"gray\"   \"gray\"   \"red\"    \"red\"    \"black\"  \"yellow\" \"red\"   \n [17] \"gray\"   \"black\"  \"gray\"   \"blue\"   \"violet\" \"gray\"   \"blue\"   \"gray\"  \n [25] \"red\"    \"yellow\" \"blue\"   \"violet\" \"violet\" \"gray\"   \"blue\"   \"yellow\"\n [33] \"gray\"   \"cyan\"   \"white\"  \"red\"    \"green\"  \"red\"    \"black\"  \"white\" \n [41] \"orange\" \"yellow\" \"blue\"   \"black\"  \"red\"    \"cyan\"   \"orange\" \"violet\"\n [49] \"gray\"   \"yellow\" \"blue\"   \"yellow\" \"cyan\"   \"gray\"   \"green\"  \"green\" \n [57] \"cyan\"   \"white\"  \"blue\"   \"yellow\" \"cyan\"   \"red\"    \"yellow\" \"orange\"\n [65] \"yellow\" \"blue\"   \"black\"  \"black\"  \"blue\"   \"violet\" \"gray\"   \"black\" \n [73] \"gray\"   \"red\"    \"green\"  \"yellow\" \"cyan\"   \"orange\" \"yellow\" \"orange\"\n [81] \"red\"    \"black\"  \"orange\" \"green\"  \"yellow\" \"cyan\"   \"white\"  \"red\"   \n [89] \"green\"  \"white\"  \"black\"  \"yellow\" \"violet\" \"cyan\"   \"red\"    \"green\" \n [97] \"black\"  \"white\"  \"yellow\" \"yellow\" \"red\"    \"orange\" \"gray\"   \"black\" \n[105] \"blue\"   \"violet\" \"gray\"   \"red\"    \"black\"  \"orange\" \"black\"  \"white\" \n[113] \"green\"  \"red\"    \"yellow\" \"blue\"   \"gray\"   \"black\"  \"black\"  \"orange\"\n[121] \"white\"  \"black\"  \"black\"  \"cyan\"   \"white\"  \"black\"  \"red\"    \"red\"   \n[129] \"gray\"   \"white\"  \"green\"  \"cyan\"   \"white\"  \"blue\"   \"cyan\"   \"violet\"\n[137] \"cyan\"   \"yellow\" \"white\"  \"blue\"   \"white\"  \"gray\"   \"violet\" \"blue\"  \n[145] \"blue\"   \"gray\"   \"blue\"   \"blue\"   \"white\"  \"white\"  \"red\"    \"black\" \n[153] \"red\"    \"green\"  \"gray\"   \"green\"  \"yellow\" \"black\"  \"green\"  \"white\" \n[161] \"red\"    \"yellow\" \"violet\" \"yellow\" \"blue\"   \"green\"  \"yellow\" \"white\" \n[169] \"gray\"   \"white\"  \"gray\"   \"yellow\" \"blue\"   \"yellow\" \"violet\" \"red\"   \n[177] \"cyan\"   \"violet\" \"green\"  \"red\"    \"white\"  \"violet\" \"white\"  \"gray\"  \n[185] \"orange\" \"red\"    \"violet\" \"green\"  \"red\"    \"gray\"   \"white\"  \"blue\"  \n[193] \"orange\" \"green\"  \"orange\" \"white\"  \"yellow\" \"cyan\"   \"blue\"   \"blue\"  \n\n\nOn its own, that’s not especially easy to visualize. What if we sorted it?\n\n\nCode\nsort(our_color_sample)\n\n\n  [1] \"black\"  \"black\"  \"black\"  \"black\"  \"black\"  \"black\"  \"black\"  \"black\" \n  [9] \"black\"  \"black\"  \"black\"  \"black\"  \"black\"  \"black\"  \"black\"  \"black\" \n [17] \"black\"  \"black\"  \"black\"  \"black\"  \"blue\"   \"blue\"   \"blue\"   \"blue\"  \n [25] \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"  \n [33] \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"   \"blue\"  \n [41] \"blue\"   \"blue\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"  \n [49] \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"   \"cyan\"  \n [57] \"cyan\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"  \n [65] \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"  \n [73] \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"   \"gray\"  \n [81] \"gray\"   \"green\"  \"green\"  \"green\"  \"green\"  \"green\"  \"green\"  \"green\" \n [89] \"green\"  \"green\"  \"green\"  \"green\"  \"green\"  \"green\"  \"green\"  \"green\" \n [97] \"green\"  \"green\"  \"orange\" \"orange\" \"orange\" \"orange\" \"orange\" \"orange\"\n[105] \"orange\" \"orange\" \"orange\" \"orange\" \"orange\" \"orange\" \"orange\" \"red\"   \n[113] \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"   \n[121] \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"   \n[129] \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"    \"red\"   \n[137] \"violet\" \"violet\" \"violet\" \"violet\" \"violet\" \"violet\" \"violet\" \"violet\"\n[145] \"violet\" \"violet\" \"violet\" \"violet\" \"violet\" \"violet\" \"violet\" \"white\" \n[153] \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\" \n[161] \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\" \n[169] \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"white\"  \"yellow\" \"yellow\"\n[177] \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\"\n[185] \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\"\n[193] \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\" \"yellow\"\n\n\nStill not all that helpful.\n\n\nSummarizing\nWhat can we say to summarize categorical data?\nWe can report the number of total responses.\n\n\nCode\nlength(our_color_sample)\n\n\n[1] 200\n\n\nWe can report the number of unique categories.\n\n\nCode\nlength(unique(our_color_sample))\n\n\n[1] 10\n\n\nWe can report the number of responses per category.\n\n\nCode\ncolors_df &lt;- data.frame(favorite_color = our_color_sample)\n\nxtabs(formula = ~favorite_color, data = colors_df)\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    20     22     15     24     17     13     25     15     23     26 \n\n\n\n\nVisualizing\nSingle nominal variables don’t offer us many options for visualization. A bar plot showing the number of observations in each category seems to be it.\n\n\nCode\ncolors_df |&gt;\n  ggplot() +\n  aes(x = favorite_color) +\n  geom_bar(stat = \"count\")\n\n\n\n\n\n\n\n\nFigure 1: A black and white barplot of the random favorite color data\n\n\n\n\n\nWe can also add colors to the bars.\n\n\nCode\ncolors_df |&gt;\n  ggplot() +\n  aes(x = favorite_color, fill = favorite_color) +\n  geom_bar() +\n  scale_discrete_manual(aesthetics = c(\"color\", \"fill\"),\n                        values = sort(colors))\n\n\n\n\n\n\n\n\nFigure 2: A colorful barplot of the random favorite color data\n\n\n\n\n\nWe can think of this as mapping the name of the color category in our data to the way that category is represented in our figure.\n\n\n\n\n\n\nflowchart LR\n  A[Value of `favorite_color` in dataset] --&gt; B(Actual color of bar in the figure.)\n\n\n\n\nFigure 3\n\n\n\n\n\nWe can flip the axis just for fun. Which is more readable?\n\nHorizontal barplot\n\n\nCode\ncolors_df |&gt;\n  ggplot() +\n  aes(x = favorite_color, fill = favorite_color) +\n  scale_fill_identity() +\n  geom_bar() +\n  coord_flip()\n\n\n\n\n\n\n\n\nFigure 4: A colorful horizontal barplot of the random favorite color data\n\n\n\n\n\n\n\nBar/column with textures\nSometimes we don’t want to use color to distinguish nominal categories.\n\n\nCode\ncolors_df |&gt;\n  ggplot() +\n  aes(x = favorite_color, fill = favorite_color) +\n  geom_bar(aes(y = after_stat(count))) +\n  scale_fill_pattern() + # from package 'fillpattern' \n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\nFigure 5: A barplot of the random favorite color data using textures\n\n\n\n\n\nOr, we want to use some different textures and have control over them.\n\n\nCode\ncolors_xtab &lt;- data.frame(table(colors_df))\nnames(colors_xtab) &lt;- c(\"favorite_color\", \"count\")\n\ncolors_xtab |&gt;\n  ggplot() +\n  aes(x = favorite_color, y = count) +\n  # From package 'ggpattern'\n  # See https://r-graph-gallery.com/368-black-and-white-barchart.html\n  geom_col_pattern(\n    aes(\n      pattern = favorite_color,\n      pattern_angle = favorite_color,\n      pattern_spacing = favorite_color\n    ),\n    fill = 'white',\n    color = 'black',\n    pattern_density = 0.5,\n    pattern_fill = 'black',\n    pattern_color = 'darkgrey'\n  )\n\n\n\n\n\n\n\n\nFigure 6: A barplot of the random favorite color data using textures\n\n\n\n\n\n\n\nOrdered\nIt can be useful to sort the counts of nominal variables to faciliate comparisons among categories.\n\n\nCode\ncolors_df |&gt;\n  count(favorite_color) |&gt;\n  arrange(desc(n)) |&gt;\n  mutate(favorite_color = factor(favorite_color, levels = favorite_color)) |&gt;\n  ggplot() +\n  aes(x = favorite_color) +\n  geom_bar(aes(y = n), stat = \"identity\")\n\n\n\n\n\n\n\n\nFigure 7: A horizontal barplot of the random favorite color data, sorted\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFirst, we use the count() function to count the number of responses for each favorite color. The counts per color category are in a new variable called n.\nNext, we sort the data table by the n column, using the arrange(desc(n)) commmand. This says we are ordering the data in descending order of the counts.\nThen, we use the mutate() function to change the favorite_color variable in the dataset to an arranged/sorted one based on counts.\n\n\nLet’s order the other ones while we’re at it.\n\n\nCode\ncolors_df |&gt;\n  count(favorite_color) |&gt;\n  arrange(desc(n)) |&gt;\n  mutate(favorite_color = factor(favorite_color, levels = favorite_color)) |&gt;\n  ggplot() +\n  aes(x = favorite_color, y = n, fill = favorite_color) +\n  geom_bar(stat = \"identity\") +\n  scale_fill_pattern() + # from package 'fillpattern'\n  theme(legend.position = \"none\") \n\n\n\n\n\n\n\n\nFigure 8: A barplot of the random favorite color data using textures\n\n\n\n\n\n\n\nCode\ncolors_df |&gt;\n  count(favorite_color) |&gt;\n  arrange(desc(n)) |&gt;\n  mutate(favorite_color = factor(favorite_color, levels = favorite_color)) |&gt;\n  ggplot() +\n  aes(x = favorite_color, y = n) +\n  # From package 'ggpattern'\n  # See https://r-graph-gallery.com/368-black-and-white-barchart.html\n  geom_col_pattern(\n    aes(\n      pattern = favorite_color,\n      pattern_angle = favorite_color,\n      pattern_spacing = favorite_color\n    ),\n    fill = 'white',\n    color = 'black',\n    pattern_density = 0.5,\n    pattern_fill = 'black',\n    pattern_color = 'darkgrey'\n  ) +\n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\nFigure 9: A barplot of the random favorite color data using textures\n\n\n\n\n\n\n\nLollipop chart\nThe lollipop chart uses less ink, so the ink/data ratio (Tufte, 2001) is higher than with barplots.\n\n\nCode\ncolors_df |&gt;\n  count(favorite_color) |&gt;\n  arrange(desc(n)) |&gt;\n  mutate(favorite_color = factor(favorite_color, levels = favorite_color)) |&gt;\n  ggplot() +\n    geom_point(aes(\n    x = favorite_color,\n    y = n,\n    color = favorite_color,\n    fill = favorite_color\n  )) +\n  geom_segment(aes(\n    x = favorite_color,\n    xend = favorite_color,\n    y = 0,\n    yend = n,\n    color = favorite_color\n  )) +\n  scale_color_identity() +\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 10: A lollipop plot of the random favorite color data\n\n\n\n\n\n\n\nStacked barplot\nWe can also stack them.\n\n\nCode\ncolors_df |&gt;\n  count(favorite_color) |&gt;\n  ggplot() +\n  aes(x = \"\", y = n, fill = favorite_color) +\n  geom_col(position = \"stack\") +\n  scale_fill_identity() +\n  xlab(\"\")\n\n\n\n\n\n\n\n\nFigure 11: A stacked barplot of the random favorite color data\n\n\n\n\n\nThis makes more sense with another nominal variable in the mix.\nLet’s add a ‘school’ variable.\n\n\nCode\nschool &lt;- sample(c(\"psu\", \"osu\", \"mich\", \"usc\"), size=200, replace=TRUE)\ncolors_school_df &lt;- colors_df\ncolors_school_df$school &lt;- school\n\n\nThen create the plot.\n\n\nCode\ncolors_school_xtab &lt;- data.frame(table(colors_school_df))\nnames(colors_school_xtab) &lt;- c(\"favorite_color\", \"school\", \"count\")\n\n# colors_school_xtab |&gt;\n#   ggplot() +\n#   aes(x = school, y=count, fill = favorite_color) +\n#   scale_fill_identity() +\n#   geom_bar(stat=\"identity\", position=\"stack\")\n\ncolors_school_df |&gt; \n  count(school, favorite_color) |&gt; \n  ggplot() + \n  aes(school, n, fill = favorite_color) + \n  scale_fill_identity() + \n  geom_bar(stat=\"identity\", position=\"stack\")\n\n\n\n\n\n\n\n\nFigure 12: A stacked barplot of the random favorite color data\n\n\n\n\n\n\n\nStacked barplot alternative\n\n\nCode\ncolors_school_xtab |&gt;\n  ggplot() +\n  aes(x = favorite_color, y=count, fill = school) +\n  geom_bar(stat=\"identity\", position=\"stack\")\n\n\n\n\n\n\n\n\nFigure 13: Another stacked barplot of the random favorite color data.\n\n\n\n\n\n\n\nDodged barplot\nUsing the ‘dodge’ parameter is another way to show data with two categorical variables.\n\n\nCode\ncolors_school_xtab |&gt;\n  ggplot() +\n  aes(x = school, y=count, fill = favorite_color) +\n  scale_fill_identity() +\n  geom_bar(stat=\"identity\", position=\"dodge\")\n\n\n\n\n\n\n\n\nFigure 14: A horizontal barplot of the random favorite color data\n\n\n\n\n\n\n\nPie chart\n\n\nCode\ncolors_xtab &lt;- data.frame(table(colors_df))\nnames(colors_xtab) &lt;- c(\"favorite_color\", \"count\")\n\ncolors_xtab |&gt;\n  ggplot(aes(x = \"\", y = count, fill = favorite_color)) +\n  geom_bar(stat = \"identity\", width = 1) +\n  coord_polar(\"y\", start = 0) +\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 15: A piechart of the random favorite color data\n\n\n\n\n\n\n\nRing chart\n\n\nCode\n# https://r-graph-gallery.com/128-ring-or-donut-plot.html\n\n# Compute percentages\ncolors_xtab$fraction = colors_xtab$count / sum(colors_xtab$count)\n\n# Compute the cumulative percentages (top of each rectangle)\ncolors_xtab$ymax = cumsum(colors_xtab$fraction)\n\n# Compute the bottom of each rectangle\ncolors_xtab$ymin = c(0, head(colors_xtab$ymax, n = -1))\n\n# Make the plot\ncolors_xtab |&gt;\n  ggplot(aes(\n    ymax = ymax,\n    ymin = ymin,\n    xmax = 4,\n    xmin = 3,\n    fill = favorite_color\n  )) +\n  geom_rect() +\n  coord_polar(theta = \"y\") + # Try to remove that to understand how the chart is built initially\n  xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 16: A ring/donut chart of the random favorite color data\n\n\n\n\n\n\n\nMosaic plot\n\n\nCode\nggplot(data = colors_school_df) +\n  geom_mosaic(aes(x = product(favorite_color, school), fill = favorite_color)) +   \n  labs(y=\"Favorite\", x=\"School\", title = \"Favorite colors by school\") +\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 17: A mosaic chart of the random favorite color by school data",
+    "crumbs": [
+      "Tutorials",
+      "Making and visualizing data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-making-data.html#ordinal-data",
+    "href": "tutorials/tutorial-making-data.html#ordinal-data",
+    "title": "Making and visualizing data",
+    "section": "Ordinal data",
+    "text": "Ordinal data\nWe usually consider colors as nominal or categorical variables. But the physical input to the visual system is continuous.\n\n\n\nhttps://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/\n\n\nThe continuous variable that underlies color is wavelength, a property of electromagnetic radiation. The human visual system maps patterns of physical wavelength to the psychological dimension of color.\nCuriously, human color perception shows that this psychological mapping wraps in a circular way that physical wavelength does not.\n\n\n\nhttps://pixabay.com/vectors/rainbow-colors-circle-color-spectrum-154569/\n\n\n\nGenerating\nBut rather than dive down that particular rat hole now, let’s make some ordinal data from the random color dataset. Imagine that we had n=50 participants and each gave a rating to these colors. The ratings had numbers, with 1 assigned to the participant’s first choice, and 4 assigned to the fourth choice. We won’t keep track of the specific users at this point.\n\n\nCode\nratings &lt;- c(\"1st\", \"2nd\", \"3rd\", \"4th\")\n\nour_rating_sample &lt;- sample(ratings, size=200, replace=TRUE)\ncolors_rating_df &lt;- colors_df\ncolors_rating_df$rating &lt;- our_rating_sample\n\ncolors_rating_xtab &lt;- data.frame(table(colors_rating_df))\nnames(colors_rating_xtab) &lt;- c(\"favorite_color\", \"rating\", \"count\")\n\n\n\n\nVisualizing\nMany of the same plot types are available for ordinal data.\n\nBar plot ordinal dodge\n\n\nCode\ncolors_rating_xtab |&gt;\n  ggplot() +\n  aes(x=rating, y=count, fill = favorite_color) +\n  # aes(x = favorite_color, y = school, fill = favorite_color) +\n  scale_fill_identity() +\n  geom_bar(stat=\"identity\", position=\"dodge\")\n\n\n\n\n\n\n\n\nFigure 18: A barplot of the random favorite color data with an ordinal rating\n\n\n\n\n\n\n\nBar plot ordinal stacked\n\n\nCode\n# colors_rating_xtab |&gt;\n#   ggplot() +\n#   aes(x=favorite_color, y=count, fill = favorite_color) +\n#   scale_fill_identity() +\n#   geom_bar(stat=\"identity\", position=\"dodge\")\n\ncolors_rating_xtab |&gt;\n  ggplot() +\n  aes(x = rating, y=count, fill = favorite_color) +\n  scale_fill_identity() +\n  geom_bar(stat=\"identity\", position=\"stack\")\n\n\n\n\n\n\n\n\nFigure 19: A stacked barplot of the random favorite color data with an ordinal rating\n\n\n\n\n\n\n\nBar plot ordinal stacked alternative\n\n\nCode\ncolors_rating_xtab |&gt;\n  ggplot() +\n  aes(x = favorite_color, y=count, fill = rating) +\n  geom_bar(stat=\"identity\", position=\"stack\")\n\n\n\n\n\n\n\n\nFigure 20: Another stacked barplot of the random favorite color data with an ordinal rating",
+    "crumbs": [
+      "Tutorials",
+      "Making and visualizing data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-making-data.html#continuous-data",
+    "href": "tutorials/tutorial-making-data.html#continuous-data",
+    "title": "Making and visualizing data",
+    "section": "Continuous data",
+    "text": "Continuous data\n\nGenerating\nLet’s imagine that we are studying a group of people who vary in age and body temperature.\nWe’ll assume that they are healthy–fever free.\nAnd we assume that we’re sampling uniformly across children (0-18 years) and adults (18-85).\n\n\n\n\n\n\nImportant\n\n\n\nKids and adults have different typical body temperatures!\nhttps://www.webmd.com/first-aid/normal-body-temperature\n\n\n\n\nCode\nn_kids &lt;- 100\nn_adults &lt;- 100\nage_days_kids &lt;- runif(n_kids, 0, 18*365)\nage_days_adults &lt;- runif(n_adults, 18*365+1, 85*365)\n\n# https://www.webmd.com/first-aid/normal-body-temperature\nbody_temps_kids &lt;- runif(n_kids, 95.9, 99.5)\nbody_temps_adults &lt;- runif(n_adults, 97, 99)\n\nage_days &lt;- c(age_days_kids, age_days_adults)\nbody_temp_F &lt;- c(body_temps_kids, body_temps_adults)\n\nage_temp_df &lt;- data.frame(age_days = age_days, body_temp = body_temp_F)\n\n# Mix them up a bit\nage_temp_df &lt;- age_temp_df[sample(nrow(age_temp_df)),]\n\n\n\n\nVisualizing\nTo visualize continuous data, we have to decide what question(s) we want to answer.\n\nScatterplot\nThe simplest visualization of two continuous variables is a scatterplot.\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days, y = body_temp) +\n  geom_point()\n\n\n\n\n\n\n\n\nFigure 21: A scatterplot of the age and body temperature data.\n\n\n\n\n\n\n\nHistograms\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days) +\n  geom_histogram()\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\nFigure 22: A histogram of the age data.\n\n\n\n\n\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = body_temp) +\n  geom_histogram()\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\nFigure 23: A histogram of the body temperature data.\n\n\n\n\n\n\n\nViolin plots\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days, y = \"\") +\n  geom_violin()\n\n\n\n\n\n\n\n\nFigure 24: A violin plot of the age data.\n\n\n\n\n\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(y = \"\", x = body_temp) +\n  geom_violin()\n\n\n\n\n\n\n\n\nFigure 25: A violin plot of the body temperature data.\n\n\n\n\n\n\n\nDensity\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days) +\n  geom_density()\n\n\n\n\n\n\n\n\nFigure 26: A density plot of the age data.\n\n\n\n\n\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = body_temp) +\n  geom_density()\n\n\n\n\n\n\n\n\nFigure 27: A density plot of the body temperature data.\n\n\n\n\n\n\n\nBoxplot\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\nFigure 28: A boxplot of the age data.\n\n\n\n\n\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = body_temp) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\nFigure 29: A boxplot of the body temperature data.\n\n\n\n\n\n\n\nViolin + Boxplot\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4)\n\n\n\n\n\n\n\n\nFigure 30: A combined violin/boxplot of the age data.\n\n\n\n\n\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = body_temp, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4)\n\n\n\n\n\n\n\n\nFigure 31: A combined violin/boxplot of the body temperature data.\n\n\n\n\n\n\n\nViolin + Boxplot + Scatter\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = age_days, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4) +\n  geom_jitter(width = 0, height = .2)\n\n\n\n\n\n\n\n\nFigure 32: A combined violin/boxplot/scatterplot of the age data.\n\n\n\n\n\n\n\nCode\nage_temp_df |&gt;\n  ggplot() +\n  aes(x = body_temp, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4) +\n  geom_jitter(width = 0, height = .2)\n\n\n\n\n\n\n\n\nFigure 33: A combined violin/boxplot/scatterplot of the body temperature data.",
+    "crumbs": [
+      "Tutorials",
+      "Making and visualizing data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html",
+    "href": "tutorials/tutorial-ggplot2.html",
+    "title": "ggplot2 tutorial I",
+    "section": "",
+    "text": "This page provides some activities for beginning users of the Wickham (2016) package.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#about",
+    "href": "tutorials/tutorial-ggplot2.html#about",
+    "title": "ggplot2 tutorial I",
+    "section": "",
+    "text": "This page provides some activities for beginning users of the Wickham (2016) package.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#get-ready",
+    "href": "tutorials/tutorial-ggplot2.html#get-ready",
+    "title": "ggplot2 tutorial I",
+    "section": "Get ready",
+    "text": "Get ready\n\nCreate a new project\nLet’s open project to capture our work with ggplot2.\nI suggest calling the project ggplot-2026-09-18 or something similar.\n\n\n\n\n\n\n\n\nFigure 1: From File Menu\n\n\n\n\n\n\n\n\n\n\nFigure 2: From Project Manager Tab\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Create project in a new directory\n\n\n\n\n\n\n\n\n\n\nFigure 4: Project Type: Quarto Project\n\n\n\n\n\n\n\n\n\n\nFigure 5: Create Quarto Project",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#edit-the-document",
+    "href": "tutorials/tutorial-ggplot2.html#edit-the-document",
+    "title": "ggplot2 tutorial I",
+    "section": "Edit the document",
+    "text": "Edit the document\nLet’s customize this document for our use.\n\nChange the metadata\nBy default, the metadata at the top of your document looks like this:\n---\ntitle: \"psych-490-ggplot-2026-09-18\"\n---\nAdd an author field so that your metadata looks like this:\ntitle: \"psych-490-ggplot-2026-09-18\"\nauthor:  \"Jerome Doe\"\nFinally, add the following so that the rendered HTML file includes digital versions of any figures you render. This will make it easy to share your work with others.\nformat:\n  html:\n    self_contained: true\nThe full header should look like this:\n---\ntitle: \"psych-490-ggplot-2026-09-18\"\nauthor: \"Your name\"\nformat:\n  html:\n    self_contained: true\n---\n\n\n\n\n\n\nImportantSave early and often\n\n\n\nI like to save my documents often. That way I don’t lose anything.\nMemorize your computer’s save command. On Mac OS it’s command + S. On Windows, it’s ctrl + S.\nI also recommend checking the Render on Save box in RStudio. That way every time you save, the document re-renders and opens in your browser.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#install-ggplot2",
+    "href": "tutorials/tutorial-ggplot2.html#install-ggplot2",
+    "title": "ggplot2 tutorial I",
+    "section": "Install ggplot2",
+    "text": "Install ggplot2\nBase R has many useful functions, but ggplot2 is not one of them. So, you will need to install it using the install.packages() function.\nSwitch to the R console, and install the package as follows:\ninstall.packages(\"ggplot2\")\nYou’ll only need to do this once.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#using-quarto-as-a-lab-notebook",
+    "href": "tutorials/tutorial-ggplot2.html#using-quarto-as-a-lab-notebook",
+    "title": "ggplot2 Tutorial",
+    "section": "Using Quarto as a lab notebook",
+    "text": "Using Quarto as a lab notebook\nWe’re going to use Quarto as a lab notebook.\nEach time we start a new thing, we’re going to start a new section in our document.\n\nAdd a Setup section\nThis is a good time to add a setup section to your document. This section is where get ready to do real work.\nSo, add a chunk like this after your About section:\n## Setup\nBelow the setup header, we’re going to add an R code chunk like this:\n```{r}\nlibrary(ggplot2)\n```\nThe library() command brings the package into the computational environment1 and lets us call the other functions and commands in ggplot2 by their “first” names.",
+    "crumbs": [
+      "Tutorials",
+      "ggplot2 Tutorial"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#our-first-plot",
+    "href": "tutorials/tutorial-ggplot2.html#our-first-plot",
+    "title": "ggplot2 tutorial I",
+    "section": "Our first plot",
+    "text": "Our first plot\nAdd a new section called My First Plot or Figure 01 or something like that.\n## Figure 01\nThen you might add some text explaining what the first plot is about. For example, you could describe the data being visualized and the purpose of the plot.\nHere, we’re going to use the diamonds dataset the is built in to ggplot2.\nCreate an R chunk as follows\n```{r}\nggplot(data = diamonds) +\n  aes(x = price) +\n  geom_histogram()\n```\n\n\n\n\n\n\nWarningSyntax slip-ups\n\n\n\n90+% of frustrations with computers are because we don’t tell them exactly what they need to know.\nA code chunk in Quarto starts with triple backticks and ends with triple backticks.\nThe {r} tells Quarto that the code chunk is written in R.\nQuarto understands other programming languages, so this is important.\n\n\nSave and render your Quarto document.\nThe resulting web page should look something like this:\n\n\n\n\n\n\nFigure 6\n\n\n\n\nUnpacking ggplot syntax\n\n\nTo make a figure, we need a dataset formatted as a data frame. The diamonds dataset is already in the right format.\nIn our plotting code, we call the ggplot() function and specify the dataset to plot using the data=diamonds command.\nNext, we ‘add’ a layer to our figure using the + command. That layer contains the ‘aesthetics’ or mapping between our dataset and some feature of the figur e (e.g., x position, y position, fill color, etc.) We specify these mappings using the aes() command. For this specific figure, we’re mapping x position on the figure to the price variable in the dataset.\nFinally, our figure needs a ‘geom’, a geometric object or format for the figure. We have a single variable (price), and we want to plot a histogram of it, so we add (+) use the geom_histogram().\n\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price) +\n  geom_histogram()\n```\n\n\nFigure 7",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#plot-another-variable",
+    "href": "tutorials/tutorial-ggplot2.html#plot-another-variable",
+    "title": "ggplot2 Tutorial",
+    "section": "Plot another variable",
+    "text": "Plot another variable\nLet’s plot another variable from the diamonds datasets.\nCreate a new subsection called Figure 02 in your Quarto document, then create a new code chunk in your Quarto document with the following code:\n\n\n\n```{r}\nhead(diamonds)\n```\n\n\nFigure 8\n\n\n\nThe head() command outputs the first few rows of a data frame. This is useful for quickly inspecting the structure and contents of the data.\nLet’s make a histogram of the carat variable. Make a new R chunk in your Quarto file; copy the Figure 1 code to the chunk; change the x value in the aes() function to read aes(x = carat ).\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = carat) +\n  geom_histogram()\n```\n\n\nFigure 9: Code to generate a histogram of the carat variable from the diamonds dataset.\n\n\n\nSave and render the Quarto document.",
+    "crumbs": [
+      "Tutorials",
+      "ggplot2 Tutorial"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#make-violin-plots",
+    "href": "tutorials/tutorial-ggplot2.html#make-violin-plots",
+    "title": "ggplot2 Tutorial",
+    "section": "Make violin plots",
+    "text": "Make violin plots\nThere are other ‘geoms’ we can use with continuous data like price and carat.\nAgain, make a ‘Figure 03’ section in your Quarto document. Then, make a new code chunk with the following:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = \"\") +\n  geom_violin()\n  \nggplot(data = diamonds) +\n  aes(y = carat, y = \"\") +\n  geom_violin()\n```\n\n\nFigure 10: Code to create violin plots of both the price and carat variables.\n\n\n\nSave and render the Quarto document\nNotice that geom_violin() requires us to both x and y aesthetics even if we only want to plot one variable. We tell ggplot to ignore the other mapping by setting y=\"\".",
+    "crumbs": [
+      "Tutorials",
+      "ggplot2 Tutorial"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#make-a-scatterplot",
+    "href": "tutorials/tutorial-ggplot2.html#make-a-scatterplot",
+    "title": "ggplot2 Tutorial",
+    "section": "Make a scatterplot",
+    "text": "Make a scatterplot\nTo wrap up this tutorial, let’s make a scatterplot of price and carat using geom_point and setting the x and y aesthetics.\nMake a Figure 04 section in your Quarto document, then add a code chunk with the following:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = carat) +\n  geom_point()\n  \nCode to create a scatterplot of the `price` and `carat` variables from the diamonds dataset.\n```\n\n\nFigure 11",
+    "crumbs": [
+      "Tutorials",
+      "ggplot2 Tutorial"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#multiple-violin-plots",
+    "href": "tutorials/tutorial-ggplot2.html#multiple-violin-plots",
+    "title": "ggplot2 tutorial I",
+    "section": "Multiple violin plots",
+    "text": "Multiple violin plots\nIf you want to push yourself, add a Figure 05 section with the following code chunk. Save and render the document, then explain what’s going on with the figure.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = cut, color = cut, fill = cut) +\n  geom_violin() +\n  xlab(\"Price in $\") +\n  ylab(\"Cut of diamond\") +\n  ggtitle(\"Price vs. Cut\")\n```\n\n\nFigure 12: Code to generate multiple violin plots, one for each value of the discrete (ordinal) variable cut. Note the use of new aesthetics fill and color, customized axis labels using xlab() and ylab() and a title using ggtitle().",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#footnotes",
+    "href": "tutorials/tutorial-ggplot2.html#footnotes",
+    "title": "ggplot2 tutorial I",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is akin to bringing something into your working memory.↩︎",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#quarto-as-a-lab-notebook",
+    "href": "tutorials/tutorial-ggplot2.html#quarto-as-a-lab-notebook",
+    "title": "ggplot2 tutorial I",
+    "section": "Quarto as a lab notebook",
+    "text": "Quarto as a lab notebook\nWe’re going to use Quarto as a lab notebook.\nEach time we start a new thing, we’re going to start a new section in our document.\n\nAdd a Setup section\nThis is a good time to add a setup section to your document. This section is where get ready to do real work.\nSo, add a chunk like this after your About section:\n## Setup\nBelow the setup header, we’re going to add an R code chunk like this:\n```{r}\nlibrary(ggplot2)\n```\nThe library() command brings the package into the computational environment1 and lets us call the other functions and commands in ggplot2 by their “first” names.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#violin-plots",
+    "href": "tutorials/tutorial-ggplot2.html#violin-plots",
+    "title": "ggplot2 tutorial I",
+    "section": "Violin plots",
+    "text": "Violin plots\nThere are other ‘geoms’ we can use with continuous data like price and carat.\nAgain, make a ‘Figure 03’ section in your Quarto document. Then, make a new code chunk with the following:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = \"\") +\n  geom_violin()\n  \nggplot(data = diamonds) +\n  aes(y = carat, y = \"\") +\n  geom_violin()\n```\n\n\nFigure 10: Code to create violin plots of both the price and carat variables.\n\n\n\nSave and render the Quarto document\nNotice that geom_violin() requires us to both x and y aesthetics even if we only want to plot one variable. We tell ggplot to ignore the other mapping by setting y=\"\".",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#combination-plot",
+    "href": "tutorials/tutorial-ggplot2.html#combination-plot",
+    "title": "ggplot2 tutorial I",
+    "section": "Combination plot",
+    "text": "Combination plot\nLet’s implement a version of the combination plot from the Making and visualizing data tutorial.\nCreate a Figure 06 section in your Quarto document, add this chunk of code, save, and render.\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4) +\n  geom_jitter(width = 0, height = .2, alpha = .05) +\n  ylab(\"\")\n```\n\n\n\n\n\n\nImportantWhat are those new parameters?\n\n\n\nNote that there is an alpha parameter in the geom_boxplot() function. What does it do? There is an alpha parameter in the geom_jitter() function, too.\nOne way to answer this is to create new versions of the figures with different values of alpha. You could do this by creating new subsections in your Quarto document, say one like this:\n### `alpha = 1`\n\nThe following figure shows what happens to Figure 06 when we set `alpha` in `geom_boxplot` to 1.\nThen, copy the Figure 06 code to a new code chunk but change the alpha value.\nTry the same experiment to determine what the other parameters do.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#what-are-those-new-parameters",
+    "href": "tutorials/tutorial-ggplot2.html#what-are-those-new-parameters",
+    "title": "ggplot2 Tutorial",
+    "section": "What are those new parameters?",
+    "text": "What are those new parameters?\nNote that there is an alpha parameter in the geom_boxplot() function. What does it do? There is an alpha parameter in the geom_jitter() function, too.\nOne way to answer this is to create new versions of the figures with different values of alpha. You could do this by creating new subsections in your Quarto document, say one like this:\n### `alpha = 1`\n\nThe following figure shows what happens to Figure 06 when we set `alpha` in `geom_boxplot` to 1.\nThen, copy the Figure 06 code but change the alpha value.",
+    "crumbs": [
+      "Tutorials",
+      "ggplot2 Tutorial"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#another-variable",
+    "href": "tutorials/tutorial-ggplot2.html#another-variable",
+    "title": "ggplot2 tutorial I",
+    "section": "Another variable",
+    "text": "Another variable\nLet’s plot another variable from the diamonds datasets.\nCreate a new subsection called Figure 02 in your Quarto document, then create a new code chunk in your Quarto document with the following code:\n\n\n\n```{r}\nhead(diamonds)\n```\n\n\nFigure 8\n\n\n\nThe head() command outputs the first few rows of a data frame. This is useful for quickly inspecting the structure and contents of the data.\nLet’s make a histogram of the carat variable. Make a new R chunk in your Quarto file; copy the Figure 1 code to the chunk; change the x value in the aes() function to read aes(x = carat ).\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = carat) +\n  geom_histogram()\n```\n\n\nFigure 9: Code to generate a histogram of the carat variable from the diamonds dataset.\n\n\n\nSave and render the Quarto document.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2.html#scatterplots",
+    "href": "tutorials/tutorial-ggplot2.html#scatterplots",
+    "title": "ggplot2 tutorial I",
+    "section": "Scatterplots",
+    "text": "Scatterplots\nLet’s make a scatterplot of price and carat using geom_point and setting the x and y aesthetics.\nMake a Figure 04 section in your Quarto document, then add a code chunk with the following:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = carat) +\n  geom_point()\n  \nCode to create a scatterplot of the `price` and `carat` variables from the diamonds dataset.\n```\n\n\nFigure 11",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html",
+    "href": "tutorials/tutorial-ggplot2-I.html",
+    "title": "ggplot2 tutorial I",
+    "section": "",
+    "text": "This page provides some activities for beginning users of the ggplot2 (Wickham, 2016) package.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#about",
+    "href": "tutorials/tutorial-ggplot2-I.html#about",
+    "title": "ggplot2 tutorial I",
+    "section": "",
+    "text": "This page provides some activities for beginning users of the ggplot2 (Wickham, 2016) package.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#get-ready",
+    "href": "tutorials/tutorial-ggplot2-I.html#get-ready",
+    "title": "ggplot2 tutorial I",
+    "section": "Get ready",
+    "text": "Get ready\n\nCreate a new project\nLet’s open project to capture our work with ggplot2.\nI suggest calling the project ggplot-2026-09-18 or something similar.\n\n\n\n\n\n\n\n\nFigure 1: From File Menu\n\n\n\n\n\n\n\n\n\n\nFigure 2: From Project Manager Tab\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Create project in a new directory\n\n\n\n\n\n\n\n\n\n\nFigure 4: Project Type: Quarto Project\n\n\n\n\n\n\n\n\n\n\nFigure 5: Create Quarto Project",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#edit-the-document",
+    "href": "tutorials/tutorial-ggplot2-I.html#edit-the-document",
+    "title": "ggplot2 tutorial I",
+    "section": "Edit the document",
+    "text": "Edit the document\nLet’s customize this document for our use.\n\nChange the metadata\nBy default, the metadata at the top of your document looks like this:\n---\ntitle: \"psych-490-ggplot-2026-09-18\"\n---\nAdd an author field so that your metadata looks like this:\ntitle: \"psych-490-ggplot-2026-09-18\"\nauthor:  \"Jerome Doe\"\nFinally, add the following so that the rendered HTML file includes digital versions of any figures you render. This will make it easy to share your work with others.\nformat:\n  html:\n    self_contained: true\nThe full header should look like this:\n---\ntitle: \"psych-490-ggplot-2026-09-18\"\nauthor: \"Your name\"\nformat:\n  html:\n    self_contained: true\n---\n\n\n\n\n\n\nImportantSave early and often\n\n\n\nI like to save my documents often. That way I don’t lose anything.\nMemorize your computer’s save command. On Mac OS it’s command + S. On Windows, it’s ctrl + S.\nI also recommend checking the Render on Save box in RStudio. That way every time you save, the document re-renders and opens in your browser.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#install-ggplot2",
+    "href": "tutorials/tutorial-ggplot2-I.html#install-ggplot2",
+    "title": "ggplot2 tutorial I",
+    "section": "Install ggplot2",
+    "text": "Install ggplot2\nBase R has many useful functions, but ggplot2 is not one of them. So, you will need to install it using the install.packages() function.\nSwitch to the R console, and install the package as follows:\ninstall.packages(\"ggplot2\")\nYou’ll only need to do this once.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#quarto-as-a-lab-notebook",
+    "href": "tutorials/tutorial-ggplot2-I.html#quarto-as-a-lab-notebook",
+    "title": "ggplot2 tutorial I",
+    "section": "Quarto as a lab notebook",
+    "text": "Quarto as a lab notebook\nWe’re going to use Quarto as a lab notebook.\nEach time we start a new thing, we’re going to start a new section in our document.\n\nAdd a Setup section\nThis is a good time to add a setup section to your document. This section is where get ready to do real work.\nSo, add a chunk like this after your About section:\n## Setup\nBelow the setup header, we’re going to add an R code chunk like this:\n```{r}\nlibrary(ggplot2)\n```\nThe library() command brings the package into the computational environment1 and lets us call the other functions and commands in ggplot2 by their “first” names.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#our-first-plot",
+    "href": "tutorials/tutorial-ggplot2-I.html#our-first-plot",
+    "title": "ggplot2 tutorial I",
+    "section": "Our first plot",
+    "text": "Our first plot\nAdd a new section called My First Plot or Figure 01 or something like that.\n## Figure 01\nThen you might add some text explaining what the first plot is about. For example, you could describe the data being visualized and the purpose of the plot.\nHere, we’re going to use the diamonds dataset the is built in to ggplot2.\nCreate an R chunk as follows:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price) +\n  geom_histogram()\n```\n\n\nFigure 6: Simple ggplot2 syntax to plot a histogram of the price variable in the diamonds dataset.\n\n\n\n\n\n\n\n\n\nWarningSyntax slip-ups\n\n\n\n90+% of frustrations with computers are because we don’t tell them exactly what they need to know.\nA code chunk in Quarto starts with triple backticks and ends with triple backticks.\nThe {r} tells Quarto that the code chunk is written in R.\nQuarto understands other programming languages, so this is important.\n\n\nSave and render your Quarto document.\nThe resulting web page should look something like this:\n\n\n\n\n\n\nFigure 7\n\n\n\n\nUnpacking ggplot syntax\nTo make a figure, we need a dataset formatted as a data frame. The diamonds dataset is already in the right format.\nIn our plotting code illustrated in Figure 6, we call the ggplot() function and specify the dataset to plot using the data=diamonds parameter2.\nNext, we ‘add’ a layer to our figure using the + command. That layer contains the ‘aesthetics’ or mapping between our dataset and some feature of the figure (e.g., x position, y position, fill color, etc.) We specify these mappings using the aes() command. For this specific figure, we’re mapping x position on the figure to the price variable in the dataset.\nFinally, our figure needs a ‘geom’, a geometric object or format for the figure. We have a single variable (price), and we want to plot a histogram of it, so we add (+) use the geom_histogram().",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#another-variable",
+    "href": "tutorials/tutorial-ggplot2-I.html#another-variable",
+    "title": "ggplot2 tutorial I",
+    "section": "Another variable",
+    "text": "Another variable\nLet’s plot another variable from the diamonds datasets.\nCreate a new subsection called Figure 02 in your Quarto document, then create a new code chunk in your Quarto document with the following code:\n\n\n\n```{r}\nhead(diamonds)\n```\n\n\nFigure 8\n\n\n\nThe head() command outputs the first few rows of a data frame. This is useful for quickly inspecting the structure and contents of the data.\nLet’s make a histogram of the carat variable. Make a new R chunk in your Quarto file; copy the Figure 1 code to the chunk; change the x value in the aes() function to read aes(x = carat ).\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = carat) +\n  geom_histogram()\n```\n\n\nFigure 9: Code to generate a histogram of the carat variable from the diamonds dataset.\n\n\n\nSave and render the Quarto document.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#violin-plots",
+    "href": "tutorials/tutorial-ggplot2-I.html#violin-plots",
+    "title": "ggplot2 tutorial I",
+    "section": "Violin plots",
+    "text": "Violin plots\nThere are other ‘geoms’ we can use with continuous data like price and carat. A violin plot is one of them.\nAgain, make a new Figure 03 section in your Quarto document. Then, make a new code chunk with the following:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = \"\") +\n  geom_violin()\n  \nggplot(data = diamonds) +\n  aes(y = carat, y = \"\") +\n  geom_violin()\n```\n\n\nFigure 10: Code to create violin plots of both the price and carat variables.\n\n\n\nYes, this should make two different violin plots.\nSave and render the Quarto document\nNotice that geom_violin() requires us to specify both x and y aesthetics even if we only want to plot one variable. We tell ggplot to ignore the other mapping by setting y=\"\".",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#scatterplots",
+    "href": "tutorials/tutorial-ggplot2-I.html#scatterplots",
+    "title": "ggplot2 tutorial I",
+    "section": "Scatterplots",
+    "text": "Scatterplots\nLet’s make a scatterplot of price and carat using geom_point and set the x and y aesthetics. That will put price on the x or horizontal axis and carat on the y or vertical axis. You could switch them; it doesn’t really matter.\nMake a Figure 04 section in your Quarto document, then add a code chunk with the following:\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = carat) +\n  geom_point()\n```\n\n\nFigure 11: Code to create a scatterplot of the price and carat variables from the diamonds dataset.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#multiple-violin-plots",
+    "href": "tutorials/tutorial-ggplot2-I.html#multiple-violin-plots",
+    "title": "ggplot2 tutorial I",
+    "section": "Multiple violin plots",
+    "text": "Multiple violin plots\nIf you want to push yourself, add a Figure 05 section with the following code chunk. Save and render the document, then explain what’s going on with the figure.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = cut, color = cut, fill = cut) +\n  geom_violin() +\n  xlab(\"Price in $\") +\n  ylab(\"Cut of diamond\") +\n  ggtitle(\"Price vs. Cut\")\n```\n\n\nFigure 12: Code to generate multiple violin plots, one for each value of the discrete (ordinal) variable cut. Note the use of new aesthetics fill and color, customized axis labels using xlab() and ylab() and a title using ggtitle().",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#combination-plot",
+    "href": "tutorials/tutorial-ggplot2-I.html#combination-plot",
+    "title": "ggplot2 tutorial I",
+    "section": "Combination plot",
+    "text": "Combination plot\nLet’s implement a version of the combination plot from the Making and visualizing data tutorial.\nCreate a Figure 06 section in your Quarto document, add this chunk of code, save, and render.\n```{r}\nggplot(data = diamonds) +\n  aes(x = price, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4) +\n  geom_jitter(width = 0, height = .2, alpha = .05) +\n  ylab(\"\")\n```\n\n\n\n\n\n\nImportantWhat are those new parameters?\n\n\n\nNote that there is an alpha parameter in the geom_boxplot() function. What does it do? There is an alpha parameter in the geom_jitter() function, too.\nOne way to answer this is to create new versions of the figures with different values of alpha. You could do this by creating new subsections in your Quarto document, say one like this:\n### `alpha = 1`\n\nThe following figure shows what happens to Figure 06 when we set `alpha` in `geom_boxplot` to 1.\nThen, copy the Figure 06 code to a new code chunk but change the alpha value.\nTry the same experiment to determine what the other parameters do.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#footnotes",
+    "href": "tutorials/tutorial-ggplot2-I.html#footnotes",
+    "title": "ggplot2 tutorial I",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is akin to bringing something into your working memory.↩︎\nA parameter is a value that we send to a function to help the function do the job we want it to do.↩︎",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-I.html#you-did-it",
+    "href": "tutorials/tutorial-ggplot2-I.html#you-did-it",
+    "title": "ggplot2 tutorial I",
+    "section": "You did it!",
+    "text": "You did it!\nYou made a bunch of figures using ggplot! And you documented all of your work in a Quarto document. You’re one step closer to being a ggplot master.\nHere’s a happy dance animated gif I found, but you can find one you like yourself at giphy.com.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial I"
     ]
   }
 ]

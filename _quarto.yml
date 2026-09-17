@@ -57,7 +57,7 @@ website:
       contents:
         - tutorials/tutorial-install-r-rstudio.qmd
         - tutorials/tutorial-making-data.qmd
-        - tutorials/tutorial-ggplot2.qmd
+        - tutorials/tutorial-ggplot2-I.qmd
     - section: Supplemental
       contents:
         - supplemental/psych-sci-figs.qmd
