@@ -114,8 +114,7 @@
 
 *Work Session: Intro to ggplot*
 
-- {{< fa calendar >}} *Due* [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448429) | 
-- [Slides](404.qmd)
+- [ggplot2 tutorial](tutorials/tutorial-ggplot2.qmd)
 
 ## Week 05 {- #week-05}
 
@@ -139,7 +138,7 @@
 
 *Work Session: More ggplot*
 
-- {{< fa calendar >}} *Due* [Exercise-03](exercises/ex-03-making-data.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448437) |
+- {{< fa calendar >}} *Due* [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448429) |
 - [Slides](404.qmd)
 
 ## Week 06 {- #week-06}
@@ -171,7 +170,7 @@
 
 *Work Session: Visualizing sports data*
 
-- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
+- {{< fa calendar >}} *Due* [Exercise-03](exercises/ex-03-making-data.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448437) |
 - [Slides](404.qmd)
 
 ## Week 07 {- #week-07}
@@ -197,6 +196,7 @@
 
 *Work Session: More sports data viz*
 
+- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 - [Slides](404.qmd)
 
 ## Week 08 {- #week-08}
@@ -208,7 +208,6 @@
 - *Read**: 
     - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
-- {{< fa calendar >}} *Due* [Final Project](exercises/final-project.qmd) proposal | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448439)
 - [Slides](404.qmd)
 
 ### Wed, Oct 14 {-}
@@ -226,6 +225,7 @@
 
 *Work Session: TidyTuesday or Exercise 05*
 
+- {{< fa calendar >}} *Due* [Final Project](exercises/final-project.qmd) proposal | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448439)
 - [Slides](404.qmd)
 
 ## Week 09 {- #week-09}
