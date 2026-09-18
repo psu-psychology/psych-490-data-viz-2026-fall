@@ -1,5 +1,8 @@
 ---
 title: "*ggplot2* tutorial I"
+format:
+  html:
+    code-fold: false
 ---
 
 ## About
@@ -144,7 +147,6 @@ Here, we're going to use the `diamonds` dataset the is built in to *ggplot2*.
 Create an R chunk as follows:
 
 ::: {#fig-plot-diamonds-price}
-
 ````{{r}}
 ggplot(data = diamonds) +
   aes(x = price) +
@@ -168,9 +170,20 @@ Quarto understands other programming languages, so this is important.
 
 Save and render your Quarto document.
 
+```{r}
+#| label: fig-diamonds-histogram-price
+#| fig-cap: "Output of code in @fig-plot-diamonds-price."
+#| echo: false
+library("ggplot2")
+ggplot(data = diamonds) +
+  aes(x = price) +
+  geom_histogram()
+```
+
+
 The resulting web page should look something like this:
 
-![](../include/img/ggplot-tutorial-fig-01.png){width="50%" #fig-01}
+![Quarto document rendered after Figure 01 code is executed.](../include/img/ggplot-tutorial-fig-01.png){width="50%" #fig-01}
 
 ### Unpacking *ggplot* syntax
 
@@ -198,7 +211,17 @@ Create a new subsection called `Figure 02` in your Quarto document, then create 
 head(diamonds)
 ````
 
+Code to show the 'head' of the diamonds dataset.
 ::::
+
+
+```{r}
+#| label: fig-output-head-diamonds
+#| fig-cap: "Output of the `head(diamonds)` command in @fig-diamonds-head."
+#| echo: false
+
+head(diamonds)
+```
 
 The `head()` command outputs the first few rows of a data frame. This is useful for quickly inspecting the structure and contents of the data.
 
@@ -218,6 +241,16 @@ Code to generate a histogram of the `carat` variable from the `diamonds` dataset
 
 Save and render the Quarto document.
 
+```{r}
+#| label: fig-output-histogram-carat
+#| fig-cap: "Output of the code in @fig-diamonds-carat"
+#| echo: false
+
+ggplot(data = diamonds) +
+  aes(x = carat) +
+  geom_histogram()
+```
+
 ## Violin plots
 
 There are other 'geoms' we can use with continuous data like `price` and `carat`.
@@ -234,7 +267,7 @@ ggplot(data = diamonds) +
   geom_violin()
   
 ggplot(data = diamonds) +
-  aes(y = carat, y = "") +
+  aes(x = carat, y = "") +
   geom_violin()
 ````
 
@@ -244,6 +277,19 @@ Code to create violin plots of both the `price` and `carat` variables.
 Yes, this should make two different violin plots.
 
 Save and render the Quarto document
+
+````{r}
+#| label: fig-diamonds-violins-carat-price
+#| fig-cap: "Output from the code chunk in @fig-violin-plots."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = price, y = "") +
+  geom_violin()
+  
+ggplot(data = diamonds) +
+  aes(x= carat, y = "") +
+  geom_violin()
+````
 
 Notice that `geom_violin()` requires us to specify both `x` and `y` aesthetics even if we only want to plot one variable. 
 We tell *ggplot* to ignore the other mapping by setting `y=""`.
@@ -267,6 +313,15 @@ ggplot(data = diamonds) +
 Code to create a scatterplot of the `price` and `carat` variables from the diamonds dataset.
 :::
 
+```{r}
+#| label: fig-diamonds-scatterplot
+#| fig-cap: "Output from the prior code chunk."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = price, y = carat) +
+  geom_point()
+```
+
 ## Multiple violin plots
 
 If you want to push yourself, add a Figure 05 section with the following code chunk.
@@ -286,26 +341,52 @@ ggplot(data = diamonds) +
 Code to generate multiple violin plots, one for each value of the discrete (ordinal) variable `cut`. Note the use of new aesthetics `fill` and `color`, customized axis labels using `xlab()` and `ylab()` and a title using `ggtitle()`.
 :::
 
+```{r}
+#| label: fig-diamonds-multi-violins
+#| fig-cap: "Output from the prior code chunk."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = price, y = cut, color = cut, fill = cut) +
+  geom_violin() +
+  xlab("Price in $") +
+  ylab("Cut of diamond") +
+  ggtitle("Price vs. Cut")
+```
+
 ## Combination plot
 
 Let's implement a version of the combination plot from the [Making and visualizing data tutorial](tutorial-making-data.html#violin-boxplot-scatter).
 
 Create a `Figure 06` section in your Quarto document, add this chunk of code, save, and render.
 
+::: {#fig-code-diamonds-violin-boxplot}
+
 ````{{r}}
 ggplot(data = diamonds) +
   aes(x = price, y = "") +
   geom_violin() +
   geom_boxplot(alpha = .4) +
-  geom_jitter(width = 0, height = .2, alpha = .05) +
   ylab("")
 ````
+
+Code to generate combination plot of diamonds price data.
+:::
+
+```{r}
+#| label: fig-diamonds-violin-boxplot
+#| fig-cap: "Output from the code in @fig-code-diamonds-violin-boxplot."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = price, y = "") +
+  geom_violin() +
+  geom_boxplot(alpha = .4) +
+  ylab("")
+```
 
 ::: {.callout-important}
 ## What are those new parameters?
 
-Note that there is an `alpha` parameter in the `geom_boxplot()` function. What does it do?
-There is an `alpha` parameter in the `geom_jitter()` function, too.
+Note that there is an `alpha` parameter in the `geom_boxplot()` function in @fig-code-diamonds-violin-boxplot. What does it do?
 
 One way to answer this is to create new versions of the figures with different values of `alpha`.
 You could do this by creating new subsections in your Quarto document, say one like this:
@@ -318,7 +399,7 @@ The following figure shows what happens to Figure 06 when we set `alpha` in `geo
 
 Then, copy the Figure 06 code to a new code chunk but change the `alpha` value.
 
-Try the same experiment to determine what the other parameters do.
+So, what does `alpha` do?
 :::
 
 ## You did it!
