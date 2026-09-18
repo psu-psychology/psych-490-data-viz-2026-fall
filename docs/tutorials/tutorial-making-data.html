@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-17">
+<meta name="dcterms.date" content="2026-09-18">
 
 <title>Making and visualizing data – PSYCH 490.007</title>
 <style>
@@ -89,7 +89,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../tutorials/tutorial-ggplot2.html" rel="next">
+<link href="../tutorials/tutorial-ggplot2-I.html" rel="next">
 <link href="../tutorials/tutorial-install-r-rstudio.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -358,8 +358,8 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-ggplot2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">ggplot2 Tutorial</span></a>
+  <a href="../tutorials/tutorial-ggplot2-I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><em>ggplot2</em> tutorial I</span></a>
   </div>
 </li>
       </ul>
@@ -459,7 +459,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 17, 2026</p>
+      <p class="date">September 18, 2026</p>
     </div>
   </div>
   
@@ -528,31 +528,31 @@ div.csl-indent {
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>our_color_sample</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>  [1] "gray"   "cyan"   "yellow" "violet" "green"  "yellow" "white"  "orange"
-  [9] "red"    "gray"   "gray"   "red"    "red"    "black"  "yellow" "red"   
- [17] "gray"   "black"  "gray"   "blue"   "violet" "gray"   "blue"   "gray"  
- [25] "red"    "yellow" "blue"   "violet" "violet" "gray"   "blue"   "yellow"
- [33] "gray"   "cyan"   "white"  "red"    "green"  "red"    "black"  "white" 
- [41] "orange" "yellow" "blue"   "black"  "red"    "cyan"   "orange" "violet"
- [49] "gray"   "yellow" "blue"   "yellow" "cyan"   "gray"   "green"  "green" 
- [57] "cyan"   "white"  "blue"   "yellow" "cyan"   "red"    "yellow" "orange"
- [65] "yellow" "blue"   "black"  "black"  "blue"   "violet" "gray"   "black" 
- [73] "gray"   "red"    "green"  "yellow" "cyan"   "orange" "yellow" "orange"
- [81] "red"    "black"  "orange" "green"  "yellow" "cyan"   "white"  "red"   
- [89] "green"  "white"  "black"  "yellow" "violet" "cyan"   "red"    "green" 
- [97] "black"  "white"  "yellow" "yellow" "red"    "orange" "gray"   "black" 
-[105] "blue"   "violet" "gray"   "red"    "black"  "orange" "black"  "white" 
-[113] "green"  "red"    "yellow" "blue"   "gray"   "black"  "black"  "orange"
-[121] "white"  "black"  "black"  "cyan"   "white"  "black"  "red"    "red"   
-[129] "gray"   "white"  "green"  "cyan"   "white"  "blue"   "cyan"   "violet"
-[137] "cyan"   "yellow" "white"  "blue"   "white"  "gray"   "violet" "blue"  
-[145] "blue"   "gray"   "blue"   "blue"   "white"  "white"  "red"    "black" 
-[153] "red"    "green"  "gray"   "green"  "yellow" "black"  "green"  "white" 
-[161] "red"    "yellow" "violet" "yellow" "blue"   "green"  "yellow" "white" 
-[169] "gray"   "white"  "gray"   "yellow" "blue"   "yellow" "violet" "red"   
-[177] "cyan"   "violet" "green"  "red"    "white"  "violet" "white"  "gray"  
-[185] "orange" "red"    "violet" "green"  "red"    "gray"   "white"  "blue"  
-[193] "orange" "green"  "orange" "white"  "yellow" "cyan"   "blue"   "blue"  </code></pre>
+<pre><code>  [1] "red"    "white"  "violet" "green"  "cyan"   "gray"   "yellow" "gray"  
+  [9] "blue"   "orange" "cyan"   "cyan"   "cyan"   "white"  "green"  "cyan"  
+ [17] "gray"   "white"  "violet" "cyan"   "yellow" "green"  "white"  "blue"  
+ [25] "cyan"   "red"    "blue"   "cyan"   "black"  "black"  "green"  "orange"
+ [33] "red"    "gray"   "blue"   "yellow" "green"  "orange" "yellow" "black" 
+ [41] "violet" "white"  "violet" "red"    "gray"   "orange" "violet" "blue"  
+ [49] "yellow" "green"  "black"  "green"  "red"    "green"  "gray"   "cyan"  
+ [57] "blue"   "blue"   "yellow" "violet" "black"  "orange" "orange" "green" 
+ [65] "green"  "orange" "white"  "violet" "cyan"   "red"    "orange" "violet"
+ [73] "blue"   "blue"   "blue"   "red"    "white"  "gray"   "blue"   "red"   
+ [81] "cyan"   "red"    "green"  "red"    "cyan"   "yellow" "black"  "yellow"
+ [89] "violet" "blue"   "black"  "cyan"   "gray"   "red"    "green"  "black" 
+ [97] "orange" "blue"   "green"  "orange" "black"  "green"  "white"  "blue"  
+[105] "violet" "gray"   "yellow" "violet" "yellow" "yellow" "white"  "violet"
+[113] "black"  "black"  "black"  "green"  "blue"   "red"    "red"    "yellow"
+[121] "white"  "yellow" "red"    "red"    "red"    "white"  "black"  "violet"
+[129] "gray"   "green"  "yellow" "cyan"   "cyan"   "white"  "yellow" "violet"
+[137] "violet" "black"  "cyan"   "violet" "black"  "blue"   "yellow" "red"   
+[145] "orange" "violet" "white"  "blue"   "black"  "green"  "red"    "violet"
+[153] "yellow" "orange" "green"  "orange" "black"  "white"  "blue"   "white" 
+[161] "blue"   "blue"   "cyan"   "cyan"   "blue"   "cyan"   "black"  "blue"  
+[169] "orange" "red"    "red"    "gray"   "white"  "blue"   "violet" "green" 
+[177] "green"  "cyan"   "green"  "green"  "green"  "green"  "red"    "green" 
+[185] "black"  "gray"   "gray"   "violet" "violet" "yellow" "green"  "gray"  
+[193] "blue"   "green"  "violet" "orange" "gray"   "gray"   "cyan"   "gray"  </code></pre>
 </div>
 </div>
 <p>On its own, that’s not especially easy to visualize. What if we sorted it?</p>
@@ -564,27 +564,27 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>  [1] "black"  "black"  "black"  "black"  "black"  "black"  "black"  "black" 
   [9] "black"  "black"  "black"  "black"  "black"  "black"  "black"  "black" 
- [17] "black"  "black"  "black"  "black"  "blue"   "blue"   "blue"   "blue"  
+ [17] "black"  "black"  "black"  "blue"   "blue"   "blue"   "blue"   "blue"  
  [25] "blue"   "blue"   "blue"   "blue"   "blue"   "blue"   "blue"   "blue"  
  [33] "blue"   "blue"   "blue"   "blue"   "blue"   "blue"   "blue"   "blue"  
- [41] "blue"   "blue"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"  
+ [41] "blue"   "blue"   "blue"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"  
  [49] "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"  
- [57] "cyan"   "gray"   "gray"   "gray"   "gray"   "gray"   "gray"   "gray"  
+ [57] "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"   "cyan"  
  [65] "gray"   "gray"   "gray"   "gray"   "gray"   "gray"   "gray"   "gray"  
  [73] "gray"   "gray"   "gray"   "gray"   "gray"   "gray"   "gray"   "gray"  
  [81] "gray"   "green"  "green"  "green"  "green"  "green"  "green"  "green" 
  [89] "green"  "green"  "green"  "green"  "green"  "green"  "green"  "green" 
- [97] "green"  "green"  "orange" "orange" "orange" "orange" "orange" "orange"
-[105] "orange" "orange" "orange" "orange" "orange" "orange" "orange" "red"   
-[113] "red"    "red"    "red"    "red"    "red"    "red"    "red"    "red"   
-[121] "red"    "red"    "red"    "red"    "red"    "red"    "red"    "red"   
+ [97] "green"  "green"  "green"  "green"  "green"  "green"  "green"  "green" 
+[105] "green"  "green"  "green"  "green"  "orange" "orange" "orange" "orange"
+[113] "orange" "orange" "orange" "orange" "orange" "orange" "orange" "orange"
+[121] "orange" "orange" "orange" "red"    "red"    "red"    "red"    "red"   
 [129] "red"    "red"    "red"    "red"    "red"    "red"    "red"    "red"   
-[137] "violet" "violet" "violet" "violet" "violet" "violet" "violet" "violet"
-[145] "violet" "violet" "violet" "violet" "violet" "violet" "violet" "white" 
-[153] "white"  "white"  "white"  "white"  "white"  "white"  "white"  "white" 
-[161] "white"  "white"  "white"  "white"  "white"  "white"  "white"  "white" 
-[169] "white"  "white"  "white"  "white"  "white"  "white"  "yellow" "yellow"
-[177] "yellow" "yellow" "yellow" "yellow" "yellow" "yellow" "yellow" "yellow"
+[137] "red"    "red"    "red"    "red"    "red"    "red"    "red"    "red"   
+[145] "violet" "violet" "violet" "violet" "violet" "violet" "violet" "violet"
+[153] "violet" "violet" "violet" "violet" "violet" "violet" "violet" "violet"
+[161] "violet" "violet" "violet" "violet" "violet" "violet" "white"  "white" 
+[169] "white"  "white"  "white"  "white"  "white"  "white"  "white"  "white" 
+[177] "white"  "white"  "white"  "white"  "white"  "white"  "yellow" "yellow"
 [185] "yellow" "yellow" "yellow" "yellow" "yellow" "yellow" "yellow" "yellow"
 [193] "yellow" "yellow" "yellow" "yellow" "yellow" "yellow" "yellow" "yellow"</code></pre>
 </div>
@@ -625,7 +625,7 @@ div.csl-indent {
 <div class="cell-output cell-output-stdout">
 <pre><code>favorite_color
  black   blue   cyan   gray  green orange    red violet  white yellow 
-    20     22     15     24     17     13     25     15     23     26 </code></pre>
+    19     24     21     17     27     15     21     22     16     18 </code></pre>
 </div>
 </div>
 </section>
@@ -2102,8 +2102,8 @@ Tufte, E. R. (2001). <em>The <span>V</span>isual <span>D</span>isplay of <span>Q
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../tutorials/tutorial-ggplot2.html" class="pagination-link" aria-label="ggplot2 Tutorial">
-        <span class="nav-page-text">ggplot2 Tutorial</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../tutorials/tutorial-ggplot2-I.html" class="pagination-link" aria-label="*ggplot2* tutorial I">
+        <span class="nav-page-text"><em>ggplot2</em> tutorial I</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">

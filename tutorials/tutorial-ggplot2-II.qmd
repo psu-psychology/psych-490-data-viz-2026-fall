@@ -1,0 +1,165 @@
+---
+title: "*ggplot2* tutorial II"
+format:
+  html:
+    code-fold: false
+---
+
+## About
+
+This page provides some activities for beginning users of the *ggplot2* [@ggplot2] package. It is the second of two tutorials.
+
+## Get ready
+
+1. Create a new project.
+
+2. Customize the document
+  - Change the title
+  - Add an author field
+  - Add format text
+  
+The full header should look like this:
+
+::: {#fig-yaml-header}
+
+```yaml
+---
+title: "psych-490-ggplot-2026-09-25"
+author: "Your name"
+format:
+  html:
+    self_contained: true
+---
+```
+
+Basic header information for your document for this tutorial.
+:::
+
+3. Add a setup section 
+
+Below the setup header, we're going to add an R code chunk like this:
+
+::: {#fig-library-ggplot2}
+
+````{{r}}
+library(ggplot2)
+````
+
+Bring ggplot into your local computational environment.
+:::
+
+## Good habits
+
+One of the first things data analysts should do when we get our hands on a new dataset is answer some basic questions about it, specifically the following:
+
+- How many cases (data points) are in the dataset?
+- How many variables?
+- Which variables are nominal, which are ordinal, and which are continuous?
+
+R makes it easy to answeer these questions for us.
+We use the `summary()` and `dim()` (dimension) commands.
+
+Add a section to your Quarto document for summary data about the *diamonds* dataset.
+Then, add the following code chunk.
+
+::: {#fig-summary-diamonds}
+````{{r}}
+summary(diamonds)
+
+dim(diamonds)
+````
+
+R code to provide summary information about the *diamonds* dataset.
+:::
+
+Save your Quarto document and render it.
+
+::: {#fig-summary-diamonds-output}
+
+```{r}
+#| echo: false
+library(ggplot2)
+summary(diamonds)
+
+dim(diamonds)
+```
+
+Output from @fig-summary-diamonds
+:::
+
+Notice that the `summary()` function does what it says; it provides a statistical summary of the variables in the dataset.
+For continuous variables, we get the minimum and maximum, the mean and median, and the 1st and 3rd quartile values. For discrete variables (`cut`, `color`, and `clarity`), we get informatoin about the number of cases at each level.
+
+The `dim()` command tells us that there are 53,940 rows or individual cases and 10 columns or variables.
+
+How do we know whether the discrete variables are ordered?
+
+One way is to use the `unique()` command.
+If the dataset has recorded that a variable is ordinal, this command will show us.
+
+::: {#fig-diamonds-unique}
+
+````{{r}}
+with(diamonds, unique(cut))
+
+with(diamonds, unique(color))
+
+with(diamonds, unique(clarity))
+````
+
+Code to report the number of unique values in a variable and whether they have an intrinsic order.
+:::
+
+::: {#fig-diamonds-unique-output}
+
+```{r}
+#| echo: false
+with(diamonds, unique(cut))
+
+with(diamonds, unique(color))
+
+with(diamonds, unique(clarity))
+```
+
+Output from @fig-diamonds-unique
+:::
+
+You might add this to your document so that you have a reasonably complete summary of the dataset before we visualize it.
+
+::: {.callout-warning}
+## Consistency alert
+
+Gilmore usually advocates for a visualize first, analyze later approach to data exploration.
+But here, we're generating statistical summaries before we've done any 'visualization.'
+What gives?
+
+Well, Gilmore should probably revise his advice to say *summarize* before you analyze.
+:::
+
+## Summarizing figures
+
+A best practice is to generate summary figures for all the variables in your dataset.
+What should the figures summarize, or said in the language of *ggplot*, what `geom_` should we  use? Histograms (`geom_histogram()`), boxplots (`geom_boxplot()`), and violin (`geom_violin()`) plots are great for continuous data, but what about nominal (ordered or unordered) data?
+
+The following code chunk provides these for `carat` and `price`.
+
+::: {#fig-summary-figures-carat-price}
+
+````{{r}}
+ggplot(data = diamonds) +
+  aes(x = carat) +
+  geom_histogram()
+  
+ggplot(data = diamonds) +
+  aes(x = carat, y = "") +
+  geom_violin() +
+  geom_boxplot(alpha = .4) +
+  ylab("")
+````
+
+Code to generate a histogram and combined boxplot/violin plot of the `carat` variable.
+:::
+
+Create a section of your Quarto document for these figures and make plots for the continuous variables.
+
+## References

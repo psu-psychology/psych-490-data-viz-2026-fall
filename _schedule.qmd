@@ -114,6 +114,7 @@
 
 *Work Session: Intro to ggplot*
 
+- [Slides](slides/wk-04-2026-09-18-ggplot.qmd)
 - [*ggplot2* tutorial](tutorials/tutorial-ggplot2-I.qmd)
 - Continue work on [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) and [Exercise 03](exercises/ex-03-making-data.qmd).
 
