@@ -628,22 +628,22 @@
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#announcements",
     "href": "slides/wk-04-2026-09-18-ggplot.html#announcements",
     "title": "Intro to ggplot",
-    "section": "",
-    "text": "Exercise 02 due today\nNo class Monday, September 21"
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise due dates changed\n\nExercise 02: Next Friday, September 25\nExercise 03: Friday, October 2\n\nNo class Monday, September 21"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#todays-topics",
     "href": "slides/wk-04-2026-09-18-ggplot.html#todays-topics",
     "title": "Intro to ggplot",
-    "section": "",
-    "text": "Intro to ggplot\nAs time permits\n\nExercise 02\nExercise 03"
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWork session\n\nggplot2 tutorial I\n\nAs time permits\n\nExercise 02\nExercise 03"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#what-is-it",
     "href": "slides/wk-04-2026-09-18-ggplot.html#what-is-it",
     "title": "Intro to ggplot",
     "section": "What is it?",
-    "text": "What is it?\n\nR package that implements Cleveland’s “grammar of graphics”\n\nWritten by Hadley Wickham, CTO of Posit.co\n\nMap data to figure components\n\nPosition\nColor, shape, size\n\nAdd layers to figures"
+    "text": "What is it?\n\nR package that implements Wilkinson et al’s “grammar of graphics” (Wilkinson et al. 2005)\n\nWritten by Hadley Wickham, CTO of Posit.co\n\nMaps data to figure components\n\nPosition (on axis)\nColor (lines and fills), shape, size, texture\n\nAdd layers to figures, e.g., annotations"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#why-code-your-figures",
@@ -699,7 +699,7 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#your-turn",
     "title": "Intro to ggplot",
     "section": "Your turn…",
-    "text": "Your turn…\n\n\n\n\n\n\nQuestionHow would you visualize this sort of data?\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestionWhat questions would you want your visualization to answer?"
+    "text": "Your turn…\n\nggplot2 tutorial I"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#figure-0",
@@ -748,7 +748,7 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#basic-ggplot-components",
     "title": "Intro to ggplot",
     "section": "Basic ggplot components",
-    "text": "Basic ggplot components\n\nA data frame\nFunction call to ggplot()\nAdd layers to plot with + operator\nAdd aesthetics (mappings between data and graphic elements) using aes() with x (and often y) mappings\nA geom_ layer"
+    "text": "Basic ggplot components\n\nA data frame (rectangular dataset: rows are observations, named columns are variables)\nFunction call to ggplot()\nAdd layers to plot with + operator\nAdd aesthetics (mappings between data and graphic elements) using aes() with x (and often y) mappings\nA geom_ layer"
   },
   {
     "objectID": "slides/wk-04-2026-09-18-ggplot.html#next-time",
@@ -769,7 +769,7 @@
     "href": "slides/wk-04-2026-09-18-ggplot.html#references",
     "title": "Intro to ggplot",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\n\n\nWilkinson, Leland, D Wills, D Rope, A Norton, and R Dubbs. 2005. The Grammar of Graphics (Statistics and Computing). 2nd edition. Springer. https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448."
   },
   {
     "objectID": "slides/wk-03-2026-09-11-making-data-with-r.html",
@@ -1927,5 +1927,250 @@
       "Tutorials",
       "*ggplot2* tutorial I"
     ]
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#last-week",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#last-week",
+    "title": "From stimulus to sensation",
+    "section": "Last week…",
+    "text": "Last week…\n\nggplot2 tutorial I\nFigure types"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#todays-topics",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#todays-topics",
+    "title": "From stimulus to sensation",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWhat is vision for?s\nInformation in light\nDetecting information in light"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-at-a-distance",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-at-a-distance",
+    "title": "From stimulus to sensation",
+    "section": "Information at a distance",
+    "text": "Information at a distance\n\n\n\n\n\n\nFigure 1: James Webb space telescope deep field “Webb’s First Deep Field (NIRCam Image)” (n.d.)"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#natures-speed-demonspeed-limit",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#natures-speed-demonspeed-limit",
+    "title": "From stimulus to sensation",
+    "section": "Nature’s speed demon/speed limit",
+    "text": "Nature’s speed demon/speed limit\n\nLight (+ radiowaves) circumnavigate the Earth in ~133 ms\n\n\n\n\n\n\n\nFigure 2: https://w3tm.org\n\n\n\n\nEarth ~8.3 light-minutes from the Sun"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#where-is-itam-i",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#where-is-itam-i",
+    "title": "From stimulus to sensation",
+    "section": "Where is it/am I?",
+    "text": "Where is it/am I?\n\nAzimuth (left/right)\nElevation (up/down)\nDistance (near/far)\nOrientation"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-is-it",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-is-it",
+    "title": "From stimulus to sensation",
+    "section": "What is it?",
+    "text": "What is it?\n\nEdges \\(\\rightarrow\\)\nSurfaces \\(\\rightarrow\\)\nObjects or entities"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#regarding-data-figures",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#regarding-data-figures",
+    "title": "From stimulus to sensation",
+    "section": "Regarding data figures…",
+    "text": "Regarding data figures…\n\nWhat are the figure components\n\nData points, text, bars/segments/rings/boxes\n\nWhere are different components relative to one another, axes, etc.\nHow do figure components convey information about data?"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#electromagnetic-spectrum",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#electromagnetic-spectrum",
+    "title": "From stimulus to sensation",
+    "section": "Electromagnetic spectrum",
+    "text": "Electromagnetic spectrum\n\n\n\n\n\n\nFigure 4: EM spectrum from Wikipedia"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#surfaces-reflectabsorb-or-emit",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#surfaces-reflectabsorb-or-emit",
+    "title": "From stimulus to sensation",
+    "section": "Surfaces reflect/absorb or emit",
+    "text": "Surfaces reflect/absorb or emit\n\n\n\n\n\n\nFigure 5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#different-surfaces-different-reflectionabsorption",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#different-surfaces-different-reflectionabsorption",
+    "title": "From stimulus to sensation",
+    "section": "Different surfaces == Different reflection/absorption",
+    "text": "Different surfaces == Different reflection/absorption\n\nPerceived color differences correspond to different patterns of light reflection.\n\n\n\n\nRandeberg (2005)"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#artificial-sources",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#artificial-sources",
+    "title": "From stimulus to sensation",
+    "section": "Artificial sources",
+    "text": "Artificial sources"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#spatial-patterns-on-retina",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#spatial-patterns-on-retina",
+    "title": "From stimulus to sensation",
+    "section": "Spatial patterns on retina",
+    "text": "Spatial patterns on retina\n\ndepend on object geometry and orientation\n\n\n\n\n\n\n\nFigure 6: Source: https://thebrain.mcgill.ca"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-information",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-information",
+    "title": "From stimulus to sensation",
+    "section": "What information?",
+    "text": "What information?\n\nPosition\nLength\nArea\nColor\nTexture\n(Motion)"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-eye",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-eye",
+    "title": "From stimulus to sensation",
+    "section": "The eye",
+    "text": "The eye\n\n\n\n\n\n\nFigure 8"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#is-like-an-auto-focus-auto-exposure-camera",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#is-like-an-auto-focus-auto-exposure-camera",
+    "title": "From stimulus to sensation",
+    "section": "is like an auto-focus, auto-exposure camera…",
+    "text": "is like an auto-focus, auto-exposure camera…\n\n\n\n\n\n\nFigure 9"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#part-of-a-self-stabilizing-system",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#part-of-a-self-stabilizing-system",
+    "title": "From stimulus to sensation",
+    "section": "part of a self-stabilizing system…",
+    "text": "part of a self-stabilizing system…\n\nBucalo (2015)"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#eye-head-body-system",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#eye-head-body-system",
+    "title": "From stimulus to sensation",
+    "section": "Eye + head + body system",
+    "text": "Eye + head + body system\n\n\n\n\n\n\nNote\n\n\n\nEye + head + body movements align and point the eyes\nEye + head + body movements stabilize the eyes\n\nWhen the observer moves\nWhen objects move"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#demo",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#demo",
+    "title": "From stimulus to sensation",
+    "section": "Demo",
+    "text": "Demo\n\nMay I have a volunteer?"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#image-formation",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#image-formation",
+    "title": "From stimulus to sensation",
+    "section": "Image formation",
+    "text": "Image formation\n\nEye’s optical components\n\nCornea (fixed refraction)\nIris/pupil (modifiable aperture)\nLens (modifiable refraction)\n\nCreate projection (image) on retina"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-retina",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-retina",
+    "title": "From stimulus to sensation",
+    "section": "The retina…",
+    "text": "The retina…\n\n\n\n\n\n\nFigure 10\n\n\n\n\nsamples spatial patterns of light intensity & wavelength patterns"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelength-tuned-photoreceptors",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelength-tuned-photoreceptors",
+    "title": "From stimulus to sensation",
+    "section": "‘Wavelength-tuned’ photoreceptors",
+    "text": "‘Wavelength-tuned’ photoreceptors\n\n\n\n\n\n\nFigure 11: Wikipedia1"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#consequences",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#consequences",
+    "title": "From stimulus to sensation",
+    "section": "Consequences",
+    "text": "Consequences\n\nMust move eyes to position highest resolution part of retina over target\nKeep track of sequence of eye movements and positions over time\nIntegrate sequence of samples over time"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-processing",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-processing",
+    "title": "From stimulus to sensation",
+    "section": "Information processing",
+    "text": "Information processing\n\nSeparate channels for short, medium, long wavelengths (cones): chromatic (color)\nBlack/gray/white or overall illumination (rods): achromatic (dark/light)\n~120 M rods + ~ 5 M cones (125 M) vs. professional cameras with 100 M pixels"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#acuity",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#acuity",
+    "title": "From stimulus to sensation",
+    "section": "Acuity",
+    "text": "Acuity\n\nDetail/pattern vision\nGrating acuity\nVernier\nSymbol/letter (optotype) acuity"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#contrast-sensitivity",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#contrast-sensitivity",
+    "title": "From stimulus to sensation",
+    "section": "Contrast sensitivity",
+    "text": "Contrast sensitivity\n\nLight/dark ratio (contast)\nvs. spatial frequency (level of detail)\nContrast -&gt; edges; edges -&gt; shape/form\ne.g., driving in fog"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-perception",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-perception",
+    "title": "From stimulus to sensation",
+    "section": "Color perception",
+    "text": "Color perception\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\nSource: Wikipedia"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelengths-are-continuous-but-are-perceived-colors",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelengths-are-continuous-but-are-perceived-colors",
+    "title": "From stimulus to sensation",
+    "section": "Wavelengths are continuous, but are perceived colors?",
+    "text": "Wavelengths are continuous, but are perceived colors?\n\n\n\nhttps://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#perceived-colors-seem-ordinal-but",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#perceived-colors-seem-ordinal-but",
+    "title": "From stimulus to sensation",
+    "section": "Perceived colors seem ordinal, but…",
+    "text": "Perceived colors seem ordinal, but…\n\n\nColor is a neuropsychological construct"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-vision-anomalies",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-vision-anomalies",
+    "title": "From stimulus to sensation",
+    "section": "Color vision anomalies",
+    "text": "Color vision anomalies\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\nWong (2011) Figure 1"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#types",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#types",
+    "title": "From stimulus to sensation",
+    "section": "Types",
+    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\nhttps://www.color-blindness.com/protanopia-red-green-color-blindness/"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-palettes",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-palettes",
+    "title": "From stimulus to sensation",
+    "section": "Color palettes",
+    "text": "Color palettes\n\n\n\nWong (2011) Figure 2"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#some-consequences-for-data-figures",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#some-consequences-for-data-figures",
+    "title": "From stimulus to sensation",
+    "section": "Some consequences for data figures",
+    "text": "Some consequences for data figures\n\nSize of visual elements (symbols, including text)\nContrast (light/dark or color)\nTextures of visual patterns\nSome colors more visible than others\n\nVischeck\n\nHow much visual scanning (# of eye movements)?"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#your-turn",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#your-turn",
+    "title": "From stimulus to sensation",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\n\n\nEvaluating figures\n\n\n\nVisit our sample figures page and evaluate which figures might pose challenges for people with vision impairments.\nVisit our figures in psychological science and figures in business, journalism, and the arts pages with the same goal.\nWhat specific issues do you foresee?"
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#references",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#references",
+    "title": "From stimulus to sensation",
+    "section": "References",
+    "text": "References\n\n\n\n\nBucalo, Paige. 2015. Falcon Belly Dance. Youtube. https://www.youtube.com/watch?v=JGArTWOJtXs.\n\n\nCairo, Alberto. 2013. The Functional Art: An Introduction to Information Graphics and Visualization. New Riders Publishing.\n\n\nRandeberg, L. 2005. Diagnostic Applications of Diffuse Reflectance Spectroscopy. https://www.semanticscholar.org/paper/ec9450b79923e2e2152b54ab9241b60bc5374944.\n\n\n“Webb’s First Deep Field (NIRCam Image).” n.d. Accessed January 11, 2024. https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z.\n\n\nWong, Bang. 2011. “Color Blindness.” Nature Methods 8 (June): 441. https://doi.org/10.1038/nmeth.1618."
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#footnotes",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#footnotes",
+    "title": "From stimulus to sensation",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBy BenRG - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7873848"
   }
 ]
