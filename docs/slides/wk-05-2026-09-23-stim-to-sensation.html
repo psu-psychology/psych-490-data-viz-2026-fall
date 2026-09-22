@@ -150,19 +150,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -174,6 +161,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
     background-image: none;
   }
   </style>
@@ -213,7 +213,7 @@ Rick Gilmore
 <section id="todays-topics" class="slide level2">
 <h2>Today’s topics</h2>
 <ul>
-<li>What is vision for?s</li>
+<li>What is vision for?</li>
 <li>Information in light</li>
 <li>Detecting information in light</li>
 </ul>
@@ -280,8 +280,46 @@ Figure&nbsp;2: https://w3tm.org
 <li>Data points, text, bars/segments/rings/boxes</li>
 </ul></li>
 <li><em>Where</em> are different components relative to one another, axes, etc.</li>
-<li><em>How</em> do figure components convey information about data?</li>
+<li><em>How</em> do figure components convey information about data?
+<ul>
+<li>Bar heights = or not</li>
+<li>Scatterplot points clustered or not</li>
+</ul></li>
 </ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ice-cream-sample-ratings" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ice-cream-sample-ratings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-ice-cream-sample-ratings-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Some sample ratings of ice cream flavors."><img data-src="include/fig/fig-ice-cream-sample-ratings-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice-cream-sample-ratings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Some sample ratings of ice cream flavors.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-random-xy-sd-1.25" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-random-xy-sd-1.25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-random-xy-sd-1.25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Some sample data where x = y + N(0, 1.25)."><img data-src="include/fig/fig-random-xy-sd-1.25-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-random-xy-sd-1.25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Some sample data where <span class="math inline">\(x = y + N(0, 1.25)\)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="information-in-light" class="title-slide slide level1 center">
@@ -293,10 +331,10 @@ Figure&nbsp;2: https://w3tm.org
 <div id="fig-cairo-5.12" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cairo-5.12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/cairo-fig-5.12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: @Cairo2013-hm Figure 5.12"><img data-src="../include/img/cairo-fig-5.12.png" style="width:65.0%"></a>
+<a href="../include/img/cairo-fig-5.12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: @Cairo2013-hm Figure 5.12"><img data-src="../include/img/cairo-fig-5.12.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cairo-5.12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> Figure 5.12
+Figure&nbsp;5: <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> Figure 5.12
 </figcaption>
 </figure>
 </div>
@@ -306,10 +344,10 @@ Figure&nbsp;3: <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="
 <div id="fig-em-spectrum-wikipedia" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-em-spectrum-wikipedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/3840px-EM_Spectrum_Properties_edit.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: EM spectrum from Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/3840px-EM_Spectrum_Properties_edit.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" style="width:75.0%"></a>
+<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/3840px-EM_Spectrum_Properties_edit.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: EM spectrum from Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/EM_Spectrum_Properties_edit.svg/3840px-EM_Spectrum_Properties_edit.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-em-spectrum-wikipedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: EM spectrum from Wikipedia
+Figure&nbsp;6: EM spectrum from Wikipedia
 </figcaption>
 </figure>
 </div>
@@ -319,25 +357,33 @@ Figure&nbsp;4: EM spectrum from Wikipedia
 <div id="fig-surface-reflection" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-surface-reflection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg"><img data-src="https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg" style="width:60.0%"></a>
+<a href="https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg"><img data-src="https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-surface-reflection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg
+Figure&nbsp;7: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="different-surfaces-different-reflectionabsorption" class="slide level2">
 <h2>Different surfaces == Different reflection/absorption</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Perceived color differences correspond to different patterns of light reflection.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://www.researchgate.net/profile/Lise-Lyngsnes-Randeberg/publication/265397843/figure/fig8/AS:667691706773516@1536201516532/Reflectance-spectra-from-different-skin-types-measured-using-the-Ocean-Optics-SD-2000.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="@Randeberg2005-xn"><img data-src="https://www.researchgate.net/profile/Lise-Lyngsnes-Randeberg/publication/265397843/figure/fig8/AS:667691706773516@1536201516532/Reflectance-spectra-from-different-skin-types-measured-using-the-Ocean-Optics-SD-2000.png" alt="Randeberg (2005)"></a></p>
-<figcaption><span class="citation" data-cites="Randeberg2005-xn">Randeberg (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span></figcaption>
+</div><div class="column" style="width:50%;">
+<div id="fig-randeberg-2005" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-randeberg-2005-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://www.researchgate.net/profile/Lise-Lyngsnes-Randeberg/publication/265397843/figure/fig8/AS:667691706773516@1536201516532/Reflectance-spectra-from-different-skin-types-measured-using-the-Ocean-Optics-SD-2000.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: @Randeberg2005-xn"><img data-src="https://www.researchgate.net/profile/Lise-Lyngsnes-Randeberg/publication/265397843/figure/fig8/AS:667691706773516@1536201516532/Reflectance-spectra-from-different-skin-types-measured-using-the-Ocean-Optics-SD-2000.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-randeberg-2005-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: <span class="citation" data-cites="Randeberg2005-xn">Randeberg (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span>
+</figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section id="artificial-sources" class="slide level2">
 <h2>Artificial sources</h2>
@@ -345,29 +391,35 @@ Figure&nbsp;5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecture
 </section>
 <section id="spatial-patterns-on-retina" class="slide level2">
 <h2>Spatial patterns on retina</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li>depend on object geometry and orientation</li>
+<li>Depend on object geometry and orientation</li>
+<li>Same angle on retina <span class="math inline">\(\rightarrow\)</span> different angle in world</li>
+<li>Need more info to determine unambiguously many object properties</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <div id="fig-retinal-projection" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-retinal-projection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1p.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Source: https://thebrain.mcgill.ca"><img data-src="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1p.jpg"></a>
+<a href="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1p.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: Source: https://thebrain.mcgill.ca"><img data-src="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1p.jpg"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-retinal-projection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Source: https://thebrain.mcgill.ca
+Figure&nbsp;9: Source: https://thebrain.mcgill.ca
 </figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section class="slide level2">
 
 <div id="fig-same-projection-angle" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-same-projection-angle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1q.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: Source: https://thebrain.mcgill.ca"><img data-src="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1q.jpg"></a>
+<a href="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1q.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: Source: https://thebrain.mcgill.ca"><img data-src="https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1q.jpg"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-same-projection-angle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Source: https://thebrain.mcgill.ca
+Figure&nbsp;10: Source: https://thebrain.mcgill.ca
 </figcaption>
 </figure>
 </div>
@@ -393,10 +445,10 @@ Figure&nbsp;7: Source: https://thebrain.mcgill.ca
 <div id="fig-the-eye" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-the-eye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://hmslade5.files.wordpress.com/2012/03/anatomy-of-the-eye.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: "><img data-src="https://hmslade5.files.wordpress.com/2012/03/anatomy-of-the-eye.jpg" id="fig-the-eye" class="quarto-figure quarto-figure-center"></a>
+<a href="https://hmslade5.files.wordpress.com/2012/03/anatomy-of-the-eye.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: "><img data-src="https://hmslade5.files.wordpress.com/2012/03/anatomy-of-the-eye.jpg" id="fig-the-eye" class="quarto-figure quarto-figure-center"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-the-eye-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8
+Figure&nbsp;11
 </figcaption>
 </figure>
 </div>
@@ -406,10 +458,10 @@ Figure&nbsp;8
 <div id="fig-eye-autofocus-camera" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-eye-autofocus-camera-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://www.optilase.com/wp-content/uploads/2014/12/camera-lens-eye-lens.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: "><img data-src="https://www.optilase.com/wp-content/uploads/2014/12/camera-lens-eye-lens.jpg" id="fig-eye-autofocus-camera" class="quarto-figure quarto-figure-center"></a>
+<a href="https://www.optilase.com/wp-content/uploads/2014/12/camera-lens-eye-lens.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;12: "><img data-src="https://www.optilase.com/wp-content/uploads/2014/12/camera-lens-eye-lens.jpg" id="fig-eye-autofocus-camera" class="quarto-figure quarto-figure-center"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-eye-autofocus-camera-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9
+Figure&nbsp;12
 </figcaption>
 </figure>
 </div>
@@ -462,29 +514,33 @@ Figure&nbsp;9
 </section>
 <section id="the-retina" class="slide level2">
 <h2>The retina…</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>samples spatial patterns of light intensity &amp; wavelength</li>
+</ul>
+</div><div class="column" style="width:50%;">
 <div id="fig-the-retina" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-the-retina-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://www.feinberg.northwestern.edu/gfx/news/retina.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;10: "><img data-src="https://www.feinberg.northwestern.edu/gfx/news/retina.jpg" id="fig-the-retina" class="quarto-figure quarto-figure-center"></a>
+<a href="https://www.feinberg.northwestern.edu/gfx/news/retina.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;13: "><img data-src="https://www.feinberg.northwestern.edu/gfx/news/retina.jpg" id="fig-the-retina" class="quarto-figure quarto-figure-center"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-the-retina-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10
+Figure&nbsp;13
 </figcaption>
 </figure>
 </div>
-<ul>
-<li>samples spatial patterns of light intensity &amp; wavelength patterns</li>
-</ul>
+</div></div>
 </section>
 <section id="wavelength-tuned-photoreceptors" class="slide level2">
 <h2>‘Wavelength-tuned’ photoreceptors</h2>
 <div id="fig-cone-photoreceptors" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cone-photoreceptors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/3840px-Cone-fundamentals-with-srgb-spectrum.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;11: Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/3840px-Cone-fundamentals-with-srgb-spectrum.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" style="width:60.0%"></a>
+<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/3840px-Cone-fundamentals-with-srgb-spectrum.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;14: Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cone-fundamentals-with-srgb-spectrum.svg/3840px-Cone-fundamentals-with-srgb-spectrum.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cone-photoreceptors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
+Figure&nbsp;14: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
 </figcaption>
 </figure>
 </div>
@@ -494,10 +550,10 @@ Figure&nbsp;11: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref1" 
 <div id="fig-rods-cones" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-rods-cones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://i.pinimg.com/originals/9f/08/85/9f0885d4c209d5275f631ac194eb4f4b.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;12: Retinal rods (green) &amp; cones (blue)"><img data-src="https://i.pinimg.com/originals/9f/08/85/9f0885d4c209d5275f631ac194eb4f4b.jpg"></a>
+<a href="https://i.pinimg.com/originals/9f/08/85/9f0885d4c209d5275f631ac194eb4f4b.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;15: Retinal rods (green) &amp; cones (blue)"><img data-src="https://i.pinimg.com/originals/9f/08/85/9f0885d4c209d5275f631ac194eb4f4b.jpg"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rods-cones-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: Retinal rods (green) &amp; cones (blue)
+Figure&nbsp;15: Retinal rods (green) &amp; cones (blue)
 </figcaption>
 </figure>
 </div>
@@ -508,10 +564,10 @@ Figure&nbsp;12: Retinal rods (green) &amp; cones (blue)
 <div id="fig-cone-rod-mosaics" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cone-rod-mosaics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/a/a6/ConeMosaics.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; Source: https://en.wikipedia.org/wiki/Retinal_mosaic"><img data-src="https://upload.wikimedia.org/wikipedia/commons/a/a6/ConeMosaics.jpg"></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/a/a6/ConeMosaics.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;16: Normal color vision vs.&nbsp;protanopic (color blind) vision; Source: https://en.wikipedia.org/wiki/Retinal_mosaic"><img data-src="https://upload.wikimedia.org/wikipedia/commons/a/a6/ConeMosaics.jpg"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cone-rod-mosaics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; Source: https://en.wikipedia.org/wiki/Retinal_mosaic
+Figure&nbsp;16: Normal color vision vs.&nbsp;protanopic (color blind) vision; Source: https://en.wikipedia.org/wiki/Retinal_mosaic
 </figcaption>
 </figure>
 </div>
@@ -519,17 +575,21 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 <section class="slide level2">
 
 <h3 id="with-different-concentrations-in-different-parts-of-the-retina">with different concentrations in different parts of the retina</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Human_photoreceptor_distribution.svg/1200px-Human_photoreceptor_distribution.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Human_photoreceptor_distribution.svg/1200px-Human_photoreceptor_distribution.svg.png" alt="Wikipedia"></a></p>
-<figcaption>Wikipedia</figcaption>
+<div id="fig-book-bionumbers" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-book-bionumbers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://book.bionumbers.org/wp-content/uploads/2014/07/130-f2-RodCellDensity-12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;17: https://book.bionumbers.org/how-big-is-a-photoreceptor/"><img data-src="https://book.bionumbers.org/wp-content/uploads/2014/07/130-f2-RodCellDensity-12.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-book-bionumbers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: https://book.bionumbers.org/how-big-is-a-photoreceptor/
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="consequences" class="slide level2">
 <h2>Consequences</h2>
 <ul>
-<li>Must move eyes to position highest resolution part of retina over target</li>
+<li>Must move eyes in order to position highest resolution part of retina over target</li>
 <li>Keep track of sequence of eye movements and positions over time</li>
 <li>Integrate sequence of samples over time</li>
 </ul>
@@ -538,7 +598,7 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/cairo-fig-5.6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="@Cairo2013-hm Figure 5.6"><img data-src="../include/img/cairo-fig-5.6.png" alt="Cairo (2013) Figure 5.6"></a></p>
+<p><a href="../include/img/cairo-fig-5.6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="@Cairo2013-hm Figure 5.6"><img data-src="../include/img/cairo-fig-5.6.png" alt="Cairo (2013) Figure 5.6"></a></p>
 <figcaption><span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span> Figure 5.6</figcaption>
 </figure>
 </div>
@@ -562,7 +622,16 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 <section class="slide level2">
 
 <h3 id="when-eye-misshapen-for-cornea-lens">…when eye misshapen for cornea +lens</h3>
-<p><a href="https://ecpbuilder.com/wp-content/uploads/sites/530/2015/10/myopia.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="https://ecpbuilder.com/wp-content/uploads/sites/530/2015/10/myopia.jpg"></a></p>
+<div id="fig-myopia-hyperopia" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-myopia-hyperopia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://www.poudrevalleyeyecare.com/wp-content/uploads/2025/08/20250826_1905_Eye-Vision-Comparison_simple_compose_01k3khze04f7r9ayzvpjecz4rf-1024x682-1024x585.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;18: https://www.poudrevalleyeyecare.com/blog/myopia-vs-hyperopia-key-differences-treatment-guide/"><img data-src="https://www.poudrevalleyeyecare.com/wp-content/uploads/2025/08/20250826_1905_Eye-Vision-Comparison_simple_compose_01k3khze04f7r9ayzvpjecz4rf-1024x682-1024x585.jpg" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-myopia-hyperopia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18: https://www.poudrevalleyeyecare.com/blog/myopia-vs-hyperopia-key-differences-treatment-guide/
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="acuity" class="slide level2">
 <h2>Acuity</h2>
@@ -578,7 +647,7 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 <!-- Measuring visual acuity HOTV and Lea symbols -->
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://s3.amazonaws.com/cdn.bernell.com/images/uploads/712_4817_thumb.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="https://s3.amazonaws.com/cdn.bernell.com/images/uploads/712_4817_thumb.jpg" class="quarto-figure quarto-figure-center"></a></p>
+<p><a href="https://s3.amazonaws.com/cdn.bernell.com/images/uploads/712_4817_thumb.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="https://s3.amazonaws.com/cdn.bernell.com/images/uploads/712_4817_thumb.jpg" class="quarto-figure quarto-figure-center"></a></p>
 </figure>
 </div>
 </section>
@@ -595,59 +664,93 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://www.psychophysics.uk/wp-content/uploads/2019/04/typical-contrast-sensitivity-function.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Contrast sensitivity function"><img data-src="https://www.psychophysics.uk/wp-content/uploads/2019/04/typical-contrast-sensitivity-function.jpg" alt="Contrast sensitivity function"></a></p>
+<p><a href="https://www.psychophysics.uk/wp-content/uploads/2019/04/typical-contrast-sensitivity-function.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Contrast sensitivity function"><img data-src="https://www.psychophysics.uk/wp-content/uploads/2019/04/typical-contrast-sensitivity-function.jpg" alt="Contrast sensitivity function"></a></p>
 <figcaption>Contrast sensitivity function</figcaption>
 </figure>
 </div>
 </section>
-<section class="slide level2">
-
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://www.researchgate.net/publication/313816987/figure/fig2/AS:614249734864898@1523459957272/Pelli-Robson-contrast-sensitivity-chart-Precision-Vision-LaSalle-IL-11-The_Q640.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Pelli-Robson Contrast Sensitivity Chart"><img data-src="https://www.researchgate.net/publication/313816987/figure/fig2/AS:614249734864898@1523459957272/Pelli-Robson-contrast-sensitivity-chart-Precision-Vision-LaSalle-IL-11-The_Q640.jpg" alt="Pelli-Robson Contrast Sensitivity Chart"></a></p>
-<figcaption>Pelli-Robson Contrast Sensitivity Chart</figcaption>
+<section id="section" class="slide level2 scrollable">
+<h2></h2>
+<div id="fig-pelli-robson" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pelli-robson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://precision-vision.com/cdn/shop/files/5014_1-scaled-1.jpg?v=1776157164&amp;width=1400" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;19: Pelli-Robson Contrast Sensitivity Chart"><img data-src="https://precision-vision.com/cdn/shop/files/5014_1-scaled-1.jpg?v=1776157164&amp;width=1400" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pelli-robson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19: Pelli-Robson Contrast Sensitivity Chart
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="color-perception" class="slide level2">
 <h2>Color perception</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Perceived color a function of activity in “R”, “G”, and “B” photoreceptors</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1416_Color_Sensitivity.jpg/1200px-1416_Color_Sensitivity.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Source: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1416_Color_Sensitivity.jpg/1200px-1416_Color_Sensitivity.jpg" alt="Source: Wikipedia"></a></p>
-<figcaption>Source: Wikipedia</figcaption>
+</div><div class="column" style="width:50%;">
+<div id="fig-color-perception" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-color-perception-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="http://hyperphysics.phy-astr.gsu.edu/hbase/vision/imgvis/colcon.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figure&nbsp;20: http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html"><img data-src="http://hyperphysics.phy-astr.gsu.edu/hbase/vision/imgvis/colcon.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-color-perception-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20: http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html
+</figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section id="wavelengths-are-continuous-but-are-perceived-colors" class="slide level2">
 <h2>Wavelengths are continuous, but are perceived colors?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://rmit.pressbooks.pub/app/uploads/sites/42/2022/10/visitble-spectrum-nm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"><img data-src="https://rmit.pressbooks.pub/app/uploads/sites/42/2022/10/visitble-spectrum-nm.png" alt="https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"></a></p>
+<p><a href="https://rmit.pressbooks.pub/app/uploads/sites/42/2022/10/visitble-spectrum-nm.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"><img data-src="https://rmit.pressbooks.pub/app/uploads/sites/42/2022/10/visitble-spectrum-nm.png" alt="https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"></a></p>
 <figcaption>https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/</figcaption>
 </figure>
 </div>
 </section>
 <section id="perceived-colors-seem-ordinal-but" class="slide level2">
 <h2>Perceived colors seem ordinal, but…</h2>
-<p><a href="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png"></a></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
+<li>Order “wraps” around the spectrum</li>
 <li>Color is a neuropsychological construct</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<div id="fig-color-wheel" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-color-wheel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Figure&nbsp;21: "><img data-src="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" id="fig-color-wheel"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-color-wheel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;21
+</figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="color-vision-anomalies" class="slide level2">
 <h2>Color vision anomalies</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Absence of or anomalies in photoreceptors</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig1_HTML.jpg?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="@Wong2011-ke Figure 1"><img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig1_HTML.jpg?as=webp" alt="Wong (2011) Figure 1"></a></p>
-<figcaption><span class="citation" data-cites="Wong2011-ke">Wong (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> Figure 1</figcaption>
+</div><div class="column" style="width:50%;">
+<div id="fig-ishihara" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ishihara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://bluefinvision.com/wp-content/uploads/2025/02/eye-tests-ishihara-colour-blind-test.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Figure&nbsp;22: https://bluefinvision.com/ishihara-colour-blind-test-online/"><img data-src="https://bluefinvision.com/wp-content/uploads/2025/02/eye-tests-ishihara-colour-blind-test.webp" style="width:55.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ishihara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;22: https://bluefinvision.com/ishihara-colour-blind-test-online/
+</figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section id="types" class="slide level2">
 <h2>Types</h2>
@@ -659,10 +762,14 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 <li>Tritanopia (impaired B/short wavelength)</li>
 </ul>
 </div><div class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://www.color-blindness.com/wp-content/images/Protanopia-Color-Spectrum.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="https://www.color-blindness.com/protanopia-red-green-color-blindness/"><img data-src="https://www.color-blindness.com/wp-content/images/Protanopia-Color-Spectrum.jpg" alt="https://www.color-blindness.com/protanopia-red-green-color-blindness/"></a></p>
-<figcaption>https://www.color-blindness.com/protanopia-red-green-color-blindness/</figcaption>
+<div id="fig-color-vision-anomolies" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-color-vision-anomolies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://www.color-blindness.com/wp-content/images/Protanopia-Color-Spectrum.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Figure&nbsp;23: https://www.color-blindness.com/protanopia-red-green-color-blindness/"><img data-src="https://www.color-blindness.com/wp-content/images/Protanopia-Color-Spectrum.jpg"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-color-vision-anomolies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23: https://www.color-blindness.com/protanopia-red-green-color-blindness/
+</figcaption>
 </figure>
 </div>
 </div></div>
@@ -671,7 +778,7 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 <h2>Color palettes</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig2_HTML.jpg?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="@Wong2011-ke Figure 2"><img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig2_HTML.jpg?as=webp" alt="Wong (2011) Figure 2"></a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig2_HTML.jpg?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="@Wong2011-ke Figure 2"><img data-src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig2_HTML.jpg?as=webp" alt="Wong (2011) Figure 2"></a></p>
 <figcaption><span class="citation" data-cites="Wong2011-ke">Wong (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> Figure 2</figcaption>
 </figure>
 </div>
@@ -710,23 +817,30 @@ Figure&nbsp;13: Normal color vision vs.&nbsp;protanopic (color blind) vision; So
 </div>
 </section></section>
 <section>
-<section id="main-points" class="title-slide slide level1 center">
-<h1>Main points</h1>
+<section id="wrap-up" class="title-slide slide level1 center">
+<h1>Wrap-up</h1>
 
 </section>
-<section class="slide level2">
-
+<section id="main-points" class="slide level2">
+<h2>Main points</h2>
 <ul>
 <li>Visual perception a <em>reconstruction</em> of reality</li>
 <li>Continuous pattern of light <span class="math inline">\(\rightarrow\)</span> intensity detected by 4 photoreceptor types</li>
 <li>Retina has non-uniform sensivity to light, so some information more easily detected</li>
+<li>Basic knowledge of vision can help generate better data visualizations</li>
+</ul>
+</section>
+<section id="next-time" class="slide level2">
+<h2>Next time</h2>
+<ul>
+<li>Work session
+<ul>
+<li><a href="../tutorials/tutorial-ggplot2-II.html">ggplot2 tutorial II</a></li>
+<li><a href="../exercises/ex-02-data-viz-outside-psych.html">Exercise 02</a></li>
+<li><a href="../exercises/ex-03-making-data.html">Exercise 03</a></li>
+</ul></li>
 </ul>
 </section></section>
-<section id="next-time" class="title-slide slide level1 center">
-<h1>Next time</h1>
-<p><em>From cognition to understanding</em></p>
-</section>
-
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
@@ -978,6 +1092,44 @@ Wong, Bang. 2011. <span>“Color Blindness.”</span> <em>Nature Methods</em> 8 
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

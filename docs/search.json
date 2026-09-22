@@ -1159,7 +1159,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#todays-topics",
     "title": "From stimulus to sensation",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nWhat is vision for?s\nInformation in light\nDetecting information in light",
+    "text": "Today’s topics\n\nWhat is vision for?\nInformation in light\nDetecting information in light",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1214,7 +1214,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#regarding-data-figures",
     "title": "From stimulus to sensation",
     "section": "Regarding data figures…",
-    "text": "Regarding data figures…\n\nWhat are the figure components\n\nData points, text, bars/segments/rings/boxes\n\nWhere are different components relative to one another, axes, etc.\nHow do figure components convey information about data?",
+    "text": "Regarding data figures…\n\nWhat are the figure components\n\nData points, text, bars/segments/rings/boxes\n\nWhere are different components relative to one another, axes, etc.\nHow do figure components convey information about data?\n\nBar heights = or not\nScatterplot points clustered or not",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1225,7 +1225,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#electromagnetic-spectrum",
     "title": "From stimulus to sensation",
     "section": "Electromagnetic spectrum",
-    "text": "Electromagnetic spectrum\n\n\n\n\n\n\nFigure 4: EM spectrum from Wikipedia",
+    "text": "Electromagnetic spectrum\n\n\n\n\n\n\nFigure 6: EM spectrum from Wikipedia",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1236,7 +1236,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#surfaces-reflectabsorb-or-emit",
     "title": "From stimulus to sensation",
     "section": "Surfaces reflect/absorb or emit",
-    "text": "Surfaces reflect/absorb or emit\n\n\n\n\n\n\nFigure 5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg",
+    "text": "Surfaces reflect/absorb or emit\n\n\n\n\n\n\nFigure 7: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1247,7 +1247,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#different-surfaces-different-reflectionabsorption",
     "title": "From stimulus to sensation",
     "section": "Different surfaces == Different reflection/absorption",
-    "text": "Different surfaces == Different reflection/absorption\n\nPerceived color differences correspond to different patterns of light reflection.\n\n\n\n\nRandeberg (2005)",
+    "text": "Different surfaces == Different reflection/absorption\n\n\n\nPerceived color differences correspond to different patterns of light reflection.\n\n\n\n\n\n\n\n\nFigure 8: Randeberg (2005)",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1269,7 +1269,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#spatial-patterns-on-retina",
     "title": "From stimulus to sensation",
     "section": "Spatial patterns on retina",
-    "text": "Spatial patterns on retina\n\ndepend on object geometry and orientation\n\n\n\n\n\n\n\nFigure 6: Source: https://thebrain.mcgill.ca",
+    "text": "Spatial patterns on retina\n\n\n\nDepend on object geometry and orientation\nSame angle on retina \\(\\rightarrow\\) different angle in world\nNeed more info to determine unambiguously many object properties\n\n\n\n\n\n\n\n\nFigure 9: Source: https://thebrain.mcgill.ca",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1291,7 +1291,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-eye",
     "title": "From stimulus to sensation",
     "section": "The eye",
-    "text": "The eye\n\n\n\n\n\n\nFigure 8",
+    "text": "The eye\n\n\n\n\n\n\nFigure 11",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1302,7 +1302,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#is-like-an-auto-focus-auto-exposure-camera",
     "title": "From stimulus to sensation",
     "section": "is like an auto-focus, auto-exposure camera…",
-    "text": "is like an auto-focus, auto-exposure camera…\n\n\n\n\n\n\nFigure 9",
+    "text": "is like an auto-focus, auto-exposure camera…\n\n\n\n\n\n\nFigure 12",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1357,7 +1357,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-retina",
     "title": "From stimulus to sensation",
     "section": "The retina…",
-    "text": "The retina…\n\n\n\n\n\n\nFigure 10\n\n\n\n\nsamples spatial patterns of light intensity & wavelength patterns",
+    "text": "The retina…\n\n\n\nsamples spatial patterns of light intensity & wavelength\n\n\n\n\n\n\n\n\nFigure 13",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1368,7 +1368,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelength-tuned-photoreceptors",
     "title": "From stimulus to sensation",
     "section": "‘Wavelength-tuned’ photoreceptors",
-    "text": "‘Wavelength-tuned’ photoreceptors\n\n\n\n\n\n\nFigure 11: Wikipedia1",
+    "text": "‘Wavelength-tuned’ photoreceptors\n\n\n\n\n\n\nFigure 14: Wikipedia1",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1379,7 +1379,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#consequences",
     "title": "From stimulus to sensation",
     "section": "Consequences",
-    "text": "Consequences\n\nMust move eyes to position highest resolution part of retina over target\nKeep track of sequence of eye movements and positions over time\nIntegrate sequence of samples over time",
+    "text": "Consequences\n\nMust move eyes in order to position highest resolution part of retina over target\nKeep track of sequence of eye movements and positions over time\nIntegrate sequence of samples over time",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1423,7 +1423,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-perception",
     "title": "From stimulus to sensation",
     "section": "Color perception",
-    "text": "Color perception\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\nSource: Wikipedia",
+    "text": "Color perception\n\n\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\n\n\n\n\nFigure 20: http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1445,7 +1445,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#perceived-colors-seem-ordinal-but",
     "title": "From stimulus to sensation",
     "section": "Perceived colors seem ordinal, but…",
-    "text": "Perceived colors seem ordinal, but…\n\n\nColor is a neuropsychological construct",
+    "text": "Perceived colors seem ordinal, but…\n\n\n\nOrder “wraps” around the spectrum\nColor is a neuropsychological construct\n\n\n\n\n\n\n\n\nFigure 21",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1456,7 +1456,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-vision-anomalies",
     "title": "From stimulus to sensation",
     "section": "Color vision anomalies",
-    "text": "Color vision anomalies\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\nWong (2011) Figure 1",
+    "text": "Color vision anomalies\n\n\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\n\n\n\n\nFigure 22: https://bluefinvision.com/ishihara-colour-blind-test-online/",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -1467,7 +1467,7 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#types",
     "title": "From stimulus to sensation",
     "section": "Types",
-    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\nhttps://www.color-blindness.com/protanopia-red-green-color-blindness/",
+    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\n\n\n\nFigure 23: https://www.color-blindness.com/protanopia-red-green-color-blindness/",
     "crumbs": [
       "Slides",
       "Wk 05 • Wed Sep 23"
@@ -4677,5 +4677,38 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#section",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#section",
+    "title": "From stimulus to sensation",
+    "section": "",
+    "text": "Figure 19: Pelli-Robson Contrast Sensitivity Chart",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#next-time",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#next-time",
+    "title": "From stimulus to sensation",
+    "section": "Next time",
+    "text": "Next time\n\nWork session\n\nggplot2 tutorial II\nExercise 02\nExercise 03",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
+  },
+  {
+    "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#main-points",
+    "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#main-points",
+    "title": "From stimulus to sensation",
+    "section": "Main points",
+    "text": "Main points\n\nVisual perception a reconstruction of reality\nContinuous pattern of light \\(\\rightarrow\\) intensity detected by 4 photoreceptor types\nRetina has non-uniform sensivity to light, so some information more easily detected\nBasic knowledge of vision can help generate better data visualizations",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   }
 ]

@@ -12,7 +12,7 @@ format: revealjs
 
 ## Today's topics
 
-- What is vision for?s
+- What is vision for?
 - Information in light
 - Detecting information in light
 
@@ -53,6 +53,47 @@ format: revealjs
   - Data points, text, bars/segments/rings/boxes
 - *Where* are different components relative to one another, axes, etc.
 - *How* do figure components convey information about data?
+  - Bar heights = or not
+  - Scatterplot points clustered or not
+  
+---
+
+```{r}
+#| label: fig-ice-cream-sample-ratings
+#| fig-cap: "Some sample ratings of ice cream flavors."
+library(ggplot2)
+library(dplyr)
+library(forcats)
+flavors <- c("vanilla", "chocolate", "strawberry", "mocha")
+ratings <- c(5, 4.9, 4.7, 3)
+ice_cream <- data.frame(flavor = flavors, rating = ratings)
+
+ice_cream |>
+  mutate(flavor = fct_rev(fct_reorder(flavor, rating))) |>
+  
+  ggplot() +
+  aes(x = flavor, y = rating, fill = flavor) +
+  geom_bar(stat = "identity") +
+  theme_classic() +
+  theme(legend.position = "none")
+```
+
+---
+
+```{r}
+#| label: fig-random-xy-sd-1.25
+#| fig-cap: "Some sample data where $x = y + N(0, 1.25)$."
+x = runif(n = 100, min = -1, max = 1)
+y = x + rnorm(n = 100, mean = 0, sd = 1.25)
+points_df <- data.frame(x = x, y = y)
+
+points_df |>
+  ggplot() +
+  aes(x = x, y = y) +
+  geom_point() +
+  theme(aspect.ratio = 1) +
+  theme_classic()
+```
 
 # Information in light
 
@@ -70,9 +111,15 @@ format: revealjs
 
 ## Different surfaces == Different reflection/absorption
 
+:::: {.columns}
+::: {.column width=50%}
 - Perceived color differences correspond to different patterns of light reflection.
 
-![@Randeberg2005-xn](https://www.researchgate.net/profile/Lise-Lyngsnes-Randeberg/publication/265397843/figure/fig8/AS:667691706773516@1536201516532/Reflectance-spectra-from-different-skin-types-measured-using-the-Ocean-Optics-SD-2000.png)
+:::
+::: {.column width=50%}
+![@Randeberg2005-xn](https://www.researchgate.net/profile/Lise-Lyngsnes-Randeberg/publication/265397843/figure/fig8/AS:667691706773516@1536201516532/Reflectance-spectra-from-different-skin-types-measured-using-the-Ocean-Optics-SD-2000.png){#fig-randeberg-2005}
+:::
+::::
 
 ## Artificial sources
 
@@ -80,9 +127,16 @@ format: revealjs
 
 ## Spatial patterns on retina
 
-- depend on object geometry and orientation
-
+:::: {.columns}
+::: {.column width=50%}
+- Depend on object geometry and orientation
+- Same angle on retina $\rightarrow$ different angle in world
+- Need more info to determine unambiguously many object properties 
+:::
+::: {.column width=50%}
 ![Source: https://thebrain.mcgill.ca](https://thebrain.mcgill.ca/flash/a/a_02/a_02_p/a_02_p_vis/a_02_p_vis_1p.jpg){#fig-retinal-projection}
+:::
+::::
 
 ---
 
@@ -136,9 +190,14 @@ format: revealjs
 
 ## The retina...
 
+:::: {.columns}
+::: {.column width=50%}
+- samples spatial patterns of light intensity & wavelength
+:::
+::: {.column width=50%}
 ![](https://www.feinberg.northwestern.edu/gfx/news/retina.jpg){fig-align="center" #fig-the-retina}
-
-- samples spatial patterns of light intensity & wavelength patterns
+:::
+::::
 
 ## 'Wavelength-tuned' photoreceptors
 
@@ -158,11 +217,11 @@ format: revealjs
 
 ### with different concentrations in different parts of the retina
 
-![Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Human_photoreceptor_distribution.svg/1200px-Human_photoreceptor_distribution.svg.png)
+![https://book.bionumbers.org/how-big-is-a-photoreceptor/](https://book.bionumbers.org/wp-content/uploads/2014/07/130-f2-RodCellDensity-12.png){#fig-book-bionumbers}
 
 ## Consequences
 
-- Must move eyes to position highest resolution part of retina over target
+- Must move eyes in order to position highest resolution part of retina over target
 - Keep track of sequence of eye movements and positions over time
 - Integrate sequence of samples over time
 
@@ -186,7 +245,7 @@ format: revealjs
 
 ### ...when eye misshapen for cornea  +lens
 
-![](https://ecpbuilder.com/wp-content/uploads/sites/530/2015/10/myopia.jpg)
+![https://www.poudrevalleyeyecare.com/blog/myopia-vs-hyperopia-key-differences-treatment-guide/](https://www.poudrevalleyeyecare.com/wp-content/uploads/2025/08/20250826_1905_Eye-Vision-Comparison_simple_compose_01k3khze04f7r9ayzvpjecz4rf-1024x682-1024x585.jpg){#fig-myopia-hyperopia width="75%"}
 
 ## Acuity 
 
@@ -212,15 +271,20 @@ format: revealjs
 
 ![Contrast sensitivity function](https://www.psychophysics.uk/wp-content/uploads/2019/04/typical-contrast-sensitivity-function.jpg)
 
----
+## {.scrollable}
 
-![Pelli-Robson Contrast Sensitivity Chart](https://www.researchgate.net/publication/313816987/figure/fig2/AS:614249734864898@1523459957272/Pelli-Robson-contrast-sensitivity-chart-Precision-Vision-LaSalle-IL-11-The_Q640.jpg)
+![Pelli-Robson Contrast Sensitivity Chart](https://precision-vision.com/cdn/shop/files/5014_1-scaled-1.jpg?v=1776157164&width=1400){#fig-pelli-robson width="80%"}
 
 ## Color perception
 
+:::: {.columns}
+::: {.column width=50%}
 - Perceived color a function of activity in "R", "G", and "B" photoreceptors
-
-![Source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1416_Color_Sensitivity.jpg/1200px-1416_Color_Sensitivity.jpg)
+:::
+::: {.column width=50%}
+![http://hyperphysics.phy-astr.gsu.edu/hbase/vision/colcon.html](http://hyperphysics.phy-astr.gsu.edu/hbase/vision/imgvis/colcon.png){#fig-color-perception}
+:::
+::::
 
 ## Wavelengths are continuous, but are perceived colors?
 
@@ -228,15 +292,26 @@ format: revealjs
 
 ## Perceived colors seem ordinal, but...
 
-![](https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png)
-
+:::: {.columns}
+::: {.column width=50%}
+- Order "wraps" around the spectrum
 - Color is a neuropsychological construct
+:::
+::: {.column width=50%}
+![](https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png){#fig-color-wheel}
+:::
+::::
 
 ## Color vision anomalies
 
+:::: {.columns}
+::: {.column width=50%}
 - Absence of or anomalies in photoreceptors
-
-![@Wong2011-ke Figure 1](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig1_HTML.jpg?as=webp)
+:::
+::: {.column width=50%}
+![https://bluefinvision.com/ishihara-colour-blind-test-online/](https://bluefinvision.com/wp-content/uploads/2025/02/eye-tests-ishihara-colour-blind-test.webp){#fig-ishihara width="55%"}
+:::
+::::
 
 ## Types
 
@@ -247,7 +322,7 @@ format: revealjs
 - Tritanopia (impaired B/short wavelength)
 :::
 ::: {.column width=60%}
-![https://www.color-blindness.com/protanopia-red-green-color-blindness/](https://www.color-blindness.com/wp-content/images/Protanopia-Color-Spectrum.jpg)
+![https://www.color-blindness.com/protanopia-red-green-color-blindness/](https://www.color-blindness.com/wp-content/images/Protanopia-Color-Spectrum.jpg){#fig-color-vision-anomolies}
 :::
 ::::
 
@@ -274,17 +349,21 @@ format: revealjs
 - What specific issues do you foresee?
 :::
 
-# Main points
+# Wrap-up
 
----
+## Main points
 
 - Visual perception a *reconstruction* of reality
 - Continuous pattern of light $\rightarrow$ intensity detected by 4 photoreceptor types
 - Retina has non-uniform sensivity to light, so some information more easily detected
+- Basic knowledge of vision can help generate better data visualizations
 
-# Next time
+## Next time
 
-*From cognition to understanding*
+- Work session
+  - [ggplot2 tutorial II](../tutorials/tutorial-ggplot2-II.qmd)
+  - [Exercise 02](../exercises/ex-02-data-viz-outside-psych.qmd)
+  - [Exercise 03](../exercises/ex-03-making-data.qmd)
 
 # Resources
 
