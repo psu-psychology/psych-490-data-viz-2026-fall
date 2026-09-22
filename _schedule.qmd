@@ -134,14 +134,14 @@
 
 - *Read*: 
   - @Cairo2013-hm, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193582613)
-- [Slides](404.qmd)
+- [Slides](slides/wk-05-2026-09-23-stim-to-sensation.qmd)
 
 ### Fri, Sep 25 {-}
 
 *Work Session: More ggplot*
 
 - {{< fa calendar >}} *Due* [Exercise 02](exercises/ex-02-data-viz-outside-psych.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448429) |
-- [Slides](404.qmd)
+- [Tutorial](tutorials/tutorial-ggplot2-II.qmd)
 
 ## Week 06 {- #week-06}
 

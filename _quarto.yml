@@ -44,10 +44,12 @@ website:
         href: slides/wk-04-2026-09-14-figure-types.qmd
       - text: "Wk 04 • Wed Sep 16"
         href: slides/wk-04-2026-09-16-figure-components.qmd
+      - text: "Wk 05 • Wed Sep 23"
+        href: slides/wk-05-2026-09-23-stim-to-sensation.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd
-        - exercises/ex-02-data-viz-outside-psych.qmd
+        - exercises/ex-02-data-viz-outsid
         - exercises/ex-03-making-data.qmd
         - exercises/ex-04-making-figs-ggplot.qmd
         - exercises/ex-05-tbd.qmd
@@ -58,6 +60,7 @@ website:
         - tutorials/tutorial-install-r-rstudio.qmd
         - tutorials/tutorial-making-data.qmd
         - tutorials/tutorial-ggplot2-I.qmd
+        - tutorials/tutorial-ggplot2-II.qmd
     - section: Supplemental
       contents:
         - supplemental/psych-sci-figs.qmd

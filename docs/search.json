@@ -54,7 +54,7 @@
     "href": "schedule.html#week-05",
     "title": "Schedule",
     "section": "Week 05",
-    "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise 02 |  Canvas dropbox |\nSlides",
+    "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise 02 |  Canvas dropbox |\nTutorial",
     "crumbs": [
       "Schedule"
     ]
@@ -227,35 +227,66 @@
     "href": "tutorials/tutorial-ggplot2-II.html",
     "title": "ggplot2 tutorial II",
     "section": "",
-    "text": "This page provides some activities for beginning users of the ggplot2 (Wickham, 2016) package. It is the second of two tutorials."
+    "text": "This page provides some activities for beginning users of the ggplot2 (Wickham, 2016) package. It is the second of two tutorials.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial II"
+    ]
   },
   {
     "objectID": "tutorials/tutorial-ggplot2-II.html#about",
     "href": "tutorials/tutorial-ggplot2-II.html#about",
     "title": "ggplot2 tutorial II",
     "section": "",
-    "text": "This page provides some activities for beginning users of the ggplot2 (Wickham, 2016) package. It is the second of two tutorials."
+    "text": "This page provides some activities for beginning users of the ggplot2 (Wickham, 2016) package. It is the second of two tutorials.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial II"
+    ]
   },
   {
     "objectID": "tutorials/tutorial-ggplot2-II.html#get-ready",
     "href": "tutorials/tutorial-ggplot2-II.html#get-ready",
     "title": "ggplot2 tutorial II",
     "section": "Get ready",
-    "text": "Get ready\n\nCreate a new project.\nCustomize the document\n\n\nChange the title\nAdd an author field\nAdd format text\n\nThe full header should look like this:\n\n\n\n---\ntitle: \"psych-490-ggplot-2026-09-25\"\nauthor: \"Your name\"\nformat:\n  html:\n    self_contained: true\n---\n\n\nFigure 1: Basic header information for your document for this tutorial.\n\n\n\n\nAdd a setup section\n\nBelow the setup header, we’re going to add an R code chunk like this:\n\n\n\n```{r}\nlibrary(ggplot2)\n```\n\n\nFigure 2: Bring ggplot into your local computational environment."
+    "text": "Get ready\n\nCreate a new Quarto project.\nCustomize the default document.\n\n\nChange the title.\nAdd an author field.\nAdd format text that will make your report self-contained.\nAdd a date field that will update everytime you render\n\nThe full header should look like this:\n\n\n\n---\ntitle: \"psych-490-ggplot-2026-09-25\"\nauthor: \"Your name\"\ndate: today\nformat:\n  html:\n    self_contained: true\n---\n\n\nFigure 1: Basic header information for your document for this tutorial.\n\n\n\n\nAdd a setup section\n\nBelow the setup header, we’re going to add an R code chunk like this:\n\n\n\n## Setup\n\nLoad required packages into the workspace.\n\n```{r}\nlibrary(ggplot2)\n```\n\n\nFigure 2: Bring ggplot into your local computational environment.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial II"
+    ]
   },
   {
     "objectID": "tutorials/tutorial-ggplot2-II.html#good-habits",
     "href": "tutorials/tutorial-ggplot2-II.html#good-habits",
     "title": "ggplot2 tutorial II",
     "section": "Good habits",
-    "text": "Good habits\nOne of the first things data analysts should do when we get our hands on a new dataset is answer some basic questions about it, specifically the following:\n\nHow many cases (data points) are in the dataset?\nHow many variables?\nWhich variables are nominal, which are ordinal, and which are continuous?\n\nR makes it easy to answeer these questions for us. We use the summary() and dim() (dimension) commands.\nAdd a section to your Quarto document for summary data about the diamonds dataset. Then, add the following code chunk.\n\n\n\n```{r}\nsummary(diamonds)\n\ndim(diamonds)\n```\n\n\nFigure 3: R code to provide summary information about the diamonds dataset.\n\n\n\nSave your Quarto document and render it.\n\n\n\n\n\n     carat               cut        color        clarity          depth      \n Min.   :0.2000   Fair     : 1610   D: 6775   SI1    :13065   Min.   :43.00  \n 1st Qu.:0.4000   Good     : 4906   E: 9797   VS2    :12258   1st Qu.:61.00  \n Median :0.7000   Very Good:12082   F: 9542   SI2    : 9194   Median :61.80  \n Mean   :0.7979   Premium  :13791   G:11292   VS1    : 8171   Mean   :61.75  \n 3rd Qu.:1.0400   Ideal    :21551   H: 8304   VVS2   : 5066   3rd Qu.:62.50  \n Max.   :5.0100                     I: 5422   VVS1   : 3655   Max.   :79.00  \n                                    J: 2808   (Other): 2531                  \n     table           price             x                y         \n Min.   :43.00   Min.   :  326   Min.   : 0.000   Min.   : 0.000  \n 1st Qu.:56.00   1st Qu.:  950   1st Qu.: 4.710   1st Qu.: 4.720  \n Median :57.00   Median : 2401   Median : 5.700   Median : 5.710  \n Mean   :57.46   Mean   : 3933   Mean   : 5.731   Mean   : 5.735  \n 3rd Qu.:59.00   3rd Qu.: 5324   3rd Qu.: 6.540   3rd Qu.: 6.540  \n Max.   :95.00   Max.   :18823   Max.   :10.740   Max.   :58.900  \n                                                                  \n       z         \n Min.   : 0.000  \n 1st Qu.: 2.910  \n Median : 3.530  \n Mean   : 3.539  \n 3rd Qu.: 4.040  \n Max.   :31.800  \n                 \n\n\n[1] 53940    10\n\n\n\n\nFigure 4: Output from Figure 3\n\n\n\nNotice that the summary() function does what it says; it provides a statistical summary of the variables in the dataset. For continuous variables, we get the minimum and maximum, the mean and median, and the 1st and 3rd quartile values. For discrete variables (cut, color, and clarity), we get informatoin about the number of cases at each level.\nThe dim() command tells us that there are 53,940 rows or individual cases and 10 columns or variables.\nHow do we know whether the discrete variables are ordered?\nOne way is to use the unique() command. If the dataset has recorded that a variable is ordinal, this command will show us.\n\n\n\n```{r}\nwith(diamonds, unique(cut))\n\nwith(diamonds, unique(color))\n\nwith(diamonds, unique(clarity))\n```\n\n\nFigure 5: Code to report the number of unique values in a variable and whether they have an intrinsic order.\n\n\n\n\n\n\n\n\n[1] Ideal     Premium   Good      Very Good Fair     \nLevels: Fair &lt; Good &lt; Very Good &lt; Premium &lt; Ideal\n\n\n[1] E I J H F G D\nLevels: D &lt; E &lt; F &lt; G &lt; H &lt; I &lt; J\n\n\n[1] SI2  SI1  VS1  VS2  VVS2 VVS1 I1   IF  \nLevels: I1 &lt; SI2 &lt; SI1 &lt; VS2 &lt; VS1 &lt; VVS2 &lt; VVS1 &lt; IF\n\n\n\n\nFigure 6: Output from Figure 5\n\n\n\nYou might add this to your document so that you have a reasonably complete summary of the dataset before we visualize it.\n\n\n\n\n\n\nWarningConsistency alert\n\n\n\nGilmore usually advocates for a visualize first, analyze later approach to data exploration. But here, we’re generating statistical summaries before we’ve done any ‘visualization.’ What gives?\nWell, Gilmore should probably revise his advice to say summarize before you analyze."
+    "text": "Good habits\nOne of the first things data analysts should do when we get our hands on a new dataset is answer some basic questions about it, specifically the following:\n\nHow many cases (data points) are in the dataset?\nHow many variables?\nWhich variables are nominal, which are ordinal, and which are continuous?\n\nR makes it easy to answer these questions for us. We use the summary() and dim() (dimension) commands.\nAdd a section to your Quarto document for summary data about the diamonds dataset. Then, add the following code chunk.\n\n\n\n```{r}\nsummary(diamonds)\n```\n\n\nFigure 3: R code to provide summary information about the diamonds dataset.\n\n\n\n\n\n\n```{r}\ndim(diamonds)\n```\n\n\nFigure 4: R code to provide summary information about the dimensions of the diamonds dataset.\n\n\n\nSave your Quarto document and render it.\n\n\n\n\n\n     carat               cut        color        clarity          depth      \n Min.   :0.2000   Fair     : 1610   D: 6775   SI1    :13065   Min.   :43.00  \n 1st Qu.:0.4000   Good     : 4906   E: 9797   VS2    :12258   1st Qu.:61.00  \n Median :0.7000   Very Good:12082   F: 9542   SI2    : 9194   Median :61.80  \n Mean   :0.7979   Premium  :13791   G:11292   VS1    : 8171   Mean   :61.75  \n 3rd Qu.:1.0400   Ideal    :21551   H: 8304   VVS2   : 5066   3rd Qu.:62.50  \n Max.   :5.0100                     I: 5422   VVS1   : 3655   Max.   :79.00  \n                                    J: 2808   (Other): 2531                  \n     table           price             x                y         \n Min.   :43.00   Min.   :  326   Min.   : 0.000   Min.   : 0.000  \n 1st Qu.:56.00   1st Qu.:  950   1st Qu.: 4.710   1st Qu.: 4.720  \n Median :57.00   Median : 2401   Median : 5.700   Median : 5.710  \n Mean   :57.46   Mean   : 3933   Mean   : 5.731   Mean   : 5.735  \n 3rd Qu.:59.00   3rd Qu.: 5324   3rd Qu.: 6.540   3rd Qu.: 6.540  \n Max.   :95.00   Max.   :18823   Max.   :10.740   Max.   :58.900  \n                                                                  \n       z         \n Min.   : 0.000  \n 1st Qu.: 2.910  \n Median : 3.530  \n Mean   : 3.539  \n 3rd Qu.: 4.040  \n Max.   :31.800  \n                 \n\n\n[1] 53940    10\n\n\n\n\nFigure 5: Output from Figure 3 and Figure 4.\n\n\n\nNotice that the summary() function does what it says; it provides a statistical summary of the variables in the dataset. For continuous variables, we get the minimum and maximum, the mean and median, and the 1st and 3rd quartile values. For discrete variables (cut, color, and clarity), we get informatoin about the number of cases at each level.\nThe dim() command tells us that there are 53,940 rows or individual cases and 10 columns or variables. That’s a lot of diamonds!\nHow do we know whether the discrete variables are ordered?\nOne way is to use the unique() command. If the dataset has recorded that a variable is ordinal, this command will show us.\n\n\n\n```{r}\nwith(diamonds, unique(cut))\n\nwith(diamonds, unique(color))\n\nwith(diamonds, unique(clarity))\n```\n\n\nFigure 6: Code to report the number of unique values in a variable and whether they have an intrinsic order.\n\n\n\n\n\n\n\n\n[1] Ideal     Premium   Good      Very Good Fair     \nLevels: Fair &lt; Good &lt; Very Good &lt; Premium &lt; Ideal\n\n\n[1] E I J H F G D\nLevels: D &lt; E &lt; F &lt; G &lt; H &lt; I &lt; J\n\n\n[1] SI2  SI1  VS1  VS2  VVS2 VVS1 I1   IF  \nLevels: I1 &lt; SI2 &lt; SI1 &lt; VS2 &lt; VS1 &lt; VVS2 &lt; VVS1 &lt; IF\n\n\n\n\nFigure 7: Output from Figure 6\n\n\n\nYou might add this to your document so that you have a reasonably complete summary of the dataset before we visualize it.\n\n\n\n\n\n\nWarningConsistency alert\n\n\n\nGilmore usually advocates for a visualize first, analyze later approach to data exploration. But here, we’re generating statistical summaries before we’ve done any visualization. What gives?\nWell, Gilmore should probably revise his advice to say summarize before you analyze.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial II"
+    ]
   },
   {
     "objectID": "tutorials/tutorial-ggplot2-II.html#summarizing-figures",
     "href": "tutorials/tutorial-ggplot2-II.html#summarizing-figures",
     "title": "ggplot2 tutorial II",
     "section": "Summarizing figures",
-    "text": "Summarizing figures\nA best practice is to generate summary figures for all the variables in your dataset. What should the figures summarize, or said in the language of ggplot, what geom_ should we use? Histograms (geom_histogram()), boxplots (geom_boxplot()), and violin (geom_violin()) plots are great for continuous data, but what about nominal (ordered or unordered) data?\nThe following code chunk provides these for carat and price.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = carat) +\n  geom_histogram()\n  \nggplot(data = diamonds) +\n  aes(x = carat, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4) +\n  ylab(\"\")\n```\n\n\nFigure 7: Code to generate a histogram and combined boxplot/violin plot of the carat variable.\n\n\n\nCreate a section of your Quarto document for these figures and make plots for the continuous variables."
+    "text": "Summarizing figures\n\nContinuous data\nA best practice is to generate summary figures for all the variables in your dataset. What should the figures summarize, or said in the language of ggplot, what geom_ should we use? Histograms (geom_histogram()), boxplots (geom_boxplot()), and violin (geom_violin()) plots are great for continuous data.\nThe following code chunk provides these for carat and price.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = carat) +\n  geom_histogram()\n  \nggplot(data = diamonds) +\n  aes(x = carat, y = \"\") +\n  geom_violin() +\n  geom_boxplot(alpha = .4) +\n  ylab(\"\")\n```\n\n\nFigure 8: Code to generate a histogram and combined boxplot/violin plot of the carat variable.\n\n\n\nCreate a section of your Quarto document for these figures and make plots for the continuous variables.\nHere’s what that should look like:\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\nFigure 9: Output from the code in Figure 8.\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: Output from the code in Figure 8.\n\n\n\n\n\n\n\nDiscrete data\nBut what about nominal (ordered or unordered) data? Will a histogram work here? Let’s try it. Try the code below in your Quarto document.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = cut) +\n  geom_histogram()\n```\n\n\nFigure 11: Code to generate a histogram of the cut variable. Note: This will throw an error.\n\n\n\nSo, the error message says no, that’s not quite right. But it does give us a hint at what might work. Let’s add stat = \"count\" to the histogram.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = cut) +\n  geom_histogram(stat = \"count\")\n```\n\n\nFigure 12: Code to generate a histogram of the cut variable with a changed stat parameter.\n\n\n\n\n\nWarning in geom_histogram(stat = \"count\"): Ignoring unknown parameters:\n`binwidth` and `bins`\n\n\n\n\n\n\n\n\nFigure 13: Output from the code in Figure 12.\n\n\n\n\n\nThat looks good.\nLet’s do the same thing for color.\n\n\n\n```{r}\nggplot(data = diamonds) +\n  aes(x = color) +\n  geom_histogram(stat = \"count\")\n```\n\n\nFigure 14: Code to generate a histogram of the color variable with stat = count parameter.\n\n\n\n\n\nWarning in geom_histogram(stat = \"count\"): Ignoring unknown parameters:\n`binwidth` and `bins`\n\n\n\n\n\n\n\n\nFigure 15: Output from the code in Figure 14.\n\n\n\n\n\nThat also looks good. Notice that the data are plotted in terms of the order of the color variable, not the category of the variable with the largest number of cases (G). The plot of cut naturally sorted in the same order as the underlying order of cut.\nHow would we reorder the plot from highest to lowest?\nThere are several ways to do this. We’re going to use a scheme that will be useful to you in the future.\nFirst, we need to install two new packages. Switch to your R console to do this.\n\n\n\ninstall.packages(c(\"dplyr\", \"forcats\"))\n\n\nFigure 16: Code to install the dplyr and forcats packages.\n\n\n\nThen, in your Quarto document, add a line to the code chunk in your Setup section so that it looks like the following:\n\n\n\n## Setup\n\nLoad required packages into the workspace.\n\n```{r}\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(forcats)\n```\n\n\nFigure 17: Quarto (and R) code to put at the top of your document so that these libraries are available for later chunks.\n\n\n\nWith those preliminaries finished, we can now use these libraries to sort the diamonds color data for our summary figure.\nHere is the code to add to your Quarto document.\n\n\n\n```{r}\ndiamonds |&gt;\n  mutate(color_ct = fct_infreq(color)) |&gt;\n                                        \n  ggplot() +\n  aes(x = color_ct) +\n  geom_histogram(stat = \"count\")\n\n```\n\n\nFigure 18: Code to render a sorted histogram/barplot of the color variable.\n\n\n\nLet’s unpack what’s happening here. First, we give ggplot2 input using a new command, the pipe (|&gt;). Think of the pipe as passing data to the next step. Next, the mutate() function creates a new variable called color_ct, short for color count. The value of color_ct comes from fct_infreq(color), a function in the forcats package. This package has all kinds of useful tools for manipulating factors, both ordered and unordered discrete variable. Learn more about it here. The mutate() command creates a new variable called color_ct using fct_infreq(color) and adds it to the dataset. We then pipe/pass this augmented dataset to ggplot, and the rest should be familiar to you already.\n\n1diamonds |&gt;\n2  mutate(color_ct = fct_infreq(color)) |&gt;\n  \n  ggplot() +\n3  aes(x = color_ct) +\n  geom_histogram(stat = \"count\")\n\n\n1\n\nPipe/send the diamonds dataset using the pipe |&gt; command.\n\n2\n\nUse mutate() from dplyr and fct_infreq() from forcats to create a new variable called color_ct.\n\n3\n\nUse the new color_ct variable to make the histogram.\n\n\n\n\n\n\n\n\n\n\nFigure 19: Output from the code in Figure 18.\n\n\n\n\n\n\n\n\n\n\n\nImportantSorting in a different direction\n\n\n\nRead the documentation for the fct_infreq() to see if you can figure out how to print the bars from low to high.\nHint: It involves the use of another forcats function called fct_rev().\n\n\nIf our category labels are more than single letters, it can be easier to rotate the figure. Here’s an easy way to do that.\n\ndiamonds |&gt;                               \n  mutate(color_ct = fct_infreq(color)) |&gt; \n  \n  ggplot() +\n  aes(x = color_ct) +                     \n  geom_histogram(stat = \"count\") +\n1  coord_flip()\n\n\n1\n\n“Flip” the coordinates so that the bars are horizontal.\n\n\n\n\n\n\n\n\n\n\nFigure 20: Output from the code in Figure 18.\n\n\n\n\n\nLet’s put the highest count on top.\n\n\n\n```{r}\ndiamonds |&gt;                               \n  mutate(color_ct = fct_rev(fct_infreq(color))) |&gt;\n  \n  ggplot() +\n  aes(x = color_ct) +                     \n  geom_histogram(stat = \"count\") +\n  coord_flip()                    \n```\n\n\nFigure 21: Code to flip the coordinates of our histogram.\n\n\n\nThe following shows what this should look like.\n\ndiamonds |&gt;                               \n1  mutate(color_ct = fct_rev(fct_infreq(color))) |&gt;\n  \n  ggplot() +\n  aes(x = color_ct) +                     \n  geom_histogram(stat = \"count\") +\n  coord_flip()                    \n\n\n1\n\nReverse the sort order using fct_rev().\n\n\n\n\n\n\n\n\n\n\nFigure 22: Output from the code in Figure 21.\n\n\n\n\n\n\n\n\n\n\n\nImportantWork iteratively\n\n\n\nMaking figures with code forces us to work one step at a time. That’s a good discipline, but can frustrate people who like to move quickly.\nMy recommendations are to create the most basic figure for your purpose, then add features (sorting, flipping coordinates, adding color, etc.) one by one. In fact, if you create separate figures for each new addition, then you can always go back to where you started.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial II"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-ggplot2-II.html#putting-it-all-together",
+    "href": "tutorials/tutorial-ggplot2-II.html#putting-it-all-together",
+    "title": "ggplot2 tutorial II",
+    "section": "Putting it all together",
+    "text": "Putting it all together\nYou now have enough knowledge to create figures that show the basic distributions of all of the variables in the diamonds dataset.\nIf you’re feeling ambitious, list other datasets built in to R or one of the packages we’ve used by running data() in the R console.\nPick one, run summary() and dim(), and even try a few simple plots. At this point, I suggest you use the following structure for your code:\n\n\n\n```{r}\ndataset_name |&gt;\n  \n  ggplot() +\n  aes(x = var_in_dataset) +\n  geom_histogram()\n```\n\n\nFigure 23: Gilmore’s recommended template for your plotting code.\n\n\n\nThis will set you up for success in future data plotting adventures.\nOf course, make sure to create a new section in your Quarto document and add some text indicating that you’ve moved to a different dataset. As the saying goes, be kind to your future (forgetful) self. Have fun!\n\n\n\n\n\n\nNoteAdding captions\n\n\n\nYou may notice that your figures do not have captions, but mine do. Adding captions isn’t hard, but I will need to create a separate tutorial for it.\nStay tuned.",
+    "crumbs": [
+      "Tutorials",
+      "*ggplot2* tutorial II"
+    ]
   },
   {
     "objectID": "exercises/ex-05-tbd.html",
@@ -449,7 +480,7 @@
     "href": "supplemental/other-field-figs.html#preparation",
     "title": "Findings: Data viz outside psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x9241e3ce8&gt;\n&lt;environment: 0x9241e59d8&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8120b6200&gt;\n&lt;environment: 0x8120b9620&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz outside psych sci"
@@ -1117,245 +1148,385 @@
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#last-week",
     "title": "From stimulus to sensation",
     "section": "Last week…",
-    "text": "Last week…\n\nggplot2 tutorial I\nFigure types"
+    "text": "Last week…\n\nggplot2 tutorial I\nFigure types",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#todays-topics",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#todays-topics",
     "title": "From stimulus to sensation",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nWhat is vision for?s\nInformation in light\nDetecting information in light"
+    "text": "Today’s topics\n\nWhat is vision for?s\nInformation in light\nDetecting information in light",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-at-a-distance",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-at-a-distance",
     "title": "From stimulus to sensation",
     "section": "Information at a distance",
-    "text": "Information at a distance\n\n\n\n\n\n\nFigure 1: James Webb space telescope deep field “Webb’s First Deep Field (NIRCam Image)” (n.d.)"
+    "text": "Information at a distance\n\n\n\n\n\n\nFigure 1: James Webb space telescope deep field “Webb’s First Deep Field (NIRCam Image)” (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#natures-speed-demonspeed-limit",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#natures-speed-demonspeed-limit",
     "title": "From stimulus to sensation",
     "section": "Nature’s speed demon/speed limit",
-    "text": "Nature’s speed demon/speed limit\n\nLight (+ radiowaves) circumnavigate the Earth in ~133 ms\n\n\n\n\n\n\n\nFigure 2: https://w3tm.org\n\n\n\n\nEarth ~8.3 light-minutes from the Sun"
+    "text": "Nature’s speed demon/speed limit\n\nLight (+ radiowaves) circumnavigate the Earth in ~133 ms\n\n\n\n\n\n\n\nFigure 2: https://w3tm.org\n\n\n\n\nEarth ~8.3 light-minutes from the Sun",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#where-is-itam-i",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#where-is-itam-i",
     "title": "From stimulus to sensation",
     "section": "Where is it/am I?",
-    "text": "Where is it/am I?\n\nAzimuth (left/right)\nElevation (up/down)\nDistance (near/far)\nOrientation"
+    "text": "Where is it/am I?\n\nAzimuth (left/right)\nElevation (up/down)\nDistance (near/far)\nOrientation",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-is-it",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-is-it",
     "title": "From stimulus to sensation",
     "section": "What is it?",
-    "text": "What is it?\n\nEdges \\(\\rightarrow\\)\nSurfaces \\(\\rightarrow\\)\nObjects or entities"
+    "text": "What is it?\n\nEdges \\(\\rightarrow\\)\nSurfaces \\(\\rightarrow\\)\nObjects or entities",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#regarding-data-figures",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#regarding-data-figures",
     "title": "From stimulus to sensation",
     "section": "Regarding data figures…",
-    "text": "Regarding data figures…\n\nWhat are the figure components\n\nData points, text, bars/segments/rings/boxes\n\nWhere are different components relative to one another, axes, etc.\nHow do figure components convey information about data?"
+    "text": "Regarding data figures…\n\nWhat are the figure components\n\nData points, text, bars/segments/rings/boxes\n\nWhere are different components relative to one another, axes, etc.\nHow do figure components convey information about data?",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#electromagnetic-spectrum",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#electromagnetic-spectrum",
     "title": "From stimulus to sensation",
     "section": "Electromagnetic spectrum",
-    "text": "Electromagnetic spectrum\n\n\n\n\n\n\nFigure 4: EM spectrum from Wikipedia"
+    "text": "Electromagnetic spectrum\n\n\n\n\n\n\nFigure 4: EM spectrum from Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#surfaces-reflectabsorb-or-emit",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#surfaces-reflectabsorb-or-emit",
     "title": "From stimulus to sensation",
     "section": "Surfaces reflect/absorb or emit",
-    "text": "Surfaces reflect/absorb or emit\n\n\n\n\n\n\nFigure 5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg"
+    "text": "Surfaces reflect/absorb or emit\n\n\n\n\n\n\nFigure 5: Source: https://www.cns.nyu.edu/~david/courses/perception/lecturenotes/color/color-slides/Slide14.jpg",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#different-surfaces-different-reflectionabsorption",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#different-surfaces-different-reflectionabsorption",
     "title": "From stimulus to sensation",
     "section": "Different surfaces == Different reflection/absorption",
-    "text": "Different surfaces == Different reflection/absorption\n\nPerceived color differences correspond to different patterns of light reflection.\n\n\n\n\nRandeberg (2005)"
+    "text": "Different surfaces == Different reflection/absorption\n\nPerceived color differences correspond to different patterns of light reflection.\n\n\n\n\nRandeberg (2005)",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#artificial-sources",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#artificial-sources",
     "title": "From stimulus to sensation",
     "section": "Artificial sources",
-    "text": "Artificial sources"
+    "text": "Artificial sources",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#spatial-patterns-on-retina",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#spatial-patterns-on-retina",
     "title": "From stimulus to sensation",
     "section": "Spatial patterns on retina",
-    "text": "Spatial patterns on retina\n\ndepend on object geometry and orientation\n\n\n\n\n\n\n\nFigure 6: Source: https://thebrain.mcgill.ca"
+    "text": "Spatial patterns on retina\n\ndepend on object geometry and orientation\n\n\n\n\n\n\n\nFigure 6: Source: https://thebrain.mcgill.ca",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-information",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#what-information",
     "title": "From stimulus to sensation",
     "section": "What information?",
-    "text": "What information?\n\nPosition\nLength\nArea\nColor\nTexture\n(Motion)"
+    "text": "What information?\n\nPosition\nLength\nArea\nColor\nTexture\n(Motion)",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-eye",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-eye",
     "title": "From stimulus to sensation",
     "section": "The eye",
-    "text": "The eye\n\n\n\n\n\n\nFigure 8"
+    "text": "The eye\n\n\n\n\n\n\nFigure 8",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#is-like-an-auto-focus-auto-exposure-camera",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#is-like-an-auto-focus-auto-exposure-camera",
     "title": "From stimulus to sensation",
     "section": "is like an auto-focus, auto-exposure camera…",
-    "text": "is like an auto-focus, auto-exposure camera…\n\n\n\n\n\n\nFigure 9"
+    "text": "is like an auto-focus, auto-exposure camera…\n\n\n\n\n\n\nFigure 9",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#part-of-a-self-stabilizing-system",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#part-of-a-self-stabilizing-system",
     "title": "From stimulus to sensation",
     "section": "part of a self-stabilizing system…",
-    "text": "part of a self-stabilizing system…\n\nBucalo (2015)"
+    "text": "part of a self-stabilizing system…\n\nBucalo (2015)",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#eye-head-body-system",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#eye-head-body-system",
     "title": "From stimulus to sensation",
     "section": "Eye + head + body system",
-    "text": "Eye + head + body system\n\n\n\n\n\n\nNote\n\n\n\nEye + head + body movements align and point the eyes\nEye + head + body movements stabilize the eyes\n\nWhen the observer moves\nWhen objects move"
+    "text": "Eye + head + body system\n\n\n\n\n\n\nNote\n\n\n\nEye + head + body movements align and point the eyes\nEye + head + body movements stabilize the eyes\n\nWhen the observer moves\nWhen objects move",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#demo",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#demo",
     "title": "From stimulus to sensation",
     "section": "Demo",
-    "text": "Demo\n\nMay I have a volunteer?"
+    "text": "Demo\n\nMay I have a volunteer?",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#image-formation",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#image-formation",
     "title": "From stimulus to sensation",
     "section": "Image formation",
-    "text": "Image formation\n\nEye’s optical components\n\nCornea (fixed refraction)\nIris/pupil (modifiable aperture)\nLens (modifiable refraction)\n\nCreate projection (image) on retina"
+    "text": "Image formation\n\nEye’s optical components\n\nCornea (fixed refraction)\nIris/pupil (modifiable aperture)\nLens (modifiable refraction)\n\nCreate projection (image) on retina",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-retina",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#the-retina",
     "title": "From stimulus to sensation",
     "section": "The retina…",
-    "text": "The retina…\n\n\n\n\n\n\nFigure 10\n\n\n\n\nsamples spatial patterns of light intensity & wavelength patterns"
+    "text": "The retina…\n\n\n\n\n\n\nFigure 10\n\n\n\n\nsamples spatial patterns of light intensity & wavelength patterns",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelength-tuned-photoreceptors",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelength-tuned-photoreceptors",
     "title": "From stimulus to sensation",
     "section": "‘Wavelength-tuned’ photoreceptors",
-    "text": "‘Wavelength-tuned’ photoreceptors\n\n\n\n\n\n\nFigure 11: Wikipedia1"
+    "text": "‘Wavelength-tuned’ photoreceptors\n\n\n\n\n\n\nFigure 11: Wikipedia1",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#consequences",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#consequences",
     "title": "From stimulus to sensation",
     "section": "Consequences",
-    "text": "Consequences\n\nMust move eyes to position highest resolution part of retina over target\nKeep track of sequence of eye movements and positions over time\nIntegrate sequence of samples over time"
+    "text": "Consequences\n\nMust move eyes to position highest resolution part of retina over target\nKeep track of sequence of eye movements and positions over time\nIntegrate sequence of samples over time",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-processing",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#information-processing",
     "title": "From stimulus to sensation",
     "section": "Information processing",
-    "text": "Information processing\n\nSeparate channels for short, medium, long wavelengths (cones): chromatic (color)\nBlack/gray/white or overall illumination (rods): achromatic (dark/light)\n~120 M rods + ~ 5 M cones (125 M) vs. professional cameras with 100 M pixels"
+    "text": "Information processing\n\nSeparate channels for short, medium, long wavelengths (cones): chromatic (color)\nBlack/gray/white or overall illumination (rods): achromatic (dark/light)\n~120 M rods + ~ 5 M cones (125 M) vs. professional cameras with 100 M pixels",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#acuity",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#acuity",
     "title": "From stimulus to sensation",
     "section": "Acuity",
-    "text": "Acuity\n\nDetail/pattern vision\nGrating acuity\nVernier\nSymbol/letter (optotype) acuity"
+    "text": "Acuity\n\nDetail/pattern vision\nGrating acuity\nVernier\nSymbol/letter (optotype) acuity",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#contrast-sensitivity",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#contrast-sensitivity",
     "title": "From stimulus to sensation",
     "section": "Contrast sensitivity",
-    "text": "Contrast sensitivity\n\nLight/dark ratio (contast)\nvs. spatial frequency (level of detail)\nContrast -&gt; edges; edges -&gt; shape/form\ne.g., driving in fog"
+    "text": "Contrast sensitivity\n\nLight/dark ratio (contast)\nvs. spatial frequency (level of detail)\nContrast -&gt; edges; edges -&gt; shape/form\ne.g., driving in fog",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-perception",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-perception",
     "title": "From stimulus to sensation",
     "section": "Color perception",
-    "text": "Color perception\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\nSource: Wikipedia"
+    "text": "Color perception\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\nSource: Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelengths-are-continuous-but-are-perceived-colors",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#wavelengths-are-continuous-but-are-perceived-colors",
     "title": "From stimulus to sensation",
     "section": "Wavelengths are continuous, but are perceived colors?",
-    "text": "Wavelengths are continuous, but are perceived colors?\n\n\n\nhttps://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"
+    "text": "Wavelengths are continuous, but are perceived colors?\n\n\n\nhttps://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#perceived-colors-seem-ordinal-but",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#perceived-colors-seem-ordinal-but",
     "title": "From stimulus to sensation",
     "section": "Perceived colors seem ordinal, but…",
-    "text": "Perceived colors seem ordinal, but…\n\n\nColor is a neuropsychological construct"
+    "text": "Perceived colors seem ordinal, but…\n\n\nColor is a neuropsychological construct",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-vision-anomalies",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-vision-anomalies",
     "title": "From stimulus to sensation",
     "section": "Color vision anomalies",
-    "text": "Color vision anomalies\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\nWong (2011) Figure 1"
+    "text": "Color vision anomalies\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\nWong (2011) Figure 1",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#types",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#types",
     "title": "From stimulus to sensation",
     "section": "Types",
-    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\nhttps://www.color-blindness.com/protanopia-red-green-color-blindness/"
+    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\nhttps://www.color-blindness.com/protanopia-red-green-color-blindness/",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-palettes",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#color-palettes",
     "title": "From stimulus to sensation",
     "section": "Color palettes",
-    "text": "Color palettes\n\n\n\nWong (2011) Figure 2"
+    "text": "Color palettes\n\n\n\nWong (2011) Figure 2",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#some-consequences-for-data-figures",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#some-consequences-for-data-figures",
     "title": "From stimulus to sensation",
     "section": "Some consequences for data figures",
-    "text": "Some consequences for data figures\n\nSize of visual elements (symbols, including text)\nContrast (light/dark or color)\nTextures of visual patterns\nSome colors more visible than others\n\nVischeck\n\nHow much visual scanning (# of eye movements)?"
+    "text": "Some consequences for data figures\n\nSize of visual elements (symbols, including text)\nContrast (light/dark or color)\nTextures of visual patterns\nSome colors more visible than others\n\nVischeck\n\nHow much visual scanning (# of eye movements)?",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#your-turn",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#your-turn",
     "title": "From stimulus to sensation",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\n\n\nEvaluating figures\n\n\n\nVisit our sample figures page and evaluate which figures might pose challenges for people with vision impairments.\nVisit our figures in psychological science and figures in business, journalism, and the arts pages with the same goal.\nWhat specific issues do you foresee?"
+    "text": "Your turn\n\n\n\n\n\n\nEvaluating figures\n\n\n\nVisit our sample figures page and evaluate which figures might pose challenges for people with vision impairments.\nVisit our figures in psychological science and figures in business, journalism, and the arts pages with the same goal.\nWhat specific issues do you foresee?",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#references",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#references",
     "title": "From stimulus to sensation",
     "section": "References",
-    "text": "References\n\n\n\n\nBucalo, Paige. 2015. Falcon Belly Dance. Youtube. https://www.youtube.com/watch?v=JGArTWOJtXs.\n\n\nCairo, Alberto. 2013. The Functional Art: An Introduction to Information Graphics and Visualization. New Riders Publishing.\n\n\nRandeberg, L. 2005. Diagnostic Applications of Diffuse Reflectance Spectroscopy. https://www.semanticscholar.org/paper/ec9450b79923e2e2152b54ab9241b60bc5374944.\n\n\n“Webb’s First Deep Field (NIRCam Image).” n.d. Accessed January 11, 2024. https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z.\n\n\nWong, Bang. 2011. “Color Blindness.” Nature Methods 8 (June): 441. https://doi.org/10.1038/nmeth.1618."
+    "text": "References\n\n\n\n\nBucalo, Paige. 2015. Falcon Belly Dance. Youtube. https://www.youtube.com/watch?v=JGArTWOJtXs.\n\n\nCairo, Alberto. 2013. The Functional Art: An Introduction to Information Graphics and Visualization. New Riders Publishing.\n\n\nRandeberg, L. 2005. Diagnostic Applications of Diffuse Reflectance Spectroscopy. https://www.semanticscholar.org/paper/ec9450b79923e2e2152b54ab9241b60bc5374944.\n\n\n“Webb’s First Deep Field (NIRCam Image).” n.d. Accessed January 11, 2024. https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z.\n\n\nWong, Bang. 2011. “Color Blindness.” Nature Methods 8 (June): 441. https://doi.org/10.1038/nmeth.1618.",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-05-2026-09-23-stim-to-sensation.html#footnotes",
     "href": "slides/wk-05-2026-09-23-stim-to-sensation.html#footnotes",
     "title": "From stimulus to sensation",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nBy BenRG - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7873848"
+    "text": "Footnotes\n\n\nBy BenRG - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7873848",
+    "crumbs": [
+      "Slides",
+      "Wk 05 • Wed Sep 23"
+    ]
   },
   {
     "objectID": "slides/wk-02-2026-09-04-introducing-quarto.html#announcements",
@@ -1903,7 +2074,7 @@
     "href": "index.html#course-structure",
     "title": "The Psychology of Data Visualization",
     "section": "Course structure",
-    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.\n\n\nCode\ngrateful::cite_packages(output=\"file\", out.dir = \"include/bib\")\n\n\nA large number of files (1572 in total) have been discovered.\nIt may take renv a long time to scan these files for dependencies.\nConsider using .renvignore to ignore irrelevant files.\nSee `\u001b]8;;x-r-help:renv::dependencies\u0007?renv::dependencies\u001b]8;;\u0007` for more information.\nSet `options(renv.config.dependencies.limit = Inf)` to disable this warning.\n\n\n\nCitation report available at include/bib/grateful-report.html\n\n\n[1] \"include/bib/grateful-report.html\"",
+    "text": "Course structure\nThis is a discussion-focused course. On most days we will discuss readings assigned prior to class. On many days, we will work together or individually on the assigned exercises, the final project, or another assignment. Please remember to bring your personal laptop computer. If you do not have a personal laptop, contact Dr. Gilmore so that we can make arrangements for you to participate fully in the course activities.",
     "crumbs": [
       "Home"
     ]
@@ -3976,7 +4147,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xa8798d578&gt;\n&lt;environment: 0xa8798c970&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xc6bcdb0a8&gt;\n&lt;environment: 0xc6bcda5b8&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -4073,55 +4244,35 @@
     "href": "exercises/ex-02-data-viz-outside-psych.html",
     "title": "Exercise 02",
     "section": "",
-    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#dates",
     "href": "exercises/ex-02-data-viz-outside-psych.html#dates",
     "title": "Exercise 02",
     "section": "",
-    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#goals",
     "href": "exercises/ex-02-data-viz-outside-psych.html#goals",
     "title": "Exercise 02",
     "section": "Goals",
-    "text": "Goals\nIn this exercise, you will work alone or a with a team of no more than two other classmates to find and describe data visualizations from business (for profit or not-for-profit), government, the arts, sports, or journalism. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used fields outside of psychological science.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "Goals\nIn this exercise, you will work alone or a with a team of no more than two other classmates to find and describe data visualizations from business (for profit or not-for-profit), government, the arts, sports, or journalism. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used fields outside of psychological science."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#assignment",
     "href": "exercises/ex-02-data-viz-outside-psych.html#assignment",
     "title": "Exercise 02",
     "section": "Assignment",
-    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#submit",
     "href": "exercises/ex-02-data-viz-outside-psych.html#submit",
     "title": "Exercise 02",
     "section": "Submit",
-    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above. As with Exercise 01, use write a complete five paragraph essay structure. APA document format is strongly recommended.\nIf you wish to submit a Quarto document (worth 3 extra credit points), adapt the Quarto template for Exercise 01. Embed the figures using the template code sequences, e.g. ![Figure caption here](link_to_figure_here). If you use the Quarto template, you do not follow the APA formatting guidelines except for your reference section.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above. As with Exercise 01, use write a complete five paragraph essay structure. APA document format is strongly recommended.\nIf you wish to submit a Quarto document (worth 3 extra credit points), adapt the Quarto template for Exercise 01. Embed the figures using the template code sequences, e.g. ![Figure caption here](link_to_figure_here). If you use the Quarto template, you do not follow the APA formatting guidelines except for your reference section."
   },
   {
     "objectID": "exercises/ex-01-figs-in-psych-sci.html",

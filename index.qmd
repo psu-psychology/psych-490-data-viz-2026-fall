@@ -7,5 +7,10 @@ title: "Home"
 {{< include _about.qmd >}}
 
 ```{r}
+#| warning: false
+#| message: false
+#| code-fold: false
+#| eval: false
+#| echo: false
 grateful::cite_packages(output="file", out.dir = "include/bib")
 ```

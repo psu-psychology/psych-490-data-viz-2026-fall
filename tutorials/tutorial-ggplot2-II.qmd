@@ -9,14 +9,22 @@ format:
 
 This page provides some activities for beginning users of the *ggplot2* [@ggplot2] package. It is the second of two tutorials.
 
+```{r}
+#| echo: false
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(forcats))
+```
+
 ## Get ready
 
-1. Create a new project.
+1. Create a new Quarto project.
 
-2. Customize the document
-  - Change the title
-  - Add an author field
-  - Add format text
+2. Customize the default document.
+  - Change the title.
+  - Add an author field.
+  - Add format text that will make your report self-contained.
+  - Add a date field that will update everytime you render
   
 The full header should look like this:
 
@@ -26,6 +34,7 @@ The full header should look like this:
 ---
 title: "psych-490-ggplot-2026-09-25"
 author: "Your name"
+date: today
 format:
   html:
     self_contained: true
@@ -41,8 +50,15 @@ Below the setup header, we're going to add an R code chunk like this:
 
 ::: {#fig-library-ggplot2}
 
-````{{r}}
+````markdown
+## Setup
+
+Load required packages into the workspace.
+
+```{{r}}
 library(ggplot2)
+```
+
 ````
 
 Bring ggplot into your local computational environment.
@@ -56,7 +72,7 @@ One of the first things data analysts should do when we get our hands on a new d
 - How many variables?
 - Which variables are nominal, which are ordinal, and which are continuous?
 
-R makes it easy to answeer these questions for us.
+R makes it easy to answer these questions for us.
 We use the `summary()` and `dim()` (dimension) commands.
 
 Add a section to your Quarto document for summary data about the *diamonds* dataset.
@@ -65,11 +81,17 @@ Then, add the following code chunk.
 ::: {#fig-summary-diamonds}
 ````{{r}}
 summary(diamonds)
-
-dim(diamonds)
 ````
 
 R code to provide summary information about the *diamonds* dataset.
+:::
+
+::: {#fig-dim-diamonds}
+````{{r}}
+dim(diamonds)
+````
+
+R code to provide summary information about the dimensions of the *diamonds* dataset.
 :::
 
 Save your Quarto document and render it.
@@ -78,19 +100,19 @@ Save your Quarto document and render it.
 
 ```{r}
 #| echo: false
-library(ggplot2)
 summary(diamonds)
 
 dim(diamonds)
 ```
 
-Output from @fig-summary-diamonds
+Output from @fig-summary-diamonds and @fig-dim-diamonds.
 :::
 
 Notice that the `summary()` function does what it says; it provides a statistical summary of the variables in the dataset.
 For continuous variables, we get the minimum and maximum, the mean and median, and the 1st and 3rd quartile values. For discrete variables (`cut`, `color`, and `clarity`), we get informatoin about the number of cases at each level.
 
 The `dim()` command tells us that there are 53,940 rows or individual cases and 10 columns or variables.
+That's a lot of diamonds!
 
 How do we know whether the discrete variables are ordered?
 
@@ -130,7 +152,7 @@ You might add this to your document so that you have a reasonably complete summa
 ## Consistency alert
 
 Gilmore usually advocates for a visualize first, analyze later approach to data exploration.
-But here, we're generating statistical summaries before we've done any 'visualization.'
+But here, we're generating statistical summaries before we've done any visualization.
 What gives?
 
 Well, Gilmore should probably revise his advice to say *summarize* before you analyze.
@@ -138,8 +160,10 @@ Well, Gilmore should probably revise his advice to say *summarize* before you an
 
 ## Summarizing figures
 
+### Continuous data
+
 A best practice is to generate summary figures for all the variables in your dataset.
-What should the figures summarize, or said in the language of *ggplot*, what `geom_` should we  use? Histograms (`geom_histogram()`), boxplots (`geom_boxplot()`), and violin (`geom_violin()`) plots are great for continuous data, but what about nominal (ordered or unordered) data?
+What should the figures summarize, or said in the language of *ggplot*, what `geom_` should we  use? Histograms (`geom_histogram()`), boxplots (`geom_boxplot()`), and violin (`geom_violin()`) plots are great for continuous data.
 
 The following code chunk provides these for `carat` and `price`.
 
@@ -161,5 +185,290 @@ Code to generate a histogram and combined boxplot/violin plot of the `carat` var
 :::
 
 Create a section of your Quarto document for these figures and make plots for the continuous variables.
+
+Here's what that should look like:
+
+```{r}
+#| label: fig-carat-histogram-violin-box
+#| fig-cap: "Output from the code in @fig-summary-figures-carat-price."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = carat) +
+  geom_histogram()
+  
+ggplot(data = diamonds) +
+  aes(x = carat, y = "") +
+  geom_violin() +
+  geom_boxplot(alpha = .4) +
+  ylab("")
+```
+
+### Discrete data
+
+But what about nominal (ordered or unordered) data? Will a histogram work here? Let's try it. Try the code below in your Quarto document.
+
+::: {#fig-histogram-cut}
+
+````{{r}}
+ggplot(data = diamonds) +
+  aes(x = cut) +
+  geom_histogram()
+````
+
+Code to generate a histogram of the `cut` variable. *Note*: This will throw an error.
+:::
+
+```{r}
+#| label: fig-cut-histogram
+#| fig-cap: "Output from the code in @fig-histogram-cut."
+#| eval: false
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = cut) +
+  geom_histogram()
+```
+
+So, the error message says no, that's not quite right. But it does give us a hint at what might work. Let's add `stat = "count"` to the histogram.
+
+::: {#fig-histogram-cut-stat-count}
+
+````{{r}}
+ggplot(data = diamonds) +
+  aes(x = cut) +
+  geom_histogram(stat = "count")
+````
+
+Code to generate a histogram of the `cut` variable with a changed `stat` parameter.
+:::
+
+```{r}
+#| label: fig-cut-histogram-stat-count
+#| fig-cap: "Output from the code in @fig-histogram-cut-stat-count."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = cut) +
+  geom_histogram(stat = "count")
+```
+
+That looks good.
+
+Let's do the same thing for `color`.
+
+::: {#fig-histogram-color-stat-count}
+
+````{{r}}
+ggplot(data = diamonds) +
+  aes(x = color) +
+  geom_histogram(stat = "count")
+````
+
+Code to generate a histogram of the `color` variable with `stat = count` parameter.
+:::
+
+```{r}
+#| label: fig-color-histogram-stat-count
+#| fig-cap: "Output from the code in @fig-histogram-color-stat-count."
+#| echo: false
+ggplot(data = diamonds) +
+  aes(x = color) +
+  geom_histogram(stat = "count")
+```
+
+That also looks good.
+Notice that the data are plotted in terms of the order of the `color` variable, not the category of the variable with the largest number of cases (G).
+The plot of `cut` naturally sorted in the same order as the underlying order of `cut`.
+
+How would we reorder the plot from highest to lowest?
+
+There are several ways to do this. 
+We're going to use a scheme that will be useful to you in the future.
+
+First, we need to install two new packages. Switch to your R console to do this.
+
+::: {#fig-install-dplyr-forcats}
+
+```r
+install.packages(c("dplyr", "forcats"))
+```
+
+Code to install the `dplyr` and `forcats` packages.
+:::
+
+Then, in your Quarto document, add a line to the code chunk in your `Setup` section so that it looks like the following:
+
+::: {#fig-amended-setup}
+
+````markdown
+## Setup
+
+Load required packages into the workspace.
+
+```{{r}}
+library(ggplot2)
+library(dplyr)
+library(forcats)
+```
+
+````
+
+Quarto (and R) code to put at the top of your document so that these libraries are available for later chunks.
+:::
+
+With those preliminaries finished, we can now use these libraries to sort the diamonds `color` data for our summary figure.
+
+Here is the code to add to your Quarto document.
+
+::: {#fig-histogram-color-sorted-dplyr-forcats}
+
+````{{r}}
+diamonds |>
+  mutate(color_ct = fct_infreq(color)) |>
+                                        
+  ggplot() +
+  aes(x = color_ct) +
+  geom_histogram(stat = "count")
+
+````
+
+Code to render a sorted histogram/barplot of the `color` variable.
+:::
+
+Let's unpack what's happening here.
+First, we give `ggplot2` input using a new command, the pipe (`|>`).
+Think of the pipe as passing data to the next step.
+Next, the `mutate()` function creates a new variable called `color_ct`, short for color count.
+The value of `color_ct` comes from `fct_infreq(color)`, a function in the `forcats` package.
+This package has all kinds of useful tools for manipulating factors, both ordered and unordered discrete variable.
+Learn more about it [here](https://forcats.tidyverse.org/index.html).
+The `mutate()` command creates a new variable called `color_ct` using `fct_infreq(color)` and adds it to the dataset.
+We then pipe/pass this augmented dataset to ggplot, and the rest should be familiar to you already.
+
+```{r}
+#| label: fig-color-histogram-stat-count-sorted
+#| fig-cap: "Output from the code in @fig-histogram-color-sorted-dplyr-forcats."
+#| echo: true
+diamonds |>                               #<1>
+  mutate(color_ct = fct_infreq(color)) |> #<2>
+  
+  ggplot() +
+  aes(x = color_ct) +                     #<3>
+  geom_histogram(stat = "count")
+```
+
+1. Pipe/send the diamonds dataset using the pipe `|>` command.
+2. Use `mutate()` from dplyr and `fct_infreq()` from forcats to create a new variable called `color_ct`.
+3. Use the new `color_ct` variable to make the histogram.
+
+::: {.callout-important}
+## Sorting in a different direction
+
+Read the [documentation](https://forcats.tidyverse.org/reference/fct_inorder.html) for the `fct_infreq()` to see if you can figure out how to print the bars from low to high.
+
+*Hint*: It involves the use of another `forcats` function called `fct_rev()`.
+
+:::
+
+If our category labels are more than single letters, it can be easier to rotate the figure.
+Here's an easy way to do that.
+
+```{r}
+#| label: fig-color-histogram-stat-count-sorted-rotate
+#| fig-cap: "Output from the code in @fig-histogram-color-sorted-dplyr-forcats."
+#| echo: true
+diamonds |>                               
+  mutate(color_ct = fct_infreq(color)) |> 
+  
+  ggplot() +
+  aes(x = color_ct) +                     
+  geom_histogram(stat = "count") +
+  coord_flip()                      #<1>
+```
+
+1. "Flip" the coordinates so that the bars are horizontal.
+
+Let's put the highest count on top.
+
+::: {#fig-color-histogram-stat-count-sorted-flipped-code}
+
+````{{r}}
+diamonds |>                               
+  mutate(color_ct = fct_rev(fct_infreq(color))) |>
+  
+  ggplot() +
+  aes(x = color_ct) +                     
+  geom_histogram(stat = "count") +
+  coord_flip()                    
+````
+
+Code to flip the coordinates of our histogram.
+:::
+
+The following shows what this should look like.
+
+```{r}
+#| label: fig-color-histogram-stat-count-sorted-rotate-flipped
+#| fig-cap: "Output from the code in @fig-color-histogram-stat-count-sorted-flipped-code."
+#| echo: true
+diamonds |>                               
+  mutate(color_ct = fct_rev(fct_infreq(color))) |> #<1>
+  
+  ggplot() +
+  aes(x = color_ct) +                     
+  geom_histogram(stat = "count") +
+  coord_flip()                    
+```
+
+1.  Reverse the sort order using `fct_rev()`.
+
+::: {.callout-important}
+## Work iteratively
+
+Making figures with code forces us to work one step at a time.
+That's a good discipline, but can frustrate people who like to move quickly.
+
+My recommendations are to create the most basic figure for your purpose, then
+add features (sorting, flipping coordinates, adding color, etc.) one by one.
+In fact, if you create separate figures for each new addition, then you can always go back to where you started.
+
+
+:::
+
+## Putting it all together
+
+You now have enough knowledge to create figures that show the basic distributions of all of the variables in the *diamonds* dataset.
+
+If you're feeling ambitious, list other datasets built in to R or one of the packages we've used by running `data()` in the R console.
+
+Pick one, run `summary()` and `dim()`, and even try a few simple plots.
+At this point, I suggest you use the following structure for your code:
+
+::: {#fig-code-template}
+
+````{{r}}
+dataset_name |>
+  
+  ggplot() +
+  aes(x = var_in_dataset) +
+  geom_histogram()
+````
+
+Gilmore's recommended template for your plotting code.
+:::
+
+This will set you up for success in future data plotting adventures.
+
+Of course, make sure to create a new section in your Quarto document and add some text indicating that you've moved to a different dataset.
+As the saying goes, be kind to your future (forgetful) self.
+Have fun!
+
+::: {.callout-note}
+## Adding captions
+
+You may notice that your figures do not have captions, but mine do.
+Adding captions isn't hard, but I will need to create a separate tutorial for it.
+
+Stay tuned.
+
+:::
 
 ## References
