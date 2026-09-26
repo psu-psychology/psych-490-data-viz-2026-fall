@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-09-26">
+
+<title>Visualizing sports data – PSYCH 490.007</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../supplemental/psych-sci-figs.html" rel="next">
+<link href="../tutorials/tutorial-ggplot2-II.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b798a8be8a3ce4da077f873ae8b6b3e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Visualizing sports data</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="quarto-announcement" data-announcement-id="2b268f99eb95aa526e15cdfe403977c4" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>No class on Monday, September 21, 2026.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">PSYCH 490.007</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../deadlines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deadlines</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policies</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../meta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Under the hood</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Slides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-01-2026-08-24-course-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Mon Aug 24</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-01-2026-08-26-semiotics-data-viz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Wed Aug 26</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-01-2026-08-28-introducing-r-rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Fri Aug 28</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-02-2026-08-31-govt-biz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 02 • Mon Aug 31</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-02-2026-09-02-art-sports-journ.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 02 • Wed Sep 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-02-2026-09-04-introducing-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 02 • Fri Sep 04</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-03-2026-09-09-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 03 • Wed Sep 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-03-2026-09-11-making-data-with-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 03 • Fri Sep 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-04-2026-09-14-figure-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 04 • Mon Sep 14</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-04-2026-09-16-figure-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 04 • Wed Sep 16</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-05-2026-09-23-stim-to-sensation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 05 • Wed Sep 23</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exercises</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-01-figs-in-psych-sci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-02-data-viz-outside-psych.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-04-making-figs-ggplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 04</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-05-tbd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 05</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-06-tbd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 06</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/final-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Project</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-install-r-rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing R and RStudio Desktop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Making and visualizing data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-ggplot2-I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><em>ggplot2</em> tutorial I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-ggplot2-II.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><em>ggplot2</em> tutorial II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-visualizing-sports-data.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Visualizing sports data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Supplemental</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental/psych-sci-figs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Findings: Data viz in psych sci</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental/other-field-figs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Findings: Data viz outside psych sci</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#install-the-package" id="toc-install-the-package" class="nav-link" data-scroll-target="#install-the-package">Install the package</a></li>
+  <li><a href="#get-ready" id="toc-get-ready" class="nav-link" data-scroll-target="#get-ready">Get ready</a></li>
+  <li><a href="#explore-the-package" id="toc-explore-the-package" class="nav-link" data-scroll-target="#explore-the-package">Explore the package</a></li>
+  <li><a href="#explore-the-schedule-database" id="toc-explore-the-schedule-database" class="nav-link" data-scroll-target="#explore-the-schedule-database">Explore the <code>schedule</code> database</a></li>
+  <li><a href="#univariate-plots" id="toc-univariate-plots" class="nav-link" data-scroll-target="#univariate-plots">Univariate plots</a>
+  <ul>
+  <li><a href="#home-team-score-1.0" id="toc-home-team-score-1.0" class="nav-link" data-scroll-target="#home-team-score-1.0">Home team score 1.0</a></li>
+  <li><a href="#away-team-score-2.0" id="toc-away-team-score-2.0" class="nav-link" data-scroll-target="#away-team-score-2.0">Away team score 2.0</a></li>
+  <li><a href="#total-score-3.0" id="toc-total-score-3.0" class="nav-link" data-scroll-target="#total-score-3.0">Total score 3.0</a></li>
+  <li><a href="#result-4.0" id="toc-result-4.0" class="nav-link" data-scroll-target="#result-4.0">Result 4.0</a></li>
+  <li><a href="#result-4.1" id="toc-result-4.1" class="nav-link" data-scroll-target="#result-4.1">Result 4.1</a></li>
+  </ul></li>
+  <li><a href="#multivariate-plots" id="toc-multivariate-plots" class="nav-link" data-scroll-target="#multivariate-plots">Multivariate plots</a>
+  <ul>
+  <li><a href="#faceting-5.0" id="toc-faceting-5.0" class="nav-link" data-scroll-target="#faceting-5.0">Faceting 5.0</a></li>
+  <li><a href="#scatterplot-6.0" id="toc-scatterplot-6.0" class="nav-link" data-scroll-target="#scatterplot-6.0">Scatterplot 6.0</a></li>
+  <li><a href="#scatterplot-6.1" id="toc-scatterplot-6.1" class="nav-link" data-scroll-target="#scatterplot-6.1">Scatterplot 6.1</a></li>
+  <li><a href="#scatterplot-6.2" id="toc-scatterplot-6.2" class="nav-link" data-scroll-target="#scatterplot-6.2">Scatterplot 6.2</a></li>
+  <li><a href="#fill-by-surface-7.0" id="toc-fill-by-surface-7.0" class="nav-link" data-scroll-target="#fill-by-surface-7.0">Fill by <code>surface</code> 7.0</a></li>
+  </ul></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your turn</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/tutorials/tutorial-visualizing-sports-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Visualizing sports data</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 26, 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">September 26, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>This page documents some activities related to the visualization of National Football League data using the <code>nflreadr</code> package.</p>
+</section>
+<section id="install-the-package" class="level2">
+<h2 class="anchored" data-anchor-id="install-the-package">Install the package</h2>
+<p>In your RStudio R console, install the <code>nflreadr</code> package as follows:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"nflreadr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="get-ready" class="level2">
+<h2 class="anchored" data-anchor-id="get-ready">Get ready</h2>
+<ol type="1">
+<li><p>Create a new Quarto project.</p></li>
+<li><p>Add <code>About</code> and <code>Setup</code> sections.</p></li>
+</ol>
+<p>In the <code>Setup</code> section, add a code chunk to bring the libraries we’re going to use into our workspace.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nflreadr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="explore-the-package" class="level2">
+<h2 class="anchored" data-anchor-id="explore-the-package">Explore the package</h2>
+<p>Until last week, I’d never played with this package. So, I’m still learning the ins and outs.</p>
+<p>One good command to use in this situation is <code>help()</code>. You can use it with a package or with a function.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"nflreadr"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>For this package (and datasets), that wasn’t very helpful, but it did point to this site: <a href="https://nflreadr.nflverse.com" class="uri">https://nflreadr.nflverse.com</a>. That was somewhat more useful.</p>
+<p>Ultimately, I found myself using RStudio’s tab-complete option to find a dataset that seemed like a good place to start. See <a href="#fig-tab-complete" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-tab-complete" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tab-complete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/nflreadr-load-tab-complete.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Results from typing nflreader::load_ into the R console and pausing a moment or two."><img src="../include/img/nflreadr-load-tab-complete.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tab-complete-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Results from typing <code>nflreader::load_</code> into the R console and pausing a moment or two.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="explore-the-schedule-database" class="level2">
+<h2 class="anchored" data-anchor-id="explore-the-schedule-database">Explore the <code>schedule</code> database</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nflreadr)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="ot">&lt;-</span> <span class="fu">load_schedules</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>What are the variables?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(nfl_sched)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7548   46</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nfl_sched)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      game_id         season         game_type         week       
+ Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  
+ N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  
+ N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  
+ Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  
+ Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  
+                  Max.   :2026                    Max.   :22.000  
+                                                                  
+      gameday          weekday          gametime        away_team   
+ Length   :7548   Length   :7548   Length   :7548   Length   :7548  
+ N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  
+ Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  
+                                   NAs      : 259                   
+                                                                    
+   away_score        home_team      home_score        location   
+ Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  
+ 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  
+ Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  
+ Mean   :20.96   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  
+ 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  
+ Max.   :59.00                    Max.   :70.0                   
+ NAs    :239                      NAs    :239                    
+     result            total           overtime          old_game_id  
+ Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  
+ 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  
+ Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  
+ Mean   :  2.332   Mean   : 44.26   Mean   :0.06102   Min.nchar:  10  
+ 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  
+ Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   
+ NAs    :239       NAs    :239      NAs    :239                       
+      gsis             nfl_detail_id         pfr            pff       
+ Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  
+ 1st Qu.:2.878e+04   N.unique : 272   N.unique :7548   1st Qu.: 2143  
+ Median :5.572e+04   N.blank  :   0   N.blank  :   0   Median : 3576  
+ Mean   :3.172e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7770  
+ 3rd Qu.:5.808e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.: 9592  
+ Max.   :1.999e+09   NAs      :7276                    Max.   :30653  
+ NAs    :224                                           NAs    :2936   
+        espn           ftn         away_rest       home_rest     
+ Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  
+ N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  
+ N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  
+ Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  
+ Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  
+                  Max.   :7290   Max.   :21.00   Max.   :16.000  
+                  NAs    :5602                                   
+ away_moneyline     home_moneyline     spread_line      away_spread_odds 
+ Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.00  
+ 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.00  
+ Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.00  
+ Mean   :   79.25   Mean   : -129.8   Mean   :  2.249   Mean   : -58.76  
+ 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.00  
+ Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.00  
+ NAs    :2189       NAs    :2189      NAs    :208       NAs    :2189     
+ home_spread_odds    total_line      under_odds        over_odds      
+ Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  
+ 1st Qu.:-110.00   1st Qu.:40.00   1st Qu.:-110.00   1st Qu.:-110.00  
+ Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  
+ Mean   : -58.75   Mean   :43.57   Mean   : -73.57   Mean   : -81.99  
+ 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  
+ Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  
+ NAs    :2189      NAs    :208     NAs    :2192      NAs    :2192     
+    div_game             roof           surface          temp     
+ Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6   
+ 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46   
+ Median :0.0000   N.blank  :   0   N.blank  :  44   Median : 59   
+ Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58   
+ 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71   
+ Max.   :1.0000   NAs      :  37                    Max.   :109   
+                                                    NAs    :2321  
+      wind            away_qb_id       home_qb_id      away_qb_name 
+ Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  
+ 1st Qu.: 5.000   N.unique : 335   N.unique : 319   N.unique : 337  
+ Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Mean   : 8.474   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  
+ 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  
+ Max.   :71.000   NAs      : 208   NAs      : 208   NAs      : 208  
+ NAs    :2321                                                       
+    home_qb_name      away_coach       home_coach        referee    
+ Length   :7548   Length   :7548   Length   :7548   Length   :7548  
+ N.unique : 322   N.unique : 177   N.unique : 177   N.unique :  91  
+ N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  
+ Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  
+ Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  
+ NAs      : 208                                     NAs      : 240  
+                                                                    
+     stadium_id        stadium    
+ Length   :7548   Length   :7548  
+ N.unique :  67   N.unique : 111  
+ N.blank  :   0   N.blank  :   0  
+ Min.nchar:   5   Min.nchar:   8  
+ Max.nchar:   5   Max.nchar:  35  
+                                  
+                                  </code></pre>
+</div>
+</div>
+<p>Some datasets have a data dictionary (<a href="#tbl-nflreadr-data-dict" class="quarto-xref">Table&nbsp;1</a>) This is <em>extremely</em> helpful. In fact, it should be standard practice, but too often is not.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dictionary_schedules <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="tbl-nflreadr-data-dict" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nflreadr-data-dict-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: A data dictionary for the <code>schedule</code> dataset from the <em>nflreadr</em> package.
+</figcaption>
+<div aria-describedby="tbl-nflreadr-data-dict-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">field</th>
+<th style="text-align: left;">data_type</th>
+<th style="text-align: left;">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">game_id</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">A human-readable game ID. It consists of: the season, an underscore, the two-digit week number, an underscore, the away team, an underscore, the home team. This is the primary identifier for a given game and is also used in various nflverse dataframes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">season</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The year of the NFL season. This represents the whole season, so regular season games that happen in January as well as playoff games will occur in the year after this number.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">game_type</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">What type of game? One of REG, WC, DIV, CON, SB</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">week</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The week of the NFL season the game occurs in. Please note that the <code>game_type</code> will differ for weeks &gt;= 18 because of the season expansion in 2021. Please use <code>game_type</code> to filter for regular season or postseason.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gameday</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">The date on which the game occurred.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">weekday</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">The day of the week on which the game occcured.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gametime</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">The kickoff time of the game. This is represented in 24-hour time and the Eastern time zone, regardless of what time zone the game was being played in.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">away_team</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">The away team.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">away_score</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The number of points the away team scored. Is NA for games which haven’t yet been played.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_team</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">The home team. Note that this contains the designated home team for games which no team is playing at home such as Super Bowls or NFL International games.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">home_score</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The number of points the home team scored. Is NA for games which haven’t yet been played.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">location</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Either Home if the home team is playing in their home stadium, or Neutral if the game is being played at a neutral location. This still shows as Home for games between the Giants and Jets even though they share the same home stadium.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">result</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The number of points the home team scored minus the number of points the visiting team scored. Equals h_score - v_score. Is NA for games which haven’t yet been played. Convenient for evaluating against the spread bets.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">total</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The sum of each team’s score in the game. Equals h_score + v_score. Is NA for games which haven’t yet been played. Convenient for evaluating over/under total bets.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">overtime</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Binary indicator of whether or not game went to overtime.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">old_game_id</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The old id for the game assigned by the NFL.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gsis</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The id of the game issued by the NFL Game Statistics &amp; Information System.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nfl_detail_id</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The id of the game issued by NFL Detail.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pfr</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The id of the game issued by <a href="https://www.pro-football-reference.com/">Pro-Football-Reference</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pff</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The id of the game issued by <a href="https://www.pff.com/">Pro Football Focus</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">espn</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The id of the game issued by <a href="https://www.espn.com/">ESPN</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">away_rest</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Days of rest that the away team is coming off of.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">home_rest</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Days of rest that the home team is coming off of.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">away_moneyline</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Odds for away team to win the game.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">home_moneyline</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Odds for home team to win the game.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">spread_line</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The spread line for the game. A positive number means the home team was favored by that many points, a negative number means the away team was favored by that many points. This lines up with the result column.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">away_spread_odds</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Odds for away team to cover the spread.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_spread_odds</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Odds for home team to cover the spread.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">total_line</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The total line for the game.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">under_odds</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Odds that total score of game would be under the total_line.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">over_odds</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Odds that total score of game would be over the total_ine.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">div_game</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">Binary indicator of whether or not game was played by 2 teams in the same division.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">roof</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">What was the status of the stadium’s roof? One of outdoors, open, closed, dome</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">surface</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">What type of ground the game was played on</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">temp</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The temperature at the stadium (for outdoors and open only)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">wind</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">The speed of the wind in miles/hour (for outdoors and open only)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">away_qb_id</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">GSIS Player ID for away team starting quarterback.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_qb_id</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">GSIS Player ID for home team starting quarterback.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">away_qb_name</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of away team starting QB.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_qb_name</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of home team starting QB.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">away_coach</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of the head coach of the away team</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">home_coach</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of the head coach of the home team</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">referee</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of the game’s referee (head official)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stadium_id</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">ID of Stadium that game took place in</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">stadium</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: left;">Name of the stadium</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="univariate-plots" class="level2">
+<h2 class="anchored" data-anchor-id="univariate-plots">Univariate plots</h2>
+<p>It’s often helpful to explore a big, complex dataset one variable at a time.</p>
+<section id="home-team-score-1.0" class="level3">
+<h3 class="anchored" data-anchor-id="home-team-score-1.0">Home team score 1.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 239 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-home-team-1.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-home-team-1.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-home-team-1.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: "><img src="include/fig/fig-home-team-1.0-1.png" id="fig-home-team-1.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-home-team-1.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="away-team-score-2.0" class="level3">
+<h3 class="anchored" data-anchor-id="away-team-score-2.0">Away team score 2.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> away_score) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 239 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-away-team-2.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-away-team-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-away-team-2.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: "><img src="include/fig/fig-away-team-2.0-1.png" id="fig-away-team-2.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-away-team-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-score-3.0" class="level3">
+<h3 class="anchored" data-anchor-id="total-score-3.0">Total score 3.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> total) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 239 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-total-score-3.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-total-score-3.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-total-score-3.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: "><img src="include/fig/fig-total-score-3.0-1.png" id="fig-total-score-3.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-total-score-3.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="result-4.0" class="level3">
+<h3 class="anchored" data-anchor-id="result-4.0">Result 4.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> result) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 239 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-result-4.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-result-4.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-result-4.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: "><img src="include/fig/fig-result-4.0-1.png" id="fig-result-4.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-result-4.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="result-4.1" class="level3">
+<h3 class="anchored" data-anchor-id="result-4.1">Result 4.1</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-12"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-12-1"><a href="#annotated-cell-12-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-12-2"><a href="#annotated-cell-12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="annotated-cell-12-3"><a href="#annotated-cell-12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> result) <span class="sc">+</span></span>
+<span id="annotated-cell-12-4"><a href="#annotated-cell-12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-12" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-12-5" class="code-annotation-target"><a href="#annotated-cell-12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Away team win &lt;---&gt; Home team win"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-12" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-12" data-code-lines="5" data-code-annotation="1">Use <code>xlab()</code> to change the label on the X axis to something a bit more descriptive.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-result-4.1" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-result-4.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-result-4.1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: "><img src="include/fig/fig-result-4.1-1.png" id="fig-result-4.1" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-result-4.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="multivariate-plots" class="level2">
+<h2 class="anchored" data-anchor-id="multivariate-plots">Multivariate plots</h2>
+<p>Making univariate plots is usually just the first phase of exploring a dataset. The real fun starts when you use multiple variables to try to see relationships between variables.</p>
+<p>The figures below introduce some multivariate plots some new tools that can make the data patterns easier to see.</p>
+<section id="faceting-5.0" class="level3">
+<h3 class="anchored" data-anchor-id="faceting-5.0">Faceting 5.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-13"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-13-1"><a href="#annotated-cell-13-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-13-2"><a href="#annotated-cell-13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="annotated-cell-13-3"><a href="#annotated-cell-13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> total) <span class="sc">+</span></span>
+<span id="annotated-cell-13-4"><a href="#annotated-cell-13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span>    </span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-13" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-13-5" class="code-annotation-target"><a href="#annotated-cell-13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>season)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-13" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-13" data-code-lines="5" data-code-annotation="1">Creates a faceted figure with a histogram for each of the values in <code>season</code>.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-faceting-5.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-faceting-5.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-faceting-5.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: "><img src="include/fig/fig-faceting-5.0-1.png" id="fig-faceting-5.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-faceting-5.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="scatterplot-6.0" class="level3">
+<h3 class="anchored" data-anchor-id="scatterplot-6.0">Scatterplot 6.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score, <span class="at">y =</span> away_score) <span class="sc">+</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()   </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 239 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-scatterplot-6.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatterplot-6.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-scatterplot-6.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;8: "><img src="include/fig/fig-scatterplot-6.0-1.png" id="fig-scatterplot-6.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-scatterplot-6.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Let’s try making the points more visible by adjusting the alpha parameter.</p>
+</section>
+<section id="scatterplot-6.1" class="level3">
+<h3 class="anchored" data-anchor-id="scatterplot-6.1">Scatterplot 6.1</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-15"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-15-1"><a href="#annotated-cell-15-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-15-2"><a href="#annotated-cell-15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="annotated-cell-15-3"><a href="#annotated-cell-15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score, <span class="at">y =</span> away_score) <span class="sc">+</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-15" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-15-4" class="code-annotation-target"><a href="#annotated-cell-15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.25</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-15" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-15" data-code-lines="4" data-code-annotation="1">An <code>alpha</code> of 0.25 means that the darkest shade is assigned to a point where there are 4 (e.g., <span class="math inline">\(1/\alpha\)</span>) identical points , and the lightest shade is assigned to a point where there are 0 identical points.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output-display">
+<div id="fig-scatterplot-6.1" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatterplot-6.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-scatterplot-6.1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;9: "><img src="include/fig/fig-scatterplot-6.1-1.png" id="fig-scatterplot-6.1" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-scatterplot-6.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Experiment!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I tried a number of different <code>alpha</code> values.</p>
+<p>The one in <a href="#fig-scatterplot-6.1" class="quarto-xref">Figure&nbsp;9</a> was not my favorite. What value do you prefer?</p>
+</div>
+</div>
+</section>
+<section id="scatterplot-6.2" class="level3">
+<h3 class="anchored" data-anchor-id="scatterplot-6.2">Scatterplot 6.2</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-16"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-16-1"><a href="#annotated-cell-16-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-16-2"><a href="#annotated-cell-16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="annotated-cell-16-3"><a href="#annotated-cell-16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score, <span class="at">y =</span> away_score) <span class="sc">+</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-16" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-16-4" class="code-annotation-target"><a href="#annotated-cell-16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-16" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-16-5" class="code-annotation-target"><a href="#annotated-cell-16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-16" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-16" data-code-lines="4" data-code-annotation="1">I found that <code>alpha</code>= 0.05 worked reasonably well.</span>
+</dd>
+<dt data-target-cell="annotated-cell-16" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-16" data-code-lines="5" data-code-annotation="2">We can add a best-fitting line to the point data using <code>geom_smooth()</code>. By setting <code>method="lm"</code> and <code>se=FALSE</code> we fit a linear regression line to the data.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-scatterplot-6.2" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatterplot-6.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-scatterplot-6.2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;10: "><img src="include/fig/fig-scatterplot-6.2-1.png" id="fig-scatterplot-6.2" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-scatterplot-6.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="fill-by-surface-7.0" class="level3">
+<h3 class="anchored" data-anchor-id="fill-by-surface-7.0">Fill by <code>surface</code> 7.0</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> total, <span class="at">fill =</span> surface) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 239 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-total-by-surface-7.0" class="quarto-float quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-total-by-surface-7.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-total-by-surface-7.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;11: "><img src="include/fig/fig-total-by-surface-7.0-1.png" id="fig-total-by-surface-7.0" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-total-by-surface-7.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn">Your turn</h2>
+<p>The <code>nflreadr</code> package has so many datasets, and we’ve only just scratched the surface of one of them. It’s likely that <a href="../exercises/ex-04-making-figs-ggplot.html">Exercise 04</a> (under construction) will involve visualizing data from this package or another sports dataset.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../tutorials/tutorial-ggplot2-II.html" class="pagination-link" aria-label="*ggplot2* tutorial II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><em>ggplot2</em> tutorial II</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../supplemental/psych-sci-figs.html" class="pagination-link" aria-label="Findings: Data viz in psych sci">
+        <span class="nav-page-text">Findings: Data viz in psych sci</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Visualizing sports data"</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: false</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## About</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>This page documents some activities related to the visualization of National Football League data using the <span class="in">`nflreadr`</span> package. </span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(ggplot2))</span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(dplyr))</span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(forcats))</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Install the package</span></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a>In your RStudio R console, install the <span class="in">`nflreadr`</span> package as follows:</span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"nflreadr"</span>)</span>
+<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Get ready</span></span>
+<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a new Quarto project.</span>
+<span id="cb30-32"><a href="#cb30-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-33"><a href="#cb30-33" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Add <span class="in">`About`</span> and <span class="in">`Setup`</span> sections.</span>
+<span id="cb30-34"><a href="#cb30-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-35"><a href="#cb30-35" aria-hidden="true" tabindex="-1"></a>In the <span class="in">`Setup`</span> section, add a code chunk to bring the libraries we're going to use into our workspace.</span>
+<span id="cb30-36"><a href="#cb30-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-39"><a href="#cb30-39" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-40"><a href="#cb30-40" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb30-41"><a href="#cb30-41" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nflreadr)</span>
+<span id="cb30-42"><a href="#cb30-42" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-43"><a href="#cb30-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-44"><a href="#cb30-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Explore the package</span></span>
+<span id="cb30-45"><a href="#cb30-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-46"><a href="#cb30-46" aria-hidden="true" tabindex="-1"></a>Until last week, I'd never played with this package.</span>
+<span id="cb30-47"><a href="#cb30-47" aria-hidden="true" tabindex="-1"></a>So, I'm still learning the ins and outs.</span>
+<span id="cb30-48"><a href="#cb30-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-49"><a href="#cb30-49" aria-hidden="true" tabindex="-1"></a>One good command to use in this situation is <span class="in">`help()`</span>.</span>
+<span id="cb30-50"><a href="#cb30-50" aria-hidden="true" tabindex="-1"></a>You can use it with a package or with a function.</span>
+<span id="cb30-51"><a href="#cb30-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-54"><a href="#cb30-54" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-55"><a href="#cb30-55" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="st">"nflreadr"</span>)</span>
+<span id="cb30-56"><a href="#cb30-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-57"><a href="#cb30-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-58"><a href="#cb30-58" aria-hidden="true" tabindex="-1"></a>For this package (and datasets), that wasn't very helpful, but it did point to this site: <span class="ot">&lt;https://nflreadr.nflverse.com&gt;</span>.</span>
+<span id="cb30-59"><a href="#cb30-59" aria-hidden="true" tabindex="-1"></a>That was somewhat more useful.</span>
+<span id="cb30-60"><a href="#cb30-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-61"><a href="#cb30-61" aria-hidden="true" tabindex="-1"></a>Ultimately, I found myself using RStudio's tab-complete option to find a dataset that seemed like a good place to start. See @fig-tab-complete.</span>
+<span id="cb30-62"><a href="#cb30-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-63"><a href="#cb30-63" aria-hidden="true" tabindex="-1"></a><span class="al">![Results from typing `nflreader::load_` into the R console and pausing a moment or two.](../include/img/nflreadr-load-tab-complete.png)</span>{#fig-tab-complete}</span>
+<span id="cb30-64"><a href="#cb30-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-65"><a href="#cb30-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## Explore the `schedule` database</span></span>
+<span id="cb30-66"><a href="#cb30-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-69"><a href="#cb30-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-70"><a href="#cb30-70" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nflreadr)</span>
+<span id="cb30-71"><a href="#cb30-71" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="ot">&lt;-</span> <span class="fu">load_schedules</span>()</span>
+<span id="cb30-72"><a href="#cb30-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-73"><a href="#cb30-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-74"><a href="#cb30-74" aria-hidden="true" tabindex="-1"></a>What are the variables?</span>
+<span id="cb30-75"><a href="#cb30-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-78"><a href="#cb30-78" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-79"><a href="#cb30-79" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(nfl_sched)</span>
+<span id="cb30-80"><a href="#cb30-80" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(nfl_sched)</span>
+<span id="cb30-81"><a href="#cb30-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-82"><a href="#cb30-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-83"><a href="#cb30-83" aria-hidden="true" tabindex="-1"></a>Some datasets have a data dictionary (@tbl-nflreadr-data-dict)</span>
+<span id="cb30-84"><a href="#cb30-84" aria-hidden="true" tabindex="-1"></a>This is *extremely* helpful.</span>
+<span id="cb30-85"><a href="#cb30-85" aria-hidden="true" tabindex="-1"></a>In fact, it should be standard practice, but too often is not.</span>
+<span id="cb30-86"><a href="#cb30-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-89"><a href="#cb30-89" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-90"><a href="#cb30-90" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-nflreadr-data-dict</span></span>
+<span id="cb30-91"><a href="#cb30-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "A data dictionary for the `schedule` dataset from the *nflreadr* package."</span></span>
+<span id="cb30-92"><a href="#cb30-92" aria-hidden="true" tabindex="-1"></a>dictionary_schedules <span class="sc">|&gt;</span></span>
+<span id="cb30-93"><a href="#cb30-93" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>()</span>
+<span id="cb30-94"><a href="#cb30-94" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-95"><a href="#cb30-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-96"><a href="#cb30-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Univariate plots</span></span>
+<span id="cb30-97"><a href="#cb30-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-98"><a href="#cb30-98" aria-hidden="true" tabindex="-1"></a>It's often helpful to explore a big, complex dataset one variable at a time.</span>
+<span id="cb30-99"><a href="#cb30-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-100"><a href="#cb30-100" aria-hidden="true" tabindex="-1"></a><span class="fu">### Home team score 1.0</span></span>
+<span id="cb30-101"><a href="#cb30-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-104"><a href="#cb30-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-105"><a href="#cb30-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-home-team-1.0</span></span>
+<span id="cb30-106"><a href="#cb30-106" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-107"><a href="#cb30-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-108"><a href="#cb30-108" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score) <span class="sc">+</span></span>
+<span id="cb30-109"><a href="#cb30-109" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span>
+<span id="cb30-110"><a href="#cb30-110" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-111"><a href="#cb30-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-112"><a href="#cb30-112" aria-hidden="true" tabindex="-1"></a><span class="fu">### Away team score 2.0</span></span>
+<span id="cb30-113"><a href="#cb30-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-116"><a href="#cb30-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-117"><a href="#cb30-117" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-away-team-2.0</span></span>
+<span id="cb30-118"><a href="#cb30-118" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-119"><a href="#cb30-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-120"><a href="#cb30-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> away_score) <span class="sc">+</span></span>
+<span id="cb30-121"><a href="#cb30-121" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span>
+<span id="cb30-122"><a href="#cb30-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-123"><a href="#cb30-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-124"><a href="#cb30-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### Total score 3.0</span></span>
+<span id="cb30-125"><a href="#cb30-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-128"><a href="#cb30-128" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-129"><a href="#cb30-129" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-total-score-3.0</span></span>
+<span id="cb30-130"><a href="#cb30-130" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-131"><a href="#cb30-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-132"><a href="#cb30-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> total) <span class="sc">+</span></span>
+<span id="cb30-133"><a href="#cb30-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span>
+<span id="cb30-134"><a href="#cb30-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-135"><a href="#cb30-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-136"><a href="#cb30-136" aria-hidden="true" tabindex="-1"></a><span class="fu">### Result 4.0</span></span>
+<span id="cb30-137"><a href="#cb30-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-140"><a href="#cb30-140" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-141"><a href="#cb30-141" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-result-4.0</span></span>
+<span id="cb30-142"><a href="#cb30-142" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-143"><a href="#cb30-143" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-144"><a href="#cb30-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> result) <span class="sc">+</span></span>
+<span id="cb30-145"><a href="#cb30-145" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span>
+<span id="cb30-146"><a href="#cb30-146" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-147"><a href="#cb30-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-148"><a href="#cb30-148" aria-hidden="true" tabindex="-1"></a><span class="fu">### Result 4.1</span></span>
+<span id="cb30-149"><a href="#cb30-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-152"><a href="#cb30-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-153"><a href="#cb30-153" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-result-4.1</span></span>
+<span id="cb30-154"><a href="#cb30-154" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-155"><a href="#cb30-155" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-156"><a href="#cb30-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> result) <span class="sc">+</span></span>
+<span id="cb30-157"><a href="#cb30-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb30-158"><a href="#cb30-158" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Away team win &lt;---&gt; Home team win"</span>) <span class="co">#&lt;1&gt;</span></span>
+<span id="cb30-159"><a href="#cb30-159" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-160"><a href="#cb30-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-161"><a href="#cb30-161" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use <span class="in">`xlab()`</span> to change the label on the X axis to something a bit more descriptive.</span>
+<span id="cb30-162"><a href="#cb30-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-163"><a href="#cb30-163" aria-hidden="true" tabindex="-1"></a><span class="fu">## Multivariate plots</span></span>
+<span id="cb30-164"><a href="#cb30-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-165"><a href="#cb30-165" aria-hidden="true" tabindex="-1"></a>Making univariate plots is usually just the first phase of exploring a dataset.</span>
+<span id="cb30-166"><a href="#cb30-166" aria-hidden="true" tabindex="-1"></a>The real fun starts when you use multiple variables to try to see relationships between variables.</span>
+<span id="cb30-167"><a href="#cb30-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-168"><a href="#cb30-168" aria-hidden="true" tabindex="-1"></a>The figures below introduce some multivariate plots some new tools that can make the data patterns easier to see.</span>
+<span id="cb30-169"><a href="#cb30-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-170"><a href="#cb30-170" aria-hidden="true" tabindex="-1"></a><span class="fu">### Faceting 5.0</span></span>
+<span id="cb30-171"><a href="#cb30-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-174"><a href="#cb30-174" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-175"><a href="#cb30-175" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-faceting-5.0</span></span>
+<span id="cb30-176"><a href="#cb30-176" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-177"><a href="#cb30-177" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-178"><a href="#cb30-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> total) <span class="sc">+</span></span>
+<span id="cb30-179"><a href="#cb30-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span>    </span>
+<span id="cb30-180"><a href="#cb30-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>season) <span class="co">#&lt;1&gt;</span></span>
+<span id="cb30-181"><a href="#cb30-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-182"><a href="#cb30-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-183"><a href="#cb30-183" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Creates a faceted figure with a histogram for each of the values in <span class="in">`season`</span>.</span>
+<span id="cb30-184"><a href="#cb30-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-185"><a href="#cb30-185" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scatterplot 6.0</span></span>
+<span id="cb30-186"><a href="#cb30-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-189"><a href="#cb30-189" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-190"><a href="#cb30-190" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scatterplot-6.0</span></span>
+<span id="cb30-191"><a href="#cb30-191" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-192"><a href="#cb30-192" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-193"><a href="#cb30-193" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score, <span class="at">y =</span> away_score) <span class="sc">+</span></span>
+<span id="cb30-194"><a href="#cb30-194" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()   </span>
+<span id="cb30-195"><a href="#cb30-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-196"><a href="#cb30-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-197"><a href="#cb30-197" aria-hidden="true" tabindex="-1"></a>Let's try making the points more visible by adjusting the alpha parameter.</span>
+<span id="cb30-198"><a href="#cb30-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-199"><a href="#cb30-199" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scatterplot 6.1</span></span>
+<span id="cb30-200"><a href="#cb30-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-203"><a href="#cb30-203" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-204"><a href="#cb30-204" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scatterplot-6.1</span></span>
+<span id="cb30-205"><a href="#cb30-205" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-206"><a href="#cb30-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-207"><a href="#cb30-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score, <span class="at">y =</span> away_score) <span class="sc">+</span></span>
+<span id="cb30-208"><a href="#cb30-208" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.25</span>)  <span class="co">#&lt;1&gt;</span></span>
+<span id="cb30-209"><a href="#cb30-209" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-210"><a href="#cb30-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-211"><a href="#cb30-211" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>An <span class="in">`alpha`</span> of 0.25 means that the darkest shade is assigned to a point where there are 4 (e.g., $1/\alpha$) identical points , and the lightest shade is assigned to a point where there are 0 identical points.</span>
+<span id="cb30-212"><a href="#cb30-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-213"><a href="#cb30-213" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb30-214"><a href="#cb30-214" aria-hidden="true" tabindex="-1"></a><span class="fu">## Experiment!</span></span>
+<span id="cb30-215"><a href="#cb30-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-216"><a href="#cb30-216" aria-hidden="true" tabindex="-1"></a>I tried a number of different <span class="in">`alpha`</span> values.</span>
+<span id="cb30-217"><a href="#cb30-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-218"><a href="#cb30-218" aria-hidden="true" tabindex="-1"></a>The one in @fig-scatterplot-6.1 was not my favorite.</span>
+<span id="cb30-219"><a href="#cb30-219" aria-hidden="true" tabindex="-1"></a>What value do you prefer?</span>
+<span id="cb30-220"><a href="#cb30-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-221"><a href="#cb30-221" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb30-222"><a href="#cb30-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-223"><a href="#cb30-223" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scatterplot 6.2</span></span>
+<span id="cb30-224"><a href="#cb30-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-227"><a href="#cb30-227" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-228"><a href="#cb30-228" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-scatterplot-6.2</span></span>
+<span id="cb30-229"><a href="#cb30-229" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-230"><a href="#cb30-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-231"><a href="#cb30-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> home_score, <span class="at">y =</span> away_score) <span class="sc">+</span></span>
+<span id="cb30-232"><a href="#cb30-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.05</span>) <span class="sc">+</span>             <span class="co">#&lt;1&gt;</span></span>
+<span id="cb30-233"><a href="#cb30-233" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="co">#&lt;2&gt;</span></span>
+<span id="cb30-234"><a href="#cb30-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-235"><a href="#cb30-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-236"><a href="#cb30-236" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>I found that <span class="in">`alpha`</span>= 0.05 worked reasonably well.</span>
+<span id="cb30-237"><a href="#cb30-237" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>We can add a best-fitting line to the point data using <span class="in">`geom_smooth()`</span>. By setting <span class="in">`method="lm"`</span> and <span class="in">`se=FALSE`</span> we fit a linear regression line to the data.</span>
+<span id="cb30-238"><a href="#cb30-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-239"><a href="#cb30-239" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fill by `surface` 7.0</span></span>
+<span id="cb30-240"><a href="#cb30-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-243"><a href="#cb30-243" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb30-244"><a href="#cb30-244" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-total-by-surface-7.0</span></span>
+<span id="cb30-245"><a href="#cb30-245" aria-hidden="true" tabindex="-1"></a>nfl_sched <span class="sc">|&gt;</span></span>
+<span id="cb30-246"><a href="#cb30-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb30-247"><a href="#cb30-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> total, <span class="at">fill =</span> surface) <span class="sc">+</span></span>
+<span id="cb30-248"><a href="#cb30-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span>
+<span id="cb30-249"><a href="#cb30-249" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb30-250"><a href="#cb30-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-251"><a href="#cb30-251" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your turn</span></span>
+<span id="cb30-252"><a href="#cb30-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-253"><a href="#cb30-253" aria-hidden="true" tabindex="-1"></a>The <span class="in">`nflreadr`</span> package has so many datasets, and we've only just scratched the surface of one of them.</span>
+<span id="cb30-254"><a href="#cb30-254" aria-hidden="true" tabindex="-1"></a>It's likely that <span class="co">[</span><span class="ot">Exercise 04</span><span class="co">](../exercises/ex-04-making-figs-ggplot.qmd)</span> (under construction) will involve visualizing data from this package or another sports dataset.</span>
+<span id="cb30-255"><a href="#cb30-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-256"><a href="#cb30-256" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright © Rick Gilmore • <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/tutorials/tutorial-visualizing-sports-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/rogilmore">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

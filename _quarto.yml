@@ -61,6 +61,7 @@ website:
         - tutorials/tutorial-making-data.qmd
         - tutorials/tutorial-ggplot2-I.qmd
         - tutorials/tutorial-ggplot2-II.qmd
+        - tutorials/tutorial-visualizing-sports-data.qmd
     - section: Supplemental
       contents:
         - supplemental/psych-sci-figs.qmd

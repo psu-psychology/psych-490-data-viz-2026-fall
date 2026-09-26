@@ -173,7 +173,7 @@
 *Work Session: Visualizing sports data*
 
 - {{< fa calendar >}} *Due* [Exercise-03](exercises/ex-03-making-data.qmd) | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448437) |
-- [Slides](404.qmd)
+- [Tutorial](tutorials/tutorial-visualizing-sports-data.qmd)
 
 ## Week 07 {- #week-07}
 

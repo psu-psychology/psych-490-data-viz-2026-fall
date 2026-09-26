@@ -37,7 +37,7 @@ author: "Your name"
 date: today
 format:
   html:
-    self_contained: true
+    embed-resources: true
 ---
 ```
 

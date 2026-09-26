@@ -1,0 +1,224 @@
+---
+title: "Visualizing sports data"
+format:
+  html:
+    code-fold: false
+---
+
+## About
+
+This page documents some activities related to the visualization of National Football League data using the `nflreadr` package. 
+
+```{r}
+#| echo: false
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(forcats))
+```
+
+## Install the package
+
+In your RStudio R console, install the `nflreadr` package as follows:
+
+```r
+install.packages("nflreadr")
+```
+
+## Get ready
+
+1. Create a new Quarto project.
+
+2. Add `About` and `Setup` sections.
+
+In the `Setup` section, add a code chunk to bring the libraries we're going to use into our workspace.
+
+```{r}
+library(ggplot2)
+library(nflreadr)
+```
+
+## Explore the package
+
+Until last week, I'd never played with this package.
+So, I'm still learning the ins and outs.
+
+One good command to use in this situation is `help()`.
+You can use it with a package or with a function.
+
+```{r}
+help("nflreadr")
+```
+
+For this package (and datasets), that wasn't very helpful, but it did point to this site: <https://nflreadr.nflverse.com>.
+That was somewhat more useful.
+
+Ultimately, I found myself using RStudio's tab-complete option to find a dataset that seemed like a good place to start. See @fig-tab-complete.
+
+![Results from typing `nflreader::load_` into the R console and pausing a moment or two.](../include/img/nflreadr-load-tab-complete.png){#fig-tab-complete}
+
+## Explore the `schedule` database
+
+```{r}
+library(nflreadr)
+nfl_sched <- load_schedules()
+```
+
+What are the variables?
+
+```{r}
+dim(nfl_sched)
+summary(nfl_sched)
+```
+
+Some datasets have a data dictionary (@tbl-nflreadr-data-dict)
+This is *extremely* helpful.
+In fact, it should be standard practice, but too often is not.
+
+```{r}
+#| label: tbl-nflreadr-data-dict
+#| tbl-cap: "A data dictionary for the `schedule` dataset from the *nflreadr* package."
+dictionary_schedules |>
+  kableExtra::kable()
+```
+
+## Univariate plots
+
+It's often helpful to explore a big, complex dataset one variable at a time.
+
+### Home team score 1.0
+
+```{r}
+#| label: fig-home-team-1.0
+nfl_sched |>
+  ggplot() +
+  aes(x = home_score) +
+  geom_histogram()
+```
+
+### Away team score 2.0
+
+```{r}
+#| label: fig-away-team-2.0
+nfl_sched |>
+  ggplot() +
+  aes(x = away_score) +
+  geom_histogram()
+```
+
+### Total score 3.0
+
+```{r}
+#| label: fig-total-score-3.0
+nfl_sched |>
+  ggplot() +
+  aes(x = total) +
+  geom_histogram()
+```
+
+### Result 4.0
+
+```{r}
+#| label: fig-result-4.0
+nfl_sched |>
+  ggplot() +
+  aes(x = result) +
+  geom_histogram()
+```
+
+### Result 4.1
+
+```{r}
+#| label: fig-result-4.1
+nfl_sched |>
+  ggplot() +
+  aes(x = result) +
+  geom_histogram() +
+  xlab("Away team win <---> Home team win") #<1>
+```
+
+1. Use `xlab()` to change the label on the X axis to something a bit more descriptive.
+
+## Multivariate plots
+
+Making univariate plots is usually just the first phase of exploring a dataset.
+The real fun starts when you use multiple variables to try to see relationships between variables.
+
+The figures below introduce some multivariate plots some new tools that can make the data patterns easier to see.
+
+### Faceting 5.0
+
+```{r}
+#| label: fig-faceting-5.0
+nfl_sched |>
+  ggplot() +
+  aes(x = total) +
+  geom_histogram() +    
+  facet_wrap(~season) #<1>
+```
+
+1. Creates a faceted figure with a histogram for each of the values in `season`.
+
+### Scatterplot 6.0
+
+```{r}
+#| label: fig-scatterplot-6.0
+nfl_sched |>
+  ggplot() +
+  aes(x = home_score, y = away_score) +
+  geom_point()   
+```
+
+Let's try making the points more visible by adjusting the alpha parameter.
+
+### Scatterplot 6.1
+
+```{r}
+#| label: fig-scatterplot-6.1
+nfl_sched |>
+  ggplot() +
+  aes(x = home_score, y = away_score) +
+  geom_point(alpha = 0.25)  #<1>
+```
+
+1. An `alpha` of 0.25 means that the darkest shade is assigned to a point where there are 4 (e.g., $1/\alpha$) identical points , and the lightest shade is assigned to a point where there are 0 identical points.
+
+::: {.callout-note}
+## Experiment!
+
+I tried a number of different `alpha` values.
+
+The one in @fig-scatterplot-6.1 was not my favorite.
+What value do you prefer?
+
+:::
+
+### Scatterplot 6.2
+
+```{r}
+#| label: fig-scatterplot-6.2
+nfl_sched |>
+  ggplot() +
+  aes(x = home_score, y = away_score) +
+  geom_point(alpha = 0.05) +             #<1>
+  geom_smooth(method = "lm", se = FALSE) #<2>
+```
+
+1. I found that `alpha`= 0.05 worked reasonably well.
+2. We can add a best-fitting line to the point data using `geom_smooth()`. By setting `method="lm"` and `se=FALSE` we fit a linear regression line to the data.
+
+### Fill by `surface` 7.0
+
+```{r}
+#| label: fig-total-by-surface-7.0
+nfl_sched |>
+  ggplot() +
+  aes(x = total, fill = surface) +
+  geom_histogram()
+```
+
+## Your turn
+
+The `nflreadr` package has so many datasets, and we've only just scratched the surface of one of them.
+It's likely that [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd) (under construction) will involve visualizing data from this package or another sports dataset.
+
+## References

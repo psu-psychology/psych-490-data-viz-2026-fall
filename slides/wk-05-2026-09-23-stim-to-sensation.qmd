@@ -243,9 +243,9 @@ points_df |>
 
 ---
 
-### ...when eye misshapen for cornea  +lens
+### ...when eye misshapen for cornea+lens
 
-![https://www.poudrevalleyeyecare.com/blog/myopia-vs-hyperopia-key-differences-treatment-guide/](https://www.poudrevalleyeyecare.com/wp-content/uploads/2025/08/20250826_1905_Eye-Vision-Comparison_simple_compose_01k3khze04f7r9ayzvpjecz4rf-1024x682-1024x585.jpg){#fig-myopia-hyperopia width="75%"}
+![https://heffingtons.com/myopia-vs-hyperopia/](https://heffingtons.com/wp-content/uploads/2018/08/Depositphotos_33238577_m-2015-1.jpg){#fig-myopia-hyperopia width="65%"}
 
 ## Acuity 
 
