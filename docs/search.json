@@ -658,55 +658,35 @@
     "href": "exercises/ex-02-data-viz-outside-psych.html",
     "title": "Exercise 02",
     "section": "",
-    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#dates",
     "href": "exercises/ex-02-data-viz-outside-psych.html#dates",
     "title": "Exercise 02",
     "section": "",
-    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "In-class work on Friday, September 4.\nDue on Friday, September 11 Friday, September 25, 2026.\nCanvas dropbox."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#goals",
     "href": "exercises/ex-02-data-viz-outside-psych.html#goals",
     "title": "Exercise 02",
     "section": "Goals",
-    "text": "Goals\nIn this exercise, you will work alone or a with a team of no more than two other classmates to find and describe data visualizations from business (for profit or not-for-profit), government, the arts, sports, or journalism. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used fields outside of psychological science.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "Goals\nIn this exercise, you will work alone or a with a team of no more than two other classmates to find and describe data visualizations from business (for profit or not-for-profit), government, the arts, sports, or journalism. You will add links to the visualizations to a common database that we will use for discussion about the types of visualizations and types of data that are commonly used fields outside of psychological science."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#assignment",
     "href": "exercises/ex-02-data-viz-outside-psych.html#assignment",
     "title": "Exercise 02",
     "section": "Assignment",
-    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "Assignment\n\nChoose at least three categories (business, government, the arts, sports, or journalism) to focus on.\nFor each category, find at least one visualization of data.\n\nTry to pick visualizations that are interesting to you in some way. You may also pick visualizations that you do not like for some reason. Be prepared to describe the reasons for your specific choices.\n\nAdd information about the visualizations to a Google Sheet that all of us will share:\n\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing\nSpecifically, enter your team identifier in the identifier field, the source in source_type, and the URL in the url field. Please say briefly why you chose this particular visualization. If you have any comments to add, put those in the comments field.\n\nIf you want to submit a write-up for evaluation, please select three (3) visualizations and evaluate them based on the following questions:\n\n\nWhat data are presented?\nWhat graphic elements of the visualization map to which aspects of the data?\nWhat prior knowledge does someone viewing these data need to have in order to understand the visualizations clearly?\nWhy is the source presenting these data?\nWhat story or message is the source trying to communicate and to what audience?\nHow effective is the message?\nAre the figures statistical visualizations or information visualizations (Infovis) as described by Gelman & Unwin (2013)?\n\n\n\n\n\n\n\nNote\n\n\n\nThe visualizations you choose to write about may be the ones you found yourself or those that others found and shared."
   },
   {
     "objectID": "exercises/ex-02-data-viz-outside-psych.html#submit",
     "href": "exercises/ex-02-data-viz-outside-psych.html#submit",
     "title": "Exercise 02",
     "section": "Submit",
-    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above. As with Exercise 01, use write a complete five paragraph essay structure. APA document format is strongly recommended.\nIf you wish to submit a Quarto document (worth 3 extra credit points), adapt the Quarto template for Exercise 01. Embed the figures using the template code sequences, e.g. ![Figure caption here](link_to_figure_here). If you use the Quarto template, you do not follow the APA formatting guidelines except for your reference section.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 02"
-    ]
+    "text": "Submit\n\nEveryone\n\nYour data to the shared Google Spreadsheet.\n\n\n\nStudents submitting write-ups\nStudents who want this submission to count for one of their four (4) required exercises should submit the following:\n\nA commentary where you describe three (3) figures your group found, answering the questions in 4. above. As with Exercise 01, use write a complete five paragraph essay structure. APA document format is strongly recommended.\nIf you wish to submit a Quarto document (worth 3 extra credit points), adapt the Quarto template for Exercise 01. Embed the figures using the template code sequences, e.g. ![Figure caption here](link_to_figure_here). If you use the Quarto template, you do not follow the APA formatting guidelines except for your reference section."
   },
   {
     "objectID": "about.html",
@@ -788,7 +768,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x9ea909348&gt;\n&lt;environment: 0x9ea909000&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xb3b2ff508&gt;\n&lt;environment: 0xb3b2ff1c0&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -3967,6 +3947,17 @@
     ]
   },
   {
+    "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-is-a-neuropsychological-construct",
+    "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-is-a-neuropsychological-construct",
+    "title": "From sensation to perception",
+    "section": "Color is a neuropsychological construct",
+    "text": "Color is a neuropsychological construct",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
+  },
+  {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#whats-a-reddish-green-look-like",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#whats-a-reddish-green-look-like",
     "title": "From sensation to perception",
@@ -4192,17 +4183,6 @@
     "title": "From sensation to perception",
     "section": "Closure",
     "text": "Closure\n ## Continuity\n\n\n\n\n\n\nFigure 23: Wikipedia",
-    "crumbs": [
-      "Slides",
-      "Wk 06 • Mon Sep 28"
-    ]
-  },
-  {
-    "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#continuity",
-    "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#continuity",
-    "title": "From sensation to perception",
-    "section": "Continuity",
-    "text": "Continuity\n\n\n\n\n\n\nFigure 24: Wikipedia",
     "crumbs": [
       "Slides",
       "Wk 06 • Mon Sep 28"
@@ -4873,7 +4853,7 @@
     "href": "supplemental/other-field-figs.html#preparation",
     "title": "Findings: Data viz outside psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xbf6e9d508&gt;\n&lt;environment: 0xbf6e9d230&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x70a87ce40&gt;\n&lt;environment: 0x70a87cb68&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz outside psych sci"
@@ -5039,6 +5019,17 @@
     "title": "Exercise 04",
     "section": "Goals",
     "text": "Goals\n\nCreate some simple figures in R using the ggplot2 package.\nGain an appreciation of the costs and benefits of scripting the generation of figures.\nLay the foundation for using ggplot2 to create more advanced and informative figures.",
+    "crumbs": [
+      "Exercises",
+      "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-04-making-figs-ggplot.html#assignment",
+    "href": "exercises/ex-04-making-figs-ggplot.html#assignment",
+    "title": "Exercise 04",
+    "section": "Assignment",
+    "text": "Assignment\n\nPick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from data()), such as diamonds or mtcars, or the one of the datasets from the nflreadr package we explored previously.\nCreate a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using ggplot2 to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.\n\n\nYour Quarto document should include an About section, a Setup section, and separate sections for each figure you generate.\n\n\nFor each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you derive from it, and how the visualization answers the question.\nFor each figure you make, write a short summary of the key insights and how the visualization answers the question.",
     "crumbs": [
       "Exercises",
       "Exercise 04"
@@ -5225,27 +5216,5 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
-  },
-  {
-    "objectID": "exercises/ex-04-making-figs-ggplot.html#assignment",
-    "href": "exercises/ex-04-making-figs-ggplot.html#assignment",
-    "title": "Exercise 04",
-    "section": "Assignment",
-    "text": "Assignment\n\nPick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from data()), such as diamonds or mtcars, or the one of the datasets from the nflreadr package we explored previously.\nCreate a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using ggplot2 to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.\n\n\nYour Quarto document should include an About section, a Setup section, and separate sections for each figure you generate.\n\n\nFor each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you derive from it, and how the visualization answers the question.\nFor each figure you make, write a short summary of the key insights and how the visualization answers the question.",
-    "crumbs": [
-      "Exercises",
-      "Exercise 04"
-    ]
-  },
-  {
-    "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-is-a-neuropsychological-construct",
-    "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-is-a-neuropsychological-construct",
-    "title": "From sensation to perception",
-    "section": "Color is a neuropsychological construct",
-    "text": "Color is a neuropsychological construct",
-    "crumbs": [
-      "Slides",
-      "Wk 06 • Mon Sep 28"
-    ]
   }
 ]
