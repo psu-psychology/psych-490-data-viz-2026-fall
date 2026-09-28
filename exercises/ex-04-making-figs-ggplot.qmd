@@ -12,12 +12,18 @@ This page is under construction.
 
 ## Dates {-}
 
-We'll work on this exercise in-class on Friday, September 18, and Friday, September 25, 2026.
-
-The write-up is [due]{.orange_due} on [Friday, October 2, 2026](../schedule.qmd#fri-oct-02).
+The write-up is [due]{.orange_due} on [Friday, October 9, 2026](../schedule.qmd#fri-oct-09).
 
 ## Goals {-}
 
 1. Create some simple figures in R using the `ggplot2` package.
 2. Gain an appreciation of the costs and benefits of scripting the generation of figures.
 3. Lay the foundation for using `ggplot2` to create more advanced and informative figures.
+
+## Assignment {-}
+
+0. Pick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from `data()`), such as *diamonds* or *mtcars*, or the one of the datasets from the `nflreadr` package we explored previously.
+1. Create a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using `ggplot2` to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.
+- Your Quarto document should include an `About` section, a `Setup` section, and separate sections for each figure you generate.
+2. For each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you derive from it, and how the visualization answers the question.
+2. For each figure you make, write a short summary of the key insights and how the visualization answers the question.

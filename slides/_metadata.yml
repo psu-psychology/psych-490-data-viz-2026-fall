@@ -28,3 +28,6 @@ custom-callout:
     color: "blue"
 filters:
   - custom-callout
+knitr:
+  opts_chunk:
+    fig.path: ../include/fig/

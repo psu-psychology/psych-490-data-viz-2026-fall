@@ -219,6 +219,7 @@ nfl_sched |>
 ## Your turn
 
 The `nflreadr` package has so many datasets, and we've only just scratched the surface of one of them.
-It's likely that [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd) (under construction) will involve visualizing data from this package or another sports dataset.
+It's likely that [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd) (under construction) will involve visualizing data from this package or another dataset.
+So, your work here will lay the groundwork for that exercise.
 
 ## References
