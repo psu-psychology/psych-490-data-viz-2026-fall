@@ -953,7 +953,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare-them",
     "title": "Figure components",
     "section": "Let’s compare them",
-    "text": "Let’s compare them\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    22     14     16     17     17     22     25     21     26     20 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: A barplot of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "text": "Let’s compare them\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    24     18     23     17     15     19     17     23     22     22 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: A barplot of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: A colorful barplot of the random favorite color data sorted by the number of responses.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -975,7 +975,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare",
     "title": "Figure components",
     "section": "Let’s compare",
-    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        4         6         2         4         1 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        2         5         6         3         3 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -3905,245 +3905,385 @@
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#announcements",
     "title": "From sensation to perception",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nExercise 03 due this Friday.",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#last-week",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#last-week",
     "title": "From sensation to perception",
     "section": "Last week…",
-    "text": "Last week…\n\nLight informs\n\nSpatial perception: Where, how far, how big?\nObject perception: What is it, what form, color, etc.\n\nEye\n\nHigh resolution info only in center\nSamples different categories of light wavelength\nMoves to stablize retina, scan environment"
+    "text": "Last week…\n\nLight informs\n\nSpatial perception: Where, how far, how big?\nObject perception: What is it, what form, color, etc.\n\nEye\n\nHigh resolution info only in center\nSamples different categories of light wavelength\nMoves to stablize retina, scan environment",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#today",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#today",
     "title": "From sensation to perception",
     "section": "Today",
-    "text": "Today\n\nWrap-up on sensation\nFrom sensation to perception"
+    "text": "Today\n\nWrap-up on sensation\nFrom sensation to perception",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-perception",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-perception",
     "title": "From sensation to perception",
     "section": "Color perception",
-    "text": "Color perception\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\n\n\n\nFigure 3: Source: Wikipedia"
+    "text": "Color perception\n\n\n\nPerceived color a function of activity in “R”, “G”, and “B” photoreceptors\n\n\n\n\n\n\n\n\nFigure 3: Source: Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#wavelengths-are-continuous-but-are-perceived-colors",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#wavelengths-are-continuous-but-are-perceived-colors",
     "title": "From sensation to perception",
     "section": "Wavelengths are continuous, but are perceived colors?",
-    "text": "Wavelengths are continuous, but are perceived colors?\n\n\n\n\n\n\nFigure 4: https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/"
+    "text": "Wavelengths are continuous, but are perceived colors?\n\n\n\n\n\n\nFigure 4: https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-the-visible-spectrum/",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#perceived-colors-seem-ordinal-but",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#perceived-colors-seem-ordinal-but",
     "title": "From sensation to perception",
     "section": "Perceived colors seem ordinal, but…",
-    "text": "Perceived colors seem ordinal, but…\n\n\n\n\n\n\nFigure 5\n\n\n\n\nColor is a neuropsychological construct"
+    "text": "Perceived colors seem ordinal, but…\n\n\n\n\n\n\nFigure 5",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#whats-a-reddish-green-look-like",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#whats-a-reddish-green-look-like",
     "title": "From sensation to perception",
     "section": "What’s a reddish-green look like?",
-    "text": "What’s a reddish-green look like?"
+    "text": "What’s a reddish-green look like?",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#whats-a-reddish-green-look-like-1",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#whats-a-reddish-green-look-like-1",
     "title": "From sensation to perception",
     "section": "What’s a reddish-green look like?",
-    "text": "What’s a reddish-green look like?"
+    "text": "What’s a reddish-green look like?",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#explanation",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#explanation",
     "title": "From sensation to perception",
     "section": "Explanation",
-    "text": "Explanation"
+    "text": "Explanation",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-vision-anomalies",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-vision-anomalies",
     "title": "From sensation to perception",
     "section": "Color vision anomalies",
-    "text": "Color vision anomalies\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\n\n\n\nFigure 6: Wong (2011) Figure 1"
+    "text": "Color vision anomalies\n\n\n\nAbsence of or anomalies in photoreceptors\n\n\n\n\n\n\n\n\nFigure 6: Wong (2011) Figure 1",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#types",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#types",
     "title": "From sensation to perception",
     "section": "Types",
-    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\n\n\n\nFigure 7: https://www.color-blindness.com/protanopia-red-green-color-blindness/"
+    "text": "Types\n\n\n\nProtanopia (impaired R/long wavelength)\nDeuteranopia (impaired G/medium wavelength)\nTritanopia (impaired B/short wavelength)\n\n\n\n\n\n\n\n\nFigure 7: https://www.color-blindness.com/protanopia-red-green-color-blindness/",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-palettes",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-palettes",
     "title": "From sensation to perception",
     "section": "Color palettes",
-    "text": "Color palettes\n\n\n\n\n\n\nFigure 8: Wong (2011) Figure 2"
+    "text": "Color palettes\n\n\n\n\n\n\nFigure 8: Wong (2011) Figure 2",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#some-consequences-for-data-figures",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#some-consequences-for-data-figures",
     "title": "From sensation to perception",
     "section": "Some consequences for data figures",
-    "text": "Some consequences for data figures\n\nSize of visual elements (symbols, including text)\nContrast (light/dark or color)\nTextures of visual patterns\nSome colors more visible than others\n\nVischeck\n\nHow much visual scanning (# of eye movements) required?"
+    "text": "Some consequences for data figures\n\nSize of visual elements (symbols, including text)\nContrast (light/dark or color)\nTextures of visual patterns\nSome colors more visible than others\n\nVischeck\n\nHow much visual scanning (# of eye movements) required?",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#visual-brains-love-differences",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#visual-brains-love-differences",
     "title": "From sensation to perception",
     "section": "Visual brains love differences",
-    "text": "Visual brains love differences\n\n\n\n\n\n\nFigure 9: Figure 6.1 Cairo (2013)"
+    "text": "Visual brains love differences\n\n\n\n\n\n\nFigure 9: Figure 6.1 Cairo (2013)",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#especially",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#especially",
     "title": "From sensation to perception",
     "section": "Especially …",
-    "text": "Especially …\n\nIntensity (light/dark)\n\nContrast\n\nColor\nPosition or size\nChanges in…"
+    "text": "Especially …\n\n\n\nIntensity (light/dark)\n\nContrast\n\nColor\nPosition or size\nChanges in…\n\n\n\n\n\n\n\n\nFigure 10: Kahneman (2013)",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#pre-attentive-vision",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#pre-attentive-vision",
     "title": "From sensation to perception",
     "section": "Pre-attentive vision",
-    "text": "Pre-attentive vision\n\nDetect quickly, with minimal effort\nUsually in a single glance/fixation\nvs. attentive vision\n\nOvert shifts of attention (eye movements)\nCovert shifts (“mind’s eye” movements)"
+    "text": "Pre-attentive vision\n\nDetect quickly, with minimal effort\nUsually in a single glance/fixation\nvs. attentive vision\n\nOvert shifts of attention (eye movements)\nCovert shifts (“mind’s eye” movements)",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#some-features-easierfaster-to-judge",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#some-features-easierfaster-to-judge",
     "title": "From sensation to perception",
     "section": "Some features easier/faster to judge",
-    "text": "Some features easier/faster to judge\n\n\n\n\n\n\nFigure 12: Figure 1 Cleveland and McGill (1984)"
+    "text": "Some features easier/faster to judge\n\n\n\n\n\n\nFigure 12: Figure 1 Cleveland and McGill (1984)",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#section",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#section",
     "title": "From sensation to perception",
     "section": "",
-    "text": "Figure 13: Figure 6.12 Cairo (2013)"
+    "text": "Figure 13: Figure 6.12 Cairo (2013)",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#gestalt-school",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#gestalt-school",
     "title": "From sensation to perception",
     "section": "Gestalt school",
-    "text": "Gestalt school\n\nGestalt: “whole form”\nCan psychological phenomena be understood from their parts?\nOr is the whole greater than the sum of the parts?"
+    "text": "Gestalt school\n\nGestalt: “whole form”\nCan psychological phenomena be understood from their parts?\nOr is the whole greater than the sum of the parts?",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#reification",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#reification",
     "title": "From sensation to perception",
     "section": "Reification",
-    "text": "Reification\n\n\n\nPerception is constructive\n\n\n\n\n\n\n\n\nFigure 14: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Reification\n\n\n\nPerception is constructive\n\n\n\n\n\n\n\n\nFigure 14: https://en.wikipedia.org/wiki/Gestalt_psychology",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#multistability",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#multistability",
     "title": "From sensation to perception",
     "section": "Multistability",
-    "text": "Multistability\n\n\n\nPerception is multistable\n\n\n\n\n\n\n\n\nFigure 16: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Multistability\n\n\n\nPerception is multistable\n\n\n\n\n\n\n\n\nFigure 16: Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#invariance",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#invariance",
     "title": "From sensation to perception",
     "section": "Invariance",
-    "text": "Invariance\n\n\n\nAnd yet…\nPerception is invariant\n\n\n\n\n\n\n\n\nFigure 17: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Invariance\n\n\n\nAnd yet…\nPerception is invariant\n\n\n\n\n\n\n\n\nFigure 17: https://en.wikipedia.org/wiki/Gestalt_psychology",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#gestalt-laws-of-perceptual-grouping",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#gestalt-laws-of-perceptual-grouping",
     "title": "From sensation to perception",
     "section": "Gestalt “laws” of perceptual grouping",
-    "text": "Gestalt “laws” of perceptual grouping\n\nProximity\nSimilarity\nConnectedness\nClosure\nContinuity\nSymmetry"
+    "text": "Gestalt “laws” of perceptual grouping\n\nProximity\nSimilarity\nConnectedness\nClosure\nContinuity\nSymmetry",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#proximity",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#proximity",
     "title": "From sensation to perception",
     "section": "Proximity",
-    "text": "Proximity\n\n\n\n\n\n\nFigure 18: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Proximity\n\n\n\n\n\n\nFigure 18: https://en.wikipedia.org/wiki/Gestalt_psychology",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#similarity",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#similarity",
     "title": "From sensation to perception",
     "section": "Similarity",
-    "text": "Similarity\n\n\n\n\n\n\nFigure 20: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Similarity\n\n\n\n\n\n\nFigure 20: Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#similar-but-not-too-similar",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#similar-but-not-too-similar",
     "title": "From sensation to perception",
     "section": "Similar but not too similar",
-    "text": "Similar but not too similar\n\n\n\n\n\n\nFigure 22"
+    "text": "Similar but not too similar\n\n\n\n\n\n\nFigure 22",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#closure",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#closure",
     "title": "From sensation to perception",
     "section": "Closure",
-    "text": "Closure\n\n\n\n\n\n\nFigure 23: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Closure\n ## Continuity\n\n\n\n\n\n\nFigure 23: Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#continuity",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#continuity",
     "title": "From sensation to perception",
     "section": "Continuity",
-    "text": "Continuity\n\n\n\n\n\n\nFigure 24: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Continuity\n\n\n\n\n\n\nFigure 24: Wikipedia",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#connectedness",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#connectedness",
     "title": "From sensation to perception",
     "section": "Connectedness",
-    "text": "Connectedness\n\n\n\n\n\n\nFigure 27: Figure 6.8 Cairo (2013)"
+    "text": "Connectedness\n\n\n\n\n\n\nFigure 26: Figure 6.8 Cairo (2013)",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#symmetry",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#symmetry",
     "title": "From sensation to perception",
     "section": "Symmetry",
-    "text": "Symmetry\n\n\n\n\n\n\nFigure 29: https://en.wikipedia.org/wiki/Gestalt_psychology"
+    "text": "Symmetry\n\n\n\n\n\n\nFigure 28: https://en.wikipedia.org/wiki/Gestalt_psychology",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#your-turn",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#your-turn",
     "title": "From sensation to perception",
     "section": "Your turn",
-    "text": "Your turn\n\nFind a compelling illustration of one of the Gestalt phenomena (non-data visualization-related)\nFind an illustration of one of the Gestalt phenomena in a data visualization\nAdd findings (and URLs) here:\n\nhttps://docs.google.com/spreadsheets/d/1G8U_IPMP0x17Sfl-FQfF37DN19bDQFm0GO_UmQQzv7Q/edit?usp=sharing"
+    "text": "Your turn\n\nFind a compelling illustration of one of the Gestalt phenomena (non-data visualization-related)\nFind an illustration of one of the Gestalt phenomena in a data visualization\nAdd findings (and URLs) here:\n\nhttps://docs.google.com/spreadsheets/d/1G8U_IPMP0x17Sfl-FQfF37DN19bDQFm0GO_UmQQzv7Q/edit?usp=sharing",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#putting-it-all-together",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#putting-it-all-together",
     "title": "From sensation to perception",
     "section": "Putting it all together",
-    "text": "Putting it all together\n # Wrap-up"
+    "text": "Putting it all together\n # Wrap-up",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#main-points",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#main-points",
     "title": "From sensation to perception",
     "section": "Main points",
-    "text": "Main points\n\nVision is reconstructive\nPre-attentive vs. attentive vision\nGestalt principles describe feature grouping"
+    "text": "Main points\n\nVision is reconstructive\nPre-attentive vs. attentive vision\nGestalt principles describe feature grouping",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#next-time",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#next-time",
     "title": "From sensation to perception",
     "section": "Next time",
-    "text": "Next time\n\nFrom cognition to understanding"
+    "text": "Next time\n\nFrom cognition to understanding",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#references",
     "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#references",
     "title": "From sensation to perception",
     "section": "References",
-    "text": "References\n\n\n\n\nCairo, Alberto. 2013. The Functional Art: An Introduction to Information Graphics and Visualization. New Riders Publishing.\n\n\nCleveland, William S, and Robert McGill. 1984. “Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods.” Journal of the American Statistical Association 79 (September): 531–54. https://doi.org/10.1080/01621459.1984.10478080.\n\n\nFew, Stephen. 2004. Show Me the Numbers: Designing Tables and Graphs to Enlighten. Analytics Press.\n\n\nKahneman, Daniel. 2013. Thinking, Fast and Slow. 1st edition. Farrar, Straus; Giroux. https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555.\n\n\nMarvinGayeVEVO. 2019. Marvin Gaye - What’s Going on (Official Video 2019). YouTube. https://www.youtube.com/watch?v=o5TmORitlKk.\n\n\nWade, Nicholas J. 2015. “How Were Eye Movements Recorded Before Yarbus?” Perception 44 (August): 851–83. https://doi.org/10.1177/0301006615594947.\n\n\nWong, Bang. 2011. “Color Blindness.” Nature Methods 8 (June): 441. https://doi.org/10.1038/nmeth.1618."
+    "text": "References\n\n\n\n\nCairo, Alberto. 2013. The Functional Art: An Introduction to Information Graphics and Visualization. New Riders Publishing.\n\n\nCleveland, William S, and Robert McGill. 1984. “Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods.” Journal of the American Statistical Association 79 (September): 531–54. https://doi.org/10.1080/01621459.1984.10478080.\n\n\nFew, Stephen. 2004. Show Me the Numbers: Designing Tables and Graphs to Enlighten. Analytics Press.\n\n\nKahneman, Daniel. 2013. Thinking, Fast and Slow. 1st edition. Farrar, Straus; Giroux. https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555.\n\n\nWade, Nicholas J. 2015. “How Were Eye Movements Recorded Before Yarbus?” Perception 44 (August): 851–83. https://doi.org/10.1177/0301006615594947.\n\n\nWong, Bang. 2011. “Color Blindness.” Nature Methods 8 (June): 441. https://doi.org/10.1038/nmeth.1618.",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
+    ]
   },
   {
     "objectID": "slides/wk-02-2026-09-02-art-sports-journ.html#mortality-trends-by-education-level",
@@ -4469,7 +4609,7 @@
     "href": "slides/wk-01-2026-08-28-introducing-r-rstudio.html#console",
     "title": "Work session: Introducing R & RStudio",
     "section": "Console",
-    "text": "Console\n\n\n\nSay something (type)\nPress &lt;enter&gt; or &lt;return&gt; key\nGet an answer\n\n\n\nTry this: type date() and hit &lt;enter&gt;\n\n\n\nCode\ndate()\n\n\n[1] \"Mon Aug 31 08:44:18 2026\"",
+    "text": "Console\n\n\n\nSay something (type)\nPress &lt;enter&gt; or &lt;return&gt; key\nGet an answer\n\n\n\nTry this: type date() and hit &lt;enter&gt;\n\n\n\nCode\ndate()\n\n\n[1] \"Mon Sep 28 14:47:33 2026\"",
     "crumbs": [
       "Slides",
       "Wk 01 • Fri Aug 28"
@@ -5095,6 +5235,17 @@
     "crumbs": [
       "Exercises",
       "Exercise 04"
+    ]
+  },
+  {
+    "objectID": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-is-a-neuropsychological-construct",
+    "href": "slides/wk-06-2026-09-28-sensation-to-perception.html#color-is-a-neuropsychological-construct",
+    "title": "From sensation to perception",
+    "section": "Color is a neuropsychological construct",
+    "text": "Color is a neuropsychological construct",
+    "crumbs": [
+      "Slides",
+      "Wk 06 • Mon Sep 28"
     ]
   }
 ]

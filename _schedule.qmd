@@ -156,7 +156,7 @@
     - @Stephen-Few2004-jv, Chapter 5, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193582617)
 - *Optional*:
     - @Cleveland1984-py  
-- [Slides](404.qmd)
+- [Slides](slides/wk-06-2026-09-28-sensation-to-perception.qmd)
 
 ### Wed, Sep 30 {-}
 

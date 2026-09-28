@@ -150,19 +150,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-answer.callout {
-    border-left-color: blue;
-  }
-  .reveal div.callout-answer.callout-style-default .callout-title {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\f00c' !important;
-    background-image: none;
-  }
   .reveal div.callout-question.callout {
     border-left-color: pink;
   }
@@ -174,6 +161,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\3f' !important;
+    background-image: none;
+  }
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
     background-image: none;
   }
   </style>
@@ -203,17 +203,11 @@ Rick Gilmore
 <h1>Prelude</h1>
 
 </section>
-<section class="slide level2">
-
-<iframe data-external="1" src="https://www.youtube.com/embed/o5TmORitlKk" width="100%" height="70%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<p><span class="citation" data-cites="MarvinGayeVEVO2019-ki">MarvinGayeVEVO (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></p>
-</section>
-<section class="slide level2">
-
-<p><a href="https://x.com/cleans_letsrun/status/1847937360597578195" class="uri">https://x.com/cleans_letsrun/status/1847937360597578195</a></p>
-</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
+<ul>
+<li>Exercise 03 due this Friday.</li>
+</ul>
 </section>
 <section id="last-week" class="slide level2">
 <h2>Last week…</h2>
@@ -233,10 +227,10 @@ Rick Gilmore
 </section>
 <section class="slide level2">
 
-<div id="fig-cairo-5.4" class="quarto-float quarto-figure quarto-figure-center">
+<div id="fig-cairo-5.4" class="quarto-float quarto-figure quarto-figure-center" width="75%">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cairo-5.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/cairo-fig-5.4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img data-src="../include/img/cairo-fig-5.4.png" id="fig-cairo-5.4"></a>
+<a href="../include/img/cairo-fig-5.4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img data-src="../include/img/cairo-fig-5.4.png" id="fig-cairo-5.4" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-cairo-5.4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1
@@ -249,7 +243,7 @@ Figure&nbsp;1
 <div id="fig-yarbus" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-yarbus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/wade-yarbus-fig1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: @Wade2015-rn"><img data-src="../include/img/wade-yarbus-fig1.jpeg"></a>
+<a href="../include/img/wade-yarbus-fig1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: @Wade2015-rn"><img data-src="../include/img/wade-yarbus-fig1.jpeg" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-yarbus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: <span class="citation" data-cites="Wade2015-rn">Wade (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span>
@@ -271,19 +265,23 @@ Figure&nbsp;2: <span class="citation" data-cites="Wade2015-rn">Wade (<a href="#/
 </section>
 <section id="color-perception" class="slide level2">
 <h2>Color perception</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Perceived color a function of activity in “R”, “G”, and “B” photoreceptors</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <div id="fig-wikipedia-color-sensitivity" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wikipedia-color-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1416_Color_Sensitivity.jpg/1200px-1416_Color_Sensitivity.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Source: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1416_Color_Sensitivity.jpg/1200px-1416_Color_Sensitivity.jpg"></a>
+<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Cones_SMJ2_E.svg/3840px-Cones_SMJ2_E.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Source: Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Cones_SMJ2_E.svg/3840px-Cones_SMJ2_E.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wikipedia-color-sensitivity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Source: Wikipedia
+Figure&nbsp;3: Source: <a href="By Vanessaezekowitz at en.wikipedia, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=10514373">Wikipedia</a>
 </figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section id="wavelengths-are-continuous-but-are-perceived-colors" class="slide level2">
 <h2>Wavelengths are continuous, but are perceived colors?</h2>
@@ -300,19 +298,19 @@ Figure&nbsp;4: https://rmit.pressbooks.pub/colourtheory1/part/2-colour-theory-th
 </section>
 <section id="perceived-colors-seem-ordinal-but" class="slide level2">
 <h2>Perceived colors seem ordinal, but…</h2>
-<div id="fig-color-wheel" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<div id="fig-color-wheel" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center" width="35%">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-color-wheel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: "><img data-src="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" id="fig-color-wheel" class="quarto-figure quarto-figure-center"></a>
+<a href="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: "><img data-src="https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png" id="fig-color-wheel" class="quarto-figure quarto-figure-center" style="width:35.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-color-wheel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5
 </figcaption>
 </figure>
 </div>
-<ul>
-<li>Color is a <em>neuropsychological</em> construct</li>
-</ul>
+</section>
+<section id="color-is-a-neuropsychological-construct" class="slide level2">
+<h2>Color is a <em>neuropsychological</em> construct</h2>
 </section>
 <section id="whats-a-reddish-green-look-like" class="slide level2">
 <h2>What’s a reddish-green look like?</h2>
@@ -331,9 +329,12 @@ Figure&nbsp;5
 </section>
 <section id="color-vision-anomalies" class="slide level2">
 <h2>Color vision anomalies</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Absence of or anomalies in photoreceptors</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <div id="fig-wong-2011-fig-01" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wong-2011-fig-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -344,6 +345,7 @@ Figure&nbsp;6: <span class="citation" data-cites="Wong2011-ke">Wong (<a href="#/
 </figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section id="types" class="slide level2">
 <h2>Types</h2>
@@ -413,6 +415,8 @@ Figure&nbsp;9: Figure 6.1 <span class="citation" data-cites="Cairo2013-hm">Cairo
 </section>
 <section id="especially" class="slide level2">
 <h2>Especially …</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Intensity (light/dark)
 <ul>
@@ -422,19 +426,18 @@ Figure&nbsp;9: Figure 6.1 <span class="citation" data-cites="Cairo2013-hm">Cairo
 <li>Position or size</li>
 <li>Changes in…</li>
 </ul>
-</section>
-<section class="slide level2">
-
+</div><div class="column" style="width:50%;">
 <div id="fig-kahneman-fast-slow" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-kahneman-fast-slow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://i0.wp.com/www.raptisrarebooks.com/images/197526/thinking-fast-and-slow-daniel-kahneman-first-edition-signed-rare-books.jpg?fit=850%2C680&amp;ssl=1" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;10: @Kahneman2013-zi"><img data-src="https://i0.wp.com/www.raptisrarebooks.com/images/197526/thinking-fast-and-slow-daniel-kahneman-first-edition-signed-rare-books.jpg?fit=850%2C680&amp;ssl=1"></a>
+<a href="https://mpd-biblio-covers.imgix.net/9780374533557.jpg?w=900&amp;dpr=2" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;10: @Kahneman2013-zi"><img data-src="https://mpd-biblio-covers.imgix.net/9780374533557.jpg?w=900&amp;dpr=2" style="width:55.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kahneman-fast-slow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10: <span class="citation" data-cites="Kahneman2013-zi">Kahneman (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>
 </figcaption>
 </figure>
 </div>
+</div></div>
 </section>
 <section id="pre-attentive-vision" class="slide level2">
 <h2>Pre-attentive vision</h2>
@@ -528,7 +531,7 @@ Figure&nbsp;15: Figure 5.29 <span class="citation" data-cites="Stephen-Few2004-j
 </figure>
 </div>
 </section>
-<section id="multistability" class="slide level2">
+<section id="multistability" class="slide level2 scrollable">
 <h2>Multistability</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -539,10 +542,10 @@ Figure&nbsp;15: Figure 5.29 <span class="citation" data-cites="Stephen-Few2004-j
 <div id="fig-gestalt" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gestalt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Multistability.svg/2880px-Multistability.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;16: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Multistability.svg/2880px-Multistability.svg.png"></a>
+<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Optical_Illustion-Ambiguous_Patterns.svg/500px-Optical_Illustion-Ambiguous_Patterns.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;16: Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Optical_Illustion-Ambiguous_Patterns.svg/500px-Optical_Illustion-Ambiguous_Patterns.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gestalt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;16: https://en.wikipedia.org/wiki/Gestalt_psychology
+Figure&nbsp;16: <a href="By Alex Turner - Converted from orignal png, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=2000426">Wikipedia</a>
 </figcaption>
 </figure>
 </div>
@@ -585,7 +588,7 @@ Figure&nbsp;17: https://en.wikipedia.org/wiki/Gestalt_psychology
 <div id="fig-gestalt-laws" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gestalt-laws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gestalt_proximity.svg/2880px-Gestalt_proximity.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;18: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gestalt_proximity.svg/2880px-Gestalt_proximity.svg.png"></a>
+<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Gestalt_proximity.svg/3840px-Gestalt_proximity.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;18: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Gestalt_proximity.svg/3840px-Gestalt_proximity.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gestalt-laws-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;18: https://en.wikipedia.org/wiki/Gestalt_psychology
@@ -611,10 +614,10 @@ Figure&nbsp;19: Figure 6.5 <span class="citation" data-cites="Cairo2013-hm">Cair
 <div id="fig-similarity" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-similarity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Gestalt_similarity.svg/340px-Gestalt_similarity.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;20: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Gestalt_similarity.svg/340px-Gestalt_similarity.svg.png"></a>
+<a href="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Gestalt_similarity.svg/1920px-Gestalt_similarity.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;20: Wikipedia"><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Gestalt_similarity.svg/1920px-Gestalt_similarity.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-similarity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;20: https://en.wikipedia.org/wiki/Gestalt_psychology
+Figure&nbsp;20: <a href="By Kasufcgslfguhvsne - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=3960876">Wikipedia</a>
 </figcaption>
 </figure>
 </div>
@@ -647,26 +650,14 @@ Figure&nbsp;22
 </section>
 <section id="closure" class="slide level2">
 <h2>Closure</h2>
-<div id="fig-gestalt-closure" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-gestalt-closure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Gestalt_closure.svg/440px-Gestalt_closure.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Figure&nbsp;23: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Gestalt_closure.svg/440px-Gestalt_closure.svg.png"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gestalt-closure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23: https://en.wikipedia.org/wiki/Gestalt_psychology
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="continuity" class="slide level2">
-<h2>Continuity</h2>
+<p><img data-src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gestalt_closure.svg/3840px-Gestalt_closure.svg.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail" id="fig-gestalt-closure" alt="https://en.wikipedia.org/wiki/Gestalt_psychology"> ## Continuity</p>
 <div id="fig-gestalt-continuity" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gestalt-continuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CrossKeys.png/340px-CrossKeys.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Figure&nbsp;24: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CrossKeys.png/340px-CrossKeys.png"></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/6/60/CrossKeys.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Figure&nbsp;23: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/6/60/CrossKeys.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gestalt-continuity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;24: https://en.wikipedia.org/wiki/Gestalt_psychology
+Figure&nbsp;23: <a href="By Brennanyoung - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12763911">Wikipedia</a>
 </figcaption>
 </figure>
 </div>
@@ -676,10 +667,10 @@ Figure&nbsp;24: https://en.wikipedia.org/wiki/Gestalt_psychology
 <div id="fig-cairo-6.9" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cairo-6.9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/cairo-fig-6.9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Figure&nbsp;25: Figure 6.9 @Cairo2013-hm"><img data-src="../include/img/cairo-fig-6.9.png"></a>
+<a href="../include/img/cairo-fig-6.9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Figure&nbsp;24: Figure 6.9 @Cairo2013-hm"><img data-src="../include/img/cairo-fig-6.9.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cairo-6.9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;25: Figure 6.9 <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>
+Figure&nbsp;24: Figure 6.9 <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -689,10 +680,10 @@ Figure&nbsp;25: Figure 6.9 <span class="citation" data-cites="Cairo2013-hm">Cair
 <div id="fig-few-5.33" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-few-5.33-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/few-fig-5.33.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Figure&nbsp;26: Figure 5.33 @Stephen-Few2004-jv"><img data-src="../include/img/few-fig-5.33.png"></a>
+<a href="../include/img/few-fig-5.33.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Figure&nbsp;25: Figure 5.33 @Stephen-Few2004-jv"><img data-src="../include/img/few-fig-5.33.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-few-5.33-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;26: Figure 5.33 <span class="citation" data-cites="Stephen-Few2004-jv">Few (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span>
+Figure&nbsp;25: Figure 5.33 <span class="citation" data-cites="Stephen-Few2004-jv">Few (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -702,10 +693,10 @@ Figure&nbsp;26: Figure 5.33 <span class="citation" data-cites="Stephen-Few2004-j
 <div id="fig-cairo-6.8" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-cairo-6.8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/cairo-fig-6.8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Figure&nbsp;27: Figure 6.8 @Cairo2013-hm"><img data-src="../include/img/cairo-fig-6.8.png"></a>
+<a href="../include/img/cairo-fig-6.8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Figure&nbsp;26: Figure 6.8 @Cairo2013-hm"><img data-src="../include/img/cairo-fig-6.8.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cairo-6.8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;27: Figure 6.8 <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>
+Figure&nbsp;26: Figure 6.8 <span class="citation" data-cites="Cairo2013-hm">Cairo (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -715,10 +706,10 @@ Figure&nbsp;27: Figure 6.8 <span class="citation" data-cites="Cairo2013-hm">Cair
 <div id="fig-few-5.38" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-few-5.38-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/few-fig-5.38.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Figure&nbsp;28: @Stephen-Few2004-jv"><img data-src="../include/img/few-fig-5.38.png"></a>
+<a href="../include/img/few-fig-5.38.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Figure&nbsp;27: @Stephen-Few2004-jv"><img data-src="../include/img/few-fig-5.38.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-few-5.38-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;28: <span class="citation" data-cites="Stephen-Few2004-jv">Few (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span>
+Figure&nbsp;27: <span class="citation" data-cites="Stephen-Few2004-jv">Few (<a href="#/references" role="doc-biblioref" onclick="">2004</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -728,10 +719,10 @@ Figure&nbsp;28: <span class="citation" data-cites="Stephen-Few2004-jv">Few (<a h
 <div id="fig-gestalt-symmetry" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gestalt-symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/en/1/1c/Law_of_Symmetry.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Figure&nbsp;29: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/en/1/1c/Law_of_Symmetry.jpg"></a>
+<a href="https://upload.wikimedia.org/wikipedia/en/1/1c/Law_of_Symmetry.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Figure&nbsp;28: https://en.wikipedia.org/wiki/Gestalt_psychology"><img data-src="https://upload.wikimedia.org/wikipedia/en/1/1c/Law_of_Symmetry.jpg"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gestalt-symmetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;29: https://en.wikipedia.org/wiki/Gestalt_psychology
+Figure&nbsp;28: https://en.wikipedia.org/wiki/Gestalt_psychology
 </figcaption>
 </figure>
 </div>
@@ -784,9 +775,6 @@ Few, Stephen. 2004. <em>Show Me the Numbers: Designing Tables and Graphs to Enli
 </div>
 <div id="ref-Kahneman2013-zi" class="csl-entry" role="listitem">
 Kahneman, Daniel. 2013. <em>Thinking, Fast and Slow</em>. 1st edition. Farrar, Straus; Giroux. <a href="https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555">https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555</a>.
-</div>
-<div id="ref-MarvinGayeVEVO2019-ki" class="csl-entry" role="listitem">
-MarvinGayeVEVO. 2019. <em>Marvin Gaye - What’s Going on (Official Video 2019)</em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=o5TmORitlKk">https://www.youtube.com/watch?v=o5TmORitlKk</a>.
 </div>
 <div id="ref-Wade2015-rn" class="csl-entry" role="listitem">
 Wade, Nicholas J. 2015. <span>“How Were Eye Movements Recorded Before Yarbus?”</span> <em>Perception</em> 44 (August): 851–83. <a href="https://doi.org/10.1177/0301006615594947">https://doi.org/10.1177/0301006615594947</a>.

@@ -30,4 +30,4 @@ filters:
   - custom-callout
 knitr:
   opts_chunk:
-    fig.path: ../include/fig/
+    fig.path: include/fig/

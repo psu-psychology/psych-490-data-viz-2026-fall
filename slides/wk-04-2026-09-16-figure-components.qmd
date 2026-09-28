@@ -44,15 +44,15 @@ format: revealjs
 
 ## Pie charts
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#pie-chart>](../include/fig/fig-nominal-pie-chart-1.png){#fig-pie-charts width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#pie-chart>](../tutorials/include/fig/fig-nominal-pie-chart-1.png){#fig-pie-charts width="60%"}
 
 ## Ring charts
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#ring-chart>](../include/fig/fig-nominal-ring-chart-1.png){#fig-ring-charts width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#ring-chart>](../tutorials/include/fig/fig-nominal-ring-chart-1.png){#fig-ring-charts width="60%"}
 
 ## Mosaic chart
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorial-making-data.html#mosaic-plot>](../include/fig/fig-nominal-mosaic-chart-1.png){#fig-mosaic-charts width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorial-making-data.html#mosaic-plot>](../tutorials/include/fig/fig-nominal-mosaic-chart-1.png){#fig-mosaic-charts width="60%"}
 
 ## Pie, ring, mosaic chart mappings
 
@@ -315,15 +315,15 @@ meals_xtab |>
 
 ---
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal>](../include/fig/fig-ordinal-barplot-dodge-1.png){#fig-bar-plot-ordinal width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal>](../tutorials/include/fig/fig-ordinal-barplot-dodge-1.png){#fig-bar-plot-ordinal width="60%"}
 
 ---
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#fig-ordinal-barplot-stacked>](../include/fig/fig-ordinal-barplot-stacked-1.png){#fig-barplot-stacked width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#fig-ordinal-barplot-stacked>](../tutorials/include/fig/fig-ordinal-barplot-stacked-1.png){#fig-barplot-stacked width="60%"}
 
 ---
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal-stacked-alternative>](../include/fig/fig-ordinal-barplot-stacked-alt-1.png){#fig-pie-charts width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#bar-plot-ordinal-stacked-alternative>](../tutorials/include/fig/fig-ordinal-barplot-stacked-alt-1.png){#fig-pie-charts width="60%"}
 
 ## Your turn
 
@@ -350,16 +350,16 @@ meals_xtab |>
   
 ## Scatterplot
 
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../include/fig/fig-continuous-scatter-1.png){#fig-continuous-scatter width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../tutorials/include/fig/fig-continuous-scatter-1.png){#fig-continuous-scatter width="60%"}
 
 ## Histogram
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../include/fig/fig-continuous-histogram-age-1.png){#fig-continuous-histogram-age width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../tutorials/include/fig/fig-continuous-histogram-age-1.png){#fig-continuous-histogram-age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../include/fig/fig-continuous-histogram-temp-1.png){#fig-continuous-histogram-temp width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#histograms>](../tutorials/include/fig/fig-continuous-histogram-temp-1.png){#fig-continuous-histogram-temp width="60%"}
 :::
 ::::
 
@@ -367,10 +367,10 @@ meals_xtab |>
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../include/fig/fig-continuous-boxplot-age-1.png){#fig-continuous-boxplot-age width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../tutorials/include/fig/fig-continuous-boxplot-age-1.png){#fig-continuous-boxplot-age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../include/fig/fig-continuous-boxplot-temp-1.png){#fig-continuous-boxplot-temp width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#boxplot>](../tutorials/include/fig/fig-continuous-boxplot-temp-1.png){#fig-continuous-boxplot-temp width="60%"}
 :::
 ::::
 
@@ -387,10 +387,10 @@ meals_xtab |>
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-plots>](../include/fig/fig-continuous-violin-age-1.png){#fig-continuous-violin-age width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-plots>](../tutorials/include/fig/fig-continuous-violin-age-1.png){#fig-continuous-violin-age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../include/fig/fig-continuous-violin-temp-1.png){#fig-continuous-violin-temp width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#scatterplot>](../tutorials/include/fig/fig-continuous-violin-temp-1.png){#fig-continuous-violin-temp width="60%"}
 :::
 ::::
 
@@ -398,10 +398,10 @@ meals_xtab |>
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../include/fig/fig-continuous-violin-boxplot-age-1.png){#fig-continuous-violin-boxplot age width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../tutorials/include/fig/fig-continuous-violin-boxplot-age-1.png){#fig-continuous-violin-boxplot age width="60%"}
 :::
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../include/fig/fig-continuous-violin-boxplot-temp-1.png){#fig-continuous-violin-boxplot-temp age width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot>](../tutorials/include/fig/fig-continuous-violin-boxplot-temp-1.png){#fig-continuous-violin-boxplot-temp age width="60%"}
 :::
 ::::
 
@@ -409,10 +409,10 @@ meals_xtab |>
 
 :::: {.columns}
 ::: {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../include/fig/fig-continuous-violin-boxplot-scatter-age-1.png){#fig-continuous-violin-boxplot-scatter-age width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../tutorials/include/fig/fig-continuous-violin-boxplot-scatter-age-1.png){#fig-continuous-violin-boxplot-scatter-age width="60%"}
 :::
 :::  {.column width=50%}
-![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../include/fig/fig-continuous-violin-boxplot-scatter-temp-1.png){#fig-continuous-violin-boxplot-scatter-temp width="60%"}
+![<https://psu-psychology.github.io/psych-490-data-viz-2026-fall/tutorials/tutorial-making-data.html#violin-boxplot-scatter>](../tutorials/include/fig/fig-continuous-violin-boxplot-scatter-temp-1.png){#fig-continuous-violin-boxplot-scatter-temp width="60%"}
 :::
 ::::
 

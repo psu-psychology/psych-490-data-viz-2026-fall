@@ -5,17 +5,9 @@ format: revealjs
 
 # Prelude
 
----
-
-{{< video https://www.youtube.com/watch?v=o5TmORitlKk width=100% height=70% >}}
-
-@MarvinGayeVEVO2019-ki
-
----
-
-<https://x.com/cleans_letsrun/status/1847937360597578195>
-
 ## Announcements
+
+- Exercise 03 due this Friday.
 
 ## Last week...
 
@@ -29,11 +21,11 @@ format: revealjs
   
 ---
 
-![](../include/img/cairo-fig-5.4.png){#fig-cairo-5.4}
+![](../include/img/cairo-fig-5.4.png){#fig-cairo-5.4 width="75%"}
 
 ---
 
-![@Wade2015-rn](../include/img/wade-yarbus-fig1.jpeg){#fig-yarbus}
+![@Wade2015-rn](../include/img/wade-yarbus-fig1.jpeg){#fig-yarbus  width="75%"}
 
 ## Today
 
@@ -44,9 +36,14 @@ format: revealjs
 
 ## Color perception
 
+:::: {.columns}
+::: {.column width=50%}
 - Perceived color a function of activity in "R", "G", and "B" photoreceptors
-
-![Source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/1416_Color_Sensitivity.jpg/1200px-1416_Color_Sensitivity.jpg){#fig-wikipedia-color-sensitivity}
+:::
+::: {.column width=50%}
+![Source: [Wikipedia](By Vanessaezekowitz at en.wikipedia, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=10514373)](https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Cones_SMJ2_E.svg/3840px-Cones_SMJ2_E.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-wikipedia-color-sensitivity}
+:::
+::::
 
 ## Wavelengths are continuous, but are perceived colors?
 
@@ -54,17 +51,22 @@ format: revealjs
 
 ## Perceived colors seem ordinal, but...
 
-![](https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png){fig-align="center" #fig-color-wheel}
+![](https://cdn.pixabay.com/photo/2013/07/12/19/20/rainbow-colors-154569_1280.png){fig-align="center" #fig-color-wheel width="35%"}
 
-- Color is a *neuropsychological* construct
+## Color is a *neuropsychological* construct
 
 {{< include _reddish-green.Rmd >}}
 
 ## Color vision anomalies
 
+:::: {.columns}
+::: {.column width=50%}
 - Absence of or anomalies in photoreceptors
-
+:::
+::: {.column width=50%}
 ![@Wong2011-ke Figure 1](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnmeth.1618/MediaObjects/41592_2011_Article_BFnmeth1618_Fig1_HTML.jpg?as=webp){#fig-wong-2011-fig-01}
+:::
+::::
 
 ## Types
 
@@ -100,15 +102,18 @@ format: revealjs
 
 ## Especially ...
 
+:::: {.columns}
+::: {.column width=50%}
 - Intensity (light/dark)
     - Contrast
 - Color
 - Position or size
 - Changes in...
-
----
-
-![@Kahneman2013-zi](https://i0.wp.com/www.raptisrarebooks.com/images/197526/thinking-fast-and-slow-daniel-kahneman-first-edition-signed-rare-books.jpg?fit=850%2C680&ssl=1){#fig-kahneman-fast-slow}
+:::
+::: {.column width=50%}
+![@Kahneman2013-zi](https://mpd-biblio-covers.imgix.net/9780374533557.jpg?w=900&dpr=2){width="55%" #fig-kahneman-fast-slow}
+:::
+::::
 
 ## Pre-attentive vision
 
@@ -151,14 +156,14 @@ format: revealjs
 
 ![Figure 5.29 @Stephen-Few2004-jv](../include/img/few-fig-5.29-illusory-contour.png){#fig-few-5.29}
 
-## Multistability
+## Multistability {.scrollable}
 
 :::: {.columns}
 ::: {.column width=40%}
 - Perception is *multistable*
 :::
 ::: {.column width=60%}
-![https://en.wikipedia.org/wiki/Gestalt_psychology](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Multistability.svg/2880px-Multistability.svg.png){#fig-gestalt}
+![[Wikipedia](By Alex Turner - Converted from orignal png, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=2000426)](https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Optical_Illustion-Ambiguous_Patterns.svg/500px-Optical_Illustion-Ambiguous_Patterns.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-gestalt}
 :::
 ::::
 
@@ -185,7 +190,7 @@ format: revealjs
 
 ## Proximity
 
-![https://en.wikipedia.org/wiki/Gestalt_psychology](https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gestalt_proximity.svg/2880px-Gestalt_proximity.svg.png){#fig-gestalt-laws}
+![https://en.wikipedia.org/wiki/Gestalt_psychology](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Gestalt_proximity.svg/3840px-Gestalt_proximity.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-gestalt-laws}
 
 ---
 
@@ -193,7 +198,7 @@ format: revealjs
 
 ## Similarity
 
-![https://en.wikipedia.org/wiki/Gestalt_psychology](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Gestalt_similarity.svg/340px-Gestalt_similarity.svg.png){#fig-similarity}
+![[Wikipedia](By Kasufcgslfguhvsne - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=3960876)](https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Gestalt_similarity.svg/1920px-Gestalt_similarity.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-similarity}
 
 ---
 
@@ -205,12 +210,10 @@ format: revealjs
 
 ## Closure
 
-![https://en.wikipedia.org/wiki/Gestalt_psychology](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Gestalt_closure.svg/440px-Gestalt_closure.svg.png){#fig-gestalt-closure}
-
-
+![https://en.wikipedia.org/wiki/Gestalt_psychology](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gestalt_closure.svg/3840px-Gestalt_closure.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-gestalt-closure}
 ## Continuity
 
-![https://en.wikipedia.org/wiki/Gestalt_psychology](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/CrossKeys.png/340px-CrossKeys.png){#fig-gestalt-continuity}
+![[Wikipedia](By Brennanyoung - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12763911)](https://upload.wikimedia.org/wikipedia/commons/6/60/CrossKeys.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-gestalt-continuity}
 
 ---
 

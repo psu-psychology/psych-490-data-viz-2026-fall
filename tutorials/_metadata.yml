@@ -7,3 +7,6 @@ format:
     reference-location: document
     lightbox: true
     bibliography: [../include/bib/packages.bib, ../include/bib/data-viz.bib, ../include/bib/grateful-refs.bib]
+knitr:
+  opts_chunk:
+    fig.path: include/fig/
