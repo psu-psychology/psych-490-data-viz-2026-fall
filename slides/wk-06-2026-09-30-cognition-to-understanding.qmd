@@ -1,0 +1,111 @@
+---
+title: "From cognition to understanding"
+format: revealjs
+---
+
+# Overview
+
+## Announcements
+
+- [Assigned]{.green_assigned} today: [Final Project](../exercises/final-project.qmd) proposal
+
+## Last time...
+
+- Pre-attentive vs. attentive vision
+- Gestalt principles
+
+## Today
+
+- Wrap up on Gestalt principles
+- From specifc to general; concrete to abstract
+
+# Wrap up on Gestalt principles
+
+## Last time...
+
+- Link to 2026-09-28 [slides](wk-06-sensation-to-perception.qmd#closure)
+
+# From specific to general; concrete to abstract
+
+## From specific to general
+
+![Figure 7.3 from @Cairo2013-hm](../include/img/cairo-fig-7.3.png)
+
+## Bottom-up and top-down {.scrollable}
+
+![Figure 7.5 from @Cairo2013-hm](../include/img/cairo-fig-7.5.png){#fig-cairo-7.5}
+
+## {.scrollable}
+
+![Figure 7.6 from @Cairo2013-hm](../include/img/cairo-fig-7.6.png){#fig-cairo-7.6}
+
+---
+
+![](../include/img/dalmation1.jpg){#fig-dalmation width="70%"}
+
+## How large is the memory bank?
+
+![Figure 7.8 from @Cairo2013-hm](../include/img/cairo-fig-7.8.png){#fig-cairo-7.8}
+
+## When less detail > more
+
+![Figure 7.11 from @Cairo2013-hm](../include/img/cairo-fig-7.11.png){#fig-cairo-7.11}
+
+## Abstraction to the rescue
+
+![Figure 7.7 from @Cairo2013-hm](../include/img/cairo-fig-7.7.png){#fig-cairo-7.7 width="70%"}
+
+## Some parts > others
+
+![Figure 7.9 from @Cairo2013-hm](../include/img/cairo-fig-7.9.png){#fig-cairo-7.9}
+
+## Back to visualizations 
+
+>"Visualizations let viewers see beyond summary statistics."
+
+-- @Franconeri2021-uv
+
+
+---
+
+```{r}
+#| label: fig-datasaurus-dozen
+#| fig-cap: "The DatasauRus dozen [@datasaurus2019-us; @Matejka2017-xi; @datasauRus]"
+library(datasauRus)
+library(ggplot2)
+library(gganimate)
+
+ggplot(datasaurus_dozen, aes(x=x, y=y))+
+  geom_point()+
+  theme_minimal() +
+  transition_states(dataset, 3, 1) + 
+  ease_aes('cubic-in-out')
+```
+
+## Not all plots are equivalent
+
+![@datasaurus2019-us; @Matejka2017-xi](https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif)
+
+---
+
+>"Visual channels translate numbers into images"
+
+-- @Franconeri2021-uv
+
+---
+
+![Figure 2 from @Franconeri2021-uv](../include/img/franconeri-etal-2021-fig2.jpeg){#fig-franconeri-fig-02 width="75%"}
+
+## Hard to map without distortion
+
+![Figure 3 from @Franconeri2021-uv](../include/img/franconeri-etal-2021-fig3.jpeg){#fig-franconeri-fig-03 width="60%"}
+
+# Wrap-up
+
+## Next time
+
+- Work session: Visualizing sports data from the `nflreadr` package
+
+# Resources
+
+## References

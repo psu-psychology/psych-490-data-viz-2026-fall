@@ -1,0 +1,19 @@
+{
+  "hash": "d7f7e054c0a8e23d8d41ac035879d812",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"From cognition to understanding\"\nformat: revealjs\n---\n\n# Overview\n\n## Announcements\n\n- [Assigned]{.green_assigned} today: [Final Project](../exercises/final-project.qmd) proposal\n\n## Last time...\n\n- Pre-attentive vs. attentive vision\n- Gestalt principles\n\n## Today\n\n- Wrap up on Gestalt principles\n- From specifc to general; concrete to abstract\n\n# Wrap up on Gestalt principles\n\n## Last time...\n\n- Link to 2026-09-28 [slides](wk-06-sensation-to-perception.qmd#closure)\n\n# From specific to general; concrete to abstract\n\n## From specific to general\n\n![Figure 7.3 from @Cairo2013-hm](../include/img/cairo-fig-7.3.png)\n\n## Bottom-up and top-down {.scrollable}\n\n![Figure 7.5 from @Cairo2013-hm](../include/img/cairo-fig-7.5.png){#fig-cairo-7.5}\n\n## {.scrollable}\n\n![Figure 7.6 from @Cairo2013-hm](../include/img/cairo-fig-7.6.png){#fig-cairo-7.6}\n\n---\n\n![](../include/img/dalmation1.jpg){#fig-dalmation width=\"70%\"}\n\n## How large is the memory bank?\n\n![Figure 7.8 from @Cairo2013-hm](../include/img/cairo-fig-7.8.png){#fig-cairo-7.8}\n\n## When less detail > more\n\n![Figure 7.11 from @Cairo2013-hm](../include/img/cairo-fig-7.11.png){#fig-cairo-7.11}\n\n## Abstraction to the rescue\n\n![Figure 7.7 from @Cairo2013-hm](../include/img/cairo-fig-7.7.png){#fig-cairo-7.7 width=\"70%\"}\n\n## Some parts > others\n\n![Figure 7.9 from @Cairo2013-hm](../include/img/cairo-fig-7.9.png){#fig-cairo-7.9}\n\n## Back to visualizations \n\n>\"Visualizations let viewers see beyond summary statistics.\"\n\n-- @Franconeri2021-uv\n\n\n---\n\n\n::: {.cell}\n::: {.cell-output-display}\n![The DatasauRus dozen [@datasaurus2019-us; @Matejka2017-xi; @datasauRus]](include/fig/fig-datasaurus-dozen-1.gif){#fig-datasaurus-dozen}\n:::\n:::\n\n\n## Not all plots are equivalent\n\n![@datasaurus2019-us; @Matejka2017-xi](https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif)\n\n---\n\n>\"Visual channels translate numbers into images\"\n\n-- @Franconeri2021-uv\n\n---\n\n![Figure 2 from @Franconeri2021-uv](../include/img/franconeri-etal-2021-fig2.jpeg){#fig-franconeri-fig-02 width=\"75%\"}\n\n## Hard to map without distortion\n\n![Figure 3 from @Franconeri2021-uv](../include/img/franconeri-etal-2021-fig3.jpeg){#fig-franconeri-fig-03 width=\"60%\"}\n\n# Wrap-up\n\n## Next time\n\n- Work session: Visualizing sports data from the `nflreadr` package\n\n# Resources\n\n## References\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

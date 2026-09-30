@@ -1,0 +1,135 @@
+---
+title: "Captions and figure numbers"
+format: html
+---
+
+## About
+
+This page documents ways to use Quarto to add captions to figures and to enable automatic numbering.
+
+## Setup
+
+```{r}
+library(ggplot2)
+```
+
+## Figure captions
+
+There are several ways to add captions to your Quarto figures depending on how the figures are generated.
+
+### R code chunk
+
+If you create a figure using an R code chunk, you can add a caption by using the `fig-caption` argument in the code chunk options. See @fig-add-caption-to-r-chunk.
+
+::: {#fig-add-caption-to-r-chunk}
+
+````{{r}}
+#| label: fig-my-plot
+#| fig-cap: "This is my plot. I hope that you like it."
+
+x_random <- rnorm(n = 100)
+random_df <- data.frame(x = x_random)
+
+random_df |>
+  ggplot(aes(x = x)) +
+  geom_histogram() +
+  labs(title = "Histogram of Random Data") + 
+  theme_minimal()
+````
+
+This code shows how to add parameters to an R code chunk. The parameters are preceded by `#|`. 
+The parameter values are specified as key-value pairs.
+The key is the label before the colon `:`, and the value is what follows the colon
+We need to label figures using `#| label: fig-<name>`, where the figure name is specified as `fig-<name>`; here it is `my-plot`.
+This makes sure that your Quarto document assigns a unique name to your figure.
+We also need a `#| fig-cap:` parameter (cap is short for caption) to add a caption.
+:::
+
+The figure rendered by @fig-add-caption-to-r-chunk is as follows:
+
+```{r}
+#| label: fig-my-plot-rendered
+#| fig-cap: "This is my plot. I hope that you like it."
+
+x_random <- rnorm(n = 100)
+random_df <- data.frame(x = x_random)
+
+random_df |>
+  ggplot(aes(x = x)) +
+  geom_histogram() +
+  labs(title = "Histogram of Random Data") + 
+  theme_minimal()
+```
+
+::: {.callout-note}
+## Titles can coexist with captions.
+
+We can make figures with titles using `labs(title = "Histogram of Random Data")` or the `ggtitle()` function.
+The same figure can have a caption added using `fig-cap: "This is a caption"` in the chunk options.
+:::
+
+### Images
+
+If you include an image from the internet or a local file, it's easy to add a caption.
+
+The syntax for adding an image is `![Caption goes 
+here](url_or_path_to_file_goes_here)`.
+
+So the following:
+
+```markdown
+![Nittany Lion Shrine from brand.psu.edu.](https://brand.psu.edu/images/backgrounds/warneke-shrine_v1_1.jpg)
+```
+
+yields
+
+![Nittany Lion Shrine from brand.psu.edu.](https://brand.psu.edu/images/backgrounds/warneke-shrine_v1_1.jpg)
+
+::: {.callout-important}
+## Where did the figure number go?
+
+Notice that the above image does not have a figure number, unlike the previous ones.
+What gives?
+
+The answer is that we need to give the figure its own unique #fig-\<name\> identifer.
+
+:::
+
+To give an included or embedded image a sequential figure number, we need to add something to the Quarto code that embeds the image.
+You might have to scroll horizontally to see all of the code.
+
+```markdown
+![Nittany Lion Shrine from brand.psu.edu.](https://brand.psu.edu/images/backgrounds/warneke-shrine_v1_1.jpg){#fig-lion-shrine}
+```
+
+Now that our embedded figure has its own `#fig-name`, Quarto gives it a sequential figure number.
+See @fig-lion-shrine) below.
+
+![Nittany Lion Shrine from brand.psu.edu.](https://brand.psu.edu/images/backgrounds/warneke-shrine_v1_1.jpg){#fig-lion-shrine}
+
+### Videos, code chunks, etc.
+
+You can turn many bits of Quarto code into figures using a special syntax that wraps the code in pairs of triple colons `:::` as shown in @fig-video-chunk-code.
+
+::: {#fig-video-chunk-code}
+
+````markdown
+::: {#fig-video}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/plWh-hfM8I8?si=V1UFWZDl_Cmq5doB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is a video from YouTube.
+:::
+````
+
+Quarto code to embed a video with a caption.
+:::
+
+The code in @fig-video-chunk-code code renders as follows:
+
+::: {#fig-video}
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/plWh-hfM8I8?si=V1UFWZDl_Cmq5doB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This is a video from YouTube.
+:::

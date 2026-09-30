@@ -211,9 +211,10 @@ format: revealjs
 ## Closure
 
 ![https://en.wikipedia.org/wiki/Gestalt_psychology](https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Gestalt_closure.svg/3840px-Gestalt_closure.svg.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail){#fig-gestalt-closure}
+
 ## Continuity
 
-![[Wikipedia](By Brennanyoung - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12763911)](https://upload.wikimedia.org/wikipedia/commons/6/60/CrossKeys.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-gestalt-continuity}
+![[Wikipedia](By Brennanyoung - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=12763911)](https://upload.wikimedia.org/wikipedia/commons/6/60/CrossKeys.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-gestalt-continuity width="55%"}
 
 ---
 
@@ -235,17 +236,20 @@ format: revealjs
 
 ![https://en.wikipedia.org/wiki/Gestalt_psychology](https://upload.wikimedia.org/wikipedia/en/1/1c/Law_of_Symmetry.jpg){#fig-gestalt-symmetry}
 
-## Your turn
+---
 
-- Find a compelling illustration of one of the Gestalt phenomena (non-data visualization-related)
-- Find an illustration of one of the Gestalt phenomena in a data visualization
-- Add findings (and URLs) here: 
+![https://medium.muz.li/gestalt-principles-in-ui-design-6b75a41e9965](../include/img/gestalt-gkogka.png){#fig-gestalt-principles-in-ui}
 
-<https://docs.google.com/spreadsheets/d/1G8U_IPMP0x17Sfl-FQfF37DN19bDQFm0GO_UmQQzv7Q/edit?usp=sharing>
+## Final Project idea
+
+- Find several compelling illustration of one or more of the Gestalt phenomena (non-data visualization-related)
+- Find illustrations of the same Gestalt phenomena in a data visualization OR
+- Generate figures that reflect the phenomena
 
 ## Putting it all together {.scrollable}
 
-![Figure 6.20 @Cairo2013-hm](../include/img/cairo-fig-6.20.png){#fig-cairo-6.20}
+![Figure 6.20 @Cairo2013-hm](../include/img/cairo-fig-6.20.png){#fig-cairo-6.20 fig-align="center"}
+
 # Wrap-up
 
 ## Main points
