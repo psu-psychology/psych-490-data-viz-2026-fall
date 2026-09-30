@@ -12,10 +12,10 @@ If you work with others, you will need to complete a statement about who did wha
 
 ## Dates {-}
 
-- Proposal [assigned]{.green_assigned} [Tuesday, February 18](../schedule.qmd#tuesday-february-18)
-- Proposal [due]{.orange-due} [Thursday, March 6, 2026](../schedule.qmd#thursday-march-06)
-- Final [project survey](https://forms.gle/oyotxgnnqchqnSgTA) [due]{.orange_due} [Tuesday, April 08](../schedule.qmd#tuesday-april-08)
-- Final write-up [due]{.orange_due} [Tuesday, May 05](../schedule.qmd#tuesday-may-05)
+- Proposal [assigned]{.green_assigned} [Wednesday, September 30](../schedule.qmd#wed-sep-30)
+- Proposal [due]{.orange-due} [Friday, October 16](../schedule.qmd#fri-oct-16)
+<!-- - Final [project survey](https://forms.gle/oyotxgnnqchqnSgTA) [due]{.orange_due} [Tuesday, April 08](../schedule.qmd#tuesday-april-08) -->
+- Final write-up [due]{.orange_due} [Wednesday, December 16](../schedule.qmd#wed-dec-16)
 
 ## Topics {-}
 
