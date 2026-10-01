@@ -1,0 +1,52 @@
+---
+title: "Work session: Visualizing sports data"
+format: revealjs
+---
+
+# Overview
+
+## Announcements
+
+- {{< fa calendar >}} *Due* [Exercise-03](../exercises/ex-03-making-data.qmd) | {{< fa folder >}} *Canvas dropbox*
+- [Assigned]{.green_assigned}: [Final Project](../exercises/final-project.qmd) proposal
+- Draft [tutorial](../tutorial/tutorial-figure-captions-numbering.qmd) on figure captions and numbering
+
+## Last time...
+
+- Wrap up on Gestalt principles
+- From specific to general; concrete to abstract
+
+## Today
+
+- Visualizing NFL data from the `nflreadr` package
+- Final project check-ins
+
+# Visualizing sports data
+
+## Tutorial
+
+- Link to [tutorial](../tutorials/tutorial-visualizing-sports-data.qmd)
+
+# Final project check-in
+
+# Wrap-up
+
+## Next time
+
+- *Exploring data*
+- *Read*: 
+  - @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922548)
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.8.2.200.
+
+The source files are in R and Quarto, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
+<https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>
+
+## References

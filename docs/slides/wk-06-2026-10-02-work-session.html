@@ -8,13 +8,12 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490.007 – Making Data</title>
+  <title>PSYCH 490.007 – Work session: Visualizing sports data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -149,9 +148,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
   <style>
   .reveal div.callout-question.callout {
     border-left-color: pink;
@@ -186,7 +182,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Making Data</h1>
+  <h1 class="title">Work session: Visualizing sports data</h1>
   <p class="subtitle">PSY 490.007 Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -202,382 +198,61 @@ Rick Gilmore
 
 </section>
 <section>
-<section id="preliminaries" class="title-slide slide level1 center">
-<h1>Preliminaries</h1>
+<section id="overview" class="title-slide slide level1 center">
+<h1>Overview</h1>
 
-</section>
-<section class="slide level2">
-
-<div id="fig-antibiotics" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-antibiotics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/7a759276-92f3-4912-7d32-78d2ebd52c00/w=1350.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: @Dattani2024-yr"><img data-src="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/7a759276-92f3-4912-7d32-78d2ebd52c00/w=1350.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-antibiotics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="citation" data-cites="Dattani2024-yr">Dattani and Roser (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>
-</figcaption>
-</figure>
-</div>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><a href="../exercises/ex02-data-viz-outside-psych.qmd">Exercise-02</a> write-up <a href="../schedule.html#fri-sep-18" class="orange_due">due Thursday, January 30</a>.</li>
+<li><i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>Due</em> <a href="../exercises/ex-03-making-data.html">Exercise-03</a> | <i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></li>
+<li><span class="green_assigned">Assigned</span>: <a href="../exercises/final-project.html">Final Project</a> proposal</li>
+<li>Draft <a href="../tutorial/tutorial-figure-captions-numbering.qmd">tutorial</a> on figure captions and numbering</li>
 </ul>
 </section>
 <section id="last-time" class="slide level2">
 <h2>Last time…</h2>
 <ul>
-<li>Introducing Quarto</li>
-<li><em>Visualization in the arts, sports, &amp; journalism</em></li>
-</ul>
-</section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn</h2>
-<div class="callout callout-question callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Are there characteristic features of data visualizations in different fields?</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-</section>
-<section id="preliminary-findings" class="slide level2">
-<h2>Preliminary findings</h2>
-<ul>
-<li>Visualization of Exercise 01</li>
-<li><a href="../supplemental/other-field-figs.html">Visualization</a> of <a href="../exercises/ex02-data-viz-outside-psych.qmd">Exercise 02</a> results</li>
+<li>Wrap up on Gestalt principles</li>
+<li>From specific to general; concrete to abstract</li>
 </ul>
 </section>
 <section id="today" class="slide level2">
 <h2>Today</h2>
 <ul>
-<li>Making Data</li>
-<li>Types of data</li>
+<li>Visualizing NFL data from the <code>nflreadr</code> package</li>
+<li>Final project check-ins</li>
 </ul>
 </section></section>
 <section>
-<section id="making-data" class="title-slide slide level1 center">
-<h1>Making Data</h1>
+<section id="visualizing-sports-data" class="title-slide slide level1 center">
+<h1>Visualizing sports data</h1>
 
 </section>
-<section class="slide level2">
-
-<blockquote>
-<p>Data are made, not born.</p>
-</blockquote>
-<p>Gilmore 2025</p>
-</section>
-<section class="slide level2">
-
-<blockquote>
-<p>No one really knows how the game is played…<br>
-The art of the trade<br>
-How the sausage gets made<br>
-We just assume that it happens<br>
-But no one else is in the room where it happens</p>
-</blockquote>
-<p>“The Room Where it Happens”, Leslie Odom Jr.&nbsp;and Lin-Manuel Miranda, “Hamilton”</p>
-</section>
-<section id="how-are-data-made" class="slide level2">
-<h2>How are data made?</h2>
-<blockquote>
-
+<section id="tutorial" class="slide level2">
+<h2>Tutorial</h2>
 <ul>
-<li>By measurement</li>
+<li>Link to <a href="../tutorials/tutorial-visualizing-sports-data.html">tutorial</a></li>
 </ul>
-
-</blockquote>
-</section>
-<section class="slide level2">
-
-<div id="fig-history-of-measurement" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-history-of-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coud%C3%A9e-turin_detail.jpg/500px-Coud%C3%A9e-turin_detail.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: https://en.wikipedia.org/wiki/History_of_measurement"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Coud%C3%A9e-turin_detail.jpg/500px-Coud%C3%A9e-turin_detail.jpg"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-history-of-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: https://en.wikipedia.org/wiki/History_of_measurement
-</figcaption>
-</figure>
-</div>
-</section>
-<section class="slide level2">
-
-<div id="fig-measurement-guide" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement-guide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://cdn.shopify.com/s/files/1/1008/5120/files/womens_measurementguideWEB3_2048x2048.jpg?v=1485592505" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: https://www.ritual.fashion/pages/measurement-guide"><img data-src="https://cdn.shopify.com/s/files/1/1008/5120/files/womens_measurementguideWEB3_2048x2048.jpg?v=1485592505" style="width:65.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-guide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: https://www.ritual.fashion/pages/measurement-guide
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="what-is-measurement" class="slide level2">
-<h2>What is measurement?</h2>
-<blockquote>
-
-<ul>
-<li>A <em>procedure for mapping</em> properties of X onto some numerical standard or scale Y</li>
-<li><a href="https://en.wikipedia.org/wiki/Metrology"><em>Metrology</em></a>: The science of measurement</li>
-<li><a href="https://en.wikipedia.org/wiki/Psychometrics"><em>Psychometrics</em></a>: The study of psychological measurement</li>
-</ul>
-
-</blockquote>
-</section>
-<section id="why-mapping" class="slide level2">
-<h2>Why ‘mapping’?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-measurement-mapping" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-measurement-mapping">flowchart TB
-  A[Thing/Person]-- Procedure  --&gt;B(Instrument)
-  B --&gt; C{Data}
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Illustration of a mapping from observed entity to data
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-measurement-mapping-2" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-measurement-mapping-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-measurement-mapping-2">flowchart TB
-  A[Thing/Person]-- Procedure  --&gt;B(Instrument)
-  A[Thing/Person]-- Procedure-2  --&gt;C(Instrument-2)
-  B --&gt; E{Data}
-  C --&gt; D{Data-2}
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-mapping-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Illustration of multiple mappings from an observed entity to data
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-</section>
-<section id="procedures-are" class="slide level2">
-<h2>Procedures are</h2>
-<ul>
-<li>Sequences of behaviors</li>
-</ul>
-</section>
-<section id="data-quantitative-terminology" class="slide level2">
-<h2>Data ~ quantitative terminology</h2>
-<ul>
-<li>Data a <em>symbol</em> of the thing measured, not the thing itself</li>
-<li>E.g., words are a <em>symbol</em> of the things they refer to</li>
-</ul>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div id="fig-semantic-mapping" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-semantic-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div>
-<pre class="mermaid mermaid-js" data-label="fig-semantic-mapping">flowchart TB
-  A[Cute animal with fur that purrs] --&gt; B('cat')
-  A ---&gt; C('gato')
-  A ---&gt; D('chatte/chat')
-  A ---&gt; E('猫')
-</pre>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-semantic-mapping-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Mapping from concept/entity to a word.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="symbols-reflect-select-and-deflect" class="slide level2">
-<h2>Symbols reflect, select, and deflect</h2>
-<blockquote>
-<p>Even if any given terminology is a <em>reflection</em> of reality, by its very nature as a terminology, it must be a <em>selection</em> of reality; and to this extent must also as a <em>deflection</em> of reality</p>
-</blockquote>
-<p><span class="citation" data-cites="Burke1968-ye">Burke (<a href="#/references" role="doc-biblioref" onclick="">1968</a>)</span></p>
-</section>
-<section id="what-is" class="slide level2">
-<h2>What is</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>reflected, selected, deflected?</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="@Lindsey2024-ob"><img data-src="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" alt="Lindsey (2024)"></a></p>
-<figcaption><span class="citation" data-cites="Lindsey2024-ob">Lindsey (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span></figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section class="slide level2">
-
-<div id="fig-aviv-etal" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-aviv-etal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/aviv-etal-2024.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;7: @Aviv2024-vh; https://public-exchange.org/usc/wp-content/uploads/sites/2/2025/09/PX_FairPlay-Final-Report_Dec2024-2.pdf"><img data-src="../include/img/aviv-etal-2024.png" style="width:60.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aviv-etal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: <span class="citation" data-cites="Aviv2024-vh">Aviv et al. (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>; https://public-exchange.org/usc/wp-content/uploads/sites/2/2025/09/PX_FairPlay-Final-Report_Dec2024-2.pdf
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="stevens-scales-of-measurement" class="slide level2">
-<h2>Stevens’ scales of measurement</h2>
-<div id="fig-stevens-1946" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-stevens-1946-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/stevens-1946-fig.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;8: @Stevens1946-sh"><img data-src="../include/img/stevens-1946-fig.png" style="width:65.0%"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stevens-1946-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: <span class="citation" data-cites="Stevens1946-sh">Stevens (<a href="#/references" role="doc-biblioref" onclick="">1946</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="questions-about-measurement" class="slide level2">
-<h2>Questions about measurement</h2>
-<ul>
-<li>What’s the procedure for making this mapping?</li>
-<li>What are the rules for assigning numbers/categories?</li>
-<li>What can we do with the assigned numbers (summarize, depict)?</li>
-</ul>
-</section>
-<section id="why-does-measurement-matter" class="slide level2">
-<h2>Why does measurement matter?</h2>
-<div id="fig-gigo" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-gigo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/gigo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;9: Garbage in, garbage out"><img data-src="../include/img/gigo.png"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gigo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Garbage in, garbage out
-</figcaption>
-</figure>
-</div>
 </section></section>
-<section>
-<section id="types-of-data" class="title-slide slide level1 center">
-<h1>Types of data</h1>
+<section id="final-project-check-in" class="title-slide slide level1 center">
+<h1>Final project check-in</h1>
 
 </section>
-<section id="in-other-domains" class="slide level2">
-<h2>In other domains</h2>
-<ul>
-<li>Business/economics</li>
-<li>Politics</li>
-<li>Sports</li>
-<li>Entertainment</li>
-<li>Weather</li>
-</ul>
-</section>
-<section id="in-psychology" class="slide level2">
-<h2>In psychology</h2>
-<ul>
-<li>Internal mental states</li>
-<li>Behaviors</li>
-<li>Physiological processes</li>
-<li>Physical characteristics</li>
-<li>Environmental properties</li>
-</ul>
-</section>
-<section id="examples-of" class="slide level2">
-<h2>Examples of…</h2>
-<ul>
-<li>Internal mental states</li>
-<li>Behaviors</li>
-<li>Physiological processes</li>
-<li>Physical characteristics</li>
-<li>Environmental properties</li>
-</ul>
-</section>
-<section id="how-to-measure" class="slide level2">
-<h2>How to measure…</h2>
-<ul>
-<li>Internal mental states</li>
-<li>Behaviors</li>
-<li>Physiological processes</li>
-<li>Physical characteristics</li>
-<li>Environmental properties</li>
-</ul>
-</section>
-<section id="psychology-of-survey-response" class="slide level2">
-<h2>Psychology of survey response</h2>
-<div id="fig-tourangeau-2012" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-tourangeau-2012-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/tourangeau-etal-table-1.1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;10: @Tourangeau2012-fr Table 1.1"><img data-src="../include/img/tourangeau-etal-table-1.1.png"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tourangeau-2012-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: <span class="citation" data-cites="Tourangeau2012-fr">Tourangeau et al. (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span> Table 1.1
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="scales-of-measurement" class="slide level2">
-<h2>Scales of measurement</h2>
-<div id="fig-stevens-table-01" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-stevens-table-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/stevens-1946-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;11: @Stevens1946-sh"><img data-src="../include/img/stevens-1946-table.png"></a>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stevens-table-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: <span class="citation" data-cites="Stevens1946-sh">Stevens (<a href="#/references" role="doc-biblioref" onclick="">1946</a>)</span>
-</figcaption>
-</figure>
-</div>
-</section></section>
+
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap-up</h1>
 
 </section>
-<section id="main-points" class="slide level2">
-<h2>Main points</h2>
-<ul>
-<li>Data are <em>made</em>
-<ul>
-<li>Map characteristics to quantities</li>
-<li>By some measurement procedure</li>
-<li>Reflect, but also select and deflect</li>
-</ul></li>
-<li>Mappings have different scale types <span class="citation" data-cites="Stevens1946-sh">(<a href="#/references" role="doc-biblioref" onclick="">Stevens 1946</a>)</span></li>
-<li>Scales determine i) permissible/logical stats &amp; ii) best visualizations</li>
-</ul>
-</section>
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li><em>Work session: Making data with R</em></li>
-<li><a href="../exercises/ex-02-data-viz-outside-psych.html">Exercise 02</a></li>
+<li><em>Exploring data</em></li>
+<li><em>Read</em>:
+<ul>
+<li><span class="citation" data-cites="Tukey1977-ro">Tukey (<a href="#/references" role="doc-biblioref" onclick="">1977</a>)</span>, Chapter 1, <a href="https://psu.instructure.com/courses/2484925/files?preview=193922548">PDF on Canvas</a></li>
+</ul></li>
 </ul>
 </section></section>
 <section>
@@ -585,28 +260,18 @@ Figure&nbsp;11: <span class="citation" data-cites="Stevens1946-sh">Stevens (<a h
 <h1>Resources</h1>
 
 </section>
+<section id="about" class="slide level2">
+<h2>About</h2>
+<p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.8.2.200.</p>
+<p>The source files are in R and Quarto, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/" class="uri">https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/</a></p>
+</section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Aviv2024-vh" class="csl-entry" role="listitem">
-Aviv, Lizzie, Darby Saxbe, Doug Messer, and Sujeet Rao. 2024. <em>The Fair Play Method</em>. Technical report. University of Southern California. <a href="https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf">https://publicexchange.usc.edu/wp-content/uploads/2024/11/PX_FairPlay-Final-Report_Dec2024.pdf</a>.
-</div>
-<div id="ref-Burke1968-ye" class="csl-entry" role="listitem">
-Burke, Kenneth. 1968. <em>Language as <span>S</span>ymbolic <span>A</span>ction</em>. University of California Press. <a href="https://www.ucpress.edu/books/language-as-symbolic-action/paper">https://www.ucpress.edu/books/language-as-symbolic-action/paper</a>.
-</div>
-<div id="ref-Dattani2024-yr" class="csl-entry" role="listitem">
-Dattani, Saloni, and Max Roser. 2024. <span>“What Was the Golden Age of Antibiotics, and How Can We Spark a New One?”</span> <em>Our World in Data</em>, December 21. <a href="https://ourworldindata.org/golden-age-antibiotics">https://ourworldindata.org/golden-age-antibiotics</a>.
-</div>
-<div id="ref-Lindsey2024-ob" class="csl-entry" role="listitem">
-Lindsey, Rebecca. 2024. <span>“Climate Change: Atmospheric Carbon Dioxide.”</span> April 9. <a href="http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide">http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide</a>.
-</div>
-<div id="ref-Stevens1946-sh" class="csl-entry" role="listitem">
-Stevens, S S. 1946. <span>“On the Theory of Scales of Measurement.”</span> <em>Science (New York, N.Y.)</em> 103 (June): 677–80. <a href="https://doi.org/10.1126/science.103.2684.677">https://doi.org/10.1126/science.103.2684.677</a>.
-</div>
-<div id="ref-Tourangeau2012-fr" class="csl-entry" role="listitem">
-Tourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. <em>The <span>P</span>sychology of <span>S</span>urvey <span>R</span>esponse</em>. Cambridge University Press. <a href="https://doi.org/10.1017/cbo9780511819322">https://doi.org/10.1017/cbo9780511819322</a>.
+<div id="ref-Tukey1977-ro" class="csl-entry" role="listitem">
+Tukey, John W. 1977. <em>Exploratory Data Analysis</em>. Addison-Wesley Series in Behavioral Science. Quantitative Methods. Pearson. <a href="https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160">https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160</a>.
 </div>
 </div>
 </section></section>
@@ -998,38 +663,6 @@ Tourangeau, Roger, Lance J Rips, and Kenneth Rasinski. 2012. <em>The <span>P</sp
         }
       });
       </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
-              }
-            }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
-          }
-        });
-      
-      };
-      
-    })();
-              </script>
     
 
 </body></html>

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-09-30">
+<meta name="dcterms.date" content="2026-10-01">
 
-<title>Exercise 06 – PSYCH 490.007</title>
+<title>Under the hood – PSYCH 490.007</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -62,25 +62,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../exercises/final-project.html" rel="next">
-<link href="../exercises/ex-05-tbd.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b798a8be8a3ce4da077f873ae8b6b3e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./slides/wk-01-2026-08-24-course-intro.html" rel="next">
+<link href="./policies.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b798a8be8a3ce4da077f873ae8b6b3e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -122,16 +122,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Exercise 06</h1>
+          <h1 class="quarto-secondary-nav-title">Under the hood</h1>
         </a>     
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
-  <div id="quarto-announcement" data-announcement-id="2b268f99eb95aa526e15cdfe403977c4" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p>No class on Monday, September 21, 2026.</p>
-</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
@@ -139,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">PSYCH 490.007</a> 
+      <a href="./">PSYCH 490.007</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -151,37 +148,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../evaluation.html" class="sidebar-item-text sidebar-link">
+  <a href="./evaluation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Evaluation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../deadlines.html" class="sidebar-item-text sidebar-link">
+  <a href="./deadlines.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deadlines</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../policies.html" class="sidebar-item-text sidebar-link">
+  <a href="./policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Policies</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../meta.html" class="sidebar-item-text sidebar-link">
+  <a href="./meta.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Under the hood</span></a>
   </div>
 </li>
@@ -196,79 +193,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-01-2026-08-24-course-intro.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-01-2026-08-24-course-intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 01 • Mon Aug 24</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-01-2026-08-26-semiotics-data-viz.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-01-2026-08-26-semiotics-data-viz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 01 • Wed Aug 26</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-01-2026-08-28-introducing-r-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-01-2026-08-28-introducing-r-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 01 • Fri Aug 28</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-02-2026-08-31-govt-biz.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-02-2026-08-31-govt-biz.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 02 • Mon Aug 31</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-02-2026-09-02-art-sports-journ.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-02-2026-09-02-art-sports-journ.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 02 • Wed Sep 02</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-02-2026-09-04-introducing-quarto.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-02-2026-09-04-introducing-quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 02 • Fri Sep 04</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-03-2026-09-09-making-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-03-2026-09-09-making-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 03 • Wed Sep 09</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-03-2026-09-11-making-data-with-r.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-03-2026-09-11-making-data-with-r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 03 • Fri Sep 11</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-04-2026-09-14-figure-types.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-04-2026-09-14-figure-types.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 04 • Mon Sep 14</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-04-2026-09-16-figure-components.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-04-2026-09-16-figure-components.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 04 • Wed Sep 16</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-05-2026-09-23-stim-to-sensation.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-05-2026-09-23-stim-to-sensation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 05 • Wed Sep 23</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-06-2026-09-28-sensation-to-perception.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-06-2026-09-28-sensation-to-perception.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 06 • Mon Sep 28</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/wk-06-2026-09-30-cognition-to-understanding.html" class="sidebar-item-text sidebar-link">
+  <a href="./slides/wk-06-2026-09-30-cognition-to-understanding.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wk 06 • Wed Sep 30</span></a>
   </div>
 </li>
@@ -276,16 +273,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-01-figs-in-psych-sci.html" class="sidebar-item-text sidebar-link">
+  <a href="./exercises/ex-01-figs-in-psych-sci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 01</span></a>
   </div>
 </li>
@@ -294,31 +291,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 03</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-04-making-figs-ggplot.html" class="sidebar-item-text sidebar-link">
+  <a href="./exercises/ex-04-making-figs-ggplot.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 04</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-05-tbd.html" class="sidebar-item-text sidebar-link">
+  <a href="./exercises/ex-05-tbd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 05</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-06-tbd.html" class="sidebar-item-text sidebar-link active">
+  <a href="./exercises/ex-06-tbd.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 06</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../exercises/final-project.html" class="sidebar-item-text sidebar-link">
+  <a href="./exercises/final-project.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final Project</span></a>
   </div>
 </li>
@@ -335,37 +332,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-install-r-rstudio.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tutorial-install-r-rstudio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Installing R and RStudio Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-making-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tutorial-making-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Making and visualizing data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-ggplot2-I.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tutorial-ggplot2-I.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><em>ggplot2</em> tutorial I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-ggplot2-II.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tutorial-ggplot2-II.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><em>ggplot2</em> tutorial II</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-visualizing-sports-data.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tutorial-visualizing-sports-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Visualizing sports data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-figure-captions-numbering.html" class="sidebar-item-text sidebar-link">
+  <a href="./tutorials/tutorial-figure-captions-numbering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Captions and figure numbers</span></a>
   </div>
 </li>
@@ -382,13 +379,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../supplemental/psych-sci-figs.html" class="sidebar-item-text sidebar-link">
+  <a href="./supplemental/psych-sci-figs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Findings: Data viz in psych sci</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../supplemental/other-field-figs.html" class="sidebar-item-text sidebar-link">
+  <a href="./supplemental/other-field-figs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Findings: Data viz outside psych sci</span></a>
   </div>
 </li>
@@ -404,18 +401,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dates" id="toc-dates" class="nav-link active" data-scroll-target="#dates">Dates</a></li>
-  <li><a href="#goals" id="toc-goals" class="nav-link" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#rendering" id="toc-rendering" class="nav-link" data-scroll-target="#rendering">Rendering</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/exercises/ex-06-tbd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/meta.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Exercise 06</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">TBD</p>
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Under the hood</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -426,14 +424,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 30, 2026</p>
+      <p class="date">October 1, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">July 30, 2026</p>
+      <p class="date-modified">July 16, 2026</p>
     </div>
   </div>
     
@@ -444,24 +442,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is a under construction.</p>
-</div>
-</div>
-<section id="dates" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="dates">Dates</h2>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>This page describes how the site is created and rendered.</p>
 </section>
-<section id="goals" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="goals">Goals</h2>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>The site is written in <a href="https://quarto.org">Quarto</a>.</p>
+<p>A site-wide YAML file (<code>_quarto.yml</code>) controls the rendering process.</p>
+<p>Separate directories contain lecture slides (<code>slides/</code>), exercises (<code>exercises/</code>), class-specific R functions (<code>R/</code>), surveys (<code>surveys/</code>), and tutorials (<code>tutorials/</code>). Quarto files with underscores (e.g., <code>_index.qmd</code>, <code>_about.qmd</code>, <code>_evaluation.qmd</code>, <code>_schedule.qmd</code>, and <code>values.qmd</code>) are the main targets for editing and updating. Parent files (e.g., <code>index.qmd</code>, <code>evaluation.qmd</code>, <code>policies.qmd</code>, and <code>schedule.qmd</code>) call upon these child files in the rendering process.</p>
+<p>A separate Quarto file (<code>psych-490.007-2026-fall-syllabus.qmd</code>) generates a PDF version of a syllabus.</p>
+</section>
+<section id="rendering" class="level2">
+<h2 class="anchored" data-anchor-id="rendering">Rendering</h2>
+<p>To render the full site, <code>quarto render src</code> is executed from the command line. The fully rendered website is written to <code>docs/</code>.</p>
+</section>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<p>The site uses the <a href="https://rstudio.github.io/renv/articles/renv.html">renv package</a> to try to make all computation reproducible.</p>
+<p>In addition, the site uses <a href="https://cran.r-project.org/package=softbib">softbib</a> to generate a full reference list of the package dependencies. This is saved in <code>src/include/bib</code>.</p>
 
 
 <!-- -->
@@ -924,29 +923,47 @@ Warning
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../exercises/ex-05-tbd.html" class="pagination-link" aria-label="Exercise 05">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exercise 05</span>
+      <a href="./policies.html" class="pagination-link" aria-label="Policies">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Policies</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../exercises/final-project.html" class="pagination-link" aria-label="Final Project">
-        <span class="nav-page-text">Final Project</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./slides/wk-01-2026-08-24-course-intro.html" class="pagination-link" aria-label="Wk 01 • Mon Aug 24">
+        <span class="nav-page-text">Wk 01 • Mon Aug 24</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Exercise 06"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "TBD"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Under the hood"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## About</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This page is a under construction.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>This page describes how the site is created and rendered.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Workflow</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dates {-}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>The site is written in <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span>.</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Goals {-}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>A site-wide YAML file (<span class="in">`_quarto.yml`</span>) controls the rendering process.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Separate directories contain lecture slides (<span class="in">`slides/`</span>), exercises (<span class="in">`exercises/`</span>), class-specific R functions (<span class="in">`R/`</span>), surveys (<span class="in">`surveys/`</span>), and tutorials (<span class="in">`tutorials/`</span>).</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Quarto files with underscores (e.g., <span class="in">`_index.qmd`</span>, <span class="in">`_about.qmd`</span>, <span class="in">`_evaluation.qmd`</span>, <span class="in">`_schedule.qmd`</span>, and <span class="in">`values.qmd`</span>) are the main targets for editing and updating.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Parent files (e.g., <span class="in">`index.qmd`</span>, <span class="in">`evaluation.qmd`</span>, <span class="in">`policies.qmd`</span>, and <span class="in">`schedule.qmd`</span>) call upon these child files in the rendering process.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>A separate Quarto file (<span class="in">`psych-490.007-2026-fall-syllabus.qmd`</span>) generates a PDF version of a syllabus.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rendering</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>To render the full site, <span class="in">`quarto render src`</span> is executed from the command line.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>The fully rendered website is written to <span class="in">`docs/`</span>.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Software</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>The site uses the <span class="co">[</span><span class="ot">renv package</span><span class="co">](https://rstudio.github.io/renv/articles/renv.html)</span> to try to make all computation reproducible.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>In addition, the site uses <span class="co">[</span><span class="ot">softbib</span><span class="co">](https://cran.r-project.org/package=softbib)</span> to generate a full reference list of the package dependencies.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>This is saved in <span class="in">`src/include/bib`</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -956,7 +973,7 @@ Warning
 </div>   
     <div class="nav-footer-center">
 <p>Built with <a href="https://quarto.org/">Quarto</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/exercises/ex-06-tbd.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/meta.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

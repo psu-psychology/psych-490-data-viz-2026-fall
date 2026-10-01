@@ -62,3 +62,10 @@ If you are submitting a short 2-4 page write-up via Canvas, please provide answe
 3. What assumptions must a researcher make when conducting survey research of this sort? \
 4. Focusing on those available within Google Forms, what user interface(s) work best for different types of data? \
 5. If you've used Qualtics previously to generate surveys, briefly compare Qualtrics with Google Forms.
+
+::: {.callout-note}
+## Submission format
+
+You should feel free to submit your write-up as either a Quarto document or as a Word document.
+
+:::

@@ -5,11 +5,11 @@ project:
 
 website:
   title: "PSYCH 490.007"
-  announcement:
-    content: "No class on Monday, September 21, 2026."
-    position: below-navbar
-    icon: info-circle
-    dismissable: true
+  # announcement:
+  #   content: "No class on Monday, September 21, 2026."
+  #   position: below-navbar
+  #   icon: info-circle
+  #   dismissable: true
   sidebar:
     collapse-level: 1
     style: "docked"
