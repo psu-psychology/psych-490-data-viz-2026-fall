@@ -11,7 +11,7 @@ format: revealjs
 
 ## Announcements
 
-- [Exercise-02](../exercises/ex02-data-viz-outside-psych.qmd) write-up [due Thursday, January 30](../schedule.qmd#fri-sep-18){.orange_due}.
+- [Exercise-02](../exercises/ex-02-data-viz-outside-psych.qmd) write-up [due Thursday, January 30](../schedule.qmd#fri-sep-18){.orange_due}.
 
 ## Last time...
 
@@ -27,7 +27,7 @@ format: revealjs
 ## Preliminary findings
 
 - Visualization of Exercise 01
-- [Visualization](../supplemental/other-field-figs.qmd) of [Exercise 02](../exercises/ex02-data-viz-outside-psych.qmd) results
+- [Visualization](../supplemental/other-field-figs.qmd) of [Exercise 02](../exercises/ex-02-data-viz-outside-psych.qmd) results
 
 ## Today
 

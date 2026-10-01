@@ -1,0 +1,49 @@
+---
+title: "Title of Your Paper"
+author:
+  - name: Student Name
+    affiliations:
+      - name: Department of Psychology, The Pennsylvania State University
+course: "PSYCH 490: Psychology of Data Visualization"
+professor: "Dr. Rick Gilmore"
+duedate: "Month Day, Year"
+bibliography: bibliography.bib
+documentmode: stu
+floatsintext: true
+suppress-author-note: true
+execute:
+  echo: false
+format:
+  apaquarto-docx: default
+---
+
+<!-- The introduction should not have a level-1 heading such as Introduction. -->
+
+This is my first paragraph. Any section headings in the introduction should be in levels 2--5.
+
+## Section in Introduction
+
+This is a reference [@apa2020].
+
+# Method
+
+## Participants
+
+## Measures
+
+## Procedure
+
+# Results
+
+# Discussion
+
+## Limitations and Future Directions
+
+## Conclusion
+
+# References
+
+<!-- References will auto-populate in the refs div below -->
+
+::: {#refs}
+:::

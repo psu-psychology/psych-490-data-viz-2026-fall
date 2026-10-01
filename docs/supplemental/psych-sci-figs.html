@@ -1,0 +1,4333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-10-01">
+
+<title>Findings: Data viz in psych sci – PSYCH 490.007</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../supplemental/other-field-figs.html" rel="next">
+<link href="../tutorials/tutorial-figure-captions-numbering.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b798a8be8a3ce4da077f873ae8b6b3e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Findings: Data viz in psych sci</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">PSYCH 490.007</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Evaluation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../deadlines.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deadlines</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policies</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../meta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Under the hood</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Slides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-01-2026-08-24-course-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Mon Aug 24</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-01-2026-08-26-semiotics-data-viz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Wed Aug 26</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-01-2026-08-28-introducing-r-rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 01 • Fri Aug 28</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-02-2026-08-31-govt-biz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 02 • Mon Aug 31</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-02-2026-09-02-art-sports-journ.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 02 • Wed Sep 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-02-2026-09-04-introducing-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 02 • Fri Sep 04</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-03-2026-09-09-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 03 • Wed Sep 09</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-03-2026-09-11-making-data-with-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 03 • Fri Sep 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-04-2026-09-14-figure-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 04 • Mon Sep 14</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-04-2026-09-16-figure-components.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 04 • Wed Sep 16</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-05-2026-09-23-stim-to-sensation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 05 • Wed Sep 23</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-06-2026-09-28-sensation-to-perception.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 06 • Mon Sep 28</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-06-2026-09-30-cognition-to-understanding.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 06 • Wed Sep 30</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exercises</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-01-figs-in-psych-sci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-02-data-viz-outside-psych.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-04-making-figs-ggplot.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 04</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-05-tbd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 05</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-06-tbd.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 06</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/final-project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Project</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Tutorials</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-install-r-rstudio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installing R and RStudio Desktop</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-making-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Making and visualizing data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-ggplot2-I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><em>ggplot2</em> tutorial I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-ggplot2-II.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><em>ggplot2</em> tutorial II</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-visualizing-sports-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Visualizing sports data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/tutorial-figure-captions-numbering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Captions and figure numbers</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Supplemental</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental/psych-sci-figs.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Findings: Data viz in psych sci</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../supplemental/other-field-figs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Findings: Data viz outside psych sci</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#survey" id="toc-survey" class="nav-link" data-scroll-target="#survey">Survey</a></li>
+  <li><a href="#preparation" id="toc-preparation" class="nav-link" data-scroll-target="#preparation">Preparation</a></li>
+  <li><a href="#gathering" id="toc-gathering" class="nav-link" data-scroll-target="#gathering">Gathering</a></li>
+  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning">Cleaning</a></li>
+  <li><a href="#summary-data" id="toc-summary-data" class="nav-link" data-scroll-target="#summary-data">Summary data</a></li>
+  <li><a href="#figures-found" id="toc-figures-found" class="nav-link" data-scroll-target="#figures-found">Figures found</a>
+  <ul>
+  <li><a href="#figure-1" id="toc-figure-1" class="nav-link" data-scroll-target="#figure-1">Figure 1</a></li>
+  <li><a href="#figure-2" id="toc-figure-2" class="nav-link" data-scroll-target="#figure-2">Figure 2</a></li>
+  <li><a href="#figure-3" id="toc-figure-3" class="nav-link" data-scroll-target="#figure-3">Figure 3</a></li>
+  <li><a href="#figure-4" id="toc-figure-4" class="nav-link" data-scroll-target="#figure-4">Figure 4</a></li>
+  <li><a href="#figure-5" id="toc-figure-5" class="nav-link" data-scroll-target="#figure-5">Figure 5</a></li>
+  <li><a href="#figure-6" id="toc-figure-6" class="nav-link" data-scroll-target="#figure-6">Figure 6</a></li>
+  <li><a href="#figure-7" id="toc-figure-7" class="nav-link" data-scroll-target="#figure-7">Figure 7</a></li>
+  <li><a href="#figure-8" id="toc-figure-8" class="nav-link" data-scroll-target="#figure-8">Figure 8</a></li>
+  <li><a href="#figure-9" id="toc-figure-9" class="nav-link" data-scroll-target="#figure-9">Figure 9</a></li>
+  <li><a href="#figure-10" id="toc-figure-10" class="nav-link" data-scroll-target="#figure-10">Figure 10</a></li>
+  <li><a href="#figure-11" id="toc-figure-11" class="nav-link" data-scroll-target="#figure-11">Figure 11</a></li>
+  <li><a href="#figure-12" id="toc-figure-12" class="nav-link" data-scroll-target="#figure-12">Figure 12</a></li>
+  <li><a href="#figure-13" id="toc-figure-13" class="nav-link" data-scroll-target="#figure-13">Figure 13</a></li>
+  <li><a href="#figure-14" id="toc-figure-14" class="nav-link" data-scroll-target="#figure-14">Figure 14</a></li>
+  <li><a href="#figure-15" id="toc-figure-15" class="nav-link" data-scroll-target="#figure-15">Figure 15</a></li>
+  <li><a href="#figure-16" id="toc-figure-16" class="nav-link" data-scroll-target="#figure-16">Figure 16</a></li>
+  <li><a href="#figure-17" id="toc-figure-17" class="nav-link" data-scroll-target="#figure-17">Figure 17</a></li>
+  <li><a href="#figure-18" id="toc-figure-18" class="nav-link" data-scroll-target="#figure-18">Figure 18</a></li>
+  <li><a href="#figure-19" id="toc-figure-19" class="nav-link" data-scroll-target="#figure-19">Figure 19</a></li>
+  <li><a href="#figure-20" id="toc-figure-20" class="nav-link" data-scroll-target="#figure-20">Figure 20</a></li>
+  <li><a href="#figure-21" id="toc-figure-21" class="nav-link" data-scroll-target="#figure-21">Figure 21</a></li>
+  <li><a href="#figure-22" id="toc-figure-22" class="nav-link" data-scroll-target="#figure-22">Figure 22</a></li>
+  <li><a href="#figure-23" id="toc-figure-23" class="nav-link" data-scroll-target="#figure-23">Figure 23</a></li>
+  <li><a href="#figure-24" id="toc-figure-24" class="nav-link" data-scroll-target="#figure-24">Figure 24</a></li>
+  <li><a href="#figure-25" id="toc-figure-25" class="nav-link" data-scroll-target="#figure-25">Figure 25</a></li>
+  <li><a href="#figure-26" id="toc-figure-26" class="nav-link" data-scroll-target="#figure-26">Figure 26</a></li>
+  <li><a href="#figure-27" id="toc-figure-27" class="nav-link" data-scroll-target="#figure-27">Figure 27</a></li>
+  <li><a href="#figure-28" id="toc-figure-28" class="nav-link" data-scroll-target="#figure-28">Figure 28</a></li>
+  <li><a href="#figure-29" id="toc-figure-29" class="nav-link" data-scroll-target="#figure-29">Figure 29</a></li>
+  <li><a href="#figure-30" id="toc-figure-30" class="nav-link" data-scroll-target="#figure-30">Figure 30</a></li>
+  <li><a href="#figure-31" id="toc-figure-31" class="nav-link" data-scroll-target="#figure-31">Figure 31</a></li>
+  <li><a href="#figure-32" id="toc-figure-32" class="nav-link" data-scroll-target="#figure-32">Figure 32</a></li>
+  <li><a href="#figure-33" id="toc-figure-33" class="nav-link" data-scroll-target="#figure-33">Figure 33</a></li>
+  <li><a href="#figure-34" id="toc-figure-34" class="nav-link" data-scroll-target="#figure-34">Figure 34</a></li>
+  <li><a href="#figure-35" id="toc-figure-35" class="nav-link" data-scroll-target="#figure-35">Figure 35</a></li>
+  <li><a href="#figure-36" id="toc-figure-36" class="nav-link" data-scroll-target="#figure-36">Figure 36</a></li>
+  <li><a href="#figure-37" id="toc-figure-37" class="nav-link" data-scroll-target="#figure-37">Figure 37</a></li>
+  <li><a href="#figure-38" id="toc-figure-38" class="nav-link" data-scroll-target="#figure-38">Figure 38</a></li>
+  <li><a href="#figure-39" id="toc-figure-39" class="nav-link" data-scroll-target="#figure-39">Figure 39</a></li>
+  <li><a href="#figure-40" id="toc-figure-40" class="nav-link" data-scroll-target="#figure-40">Figure 40</a></li>
+  <li><a href="#figure-41" id="toc-figure-41" class="nav-link" data-scroll-target="#figure-41">Figure 41</a></li>
+  <li><a href="#figure-42" id="toc-figure-42" class="nav-link" data-scroll-target="#figure-42">Figure 42</a></li>
+  <li><a href="#figure-43" id="toc-figure-43" class="nav-link" data-scroll-target="#figure-43">Figure 43</a></li>
+  <li><a href="#figure-44" id="toc-figure-44" class="nav-link" data-scroll-target="#figure-44">Figure 44</a></li>
+  <li><a href="#figure-45" id="toc-figure-45" class="nav-link" data-scroll-target="#figure-45">Figure 45</a></li>
+  <li><a href="#figure-46" id="toc-figure-46" class="nav-link" data-scroll-target="#figure-46">Figure 46</a></li>
+  <li><a href="#figure-47" id="toc-figure-47" class="nav-link" data-scroll-target="#figure-47">Figure 47</a></li>
+  <li><a href="#figure-48" id="toc-figure-48" class="nav-link" data-scroll-target="#figure-48">Figure 48</a></li>
+  <li><a href="#figure-49" id="toc-figure-49" class="nav-link" data-scroll-target="#figure-49">Figure 49</a></li>
+  <li><a href="#figure-50" id="toc-figure-50" class="nav-link" data-scroll-target="#figure-50">Figure 50</a></li>
+  <li><a href="#figure-51" id="toc-figure-51" class="nav-link" data-scroll-target="#figure-51">Figure 51</a></li>
+  <li><a href="#figure-52" id="toc-figure-52" class="nav-link" data-scroll-target="#figure-52">Figure 52</a></li>
+  <li><a href="#figure-53" id="toc-figure-53" class="nav-link" data-scroll-target="#figure-53">Figure 53</a></li>
+  <li><a href="#figure-54" id="toc-figure-54" class="nav-link" data-scroll-target="#figure-54">Figure 54</a></li>
+  <li><a href="#figure-55" id="toc-figure-55" class="nav-link" data-scroll-target="#figure-55">Figure 55</a></li>
+  <li><a href="#figure-56" id="toc-figure-56" class="nav-link" data-scroll-target="#figure-56">Figure 56</a></li>
+  <li><a href="#figure-57" id="toc-figure-57" class="nav-link" data-scroll-target="#figure-57">Figure 57</a></li>
+  <li><a href="#figure-58" id="toc-figure-58" class="nav-link" data-scroll-target="#figure-58">Figure 58</a></li>
+  <li><a href="#figure-59" id="toc-figure-59" class="nav-link" data-scroll-target="#figure-59">Figure 59</a></li>
+  <li><a href="#figure-60" id="toc-figure-60" class="nav-link" data-scroll-target="#figure-60">Figure 60</a></li>
+  <li><a href="#figure-61" id="toc-figure-61" class="nav-link" data-scroll-target="#figure-61">Figure 61</a></li>
+  <li><a href="#figure-62" id="toc-figure-62" class="nav-link" data-scroll-target="#figure-62">Figure 62</a></li>
+  <li><a href="#figure-63" id="toc-figure-63" class="nav-link" data-scroll-target="#figure-63">Figure 63</a></li>
+  <li><a href="#figure-64" id="toc-figure-64" class="nav-link" data-scroll-target="#figure-64">Figure 64</a></li>
+  <li><a href="#figure-65" id="toc-figure-65" class="nav-link" data-scroll-target="#figure-65">Figure 65</a></li>
+  <li><a href="#figure-66" id="toc-figure-66" class="nav-link" data-scroll-target="#figure-66">Figure 66</a></li>
+  <li><a href="#figure-67" id="toc-figure-67" class="nav-link" data-scroll-target="#figure-67">Figure 67</a></li>
+  <li><a href="#figure-68" id="toc-figure-68" class="nav-link" data-scroll-target="#figure-68">Figure 68</a></li>
+  <li><a href="#figure-69" id="toc-figure-69" class="nav-link" data-scroll-target="#figure-69">Figure 69</a></li>
+  <li><a href="#figure-70" id="toc-figure-70" class="nav-link" data-scroll-target="#figure-70">Figure 70</a></li>
+  <li><a href="#figure-71" id="toc-figure-71" class="nav-link" data-scroll-target="#figure-71">Figure 71</a></li>
+  <li><a href="#figure-72" id="toc-figure-72" class="nav-link" data-scroll-target="#figure-72">Figure 72</a></li>
+  <li><a href="#figure-73" id="toc-figure-73" class="nav-link" data-scroll-target="#figure-73">Figure 73</a></li>
+  <li><a href="#figure-74" id="toc-figure-74" class="nav-link" data-scroll-target="#figure-74">Figure 74</a></li>
+  <li><a href="#figure-75" id="toc-figure-75" class="nav-link" data-scroll-target="#figure-75">Figure 75</a></li>
+  <li><a href="#figure-76" id="toc-figure-76" class="nav-link" data-scroll-target="#figure-76">Figure 76</a></li>
+  <li><a href="#figure-77" id="toc-figure-77" class="nav-link" data-scroll-target="#figure-77">Figure 77</a></li>
+  <li><a href="#figure-78" id="toc-figure-78" class="nav-link" data-scroll-target="#figure-78">Figure 78</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/supplemental/psych-sci-figs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Findings: Data viz in psych sci</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 1, 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 31, 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>This page extracts information about the data visualizations we explored in <a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise-01</a> from the shared Google Sheet.</p>
+</section>
+<section id="survey" class="level2">
+<h2 class="anchored" data-anchor-id="survey">Survey</h2>
+<p>Direct link: <a href="https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?gid=0#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?gid=0#gid=0</a></p>
+<p>&lt;iframe src=“https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?gid=0#gid=0 width=”640” height=“800” frameborder=“0” marginheight=“0” marginwidth=“0”&gt;Loading…</p>
+</section>
+<section id="preparation" class="level2">
+<h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
+<p>First, we load the external packages (groups of R commands) that we will be using.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The code uses the <code>quietly()</code> function from the <code>purrr</code> package to suppress most of the feedback.</p>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'ggplot2'</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>r_functions <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="fu">file.path</span>(here<span class="sc">::</span><span class="fu">here</span>(), <span class="st">"R"</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">.R$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(r_functions, source) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">quietly</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>function (...) 
+capture_output(.f(...))
+&lt;bytecode: 0xbc55c73b8&gt;
+&lt;environment: 0xbc55c7038&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="gathering" class="level2">
+<h2 class="anchored" data-anchor-id="gathering">Gathering</h2>
+<p>Next, we download the data from the Google Sheet where it is collected. Dr.&nbsp;Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command <code>Sys.getenv("GMAIL_SURVEY")</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s vital to be <em>very</em> careful when creating and sharing code like this that involves sensitive information like login credentials.</p>
+<p>Gilmore likes to put credentials in an <code>.Renviron</code> file that lives in his home directory. This is a <a href="https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf">recommended practice</a>. On Mac OS and Linux, that’s <code>~/.Renviron</code>. You can use the <code>usethis::edit_r_profile()</code> command <em>at the R console</em> (not the Terminal) to open your own <code>.Renviron</code> file. In Gilmore’s case, he has added the following line to that file:</p>
+<pre><code>GMAIL_SURVEY="&lt;my-google-account&gt;"</code></pre>
+<p>Here, he has substituted his Google account with credentials/access to the required files for <code>&lt;my-google-account&gt;</code>. Then, when the R code below calls <code>Sys.getenv("GMAIL_SURVEY")</code>, the value of those credentials is returned as a text string.</p>
+<p>Make sure to close and save the <code>.Renviron</code> file and restart your R session before testing this yourself.</p>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">'csv'</span>)) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing `csv/`."</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">"csv"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSYCH-490.007-2026-Fall-Psych-Viz"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">path =</span> <span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"csv"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated."</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>The data file has been saved as a comma-separated value (CSV) format data file in a special directory called <code>csv/</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because these data <em>might</em> contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special <code>.gitignore</code> file.</p>
+</div>
+</div>
+</section>
+<section id="cleaning" class="level2">
+<h2 class="anchored" data-anchor-id="cleaning">Cleaning</h2>
+<p>Next we load the saved data file, and then proceed to clean it.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ex01 <span class="ot">&lt;-</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>There are 93 responses.</p>
+<p>These are the column/variable names.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Google Forms puts the full question in the top row of the data file.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># We use the names() function to extract and print the original questions.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>ex01_qs <span class="ot">&lt;-</span> <span class="fu">names</span>(ex01)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>ex01_qs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "identifier"    "source_type"   "url_to_src"    "why_selected" 
+[5] "comment"       "other"         "url_to_figure"</code></pre>
+</div>
+</div>
+<p>For simplicity, we visualize below only those with non-empty URLs to the specific figure.</p>
+</section>
+<section id="summary-data" class="level2">
+<h2 class="anchored" data-anchor-id="summary-data">Summary data</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>figs_w_urls <span class="ot">&lt;-</span> ex01 <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(url_to_figure))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>There were <em>n</em>=20 unique respondents.</p>
+<p>Of the 93 responses from these individuals or teams, <em>n</em>=78 had URLs we could link to directly.</p>
+</section>
+<section id="figures-found" class="level2">
+<h2 class="anchored" data-anchor-id="figures-found">Figures found</h2>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>these_figs <span class="ot">&lt;-</span> ex01 <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(url_to_figure))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">invisible</span>(<span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(these_figs)[<span class="dv">1</span>], return_img_chunk, <span class="at">df =</span> these_figs))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">unlist</span>(res), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<section id="figure-1" class="level3">
+<h3 class="anchored" data-anchor-id="figure-1">Figure 1</h3>
+<p><strong>Source</strong>: <a href="https://www.psychologicalscience.org/observer/teaching-current-directions-in-psychological-science-27#lives" class="uri">https://www.psychologicalscience.org/observer/teaching-current-directions-in-psychological-science-27#lives</a></p>
+<p><a href="https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>rog1</td>
+<td>web_site</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-2" class="level3">
+<h3 class="anchored" data-anchor-id="figure-2">Figure 2</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/full/10.1177/21677026241301298" class="uri">https://journals.sagepub.com/doi/full/10.1177/21677026241301298</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/21677026241301298/asset/1dd9d009-9061-4d44-b2e7-11f90f338a0c/assets/images/large/10.1177_21677026241301298-fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="https://journals.sagepub.com/cms/10.1177/21677026241301298/asset/1dd9d009-9061-4d44-b2e7-11f90f338a0c/assets/images/large/10.1177_21677026241301298-fig1.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>rog1</td>
+<td>article</td>
+<td>ROC figures are used only in specialized contexts</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>More info about sensitivity and specificity: <a href="https://en.wikipedia.org/wiki/Sensitivity_and_specificity" class="uri">https://en.wikipedia.org/wiki/Sensitivity_and_specificity</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-3" class="level3">
+<h3 class="anchored" data-anchor-id="figure-3">Figure 3</h3>
+<p><strong>Source</strong>: <a href="https://doi.org/10.2147/prbm.s529004" class="uri">https://doi.org/10.2147/prbm.s529004</a></p>
+<p><a href="https://www.dovepress.com/article/fulltext_file/529004/aW1n/PRBM_A_529004_O_F0001g.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="https://www.dovepress.com/article/fulltext_file/529004/aW1n/PRBM_A_529004_O_F0001g.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>kalvin1</td>
+<td>article</td>
+<td>Curvilinear graphs are interesting!</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Relationship between fear intensity and enjoyment - moderately intense fear is more enjoyable than low or high intensity fear</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-4" class="level3">
+<h3 class="anchored" data-anchor-id="figure-4">Figure 4</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/reports/practitioner/2023-psychologist-reach-limits" class="uri">https://www.apa.org/pubs/reports/practitioner/2023-psychologist-reach-limits</a></p>
+<p><a href="https://www.apa.org/images/2023-infographic-changes-patient-treatment_tcm7-322754.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="https://www.apa.org/images/2023-infographic-changes-patient-treatment_tcm7-322754.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ganiya</td>
+<td>report</td>
+<td>compares two different datasets</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>percentage of psychologist reporting an increase in their patients mental health conditions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-5" class="level3">
+<h3 class="anchored" data-anchor-id="figure-5">Figure 5</h3>
+<p><strong>Source</strong>: <a href="https://spsp.org/news/character-and-context-blog/liu-dubey-a-better-way-to-talk-about-climate-change" class="uri">https://spsp.org/news/character-and-context-blog/liu-dubey-a-better-way-to-talk-about-climate-change</a></p>
+<p><a href="https://spsp.org/sites/default/files/2025-08/liu-dubey-image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="https://spsp.org/sites/default/files/2025-08/liu-dubey-image.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ganiya</td>
+<td>article</td>
+<td>scatter plot between two different datasets</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>a better way to talk about climate change</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-6" class="level3">
+<h3 class="anchored" data-anchor-id="figure-6">Figure 6</h3>
+<p><strong>Source</strong>: <a href="https://featuredcontent.psychonomic.org/so-long-for-now-thinking-back-on-our-digital-journey/" class="uri">https://featuredcontent.psychonomic.org/so-long-for-now-thinking-back-on-our-digital-journey/</a></p>
+<p><a href="https://i0.wp.com/featuredcontent.psychonomic.org/wp-content/uploads/Mickes2025figMap.png?w=1330&amp;ssl=1" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://i0.wp.com/featuredcontent.psychonomic.org/wp-content/uploads/Mickes2025figMap.png?w=1330&amp;ssl=1" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ganiya</td>
+<td>article</td>
+<td>shows a map graph to explain</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>So long: thinking back on our digitial journey</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-7" class="level3">
+<h3 class="anchored" data-anchor-id="figure-7">Figure 7</h3>
+<p><strong>Source</strong>: <a href="https://www.science.org/doi/10.1126/sciimmunol.aec9853" class="uri">https://www.science.org/doi/10.1126/sciimmunol.aec9853</a></p>
+<p><a href="https://www.science.org/cms/10.1126/sciimmunol.aec9853/asset/086cb239-6db7-47cc-9364-412187d5b399/assets/images/large/sciimmunol.aec9853-f1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://www.science.org/cms/10.1126/sciimmunol.aec9853/asset/086cb239-6db7-47cc-9364-412187d5b399/assets/images/large/sciimmunol.aec9853-f1.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ganiya</td>
+<td>research article</td>
+<td>it highlights several types of graphs for the data</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Platelet-derived serotonin drives age-related lung pathology in SARS-CoV-2 infection</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-8" class="level3">
+<h3 class="anchored" data-anchor-id="figure-8">Figure 8</h3>
+<p><strong>Source</strong>: <a href="https://www.cell.com/patterns/fulltext/S2666-3899(23)00270-2" class="uri">https://www.cell.com/patterns/fulltext/S2666-3899(23)00270-2</a></p>
+<p><a href="https://www.cell.com/cms/10.1016/j.patter.2023.100878/asset/d1fda139-36a5-4aa2-9539-7c9a0305e4b4/main.assets/gr1_lrg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://www.cell.com/cms/10.1016/j.patter.2023.100878/asset/d1fda139-36a5-4aa2-9539-7c9a0305e4b4/main.assets/gr1_lrg.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ganiya</td>
+<td>research article</td>
+<td>shows research and results over time</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The roles, challenges, and merits of the p value</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-9" class="level3">
+<h3 class="anchored" data-anchor-id="figure-9">Figure 9</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/d41586-026-02469-6" class="uri">https://www.nature.com/articles/d41586-026-02469-6</a></p>
+<p><a href="https://media.nature.com/lw767/magazine-assets/d41586-026-02469-6/d41586-026-02469-6_53170836.jpg?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://media.nature.com/lw767/magazine-assets/d41586-026-02469-6/d41586-026-02469-6_53170836.jpg?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ganiya</td>
+<td>article</td>
+<td>scatter plot with several datasets</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vaporization trick enables ‘tandem’ solar cells to be made at lower temperatures</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-10" class="level3">
+<h3 class="anchored" data-anchor-id="figure-10">Figure 10</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/10.1177/21677026251365933" class="uri">https://journals.sagepub.com/doi/10.1177/21677026251365933</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://journals.sagepub.com/cms/10.1177/21677026251365933/asset/df65d7ee-3eea-4705-9509-bc45b96a962d/assets/images/large/10.1177_21677026251365933-fig1.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Article</td>
+<td>Plots out behaviors and types of children in a nominal way</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Interest in the comparison between a questionnaire and personality</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-11" class="level3">
+<h3 class="anchored" data-anchor-id="figure-11">Figure 11</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1458/8499506" class="uri">https://academic.oup.com/chidev/article/97/5/1458/8499506</a></p>
+<p><a href="https://academic.oup.com/view-large/572715349.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://academic.oup.com/view-large/572715349.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Article</td>
+<td>Rather than separate out into one categorization, allows different types of characterizations</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Also a comparison to a Harvard Study in results</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-12" class="level3">
+<h3 class="anchored" data-anchor-id="figure-12">Figure 12</h3>
+<p><strong>Source</strong>: <a href="https://psycnet.apa.org/fulltext/2024-78627-001.pdf?auth_token=1875ac169bf3391e4e21111bd71257e4b9ebb8d2" class="uri">https://psycnet.apa.org/fulltext/2024-78627-001.pdf?auth_token=1875ac169bf3391e4e21111bd71257e4b9ebb8d2</a></p>
+<p><a href="Page 350 - Figure 4 (No available option to place as a link).png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="Page 350 - Figure 4 (No available option to place as a link).png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Article</td>
+<td>Interesting visual for brain sensation</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>There is both a graph and a visual with heads to signify the brain responses</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-13" class="level3">
+<h3 class="anchored" data-anchor-id="figure-13">Figure 13</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41539-025-00386-3?fromPaywallRec=true" class="uri">https://www.nature.com/articles/s41539-025-00386-3?fromPaywallRec=true</a></p>
+<p><a href="https://www.nature.com/articles/s41539-025-00386-3/figures/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://www.nature.com/articles/s41539-025-00386-3/figures/1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Journal</td>
+<td>A visualization to show the sequence participants were asked to use</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It allows others to follow what was done simply from a visual glance, not reading a paragraph of text</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-14" class="level3">
+<h3 class="anchored" data-anchor-id="figure-14">Figure 14</h3>
+<p><strong>Source</strong>: <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00051-6" class="uri">https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00051-6</a></p>
+<p><a href="https://www.cell.com/cms/10.1016/j.tics.2021.02.007/asset/c4c69f8e-7cac-46d6-803b-8ae9ba9e8eb2/main.assets/gr1_lrg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://www.cell.com/cms/10.1016/j.tics.2021.02.007/asset/c4c69f8e-7cac-46d6-803b-8ae9ba9e8eb2/main.assets/gr1_lrg.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Journal</td>
+<td>Compares on multiple levels of understanding vs.&nbsp;belief</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares the belief and discernment of fake news from viewers</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-15" class="level3">
+<h3 class="anchored" data-anchor-id="figure-15">Figure 15</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408#dataandmedia</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>George</td>
+<td>Journal</td>
+<td>The vast range the bar graphs encompass</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Importance of spouces with no prior intercourse</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-16" class="level3">
+<h3 class="anchored" data-anchor-id="figure-16">Figure 16</h3>
+<p><strong>Source</strong>: <a href="https://direct.mit.edu/jocn/article/38/5/1055/134299/From-Forest-to-Focus-The-Interactive-Effects-of" class="uri">https://direct.mit.edu/jocn/article/38/5/1055/134299/From-Forest-to-Focus-The-Interactive-Effects-of</a></p>
+<p><a href="https://direct.mit.edu/view-large/figure/6060255/JOCN.a.2416_f002.tif" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="https://direct.mit.edu/view-large/figure/6060255/JOCN.a.2416_f002.tif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Comparison of data sets and shading of confidence interval is interesting!</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study utilizes EEGs and other methods to investigate effects of nature on attention and mood</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-17" class="level3">
+<h3 class="anchored" data-anchor-id="figure-17">Figure 17</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/10.1177/09567976261453813" class="uri">https://journals.sagepub.com/doi/10.1177/09567976261453813</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="https://journals.sagepub.com/cms/10.1177/09567976261453813/asset/6b4310ed-4d4b-4371-bd5e-9de7dfa97894/assets/images/large/10.1177_09567976261453813-fig2.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>The combination of the dot plot, dot and whisker plot, and bar chart into its own figure made up of sub-panels is extremely effective!</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about different methods for improving media literacy in adults</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-18" class="level3">
+<h3 class="anchored" data-anchor-id="figure-18">Figure 18</h3>
+<p><strong>Source</strong>: <a href="https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/" class="uri">https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/</a></p>
+<p><a href="https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="https://www.psychologicalscience.org/journals/psychological-science/09567976261461126/.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Jittered scatter plot with mean error bars</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about reduced mental health in parents of transgender youth after 2025 Presidential Inauguration</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-19" class="level3">
+<h3 class="anchored" data-anchor-id="figure-19">Figure 19</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.12581" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.12581</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/05818b1a-d2b6-49eb-9336-ed24e77101b7/jora12581-fig-0005-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="https://onlinelibrary.wiley.com/cms/asset/05818b1a-d2b6-49eb-9336-ed24e77101b7/jora12581-fig-0005-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Integrated MRI photo for clarity was an interesting choice that I have never seen before</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about how older sibling risk taking behavior impacts younger siblings</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-20" class="level3">
+<h3 class="anchored" data-anchor-id="figure-20">Figure 20</h3>
+<p><strong>Source</strong>: <a href="https://pubmed.ncbi.nlm.nih.gov/39343080/" class="uri">https://pubmed.ncbi.nlm.nih.gov/39343080/</a></p>
+<p><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0441/12208374/9aa06f8b3d00/nihms-2092883-f0004.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/0441/12208374/9aa06f8b3d00/nihms-2092883-f0004.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Combining MRI scans side by side into one figure is much easier to read than having them as their own individual photos (which is more common in my experience)</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Systematic review of studies interested in connection between psychopathy and brain activity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-21" class="level3">
+<h3 class="anchored" data-anchor-id="figure-21">Figure 21</h3>
+<p><strong>Source</strong>: <a href="https://pubmed.ncbi.nlm.nih.gov/26483461/" class="uri">https://pubmed.ncbi.nlm.nih.gov/26483461/</a></p>
+<p><a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/91a8/4655522/022a15d2f42f/pnas.1506451112fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/91a8/4655522/022a15d2f42f/pnas.1506451112fig01.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gabbi</td>
+<td>Journal</td>
+<td>Combining the line graphs makes for an easy side-by-side comparison and is particularly helpful for data like this</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Study about how sibling order and family size effects personality and intelligence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-22" class="level3">
+<h3 class="anchored" data-anchor-id="figure-22">Figure 22</h3>
+<p><strong>Source</strong>: <a href="https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S019745801600213X#" class="uri">https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S019745801600213X#</a></p>
+<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S019745801600213X-gr3.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S019745801600213X-gr3.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minjoo</td>
+<td>journal</td>
+<td>They used scatter plot with a bar that represents mean value</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>successful associative memory encoding</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-23" class="level3">
+<h3 class="anchored" data-anchor-id="figure-23">Figure 23</h3>
+<p><strong>Source</strong>: <a href="https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0028393222001166" class="uri">https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0028393222001166</a></p>
+<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0028393222001166-gr2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0028393222001166-gr2.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minjoo</td>
+<td>journal</td>
+<td>Using scatter plot in the bar graph is interesting</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>emoitonal schema effects on associative memory across different emotion</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-24" class="level3">
+<h3 class="anchored" data-anchor-id="figure-24">Figure 24</h3>
+<p><strong>Source</strong>: <a href="https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0304394012015133" class="uri">https://www-sciencedirect-com.ezaccess.libraries.psu.edu/science/article/pii/S0304394012015133</a></p>
+<p><a href="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0304394012015133-gr2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="https://ars-els-cdn-com.ezaccess.libraries.psu.edu/content/image/1-s2.0-S0304394012015133-gr2.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minjoo</td>
+<td>journal</td>
+<td>It was interesting that they used both line and bar graph to interpret brain activity</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pragmatic inferences modulate N400 during sentence comprehension</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-25" class="level3">
+<h3 class="anchored" data-anchor-id="figure-25">Figure 25</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/abs/10.1177/21677026241301298" class="uri">https://journals.sagepub.com/doi/abs/10.1177/21677026241301298</a></p>
+<p><a href="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs44184-026-00237-y/MediaObjects/44184_2026_237_Figa_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs44184-026-00237-y/MediaObjects/44184_2026_237_Figa_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minjoo</td>
+<td>article</td>
+<td>The topic itself was interesting, and the data shows how their association increases throughout the years</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>social media use and depression</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-26" class="level3">
+<h3 class="anchored" data-anchor-id="figure-26">Figure 26</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s44184-026-00228-z" class="uri">https://www.nature.com/articles/s44184-026-00228-z</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-026-00228-z/MediaObjects/44184_2026_228_Fig3_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-026-00228-z/MediaObjects/44184_2026_228_Fig3_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minjoo</td>
+<td>article</td>
+<td>The bar graph clearly compares changes between pre and post test</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>personality changes following first-time psychedelic use</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-27" class="level3">
+<h3 class="anchored" data-anchor-id="figure-27">Figure 27</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s44184-025-00173-3" class="uri">https://www.nature.com/articles/s44184-025-00173-3</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-025-00173-3/MediaObjects/44184_2025_173_Fig1_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs44184-025-00173-3/MediaObjects/44184_2025_173_Fig1_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minjoo</td>
+<td>article</td>
+<td>Using different colors for bars gives clear distinction between two symptoms</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mental health texting intervention using reinforcement learning</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-28" class="level3">
+<h3 class="anchored" data-anchor-id="figure-28">Figure 28</h3>
+<p><strong>Source</strong>: <a href="https://www.researchgate.net/publication/374739075_Research_on_the_influence_of_physical_games_in_the_process_of_preschool_children's_psychological_development" class="uri">https://www.researchgate.net/publication/374739075_Research_on_the_influence_of_physical_games_in_the_process_of_preschool_children's_psychological_development</a></p>
+<p><a href="https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="https://www.researchgate.net/publication/374739075/figure/fig1/AS:11431281198676188@1697412099356/Changes-in-psychological-indicators-of-the-experimental-group.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Elizabeth</td>
+<td>Article</td>
+<td>I found this topic intersting also the graph seemed to really by having both bar and line graph</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-29" class="level3">
+<h3 class="anchored" data-anchor-id="figure-29">Figure 29</h3>
+<p><strong>Source</strong>: &lt;Sleep deprivation increases formation of false memory - Lo - 2016 - Journal of Sleep Research - Wiley Online Library&gt;</p>
+<p><a href="spotlight-issue-28-figure_tcm7-179665_w1024_n.gif (500×250)" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="spotlight-issue-28-figure_tcm7-179665_w1024_n.gif (500×250)" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Elizabeth</td>
+<td>Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-30" class="level3">
+<h3 class="anchored" data-anchor-id="figure-30">Figure 30</h3>
+<p><strong>Source</strong>: <a href="https://www.pnas.org/doi/10.1073/pnas.2516655123" class="uri">https://www.pnas.org/doi/10.1073/pnas.2516655123</a></p>
+<p><a href="https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="https://www.pnas.org/cms/10.1073/pnas.2516655123/asset/ed0043cc-20ef-45b5-88c1-bf800cb57cae/assets/images/large/pnas.2516655123fig01.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>They use a pictogram chart to represent blindness to absence of minority groups</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>They use a pictogra, chart to represent blindness to absence of minority groups</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-31" class="level3">
+<h3 class="anchored" data-anchor-id="figure-31">Figure 31</h3>
+<p><strong>Source</strong>: <a href="https://www.sciencedirect.com/science/article/pii/S2214782925000570?via%3Dihub#s0040" class="uri">https://www.sciencedirect.com/science/article/pii/S2214782925000570?via%3Dihub#s0040</a></p>
+<p><a href="https://ars.els-cdn.com/content/image/1-s2.0-S2214782925000570-gr4.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S2214782925000570-gr4.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>The topic is interesting and it compares and looks at data from a lot of different studies</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares different psychological interventions on loneliness</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-32" class="level3">
+<h3 class="anchored" data-anchor-id="figure-32">Figure 32</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/reports/stress-in-america/2025" class="uri">https://www.apa.org/pubs/reports/stress-in-america/2025</a></p>
+<p><a href="https://www.apa.org/pubs/reports/stress-in-america/2025/infographic-loneliness-general.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="https://www.apa.org/pubs/reports/stress-in-america/2025/infographic-loneliness-general.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Website</td>
+<td>The bar chart serves as a great help to visualize how many people are reporting the different signs of loneliness and put it into perspective for the reader</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows adult reports in the United States on lonliness</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-33" class="level3">
+<h3 class="anchored" data-anchor-id="figure-33">Figure 33</h3>
+<p><strong>Source</strong>: <a href="https://www.pnas.org/doi/full/10.1073/pnas.2105061118" class="uri">https://www.pnas.org/doi/full/10.1073/pnas.2105061118</a></p>
+<p><a href="https://www.pnas.org/cms/10.1073/pnas.2105061118/asset/253632d8-6031-42d3-a783-fa8cc5b6697e/assets/images/large/pnas.202105061fig01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="https://www.pnas.org/cms/10.1073/pnas.2105061118/asset/253632d8-6031-42d3-a783-fa8cc5b6697e/assets/images/large/pnas.202105061fig01.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>I found the topic at hand interesting and the bar chart also represents the findings in a way that is easier to understand</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>The bar chart has two 2 experiments of the study in the chart making it so that one can compare and understand the two more easily.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-34" class="level3">
+<h3 class="anchored" data-anchor-id="figure-34">Figure 34</h3>
+<p><strong>Source</strong>: <a href="https://journals.sagepub.com/doi/full/10.1177/0956797618774253" class="uri">https://journals.sagepub.com/doi/full/10.1177/0956797618774253</a></p>
+<p><a href="https://journals.sagepub.com/cms/10.1177/0956797618774253/asset/27865930-3f69-4bcc-a3e6-df85359dc005/assets/images/large/10.1177_0956797618774253-fig1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="https://journals.sagepub.com/cms/10.1177/0956797618774253/asset/27865930-3f69-4bcc-a3e6-df85359dc005/assets/images/large/10.1177_0956797618774253-fig1.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>Have never seen a scatter plot presented in this manner</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It is actually 2 scatter plots comparing the control group with the one that did have changes, making it an interest visualization to look at and look at the differences in data</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-35" class="level3">
+<h3 class="anchored" data-anchor-id="figure-35">Figure 35</h3>
+<p><strong>Source</strong>: <a href="https://link.springer.com/article/10.1007/s40593-025-00521-6" class="uri">https://link.springer.com/article/10.1007/s40593-025-00521-6</a></p>
+<p><a href="https://link.springer.com/article/10.1007/s40593-025-00521-6/figures/1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="https://link.springer.com/article/10.1007/s40593-025-00521-6/figures/1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Daniel</td>
+<td>Article</td>
+<td>Topic was interesting and I wanted to see how thye would be able to visualize their findings</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>It shows the mean grades from the 1st assignment and 5th assignment, comparing what effects the LLMs had on the mean grades for each aspect measured.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-36" class="level3">
+<h3 class="anchored" data-anchor-id="figure-36">Figure 36</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/4/1068/8653055" class="uri">https://academic.oup.com/chidev/article/97/4/1068/8653055</a></p>
+<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/4/10.1093_chidev_aacag031/1/m_aacag031f2.jpeg?Expires=1789714160&amp;Signature=qavOyuQIKk9aH~Qg5FRO6BHfPD9jFqnmxDcN-7SVUWEPYW8hvFssdNdO8k7YsQmPkwuL6iyrvdsCw0Fs2~xxsQ7ZpcyDVn91VC0TefJJEoiAuNhE6PxOGGhSPRqbFeTBDiOIuBeb9fzZpW7PM3PUySz9tXG~J17z1caf70F9nwvTJoahF6Z4R8xbjhHAWUcSbBNIYVH2gtHPMIx4atJEaKg8CffA5ThExHhK3pVSHtHBLNACn61Qrjzy9n44Jo~9Hf-Rr7HlWQ-z~ui9GQHJlB-85l4OLtsIipxvy8T35pt8KcdkSmbIbmWDyrOQ0l4lfQMvZP4dpyy3XZ7Xul7s6g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/4/10.1093_chidev_aacag031/1/m_aacag031f2.jpeg?Expires=1789714160&amp;Signature=qavOyuQIKk9aH~Qg5FRO6BHfPD9jFqnmxDcN-7SVUWEPYW8hvFssdNdO8k7YsQmPkwuL6iyrvdsCw0Fs2~xxsQ7ZpcyDVn91VC0TefJJEoiAuNhE6PxOGGhSPRqbFeTBDiOIuBeb9fzZpW7PM3PUySz9tXG~J17z1caf70F9nwvTJoahF6Z4R8xbjhHAWUcSbBNIYVH2gtHPMIx4atJEaKg8CffA5ThExHhK3pVSHtHBLNACn61Qrjzy9n44Jo~9Hf-Rr7HlWQ-z~ui9GQHJlB-85l4OLtsIipxvy8T35pt8KcdkSmbIbmWDyrOQ0l4lfQMvZP4dpyy3XZ7Xul7s6g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>jackson</td>
+<td>article</td>
+<td>compares performance across multiple differnet statistical learning tasks</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>comopares the trajectory of statisitcal learning of children across a number of different task s</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-37" class="level3">
+<h3 class="anchored" data-anchor-id="figure-37">Figure 37</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/monitor/2025/11-12/ai-use-early-career-psychologists" class="uri">https://www.apa.org/monitor/2025/11-12/ai-use-early-career-psychologists</a></p>
+<p><a href="https://www.apa.org/monitor/2025/11-12/infographics-datapoint.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="https://www.apa.org/monitor/2025/11-12/infographics-datapoint.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
+<td>Article</td>
+<td>Clearly compares AI use among psychologists at different career stages</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the frequency of AI use in the past 12 months by career stage in 2024.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-38" class="level3">
+<h3 class="anchored" data-anchor-id="figure-38">Figure 38</h3>
+<p><strong>Source</strong>: <a href="https://spsp.org/news-center/character-context-blog/look-sunny-side-optimism-increases-people-get-older" class="uri">https://spsp.org/news-center/character-context-blog/look-sunny-side-optimism-increases-people-get-older</a></p>
+<p><a href="https://spsp.org/sites/default/files/styles/large/public/schwaba-optimism-aging-image.png?itok=Mbz_QRyt" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="https://spsp.org/sites/default/files/styles/large/public/schwaba-optimism-aging-image.png?itok=Mbz_QRyt" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
+<td>Article</td>
+<td>I found this graph really interesting because it shows how optimism changes as people get older.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows that optimism increases in middle age, then decreases later in life depending on positive life events.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-39" class="level3">
+<h3 class="anchored" data-anchor-id="figure-39">Figure 39</h3>
+<p><strong>Source</strong>: <a href="https://www.cdc.gov/nchs/products/databriefs/db513.htm" class="uri">https://www.cdc.gov/nchs/products/databriefs/db513.htm</a></p>
+<p><a href="https://www.cdc.gov/nchs/images/databriefs/501-550/db513-fig1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="https://www.cdc.gov/nchs/images/databriefs/501-550/db513-fig1.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
+<td>Article</td>
+<td>I found this graph interesting because social media continues to grow and this shows that about half of teenagers spend 4 or more hours a day on screens.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the difference in percentage of screen time in teenagers aged 12-17</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-40" class="level3">
+<h3 class="anchored" data-anchor-id="figure-40">Figure 40</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/monitor/2024/01/trends-pathways-access-mental-health-care" class="uri">https://www.apa.org/monitor/2024/01/trends-pathways-access-mental-health-care</a></p>
+<p><a href="https://www.apa.org/images/2024-01-trends-mental-health-crisis-graph_tcm7-323425.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="https://www.apa.org/images/2024-01-trends-mental-health-crisis-graph_tcm7-323425.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aiden/Luana</td>
+<td>Article</td>
+<td>The bar graph used is unique in its incredible way to relay information on mental health within different sectors</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Outlines mental health issues broadly, specifically, and how a need for a solution exists</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-41" class="level3">
+<h3 class="anchored" data-anchor-id="figure-41">Figure 41</h3>
+<p><strong>Source</strong>: <a href="https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics-z/alcohol-facts-and-statistics/alcohol-and-older-adults-ages-65" class="uri">https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics-z/alcohol-facts-and-statistics/alcohol-and-older-adults-ages-65</a></p>
+<p><a href="https://www.niaaa.nih.gov/sites/default/files/styles/image_425/public/2024%20NSDUH%20Older%20Adults%20Binge.png?itok=oqz-kpXW" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="https://www.niaaa.nih.gov/sites/default/files/styles/image_425/public/2024%20NSDUH%20Older%20Adults%20Binge.png?itok=oqz-kpXW" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aiden/Luana</td>
+<td>Web_site</td>
+<td>This pie chart makes visualizing the issues being discussed very easy to understand for viewers and covers and interesting topic</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Percent of elederly that consider themselves binge drinkers</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-42" class="level3">
+<h3 class="anchored" data-anchor-id="figure-42">Figure 42</h3>
+<p><strong>Source</strong>: <a href="https://link.springer.com/article/10.1007/s40519-026-01855-3" class="uri">https://link.springer.com/article/10.1007/s40519-026-01855-3</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs40519-026-01855-3/MediaObjects/40519_2026_1855_Fig1_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs40519-026-01855-3/MediaObjects/40519_2026_1855_Fig1_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aiden/Luana</td>
+<td>Empirical Journal</td>
+<td>I used this bar chart because I think it covers a very relevant and erious topic and is multifacted in the data it presents</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Trends in eating disorders over a recent 8 year span</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-43" class="level3">
+<h3 class="anchored" data-anchor-id="figure-43">Figure 43</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.70224" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.70224</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/13e2dca0-fb38-401d-8fdb-e9a32b0973fb/jora70224-fig-0002-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="https://onlinelibrary.wiley.com/cms/asset/13e2dca0-fb38-401d-8fdb-e9a32b0973fb/jora70224-fig-0002-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aiden/Luana</td>
+<td>empirical article</td>
+<td>I find this area of psychology, adolescent psych, one of the most intresting topics in this field. This article evaluates parent-adolescent relationships as context for daily relations and mood</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>the left graph shows the conflict sensitization while the right graph shows the widespread effect</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-44" class="level3">
+<h3 class="anchored" data-anchor-id="figure-44">Figure 44</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1502/8550827" class="uri">https://academic.oup.com/chidev/article/97/5/1502/8550827</a></p>
+<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacag016/2/m_aacag016f2.jpeg?Expires=1791159563&amp;Signature=mm3ohQXUqOmbDFPkKw6abmvY0wRbfLkMuJM-xN8e6AIXginUhaox0ZlDrGDDe5NN18Vq8nc8yqz~jaqG003H97eG4rfi1F3B-qsSyclcTBhM9SikJEKaNqn2o5v71mlyN~14~zbic3nfqRT4SoU26pYQ2-culIqOmeFt-M6lgeN12gNtSdEJ45J0OmqPM3k9~eIEby8-fC9x4BnZ~E5h13Qnbf5WRe5o5~-decnlmNeWZ1r5v5BR2LPsIeTY~avoz4Mm-UMJW1uyZ5MXX2YmNR6vEEQ2b3cLMWe2hexMTkp5paZ3Je7bvwvYBJnr5w3jiTfJ~xn4w94Li8KzE9G33g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacag016/2/m_aacag016f2.jpeg?Expires=1791159563&amp;Signature=mm3ohQXUqOmbDFPkKw6abmvY0wRbfLkMuJM-xN8e6AIXginUhaox0ZlDrGDDe5NN18Vq8nc8yqz~jaqG003H97eG4rfi1F3B-qsSyclcTBhM9SikJEKaNqn2o5v71mlyN~14~zbic3nfqRT4SoU26pYQ2-culIqOmeFt-M6lgeN12gNtSdEJ45J0OmqPM3k9~eIEby8-fC9x4BnZ~E5h13Qnbf5WRe5o5~-decnlmNeWZ1r5v5BR2LPsIeTY~avoz4Mm-UMJW1uyZ5MXX2YmNR6vEEQ2b3cLMWe2hexMTkp5paZ3Je7bvwvYBJnr5w3jiTfJ~xn4w94Li8KzE9G33g__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aiden/Luana</td>
+<td>journal article</td>
+<td>I found the topic very intresting and they use dfferent kinds of graphs to depict changes in young childrens behavior after COVID-19</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>shows how four year old childrens scores in Pittsburgh, PA increased after the pandemic on all five behavioral problems</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-45" class="level3">
+<h3 class="anchored" data-anchor-id="figure-45">Figure 45</h3>
+<p><strong>Source</strong>: <a href="https://psycnet.apa.org/fulltext/2022-16907-001.html" class="uri">https://psycnet.apa.org/fulltext/2022-16907-001.html</a></p>
+<p><a href="https://psycnet.apa.org/ftasset/journals/bdb/27/1-2/images/thumb_bdb_27_1-2_1_fig4a.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="https://psycnet.apa.org/ftasset/journals/bdb/27/1-2/images/thumb_bdb_27_1-2_1_fig4a.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aiden/Luana</td>
+<td>journal article</td>
+<td>Uses multiple types of graphs and figures to help better understand whether caregivers are able to integrate stimulus avoidance assesment procedures while still maintaining fidelity</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>this graph shows us the difference between results based on who adminstered the procedures, the impact this had on destructive behavior, and the clinical implementation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-46" class="level3">
+<h3 class="anchored" data-anchor-id="figure-46">Figure 46</h3>
+<p><strong>Source</strong>: <a href="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="uri">https://psycnet.apa.org/fulltext/2026-89350-001.pdf</a></p>
+<p><a href="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><embed src="https://psycnet.apa.org/fulltext/2026-89350-001.pdf" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Arnesh</td>
+<td>Article</td>
+<td>This forest plot shows effect sizes grouped up in 3 different mental illiness groups, which is very interesting to see</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Plots data from multiple studies into the forest plot</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-47" class="level3">
+<h3 class="anchored" data-anchor-id="figure-47">Figure 47</h3>
+<p><strong>Source</strong>: <a href="https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/" class="uri">https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/</a></p>
+<p><a href="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I selcted this graph because I am interested in I-O psychology and the future of AI</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Frequency of Use of GenAI Across All Participants</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-48" class="level3">
+<h3 class="anchored" data-anchor-id="figure-48">Figure 48</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/journals/releases/law-0000037.pdf" class="uri">https://www.apa.org/pubs/journals/releases/law-0000037.pdf</a></p>
+<p><a href="https://www.researchgate.net/publication/272407118/figure/fig6/AS:11431281656648820@1759257199217/Reported-crime-rates-before-during-and-after-US-Department-of-Education-audits.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="https://www.researchgate.net/publication/272407118/figure/fig6/AS:11431281656648820@1759257199217/Reported-crime-rates-before-during-and-after-US-Department-of-Education-audits.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Journal Article</td>
+<td>I selected this graph because it relates to colleges and universities</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Crimes reported on cmapus throughout the years in relation to the audit</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-49" class="level3">
+<h3 class="anchored" data-anchor-id="figure-49">Figure 49</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/journals/features/sgd-0000050.pdf" class="uri">https://www.apa.org/pubs/journals/features/sgd-0000050.pdf</a></p>
+<p><a href="https://www.apa.org/images/spotlight-issue-28-figure_tcm7-179665_w1024_n.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="https://www.apa.org/images/spotlight-issue-28-figure_tcm7-179665_w1024_n.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Journal Article</td>
+<td>I was curious to see the biases in the hiring proccess and it relates to the field I want to go into</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Three-way interaction between sexual orientation, marital status, and gender.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-50" class="level3">
+<h3 class="anchored" data-anchor-id="figure-50">Figure 50</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-122216-011911</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/69/1/ps690299.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="https://www.annualreviews.org/docserver/fulltext/psych/69/1/ps690299.f1.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I was curious to understand more about the graph and because I enjoy learning about attitudes.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Showing the proportion of attitude related articles over time. It is focused on the research of attitudes not people’s attitudes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-51" class="level3">
+<h3 class="anchored" data-anchor-id="figure-51">Figure 51</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-psych-010418-103408</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="https://www.annualreviews.org/docserver/fulltext/psych/70/1/ps700077.f3.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I found this graph interesting because it included multiple different countries and both male and female preferences in spouse</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the importance of no sexual intercourse in a potential spouse between different countries</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-52" class="level3">
+<h3 class="anchored" data-anchor-id="figure-52">Figure 52</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-clinpsy-050212-185526" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-clinpsy-050212-185526</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/clinpsy/9/1/cp90327.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="https://www.annualreviews.org/docserver/fulltext/clinpsy/9/1/cp90327.f1.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Callie</td>
+<td>Article</td>
+<td>I was curious to see the relation between depression and cardiovascular disorders</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prevalence of depression among patients with cardiovascular disorders in the United States.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-53" class="level3">
+<h3 class="anchored" data-anchor-id="figure-53">Figure 53</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-devpsych-121318-085204#dataandmedia</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/devpsych/1/1/dp10177.f4.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="https://www.annualreviews.org/docserver/fulltext/devpsych/1/1/dp10177.f4.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
+<td>Journal</td>
+<td>Shows how cognitve abilities change as people get older</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares cognitive function and dementia screening scores by age</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-54" class="level3">
+<h3 class="anchored" data-anchor-id="figure-54">Figure 54</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-110721-045646#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-110721-045646#dataandmedia</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/organ/11/1/op110453.f2.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="https://www.annualreviews.org/docserver/fulltext/organ/11/1/op110453.f2.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
+<td>Journal</td>
+<td>I found this graph interesting because it shows which topics are studied the most.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Percentage of studies covering each of the 14 topics</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-55" class="level3">
+<h3 class="anchored" data-anchor-id="figure-55">Figure 55</h3>
+<p><strong>Source</strong>: <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-soc-030222-031142#dataandmedia" class="uri">https://www.annualreviews.org/content/journals/10.1146/annurev-soc-030222-031142#dataandmedia</a></p>
+<p><a href="https://www.annualreviews.org/docserver/fulltext/soc/50/1/so500191.f1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="https://www.annualreviews.org/docserver/fulltext/soc/50/1/so500191.f1.gif" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria/Elaina/olivia</td>
+<td>Journal</td>
+<td>This graph is interesting because it shows how research on fake news and conspiracy theories has changed over time.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the number of published articles of fake news has increased over the years</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-56" class="level3">
+<h3 class="anchored" data-anchor-id="figure-56">Figure 56</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41598-024-55064-y?fromPaywallRec=true" class="uri">https://www.nature.com/articles/s41598-024-55064-y?fromPaywallRec=true</a></p>
+<p><a href="https://www.nature.com/articles/s41598-024-55064-y/figures/3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="https://www.nature.com/articles/s41598-024-55064-y/figures/3.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ishita</td>
+<td>Article</td>
+<td>Shows that people’s social media habits can change depending on where they are and who they are with</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares social media use across different social and physical contexts, looking at both frequency and duration of use</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-57" class="level3">
+<h3 class="anchored" data-anchor-id="figure-57">Figure 57</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/nature06288" class="uri">https://www.nature.com/articles/nature06288</a></p>
+<p><a href="https://www.nature.com/articles/nature06288/figures/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="https://www.nature.com/articles/nature06288/figures/2.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ishita</td>
+<td>Article</td>
+<td>Shows infants’ preferences based on how helpful or harmful someone is</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares infants’ social preferences and social evaluation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-58" class="level3">
+<h3 class="anchored" data-anchor-id="figure-58">Figure 58</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41598-019-44977-8" class="uri">https://www.nature.com/articles/s41598-019-44977-8</a></p>
+<p><a href="https://www.nature.com/articles/s41598-019-44977-8/figures/2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="https://www.nature.com/articles/s41598-019-44977-8/figures/2.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ishita</td>
+<td>Article</td>
+<td>Interesting that differences in social behaviour can be connected to differences in brain activity</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compares individuals’ eye fixation behaviour with their brain activity during social perception</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-59" class="level3">
+<h3 class="anchored" data-anchor-id="figure-59">Figure 59</h3>
+<p><strong>Source</strong>: <a href="https://www.siop.org/tip-article/navigating-the-landscape-key-findings-from-the-2022-practitioner-needs-survey/?" class="uri">https://www.siop.org/tip-article/navigating-the-landscape-key-findings-from-the-2022-practitioner-needs-survey/?</a></p>
+<p><a href="https://www.siop.org/wp-content/uploads/2024/11/Figure-2-Mean-Ratings.png?" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="https://www.siop.org/wp-content/uploads/2024/11/Figure-2-Mean-Ratings.png?" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hiya</td>
+<td>Article</td>
+<td>I like it because compares satisfaction across 12 aspects of SIOP between 2019 and 2022, and makes changes over time easy to identify.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comaprison of SIOP practioner satisfaction, 2019 vs.&nbsp;2022</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-60" class="level3">
+<h3 class="anchored" data-anchor-id="figure-60">Figure 60</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/news/press/releases/stress/2020/infographics" class="uri">https://www.apa.org/news/press/releases/stress/2020/infographics</a></p>
+<p><a href="https://www.apa.org/news/press/releases/stress/2020/infographics.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="https://www.apa.org/news/press/releases/stress/2020/infographics.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hiya</td>
+<td>Article</td>
+<td>I find it intriguing how parents reported substantially higher COVID-19-related stress than non-parents using a simple 1–10 scale.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Covid-19 Stress Level Comparison: Parents vs.&nbsp;Non-Parents</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-61" class="level3">
+<h3 class="anchored" data-anchor-id="figure-61">Figure 61</h3>
+<p><strong>Source</strong>: <a href="https://featuredcontent.psychonomic.org/why-you-should-check-not-just-test-your-statistical-assumptions/" class="uri">https://featuredcontent.psychonomic.org/why-you-should-check-not-just-test-your-statistical-assumptions/</a></p>
+<p><a href="https://i0.wp.com/featuredcontent.psychonomic.org/wp-content/uploads/Shatz2023fig1.png?resize=665%2C179&amp;ssl=1" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="https://i0.wp.com/featuredcontent.psychonomic.org/wp-content/uploads/Shatz2023fig1.png?resize=665%2C179&amp;ssl=1" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hiya</td>
+<td>Article</td>
+<td>Interesting to me because it shows how distributions that visibly violate normality can still pass a statistical normality test, and why visual inspection matters alongside statistical testing.</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Demonstrates how normal statistical tests hide abnormal data</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-62" class="level3">
+<h3 class="anchored" data-anchor-id="figure-62">Figure 62</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.70228" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.70228</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/704bb770-5532-4c00-b092-b8bf85927de3/jora70228-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="https://onlinelibrary.wiley.com/cms/asset/704bb770-5532-4c00-b092-b8bf85927de3/jora70228-fig-0001-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natalie</td>
+<td>Journal Article</td>
+<td>Shows the increased positive impact on social connectedness for female adolescents with high adverse childhood experiences using two different types of interventions (school-based / breathwork)</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Trajectories of social connectedness over time for high- and low-adverse childhood experiences groups of female adolesents participating in school-based and breathwork interventions</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-63" class="level3">
+<h3 class="anchored" data-anchor-id="figure-63">Figure 63</h3>
+<p><strong>Source</strong>: <a href="https://link.springer.com/article/10.3758/s13415-025-01376-z" class="uri">https://link.springer.com/article/10.3758/s13415-025-01376-z</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.3758%2Fs13415-025-01376-z/MediaObjects/13415_2025_1376_Fig2_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.3758%2Fs13415-025-01376-z/MediaObjects/13415_2025_1376_Fig2_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natalie</td>
+<td>Journal Article</td>
+<td>Interesting to see differences in verbal metaphor processing by type of metaphor</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Metaphors elicit more negative N400 (negativity in time window post word onset) than literal counterparts, but results vary greatly in different time windows</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-64" class="level3">
+<h3 class="anchored" data-anchor-id="figure-64">Figure 64</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1489/8501050" class="uri">https://academic.oup.com/chidev/article/97/5/1489/8501050</a></p>
+<p><a href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacaf055/2/m_aacaf055f2.jpeg?Expires=1791350597&amp;Signature=k22YCZwoQp7YPxX5XcXw35juO23afVLe6IPtTBOinYtchrtgosDKdTJD3zFinC57dk-DJHzrQqSLkxEu8j0KeEJhoqjasC~~SLw-t50cyAOzVBVmL5LJ1IMHrRWxetqvaappImnwkQZm7MApbh3nXjfkgT53OJGqBR1I~8m440ZJ9KrvBxhnJisPijFfNgc5hQHjDfeQCGRV0ZCgJ~9W-nywESVwE2h3P939309mHpre1lj0tAq0WpNViLHuxqMsbD4o5XoP5SM14eAgnIBPhMJy8vhQXbQs1IFqeZ3I~GeOYEgzSQGOFsEfJA6e8uMthPrKbxkW6ZMhC9JlzIcBZw__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/chidev/97/5/10.1093_chidev_aacaf055/2/m_aacaf055f2.jpeg?Expires=1791350597&amp;Signature=k22YCZwoQp7YPxX5XcXw35juO23afVLe6IPtTBOinYtchrtgosDKdTJD3zFinC57dk-DJHzrQqSLkxEu8j0KeEJhoqjasC~~SLw-t50cyAOzVBVmL5LJ1IMHrRWxetqvaappImnwkQZm7MApbh3nXjfkgT53OJGqBR1I~8m440ZJ9KrvBxhnJisPijFfNgc5hQHjDfeQCGRV0ZCgJ~9W-nywESVwE2h3P939309mHpre1lj0tAq0WpNViLHuxqMsbD4o5XoP5SM14eAgnIBPhMJy8vhQXbQs1IFqeZ3I~GeOYEgzSQGOFsEfJA6e8uMthPrKbxkW6ZMhC9JlzIcBZw__&amp;Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Natalie</td>
+<td>Journal Article</td>
+<td>Shows changes across different age and syndrome groups, highlighted by different color lines</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows changes in challenging behaviors pre and post pandemic for children of different ages and syndrome types</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-65" class="level3">
+<h3 class="anchored" data-anchor-id="figure-65">Figure 65</h3>
+<p><strong>Source</strong>: <a href="https://www.psychologicalscience.org/observer/covid-19-psycorona-global-psychological-response" class="uri">https://www.psychologicalscience.org/observer/covid-19-psycorona-global-psychological-response</a></p>
+<p><a href="https://www.psychologicalscience.org/redesign/wp-content/uploads/2020/07/Psycorona-graphic.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="https://www.psychologicalscience.org/redesign/wp-content/uploads/2020/07/Psycorona-graphic.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Shows a connections between several emotions in an interesting pattern</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows the different emotions people were feeling during the Covid pandemic</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-66" class="level3">
+<h3 class="anchored" data-anchor-id="figure-66">Figure 66</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jora.70240" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/jora.70240</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/79b2c317-641f-4257-ac62-355398093645/jora70240-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="https://onlinelibrary.wiley.com/cms/asset/79b2c317-641f-4257-ac62-355398093645/jora70240-fig-0001-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_1</td>
+<td>Journal Article</td>
+<td>i found it interesting becuase</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Neural and psychological predictors of digital status-seeking in adolescence</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-67" class="level3">
+<h3 class="anchored" data-anchor-id="figure-67">Figure 67</h3>
+<p><strong>Source</strong>: <a href="https://academic.oup.com/chidev/article/97/5/1564/8725406" class="uri">https://academic.oup.com/chidev/article/97/5/1564/8725406</a></p>
+<p><a href="https://academic.oup.com/view-large/figure/572715188/aacag114f2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="https://academic.oup.com/view-large/figure/572715188/aacag114f2.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_1</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-68" class="level3">
+<h3 class="anchored" data-anchor-id="figure-68">Figure 68</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/news/press/releases/stress/2022/march-2022-survival-mode" class="uri">https://www.apa.org/news/press/releases/stress/2022/march-2022-survival-mode</a></p>
+<p><a href="https://www.apa.org/images/race-closer-look-economic-stress_tcm7-302720_w1024_n.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="https://www.apa.org/images/race-closer-look-economic-stress_tcm7-302720_w1024_n.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_1</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-69" class="level3">
+<h3 class="anchored" data-anchor-id="figure-69">Figure 69</h3>
+<p><strong>Source</strong>: <a href="https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00127-0#f0005" class="uri">https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00127-0#f0005</a></p>
+<p><a href="https://www.cell.com/cms/10.1016/j.tics.2026.05.008/asset/d7ef5ea7-45df-4bbe-8711-1d50cfc9b80c/main.assets/gr1_lrg.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="https://www.cell.com/cms/10.1016/j.tics.2026.05.008/asset/d7ef5ea7-45df-4bbe-8711-1d50cfc9b80c/main.assets/gr1_lrg.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_2</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-70" class="level3">
+<h3 class="anchored" data-anchor-id="figure-70">Figure 70</h3>
+<p><strong>Source</strong>: <a href="https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use" class="uri">https://knowablemagazine.org/content/article/technology/2026/how-much-water-do-ai-data-centers-use</a></p>
+<p><a href="https://knowablemagazine.org/docserver/froala-uploads/g-ai-water-footprint-projected.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="https://knowablemagazine.org/docserver/froala-uploads/g-ai-water-footprint-projected.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_2</td>
+<td>Magazine article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-71" class="level3">
+<h3 class="anchored" data-anchor-id="figure-71">Figure 71</h3>
+<p><strong>Source</strong>: <a href="https://www.nature.com/articles/s41562-026-02559-5" class="uri">https://www.nature.com/articles/s41562-026-02559-5</a></p>
+<p><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-026-02559-5/MediaObjects/41562_2026_2559_Fig3_HTML.png?as=webp" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-026-02559-5/MediaObjects/41562_2026_2559_Fig3_HTML.png?as=webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hashika_2</td>
+<td>Journal Article</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-72" class="level3">
+<h3 class="anchored" data-anchor-id="figure-72">Figure 72</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/monitor/2026/04-05/ai-psychologists-experience-concerns" class="uri">https://www.apa.org/monitor/2026/04-05/ai-psychologists-experience-concerns</a></p>
+<p><a href="https://www.apa.org/images/2026-04-05-datapoint-graph-tile_tcm7-348266_w1024_n.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="https://www.apa.org/images/2026-04-05-datapoint-graph-tile_tcm7-348266_w1024_n.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Interesting comparison of AI by usage level</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>shows differences in concerns about acuracy, privacy, and bias</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-73" class="level3">
+<h3 class="anchored" data-anchor-id="figure-73">Figure 73</h3>
+<p><strong>Source</strong>: <a href="https://www.eneuro.org/content/11/11/ENEURO.0124-24.2024?_gl=1*1mx7k9w*_gcl_au*MTYyNDYzMTY1OS4xNzg3OTQ4NjgwLi0uLS4xNzg3OTQ4NjgwLjgyOTI4MDY2Ny4xNzg4NDU3MDAwLjE3ODg1NDA2Njc." class="uri">https://www.eneuro.org/content/11/11/ENEURO.0124-24.2024?_gl=1*1mx7k9w*_gcl_au*MTYyNDYzMTY1OS4xNzg3OTQ4NjgwLi0uLS4xNzg3OTQ4NjgwLjgyOTI4MDY2Ny4xNzg4NDU3MDAwLjE3ODg1NDA2Njc.</a></p>
+<p><a href="https://www.eneuro.org/content/eneuro/11/11/ENEURO.0124-24.2024/F1.large.jpg?width=800&amp;height=600&amp;carousel=1" class="lightbox" data-gallery="quarto-lightbox-gallery-73"><img src="https://www.eneuro.org/content/eneuro/11/11/ENEURO.0124-24.2024/F1.large.jpg?width=800&amp;height=600&amp;carousel=1" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Journal</td>
+<td>shows behavioral changes accross experimental sessions</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>shows trends in nose poke rats with error bars for veriability</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-74" class="level3">
+<h3 class="anchored" data-anchor-id="figure-74">Figure 74</h3>
+<p><strong>Source</strong>: <a href="https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/" class="uri">https://www.siop.org/tip-article/use-of-artificial-intelligence-in-industrial-organizational-psychology-current-trends-and-future-outlook-2/</a></p>
+<p><a href="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-74"><img src="https://www.siop.org/wp-content/uploads/2025/09/Picture1.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Shows comparison of how often profetionals use generative AI</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows which AI use frequencies are most common among SIOP members</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-75" class="level3">
+<h3 class="anchored" data-anchor-id="figure-75">Figure 75</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/cdev.14134" class="uri">https://onlinelibrary.wiley.com/doi/full/10.1111/cdev.14134</a></p>
+<p><a href="https://onlinelibrary.wiley.com/cms/asset/467de127-41f0-4d31-b3cb-403c76b916fb/cdev14134-fig-0001-m.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img src="https://onlinelibrary.wiley.com/cms/asset/467de127-41f0-4d31-b3cb-403c76b916fb/cdev14134-fig-0001-m.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Interesting comparison of brain responses between reading groups</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Shows differences in print speech processing and brain activity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-76" class="level3">
+<h3 class="anchored" data-anchor-id="figure-76">Figure 76</h3>
+<p><strong>Source</strong>: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jora.70030" class="uri">https://onlinelibrary.wiley.com/doi/full/10.1111/jora.70030</a></p>
+<p><a href="http://pmc.ncbi.nlm.nih.gov/articles/PMC12070023/figure/jora70030-fig-0001/.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img src="http://pmc.ncbi.nlm.nih.gov/articles/PMC12070023/figure/jora70030-fig-0001/.png" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paul</td>
+<td>Article</td>
+<td>Interesting comparison of psychological symptoms across age and gender</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-77" class="level3">
+<h3 class="anchored" data-anchor-id="figure-77">Figure 77</h3>
+<p><strong>Source</strong>: <a href="https://www.apa.org/pubs/reports/stress-in-america/2025" class="uri">https://www.apa.org/pubs/reports/stress-in-america/2025</a></p>
+<p><a href="https://www.apa.org/images/infographic-loneliness-signs_tcm7-343552_w1024_n.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-77"><img src="https://www.apa.org/images/infographic-loneliness-signs_tcm7-343552_w1024_n.jpg" class="img-fluid"></a></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>jackson</td>
+<td>NA</td>
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="figure-78" class="level3">
+<h3 class="anchored" data-anchor-id="figure-78">Figure 78</h3>
+<p><strong>Source</strong>: <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1" class="uri">https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00825/full#F1</a></p>
+<p><a href="https://www.frontiersin.org/files/Articles/138665/xml-images/fpsyg-06-00825-g001.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-78"><img src="https://www.frontiersin.org/files/Articles/138665/xml-images/fpsyg-06-00825-g001.webp" class="img-fluid"></a></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Analyst</th>
+<th>Source Type</th>
+<th>Why Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Eddie</td>
+<td>article</td>
+<td>Red Bull as a cultural symbol and the process of sublimiinal advertising are interesting</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NA</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../tutorials/tutorial-figure-captions-numbering.html" class="pagination-link" aria-label="Captions and figure numbers">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Captions and figure numbers</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../supplemental/other-field-figs.html" class="pagination-link" aria-label="Findings: Data viz outside psych sci">
+        <span class="nav-page-text">Findings: Data viz outside psych sci</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Findings: Data viz in psych sci"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="an">params:</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">  update_data: true</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">  fn: "ex01-figs-in-psych-sci.csv"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## About</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>This page extracts information about the data visualizations we explored in <span class="co">[</span><span class="ot">Exercise-01</span><span class="co">](../exercises/ex-01-figs-in-psych-sci.qmd)</span> from the shared Google Sheet.</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Survey</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>Direct link: <span class="ot">&lt;https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?gid=0#gid=0&gt;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://docs.google.com/spreadsheets/d/1Q9xYmkvXsETfTHZjGXWxQ3vM2TBVWWo3Jimfv1Bkvfw/edit?gid=0#gid=0 width="</span><span class="er">640"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"800"</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">"0"</span><span class="ot"> marginheight</span><span class="op">=</span><span class="st">"0"</span><span class="ot"> marginwidth</span><span class="op">=</span><span class="st">"0"</span><span class="dt">&gt;</span>Loading…<span class="dt">&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preparation</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>First, we load the external packages (groups of R commands) that we will be using.</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>::: {.callout-important}</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>The code uses the <span class="in">`quietly()`</span> function from the <span class="in">`purrr`</span> package to suppress most of the feedback.</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'ggplot2'</span>)</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'dplyr'</span>)</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>r_functions <span class="ot">&lt;-</span> <span class="fu">list.files</span>(<span class="fu">file.path</span>(here<span class="sc">::</span><span class="fu">here</span>(), <span class="st">"R"</span>), <span class="st">"</span><span class="sc">\\</span><span class="st">.R$"</span>, <span class="at">full.names =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>purrr<span class="sc">::</span><span class="fu">map</span>(r_functions, source) <span class="sc">|&gt;</span></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">quietly</span>()</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gathering</span></span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>Next, we download the data from the Google Sheet where it is collected.</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command <span class="in">`Sys.getenv("GMAIL_SURVEY")`</span>.</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>It's vital to be *very* careful when creating and sharing code like this that involves sensitive information like login credentials.</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>Gilmore likes to put credentials in an <span class="in">`.Renviron`</span> file that lives in his home directory. </span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>This is a <span class="co">[</span><span class="ot">recommended practice</span><span class="co">](https://support.posit.co/hc/en-us/articles/360047157094-Managing-R-with-Rprofile-Renviron-Rprofile-site-Renviron-site-rsession-conf-and-repos-conf)</span>.</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>On Mac OS and Linux, that's <span class="in">`~/.Renviron`</span>. </span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>You can use the <span class="in">`usethis::edit_r_profile()`</span> command *at the R console* (not the Terminal) to open your own <span class="in">`.Renviron`</span> file.</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>In Gilmore's case, he has added the following line to that file:</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="in">GMAIL_SURVEY="&lt;my-google-account&gt;"</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>Here, he has substituted his Google account with credentials/access to the required files for <span class="in">`&lt;my-google-account&gt;`</span>.</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>Then, when the R code below calls <span class="in">`Sys.getenv("GMAIL_SURVEY")`</span>, the value of those credentials is returned as a text string.</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>Make sure to close and save the <span class="in">`.Renviron`</span> file and restart your R session before testing this yourself.</span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=params$update_data}</span></span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: gather-data-from-google</span></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">'csv'</span>)) {</span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Creating missing `csv/`."</span>)</span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dir.create</span>(<span class="st">"csv"</span>)</span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (params<span class="sc">$</span>update_data) {</span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a>  <span class="fu">options</span>(<span class="at">gargle_oauth_email =</span> <span class="fu">Sys.getenv</span>(<span class="st">"GMAIL_SURVEY"</span>))</span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_auth</span>()</span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>  googledrive<span class="sc">::</span><span class="fu">drive_download</span>(</span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PSYCH-490.007-2026-Fall-Psych-Viz"</span>,</span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>    <span class="at">path =</span> <span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn),</span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"csv"</span>,</span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>    <span class="at">overwrite =</span> <span class="cn">TRUE</span></span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Data updated."</span>)</span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(<span class="st">"Using stored data."</span>)</span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>The data file has been saved as a comma-separated value (CSV) format data file in a special directory called <span class="in">`csv/`</span>.</span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>Because these data *might* contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub.</span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>This is achieved by adding the name of the data directory to a special <span class="in">`.gitignore`</span> file.</span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cleaning</span></span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a>Next we load the saved data file, and then proceed to clean it.</span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, eval=params$update_data}</span></span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: load-saved-data</span></span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a>ex01 <span class="ot">&lt;-</span></span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>  readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="fu">file.path</span>(<span class="st">"csv"</span>, params<span class="sc">$</span>fn), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a>There are <span class="in">`{r} dim(ex01)[1]`</span> responses.</span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a>These are the column/variable names.</span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-117"><a href="#cb10-117" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-118"><a href="#cb10-118" aria-hidden="true" tabindex="-1"></a><span class="co"># Google Forms puts the full question in the top row of the data file.</span></span>
+<span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a><span class="co"># We use the names() function to extract and print the original questions.</span></span>
+<span id="cb10-120"><a href="#cb10-120" aria-hidden="true" tabindex="-1"></a>ex01_qs <span class="ot">&lt;-</span> <span class="fu">names</span>(ex01)</span>
+<span id="cb10-121"><a href="#cb10-121" aria-hidden="true" tabindex="-1"></a>ex01_qs</span>
+<span id="cb10-122"><a href="#cb10-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-123"><a href="#cb10-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-124"><a href="#cb10-124" aria-hidden="true" tabindex="-1"></a>For simplicity, we visualize below only those with non-empty URLs to the specific figure.</span>
+<span id="cb10-125"><a href="#cb10-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-126"><a href="#cb10-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary data</span></span>
+<span id="cb10-127"><a href="#cb10-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-131"><a href="#cb10-131" aria-hidden="true" tabindex="-1"></a>figs_w_urls <span class="ot">&lt;-</span> ex01 <span class="sc">|&gt;</span></span>
+<span id="cb10-132"><a href="#cb10-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(url_to_figure))</span>
+<span id="cb10-133"><a href="#cb10-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb10-134"><a href="#cb10-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-135"><a href="#cb10-135" aria-hidden="true" tabindex="-1"></a>There were *n*=<span class="in">`{r} length(unique(ex01$identifier))`</span> unique respondents.</span>
+<span id="cb10-136"><a href="#cb10-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-137"><a href="#cb10-137" aria-hidden="true" tabindex="-1"></a>Of the <span class="in">`{r} dim(ex01)[1]`</span> responses from these individuals or teams, *n*=<span class="in">`{r} dim(figs_w_urls)[1]`</span> had URLs we could link to directly.</span>
+<span id="cb10-138"><a href="#cb10-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-139"><a href="#cb10-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figures found</span></span>
+<span id="cb10-140"><a href="#cb10-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-141"><a href="#cb10-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{r many-tables-lapply, results = "asis", warning=FALSE}</span></span>
+<span id="cb10-142"><a href="#cb10-142" aria-hidden="true" tabindex="-1"></a>these_figs <span class="ot">&lt;-</span> ex01 <span class="sc">|&gt;</span></span>
+<span id="cb10-143"><a href="#cb10-143" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(url_to_figure))</span>
+<span id="cb10-144"><a href="#cb10-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-145"><a href="#cb10-145" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">invisible</span>(<span class="fu">lapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">dim</span>(these_figs)[<span class="dv">1</span>], return_img_chunk, <span class="at">df =</span> these_figs))</span>
+<span id="cb10-146"><a href="#cb10-146" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">unlist</span>(res), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb10-147"><a href="#cb10-147" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright © Rick Gilmore • <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Built with <a href="https://quarto.org/">Quarto</a></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/supplemental/psych-sci-figs.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/rogilmore">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
