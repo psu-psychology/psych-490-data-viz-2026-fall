@@ -1,8 +1,12 @@
 # Multiple mermaid figs
 
 
+## Fig 01 quarto
+
 <img src="mermaid_files/figure-commonmark/mermaid-figure-1.png"
 style="width:4.96in;height:1.35in" />
+
+## Fig 02 quarto
 
 <div id="fig-measurement">
 
@@ -14,6 +18,8 @@ measurement.
 
 </div>
 
+## Fig 03 quarto
+
 <div id="fig-measurement-detailed">
 
 <img src="mermaid_files/figure-commonmark/mermaid-figure-2.png"
@@ -23,3 +29,7 @@ Figure 2: A richer depiction of the process of measurement involving an
 observer, some procedure, and an apparatus or measurement instrument.
 
 </div>
+
+## Fig 01 import
+
+![](_fig-01_files/figure-commonmark/mermaid-figure-1.png)

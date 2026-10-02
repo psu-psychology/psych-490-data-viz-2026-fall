@@ -192,7 +192,7 @@
 
 - *Read*: 
   - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618)
-  - @Wilke2019-mx, Ch. 16^[Not on Canvas yet.]
+  - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829)
 - [Slides](404.qmd)
 
 ### Fri, Oct 09 {-}
@@ -240,7 +240,7 @@
 *Map-making*
 
 - Read: 
-  - @Wilke2019-mx, Chapter 15^[Not on Cavnas yet.]
+  - @Wilke2019-mx, Chapter 15, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308831)
 - [Slides](404.qmd)
 
 ### Wed, Oct 21 {-}

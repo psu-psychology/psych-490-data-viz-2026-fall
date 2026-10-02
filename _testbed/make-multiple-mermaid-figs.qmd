@@ -1,0 +1,38 @@
+---
+title: "make-multiple-mermaid-figs"
+format:
+  gfm:
+    mermaid-format: png
+---
+
+```{mermaid}
+%%| label: fig-measurement-detailed
+%%| fig-cap: "A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument."
+%%| fig.width: 800
+
+flowchart LR
+  O[Observer] ---> M[Measurement]
+  P[Procedure] ---> M
+  D[Apparatus] ---> M
+  A((World)) --> M
+  M --> B[Data]
+```
+
+```{mermaid}
+%%| label: fig-hard-round
+%%| fig-cap: "Hard edge round edge."
+%%| fig.width: 800
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+```
+
+```{mermaid}
+%%| label: fig-measurement
+%%| fig-cap: "A simple depiction of the process of generating data via measurement."
+%%| fig.width: 800
+
+flowchart LR
+  A((World)) -->|measurement| B[Data]
+
+```

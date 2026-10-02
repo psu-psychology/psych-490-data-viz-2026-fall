@@ -1,0 +1,10 @@
+---
+title: "import-multiple-quarto-figs"
+format: html
+---
+
+![](make-multiple-mermaid-figs_files/figure-commonmark/mermaid-figure-1.png)
+
+![](make-multiple-mermaid-figs_files/figure-commonmark/mermaid-figure-2.png)
+
+![](make-multiple-mermaid-figs_files/figure-commonmark/mermaid-figure-3.png)

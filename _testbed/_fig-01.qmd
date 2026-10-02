@@ -2,9 +2,14 @@
 format:
   gfm:
     mermaid-format: png
+knitr:
+  opts_chunk:
+    fig.path: fig/
+    dev: "png"
 ---
 
 ```{mermaid}
+%%| fig.width: 800
 flowchart LR
   A[Hard edge] --> B(Round edge)
   B --> C{Decision}

@@ -5,8 +5,18 @@ format:
     mermaid-format: png
 ---
 
+## Fig 01 quarto
+
 {{< include _fig-01.qmd >}}
+
+## Fig 02 quarto
 
 {{< include _fig-02.qmd >}}
 
+## Fig 03 quarto
+
 {{< include _fig-03.qmd >}}
+
+## Fig 01 import
+
+![](_fig-01_files/figure-commonmark/mermaid-figure-1.png)
