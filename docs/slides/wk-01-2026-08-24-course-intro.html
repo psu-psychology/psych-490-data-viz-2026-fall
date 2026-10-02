@@ -1,626 +1,255 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="dcterms.date" content="2026-10-01">
-
-<title>The Psychology of Data Visualization – PSYCH 490.007</title>
-<style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
-
-
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<html lang="en"><head>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../slides/wk-01-2026-08-26-semiotics-data-viz.html" rel="next">
-<link href="../meta.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b798a8be8a3ce4da077f873ae8b6b3e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-<style>
-div.callout-question.callout {
-  border-left-color: pink;
-}
-div.callout-question.callout-style-default .callout-header {
-  background-color: rgb(from pink r g b / 13%);
-}
-div.callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-question.callout-style-default .callout-icon::before, div.callout-question.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 7 Free';
-  font-weight: 900;
-  font-style: normal;
-  content: '\3f' !important;
-  background-image: none;
-}
-div.callout-answer.callout {
-  border-left-color: blue;
-}
-div.callout-answer.callout-style-default .callout-header {
-  background-color: rgb(from blue r g b / 13%);
-}
-div.callout-answer .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-answer.callout-style-default .callout-icon::before, div.callout-answer.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 7 Free';
-  font-weight: 900;
-  font-style: normal;
-  content: '\f00c' !important;
-  background-image: none;
-}
-</style>
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
+  <meta name="author" content="Rick Gilmore">
+  <title>PSYCH 490.007 – The Psychology of Data Visualization</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
     }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <style>
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
   }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
+    background-image: none;
+  }
+  </style>
 </head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
 
-<body class="nav-sidebar docked quarto-light">
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">The Psychology of Data Visualization</h1>
+  <p class="subtitle">PSY 490.007 Fall 2026</p>
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">The Psychology of Data Visualization</h1>
-        </a>     
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Rick Gilmore 
+</div>
+        <p class="quarto-title-affiliation">
+            Department of Psychology
+          </p>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">PSYCH 490.007</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../schedule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schedule</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../evaluation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Evaluation</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../deadlines.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Deadlines</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../policies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Policies</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../meta.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Under the hood</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Slides</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-01-2026-08-24-course-intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Wk 01 • Mon Aug 24</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-01-2026-08-26-semiotics-data-viz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 01 • Wed Aug 26</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-01-2026-08-28-introducing-r-rstudio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 01 • Fri Aug 28</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-02-2026-08-31-govt-biz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 02 • Mon Aug 31</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-02-2026-09-02-art-sports-journ.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 02 • Wed Sep 02</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-02-2026-09-04-introducing-quarto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 02 • Fri Sep 04</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-03-2026-09-09-making-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 03 • Wed Sep 09</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-03-2026-09-11-making-data-with-r.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 03 • Fri Sep 11</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-04-2026-09-14-figure-types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 04 • Mon Sep 14</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-04-2026-09-16-figure-components.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 04 • Wed Sep 16</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-05-2026-09-23-stim-to-sensation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 05 • Wed Sep 23</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-06-2026-09-28-sensation-to-perception.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 06 • Mon Sep 28</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../slides/wk-06-2026-09-30-cognition-to-understanding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 06 • Wed Sep 30</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Exercises</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-01-figs-in-psych-sci.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 01</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-02-data-viz-outside-psych.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 02</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 03</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-04-making-figs-ggplot.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 04</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-05-tbd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 05</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-06-tbd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 06</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/final-project.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Final Project</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-install-r-rstudio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Installing R and RStudio Desktop</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-making-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Making and visualizing data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-ggplot2-I.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><em>ggplot2</em> tutorial I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-ggplot2-II.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><em>ggplot2</em> tutorial II</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-visualizing-sports-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Visualizing sports data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../tutorials/tutorial-figure-captions-numbering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Captions and figure numbers</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Supplemental</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../supplemental/psych-sci-figs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Findings: Data viz in psych sci</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../supplemental/other-field-figs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Findings: Data viz outside psych sci</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link active" data-scroll-target="#preliminaries">Preliminaries</a>
-  <ul>
-  <li><a href="#a-picture-is-worth-a-thousand-words" id="toc-a-picture-is-worth-a-thousand-words" class="nav-link" data-scroll-target="#a-picture-is-worth-a-thousand-words">A picture is worth a thousand words…</a></li>
-  <li><a href="#how-many-words" id="toc-how-many-words" class="nav-link" data-scroll-target="#how-many-words">How many words?</a></li>
-  <li><a href="#today" id="toc-today" class="nav-link" data-scroll-target="#today">Today</a></li>
-  </ul></li>
-  <li><a href="#introduction-to-the-course" id="toc-introduction-to-the-course" class="nav-link" data-scroll-target="#introduction-to-the-course">Introduction to the course</a>
-  <ul>
-  <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people">People</a></li>
-  <li><a href="#why-this-course-why-now" id="toc-why-this-course-why-now" class="nav-link" data-scroll-target="#why-this-course-why-now">Why this course, why now</a></li>
-  <li><a href="#my-journey" id="toc-my-journey" class="nav-link" data-scroll-target="#my-journey">My journey</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  <li><a href="#many-analysts" id="toc-many-analysts" class="nav-link" data-scroll-target="#many-analysts">Many analysts</a></li>
-  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your turn…</a></li>
-  <li><a href="#many-visualization-failures" id="toc-many-visualization-failures" class="nav-link" data-scroll-target="#many-visualization-failures">Many visualization failures</a></li>
-  <li><a href="#plot-your-data" id="toc-plot-your-data" class="nav-link" data-scroll-target="#plot-your-data">“Plot your data!”</a></li>
-  <li><a href="#not-all-plots-are-equivalent" id="toc-not-all-plots-are-equivalent" class="nav-link" data-scroll-target="#not-all-plots-are-equivalent">Not all plots are equivalent</a></li>
-  <li><a href="#statistical-measurements-can-be-misleading" id="toc-statistical-measurements-can-be-misleading" class="nav-link" data-scroll-target="#statistical-measurements-can-be-misleading">Statistical measurements can be misleading!</a></li>
-  <li><a href="#vision-can-be-unreliable-or-ambiguous" id="toc-vision-can-be-unreliable-or-ambiguous" class="nav-link" data-scroll-target="#vision-can-be-unreliable-or-ambiguous">Vision can be unreliable or ambiguous</a></li>
-  <li><a href="#how-to-spot-hogwash" id="toc-how-to-spot-hogwash" class="nav-link" data-scroll-target="#how-to-spot-hogwash">How to spot hogwash</a></li>
-  <li><a href="#purpose-goals" id="toc-purpose-goals" class="nav-link" data-scroll-target="#purpose-goals">Purpose &amp; goals</a></li>
-  <li><a href="#hands-on-skills" id="toc-hands-on-skills" class="nav-link" data-scroll-target="#hands-on-skills">Hands-on skills</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#exercises-evaluation" id="toc-exercises-evaluation" class="nav-link" data-scroll-target="#exercises-evaluation">Exercises &amp; evaluation</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#resources-1" id="toc-resources-1" class="nav-link" data-scroll-target="#resources-1">Resources</a></li>
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">Structure</a></li>
-  <li><a href="#this-is-a-seminar" id="toc-this-is-a-seminar" class="nav-link" data-scroll-target="#this-is-a-seminar">This is a seminar…</a></li>
-  <li><a href="#culture-climate" id="toc-culture-climate" class="nav-link" data-scroll-target="#culture-climate">Culture &amp; climate</a></li>
-  </ul></li>
-  <li><a href="#visualization-in-psychological-science" id="toc-visualization-in-psychological-science" class="nav-link" data-scroll-target="#visualization-in-psychological-science">Visualization in psychological science</a>
-  <ul>
-  <li><a href="#your-turn-1" id="toc-your-turn-1" class="nav-link" data-scroll-target="#your-turn-1">Your turn…</a></li>
-  <li><a href="#visualizing-measurement" id="toc-visualizing-measurement" class="nav-link" data-scroll-target="#visualizing-measurement">Visualizing measurement</a></li>
-  <li><a href="#your-turn-2" id="toc-your-turn-2" class="nav-link" data-scroll-target="#your-turn-2">Your turn…</a></li>
-  <li><a href="#measures-in-psi-science" id="toc-measures-in-psi-science" class="nav-link" data-scroll-target="#measures-in-psi-science">Measures in <span class="math inline">\(\Psi\)</span> science</a></li>
-  <li><a href="#how-do-we-measure-these-things" id="toc-how-do-we-measure-these-things" class="nav-link" data-scroll-target="#how-do-we-measure-these-things">How do we measure these things?</a></li>
-  <li><a href="#what-do-the-data-look-like" id="toc-what-do-the-data-look-like" class="nav-link" data-scroll-target="#what-do-the-data-look-like">What do the data look like?</a></li>
-  <li><a href="#under-the-hood" id="toc-under-the-hood" class="nav-link" data-scroll-target="#under-the-hood">Under the hood…</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
-  <li><a href="#more-specific-questions" id="toc-more-specific-questions" class="nav-link" data-scroll-target="#more-specific-questions">More specific questions</a></li>
-  <li><a href="#exercise-01" id="toc-exercise-01" class="nav-link" data-scroll-target="#exercise-01">Exercise-01</a></li>
-  </ul></li>
-  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a>
-  <ul>
-  <li><a href="#main-points" id="toc-main-points" class="nav-link" data-scroll-target="#main-points">Main points</a></li>
-  <li><a href="#next-time" id="toc-next-time" class="nav-link" data-scroll-target="#next-time">Next time</a></li>
-  </ul></li>
-  <li><a href="#resources-2" id="toc-resources-2" class="nav-link" data-scroll-target="#resources-2">Resources</a>
-  <ul>
-  <li><a href="#about" id="toc-about" class="nav-link" data-scroll-target="#about">About</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/slides/wk-01-2026-08-24-course-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="wk-01-2026-08-24-course-intro.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">The Psychology of Data Visualization</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">PSY 490.007 Fall 2026</p>
 </div>
 
-
-
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 1, 2026</p>
-    </div>
-  </div>
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 31, 2026</p>
-    </div>
-  </div>
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="preliminaries" class="level1">
+</section>
+<section>
+<section id="preliminaries" class="title-slide slide level1 center">
 <h1>Preliminaries</h1>
-<hr>
-<div id="fig-hans-rosling" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+
+</section>
+<section class="slide level2">
+
+<div id="fig-hans-rosling" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-hans-rosling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <iframe width="1240" height="450" src="https://www.youtube.com/embed/jbkSRLYSojo?si=EVAEulLIsmNtyi0q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hans-rosling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="citation" data-cites="BBC2010-tj">BBC (<a href="#ref-BBC2010-tj" role="doc-biblioref">2010</a>)</span>
+Figure&nbsp;1: <span class="citation" data-cites="BBC2010-tj">BBC (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span>
 </figcaption>
 </figure>
 </div>
-<hr>
-<div id="fig-if-a-picture-paints" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+</section>
+<section class="slide level2">
+
+<div id="fig-if-a-picture-paints" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-if-a-picture-paints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <iframe width="1240" height="450" src="https://www.youtube.com/embed/IQyKMueMFGk?si=UUWNmygz10iWemeu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
 </iframe>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-if-a-picture-paints-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: <span class="citation" data-cites="Iso2016-wd">Iso (<a href="#ref-Iso2016-wd" role="doc-biblioref">2016</a>)</span>
+Figure&nbsp;2: <span class="citation" data-cites="Iso2016-wd">Iso (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>
 </figcaption>
 </figure>
 </div>
-<section id="a-picture-is-worth-a-thousand-words" class="level2">
-<h2 class="anchored" data-anchor-id="a-picture-is-worth-a-thousand-words">A picture is worth a thousand words…</h2>
+</section>
+<section id="a-picture-is-worth-a-thousand-words" class="slide level2">
+<h2>A picture is worth a thousand words…</h2>
 <ul>
 <li>“An <a href="https://www.merriam-webster.com/dictionary/adage">adage</a> in multiple languages…” <a href="https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words">Wikipedia</a></li>
 <li>Theme for the course</li>
 </ul>
 </section>
-<section id="how-many-words" class="level2">
-<h2 class="anchored" data-anchor-id="how-many-words">How many words?</h2>
-<hr>
-<div id="fig-climate-dashboard" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<section id="how-many-words" class="slide level2">
+<h2>How many words?</h2>
+</section>
+<section class="slide level2">
+
+<div id="fig-climate-dashboard" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-climate-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;3: @Lindsey2024-ob"><img src="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" class="img-fluid figure-img"></a>
+<a href="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;3: @Lindsey2024-ob"><img data-src="https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-climate-dashboard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: <span class="citation" data-cites="Lindsey2024-ob">Lindsey (<a href="#ref-Lindsey2024-ob" role="doc-biblioref">2024</a>)</span>
+Figure&nbsp;3: <span class="citation" data-cites="Lindsey2024-ob">Lindsey (<a href="#/references" role="doc-biblioref" onclick="">2024</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -629,11 +258,13 @@ Figure&nbsp;3: <span class="citation" data-cites="Lindsey2024-ob">Lindsey (<a hr
 <!-- ![Trends in $CO_2$ at Mauna Loa Observatory from NOAA.](../include/img/trends-in-co2-noaa.png) -->
 <!-- @NOAA-Global-Monitoring-Laboratory2024-gw -->
 <!-- ::: -->
-<hr>
-<div id="fig-housing-affordability" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+</section>
+<section class="slide level2">
+
+<div id="fig-housing-affordability" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-housing-affordability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/housing-affordability-atlanta-fed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;4: Housing affordability in State College, PA. Homeownership cost as a share of median income. Federal Reserve Bank of Atlanta"><img src="../include/img/housing-affordability-atlanta-fed.png" class="img-fluid figure-img" style="width:65.0%"></a>
+<a href="../include/img/housing-affordability-atlanta-fed.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;4: Housing affordability in State College, PA. Homeownership cost as a share of median income. Federal Reserve Bank of Atlanta"><img data-src="../include/img/housing-affordability-atlanta-fed.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-housing-affordability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: Housing affordability in State College, PA. Homeownership cost as a share of median income. <a href="https://public.tableau.com/shared/FY72B725F?:display_count=n&amp;:origin=viz_share_link&amp;:embed=y">Federal Reserve Bank of Atlanta</a>
@@ -641,38 +272,42 @@ Figure&nbsp;4: Housing affordability in State College, PA. Homeownership cost as
 </figure>
 </div>
 </section>
-<section id="today" class="level2">
-<h2 class="anchored" data-anchor-id="today">Today</h2>
+<section id="today" class="slide level2">
+<h2>Today</h2>
 <ul>
 <li>Introduction to the course</li>
 <li>Visualization in psychological science</li>
 </ul>
-</section>
-</section>
-<section id="introduction-to-the-course" class="level1">
+</section></section>
+<section>
+<section id="introduction-to-the-course" class="title-slide slide level1 center">
 <h1>Introduction to the course</h1>
-<section id="people" class="level2">
-<h2 class="anchored" data-anchor-id="people">People</h2>
+
+</section>
+<section id="people" class="slide level2">
+<h2>People</h2>
 <ul>
 <li>Kalvin Garrah, Graduate Student</li>
 <li>Rick Gilmore, Professor of Psychology</li>
 </ul>
 </section>
-<section id="why-this-course-why-now" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-course-why-now">Why this course, why now</h2>
+<section id="why-this-course-why-now" class="slide level2">
+<h2>Why this course, why now</h2>
 </section>
-<section id="my-journey" class="level2">
-<h2 class="anchored" data-anchor-id="my-journey">My journey</h2>
+<section id="my-journey" class="slide level2">
+<h2>My journey</h2>
 <ul>
 <li>Cognitive Science major, psycholinguistics &amp; <a href="https://en.wikipedia.org/wiki/Semiotics">semiotics</a> minor</li>
 <li>Introduced to vision science via <a href="https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)">Marr</a> and <a href="https://en.wikipedia.org/wiki/James_J._Gibson">J.J. Gibson</a></li>
 <li><a href="https://gilmore-lab.github.io">Research</a> in visual development, visual neuroscience, open science</li>
 </ul>
-<hr>
-<div id="fig-databrary-logo" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+</section>
+<section class="slide level2">
+
+<div id="fig-databrary-logo" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-databrary-logo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/databrary-nav.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;5: Databrary.org"><img src="../include/img/databrary-nav.svg" height="250" class="figure-img"></a>
+<a href="../include/img/databrary-nav.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;5: Databrary.org"><img data-src="../include/img/databrary-nav.svg" height="250"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-databrary-logo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: <a href="https://databrary.org">Databrary.org</a>
@@ -680,101 +315,102 @@ Figure&nbsp;5: <a href="https://databrary.org">Databrary.org</a>
 </figure>
 </div>
 </section>
-<section id="section" class="level2" data-background-iframe="https://penn-state-open-science.github.io">
-<h2 data-background-iframe="https://penn-state-open-science.github.io" class="anchored" data-anchor-id="section"></h2>
+<section id="section" class="slide level2" data-background-iframe="https://penn-state-open-science.github.io">
+<h2></h2>
 </section>
-<section id="many-analysts" class="level2">
-<h2 class="anchored" data-anchor-id="many-analysts">Many analysts</h2>
-<div id="fig-many-analysts" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<section id="many-analysts" class="slide level2">
+<h2>Many analysts</h2>
+<div id="fig-many-analysts" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-many-analysts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/silberzahn-fig-02.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;6: Figure 2 from @Silberzahn2018-st"><img src="../include/img/silberzahn-fig-02.jpeg" class="img-fluid figure-img" style="width:80.0%"></a>
+<a href="../include/img/silberzahn-fig-02.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;6: Figure 2 from @Silberzahn2018-st"><img data-src="../include/img/silberzahn-fig-02.jpeg" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-many-analysts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Figure 2 from <span class="citation" data-cites="Silberzahn2018-st">Silberzahn et al. (<a href="#ref-Silberzahn2018-st" role="doc-biblioref">2018</a>)</span>
+Figure&nbsp;6: Figure 2 from <span class="citation" data-cites="Silberzahn2018-st">Silberzahn et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span>
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="your-turn" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn">Your turn…</h2>
+<section id="your-turn" class="slide level2">
+<h2>Your turn…</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="callout callout-style-default callout-question callout-empty-content callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Question</span>Does the overall evidence suggest that the odds ratio is greater than zero?
+<p><strong>Does the overall evidence suggest that the odds ratio is greater than zero?</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 
+</div>
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-style-default callout-question callout-empty-content callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Question</span>How do you come to that conclusion?
+<p><strong>How do you come to that conclusion?</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 
+</div>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="../include/img/silberzahn-fig-02.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure 2 from @Silberzahn2018-st"><img src="../include/img/silberzahn-fig-02.jpeg" class="img-fluid figure-img" alt="Figure 2 from Silberzahn et al. (2018)"></a></p>
-<figcaption>Figure 2 from <span class="citation" data-cites="Silberzahn2018-st">Silberzahn et al. (<a href="#ref-Silberzahn2018-st" role="doc-biblioref">2018</a>)</span></figcaption>
+<figure>
+<p><a href="../include/img/silberzahn-fig-02.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure 2 from @Silberzahn2018-st"><img data-src="../include/img/silberzahn-fig-02.jpeg" alt="Figure 2 from Silberzahn et al. (2018)"></a></p>
+<figcaption>Figure 2 from <span class="citation" data-cites="Silberzahn2018-st">Silberzahn et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section>
-<section id="many-visualization-failures" class="level2">
-<h2 class="anchored" data-anchor-id="many-visualization-failures">Many visualization failures</h2>
+<section id="many-visualization-failures" class="slide level2">
+<h2>Many visualization failures</h2>
 <ul>
 <li><a href="https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/supplemental/many-viz.html">Visualizing the ‘Many Analysts’ – <span class="citation" data-cites="Silberzahn2018-st">Silberzahn et al. (<span>2018</span>)</span> – data</a></li>
 </ul>
 </section>
-<section id="plot-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="plot-your-data">“Plot your data!”</h2>
-<div id="fig-mike-meyer" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<section id="plot-your-data" class="slide level2">
+<h2>“Plot your data!”</h2>
+<div id="fig-mike-meyer" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-mike-meyer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/mike-meyer-linked-in.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Gilmore’s graduate statistics professor."><img src="../include/img/mike-meyer-linked-in.png" class="img-fluid figure-img" style="width:80.0%"></a>
+<a href="../include/img/mike-meyer-linked-in.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Gilmore’s graduate statistics professor."><img data-src="../include/img/mike-meyer-linked-in.png" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mike-meyer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7: Gilmore’s graduate statistics professor.
 </figcaption>
 </figure>
 </div>
-<hr>
+</section>
+<section class="slide level2">
+
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="fig-anscombes-quartet-data-wikipedia" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<div id="fig-anscombes-quartet-data-wikipedia" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-anscombes-quartet-data-wikipedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/anscombes-quartet-data-wikipedia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;8: @Wikipedia-contributors2026-kw"><img src="../include/img/anscombes-quartet-data-wikipedia.png" class="img-fluid figure-img"></a>
+<a href="../include/img/anscombes-quartet-data-wikipedia.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;8: @Wikipedia-contributors2026-kw"><img data-src="../include/img/anscombes-quartet-data-wikipedia.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anscombes-quartet-data-wikipedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: <span class="citation" data-cites="Wikipedia-contributors2026-kw">Wikipedia contributors (<a href="#ref-Wikipedia-contributors2026-kw" role="doc-biblioref">2026</a>)</span>
+Figure&nbsp;8: <span class="citation" data-cites="Wikipedia-contributors2026-kw">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026</a>)</span>
 </figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<div id="fig-anscombes-quartet-figure-wikipedia" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<div id="fig-anscombes-quartet-figure-wikipedia" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-anscombes-quartet-figure-wikipedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/3840px-Anscombe%27s_quartet_3.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;9: Anscombe’s Quartet; By Anscombe.svg: Schutz(label using subscripts): Avenue - Anscombe.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9838454."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/3840px-Anscombe%27s_quartet_3.svg.png" class="img-fluid figure-img"></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/3840px-Anscombe%27s_quartet_3.svg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;9: Anscombe’s Quartet; By Anscombe.svg: Schutz(label using subscripts): Avenue - Anscombe.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9838454."><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/3840px-Anscombe%27s_quartet_3.svg.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anscombes-quartet-figure-wikipedia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;9: Anscombe’s Quartet; By Anscombe.svg: Schutz(label using subscripts): Avenue - Anscombe.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9838454.
@@ -782,71 +418,78 @@ Figure&nbsp;9: Anscombe’s Quartet; By Anscombe.svg: Schutz(label using subscri
 </figure>
 </div>
 </div>
-</div>
-</div>
-<hr>
+</div></div>
+</section>
+<section class="slide level2">
+
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-datasaurus-dozen" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<div id="fig-datasaurus-dozen" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-datasaurus-dozen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-datasaurus-dozen-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;10: The DatasauRus dozen [@datasaurus2019-us; @Matejka2017-xi; @datasauRus]"><img src="include/fig/fig-datasaurus-dozen-1.gif" class="img-fluid figure-img"></a>
+<a href="include/fig/fig-datasaurus-dozen-1.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;10: The DatasauRus dozen [@datasaurus2019-us; @Matejka2017-xi; @datasauRus]"><img data-src="include/fig/fig-datasaurus-dozen-1.gif"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-datasaurus-dozen-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: The DatasauRus dozen <span class="citation" data-cites="datasaurus2019-us Matejka2017-xi datasauRus">(<a href="#ref-datasauRus" role="doc-biblioref">Gillespie, Locke, Davies, &amp; D’Agostino McGowan, 2025</a>; <a href="#ref-Matejka2017-xi" role="doc-biblioref">Matejka &amp; Fitzmaurice, 2017</a>; <a href="#ref-datasaurus2019-us" role="doc-biblioref"><span>“The <span>D</span>atasaurus dozen - same stats, different graphs | <span>A</span>utodesk <span>R</span>esearch,”</span> n.d.</a>)</span>
+Figure&nbsp;10: The DatasauRus dozen <span class="citation" data-cites="datasaurus2019-us Matejka2017-xi datasauRus">(<a href="#/references" role="doc-biblioref" onclick=""><span>“The <span>D</span>atasaurus Dozen - Same Stats, Different Graphs | <span>A</span>utodesk <span>R</span>esearch,”</span> n.d.</a>; <a href="#/references" role="doc-biblioref" onclick="">Matejka and Fitzmaurice 2017</a>; <a href="#/references" role="doc-biblioref" onclick="">Gillespie et al. 2025</a>)</span>
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="not-all-plots-are-equivalent" class="level2">
-<h2 class="anchored" data-anchor-id="not-all-plots-are-equivalent">Not all plots are equivalent</h2>
+<section id="not-all-plots-are-equivalent" class="slide level2">
+<h2>Not all plots are equivalent</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="@datasaurus2019-us; @Matejka2017-xi"><img src="https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif" class="img-fluid figure-img" alt="“The Datasaurus dozen - same stats, different graphs | Autodesk Research” (n.d.); Matejka &amp; Fitzmaurice (2017)"></a></p>
-<figcaption><span class="citation" data-cites="datasaurus2019-us"><span>“The <span>D</span>atasaurus dozen - same stats, different graphs | <span>A</span>utodesk <span>R</span>esearch”</span> (<a href="#ref-datasaurus2019-us" role="doc-biblioref">n.d.</a>)</span>; <span class="citation" data-cites="Matejka2017-xi">Matejka &amp; Fitzmaurice (<a href="#ref-Matejka2017-xi" role="doc-biblioref">2017</a>)</span></figcaption>
+<figure>
+<p><a href="https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="@datasaurus2019-us; @Matejka2017-xi"><img data-src="https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif" alt="“The Datasaurus Dozen - Same Stats, Different Graphs | Autodesk Research” (n.d.); Matejka and Fitzmaurice (2017)"></a></p>
+<figcaption><span class="citation" data-cites="datasaurus2019-us"><span>“The <span>D</span>atasaurus Dozen - Same Stats, Different Graphs | <span>A</span>utodesk <span>R</span>esearch”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>; <span class="citation" data-cites="Matejka2017-xi">Matejka and Fitzmaurice (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></figcaption>
 </figure>
 </div>
 </section>
-<section id="statistical-measurements-can-be-misleading" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-measurements-can-be-misleading">Statistical measurements can be misleading!</h2>
-<blockquote class="blockquote">
+<section id="statistical-measurements-can-be-misleading" class="slide level2">
+<h2>Statistical measurements can be misleading!</h2>
+<blockquote>
 <p>“Don’t fool yourself, because you are the easiest one to fool.”</p>
 </blockquote>
-<p><span class="citation" data-cites="Feynman1974-ld">Feynman (<a href="#ref-Feynman1974-ld" role="doc-biblioref">1974</a>)</span></p>
-<hr>
+<p><span class="citation" data-cites="Feynman1974-ld">Feynman (<a href="#/references" role="doc-biblioref" onclick="">1974</a>)</span></p>
+</section>
+<section class="slide level2">
+
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://m.media-amazon.com/images/I/71ASFP9sBXL._SY522_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="@Huff1993-pt"><img src="https://m.media-amazon.com/images/I/71ASFP9sBXL._SY522_.jpg" class="img-fluid figure-img" alt="Huff (1993)"></a></p>
-<figcaption><span class="citation" data-cites="Huff1993-pt">Huff (<a href="#ref-Huff1993-pt" role="doc-biblioref">1993</a>)</span></figcaption>
-</figure>
-</div>
-<hr>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://m.media-amazon.com/images/I/71reVbvgoVL._SY522_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="@Monmonier2018-jc"><img src="https://m.media-amazon.com/images/I/71reVbvgoVL._SY522_.jpg" class="img-fluid figure-img" alt="Monmonier (2018)"></a></p>
-<figcaption><span class="citation" data-cites="Monmonier2018-jc">Monmonier (<a href="#ref-Monmonier2018-jc" role="doc-biblioref">2018</a>)</span></figcaption>
+<figure>
+<p><a href="https://m.media-amazon.com/images/I/71ASFP9sBXL._SY522_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="@Huff1993-pt"><img data-src="https://m.media-amazon.com/images/I/71ASFP9sBXL._SY522_.jpg" alt="Huff (1993)"></a></p>
+<figcaption><span class="citation" data-cites="Huff1993-pt">Huff (<a href="#/references" role="doc-biblioref" onclick="">1993</a>)</span></figcaption>
 </figure>
 </div>
 </section>
-<section id="vision-can-be-unreliable-or-ambiguous" class="level2">
-<h2 class="anchored" data-anchor-id="vision-can-be-unreliable-or-ambiguous">Vision can be unreliable or ambiguous</h2>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://m.media-amazon.com/images/I/71reVbvgoVL._SY522_.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="@Monmonier2018-jc"><img data-src="https://m.media-amazon.com/images/I/71reVbvgoVL._SY522_.jpg" alt="Monmonier (2018)"></a></p>
+<figcaption><span class="citation" data-cites="Monmonier2018-jc">Monmonier (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="vision-can-be-unreliable-or-ambiguous" class="slide level2">
+<h2>Vision can be unreliable or ambiguous</h2>
 <div id="visual-illusions" class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="https://www.rd.com/wp-content/uploads/2021/07/GettyImages-1278770741.jpg?fit=300,300&amp;webp=1" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="https://www.rd.com/wp-content/uploads/2021/07/GettyImages-1278770741.jpg?fit=300,300&amp;webp=1" class="img-fluid"></a></p>
+<p><a href="https://www.rd.com/wp-content/uploads/2021/07/GettyImages-1278770741.jpg?fit=300,300&amp;webp=1" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="https://www.rd.com/wp-content/uploads/2021/07/GettyImages-1278770741.jpg?fit=300,300&amp;webp=1"></a></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><a href="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*JXwHAPXkg05Y6IZF.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*JXwHAPXkg05Y6IZF.jpg" class="img-fluid"></a></p>
+<p><a href="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*JXwHAPXkg05Y6IZF.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*JXwHAPXkg05Y6IZF.jpg"></a></p>
 </div>
 </div>
 </div>
-<hr>
-<div id="fig-data-eating-the-world" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+</section>
+<section class="slide level2">
+
+<div id="fig-data-eating-the-world" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-data-eating-the-world-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/data-is-eating-the-world.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;11: https://www.indexventures.com/perspectives/data-not-software-is-eating-the-world/"><img src="../include/img/data-is-eating-the-world.png" class="img-fluid figure-img" style="width:75.0%"></a>
+<a href="../include/img/data-is-eating-the-world.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;11: https://www.indexventures.com/perspectives/data-not-software-is-eating-the-world/"><img data-src="../include/img/data-is-eating-the-world.png" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-data-eating-the-world-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;11: https://www.indexventures.com/perspectives/data-not-software-is-eating-the-world/
@@ -854,30 +497,28 @@ Figure&nbsp;11: https://www.indexventures.com/perspectives/data-not-software-is-
 </figure>
 </div>
 </section>
-<section id="how-to-spot-hogwash" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-spot-hogwash">How to spot hogwash</h2>
+<section id="how-to-spot-hogwash" class="slide level2">
+<h2>How to spot hogwash</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlsMzFjeHoza2hxbGo5dmh2ZnoxaXN5a3cwem92N3Q0NmMzZzRrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m476ZhHMTBcCk/giphy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="giphy.com"><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlsMzFjeHoza2hxbGo5dmh2ZnoxaXN5a3cwem92N3Q0NmMzZzRrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m476ZhHMTBcCk/giphy.gif" class="img-fluid figure-img" alt="giphy.com"></a></p>
+<figure>
+<p><a href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlsMzFjeHoza2hxbGo5dmh2ZnoxaXN5a3cwem92N3Q0NmMzZzRrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m476ZhHMTBcCk/giphy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="giphy.com"><img data-src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlsMzFjeHoza2hxbGo5dmh2ZnoxaXN5a3cwem92N3Q0NmMzZzRrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m476ZhHMTBcCk/giphy.gif" alt="giphy.com"></a></p>
 <figcaption>giphy.com</figcaption>
 </figure>
 </div>
 </section>
-<section id="purpose-goals" class="level2">
-<h2 class="anchored" data-anchor-id="purpose-goals">Purpose &amp; goals</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>What are data? Where do data come from?</li>
-<li>Who visualizes data, how do they visualize it, and why?</li>
-<li>How does vision science inform how we perceive patterns in data?</li>
-<li>What’s the relationship between non-visual and visual ways of understanding data?</li>
-<li>What makes a data visualization effective?</li>
-<li>What makes a data visualization misleading?</li>
+<section id="purpose-goals" class="slide level2">
+<h2>Purpose &amp; goals</h2>
+<ul>
+<li class="fragment">What are data? Where do data come from?</li>
+<li class="fragment">Who visualizes data, how do they visualize it, and why?</li>
+<li class="fragment">How does vision science inform how we perceive patterns in data?</li>
+<li class="fragment">What’s the relationship between non-visual and visual ways of understanding data?</li>
+<li class="fragment">What makes a data visualization effective?</li>
+<li class="fragment">What makes a data visualization misleading?</li>
 </ul>
-</div>
 </section>
-<section id="hands-on-skills" class="level2">
-<h2 class="anchored" data-anchor-id="hands-on-skills">Hands-on skills</h2>
+<section id="hands-on-skills" class="slide level2">
+<h2>Hands-on skills</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -890,10 +531,10 @@ Figure&nbsp;11: https://www.indexventures.com/perspectives/data-not-software-is-
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="fragment">
-<div id="fig-batman" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<div id="fig-batman" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-batman-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHdzenBjNGlhMDlyMjFuNjdzMzhwdmtmYmV4cjRrYXk2NGk4dTVsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Gij38skUDBvy/giphy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is like gaining a superpower. giphy.com"><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHdzenBjNGlhMDlyMjFuNjdzMzhwdmtmYmV4cjRrYXk2NGk4dTVsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Gij38skUDBvy/giphy.gif" class="img-fluid figure-img"></a>
+<a href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHdzenBjNGlhMDlyMjFuNjdzMzhwdmtmYmV4cjRrYXk2NGk4dTVsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Gij38skUDBvy/giphy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is like gaining a superpower. giphy.com"><img data-src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHdzenBjNGlhMDlyMjFuNjdzMzhwdmtmYmV4cjRrYXk2NGk4dTVsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Gij38skUDBvy/giphy.gif"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-batman-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is like gaining a superpower. giphy.com
@@ -901,15 +542,14 @@ Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is l
 </figure>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
+<section id="schedule" class="slide level2">
+<h2>Schedule</h2>
 <p><a href="https://psu-psychology.github.io/psych-490-data-viz-2026-fall/schedule.html" class="uri">https://psu-psychology.github.io/psych-490-data-viz-2026-fall/schedule.html</a></p>
 </section>
-<section id="exercises-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="exercises-evaluation">Exercises &amp; evaluation</h2>
+<section id="exercises-evaluation" class="slide level2">
+<h2>Exercises &amp; evaluation</h2>
 <ul>
 <li>Exercises
 <ul>
@@ -921,8 +561,8 @@ Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is l
 <li>Final project (40 points)</li>
 </ul>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
 <ul>
 <li>Websites
 <ul>
@@ -934,8 +574,8 @@ Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is l
 </ul></li>
 </ul>
 </section>
-<section id="resources-1" class="level2">
-<h2 class="anchored" data-anchor-id="resources-1">Resources</h2>
+<section id="resources-1" class="slide level2">
+<h2>Resources</h2>
 <ul>
 <li>Articles
 <ul>
@@ -944,8 +584,8 @@ Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is l
 </ul></li>
 </ul>
 </section>
-<section id="structure" class="level2">
-<h2 class="anchored" data-anchor-id="structure">Structure</h2>
+<section id="structure" class="slide level2">
+<h2>Structure</h2>
 <ul>
 <li>Meet 3x weekly
 <ul>
@@ -958,13 +598,15 @@ Figure&nbsp;12: Gilmore says that learning to make figures in R with Quarto is l
 <li>Do your homework</li>
 </ul>
 </section>
-<section id="this-is-a-seminar" class="level2">
-<h2 class="anchored" data-anchor-id="this-is-a-seminar">This is a seminar…</h2>
-<hr>
-<div id="fig-definition-of-seminar" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<section id="this-is-a-seminar" class="slide level2">
+<h2>This is a seminar…</h2>
+</section>
+<section class="slide level2">
+
+<div id="fig-definition-of-seminar" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-definition-of-seminar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/seminar-definition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;13: https://www.merriam-webster.com/dictionary/seminar"><img src="../include/img/seminar-definition.png" class="img-fluid figure-img"></a>
+<a href="../include/img/seminar-definition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;13: https://www.merriam-webster.com/dictionary/seminar"><img data-src="../include/img/seminar-definition.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-definition-of-seminar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;13: https://www.merriam-webster.com/dictionary/seminar
@@ -972,142 +614,142 @@ Figure&nbsp;13: https://www.merriam-webster.com/dictionary/seminar
 </figure>
 </div>
 </section>
-<section id="culture-climate" class="level2">
-<h2 class="anchored" data-anchor-id="culture-climate">Culture &amp; climate</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Creating a community of inquiry</li>
-<li>Encouraging vigorous &amp; constructive criticism</li>
-<li>Criticism of <em>work/ideas/behaviors</em> vs.&nbsp;<em>people</em>
-<ul class="incremental">
-<li>‘Smith thinks that pigs can fly.’</li>
-<li>‘Smith is an idiot, and should be shot on sight.’</li>
-<li>‘Smith tried to demonstrate that pigs can fly by tossing a few off the roof of Old Main. That’s nonsense, is cruel to animals, and made a huge mess.’</li>
+<section id="culture-climate" class="slide level2">
+<h2>Culture &amp; climate</h2>
+<ul>
+<li class="fragment">Creating a community of inquiry</li>
+<li class="fragment">Encouraging vigorous &amp; constructive criticism</li>
+<li class="fragment">Criticism of <em>work/ideas/behaviors</em> vs.&nbsp;<em>people</em>
+<ul>
+<li class="fragment">‘Smith thinks that pigs can fly.’</li>
+<li class="fragment">‘Smith is an idiot, and should be shot on sight.’</li>
+<li class="fragment">‘Smith tried to demonstrate that pigs can fly by tossing a few off the roof of Old Main. That’s nonsense, is cruel to animals, and made a huge mess.’</li>
 </ul></li>
 </ul>
-</div>
-<hr>
-<div id="fig-elephant-in-the-room" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+</section>
+<section class="slide level2">
+
+<div id="fig-elephant-in-the-room" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-elephant-in-the-room-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmk5c29lY2g5eHA3NDQ1OHBhZzFoNzRkeWI1Ynp1aTNjN3pqYXE2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4T189yy4SfUbByZHRu/giphy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;14: giphy.com"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmk5c29lY2g5eHA3NDQ1OHBhZzFoNzRkeWI1Ynp1aTNjN3pqYXE2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4T189yy4SfUbByZHRu/giphy.gif" class="img-fluid figure-img"></a>
+<a href="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmk5c29lY2g5eHA3NDQ1OHBhZzFoNzRkeWI1Ynp1aTNjN3pqYXE2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4T189yy4SfUbByZHRu/giphy.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;14: giphy.com"><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmk5c29lY2g5eHA3NDQ1OHBhZzFoNzRkeWI1Ynp1aTNjN3pqYXE2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4T189yy4SfUbByZHRu/giphy.gif"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephant-in-the-room-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;14: giphy.com
 </figcaption>
 </figure>
 </div>
-</section>
-</section>
-<section id="visualization-in-psychological-science" class="level1">
+</section></section>
+<section>
+<section id="visualization-in-psychological-science" class="title-slide slide level1 center">
 <h1>Visualization in psychological science</h1>
-<section id="your-turn-1" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-1">Your turn…</h2>
-<div class="callout callout-style-default callout-question callout-empty-content callout-titled">
-<div class="callout-header d-flex align-content-center">
+
+</section>
+<section id="your-turn-1" class="slide level2">
+<h2>Your turn…</h2>
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Question</span>Where do data come from?
+<p><strong>Where do data come from?</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 
 </div>
 </div>
+</div>
 <div class="fragment">
-<div class="callout callout-style-default callout-answer callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-answer callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Answer</span>One answer
+<p><strong>One answer</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 <p>Data are the outcome of a process of measurement.</p>
 </div>
 </div>
 </div>
+</div>
 </section>
-<section id="visualizing-measurement" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-measurement">Visualizing measurement</h2>
-<div id="fig-measurement-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<section id="visualizing-measurement" class="slide level2">
+<h2>Visualizing measurement</h2>
+<div id="fig-measurement-simple" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-measurement-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/fig/mermaid-figure-measures-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;15: A simple depiction of the process of generating data via measurement."><img src="../include/fig/mermaid-figure-measures-1.png" class="img-fluid figure-img"></a>
+<a href="../include/fig/mermaid-figure-measures-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;15: A simple depiction of the process of generating data via measurement."><img data-src="../include/fig/mermaid-figure-measures-1.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;15: A simple depiction of the process of generating data via measurement.
 </figcaption>
 </figure>
 </div>
-<hr>
-<div id="fig-measurement-richer" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+</section>
+<section class="slide level2">
+
+<div id="fig-measurement-richer" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-measurement-richer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/fig/mermaid-figure-measures-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with Figure&nbsp;15"><img src="../include/fig/mermaid-figure-measures-2.png" class="img-fluid figure-img"></a>
+<a href="../include/fig/mermaid-figure-measures-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with Figure&nbsp;15"><img data-src="../include/fig/mermaid-figure-measures-2.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-measurement-richer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with <a href="#fig-measurement-simple" class="quarto-xref">Figure&nbsp;15</a>
+Figure&nbsp;16: A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with <a href="#/fig-measurement-simple" class="quarto-xref">Figure&nbsp;15</a>
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="your-turn-2" class="level2">
-<h2 class="anchored" data-anchor-id="your-turn-2">Your turn…</h2>
-<div class="callout callout-style-default callout-question callout-empty-content callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="your-turn-2" class="slide level2">
+<h2>Your turn…</h2>
+<div class="callout callout-question callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Question</span>What do we measure in psychological science?
+<p><strong>What do we measure in psychological science?</strong></p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-content">
 
 </div>
 </div>
-</section>
-<section id="measures-in-psi-science" class="level2">
-<h2 class="anchored" data-anchor-id="measures-in-psi-science">Measures in <span class="math inline">\(\Psi\)</span> science</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Internal states (thoughts, feelings, memories, opinions, decisions, judgments…)</li>
-<li>Physiological states</li>
-<li>Individual characteristics (height, weight, eye color, etc.)</li>
-<li>Environmental characteristics</li>
-</ul>
 </div>
 </section>
-<section id="how-do-we-measure-these-things" class="level2">
-<h2 class="anchored" data-anchor-id="how-do-we-measure-these-things">How do we measure these things?</h2>
-<div class="incremental">
-<ul class="incremental">
-<li>Interviews, questionnaires</li>
-<li>Observations</li>
-<li>Behavioral responses</li>
-<li>EEG, ERP, EKG, salivary assays, brain imaging, …</li>
+<section id="measures-in-psi-science" class="slide level2">
+<h2>Measures in <span class="math inline">\(\Psi\)</span> science</h2>
+<ul>
+<li class="fragment">Internal states (thoughts, feelings, memories, opinions, decisions, judgments…)</li>
+<li class="fragment">Physiological states</li>
+<li class="fragment">Individual characteristics (height, weight, eye color, etc.)</li>
+<li class="fragment">Environmental characteristics</li>
 </ul>
-</div>
 </section>
-<section id="what-do-the-data-look-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-do-the-data-look-like">What do the data look like?</h2>
+<section id="how-do-we-measure-these-things" class="slide level2">
+<h2>How do we measure these things?</h2>
+<ul>
+<li class="fragment">Interviews, questionnaires</li>
+<li class="fragment">Observations</li>
+<li class="fragment">Behavioral responses</li>
+<li class="fragment">EEG, ERP, EKG, salivary assays, brain imaging, …</li>
+</ul>
+</section>
+<section id="what-do-the-data-look-like" class="slide level2">
+<h2>What do the data look like?</h2>
 <ul>
 <li>Most often…</li>
 </ul>
 <div class="cell">
-<div id="tbl-gilmore-hometowns" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
+<div id="tbl-gilmore-hometowns" class="cell quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Table showing a few of Gilmore’s hometowns
 </figcaption>
 <div aria-describedby="tbl-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell caption-top table table-sm table-striped small">
+<table class="cell caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">city</th>
@@ -1149,15 +791,15 @@ Table&nbsp;1: Table showing a few of Gilmore’s hometowns
 </div>
 </div>
 </section>
-<section id="under-the-hood" class="level2">
-<h2 class="anchored" data-anchor-id="under-the-hood">Under the hood…</h2>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the hood…</h2>
 <ul>
 <li>A text file in a comma separated value (<code>.csv</code>) or similar <em>tabular</em> format (rows + columns)</li>
 </ul>
-<div id="fig-gilmore-hometowns" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
+<div id="fig-gilmore-hometowns" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/gilmore-hometowns-csv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;17: A sample CSV file. Link to text file"><img src="../include/img/gilmore-hometowns-csv.png" class="img-fluid figure-img"></a>
+<a href="../include/img/gilmore-hometowns-csv.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;17: A sample CSV file. Link to text file"><img data-src="../include/img/gilmore-hometowns-csv.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gilmore-hometowns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;17: A sample CSV file. <a href="../include/csv/gilmore-hometowns.csv">Link to text file</a>
@@ -1165,8 +807,8 @@ Figure&nbsp;17: A sample CSV file. <a href="../include/csv/gilmore-hometowns.csv
 </figure>
 </div>
 </section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<section id="questions" class="slide level2">
+<h2>Questions</h2>
 <ul>
 <li>Are there common types of data visualizations in psychological science?</li>
 <li>What information is conveyed?</li>
@@ -1174,8 +816,8 @@ Figure&nbsp;17: A sample CSV file. <a href="../include/csv/gilmore-hometowns.csv
 <li>Do the figures “tell the story” (See <a href="../schedule.html#wed-oct-14">Wk-08 “Storytelling with data”</a>)</li>
 </ul>
 </section>
-<section id="more-specific-questions" class="level2">
-<h2 class="anchored" data-anchor-id="more-specific-questions">More specific questions</h2>
+<section id="more-specific-questions" class="slide level2">
+<h2>More specific questions</h2>
 <ul>
 <li>How are the following depicted?
 <ul>
@@ -1185,1012 +827,545 @@ Figure&nbsp;17: A sample CSV file. <a href="../include/csv/gilmore-hometowns.csv
 </ul></li>
 </ul>
 </section>
-<section id="exercise-01" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-01"><a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise-01</a></h2>
+<section id="exercise-01" class="slide level2">
+<h2><a href="../exercises/ex-01-figs-in-psych-sci.html">Exercise-01</a></h2>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="include/fig/unnamed-chunk-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></a></p>
+<figure>
+<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="include/fig/unnamed-chunk-1-1.png" class="quarto-figure quarto-figure-center" width="960"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="wrap-up" class="level1">
+</section></section>
+<section>
+<section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap-up</h1>
-<section id="main-points" class="level2">
-<h2 class="anchored" data-anchor-id="main-points">Main points</h2>
+
+</section>
+<section id="main-points" class="slide level2">
+<h2>Main points</h2>
 <ul>
 <li>Visualizing data is important</li>
 <li>Visualizing data is interesting</li>
 <li>Data visualization encapulates multiple ideas from psychological science</li>
 </ul>
 </section>
-<section id="next-time" class="level2">
-<h2 class="anchored" data-anchor-id="next-time">Next time</h2>
+<section id="next-time" class="slide level2">
+<h2>Next time</h2>
 <ul>
 <li>The semiotics of data visualization</li>
 </ul>
-</section>
-</section>
-<section id="resources-2" class="level1">
+</section></section>
+<section>
+<section id="resources-2" class="title-slide slide level1 center">
 <h1>Resources</h1>
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about">About</h2>
+
+</section>
+<section id="about" class="slide level2">
+<h2>About</h2>
 <p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.8.2.200.</p>
 <p>The source files are in R and Quarto, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages: <a href="https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/" class="uri">https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/</a></p>
 </section>
-<section id="references" class="level2">
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
 
 
-
-<!-- -->
-
-
-</section>
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-BBC2010-tj" class="csl-entry" role="listitem">
-BBC. (2010). <em>Hans rosling’s 200 countries, 200 years, 4 minutes - the joy of stats - <span>BBC</span></em>. You<span>T</span>ube. Retrieved from <a href="https://www.youtube.com/watch?v=jbkSRLYSojo&amp;t=55s">https://www.youtube.com/watch?v=jbkSRLYSojo&amp;t=55s</a>
+BBC. 2010. <em>Hans Rosling’s 200 Countries, 200 Years, 4 Minutes - the Joy of Stats - <span>BBC</span></em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=jbkSRLYSojo&amp;t=55s">https://www.youtube.com/watch?v=jbkSRLYSojo&amp;t=55s</a>.
 </div>
 <div id="ref-Feynman1974-ld" class="csl-entry" role="listitem">
-Feynman, R. P. (1974). Cargo cult science. Retrieved from <a href="https://calteches.library.caltech.edu/51/2/CargoCult.htm">https://calteches.library.caltech.edu/51/2/CargoCult.htm</a>
+Feynman, R P. 1974. <em>Cargo Cult Science</em>. <a href="https://calteches.library.caltech.edu/51/2/CargoCult.htm">https://calteches.library.caltech.edu/51/2/CargoCult.htm</a>.
 </div>
 <div id="ref-datasauRus" class="csl-entry" role="listitem">
-Gillespie, C., Locke, S., Davies, R., &amp; D’Agostino McGowan, L. (2025). <em><span class="nocase">datasauRus</span>: Datasets from the datasaurus dozen</em>. <a href="https://doi.org/10.32614/CRAN.package.datasauRus">https://doi.org/10.32614/CRAN.package.datasauRus</a>
+Gillespie, Colin, Steph Locke, Rhian Davies, and Lucy D’Agostino McGowan. 2025. <em>datasauRus: Datasets from the Datasaurus Dozen</em>. <a href="https://doi.org/10.32614/CRAN.package.datasauRus">https://doi.org/10.32614/CRAN.package.datasauRus</a>.
 </div>
 <div id="ref-Huff1993-pt" class="csl-entry" role="listitem">
-Huff, D. (1993). <em>How to lie with statistics</em>. New York, NY: WW Norton. Retrieved from <a href="https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728">https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728</a>
+Huff, Darrell. 1993. <em>How to Lie with Statistics</em>. WW Norton. <a href="https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728">https://www.amazon.com/How-Lie-Statistics-Darrell-Huff/dp/0393310728</a>.
 </div>
 <div id="ref-Iso2016-wd" class="csl-entry" role="listitem">
-Iso, A. (2016). <em>Bread - if original [1971]</em>. You<span>T</span>ube. Retrieved from <a href="https://www.youtube.com/watch?v=IQyKMueMFGk">https://www.youtube.com/watch?v=IQyKMueMFGk</a>
+Iso, Aloisio. 2016. <em>Bread - If Original [1971]</em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=IQyKMueMFGk">https://www.youtube.com/watch?v=IQyKMueMFGk</a>.
 </div>
 <div id="ref-Lindsey2024-ob" class="csl-entry" role="listitem">
-Lindsey, R. (2024, April 9). Climate change: Atmospheric carbon dioxide. Retrieved November 8, 2024, from <a href="http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide">http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide</a>
+Lindsey, Rebecca. 2024. <span>“Climate Change: Atmospheric Carbon Dioxide.”</span> April 9. <a href="http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide">http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide</a>.
 </div>
 <div id="ref-Matejka2017-xi" class="csl-entry" role="listitem">
-Matejka, J., &amp; Fitzmaurice, G. (2017). Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing. In <em>Proceedings of the 2017 CHI conference on human factors in computing systems</em>. New York, NY, USA: ACM. <a href="https://doi.org/10.1145/3025453.3025912">https://doi.org/10.1145/3025453.3025912</a>
+Matejka, Justin, and George Fitzmaurice. 2017. <span>“Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics Through Simulated Annealing.”</span> Paper presented CHI ’17: CHI conference on human factors in computing systems, Denver Colorado USA. <em>Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems</em> (New York, NY, USA), May 2. <a href="https://doi.org/10.1145/3025453.3025912">https://doi.org/10.1145/3025453.3025912</a>.
 </div>
 <div id="ref-Monmonier2018-jc" class="csl-entry" role="listitem">
-Monmonier, M. (2018). <em>How to lie with maps</em> (3rd ed.). Chicago, IL: University of Chicago Press. <a href="https://doi.org/10.7208/chicago/9780226436081.001.0001">https://doi.org/10.7208/chicago/9780226436081.001.0001</a>
+Monmonier, Mark. 2018. <em>How to Lie with Maps</em>. 3rd ed. University of Chicago Press. <a href="https://doi.org/10.7208/chicago/9780226436081.001.0001">https://doi.org/10.7208/chicago/9780226436081.001.0001</a>.
 </div>
 <div id="ref-Silberzahn2018-st" class="csl-entry" role="listitem">
-Silberzahn, R., Uhlmann, E. L., Martin, D. P., Anselmi, P., Aust, F., Awtrey, E., … Nosek, B. A. (2018). Many analysts, one data set: Making transparent how variations in analytic choices affect results. <em>Advances in Methods and Practices in Psychological Science</em>, <em>1</em>, 337–356. <a href="https://doi.org/10.1177/2515245917747646">https://doi.org/10.1177/2515245917747646</a>
+Silberzahn, R, E L Uhlmann, D P Martin, et al. 2018. <span>“Many Analysts, One Data Set: Making Transparent How Variations in Analytic Choices Affect Results.”</span> <em>Advances in Methods and Practices in Psychological Science</em> 1 (September): 337–56. <a href="https://doi.org/10.1177/2515245917747646">https://doi.org/10.1177/2515245917747646</a>.
 </div>
 <div id="ref-datasaurus2019-us" class="csl-entry" role="listitem">
-The <span>D</span>atasaurus dozen - same stats, different graphs | <span>A</span>utodesk <span>R</span>esearch. (n.d.). Retrieved June 2, 2019, from <a href="https://www.autodeskresearch.com/publications/samestats">https://www.autodeskresearch.com/publications/samestats</a>
+<span>“The <span>D</span>atasaurus Dozen - Same Stats, Different Graphs | <span>A</span>utodesk <span>R</span>esearch.”</span> n.d. Accessed June 2, 2019. <a href="https://www.autodeskresearch.com/publications/samestats">https://www.autodeskresearch.com/publications/samestats</a>.
 </div>
 <div id="ref-Wikipedia-contributors2026-kw" class="csl-entry" role="listitem">
-Wikipedia contributors. (2026, July 12). Anscombe’s quartet. Retrieved from <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">https://en.wikipedia.org/wiki/Anscombe%27s_quartet</a>
+Wikipedia contributors. 2026. <span>“Anscombe’s Quartet.”</span> Wikimedia Foundation, Inc., July 12. <a href="https://en.wikipedia.org/wiki/Anscombe%27s_quartet">https://en.wikipedia.org/wiki/Anscombe%27s_quartet</a>.
 </div>
-</div></section></div></main> <!-- /main -->
+</div>
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://psu-psychology.github.io/psych-490-data-viz-2026-fall">PSY 490.007</a> | © 2026 Rick Gilmore under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>
+</div></div>
 
-<script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
 
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
+  <script>
 
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
 
-  })();
-</script>
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
 
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
-    }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-            // default icon
-            link.classList.add("external");
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
         },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
       });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
         }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
             }
           }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
           }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          return note.innerHTML;
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
         }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // default icon
+                link.classList.add("external");
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
         }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
             }
           } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
             });
           }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
         }
-      }, function(instance) {
       });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
         }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
               }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
             }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+          } 
         });
-      }
-    }
-  });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../meta.html" class="pagination-link" aria-label="Under the hood">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Under the hood</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../slides/wk-01-2026-08-26-semiotics-data-viz.html" class="pagination-link" aria-label="Wk 01 • Wed Aug 26">
-        <span class="nav-page-text">Wk 01 • Wed Aug 26</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "The Psychology of Data Visualization"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> revealjs</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preliminaries</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {#fig-hans-rosling}</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1240"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"450"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://www.youtube.com/embed/jbkSRLYSojo?si=EVAEulLIsmNtyi0q"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"YouTube video player"</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">"0"</span><span class="ot"> allow</span><span class="op">=</span><span class="st">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span><span class="ot"> referrerpolicy</span><span class="op">=</span><span class="st">"strict-origin-when-cross-origin"</span><span class="ot"> allowfullscreen</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>@BBC2010-tj</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::: {#fig-if-a-picture-paints}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> width</span><span class="op">=</span><span class="st">"1240"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"450"</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://www.youtube.com/embed/IQyKMueMFGk?si=UUWNmygz10iWemeu"</span><span class="ot"> title</span><span class="op">=</span><span class="st">"YouTube video player"</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">"0"</span><span class="ot"> allow</span><span class="op">=</span><span class="st">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span><span class="ot"> referrerpolicy</span><span class="op">=</span><span class="st">"strict-origin-when-cross-origin"</span><span class="ot"> allowfullscreen</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>@Iso2016-wd</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## A picture is worth a thousand words...</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"An <span class="co">[</span><span class="ot">adage</span><span class="co">](https://www.merriam-webster.com/dictionary/adage)</span> in multiple languages..." <span class="co">[</span><span class="ot">Wikipedia</span><span class="co">](https://en.wikipedia.org/wiki/A_picture_is_worth_a_thousand_words)</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theme for the course</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## How many words?</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="al">![@Lindsey2024-ob](https://www.climate.gov/sites/default/files/styles/full_width_620_original_image/public/2024-04/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png?itok=-g_Qgndc)</span>{#fig-climate-dashboard}</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ## Or these? --&gt;</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ::: {#fig-trends-in-co2-noaa} --&gt;</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ![Trends in $CO_2$ at Mauna Loa Observatory from NOAA.](../include/img/trends-in-co2-noaa.png) --&gt;</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- @NOAA-Global-Monitoring-Laboratory2024-gw --&gt;</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- ::: --&gt;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>!<span class="co">[</span><span class="ot">Housing affordability in State College, PA. Homeownership cost as a share of median income. [Federal Reserve Bank of Atlanta](https://public.tableau.com/shared/FY72B725F?:display_count=n&amp;:origin=viz_share_link&amp;:embed=y)</span><span class="co">](../include/img/housing-affordability-atlanta-fed.png)</span>{#fig-housing-affordability width="65%"}</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## Today</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Introduction to the course</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visualization in psychological science</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu"># Introduction to the course</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## People</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Kalvin Garrah, Graduate Student</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Rick Gilmore, Professor of Psychology</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why this course, why now</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## My journey</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Cognitive Science major, psycholinguistics &amp; <span class="co">[</span><span class="ot">semiotics</span><span class="co">](https://en.wikipedia.org/wiki/Semiotics)</span> minor</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Introduced to vision science via <span class="co">[</span><span class="ot">Marr</span><span class="co">]</span>(https://en.wikipedia.org/wiki/David_Marr_(neuroscientist)) and <span class="co">[</span><span class="ot">J.J. Gibson</span><span class="co">](https://en.wikipedia.org/wiki/James_J._Gibson)</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Research</span><span class="co">](https://gilmore-lab.github.io)</span> in visual development, visual neuroscience, open science</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>![<span class="co">[</span><span class="ot">Databrary.org</span><span class="co">](https://databrary.org)</span>](../include/img/databrary-nav.svg){#fig-databrary-logo height=250px}</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## {background-iframe="https://penn-state-open-science.github.io"}</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Many analysts</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 2 from @Silberzahn2018-st](../include/img/silberzahn-fig-02.jpeg)</span>{#fig-many-analysts width="80%"}</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your turn...</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>::: {.column width=50%}</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>::: {.question}</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="fu">## Does the overall evidence suggest that the odds ratio is greater than zero?</span></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>::: {.question}</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="fu">## How do you come to that conclusion?</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>::: {.column width=50%}</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="al">![Figure 2 from @Silberzahn2018-st ](../include/img/silberzahn-fig-02.jpeg)</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>::::</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Many visualization failures</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Visualizing the 'Many Analysts' -- @Silberzahn2018-st -- data </span><span class="co">](https://psu-psychology.github.io/psych-490-reproducibility-2024-fall/supplemental/many-viz.html)</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## "Plot your data!"</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="al">![Gilmore's graduate statistics professor.](../include/img/mike-meyer-linked-in.png)</span>{#fig-mike-meyer width="80%"}</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>::: {.column width=50%}</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="al">![@Wikipedia-contributors2026-kw](../include/img/anscombes-quartet-data-wikipedia.png)</span>{#fig-anscombes-quartet-data-wikipedia}</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>::: {.column width=50%}</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="al">![Anscombe's Quartet; By Anscombe.svg: Schutz(label using subscripts): Avenue - Anscombe.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9838454.](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/3840px-Anscombe%27s_quartet_3.svg.png)</span>{#fig-anscombes-quartet-figure-wikipedia}</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>::::</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-datasaurus-dozen</span></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "The DatasauRus dozen [@datasaurus2019-us; @Matejka2017-xi; @datasauRus]"</span></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasauRus)</span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gganimate)</span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(datasaurus_dozen, <span class="fu">aes</span>(<span class="at">x=</span>x, <span class="at">y=</span>y))<span class="sc">+</span></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transition_states</span>(dataset, <span class="dv">3</span>, <span class="dv">1</span>) <span class="sc">+</span> </span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ease_aes</span>(<span class="st">'cubic-in-out'</span>)</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="fu">## Not all plots are equivalent</span></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="al">![@datasaurus2019-us; @Matejka2017-xi](https://www.research.autodesk.com/app/uploads/2024/09/BoxViolinSmaller.gif)</span></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="fu">## Statistical measurements can be misleading!</span></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Don't fool yourself, because you are the easiest one to fool." </span></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>@Feynman1974-ld</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="al">![@Huff1993-pt](https://m.media-amazon.com/images/I/71ASFP9sBXL._SY522_.jpg)</span></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="al">![@Monmonier2018-jc](https://m.media-amazon.com/images/I/71reVbvgoVL._SY522_.jpg)</span></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="fu">## Vision can be unreliable or ambiguous</span></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>::: {#visual-illusions layout-ncol=2}</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://www.rd.com/wp-content/uploads/2021/07/GettyImages-1278770741.jpg?fit=300,300&amp;webp=1)</span></span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="al">![](https://miro.medium.com/v2/resize:fit:1400/format:webp/0*JXwHAPXkg05Y6IZF.jpg)</span></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="al">![https://www.indexventures.com/perspectives/data-not-software-is-eating-the-world/](../include/img/data-is-eating-the-world.png)</span>{#fig-data-eating-the-world width="75%"}</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to spot hogwash</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="al">![giphy.com](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlsMzFjeHoza2hxbGo5dmh2ZnoxaXN5a3cwem92N3Q0NmMzZzRrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m476ZhHMTBcCk/giphy.gif)</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose &amp; goals</span></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>::: {.incremental}</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What are data? Where do data come from?</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Who visualizes data, how do they visualize it, and why?</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How does vision science inform how we perceive patterns in data?</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What's the relationship between non-visual and visual ways of understanding data?</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What makes a data visualization effective?</span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What makes a data visualization misleading?</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## Hands-on skills</span></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>::: {.column width=50%}</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How can we make better data visualizations?</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Making figures using the R programming language</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Especially the <span class="in">`ggplot2`</span> package</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How to document scholarly work using <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>::: {.column width=50%}</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="al">![Gilmore says that learning to make figures in R with Quarto is like gaining a superpower. giphy.com](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHdzenBjNGlhMDlyMjFuNjdzMzhwdmtmYmV4cjRrYXk2NGk4dTVsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3Gij38skUDBvy/giphy.gif)</span>{#fig-batman}</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>::::</span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">## Schedule</span></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://psu-psychology.github.io/psych-490-data-viz-2026-fall/schedule.html&gt;</span></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercises &amp; evaluation</span></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exercises</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>6 @ 10 pts/each</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Top 4 count</span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Others count toward partial extra credit up to 10 pts</span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Attendance (up to 40 points)</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Final project (40 points)</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Websites</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Course site: <span class="ot">&lt;https://psu-psychology.github.io/psych-490-data-viz-2026-fall/&gt;</span></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Canvas</span><span class="co">](https://psu.instructure.com/courses/2484925)</span></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Tracking grades, submitting assignments</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resources</span></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Articles</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Retrieve them yourself via the URL (uniform resource locator) and the digital object identifier (<span class="co">[</span><span class="ot">DOI</span><span class="co">](https://www.doi.org)</span>) when you can</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Or retrieve PDFs from Canvas</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## Structure</span></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meet 3x weekly</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Monday &amp; Wednesday</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Lecture + discussion (maybe short work session)</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Friday (hands-on work session)</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do your homework</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="fu">## This is a seminar...</span></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="al">![https://www.merriam-webster.com/dictionary/seminar](../include/img/seminar-definition.png)</span>{#fig-definition-of-seminar}</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="fu">## Culture &amp; climate</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>::: {.incremental}</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Creating a community of inquiry</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Encouraging vigorous &amp; constructive criticism</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Criticism of *work/ideas/behaviors* vs. *people*</span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>'Smith thinks that pigs can fly.'</span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>'Smith is an idiot, and should be shot on sight.'</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>'Smith tried to demonstrate that pigs can fly by tossing a few off the </span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>  roof of Old Main. That's nonsense, is cruel to animals, and made a huge mess.'</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="al">![giphy.com](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmk5c29lY2g5eHA3NDQ1OHBhZzFoNzRkeWI1Ynp1aTNjN3pqYXE2NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4T189yy4SfUbByZHRu/giphy.gif)</span>{#fig-elephant-in-the-room}</span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="fu"># Visualization in psychological science</span></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your turn...</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>::: {.question}</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="fu">## Where do data come from?</span></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>::: {.answer}</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="fu">## One answer</span></span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>Data are the outcome of a process of measurement.</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualizing measurement</span></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="al">![A simple depiction of the process of generating data via measurement.](../include/fig/mermaid-figure-measures-1.png)</span>{#fig-measurement-simple}</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="al">![A richer depiction of the process of measurement involving an observer, some procedure, and an apparatus or measurement instrument. Compare with @fig-measurement-simple](../include/fig/mermaid-figure-measures-2.png)</span>{#fig-measurement-richer}</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="fu">## Your turn...</span></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>::: {.question}</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu">## What do we measure in psychological science?</span></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="fu">## Measures in $\Psi$ science</span></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>::: {.incremental}</span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Internal states (thoughts, feelings, memories, opinions, decisions, judgments...)</span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Physiological states</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Individual characteristics (height, weight, eye color, etc.)</span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Environmental characteristics</span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="fu">## How do we measure these things?</span></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>::: {.incremental}</span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interviews, questionnaires</span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Observations</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Behavioral responses</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>EEG, ERP, EKG, salivary assays, brain imaging, ...</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="fu">## What do the data look like?</span></span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Most often...</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-gilmore-hometowns</span></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Table showing a few of Gilmore's hometowns</span></span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>gilmore_df <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"../include/csv/gilmore-hometowns.csv"</span>)</span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>gilmore_df <span class="sc">|&gt;</span></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">4</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>()</span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="fu">## Under the hood...</span></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A text file in a comma separated value (<span class="in">`.csv`</span>) or similar *tabular* format (rows + columns)</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>!<span class="co">[</span><span class="ot">A sample CSV file. [Link to text file](../include/csv/gilmore-hometowns.csv)</span><span class="co">](../include/img/gilmore-hometowns-csv.png)</span>{#fig-gilmore-hometowns}</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a><span class="fu">## Questions</span></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Are there common types of data visualizations in psychological science?</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What information is conveyed?</span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How clearly is it conveyed?</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Do the figures "tell the story" (See <span class="co">[</span><span class="ot">Wk-08 "Storytelling with data"</span><span class="co">](../schedule.qmd#wed-oct-14)</span>)</span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="fu">## More specific questions</span></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How are the following depicted?</span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Responses to surveys</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Performance on tasks/tests</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Brain structure or activity</span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="fu">## [Exercise-01](../exercises/ex-01-figs-in-psych-sci.qmd)</span></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(qrcode<span class="sc">::</span><span class="fu">qr_code</span>(<span class="st">"https://psu-psychology.github.io/psych-490-data-viz-2026-fall/exercises/ex-01-figs-in-psych-sci.html"</span>))</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a><span class="fu"># Wrap-up</span></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a><span class="fu">## Main points</span></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visualizing data is important</span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visualizing data is interesting</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data visualization encapulates multiple ideas from psychological science</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a><span class="fu">## Next time</span></span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The semiotics of data visualization </span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a><span class="fu"># Resources</span></span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a><span class="fu">## About</span></span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>This talk was produced using <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span>, using the <span class="co">[</span><span class="ot">RStudio</span><span class="co">](https://posit.co/products/open-source/rstudio/)</span></span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>Integrated Development Environment (IDE), version 2026.8.2.200.</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>The source files are in R and Quarto, then rendered to HTML using the</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">revealJS</span><span class="co">](https://revealjs.com)</span> framework.</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>The HTML slides are hosted in a <span class="co">[</span><span class="ot">GitHub repo</span><span class="co">](https://github.com/psu-psychology/psych-490-data-viz-2026-fall)</span> and served by GitHub pages:</span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="ot">&lt;https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/&gt;</span></span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a><span class="fu">## References</span></span>
-</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>Copyright © Rick Gilmore • <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
-</div>   
-    <div class="nav-footer-center">
-<p>Built with <a href="https://quarto.org/">Quarto</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/edit/main/slides/wk-01-2026-08-24-course-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/rogilmore">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
-  </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
           }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
-
-
-
+        });
+      
+      };
+      
+    })();
+              </script>
+    
 
 </body></html>
