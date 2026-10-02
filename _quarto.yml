@@ -50,6 +50,8 @@ website:
         href: slides/wk-06-2026-09-28-sensation-to-perception.qmd
       - text: "Wk 06 • Wed Sep 30"
         href: slides/wk-06-2026-09-30-cognition-to-understanding.qmd
+      - text: "Wk 06 • Fri Oct 02"
+        href: slides/wk-06-2026-10-02-work-session.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd
@@ -71,7 +73,8 @@ website:
       contents:
         - supplemental/psych-sci-figs.qmd
         # - supplemental/other-field-figs.qmd
-        - supplemental/student-generated-surveys.qmd
+        - text: "Student-generated surveys"
+          href: supplemental/student-generated-surveys.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
   page-footer:
