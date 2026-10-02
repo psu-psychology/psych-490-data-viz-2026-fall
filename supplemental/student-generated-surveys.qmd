@@ -1,0 +1,48 @@
+---
+title: "Student-generated surveys"
+format: html
+---
+
+## About
+
+This page provides links to surveys that students generated for [Exercise 03](../exercises/ex-03-making-data.qmd).
+
+## Surveys
+
+<!-- Gabbi -->
+<https://docs.google.com/forms/d/e/1FAIpQLScEPYMvkxo0uzPpoZX8td6YK_o8SDF3DUEk9HjDuumz7TwjqA/viewform?usp=header>
+
+<!-- Paul -->
+<https://docs.google.com/forms/d/e/1FAIpQLSchjfdesQO0MZAEmvXN6PFjMygqTq1CYoPbrqxpremu0eSiEg/viewform?usp=header>
+
+<!-- Daniel -->
+<https://docs.google.com/forms/d/e/1FAIpQLSenJkME-9uqZQ_cvYVTWoN8A-C28AjclhwcqHGb2LfrrtwO4Q/viewform?usp=header>
+
+<!-- Hiya Shah & Ishita Gupta  -->
+<https://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header>
+
+<!-- Luana & Aiden -->
+<https://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header>
+
+<!-- Ganiya -->
+<https://docs.google.com/forms/d/e/1FAIpQLSeUzR6ZAm1WerhBsQ3jvXz3tlhwlhmv8J8zXs1moRHhXmOSNA/viewform?usp=header>
+
+<!-- Minjoo -->
+<https://forms.gle/y1uaGFb7UNwCMqQG8>
+
+<!-- Hashika -->
+<https://forms.gle/7tPhrJzXBkV4mFLY6>
+
+<!-- Jack -->
+<https://docs.google.com/forms/d/e/1FAIpQLSdBEhfRtzsiXRIHsjaY3UdC458CEOECBdmVBticFojvv5tPSA/viewform?usp=publish-editor>
+
+::: {.callout-warning}
+## Who's are these?
+
+If either of the following is your survey, please let me know. Thanks.
+
+<https://docs.google.com/forms/d/e/1FAIpQLSc0abLWdSnOlPuKtPlTrKSaEg7UJ-ECaNmBryOzd5YpHbuIxg/viewform?usp=header>
+
+<https://docs.google.com/forms/d/e/1FAIpQLSeTsk43BIe7UCx3vQBE1gvFUt0bwP7goP7nnD2jffPKBovAwg/viewform>
+:::
+

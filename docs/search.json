@@ -208,7 +208,7 @@
     "href": "slides/wk-06-2026-10-02-work-session.html#today",
     "title": "Work session: Visualizing sports data",
     "section": "Today",
-    "text": "Today\n\nVisualizing NFL data from the nflreadr package\nFinal project check-ins"
+    "text": "Today\n\nWhat to do next week?\nVisualizing NFL data from the nflreadr package\nFinal project check-ins"
   },
   {
     "objectID": "slides/wk-06-2026-10-02-work-session.html#tutorial",
@@ -236,7 +236,7 @@
     "href": "slides/wk-06-2026-10-02-work-session.html#references",
     "title": "Work session: Visualizing sports data",
     "section": "References",
-    "text": "References\n\n\n\n\nTukey, John W. 1977. Exploratory Data Analysis. Addison-Wesley Series in Behavioral Science. Quantitative Methods. Pearson. https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160."
+    "text": "References\n\n\n\n\nFranconeri, Steven L, Lace M Padilla, Priti Shah, Jeffrey M Zacks, and Jessica Hullman. 2021. “The Science of Visual Data Communication: What Works.” Psychological Science in the Public Interest: A Journal of the American Psychological Society 22 (3): 110–61. https://doi.org/10.1177/15291006211051956.\n\n\nTukey, John W. 1977. Exploratory Data Analysis. Addison-Wesley Series in Behavioral Science. Quantitative Methods. Pearson. https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160."
   },
   {
     "objectID": "index.html",
@@ -5867,5 +5867,45 @@
     "title": "Designing efficient & understandable visualizations",
     "section": "Last week…",
     "text": "Last week…\n\nVisual cognition\nWork session: Visualizing sports data"
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html",
+    "href": "supplemental/student-generated-surveys.html",
+    "title": "Student-generated surveys",
+    "section": "",
+    "text": "This page provides links to surveys that students generated for Exercise 03.",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#about",
+    "href": "supplemental/student-generated-surveys.html#about",
+    "title": "Student-generated surveys",
+    "section": "",
+    "text": "This page provides links to surveys that students generated for Exercise 03.",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#surveys",
+    "href": "supplemental/student-generated-surveys.html#surveys",
+    "title": "Student-generated surveys",
+    "section": "Surveys",
+    "text": "Surveys\n\nhttps://docs.google.com/forms/d/e/1FAIpQLScEPYMvkxo0uzPpoZX8td6YK_o8SDF3DUEk9HjDuumz7TwjqA/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSchjfdesQO0MZAEmvXN6PFjMygqTq1CYoPbrqxpremu0eSiEg/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSenJkME-9uqZQ_cvYVTWoN8A-C28AjclhwcqHGb2LfrrtwO4Q/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSeUzR6ZAm1WerhBsQ3jvXz3tlhwlhmv8J8zXs1moRHhXmOSNA/viewform?usp=header\n\nhttps://forms.gle/y1uaGFb7UNwCMqQG8\n\nhttps://forms.gle/7tPhrJzXBkV4mFLY6\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdBEhfRtzsiXRIHsjaY3UdC458CEOECBdmVBticFojvv5tPSA/viewform?usp=publish-editor\n\n\n\n\n\n\nWarningWho’s are these?\n\n\n\nIf either of the following is your survey, please let me know. Thanks.\nhttps://docs.google.com/forms/d/e/1FAIpQLSc0abLWdSnOlPuKtPlTrKSaEg7UJ-ECaNmBryOzd5YpHbuIxg/viewform?usp=header\nhttps://docs.google.com/forms/d/e/1FAIpQLSeTsk43BIe7UCx3vQBE1gvFUt0bwP7goP7nnD2jffPKBovAwg/viewform",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "slides/wk-06-2026-10-02-work-session.html#options",
+    "href": "slides/wk-06-2026-10-02-work-session.html#options",
+    "title": "Work session: Visualizing sports data",
+    "section": "Options",
+    "text": "Options\n\nProceed as scheduled\nDeeper dive into Franconeri et al. (2021)\nMake more time for Exercise 04\n\nDownload data from Exercise 03 surveys, clean, visualize\n\nQuarto APA template (Kalvin)"
   }
 ]

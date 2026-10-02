@@ -70,7 +70,8 @@ website:
     - section: Supplemental
       contents:
         - supplemental/psych-sci-figs.qmd
-        - supplemental/other-field-figs.qmd
+        # - supplemental/other-field-figs.qmd
+        - supplemental/student-generated-surveys.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
   page-footer:

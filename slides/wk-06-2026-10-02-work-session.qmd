@@ -9,7 +9,7 @@ format: revealjs
 
 - {{< fa calendar >}} *Due* [Exercise-03](../exercises/ex-03-making-data.qmd) | {{< fa folder >}} *Canvas dropbox*
 - [Assigned]{.green_assigned}: [Final Project](../exercises/final-project.qmd) proposal
-- Draft [tutorial](../tutorial/tutorial-figure-captions-numbering.qmd) on figure captions and numbering
+- Draft [tutorial](../tutorials/tutorial-figure-captions-numbering.qmd) on figure captions and numbering
 
 ## Last time...
 
@@ -18,8 +18,19 @@ format: revealjs
 
 ## Today
 
+- What to do next week?
 - Visualizing NFL data from the `nflreadr` package
 - Final project check-ins
+
+# What to do next week?
+
+## Options
+
+- Proceed as [scheduled](../schedule.qmd)
+- Deeper dive into @Franconeri2021-uv
+- Make more time for [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd)
+  - Download data from [Exercise 03](../exercises/ex-03-making-data.qmd) surveys, clean, visualize
+- Quarto APA template (Kalvin)
 
 # Visualizing sports data
 
