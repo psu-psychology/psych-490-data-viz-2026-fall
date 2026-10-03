@@ -381,7 +381,7 @@
     "href": "exercises/ex-04-making-figs-ggplot.html",
     "title": "Exercise 04",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction.",
+    "text": "The write-up is due on Friday, October 9, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 04"
@@ -391,8 +391,8 @@
     "objectID": "exercises/ex-04-making-figs-ggplot.html#dates",
     "href": "exercises/ex-04-making-figs-ggplot.html#dates",
     "title": "Exercise 04",
-    "section": "Dates",
-    "text": "Dates\nThe write-up is due on Friday, October 9, 2026.",
+    "section": "",
+    "text": "The write-up is due on Friday, October 9, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 04"
@@ -414,7 +414,7 @@
     "href": "exercises/ex-04-making-figs-ggplot.html#assignment",
     "title": "Exercise 04",
     "section": "Assignment",
-    "text": "Assignment\n\nPick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from data()), such as diamonds or mtcars, or the one of the datasets from the nflreadr package we explored previously.\nCreate a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using ggplot2 to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.\n\n\nYour Quarto document should include an About section, a Setup section, and separate sections for each figure you generate.\n\n\nFor each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you derive from it, and how the visualization answers the question.\nFor each figure you make, write a short summary of the key insights and how the visualization answers the question.",
+    "text": "Assignment\n\nPick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from data()), such as diamonds or mtcars, or the one of the datasets from the nflreadr package we explored previously.\nCreate a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using ggplot2 to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.\n\nYour Quarto document should include an About section, a Setup section, and separate sections for each figure you generate.\n\nFor each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you expect to derive from it, and how the visualization you create answers (or doesn’t answer) the question.\nIf your figure doesn’t clearly answer the question you posed, explain how the figure might be improved or clarified to do so. This critique could include a suggestion to use a different type of figure. You may, but do not have to improve your figure for this assignment.\nInclude a short Discussion and Conclusion section where you summarize what you learned in a couple of sentences.",
     "crumbs": [
       "Exercises",
       "Exercise 04"
@@ -5672,5 +5672,82 @@
     "title": "Capturing images",
     "section": "Capturing images on your screen",
     "text": "Capturing images on your screen\nWhen the image you want is not a static image, you may need to use your computer’s screen capture tool.\nFrom the same Penn State home page, I try right-clicking on the top “hero” animation. This is the result.\n\n\n\n\n\n\nFigure 3: Results of right-clicking on psu.edu ‘hero’ image/animation.\n\n\n\nNotice that the pop-up window does not have the same menu items as it did for a static image. Of course, this is an animation, and so it’s not that surprising that things would differ. Let’s say I want to capture a static image from this animation.\n\nPress the screen capture keystroke combination for your computer. On Mac OS, you have two choices, command+shift+3 (pressed simultaneously) immediately takes a screenshot of your entire window.\n\n\n\n\n\n\n\nFigure 4: Capturing entire screen on Mac OS using command+shift+3.\n\n\n\nNote that to capture a specific segment of a video, you have to wait until that image appears and press these keys quickly.\n\nAs an alternative on Mac OS, you can use command+shift+4. Then, you click and drag your mouse to indicate the region of the screen you want to capture. When the image appears in the animation, just release the mouse button and that image will be captured.\n\n\n\n\n\n\n\nFigure 5: Capturing a segment of the screen on Mac OS using command+shift+4.\n\n\n\n\n\n\n\n\n\nNoteUnder construction\n\n\n\nInstructions about how to do this on Windows are a work-in-progress."
+  },
+  {
+    "objectID": "psych-490-ex-04.html",
+    "href": "psych-490-ex-04.html",
+    "title": "psych-490-ex-04",
+    "section": "",
+    "text": "This page documents Rick Gilmore’s work related to completing Exercise 04 for PSYCH 490.007 in Fall 2026.\nThe assignment involves choosing an existing dataset and making at least three (3) visualizations using the ggplot2 package. For each figure, I am to write a short summary of the question I intend to ask with the figure, and how the visualization I generate answers or doesn’t answer the question. If my figure doesn’t clearly answer the question, then I should explain how the figure might be improved or clarified to do so. This critique could include a suggestion to use a different type of figure."
+  },
+  {
+    "objectID": "psych-490-ex-04.html#about",
+    "href": "psych-490-ex-04.html#about",
+    "title": "psych-490-ex-04",
+    "section": "",
+    "text": "This page documents Rick Gilmore’s work related to completing Exercise 04 for PSYCH 490.007 in Fall 2026.\nThe assignment involves choosing an existing dataset and making at least three (3) visualizations using the ggplot2 package. For each figure, I am to write a short summary of the question I intend to ask with the figure, and how the visualization I generate answers or doesn’t answer the question. If my figure doesn’t clearly answer the question, then I should explain how the figure might be improved or clarified to do so. This critique could include a suggestion to use a different type of figure."
+  },
+  {
+    "objectID": "psych-490-ex-04.html#setup",
+    "href": "psych-490-ex-04.html#setup",
+    "title": "psych-490-ex-04",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#load-dataset",
+    "href": "psych-490-ex-04.html#load-dataset",
+    "title": "psych-490-ex-04",
+    "section": "Load dataset",
+    "text": "Load dataset\nI chose to use the  dataset.\nUsing the summary(dataset_name) function, I discover that the dataset has the following variables:\n\n\nCode\nsummary(dataset_name)"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#figure-1",
+    "href": "psych-490-ex-04.html#figure-1",
+    "title": "psych-490-ex-04",
+    "section": "Figure 1",
+    "text": "Figure 1"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#figure-2",
+    "href": "psych-490-ex-04.html#figure-2",
+    "title": "psych-490-ex-04",
+    "section": "Figure 2",
+    "text": "Figure 2"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#figure-3",
+    "href": "psych-490-ex-04.html#figure-3",
+    "title": "psych-490-ex-04",
+    "section": "Figure 3",
+    "text": "Figure 3"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#discusion-and-conclusion",
+    "href": "psych-490-ex-04.html#discusion-and-conclusion",
+    "title": "psych-490-ex-04",
+    "section": "Discusion and Conclusion",
+    "text": "Discusion and Conclusion"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#resources",
+    "href": "psych-490-ex-04.html#resources",
+    "title": "psych-490-ex-04",
+    "section": "Resources",
+    "text": "Resources"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#figure-2-1",
+    "href": "psych-490-ex-04.html#figure-2-1",
+    "title": "psych-490-ex-04",
+    "section": "Figure 2",
+    "text": "Figure 2"
+  },
+  {
+    "objectID": "psych-490-ex-04.html#figure-3-1",
+    "href": "psych-490-ex-04.html#figure-3-1",
+    "title": "psych-490-ex-04",
+    "section": "Figure 3",
+    "text": "Figure 3"
   }
 ]

@@ -1,0 +1,201 @@
+---
+title: "Work session: Making figures on your own"
+format: revealjs
+---
+
+# Prelude
+
+# Overview
+
+## Announcements
+
+- [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd) due this Friday
+
+## Last time...
+
+- Work session: Visualizing sports data
+
+## Today
+
+- Work session: Making figures on your own
+  - Preparation for [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd)
+  
+# Making figures on your own
+
+## Make a new RStudio project
+
+- Call it `psych-490-ex-04` or similar
+
+## Make a Quarto document inside the project
+
+- Call it `ex-04-<last_name>-<first_name>.qmd` or similar
+- Add an `author` section to the header
+- Add a `date` to the header
+- Add the following code to the header so that your rendered HTML includes your figures:
+
+````yaml
+format: 
+  html:
+    embed-resources: true
+````
+
+## 
+
+- Add `About` and `Setup` sections with headers
+  - Populate these sections with relevant text
+- Add an R code chunk to run your setup commands
+
+## {.scrollable}
+
+`````rmarkdown
+---
+title: "psych-490-ex-04"
+author: "Rick Gilmore"
+date: today
+format: 
+  html:
+    embed-resources: true
+---
+
+## About
+
+## Setup
+
+````{{r}}
+
+````
+
+`````
+
+## 
+
+- Save and render the document so far.
+- Once it renders, add placeholder sections as follows:
+  - `Load dataset`
+  - `Figure 1`
+  - `Figure 2`
+  - `Figure 3`
+  - `Discussion and Conclusion`
+  - `Resources`
+- Save and render again
+
+## Choose your dataset
+
+- You might try the `data()` command to see what is available inside R.
+- If you want to use the data in `nflreadr`, you will need to add `library(nflreadr`) to your R code in your `Setup` section.
+
+## Load your dataset
+
+- Some datasets are available to you without doing anything special, e.g., *mtcars*.
+- Some datasets, e.g., *diamonds*, are available when you load the R package that contains it, using `library(ggplot2)`
+- If you use the `nflreadr` package, you will need to use `nflreadr::load_` function. See the [tutorial](../tutorials/tutorial-visualizing-sports-data.qmd).
+
+##
+
+::: {.callout-important}
+## Explain why
+
+A best practice to adopt is to explain your choices.
+So, if you use a dataset built in to R, say that's what you did.
+If you choose a package that must be loaded from another source, explain that.
+
+:::
+
+## Make your first figure
+
+- Decide on a variable or variables to plot
+- Describe in a short paragraph under your `Figure 1 header` what the plot should show you or what question the plot should help you answer.
+- Add an R code chunk and write the R code to make the plot.
+
+## 
+
+````quarto
+
+## Figure 1
+
+In this figure, I will plot the <variable> from the <dataset> dataset.
+The variable is continuous, so I will use a <plot_type> that should show me...
+
+```{{r}}
+#| label: fig-01
+dataset |>
+  ggplot() +
+  aes(x = variable) +
+  
+```
+
+````
+
+##
+
+::: {.callout-note}
+## Figure numbering is optional
+
+Note that the code chunk on the previous page added `#| label: fig-01` before the actual code.
+
+This tells Quarto to add a figure number automatically. 
+
+If you get this to work, bravo!
+
+The main benefit is that you can now write `@fig-01` in your text, and Quarto will create a link to the figure. 
+
+So, your `Figure 1` section could look like the following.
+
+:::
+
+##
+
+````quarto
+
+## Figure 1
+
+In @fig-01, I will plot the <variable> from the <dataset> dataset.
+The variable is continuous, so I will use a <plot_type> that should show me...
+
+```{{r}}
+#| label: fig-01
+dataset |>
+  ggplot() +
+  aes(x = variable) +
+  
+```
+
+````
+
+::: {.fragment}
+- I'm trying very hard not to do your work for you here, so I won't give you code that you might be tempted to just copy and paste.
+
+:::
+ 
+## Render Figure 1
+
+- Save and render your Quarto document
+- Kalvin and I will check in with you
+- If you successfully created Figure 1, then provide some brief commentary about it
+
+##
+
+````quarto
+In @fig-01, I will plot the <variable> from the <dataset> dataset.
+The variable is continuous, so I will use a <plot_type> that should show me...
+
+```{{r}}
+#| label: fig-01
+dataset |>
+  ggplot() +
+  aes(x = variable) +
+  
+```
+
+@fig-01 shows that the variable is...
+The figure could be more effective if...
+
+````
+
+# Wrap-up
+
+
+
+# Resources
+
+## References
