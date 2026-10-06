@@ -1,0 +1,62 @@
+---
+title: "Anatomy of a Quarto document"
+author: ["Rick Gilmore", "Santa Claus"]
+date: today
+format: 
+  html:
+    embed-resources: true
+---
+
+## About
+
+This is a second-level header section.
+The `About` label is preceded by two hashmarks (pound signs `##`).
+
+Gilmore recommends adding a section like this to *every* document.
+It's a gift to your future (forgetful) self.
+
+## Setup
+
+Gilmore likes to include a setup section.
+The section includes a code chunk where he likes to add code needed to get to work.
+If he finds that he needs another package, he should install the package in the R console then add the `library()` command here.
+
+```{r}
+library(ggplot2)
+```
+
+## Load data
+
+## Make figures
+
+### Figure 1
+
+Your goals for Figure 1 should go here.
+The R code to generate Figure 1 should go in the code chunk below.
+
+```{r}
+
+```
+
+::: {.callout-important}
+## Use a sensible topic/header hierarchy
+
+Notice that the header for this figure has three hashmarks `###`.
+That means it is a level 3 header, below the level 2 header called `Making figures`.
+
+This isn't the only way to organize information for this report, but it is an easy one to follow.
+:::
+
+### Figure 2
+
+Code for Figure 2 goes in the chunk below.
+
+### Figure 3
+
+Code for Figure 3 goes in the chunk below.
+
+## Discussion and Conclusion
+
+## Resources
+
+Put your resources here.

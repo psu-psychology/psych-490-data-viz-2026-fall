@@ -3,8 +3,6 @@ title: "Work session: Making figures on your own"
 format: revealjs
 ---
 
-# Prelude
-
 # Overview
 
 ## Announcements

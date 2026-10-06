@@ -1,0 +1,111 @@
+---
+title: "psych-490-ex-04"
+author: "Rick Gilmore"
+date: today
+format: 
+  html:
+    embed-resources: true
+---
+
+## About
+
+This page documents Rick Gilmore's work related to completing Exercise 04 for PSYCH 490.007 in Fall 2026.
+
+The assignment involves choosing an existing dataset and making at least three (3) visualizations using the *ggplot2* package.
+For each figure, I am to write a short summary of the question I intend to ask with the figure, and how the visualization I generate answers or doesn't answer the question.
+If my figure doesn't clearly answer the question, then I should explain how the figure might be improved or clarified to do so.
+This critique could include a suggestion to use a different type of figure.
+
+## Setup
+
+```{r}
+#| label: setup
+library(ggplot2)
+library(nflreadr)
+```
+
+## Explore datasets
+
+```{r}
+data()
+```
+
+I chose to use the *schedules* dataset from the *nflreadr* package.
+
+## Load dataset
+
+```{r}
+nfl_scheds <- load_schedules() # nflreadr
+```
+
+Using `summary(nfl_scheds)`, I discover that the dataset has the following variables:
+
+```{r}
+summary(nfl_scheds)
+```
+
+### Make figures
+
+## Figure 1
+
+This figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.
+
+```{r}
+#| label: fig-ex-04-01
+nfl_scheds |>
+  ggplot() +
+  aes(x = home_score) +
+  geom_violin()
+```
+
+The violin shape is widest between 20 and about 25, indicating that scores in this range are the most common.
+
+I could confirm this with the following R code:
+
+```{r}
+with(nfl_scheds, summary(home_score))
+```
+
+Sure enough, the mean is 23.3 and the median 23.
+
+## Figure 2
+
+For Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.
+
+Here is the figure from Exercise 02:
+
+![Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg](https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg){#fig-ex-01}
+
+Here is the figure I made:
+
+```{r}
+#| label: fig-ex-04-02
+#| fig-cap: "Rengenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg"
+age <- seq(from=3, to = 18)
+mean_t <- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)
+sex = rep("male", length(age))
+
+activity <- data.frame(age, mean_t)
+
+activity |>
+  ggplot() +
+  aes(x = age, y = mean_t, color = sex) +
+  geom_line()
+```
+
+Note that I only show the male data.
+I had to enter the data by hand, and I got tired of that.
+You get the general idea.
+
+## Figure 3
+
+For Figure 3, I decided to plot...
+
+```{r}
+#| label: fig-ex-04-fig-03
+```
+
+## Discusion and Conclusion
+
+## Resources
+
