@@ -1,0 +1,50 @@
+---
+title: "PSYCH 490.007: Exercise 05"
+subtitle: "Tidy data"
+author: "Rick Gilmore"
+date: today
+format: 
+  html:
+    embed-resources: true
+---
+
+## About
+
+This page documents Rick Gilmore's work related to completing Exercise 05 for PSYCH 490.007 in Fall 2026.
+
+## Setup
+
+```{r}
+#| label: setup
+library(ggplot2)
+library(tidyverse)
+```
+
+## Import
+
+```{r}
+
+```
+
+## Clean
+
+## Make figures
+
+### Summarize
+
+### Figure 1
+
+```{r}
+#| label: fig-ex-05-01
+```
+
+## Figure 2
+
+```{r}
+#| label: fig-ex-05-02
+```
+
+## Discusion and Conclusion
+
+## Resources
+

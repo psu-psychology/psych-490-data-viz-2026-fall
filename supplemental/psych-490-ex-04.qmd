@@ -1,5 +1,6 @@
 ---
-title: "psych-490-ex-04"
+title: "PSYCH 490.007: Exercise 04"
+subtitle: "Making figures with *ggplot*"
 author: "Rick Gilmore"
 date: today
 format: 
@@ -44,9 +45,9 @@ Using `summary(nfl_scheds)`, I discover that the dataset has the following varia
 summary(nfl_scheds)
 ```
 
-### Make figures
+## Make figures
 
-## Figure 1
+### Figure 1
 
 This figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.
 
@@ -68,7 +69,7 @@ with(nfl_scheds, summary(home_score))
 
 Sure enough, the mean is 23.3 and the median 23.
 
-## Figure 2
+### Figure 2
 
 For Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.
 
@@ -80,7 +81,7 @@ Here is the figure I made:
 
 ```{r}
 #| label: fig-ex-04-02
-#| fig-cap: "Rengenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg"
+#| fig-cap: "Regenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg"
 age <- seq(from=3, to = 18)
 mean_t <- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)
 sex = rep("male", length(age))
@@ -97,7 +98,7 @@ Note that I only show the male data.
 I had to enter the data by hand, and I got tired of that.
 You get the general idea.
 
-## Figure 3
+### Figure 3
 
 For Figure 3, I decided to plot...
 

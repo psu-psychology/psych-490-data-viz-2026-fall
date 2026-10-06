@@ -1,0 +1,28 @@
+---
+title: "Exercise 05"
+subtitle: "Tidy data"
+format: html
+---
+
+::: {.callout-warning}
+This page is a under construction.
+:::
+
+## Dates {-}
+
+{{< fa calendar >}} *Due* Monday, October 26, 2026.
+
+## Goals {-}
+
+1. To learn how to download and clean a dataset in preparation for plotting.
+2. Learn why "tidy" (rectangular) data formats are important for analysis and visualization.
+
+## Assignment
+
+1. Download the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.
+2. Create a Quarto document and carry out the following actions within that document:
+    - Load the CSV file into R
+    - Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable)
+    - Create at least two visualizations using ggplot2
+    - Write a brief analysis of the results
+    

@@ -180,20 +180,26 @@
 
 ### Mon, Oct 05 {-}
 
-*Exploring data*
+*Work session: Making figures on your own I*
 
-- *Read*: 
-  - @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922548)
-- [Slides](404.qmd)
+- [Slides](slides/wk-07-2026-10-05-making-figs-I.qmd)
+
+<!-- - *Read*:  -->
+<!--   - @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922548) -->
+<!-- - [Slides](404.qmd) -->
 
 ### Wed, Oct 07 {-}
 
-*Communicating uncertainty and risk*  
+*Work session: Making figures on your own II*
 
-- *Read*: 
-  - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618)
-  - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829)
-- [Slides](404.qmd)
+- [Slides](slides/wk-07-2026-10-07-making-figs-II.qmd)
+
+<!-- *Communicating uncertainty and risk*   -->
+
+<!-- - *Read*:  -->
+<!--   - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618) -->
+<!--   - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829) -->
+<!-- - [Slides](404.qmd) -->
 
 ### Fri, Oct 09 {-}
 
@@ -221,7 +227,7 @@
   - @Knaflic2015-wq, pp. ix-33, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922725)
   - @Knaflic2015-wq, pp. 33-69, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922725)
 - *Skim*: @Woodside2008-yv, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922828)
-- [Assigned]{.green_assigned}: [Exercise-05](exercises/ex-05-tbd.qmd)
+- [Assigned]{.green_assigned}: [Exercise-05](exercises/ex-05-tidy-data.qmd)
 - [Slides](404.qmd)
 
 ### Fri, Oct 16 {-}
@@ -261,7 +267,7 @@
 
 *Tables in Base R*
 
-- {{< fa calendar >}} *Due* [Exercise-05](exercises/ex-05-tbd.qmd)
+- {{< fa calendar >}} *Due* [Exercise-05](exercises/ex-05-tidy-data.qmd)
 - [Slides](404.qmd)
 
 ### Wed, Oct 28 {-}

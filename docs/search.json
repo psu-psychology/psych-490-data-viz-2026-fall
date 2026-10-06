@@ -74,7 +74,7 @@
     "href": "schedule.html#week-07",
     "title": "Schedule",
     "section": "Week 07",
-    "text": "Week 07\n\nMon, Oct 05\nExploring data\n\nRead:\n\nTukey (1977), Chapter 1, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 07\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\n Due Exercise-04 |  Canvas dropbox |\nSlides",
+    "text": "Week 07\n\nMon, Oct 05\nWork session: Making figures on your own I\n\nSlides\n\n\n\n\n\n\nWed, Oct 07\nWork session: Making figures on your own II\n\nSlides\n\n\n\n\n\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\n Due Exercise-04 |  Canvas dropbox |\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -5851,71 +5851,337 @@
   {
     "objectID": "supplemental/psych-490-ex-04.html",
     "href": "supplemental/psych-490-ex-04.html",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "",
     "text": "This page documents Rick Gilmore’s work related to completing Exercise 04 for PSYCH 490.007 in Fall 2026.\nThe assignment involves choosing an existing dataset and making at least three (3) visualizations using the ggplot2 package. For each figure, I am to write a short summary of the question I intend to ask with the figure, and how the visualization I generate answers or doesn’t answer the question. If my figure doesn’t clearly answer the question, then I should explain how the figure might be improved or clarified to do so. This critique could include a suggestion to use a different type of figure."
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#about",
     "href": "supplemental/psych-490-ex-04.html#about",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "",
     "text": "This page documents Rick Gilmore’s work related to completing Exercise 04 for PSYCH 490.007 in Fall 2026.\nThe assignment involves choosing an existing dataset and making at least three (3) visualizations using the ggplot2 package. For each figure, I am to write a short summary of the question I intend to ask with the figure, and how the visualization I generate answers or doesn’t answer the question. If my figure doesn’t clearly answer the question, then I should explain how the figure might be improved or clarified to do so. This critique could include a suggestion to use a different type of figure."
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#setup",
     "href": "supplemental/psych-490-ex-04.html#setup",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Setup",
     "text": "Setup\n\n\nCode\nlibrary(ggplot2)\nlibrary(nflreadr)"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#explore-datasets",
     "href": "supplemental/psych-490-ex-04.html#explore-datasets",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Explore datasets",
     "text": "Explore datasets\n\n\nCode\ndata()\n\n\nI chose to use the schedules dataset from the nflreadr package."
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#load-dataset",
     "href": "supplemental/psych-490-ex-04.html#load-dataset",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Load dataset",
-    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.97   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :208                      NAs    :208                    \n     result           total           overtime          old_game_id  \n Min.   :-49.00   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.00   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.00   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.33   Mean   : 44.27   Mean   :0.06076   Min.nchar:  10  \n 3rd Qu.: 11.00   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.00   Max.   :106.00   Max.   :1.00000                   \n NAs    :208      NAs    :208      NAs    :208                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.885e+04   N.unique : 272   N.unique :7548   1st Qu.: 2143  \n Median :5.573e+04   N.blank  :   0   N.blank  :   0   Median : 3576  \n Mean   :3.167e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7770  \n 3rd Qu.:5.809e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.: 9592  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30653  \n NAs    :208                                           NAs    :2936   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds\n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.0  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.0  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.0  \n Mean   :   78.91   Mean   : -129.5   Mean   :  2.244   Mean   : -59.1  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.0  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.0  \n NAs    :2174       NAs    :2174      NAs    :193       NAs    :2174    \n home_spread_odds    total_line      under_odds        over_odds      \n Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.00   1st Qu.:40.00   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.65   Mean   :43.57   Mean   : -73.59   Mean   : -82.07  \n 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2174      NAs    :193     NAs    :2177      NAs    :2177     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  44   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  34                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 193   NAs      : 193   NAs      : 193  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 193                                     NAs      : 209  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35  \n                                  \n                                  \n\n\n\nMake figures"
+    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.97   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :208                      NAs    :208                    \n     result           total           overtime          old_game_id  \n Min.   :-49.00   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.00   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.00   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.33   Mean   : 44.27   Mean   :0.06076   Min.nchar:  10  \n 3rd Qu.: 11.00   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.00   Max.   :106.00   Max.   :1.00000                   \n NAs    :208      NAs    :208      NAs    :208                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.885e+04   N.unique : 272   N.unique :7548   1st Qu.: 2143  \n Median :5.573e+04   N.blank  :   0   N.blank  :   0   Median : 3576  \n Mean   :3.167e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7770  \n 3rd Qu.:5.809e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.: 9592  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30653  \n NAs    :208                                           NAs    :2936   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds\n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.0  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.0  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.0  \n Mean   :   78.91   Mean   : -129.5   Mean   :  2.244   Mean   : -59.1  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.0  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.0  \n NAs    :2174       NAs    :2174      NAs    :193       NAs    :2174    \n home_spread_odds    total_line      under_odds        over_odds      \n Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.00   1st Qu.:40.00   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.65   Mean   :43.57   Mean   : -73.59   Mean   : -82.07  \n 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2174      NAs    :193     NAs    :2177      NAs    :2177     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  44   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  34                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 193   NAs      : 193   NAs      : 193  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 193                                     NAs      : 209  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#figure-1",
     "href": "supplemental/psych-490-ex-04.html#figure-1",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Figure 1",
-    "text": "Figure 1\nThis figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.\n\n\nCode\nnfl_scheds |&gt;\n  ggplot() +\n  aes(x = home_score) +\n  geom_violin()\n\n\nWarning: Removed 208 rows containing non-finite outside the scale range\n(`stat_ydensity()`).\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\nThe violin shape is widest between 20 and about 25, indicating that scores in this range are the most common."
+    "text": "Figure 1\nThis figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.\n\n\nCode\nnfl_scheds |&gt;\n  ggplot() +\n  aes(x = home_score) +\n  geom_violin()\n\n\nWarning: Removed 208 rows containing non-finite outside the scale range\n(`stat_ydensity()`).\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\nThe violin shape is widest between 20 and about 25, indicating that scores in this range are the most common.\nI could confirm this with the following R code:\n\n\nCode\nwith(nfl_scheds, summary(home_score))\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs \n    0.0    16.0    23.0    23.3    30.0    70.0     208 \n\n\nSure enough, the mean is 23.3 and the median 23."
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#figure-2",
     "href": "supplemental/psych-490-ex-04.html#figure-2",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Figure 2",
-    "text": "Figure 2\nFor Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.\nHere is the figure from Exercise 02:\n\n\n\n\n\n\nFigure 2: Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\nHere is the figure I made:\n\n\nCode\nage &lt;- seq(from=3, to = 18)\nmean_t &lt;- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)\nsex = rep(\"male\", length(age))\n\nactivity &lt;- data.frame(age, mean_t)\n\nactivity |&gt;\n  ggplot() +\n  aes(x = age, y = mean_t, color = sex) +\n  geom_line()\n\n\n\n\n\n\n\n\nFigure 3: Rengenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\n\n\nNote that I only show the male data."
+    "text": "Figure 2\nFor Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.\nHere is the figure from Exercise 02:\n\n\n\n\n\n\nFigure 2: Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\nHere is the figure I made:\n\n\nCode\nage &lt;- seq(from=3, to = 18)\nmean_t &lt;- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)\nsex = rep(\"male\", length(age))\n\nactivity &lt;- data.frame(age, mean_t)\n\nactivity |&gt;\n  ggplot() +\n  aes(x = age, y = mean_t, color = sex) +\n  geom_line()\n\n\n\n\n\n\n\n\nFigure 3: Regenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\n\n\nNote that I only show the male data. I had to enter the data by hand, and I got tired of that. You get the general idea."
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#figure-3",
     "href": "supplemental/psych-490-ex-04.html#figure-3",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Figure 3",
     "text": "Figure 3\nFor Figure 3, I decided to plot…"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#discusion-and-conclusion",
     "href": "supplemental/psych-490-ex-04.html#discusion-and-conclusion",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Discusion and Conclusion",
     "text": "Discusion and Conclusion"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#resources",
     "href": "supplemental/psych-490-ex-04.html#resources",
-    "title": "psych-490-ex-04",
+    "title": "PSYCH 490.007: Exercise 04",
     "section": "Resources",
     "text": "Resources"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-04.html#make-figures",
+    "href": "supplemental/psych-490-ex-04.html#make-figures",
+    "title": "PSYCH 490.007: Exercise 04",
+    "section": "Make figures",
+    "text": "Make figures\n\nFigure 1\nThis figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.\n\n\nCode\nnfl_scheds |&gt;\n  ggplot() +\n  aes(x = home_score) +\n  geom_violin()\n\n\nWarning: Removed 208 rows containing non-finite outside the scale range\n(`stat_ydensity()`).\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\nThe violin shape is widest between 20 and about 25, indicating that scores in this range are the most common.\nI could confirm this with the following R code:\n\n\nCode\nwith(nfl_scheds, summary(home_score))\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs \n    0.0    16.0    23.0    23.3    30.0    70.0     208 \n\n\nSure enough, the mean is 23.3 and the median 23.\n\n\nFigure 2\nFor Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.\nHere is the figure from Exercise 02:\n\n\n\n\n\n\nFigure 2: Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\nHere is the figure I made:\n\n\nCode\nage &lt;- seq(from=3, to = 18)\nmean_t &lt;- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)\nsex = rep(\"male\", length(age))\n\nactivity &lt;- data.frame(age, mean_t)\n\nactivity |&gt;\n  ggplot() +\n  aes(x = age, y = mean_t, color = sex) +\n  geom_line()\n\n\n\n\n\n\n\n\nFigure 3: Regenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\n\n\nNote that I only show the male data. I had to enter the data by hand, and I got tired of that. You get the general idea.\n\n\nFigure 3\nFor Figure 3, I decided to plot…"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#announcements",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#announcements",
+    "title": "Work session: Making figures on your own II",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise 04 due this Friday",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#last-time",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#last-time",
+    "title": "Work session: Making figures on your own II",
+    "section": "Last time…",
+    "text": "Last time…\n\nWork session: Making figures on your own I",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#today",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#today",
+    "title": "Work session: Making figures on your own II",
+    "section": "Today",
+    "text": "Today\n\nWork session: Making figures on your own II\n\nPreparation for Exercise 04",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#workflow-best-practices",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#workflow-best-practices",
+    "title": "Work session: Making figures on your own II",
+    "section": "Workflow best practices",
+    "text": "Workflow best practices\n\nMake a new RStudio project\nOpen a new Quarto document\nModify header info in document\nAdd headers to body of document",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#example",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#example",
+    "title": "Work session: Making figures on your own II",
+    "section": "Example",
+    "text": "Example\n---\ntitle: \"My report\"\nauthor: \"Rick Gilmore\"\ndate: today\nformat: \n  html:\n    embed-resources: true\n---\n\n## About\n\nThis page documents...\n\n## Setup\n\n```{r}\n\n```\n\n## Section header\n\n### Section subheader\n\n## Resources",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#section",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#section",
+    "title": "Work session: Making figures on your own II",
+    "section": "",
+    "text": "Figure numbering is optional, but easy and useful\n\n\nNote that the code chunk on the previous page added #| label: fig-mtcars-wt-violin before the actual code. The #| tells Quarto that these are parameters for this particular R code chunk. So, by saying #| label: we give the output figure from this chunk a unique name. Doing so tells Quarto to add a figure number automatically.\nThe main benefit is that you can now write @fig-mtcars-wt-violin in your text, and Quarto will create a link to the figure.\nHere’s what I mean:\nIn the previous slide, we made a violin plot of the mtcars wt variable (Figure 1).\nSlick, eh?",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\nPut code in code chunks in your Quarto document\n\nSave file & render\nInspect HTML output\n\nOK to test short commands in R console, but…\nQuarto doc shows your work\n\nSpace to take notes, make observations",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-1",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-1",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\nImport dataset into R session (if needed)\n\ne.g., library(ggplot2) for diamonds,\nnfl_scheds &lt;- nflreadr::load_schedules() for the NFL schedule data\nPut import code in an R chunk",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\nRun summary() using the unquoted name of the dataset\n\ne.g., summary(diamonds) or summary(nfl_scheds)\nThe summary can be part of the import chunk or in a separate chunk",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#section-1",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#section-1",
+    "title": "Work session: Making figures on your own II",
+    "section": "",
+    "text": "## Figure 1\n\nIn @fig-01, I will plot the &lt;variable&gt; from the &lt;dataset&gt; dataset.\nThe variable is continuous, so I will use a &lt;plot_type&gt; that should show me...\n\n```{r}\n#| label: fig-01\ndataset |&gt;\n  ggplot() +\n  aes(x = variable) +\n  \n```\n\n\nI’m trying very hard not to do your work on Exercise 04 for you here, so I won’t give you code that you might be tempted to just copy and paste."
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#render-figure-1",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#render-figure-1",
+    "title": "Work session: Making figures on your own II",
+    "section": "Render Figure 1",
+    "text": "Render Figure 1\n\nSave and render your Quarto document\nKalvin and I will check in with you\nIf you successfully created Figure 1, then provide some brief commentary about it"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#section-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#section-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "",
+    "text": "In @fig-01, I will plot the &lt;variable&gt; from the &lt;dataset&gt; dataset.\nThe variable is continuous, so I will use a &lt;plot_type&gt; that should show me...\n\n```{r}\n#| label: fig-01\ndataset |&gt;\n  ggplot() +\n  aes(x = variable) +\n  \n```\n\n@fig-01 shows that the variable is...\nThe figure could be more effective if..."
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#references",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#references",
+    "title": "Work session: Making figures on your own II",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-3",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-3",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\n\n\nWhen in doubt, ask R to tell you if it “knows” the dataset\nGive R the unquoted name of the dataset1\n\n\n```{r}\nmtcars\n```\n\n\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#footnotes",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#footnotes",
+    "title": "Work session: Making figures on your own II",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nYou can also try this in the R console.\nSet crossrefs-hover: true in the YAML header under the html: or revealjs: sections.\nYou could ask an AI to do the work for you, but what have you learned?",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-4",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-4",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\n\n\nMake a separate chunk for each figure\n\n\n```{r}\n#| label: fig-my-figure-01\n\n# R code goes here...\n```",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-5",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-5",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\n\n\nEach ggplot figure requires the following components at minimum:\n\nDataset, e.g. ggplot(data = ...) +\nAesthetic mapping(s): aes(x = ...) +\n\n\n\n```{r}\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-6",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-6",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\n\n\nEach ggplot figure requires the following components at minimum:\n\nA geom_, e.g., geom_histogram() or geom_violin()\n\n\n\n```{r}\n#| label: fig-mtcars-wt-violin\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#figure-captions",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#figure-captions",
+    "title": "Work session: Making figures on your own II",
+    "section": "Figure captions",
+    "text": "Figure captions\n\n\n\nLike figure numbering, figure captions are easy & extremely useful\nAdd #| fig-cap: \"My figure caption\" with your caption text below\nPut it below the figure label and name, but above your actual code\n\n\n```{r}\n#| label: fig-mtcars-wt-boxplot\n#| fig-cap: \"A boxplot of the wt variable from the mtcars dataset.\"\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_boxplot()\n```\n\n\n\n\n\n\n\n\n\nFigure 2: A boxplot of the wt variable from the mtcars dataset. Click to see larger image.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#figure-numbers-captions",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#figure-numbers-captions",
+    "title": "Work session: Making figures on your own II",
+    "section": "Figure numbers & captions",
+    "text": "Figure numbers & captions\n\nFigure 1 shows a violin plot of the wt variable.\nFigure 2 shows a boxplot of this variable.\n\n\n\n\n\n\n\nHover-able & clickable figure links\n\n\nYou may hover2 over any of the named figure links above to see a preview. Clicking takes you to the original page."
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#main-points",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#main-points",
+    "title": "Work session: Making figures on your own II",
+    "section": "Main points",
+    "text": "Main points\n\nUse these best practices for Exercise 04\nWork slowly and deliberately\nSave your Quarto document & render it often\nIgnore figure naming/numbering & captions unless you’re feeling confident",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-7",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-7",
+    "title": "Work session: Making figures on your own II",
+    "section": "Best practices",
+    "text": "Best practices\n\n\n\nThe aesthetic(s) get “added” to the plot with the plus (+) character\nSo does the geom_\n\n\n```{r}\n#| label: fig-mtcars-wt-violin\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```\n\n\n\n\n\n\n\n\n\nFigure 1",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#some-bells-whistles",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#some-bells-whistles",
+    "title": "Work session: Making figures on your own II",
+    "section": "Some bells & whistles",
+    "text": "Some bells & whistles\n\n\n\ngiphy.com",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#combining-figure-numbers-captions",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#combining-figure-numbers-captions",
+    "title": "Work session: Making figures on your own II",
+    "section": "Combining figure numbers & captions",
+    "text": "Combining figure numbers & captions\n\nFigure 1 shows a violin plot of the wt variable.\nFigure 2 shows a boxplot of this variable.\n\n\n\n\n\n\n\nHover-able & clickable figure links\n\n\nYou may hover2 over any of the named figure links above to see a preview. Clicking takes you to the original page.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#why-should-i-care",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#why-should-i-care",
+    "title": "Work session: Making figures on your own II",
+    "section": "Why should I care?",
+    "text": "Why should I care?\n\n\n\nSkills &gt;&gt; knowledge3\nSkill-building takes time & effort\nScripted figures easier to build upon & reproduce\nQuarto document makes it easy to show your work",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
   }
 ]

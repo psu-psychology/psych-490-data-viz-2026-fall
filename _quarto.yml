@@ -52,13 +52,17 @@ website:
         href: slides/wk-06-2026-09-30-cognition-to-understanding.qmd
       - text: "Wk 06 • Fri Oct 02"
         href: slides/wk-06-2026-10-02-work-session.qmd
+      - text: "Wk 07 • Mon Oct 05"
+        href: slides/wk-07-2026-10-05-making-figs-I.qmd
+      - text: "Wk 07 • Wed Oct 07"
+        href: slides/wk-07-2026-10-07-making-figs-II.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd
         - exercises/ex-02-data-viz-outside-psych.qmd
         - exercises/ex-03-making-data.qmd
         - exercises/ex-04-making-figs-ggplot.qmd
-        - exercises/ex-05-tbd.qmd
+        - exercises/ex-05-ex-05-tidy-data.qmd
         - exercises/ex-06-tbd.qmd
         - exercises/final-project.qmd
     - section: Tutorials
