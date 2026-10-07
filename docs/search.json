@@ -5963,7 +5963,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#workflow-best-practices",
     "title": "Work session: Making figures on your own II",
     "section": "Workflow best practices",
-    "text": "Workflow best practices\n\nMake a new RStudio project\nOpen a new Quarto document\nModify header info in document\nAdd headers to body of document",
+    "text": "Workflow best practices\n\nMake a new RStudio project\nOpen a new Quarto document (see Figure 2)\nModify header info in document\nAdd headers to body of document",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -5985,7 +5985,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#section",
     "title": "Work session: Making figures on your own II",
     "section": "",
-    "text": "Figure numbering is optional, but easy and useful\n\n\nNote that the code chunk on the previous page added #| label: fig-mtcars-wt-violin before the actual code. The #| tells Quarto that these are parameters for this particular R code chunk. So, by saying #| label: we give the output figure from this chunk a unique name. Doing so tells Quarto to add a figure number automatically.\nThe main benefit is that you can now write @fig-mtcars-wt-violin in your text, and Quarto will create a link to the figure.\nHere’s what I mean:\nIn the previous slide, we made a violin plot of the mtcars wt variable (Figure 1).\nSlick, eh?",
+    "text": "Figure numbering is optional, but easy and useful\n\n\nNote that the code chunk on the previous page added #| label: fig-mtcars-wt-violin before the actual code. The #| tells Quarto that these are parameters for this particular R code chunk. So, by saying #| label: we give the output figure from this chunk a unique name. Doing so tells Quarto to add a figure number automatically.\nThe main benefit is that you can now write @fig-mtcars-wt-violin in your text, and Quarto will create a link to the figure.\nHere’s what I mean:\nIn the previous slide, we made a violin plot of the mtcars wt variable (Figure 6).\nSlick, eh?",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -5996,7 +5996,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices",
     "title": "Work session: Making figures on your own II",
     "section": "Best practices",
-    "text": "Best practices\n\nPut code in code chunks in your Quarto document\n\nSave file & render\nInspect HTML output\n\nOK to test short commands in R console, but…\nQuarto doc shows your work\n\nSpace to take notes, make observations",
+    "text": "Best practices\n\nPut code in code chunks in your Quarto document\n\nSave file & render\nInspect HTML output\n\nOK to test short commands in R console (Figure 3), but…\nQuarto doc shows your work\n\nSpace to take notes, make observations",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -6007,7 +6007,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-1",
     "title": "Work session: Making figures on your own II",
     "section": "Best practices",
-    "text": "Best practices\n\nImport dataset into R session (if needed)\n\ne.g., library(ggplot2) for diamonds,\nnfl_scheds &lt;- nflreadr::load_schedules() for the NFL schedule data\nPut import code in an R chunk",
+    "text": "Best practices\n\nImport dataset into R session (if needed)\n\ne.g., library(ggplot2) for diamonds,\nnfl_scheds &lt;- nflreadr::load_schedules() for the NFL schedule data\n\nPut import code in an R chunk below a subsection called Import data or something similar",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -6094,7 +6094,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-5",
     "title": "Work session: Making figures on your own II",
     "section": "Best practices",
-    "text": "Best practices\n\n\n\nEach ggplot figure requires the following components at minimum:\n\nDataset, e.g. ggplot(data = ...) +\nAesthetic mapping(s): aes(x = ...) +\n\n\n\n```{r}\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```",
+    "text": "Best practices\n\n\n\nEach ggplot figure requires the following components at minimum:\n\nDataset, e.g. ggplot(data = ...) +\nAesthetic mapping(s): aes(x = ...) +\n\n\n\n```{r}\n#| label: fig-mtcars-wt-violin\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -6116,7 +6116,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#figure-captions",
     "title": "Work session: Making figures on your own II",
     "section": "Figure captions",
-    "text": "Figure captions\n\n\n\nLike figure numbering, figure captions are easy & extremely useful\nAdd #| fig-cap: \"My figure caption\" with your caption text below\nPut it below the figure label and name, but above your actual code\n\n\n```{r}\n#| label: fig-mtcars-wt-boxplot\n#| fig-cap: \"A boxplot of the wt variable from the mtcars dataset.\"\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_boxplot()\n```\n\n\n\n\n\n\n\n\n\nFigure 2: A boxplot of the wt variable from the mtcars dataset. Click to see larger image.",
+    "text": "Figure captions\n\n\n\nLike figure numbering, figure captions are easy & extremely useful\nAdd #| fig-cap: \"My figure caption\" with your caption text below\nPut it below the figure label and name, but above your actual code\n\n\n```{r}\n#| label: fig-mtcars-wt-boxplot\n#| fig-cap: \"A boxplot of the wt variable from the mtcars dataset.\"\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_boxplot()\n```\n\n\n\n\n\n\n\n\n\nFigure 7: A boxplot of the wt variable from the mtcars dataset. Click to see larger image.",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -6145,7 +6145,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#best-practices-7",
     "title": "Work session: Making figures on your own II",
     "section": "Best practices",
-    "text": "Best practices\n\n\n\nThe aesthetic(s) get “added” to the plot with the plus (+) character\nSo does the geom_\n\n\n```{r}\n#| label: fig-mtcars-wt-violin\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```\n\n\n\n\n\n\n\n\n\nFigure 1",
+    "text": "Best practices\n\n\n\nThe aesthetic(s) get “added” to the plot with the plus (+) character\nSo does the geom_\n\n\n```{r}\n#| label: fig-mtcars-wt-violin\nggplot(data = mtcars) +\n  aes(x = wt) +\n  geom_violin()\n```\n\n\n\n\n\n\n\n\n\nFigure 6",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -6167,7 +6167,7 @@
     "href": "slides/wk-07-2026-10-07-making-figs-II.html#combining-figure-numbers-captions",
     "title": "Work session: Making figures on your own II",
     "section": "Combining figure numbers & captions",
-    "text": "Combining figure numbers & captions\n\nFigure 1 shows a violin plot of the wt variable.\nFigure 2 shows a boxplot of this variable.\n\n\n\n\n\n\n\nHover-able & clickable figure links\n\n\nYou may hover2 over any of the named figure links above to see a preview. Clicking takes you to the original page.",
+    "text": "Combining figure numbers & captions\n\nFigure 6 shows a violin plot of the wt variable.\nFigure 7 shows a boxplot of this variable.\n\n\n\n\n\n\n\nHover-able & clickable figure links\n\n\nYou may hover2 over any of the named figure links above to see a preview. Clicking takes you to the original page.",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
@@ -6179,6 +6179,193 @@
     "title": "Work session: Making figures on your own II",
     "section": "Why should I care?",
     "text": "Why should I care?\n\n\n\nSkills &gt;&gt; knowledge3\nSkill-building takes time & effort\nScripted figures easier to build upon & reproduce\nQuarto document makes it easy to show your work",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#using-rstudio",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#using-rstudio",
+    "title": "Work session: Making figures on your own II",
+    "section": "Using RStudio",
+    "text": "Using RStudio\n\n\n\n\n\n\nFigure 1",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#source-pane",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#source-pane",
+    "title": "Work session: Making figures on your own II",
+    "section": "Source pane",
+    "text": "Source pane\n\n\n\n\n\n\nFigure 2: RStudio source pane.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#console-pane",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#console-pane",
+    "title": "Work session: Making figures on your own II",
+    "section": "Console pane",
+    "text": "Console pane\n\n\n\n\n\n\nFigure 3: RStudio console pane.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#environment-pane",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#environment-pane",
+    "title": "Work session: Making figures on your own II",
+    "section": "Environment pane",
+    "text": "Environment pane\n\n\n\n\n\n\nFigure 4: RStudio environment pane.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#files-pane",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#files-pane",
+    "title": "Work session: Making figures on your own II",
+    "section": "Files pane",
+    "text": "Files pane\n\n\n\n\n\n\nFigure 5: RStudio files pane.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#source-pane-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#source-pane-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "Source pane 2",
+    "text": "Source pane 2\n\n\n\n\n\nEdit Quarto document here",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#console-pane-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#console-pane-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "Console pane 2",
+    "text": "Console pane 2\n\n\n\n\n\nTest R code here\nAsk for help: help(ggplot2)",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#environment-pane-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#environment-pane-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "Environment pane 2",
+    "text": "Environment pane 2\n\n\n\n\n\nAny variables you create in the R console should appear here.\nThat includes datasets you’ve named.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#files-pane-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#files-pane-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "Files pane 2",
+    "text": "Files pane 2\n\n\n\n\n\nFiles you’ve saved should appear here.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#add-color",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#add-color",
+    "title": "Work session: Making figures on your own II",
+    "section": "Add color",
+    "text": "Add color\n\nIf you’re tired of gray bars and black points, try the fill or color aesthetics.\ngeom_histogram(bins = 30, color = \"red\") makes all bar outlines red.\n\n\n\nCode\nrx &lt;- rnorm(100)\ndf &lt;- data.frame(rx)\nggplot(df) +\n  aes(x = rx) +\n  geom_histogram(bins = 30, color = \"red\")",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-2",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-2",
+    "title": "Work session: Making figures on your own II",
+    "section": "Add color 2",
+    "text": "Add color 2\n\ngeom_histogram(bins = 30, fill = \"blue\") fills the bars with blue.\n\n\n\nCode\nrx &lt;- rnorm(100)\ndf &lt;- data.frame(rx)\nggplot(df) +\n  aes(x = rx) +\n  geom_histogram(bins = 30, fill = \"blue\")",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-3",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-3",
+    "title": "Work session: Making figures on your own II",
+    "section": "Add color 3",
+    "text": "Add color 3\n\nYou can map a discrete (nominal or ordinal) variable to color.\n\n\n\nCode\nrx &lt;- rnorm(100)\nmy_colors &lt;- rep(c(\"color_1\", \"color_2\"), each = 50)\ndf &lt;- data.frame(rx, my_colors)\nggplot(df) +\n  aes(x = rx, fill = my_colors) +\n  geom_histogram(bins = 30)",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-2-output",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-2-output",
+    "title": "Work session: Making figures on your own II",
+    "section": "Add color 2",
+    "text": "Add color 2",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-output",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-output",
+    "title": "Work session: Making figures on your own II",
+    "section": "Add color",
+    "text": "Add color",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-3-output",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#add-color-3-output",
+    "title": "Work session: Making figures on your own II",
+    "section": "Add color 3",
+    "text": "Add color 3",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#change-the-axis-labels",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#change-the-axis-labels",
+    "title": "Work session: Making figures on your own II",
+    "section": "Change the axis labels",
+    "text": "Change the axis labels\n\nUsing the xlab() and ylab() functions, you can customize the axis labels.\nYou need to “add” these annotations to your plot using the plus (+) syntax.\n\n\n\nCode\nrx &lt;- rnorm(100)\nmy_colors &lt;- rep(c(\"color_1\", \"color_2\"), each = 50)\ndf &lt;- data.frame(rx, my_colors)\nggplot(df) +\n  aes(x = rx, fill = my_colors) +\n  geom_histogram(bins = 30) +\n  xlab(\"random number\") +\n  ylab(\"observed count\")",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-07-making-figs-II.html#change-the-axis-labels-output",
+    "href": "slides/wk-07-2026-10-07-making-figs-II.html#change-the-axis-labels-output",
+    "title": "Work session: Making figures on your own II",
+    "section": "Change the axis labels",
+    "text": "Change the axis labels",
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"

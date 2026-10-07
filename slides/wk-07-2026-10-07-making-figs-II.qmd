@@ -22,11 +22,77 @@ format:
   
 # Making figures on your own II
 
+## Using RStudio
+
+![](../include/img/rstudio-all-panes.png){#fig-rstudio-all-panes}
+
+## Source pane
+
+![RStudio source pane.](../include/img/rstudio-source.png){#fig-rstudio-source width="75%"}
+
+## Source pane 2
+
+:::: {.columns}
+::: {.column width=60%}
+![](../include/img/rstudio-source.png)
+:::
+::: {.column width=40%}
+- Edit Quarto document here
+:::
+::::
+
+## Console pane
+
+![RStudio console pane.](../include/img/rstudio-r-console.png){#fig-rstudio-r-console}
+
+## Console pane 2
+
+:::: {.columns}
+::: {.column width=60%}
+![](../include/img/rstudio-r-console.png)
+:::
+::: {.column width=40%}
+- Test R code here
+- Ask for help: `help(ggplot2)`
+:::
+::::
+
+## Environment pane
+
+![RStudio environment pane.](../include/img/rstudio-environment.png){#fig-rstudio-environment}
+
+## Environment pane 2
+
+:::: {.columns}
+::: {.column width=60%}
+![](../include/img/rstudio-environment.png)
+:::
+::: {.column width=40%}
+- Any variables you create in the R console should appear here.
+- That includes datasets you've named.
+:::
+::::
+
+## Files pane
+
+![RStudio files pane.](../include/img/rstudio-files.png){#fig-rstudio-files width="65%" fig-align="center"}
+
+## Files pane 2
+
+:::: {.columns}
+::: {.column width=60%}
+![](../include/img/rstudio-files.png)
+:::
+::: {.column width=40%}
+- Files you've saved should appear here.
+:::
+::::
+
 ## Workflow best practices
 
 1. Make a new RStudio project
-2. Open a new Quarto document
-3. Modify *header info* in document
+2. Open a new Quarto document (see @fig-rstudio-source)
+3. Modify *header info* in document 
 4. Add headers to *body* of document
 
 ## Example {.scrollable}
@@ -64,7 +130,7 @@ This page documents...
 - Put code in code chunks in your Quarto document
   - Save file & render
   - Inspect HTML output
-- OK to test short commands in R console, but...
+- OK to test short commands in R console (@fig-rstudio-r-console), but...
 - Quarto doc shows your work
   - Space to take notes, make observations
 
@@ -73,7 +139,7 @@ This page documents...
 - Import dataset into R session (if needed)
   - e.g., `library(ggplot2)` for *diamonds*,
   - `nfl_scheds <- nflreadr::load_schedules()` for the NFL schedule data
-  - Put import code in an R chunk
+- Put import code in an R chunk below a subsection called `Import data` or something similar
   
 ## Best practices
 
@@ -139,6 +205,7 @@ library(ggplot2)
 :::
 ::: {.column width=50%}
 ```{{r}}
+#| label: fig-mtcars-wt-violin
 ggplot(data = mtcars) +
   aes(x = wt) +
   geom_violin()
@@ -261,6 +328,69 @@ ggplot(data = mtcars) +
 You may hover^[Set `crossrefs-hover: true` in the YAML header under the `html:` or `revealjs:` sections.] over any of the named figure links above to see a preview.
 Clicking takes you to the original page.
 :::
+
+## Add color
+
+- If you're tired of gray bars and black points, try the `fill` or `color` aesthetics.
+
+- `geom_histogram(bins = 30, color = "red")` makes all bar outlines red.
+  
+```{r}
+#| echo: true
+#| output-location: slide
+rx <- rnorm(100)
+df <- data.frame(rx)
+ggplot(df) +
+  aes(x = rx) +
+  geom_histogram(bins = 30, color = "red")
+```
+
+## Add color 2
+
+- `geom_histogram(bins = 30, fill = "blue")` *fills* the bars with blue.
+
+```{r}
+#| echo: true
+#| output-location: slide
+rx <- rnorm(100)
+df <- data.frame(rx)
+ggplot(df) +
+  aes(x = rx) +
+  geom_histogram(bins = 30, fill = "blue")
+```
+
+## Add color 3
+
+- You can map a discrete (nominal or ordinal) variable to color.
+
+```{r}
+#| echo: true
+#| output-location: slide
+rx <- rnorm(100)
+my_colors <- rep(c("color_1", "color_2"), each = 50)
+df <- data.frame(rx, my_colors)
+ggplot(df) +
+  aes(x = rx, fill = my_colors) +
+  geom_histogram(bins = 30)
+```
+
+## Change the axis labels
+
+- Using the `xlab()` and `ylab()` functions, you can customize the axis labels.
+- You need to "add" these annotations to your plot using the plus (`+`) syntax.
+
+```{r}
+#| echo: true
+#| output-location: slide
+rx <- rnorm(100)
+my_colors <- rep(c("color_1", "color_2"), each = 50)
+df <- data.frame(rx, my_colors)
+ggplot(df) +
+  aes(x = rx, fill = my_colors) +
+  geom_histogram(bins = 30) +
+  xlab("random number") +
+  ylab("observed count")
+```
 
 # Wrap-up
 
