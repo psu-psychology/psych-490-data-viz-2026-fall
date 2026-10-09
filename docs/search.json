@@ -74,7 +74,7 @@
     "href": "schedule.html#week-07",
     "title": "Schedule",
     "section": "Week 07",
-    "text": "Week 07\n\nMon, Oct 05\nWork session: Making figures on your own I\n\nSlides\n\n\n\n\n\n\nWed, Oct 07\nWork session: Making figures on your own II\n\nSlides\n\n\n\n\n\n\n\n\nFri, Oct 09\nWork Session: More sports data viz\n\n Due Exercise-04 |  Canvas dropbox |\nSlides",
+    "text": "Week 07\n\nMon, Oct 05\nWork session: Making figures on your own I\n\nSlides\n\n\n\n\n\n\nWed, Oct 07\nWork session: Making figures on your own II\n\nSlides\n\n\n\n\n\n\n\n\nFri, Oct 09\nWork Session\n\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -84,7 +84,7 @@
     "href": "schedule.html#week-08",
     "title": "Schedule",
     "section": "Week 08",
-    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: TidyTuesday or Exercise 05\n\n Due Final Project proposal |  Canvas dropbox\nSlides",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: Making data tidy\n\n Due Exercise-04 |  Canvas dropbox |\n Due Final Project proposal |  Canvas dropbox\nAssigned Exercise-05\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -94,7 +94,7 @@
     "href": "schedule.html#week-09",
     "title": "Schedule",
     "section": "Week 09",
-    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 15, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 21\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday II\n\nSlides",
+    "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 15, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 21\n\nSlides\n\n\n\nFri, Oct 23\nWork Session: TidyTuesday\n\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -104,7 +104,7 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\n Due Exercise-05\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session: Tables\n\nSlides",
+    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\n Due Exercise-05 |  Canvas dropbox\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session: Tables\n\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -6369,6 +6369,435 @@
     "crumbs": [
       "Slides",
       "Wk 07 • Wed Oct 07"
+    ]
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#setup",
+    "href": "supplemental/student-generated-surveys.html#setup",
+    "title": "Student-generated surveys",
+    "section": "Setup",
+    "text": "Setup\nBring some required packages into the local environment.\n\n\nCode\nlibrary(readr)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#import-data",
+    "href": "supplemental/student-generated-surveys.html#import-data",
+    "title": "Student-generated surveys",
+    "section": "Import data",
+    "text": "Import data\nDr. Gilmore created a Google sheet to keep track of the data.\n\n\n\n\n\n\nNoteManual vs. automatic downloading\n\n\n\nTypically, Dr. Gilmore would download the data using code. Here he manually downloaded the file and saved it as a CSV under private/csv.\nThis avoids issues related to Google authentication, but requires an additional manual step.\n\n\nWe read the data file into a data frame.\n\n\nCode\nsurveys_df &lt;- readr::read_csv(\"../private/csv/psych-490.007-2026-fall-surveys - Sheet1.csv\", show_col_types = FALSE)",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#summarize",
+    "href": "supplemental/student-generated-surveys.html#summarize",
+    "title": "Student-generated surveys",
+    "section": "Summarize",
+    "text": "Summarize\n\n\nCode\nsummary(surveys_df)\n\n\n      student   canvas_submission      edit_url     response_url\n Length   :22   Length   :22      Length   :22   Length   : 22  \n N.unique :22   N.unique : 2      N.unique : 6   N.unique : 11  \n N.blank  : 0   N.blank  : 0      N.blank  : 0   N.blank  :  0  \n Min.nchar: 2   Min.nchar: 2      Min.nchar:81   Min.nchar: 35  \n Max.nchar: 9   Max.nchar: 3      Max.nchar:87   Max.nchar:138  \n                NAs      : 2      NAs      :14   NAs      :  9  \n\n\nThere were n=22 submissions.\nN=14 submissions did not include an edit link. Check below to see if you provided that link.\nN=8 students submitted write-ups to Canvas but did not send the edit link to the survey to Dr. Gilmore.",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#response-links",
+    "href": "supplemental/student-generated-surveys.html#response-links",
+    "title": "Student-generated surveys",
+    "section": "Response links",
+    "text": "Response links\n\nhttps://docs.google.com/forms/d/e/1FAIpQLScEPYMvkxo0uzPpoZX8td6YK_o8SDF3DUEk9HjDuumz7TwjqA/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSchjfdesQO0MZAEmvXN6PFjMygqTq1CYoPbrqxpremu0eSiEg/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSenJkME-9uqZQ_cvYVTWoN8A-C28AjclhwcqHGb2LfrrtwO4Q/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSeUzR6ZAm1WerhBsQ3jvXz3tlhwlhmv8J8zXs1moRHhXmOSNA/viewform?usp=header\n\nhttps://forms.gle/y1uaGFb7UNwCMqQG8\n\nhttps://forms.gle/7tPhrJzXBkV4mFLY6\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdBEhfRtzsiXRIHsjaY3UdC458CEOECBdmVBticFojvv5tPSA/viewform?usp=publish-editor\n\n\n\n\n\n\nWarningWhose are these?\n\n\n\nIf either of the following is your survey, please let me know. Thanks.\nhttps://docs.google.com/forms/d/e/1FAIpQLSc0abLWdSnOlPuKtPlTrKSaEg7UJ-ECaNmBryOzd5YpHbuIxg/viewform?usp=header\nhttps://docs.google.com/forms/d/e/1FAIpQLSeTsk43BIe7UCx3vQBE1gvFUt0bwP7goP7nnD2jffPKBovAwg/viewform",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "exercises/ex-05-tidy-data.html",
+    "href": "exercises/ex-05-tidy-data.html",
+    "title": "Exercise 05",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is a under construction."
+  },
+  {
+    "objectID": "exercises/ex-05-tidy-data.html#dates",
+    "href": "exercises/ex-05-tidy-data.html#dates",
+    "title": "Exercise 05",
+    "section": "Dates",
+    "text": "Dates\n Due Monday, October 26, 2026."
+  },
+  {
+    "objectID": "exercises/ex-05-tidy-data.html#goals",
+    "href": "exercises/ex-05-tidy-data.html#goals",
+    "title": "Exercise 05",
+    "section": "Goals",
+    "text": "Goals\n\nTo learn how to download and clean a dataset in preparation for plotting.\nLearn why “tidy” (rectangular) data formats are important for analysis and visualization."
+  },
+  {
+    "objectID": "exercises/ex-05-tidy-data.html#assignment",
+    "href": "exercises/ex-05-tidy-data.html#assignment",
+    "title": "Exercise 05",
+    "section": "Assignment",
+    "text": "Assignment\n\nDownload the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.\nCreate a Quarto document and carry out the following actions within that document:\n\nLoad the CSV file into R\nClean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable)\nCreate at least two visualizations using ggplot2\nWrite a brief analysis of the results"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html",
+    "href": "slides/wk-07-2026-10-09-work-session.html",
+    "title": "Work session",
+    "section": "",
+    "text": "Due next Friday: Final Project proposal\nExercise 04 due date moved from today to next Friday.\n\n\n\n\n\nFinal project check-in\nComplete student surveys\nWork on Exercise 04\n(Optional) Add bells & whistles to Exercise 04 figs or nflreadr data."
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#announcements",
+    "href": "slides/wk-07-2026-10-09-work-session.html#announcements",
+    "title": "Work session",
+    "section": "",
+    "text": "Due next Friday: Final Project proposal\nExercise 04 due date moved from today to next Friday."
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#last-time",
+    "href": "slides/wk-07-2026-10-09-work-session.html#last-time",
+    "title": "Work session: Visualizing sports data",
+    "section": "",
+    "text": "Wrap up on Gestalt principles\nFrom specific to general; concrete to abstract"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#today",
+    "href": "slides/wk-07-2026-10-09-work-session.html#today",
+    "title": "Work session",
+    "section": "",
+    "text": "Final project check-in\nComplete student surveys\nWork on Exercise 04\n(Optional) Add bells & whistles to Exercise 04 figs or nflreadr data."
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#options",
+    "href": "slides/wk-07-2026-10-09-work-session.html#options",
+    "title": "Work session: Visualizing sports data",
+    "section": "Options",
+    "text": "Options\n\nProceed as scheduled\nDeeper dive into Franconeri, Padilla, Shah, Zacks, & Hullman (2021)\nMake more time for Exercise 04\n\nDownload data from Exercise 03 surveys, clean, visualize\n\nQuarto APA template (Kalvin)"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#tutorial",
+    "href": "slides/wk-07-2026-10-09-work-session.html#tutorial",
+    "title": "Work session: Visualizing sports data",
+    "section": "Tutorial",
+    "text": "Tutorial\n\nLink to tutorial"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#next-time",
+    "href": "slides/wk-07-2026-10-09-work-session.html#next-time",
+    "title": "Work session",
+    "section": "Next time",
+    "text": "Next time\n\nCritiquing figures\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#about",
+    "href": "slides/wk-07-2026-10-09-work-session.html#about",
+    "title": "Work session",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "Exercise 04 due this Friday\n\n\n\n\n\nWork session: Visualizing sports data\n\n\n\n\n\nWork session: Making figures on your own\n\nPreparation for Exercise 04",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#announcements",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#announcements",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "Exercise 04 due this Friday",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#last-time",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#last-time",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "Work session: Visualizing sports data",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#today",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#today",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "Work session: Making figures on your own\n\nPreparation for Exercise 04",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#make-a-new-rstudio-project",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#make-a-new-rstudio-project",
+    "title": "Work session: Making figures on your own",
+    "section": "Make a new RStudio project",
+    "text": "Make a new RStudio project\n\nCall it psych-490-ex-04 or similar",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#make-a-quarto-document-inside-the-project",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#make-a-quarto-document-inside-the-project",
+    "title": "Work session: Making figures on your own",
+    "section": "Make a Quarto document inside the project",
+    "text": "Make a Quarto document inside the project\n\nCall it ex-04-&lt;last_name&gt;-&lt;first_name&gt;.qmd or similar\nAdd an author section to the header\nAdd a date to the header\nAdd the following code to the header so that your rendered HTML includes your figures:\n\nformat: \n  html:\n    embed-resources: true",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "Add About and Setup sections with headers\n\nPopulate these sections with relevant text\n\nAdd an R code chunk to run your setup commands",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-1",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-1",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "---\ntitle: \"psych-490-ex-04\"\nauthor: \"Rick Gilmore\"\ndate: today\nformat: \n  html:\n    embed-resources: true\n---\n\n## About\n\n## Setup\n\n````{r}\n\n````",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-2",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-2",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "Save and render the document so far.\nOnce it renders, add placeholder sections as follows:\n\nLoad dataset\nFigure 1\nFigure 2\nFigure 3\nDiscussion and Conclusion\nResources\n\nSave and render again",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#choose-your-dataset",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#choose-your-dataset",
+    "title": "Work session: Making figures on your own",
+    "section": "Choose your dataset",
+    "text": "Choose your dataset\n\nYou might try the data() command to see what is available inside R.\nIf you want to use the data in nflreadr, you will need to add library(nflreadr) to your R code in your Setup section.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#load-your-dataset",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#load-your-dataset",
+    "title": "Work session: Making figures on your own",
+    "section": "Load your dataset",
+    "text": "Load your dataset\n\nSome datasets are available to you without doing anything special, e.g., mtcars.\nSome datasets, e.g., diamonds, are available when you load the R package that contains it, using library(ggplot2)\nIf you use the nflreadr package, you will need to use nflreadr::load_ function. See the tutorial.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-3",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-3",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "ImportantExplain why\n\n\n\nA best practice to adopt is to explain your choices. So, if you use a dataset built in to R, say that’s what you did. If you choose a package that must be loaded from another source, explain that.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#make-your-first-figure",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#make-your-first-figure",
+    "title": "Work session: Making figures on your own",
+    "section": "Make your first figure",
+    "text": "Make your first figure\n\nDecide on a variable or variables to plot\nDescribe in a short paragraph under your Figure 1 header what the plot should show you or what question the plot should help you answer.\nAdd an R code chunk and write the R code to make the plot.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-4",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-4",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "## Figure 1\n\nIn this figure, I will plot the &lt;variable&gt; from the &lt;dataset&gt; dataset.\nThe variable is continuous, so I will use a &lt;plot_type&gt; that should show me...\n\n```{r}\n#| label: fig-01\ndataset |&gt;\n  ggplot() +\n  aes(x = variable) +\n  \n```",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-5",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-5",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "NoteFigure numbering is optional\n\n\n\nNote that the code chunk on the previous page added #| label: fig-01 before the actual code.\nThis tells Quarto to add a figure number automatically.\nIf you get this to work, bravo!\nThe main benefit is that you can now write @fig-01 in your text, and Quarto will create a link to the figure.\nSo, your Figure 1 section could look like the following.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-6",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-6",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "## Figure 1\n\nIn @fig-01, I will plot the &lt;variable&gt; from the &lt;dataset&gt; dataset.\nThe variable is continuous, so I will use a &lt;plot_type&gt; that should show me...\n\n```{r}\n#| label: fig-01\ndataset |&gt;\n  ggplot() +\n  aes(x = variable) +\n  \n```\n\n\nI’m trying very hard not to do your work for you here, so I won’t give you code that you might be tempted to just copy and paste.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#render-figure-1",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#render-figure-1",
+    "title": "Work session: Making figures on your own",
+    "section": "Render Figure 1",
+    "text": "Render Figure 1\n\nSave and render your Quarto document\nKalvin and I will check in with you\nIf you successfully created Figure 1, then provide some brief commentary about it",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#section-7",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#section-7",
+    "title": "Work session: Making figures on your own",
+    "section": "",
+    "text": "In @fig-01, I will plot the &lt;variable&gt; from the &lt;dataset&gt; dataset.\nThe variable is continuous, so I will use a &lt;plot_type&gt; that should show me...\n\n```{r}\n#| label: fig-01\ndataset |&gt;\n  ggplot() +\n  aes(x = variable) +\n  \n```\n\n@fig-01 shows that the variable is...\nThe figure could be more effective if...",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-05-making-figs-I.html#references",
+    "href": "slides/wk-07-2026-10-05-making-figs-I.html#references",
+    "title": "Work session: Making figures on your own",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Mon Oct 05"
+    ]
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html",
+    "href": "supplemental/psych-490-ex-05.html",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "",
+    "text": "This page documents Rick Gilmore’s work related to completing Exercise 05 for PSYCH 490.007 in Fall 2026."
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#about",
+    "href": "supplemental/psych-490-ex-05.html#about",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "",
+    "text": "This page documents Rick Gilmore’s work related to completing Exercise 05 for PSYCH 490.007 in Fall 2026."
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#setup",
+    "href": "supplemental/psych-490-ex-05.html#setup",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nlibrary(ggplot2)\nlibrary(tidyverse)\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ lubridate 1.9.5     ✔ tibble    3.3.1\n✔ purrr     1.2.2     ✔ tidyr     1.3.2\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#import",
+    "href": "supplemental/psych-490-ex-05.html#import",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#clean",
+    "href": "supplemental/psych-490-ex-05.html#clean",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Clean",
+    "text": "Clean"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#make-figures",
+    "href": "supplemental/psych-490-ex-05.html#make-figures",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Make figures",
+    "text": "Make figures\n\nSummarize\n\n\nFigure 1"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#figure-2",
+    "href": "supplemental/psych-490-ex-05.html#figure-2",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Figure 2",
+    "text": "Figure 2"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#discusion-and-conclusion",
+    "href": "supplemental/psych-490-ex-05.html#discusion-and-conclusion",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Discusion and Conclusion",
+    "text": "Discusion and Conclusion"
+  },
+  {
+    "objectID": "supplemental/psych-490-ex-05.html#resources",
+    "href": "supplemental/psych-490-ex-05.html#resources",
+    "title": "PSYCH 490.007: Exercise 05",
+    "section": "Resources",
+    "text": "Resources"
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#links-table",
+    "href": "supplemental/student-generated-surveys.html#links-table",
+    "title": "Student-generated surveys",
+    "section": "Links table",
+    "text": "Links table\n\nResponder links\nPlease respond to each survey. The data you provide will help with Exercise 05.\n\n\nCode\nsurveys_df |&gt;\n  filter(!is.na(response_url) & canvas_submission == \"yes\") |&gt;\n  select(response_url) |&gt;\n  mutate(url = paste0(\"&lt;\", response_url, \"&gt;\")) |&gt;\n  select(url) |&gt;\n  kableExtra::kable()\n\n\n\n\n\nurl\n\n\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSeUzR6ZAm1WerhBsQ3jvXz3tlhwlhmv8J8zXs1moRHhXmOSNA/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSenJkME-9uqZQ_cvYVTWoN8A-C28AjclhwcqHGb2LfrrtwO4Q/viewform?usp=sharing&ouid=103733391851638727801\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSchjfdesQO0MZAEmvXN6PFjMygqTq1CYoPbrqxpremu0eSiEg/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLScEPYMvkxo0uzPpoZX8td6YK_o8SDF3DUEk9HjDuumz7TwjqA/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdBEhfRtzsiXRIHsjaY3UdC458CEOECBdmVBticFojvv5tPSA/viewform?usp=publish-editor\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLScYysQPTljN_CauKEvGDBcya9HBs577M0SkPFPWczZXCy0GLw/viewform\n\n\n\n\n\n\n\nEditor links\nPlease confirm that you cannot open these survey links, with one exception: The survey that you created. If your survey is not in this list, then open your survey and Dr. Gilmore (rog1@psu.edu) and Kalvin Garrah (cfh5558@psu.edu) as collaborators on the survey as indicated in the Exercise 03 instructions.\n\n\nCode\nsurveys_df |&gt;\n  filter(!is.na(edit_url) & canvas_submission == \"yes\") |&gt;\n  select(edit_url) |&gt;\n  mutate(url = paste0(\"&lt;\", edit_url, \"&gt;\")) |&gt;\n  select(url) |&gt;\n  kableExtra::kable()\n\n\n\n\n\nurl\n\n\n\n\nhttps://docs.google.com/forms/d/1-m1hK4ZAD4KJ8Tu7LuRpJtgePBnvvvBOSZeRSKH3Qo4/edit?pli=1\n\n\nhttps://docs.google.com/forms/d/1m1tn7rGWzlfz3GudIvPoLFNJ-CMJvkOPCjvjfNDxBG0/edit\n\n\nhttps://docs.google.com/forms/d/1m1tn7rGWzlfz3GudIvPoLFNJ-CMJvkOPCjvjfNDxBG0/edit\n\n\nhttps://docs.google.com/forms/d/1XU4sSj6B_PbZ89phx-tSZobvxkMDCaqpvVfUbVSLQSI/edit\n\n\nhttps://docs.google.com/forms/d/1XU4sSj6B_PbZ89phx-tSZobvxkMDCaqpvVfUbVSLQSI/edit\n\n\nhttps://docs.google.com/forms/d/1yOkVEZz4yHj5utyJFGSi471PvzJ5rJTAx0y7lJbVqNY/edit\n\n\nhttps://docs.google.com/forms/d/1SIkAX29YeMAWDhXGpiJTnWc0lexnEXKBBLxzlM2YH0c/edit\n\n\nhttps://docs.google.com/forms/d/1h_pOM88VZT2wuXUQrImwTE2yyNjWLE5YvL3lATJn-z0/edit",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "slides/wk-07-2026-10-09-work-session.html#references",
+    "href": "slides/wk-07-2026-10-09-work-session.html#references",
+    "title": "Work session",
+    "section": "References",
+    "text": "References\n\n\n\n\nTukey, John W. 1977. Exploratory Data Analysis. Addison-Wesley Series in Behavioral Science. Quantitative Methods. Pearson. https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160."
+  },
+  {
+    "objectID": "supplemental/student-generated-surveys.html#links-tables",
+    "href": "supplemental/student-generated-surveys.html#links-tables",
+    "title": "Student-generated surveys",
+    "section": "Links tables",
+    "text": "Links tables\n\nResponder links\nPlease respond to each survey. The data you provide will help with Exercise 05.\n\n\nCode\nsurveys_df |&gt;\n  filter(!is.na(response_url) & canvas_submission == \"yes\") |&gt;\n  select(response_url) |&gt;\n  mutate(url = paste0(\"&lt;\", response_url, \"&gt;\")) |&gt;\n  select(url) |&gt;\n  kableExtra::kable()\n\n\n\n\n\nurl\n\n\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSeUzR6ZAm1WerhBsQ3jvXz3tlhwlhmv8J8zXs1moRHhXmOSNA/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSenJkME-9uqZQ_cvYVTWoN8A-C28AjclhwcqHGb2LfrrtwO4Q/viewform?usp=sharing&ouid=103733391851638727801\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSchjfdesQO0MZAEmvXN6PFjMygqTq1CYoPbrqxpremu0eSiEg/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLScEPYMvkxo0uzPpoZX8td6YK_o8SDF3DUEk9HjDuumz7TwjqA/viewform?usp=header\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLSdBEhfRtzsiXRIHsjaY3UdC458CEOECBdmVBticFojvv5tPSA/viewform?usp=publish-editor\n\n\nhttps://docs.google.com/forms/d/e/1FAIpQLScYysQPTljN_CauKEvGDBcya9HBs577M0SkPFPWczZXCy0GLw/viewform\n\n\n\n\n\n\n\nEditor links\nPlease confirm that you cannot open these survey links, with one exception–The survey that you created. If your survey is not in this list, then open your survey and add Dr. Gilmore (rog1@psu.edu) and Kalvin Garrah (cfh5558@psu.edu) as collaborators on the survey as indicated in the Exercise 03 instructions. This will let us help you with Exercise 05.\n\n\nCode\nsurveys_df |&gt;\n  filter(!is.na(edit_url) & canvas_submission == \"yes\") |&gt;\n  select(edit_url) |&gt;\n  mutate(url = paste0(\"&lt;\", edit_url, \"&gt;\")) |&gt;\n  select(url) |&gt;\n  kableExtra::kable()\n\n\n\n\n\nurl\n\n\n\n\nhttps://docs.google.com/forms/d/1-m1hK4ZAD4KJ8Tu7LuRpJtgePBnvvvBOSZeRSKH3Qo4/edit?pli=1\n\n\nhttps://docs.google.com/forms/d/1m1tn7rGWzlfz3GudIvPoLFNJ-CMJvkOPCjvjfNDxBG0/edit\n\n\nhttps://docs.google.com/forms/d/1m1tn7rGWzlfz3GudIvPoLFNJ-CMJvkOPCjvjfNDxBG0/edit\n\n\nhttps://docs.google.com/forms/d/1XU4sSj6B_PbZ89phx-tSZobvxkMDCaqpvVfUbVSLQSI/edit\n\n\nhttps://docs.google.com/forms/d/1XU4sSj6B_PbZ89phx-tSZobvxkMDCaqpvVfUbVSLQSI/edit\n\n\nhttps://docs.google.com/forms/d/1yOkVEZz4yHj5utyJFGSi471PvzJ5rJTAx0y7lJbVqNY/edit\n\n\nhttps://docs.google.com/forms/d/1SIkAX29YeMAWDhXGpiJTnWc0lexnEXKBBLxzlM2YH0c/edit\n\n\nhttps://docs.google.com/forms/d/1h_pOM88VZT2wuXUQrImwTE2yyNjWLE5YvL3lATJn-z0/edit",
+    "crumbs": [
+      "Supplemental",
+      "Student-generated surveys"
     ]
   }
 ]

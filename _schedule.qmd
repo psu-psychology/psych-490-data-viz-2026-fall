@@ -203,10 +203,9 @@
 
 ### Fri, Oct 09 {-}
 
-*Work Session: More sports data viz*
+*Work Session*
 
-- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
-- [Slides](404.qmd)
+- [Slides](slides/wk-07-2026-10-09-work-session.qmd)
 
 ## Week 08 {- #week-08}
 
@@ -232,9 +231,11 @@
 
 ### Fri, Oct 16 {-}
 
-*Work Session: TidyTuesday or Exercise 05*
+*Work Session: Making data tidy*
 
+- {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 - {{< fa calendar >}} *Due* [Final Project](exercises/final-project.qmd) proposal | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448439)
+- Assigned [Exercise-05](exercises/ex-05-tidy-data.qmd)
 - [Slides](404.qmd)
 
 ## Week 09 {- #week-09}
@@ -255,7 +256,7 @@
 
 ### Fri, Oct 23 {-}
 
-*Work Session: TidyTuesday II*
+*Work Session: TidyTuesday*
 
 - [Slides](404.qmd)
 
@@ -267,7 +268,7 @@
 
 *Tables in Base R*
 
-- {{< fa calendar >}} *Due* [Exercise-05](exercises/ex-05-tidy-data.qmd)
+- {{< fa calendar >}} *Due* [Exercise-05](exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443)
 - [Slides](404.qmd)
 
 ### Wed, Oct 28 {-}

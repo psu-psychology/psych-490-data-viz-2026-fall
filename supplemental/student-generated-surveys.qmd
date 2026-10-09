@@ -7,42 +7,74 @@ format: html
 
 This page provides links to surveys that students generated for [Exercise 03](../exercises/ex-03-making-data.qmd).
 
-## Surveys
+## Setup
 
-<!-- Gabbi -->
-<https://docs.google.com/forms/d/e/1FAIpQLScEPYMvkxo0uzPpoZX8td6YK_o8SDF3DUEk9HjDuumz7TwjqA/viewform?usp=header>
+Bring some required packages into the local environment.
 
-<!-- Paul -->
-<https://docs.google.com/forms/d/e/1FAIpQLSchjfdesQO0MZAEmvXN6PFjMygqTq1CYoPbrqxpremu0eSiEg/viewform?usp=header>
+```{r}
+library(readr)
+library(dplyr)
+```
 
-<!-- Daniel -->
-<https://docs.google.com/forms/d/e/1FAIpQLSenJkME-9uqZQ_cvYVTWoN8A-C28AjclhwcqHGb2LfrrtwO4Q/viewform?usp=header>
+## Import data
 
-<!-- Hiya Shah & Ishita Gupta  -->
-<https://docs.google.com/forms/d/e/1FAIpQLSdd-86_gAw8JLaQ_0NViZRE_XMwcWMFto3PYF8RKLMlCPUKUw/viewform?usp=header>
+Dr. Gilmore created a Google sheet to keep track of the data.
 
-<!-- Luana & Aiden -->
-<https://docs.google.com/forms/d/e/1FAIpQLSdc9-IdRqiTHfSMZU5SL4hRFtkSkCFyO45Foh7zxFNdpDADBg/viewform?usp=header>
+::: {.callout-note}
+## Manual vs. automatic downloading
 
-<!-- Ganiya -->
-<https://docs.google.com/forms/d/e/1FAIpQLSeUzR6ZAm1WerhBsQ3jvXz3tlhwlhmv8J8zXs1moRHhXmOSNA/viewform?usp=header>
+Typically, Dr. Gilmore would download the data using code.
+Here he manually downloaded the file and saved it as a CSV under `private/csv`.
 
-<!-- Minjoo -->
-<https://forms.gle/y1uaGFb7UNwCMqQG8>
+This avoids issues related to Google authentication, but requires an additional manual step.
 
-<!-- Hashika -->
-<https://forms.gle/7tPhrJzXBkV4mFLY6>
-
-<!-- Jack -->
-<https://docs.google.com/forms/d/e/1FAIpQLSdBEhfRtzsiXRIHsjaY3UdC458CEOECBdmVBticFojvv5tPSA/viewform?usp=publish-editor>
-
-::: {.callout-warning}
-## Who's are these?
-
-If either of the following is your survey, please let me know. Thanks.
-
-<https://docs.google.com/forms/d/e/1FAIpQLSc0abLWdSnOlPuKtPlTrKSaEg7UJ-ECaNmBryOzd5YpHbuIxg/viewform?usp=header>
-
-<https://docs.google.com/forms/d/e/1FAIpQLSeTsk43BIe7UCx3vQBE1gvFUt0bwP7goP7nnD2jffPKBovAwg/viewform>
 :::
 
+We read the data file into a data frame.
+
+```{r}
+surveys_df <- readr::read_csv("../private/csv/psych-490.007-2026-fall-surveys - Sheet1.csv", show_col_types = FALSE)
+```
+
+## Summarize
+
+```{r}
+summary(surveys_df)
+```
+
+There were *n*=`{r} dim(surveys_df)[1]` submissions.
+
+*N*=`{r} sum(is.na(surveys_df$edit_url))` submissions did *not* include an edit link. Check [below](#editor-links) to see if you provided that link.
+
+*N*=`{r} sum(is.na(surveys_df$response_url) & surveys_df$canvas_submission == "yes")` students submitted write-ups to Canvas but did not send the edit link to the survey to Dr. Gilmore.
+
+## Links tables
+
+### Responder links
+
+Please respond to each survey.
+The data you provide will help with [Exercise 05](../exercises/ex-05-tidy-data.qmd).
+
+```{r}
+surveys_df |>
+  filter(!is.na(response_url) & canvas_submission == "yes") |>
+  select(response_url) |>
+  mutate(url = paste0("<", response_url, ">")) |>
+  select(url) |>
+  kableExtra::kable()
+```
+
+### Editor links
+
+Please confirm that you *cannot* open these survey links, with one exception--The survey that *you* created.
+If your survey is not in this list, then open your survey and add Dr. Gilmore (rog1@psu.edu) and Kalvin Garrah (cfh5558@psu.edu) as collaborators on the survey as indicated in the [Exercise 03](../exercises/ex-03-making-data.qmd) instructions.
+This will let us help you with [Exercise 05](../exercises/ex-05-tidy-data.qmd).
+
+```{r}
+surveys_df |>
+  filter(!is.na(edit_url) & canvas_submission == "yes") |>
+  select(edit_url) |>
+  mutate(url = paste0("<", edit_url, ">")) |>
+  select(url) |>
+  kableExtra::kable()
+```

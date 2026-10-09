@@ -1,0 +1,44 @@
+---
+title: "Work session"
+format: revealjs
+---
+
+# Overview
+
+## Announcements
+
+- Due next Friday: [Final Project](../exercises/final-project.qmd) proposal
+- [Exercise 04](../exercises/ex-04-making-figs-ggplot2.qmd) due date moved from today to next Friday.
+
+## Today
+
+- Final project check-in
+- Complete [student surveys](../supplemental/student-generated-surveys.qmd)
+- Work on [Exercise 04](../exercises/ex-04-making-figs-ggplot2.qmd)
+- (Optional) Add [bells & whistles](wk-07-2026-10-07-making-figs-II.qmd#/some-bells-whistles) to Exercise 04 figs or [`nflreadr` data](../tutorials/tutorial-visualizing-sports-data.qmd).
+
+# Final project check-in
+
+# Wrap-up
+
+## Next time
+
+- *Critiquing figures*
+- *Read*: 
+    - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
+    - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
+- [Slides](404.qmd)
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.8.2.200.
+
+The source files are in R and Quarto, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages:
+<https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/>
+
+## References
