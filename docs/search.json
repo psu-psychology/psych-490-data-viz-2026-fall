@@ -6454,8 +6454,12 @@
     "objectID": "slides/wk-07-2026-10-09-work-session.html#announcements",
     "href": "slides/wk-07-2026-10-09-work-session.html#announcements",
     "title": "Work session",
-    "section": "",
-    "text": "Due next Friday: Final Project proposal\nExercise 04 due date moved from today to next Friday."
+    "section": "Announcements",
+    "text": "Announcements\n\nDue next Friday: Final Project proposal\nExercise 04 due date moved from today to next Friday.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Fri Oct 09"
+    ]
   },
   {
     "objectID": "slides/wk-07-2026-10-09-work-session.html#last-time",
@@ -6468,8 +6472,12 @@
     "objectID": "slides/wk-07-2026-10-09-work-session.html#today",
     "href": "slides/wk-07-2026-10-09-work-session.html#today",
     "title": "Work session",
-    "section": "",
-    "text": "Final project check-in\nComplete student surveys\nWork on Exercise 04\n(Optional) Add bells & whistles to Exercise 04 figs or nflreadr data."
+    "section": "Today",
+    "text": "Today\n\nFinal project check-in\nComplete student surveys\nWork on Exercise 04\n(Optional) Add bells & whistles to Exercise 04 figs or nflreadr data.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Fri Oct 09"
+    ]
   },
   {
     "objectID": "slides/wk-07-2026-10-09-work-session.html#options",
@@ -6490,14 +6498,22 @@
     "href": "slides/wk-07-2026-10-09-work-session.html#next-time",
     "title": "Work session",
     "section": "Next time",
-    "text": "Next time\n\nCritiquing figures\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides"
+    "text": "Next time\n\nCritiquing figures\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Fri Oct 09"
+    ]
   },
   {
     "objectID": "slides/wk-07-2026-10-09-work-session.html#about",
     "href": "slides/wk-07-2026-10-09-work-session.html#about",
     "title": "Work session",
     "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/"
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.8.2.200.\nThe source files are in R and Quarto, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages: https://psu-psychology.github.io/https://github.com/psu-psychology/psych-490-data-viz-2026-fall/",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Fri Oct 09"
+    ]
   },
   {
     "objectID": "slides/wk-07-2026-10-05-making-figs-I.html",
@@ -6787,7 +6803,11 @@
     "href": "slides/wk-07-2026-10-09-work-session.html#references",
     "title": "Work session",
     "section": "References",
-    "text": "References\n\n\n\n\nTukey, John W. 1977. Exploratory Data Analysis. Addison-Wesley Series in Behavioral Science. Quantitative Methods. Pearson. https://www.amazon.com/Exploratory-Data-Analysis-John-Tukey/dp/0201076160."
+    "text": "References\n\n\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. Graphics Pr.",
+    "crumbs": [
+      "Slides",
+      "Wk 07 • Fri Oct 09"
+    ]
   },
   {
     "objectID": "supplemental/student-generated-surveys.html#links-tables",
