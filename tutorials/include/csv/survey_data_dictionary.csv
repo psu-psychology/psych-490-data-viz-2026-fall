@@ -1,0 +1,5 @@
+questions,short_names,data_type,comments
+Timestamp,timestamp,Date/time stamp,Provided by Google Forms in MM/DD/YYYY HH:MM:SS format
+What is your name?,name,Discrete/Nominal,Fixed responses
+What is the air speed of a fully laden swallow (in m/s)?,swallow_speed,Continuous,A bad reference to 'Monty Python and the Holy Grail'.
+"What is your favorite date (month, day, year)?",favorite_date,Date,Some random dates in MM/DD/YY format.

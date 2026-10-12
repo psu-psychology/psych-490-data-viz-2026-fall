@@ -75,6 +75,7 @@ website:
         - tutorials/tutorial-ggplot2-II.qmd
         - tutorials/tutorial-visualizing-sports-data.qmd
         - tutorials/tutorial-figure-captions-numbering.qmd
+        - tutorials/tutorial-tidying-data.qmd
     - section: Supplemental
       contents:
         - supplemental/psych-sci-figs.qmd

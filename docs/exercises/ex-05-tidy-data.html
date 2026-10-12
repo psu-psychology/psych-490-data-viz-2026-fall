@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-10-09">
+<meta name="dcterms.date" content="2026-10-12">
 
 <title>Exercise 05 – PSYCH 490.007</title>
 <style>
@@ -287,6 +287,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Wk 07 • Wed Oct 07</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-07-2026-10-09-work-session.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 07 • Fri Oct 09</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -305,11 +311,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../exercises/ex-02-data-viz-outside-psych.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 02</span></a>
-  </div>
-</li>
+ <span class="menu-text">exercises/ex-02-data-viz-outsid</span>
+  </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
@@ -442,14 +445,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 9, 2026</p>
+      <p class="date">October 12, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 6, 2026</p>
+      <p class="date-modified">October 12, 2026</p>
     </div>
   </div>
     
@@ -490,10 +493,20 @@ Warning
 <li>Download the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.</li>
 <li>Create a Quarto document and carry out the following actions within that document:
 <ul>
-<li>Load the CSV file into R</li>
-<li>Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable)</li>
-<li>Create at least two visualizations using ggplot2</li>
-<li>Write a brief analysis of the results</li>
+<li>Load the CSV file into R.</li>
+<li>Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable).</li>
+<li>Create at least two visualizations using <em>ggplot2</em></li>
+<li>Write a brief analysis of the results and your observations about the process of cleaning a data file like this.</li>
+</ul></li>
+<li>For 3 extra credit points, create a data dictionary file (as a <code>.csv</code>).
+<ul>
+<li>At a minimum, the data dictionary should include the “raw” questions, and the “short_name” you assigned to the variable.</li>
+</ul></li>
+<li>Tips
+<ul>
+<li>Make sure to add <code>embed-resources: true</code> into the header of your Quarto document.</li>
+<li>Submit the <code>.html</code> file.</li>
+<li>Make sure that your file has a suitable name, e.g., <code>psych-490.007-2026-ex-05-&lt;last_name&gt;-&lt;first_name&gt;.html</code>.</li>
 </ul></li>
 </ol>
 
@@ -979,11 +992,17 @@ Warning
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Download the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.</span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a Quarto document and carry out the following actions within that document:</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Load the CSV file into R</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Create at least two visualizations using ggplot2</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Write a brief analysis of the results</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Load the CSV file into R.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable).</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Create at least two visualizations using *ggplot2*</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Write a brief analysis of the results and your observations about the process of cleaning a data file like this.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>For 3 extra credit points, create a data dictionary file (as a <span class="in">`.csv`</span>).</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>At a minimum, the data dictionary should include the "raw" questions, and the "short_name" you assigned to the variable.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Tips</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Make sure to add <span class="in">`embed-resources: true`</span> into the header of your Quarto document.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Submit the <span class="in">`.html`</span> file.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Make sure that your file has a suitable name, e.g., <span class="in">`psych-490.007-2026-ex-05-&lt;last_name&gt;-&lt;first_name&gt;.html`</span>.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

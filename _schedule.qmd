@@ -236,7 +236,7 @@
 - {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 - {{< fa calendar >}} *Due* [Final Project](exercises/final-project.qmd) proposal | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448439)
 - Assigned [Exercise-05](exercises/ex-05-tidy-data.qmd)
-- [Slides](404.qmd)
+- [Tutorial](tutorials/tutorial-tidying-data.qmd)
 
 ## Week 09 {- #week-09}
 

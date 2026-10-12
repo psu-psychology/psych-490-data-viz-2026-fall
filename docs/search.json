@@ -84,7 +84,7 @@
     "href": "schedule.html#week-08",
     "title": "Schedule",
     "section": "Week 08",
-    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: Making data tidy\n\n Due Exercise-04 |  Canvas dropbox |\n Due Final Project proposal |  Canvas dropbox\nAssigned Exercise-05\nSlides",
+    "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: Making data tidy\n\n Due Exercise-04 |  Canvas dropbox |\n Due Final Project proposal |  Canvas dropbox\nAssigned Exercise-05\nTutorial",
     "crumbs": [
       "Schedule"
     ]
@@ -6441,7 +6441,7 @@
     "href": "exercises/ex-05-tidy-data.html#assignment",
     "title": "Exercise 05",
     "section": "Assignment",
-    "text": "Assignment\n\nDownload the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.\nCreate a Quarto document and carry out the following actions within that document:\n\nLoad the CSV file into R\nClean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable)\nCreate at least two visualizations using ggplot2\nWrite a brief analysis of the results"
+    "text": "Assignment\n\nDownload the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.\nCreate a Quarto document and carry out the following actions within that document:\n\nLoad the CSV file into R.\nClean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable).\nCreate at least two visualizations using ggplot2\nWrite a brief analysis of the results and your observations about the process of cleaning a data file like this.\n\nFor 3 extra credit points, create a data dictionary file (as a .csv).\n\nAt a minimum, the data dictionary should include the “raw” questions, and the “short_name” you assigned to the variable.\n\nTips\n\nMake sure to add embed-resources: true into the header of your Quarto document.\nSubmit the .html file.\nMake sure that your file has a suitable name, e.g., psych-490.007-2026-ex-05-&lt;last_name&gt;-&lt;first_name&gt;.html."
   },
   {
     "objectID": "slides/wk-07-2026-10-09-work-session.html",
@@ -6818,6 +6818,175 @@
     "crumbs": [
       "Supplemental",
       "Student-generated surveys"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html",
+    "title": "Critiquing figures",
+    "section": "",
+    "text": "Critiquing figures\nWork session\n\nExercise 04\nFinal Project proposal"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#announcements",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#announcements",
+    "title": "Critiquing figures",
+    "section": "Announcements",
+    "text": "Announcements"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#todays-topics",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#todays-topics",
+    "title": "Critiquing figures",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nCritiquing figures\nWork session\n\nExercise 04\nFinal Project proposal"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#edward-tufte",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#edward-tufte",
+    "title": "Critiquing figures",
+    "section": "Edward Tufte",
+    "text": "Edward Tufte\n\n\n\n\n\nProfessor Emeritus, Yale University\nStatistics, Political Science, Computer Science\nLeading authority in data visualization and information design"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-enlighten",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-enlighten",
+    "title": "Critiquing figures",
+    "section": "Figures can enlighten",
+    "text": "Figures can enlighten\n\n\n\n\n\n\nFigure 2: Tufte (2001) p. 14"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-delight",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-delight",
+    "title": "Critiquing figures",
+    "section": "Figures can delight",
+    "text": "Figures can delight\n\n\n\n\n\n\nFigure 4: Tufte (2001) p. 31"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-mislead",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-mislead",
+    "title": "Critiquing figures",
+    "section": "Figures can mislead",
+    "text": "Figures can mislead\n\n\n\n\n\n\nFigure 5: Tufte (2001) p. 15"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlations",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlations",
+    "title": "Critiquing figures",
+    "section": "Spurious correlations",
+    "text": "Spurious correlations\n\n\n\n\n\n\nFigure 6: https://www.tylervigen.com/spurious-correlations"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#references",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#references",
+    "title": "Critiquing figures",
+    "section": "References",
+    "text": "References\n\n\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. Graphics Pr."
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlation",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlation",
+    "title": "Critiquing figures",
+    "section": "Spurious correlation",
+    "text": "Spurious correlation\n\n\n\n\n\nCorrelation \\(\\neq\\) causation, but…\nZero correlation \\(\\rightarrow\\) no causal relationship"
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html",
+    "href": "tutorials/tutorial-tidying-data.html",
+    "title": "Tidying data",
+    "section": "",
+    "text": "This tutorial shows how we can prepare a dataset generated using Google Forms into a format suitable for plotting. The format is a data frame in a “tidy” format, where each row is an observation and each column is a variable.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#about",
+    "href": "tutorials/tutorial-tidying-data.html#about",
+    "title": "Tidying data",
+    "section": "",
+    "text": "This tutorial shows how we can prepare a dataset generated using Google Forms into a format suitable for plotting. The format is a data frame in a “tidy” format, where each row is an observation and each column is a variable.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#setup",
+    "href": "tutorials/tutorial-tidying-data.html#setup",
+    "title": "Tidying data",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\n# Load required package dependencies \"quietly\"\nsuppressPackageStartupMessages(library(ggplot2))\nsuppressPackageStartupMessages(library(dplyr))\nsuppressPackageStartupMessages(library(readr))",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#background",
+    "href": "tutorials/tutorial-tidying-data.html#background",
+    "title": "Tidying data",
+    "section": "Background",
+    "text": "Background\nEven when a data analyst controls how some dataset is generated, it’s essential to transform it into a form that can be easily plotted using ggplot2.\nThe major steps involved are as follows:\n\nGathering\n\nImporting the data from some canonical source.\n\nCleaning\n\n(Optional, but highly recommended) Creating a data dictionary.\nTransforming the data into a tidy format.\nRenaming data variable (column) names.\n\nVisualizing\n\nWe will do this with some survey data that Dr. Gilmore created. For Exercise 05, you’ll do the same process with the data you created in Exercise 03.\nThe response form for the survey is here: https://docs.google.com/forms/d/e/1FAIpQLSdlQvk6kFl6pw1LPpvL_iB-CrLXyRuinuSTl1MKFgJ4TDuH3g/viewform?usp=header. If you like the shortened form Google provides, it is here: https://forms.gle/add8aEUUjMowesaQ6.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#gathering",
+    "href": "tutorials/tutorial-tidying-data.html#gathering",
+    "title": "Tidying data",
+    "section": "Gathering",
+    "text": "Gathering\nThere are two ways to gather these data. One involves downloading a *.csv file manually. If you visit the “Responses” tab for a survey you have permission to access, you’ll see a “View in Sheets” button as shown in Figure 1.\n\n\n\n\n\n\nFigure 1: Screenshot of the Responses tab of the sample dataset.\n\n\n\nClick it.\nThat will open a Google Sheet with the data as shown in Figure 2.\n\n\n\n\n\n\nFigure 2: Screen shot of the sample data file as of 2026-10-12.\n\n\n\nOn 2026-10-12 when I drafted this tutorial, there were 5 responses.\nTo download a CSV, select “File/Download/Comma Separated Values (.csv)” as shown in Figure 3.\n\n\n\n\n\n\nFigure 3: Google Sheets menu command to generate and download a .csv file.\n\n\n\nThis will download the file to the default download location on your computer. The precise file name depends on how many times you’ve downloaded this file, but on my computer right now, the following code shows the long target file name.\n\n\nCode\nlist.files(path = \"~/Downloads\", pattern = \"PSYCH 490.007\", full.names = TRUE)\n\n\ncharacter(0)\n\n\n\n\n\n\n\n\nNoteWhat are those parameters?\n\n\n\nFor this exercise, you don’t need to automate determining the file name using the list.files() function. However, the path parameter tells R where to look for files. Here, it’s in the Downloads directory under my root user account which I appreviate using the ~ symbol. Note: This works on Mac OS and Linux systems, but I’m not sure it works like this in Windows.\nThe pattern parameter tells R to look for the text ‘PSYCH 490.007’. That’s how the file name starts.\n\n\nNow that we’ve confirmed we have downloaded a .csv file, we can drag it to the folder where we’re doing our work. I suggest creating a csv folder for your data. Make a directory for the data and copy the file there now.\n\nImport into R\nNow we can import the data into R. Create a chunk to do that. Call the data survey_df.\n\n\nCode\nsurvey_df &lt;- read_csv(\"include/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv\", show_col_types = FALSE)\n\n\n\n\n\n\n\n\nImportantType-ahead is your friend\n\n\n\nIf you pause your typing after you type the first few characters of the path to your file, RStudio will fill in the rest.\nIn fact, type-ahead helps in all sorts of ways.\nSlow down and enjoy the good life!\n\n\nTo confirm that the dataset imported properly, we run summary(survey_df).\n\n\nCode\nsummary(survey_df)\n\n\n     Timestamp  What is your name?\n Length   : 5   Length   : 5      \n N.unique : 5   N.unique : 4      \n N.blank  : 0   N.blank  : 0      \n Min.nchar:17   Min.nchar: 7      \n Max.nchar:19   Max.nchar:10      \n                                  \n What is the air speed of a fully laden swallow (in m/s)?\n Min.   : 1.0                                            \n 1st Qu.: 5.5                                            \n Median :15.0                                            \n Mean   :18.1                                            \n 3rd Qu.:25.0                                            \n Max.   :44.0                                            \n What is your favorite date (month, day, year)?\n Length   : 5                                  \n N.unique : 5                                  \n N.blank  : 0                                  \n Min.nchar: 9                                  \n Max.nchar:10                                  \n                                               \n\n\nAn even more useful command to summarize the data is the str() for “structure” command.\n\n\nCode\nstr(survey_df)\n\n\nspc_tbl_ [5 × 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ Timestamp                                               : chr [1:5] \"10/6/2026 7:47:36\" \"10/6/2026 7:47:44\" \"10/6/2026 7:47:53\" \"10/6/2026 7:48:08\" ...\n $ What is your name?                                      : chr [1:5] \"Puddintane\" \"Mayflower\" \"Janeway\" \"Aragorn\" ...\n $ What is the air speed of a fully laden swallow (in m/s)?: num [1:5] 25 15 1 44 5.5\n $ What is your favorite date (month, day, year)?          : chr [1:5] \"01/17/1993\" \"03/18/1965\" \"06/02/1981\" \"07/04/1776\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   Timestamp = col_character(),\n  ..   `What is your name?` = col_character(),\n  ..   `What is the air speed of a fully laden swallow (in m/s)?` = col_double(),\n  ..   `What is your favorite date (month, day, year)?` = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;pointer: 0x83cfc9740&gt; \n\n\nNotice that this command provides us even more information than we had before.\nOkay, we’re ready to move on to cleaning.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#cleaning",
+    "href": "tutorials/tutorial-tidying-data.html#cleaning",
+    "title": "Tidying data",
+    "section": "Cleaning",
+    "text": "Cleaning\n\nMake data dictionary\nUntil very recently, I never made a data dictionary. I didn’t know what one was or why someone should care. Fortunately, you can teach (some) old dogs new tricks.\nIt’s optional for Exercise 05, but worth extra points, so why not?\nFirst, we extract the full questions using the names() command. This command extracts the column names from a data frame. We assign it to a variable because we’ll want to use it in our data dictionary.\n\n\nCode\nquestions &lt;- names(survey_df)\nquestions\n\n\n[1] \"Timestamp\"                                               \n[2] \"What is your name?\"                                      \n[3] \"What is the air speed of a fully laden swallow (in m/s)?\"\n[4] \"What is your favorite date (month, day, year)?\"          \n\n\nNext, we create a new variable with a shortened name. The question itself is too long. We want a name that will be informative, but look good in our initial plots.\nHere are the choices I made:\n\n\nCode\nshort_names &lt;- c(\"timestamp\",\n                \"name\",\n                \"swallow_speed\",\n                \"favorite_date\")\n\n\nNow, I can make a new data frame with the questions and short_names variables.\n\n\nCode\nsurvey_dd &lt;- data.frame(questions, short_names)\n\nsurvey_dd\n\n\n                                                 questions   short_names\n1                                                Timestamp     timestamp\n2                                       What is your name?          name\n3 What is the air speed of a fully laden swallow (in m/s)? swallow_speed\n4           What is your favorite date (month, day, year)? favorite_date\n\n\nThat’s not especially interesting, but so far so good. You could add other columns if you like. A comments column isn’t a bad idea.\n\n\nCode\ncomments &lt;- c(\"Provided by Google Forms in MM/DD/YYYY HH:MM:SS format\",\n              \"Fixed responses\",\n              \"A bad reference to 'Monty Python and the Holy Grail'.\",\n              \"Some random dates in MM/DD/YY format.\")\n\n\nAnd you could add a column about the data type.\n\n\nCode\ndata_type &lt;- c(\"Date/time stamp\", \n               \"Discrete/Nominal\",\n               \"Continuous\",\n               \"Date\")\n\n\nThen add these to the data dictionary data frame.\n\n\nCode\nsurvey_dd$data_type &lt;- data_type\nsurvey_dd$comments &lt;- comments\nsurvey_dd\n\n\n                                                 questions   short_names\n1                                                Timestamp     timestamp\n2                                       What is your name?          name\n3 What is the air speed of a fully laden swallow (in m/s)? swallow_speed\n4           What is your favorite date (month, day, year)? favorite_date\n         data_type                                               comments\n1  Date/time stamp Provided by Google Forms in MM/DD/YYYY HH:MM:SS format\n2 Discrete/Nominal                                        Fixed responses\n3       Continuous  A bad reference to 'Monty Python and the Holy Grail'.\n4             Date                  Some random dates in MM/DD/YY format.\n\n\nLet’s quit while we’re ahead and export this as a .csv in the same directory where our raw data came from, but with a shorter and human-readable name.\n\n\nCode\nwrite_csv(survey_dd, file = \"include/csv/survey_data_dictionary.csv\")\n\n\nOkay, back to data cleaning the main dataset.\n\n\nRename columns\nAs part of generating the data dictionary, we made choices about some better, shorter names for the columns in our dataset. We can use those names in the raw dataset, as follows.\nFirst, we make a copy of survey_df, but with a new name to indicate it’s our cleaned version. This isn’t strictly necessary, but it’s good practice while you’re learning.\n\n\nCode\nsurvey_cleaned_df &lt;- survey_df\n\n\nThen, we give the new dataset, survey_cleaned_df the short names from our data dictionary.\n\n\nCode\nnames(survey_cleaned_df) &lt;- short_names\n\nsurvey_cleaned_df\n\n\n# A tibble: 5 × 4\n  timestamp           name       swallow_speed favorite_date\n  &lt;chr&gt;               &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;        \n1 10/6/2026 7:47:36   Puddintane          25   01/17/1993   \n2 10/6/2026 7:47:44   Mayflower           15   03/18/1965   \n3 10/6/2026 7:47:53   Janeway              1   06/02/1981   \n4 10/6/2026 7:48:08   Aragorn             44   07/04/1776   \n5 10/12/2026 11:45:34 Janeway              5.5 7/13/1997    \n\n\n\n\n\n\n\n\nImportantStudy this and understand\n\n\n\nMake sure you understand what we just did. It’s incredibly useful and powerful.\nIf you’re not sure what’s going on, try printing the original and the cleaned data frames, like this:\n\n\nCode\nsurvey_cleaned_df\n\nsurvey_df\n\n\nCompare the two outputs. Isn’t the one with shorter names easier to handle?\n\n\n\n\nFurther cleaning\nWe have two variables we could plot right now, name, and swallow_speed. I’m going to do that next and come back to cleaning the date and date/timestamps later on.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#visualizing",
+    "href": "tutorials/tutorial-tidying-data.html#visualizing",
+    "title": "Tidying data",
+    "section": "Visualizing",
+    "text": "Visualizing\nWe’ve already used summary() and str() above, so we won’t repeat that here. Notice that in Figure 4 we use the cleaned dataset. Also note that we can use geom_histogram with discrete, nominal data as long as we use stat=\"count\" as a parameter.\n\n\nCode\nsurvey_cleaned_df |&gt;\n  ggplot() +\n  aes(x = name) +\n  geom_histogram(stat = \"count\") +\n  theme_classic()\n\n\nWarning in geom_histogram(stat = \"count\"): Ignoring unknown parameters:\n`binwidth` and `bins`\n\n\n\n\n\n\n\n\nFigure 4: A simple barplot of the frequency of responses to the question: ‘What is your name?’\n\n\n\n\n\nIn Figure 5, we plot the swallow_speed variable.\n\n\nCode\nsurvey_cleaned_df |&gt;\n  ggplot() +\n  aes(x = swallow_speed) +\n  geom_histogram() +\n  theme_classic()\n\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\nFigure 5: A histogram of responses to the question: ‘What is the air speed of a fully laden swallow (in m/s)?’\n\n\n\n\n\nThis specific figure is not very appealing or informative because we have too few data points for a histogram. But it shows how we can go from raw data to some visualizations in just a few steps.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#advanced-gathering",
+    "href": "tutorials/tutorial-tidying-data.html#advanced-gathering",
+    "title": "Tidying data",
+    "section": "Advanced Gathering",
+    "text": "Advanced Gathering\n\n\n\n\n\n\nWarningUnder construction\n\n\n\nThis section is a work-in-progress.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
+    ]
+  },
+  {
+    "objectID": "tutorials/tutorial-tidying-data.html#cleaning-dates-and-times",
+    "href": "tutorials/tutorial-tidying-data.html#cleaning-dates-and-times",
+    "title": "Tidying data",
+    "section": "Cleaning dates and times",
+    "text": "Cleaning dates and times\n\n\n\n\n\n\nWarningUnder construction\n\n\n\nThis section is a work-in-progress.",
+    "crumbs": [
+      "Tutorials",
+      "Tidying data"
     ]
   }
 ]

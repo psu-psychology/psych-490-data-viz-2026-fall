@@ -21,8 +21,14 @@ This page is a under construction.
 
 1. Download the survey you created for Exercise 03 and save it as a comma-separated value (CSV) text file.
 2. Create a Quarto document and carry out the following actions within that document:
-    - Load the CSV file into R
-    - Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable)
-    - Create at least two visualizations using ggplot2
-    - Write a brief analysis of the results
+    - Load the CSV file into R.
+    - Clean the data (e.g., handle missing values, convert variables to appropriate types, rename the variable).
+    - Create at least two visualizations using *ggplot2*
+    - Write a brief analysis of the results and your observations about the process of cleaning a data file like this.
+3. For 3 extra credit points, create a data dictionary file (as a `.csv`).
+    - At a minimum, the data dictionary should include the "raw" questions, and the "short_name" you assigned to the variable.
+4. Tips
+    - Make sure to add `embed-resources: true` into the header of your Quarto document.
+    - Submit the `.html` file.
+    - Make sure that your file has a suitable name, e.g., `psych-490.007-2026-ex-05-<last_name>-<first_name>.html`.
     

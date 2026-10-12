@@ -1,0 +1,119 @@
+---
+title: "Critiquing figures"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+
+## Today's topics
+
+- Critiquing figures
+- Work session
+  - Exercise 04
+  - Final Project proposal
+
+# Critiquing figures
+
+## Edward Tufte
+
+:::: {.columns}
+::: {.column width=50%}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Edward_Tufte_-_cropped.jpg/440px-Edward_Tufte_-_cropped.jpg){height=50%}
+:::
+::: {.column width=50%}
+- Professor Emeritus, Yale University
+- Statistics, Political Science, Computer Science
+- Leading authority in data visualization and information design
+:::
+::::
+
+---
+
+![https://www.edwardtufte.com/online-course/](../include/img/tufte-online-course.png){#fig-online-course width="55%"}
+
+## Figures can enlighten
+
+![@Tufte2001-cb p. 14](../include/img/tufte-scatter-p14.png){#fig-tufte-scatter-p14}
+
+---
+
+![@Tufte2001-cb p. 24](../include/img/tufte-john-snow-cholera-p24.png){#fig-john-snow-cholera width="65%"}
+
+## Figures can delight
+
+![@Tufte2001-cb p. 31](../include/img/tufte-french-rail-p31.png){#fig-tufte-french-rail-p31 width="65%"}
+
+## Figures can mislead
+
+![@Tufte2001-cb p. 15](../include/img/tufte-illusory-corr-p15.png){#fig-tufte-illusory-corr-p15 width="55%"}
+
+## Spurious correlations
+
+![https://www.tylervigen.com/spurious-correlations](https://www.tylervigen.com/spurious/correlation/image/5918_associates-degrees-awarded-in-emergency-medical-tech_correlates-with_miss-americas-age.svg){#fig-tylervigen-spurious}
+
+## Spurious correlation
+
+:::: {.columns}
+::: {.column width=50%}
+![](https://www.tylervigen.com/spurious/correlation/image/5918_associates-degrees-awarded-in-emergency-medical-tech_correlates-with_miss-americas-age.svg)
+:::
+::: {.column width=50%}
+- Correlation $\neq$ causation, but...
+- Zero correlation $\rightarrow$ no causal relationship
+:::
+::::
+
+---
+
+:::: {.columns}
+::: {.column width=50%}
+![@Tufte2001-cb p. 57](../include/img/tufte-fuel-std-p57.png)
+:::
+::: {.column width=50%}
+![@Tufte2001-cb p. 58](../include/img/tufte-fuel-std-p58.png)
+:::
+::::
+
+---
+
+![@Tufte2001-cb p. 60](../include/img/tufte-p60.png){#fig-tufte-p60}
+
+---
+
+![@Tufte2001-cb p. 75](../include/img/tufte-p75.png){#fig-tufte-p75 width="45%"}
+## An alternative
+
+```{r}
+p_family_practice <- c(.27, .16, .12)
+year <- c(1964, 1975, 1990)
+ratio_to_pop <- c(2247, 3167, 4232)
+n_docs <- c(8023, 6694, 6212)
+
+docs_df <- data.frame(year, p_family_practice, ratio_to_pop, n_docs)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+docs_df |>
+  mutate(year = factor(year)) |>
+  ggplot() +
+  aes(x = year, p_family_practice) +
+  geom_bar(stat = "identity")
+```
+
+```{r}
+docs_df |>
+  mutate(year = factor(year)) |>
+  ggplot() +
+  aes(x = year, n_docs) +
+  geom_bar(stat = "identity")
+```
+
+
+# Resources
+
+## References
