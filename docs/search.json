@@ -3175,7 +3175,7 @@
     "href": "deadlines.html",
     "title": "Deadlines",
     "section": "",
-    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-25\nExercise 02\n\n\n2026-10-02\nExercise 03\n\n\n2026-10-09\nExercise 04\n\n\n2026-10-16\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-25\nExercise 02\n\n\n2026-10-02\nExercise 03\n\n\n2026-10-16\nExercise 04\n\n\n2026-10-16\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
     "crumbs": [
       "Deadlines"
     ]
@@ -6846,7 +6846,7 @@
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#edward-tufte",
     "title": "Critiquing figures",
     "section": "Edward Tufte",
-    "text": "Edward Tufte\n\n\n\n\n\nProfessor Emeritus, Yale University\nStatistics, Political Science, Computer Science\nLeading authority in data visualization and information design"
+    "text": "Edward Tufte\n\n\n\n\n\nEdward Tufte: Wikipedia1\n\n\n\n\nProfessor Emeritus, Yale University\nStatistics, Political Science, Computer Science\nLeading authority in data visualization and information design"
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-enlighten",
@@ -6988,5 +6988,40 @@
       "Tutorials",
       "Tidying data"
     ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#footnotes",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#footnotes",
+    "title": "Critiquing figures",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBy Keegan Peterzell - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=40367115"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#an-alternative",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#an-alternative",
+    "title": "Critiquing figures",
+    "section": "An alternative",
+    "text": "An alternative\n\n\nCode\np_family_practice &lt;- c(.27, .16, .12)\nyear &lt;- c(1964, 1975, 1990)\nratio_to_pop &lt;- c(2247, 3167, 4232)\nn_docs &lt;- c(8023, 6694, 6212)\n\ndocs_df &lt;- data.frame(year, p_family_practice, ratio_to_pop, n_docs)"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#your-turn",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#your-turn",
+    "title": "Critiquing figures",
+    "section": "Your turn",
+    "text": "Your turn\n\nWhat sort of data picture (figure) would be less misleading?"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#even-better",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#even-better",
+    "title": "Critiquing figures",
+    "section": "Even better?",
+    "text": "Even better?\n\n\nCode\nn_family &lt;- n_docs*p_family_practice\nn_non_family &lt;- n_docs*(1 - p_family_practice)\nn_docs_specialty &lt;- c(n_family, n_non_family)\nyears &lt;- rep(year, 2)\nspecialty &lt;- rep(c(\"Family Practice\", \"Non-Family Practice\"), each = length(year))\n\ndocs_df_new &lt;- data.frame(years, specialty, n_docs = n_docs_specialty)"
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#another-alternative",
+    "href": "slides/wk-08-2026-10-12-critiquing-figs.html#another-alternative",
+    "title": "Critiquing figures",
+    "section": "Another alternative",
+    "text": "Another alternative"
   }
 ]

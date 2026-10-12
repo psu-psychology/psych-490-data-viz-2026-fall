@@ -216,7 +216,7 @@
 - *Read*: 
     - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
-- [Slides](404.qmd)
+- [Slides](slides/wk-08-2026-10-12-critiquing-figs.qmd)
 
 ### Wed, Oct 14 {-}
 

@@ -58,6 +58,8 @@ website:
         href: slides/wk-07-2026-10-07-making-figs-II.qmd
       - text: "Wk 07 • Fri Oct 09"
         href: slides/wk-07-2026-10-09-work-session.qmd
+      - text: "Wk 08 • Mon Oct 12"
+        href: slides/wk-08-2026-10-12-critiquing-figs.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd
