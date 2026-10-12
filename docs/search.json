@@ -6832,63 +6832,99 @@
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#announcements",
     "title": "Critiquing figures",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nExercise 04 due Friday\nFinal Project proposal due Friday",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#todays-topics",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#todays-topics",
     "title": "Critiquing figures",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nCritiquing figures\nWork session\n\nExercise 04\nFinal Project proposal"
+    "text": "Today’s topics\n\nCritiquing figures\nWork session\n\nExercise 04\nFinal Project proposal",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#edward-tufte",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#edward-tufte",
     "title": "Critiquing figures",
     "section": "Edward Tufte",
-    "text": "Edward Tufte\n\n\n\n\n\nEdward Tufte: Wikipedia1\n\n\n\n\nProfessor Emeritus, Yale University\nStatistics, Political Science, Computer Science\nLeading authority in data visualization and information design"
+    "text": "Edward Tufte\n\n\n\n\n\nEdward Tufte: Wikipedia1\n\n\n\n\nProfessor Emeritus, Yale University\nStatistics, Political Science, Computer Science\nLeading authority in data visualization and information design",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-enlighten",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-enlighten",
     "title": "Critiquing figures",
     "section": "Figures can enlighten",
-    "text": "Figures can enlighten\n\n\n\n\n\n\nFigure 2: Tufte (2001) p. 14"
+    "text": "Figures can enlighten\n\n\n\n\n\n\nFigure 2: Tufte (2001) p. 14",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-delight",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-delight",
     "title": "Critiquing figures",
     "section": "Figures can delight",
-    "text": "Figures can delight\n\n\n\n\n\n\nFigure 4: Tufte (2001) p. 31"
+    "text": "Figures can delight\n\n\n\n\n\n\nFigure 4: Tufte (2001) p. 31",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-mislead",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#figures-can-mislead",
     "title": "Critiquing figures",
     "section": "Figures can mislead",
-    "text": "Figures can mislead\n\n\n\n\n\n\nFigure 5: Tufte (2001) p. 15"
+    "text": "Figures can mislead\n\n\n\n\n\n\nFigure 5: Tufte (2001) p. 15",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlations",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlations",
     "title": "Critiquing figures",
     "section": "Spurious correlations",
-    "text": "Spurious correlations\n\n\n\n\n\n\nFigure 6: https://www.tylervigen.com/spurious-correlations"
+    "text": "Spurious correlations\n\n\n\n\n\n\nFigure 6: https://www.tylervigen.com/spurious-correlations",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#references",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#references",
     "title": "Critiquing figures",
     "section": "References",
-    "text": "References\n\n\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. Graphics Pr."
+    "text": "References\n\n\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. Graphics Pr.",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlation",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#spurious-correlation",
     "title": "Critiquing figures",
     "section": "Spurious correlation",
-    "text": "Spurious correlation\n\n\n\n\n\nCorrelation \\(\\neq\\) causation, but…\nZero correlation \\(\\rightarrow\\) no causal relationship"
+    "text": "Spurious correlation\n\n\n\n\n\nCorrelation \\(\\neq\\) causation, but…\nZero correlation \\(\\rightarrow\\) no causal relationship",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "tutorials/tutorial-tidying-data.html",
@@ -6994,34 +7030,54 @@
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#footnotes",
     "title": "Critiquing figures",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nBy Keegan Peterzell - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=40367115"
+    "text": "Footnotes\n\n\nBy Keegan Peterzell - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=40367115\nGilmore says all or as much as possible of the data.",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#an-alternative",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#an-alternative",
     "title": "Critiquing figures",
     "section": "An alternative",
-    "text": "An alternative\n\n\nCode\np_family_practice &lt;- c(.27, .16, .12)\nyear &lt;- c(1964, 1975, 1990)\nratio_to_pop &lt;- c(2247, 3167, 4232)\nn_docs &lt;- c(8023, 6694, 6212)\n\ndocs_df &lt;- data.frame(year, p_family_practice, ratio_to_pop, n_docs)"
+    "text": "An alternative\n\n\nCode\np_family_practice &lt;- c(.27, .16, .12)\nyear &lt;- c(1964, 1975, 1990)\nratio_to_pop &lt;- c(2247, 3167, 4232)\nn_docs &lt;- c(8023, 6694, 6212)\n\ndocs_df &lt;- data.frame(year, p_family_practice, ratio_to_pop, n_docs)",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#your-turn",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#your-turn",
     "title": "Critiquing figures",
     "section": "Your turn",
-    "text": "Your turn\n\nWhat sort of data picture (figure) would be less misleading?"
+    "text": "Your turn\n\nWhat sort of data picture (figure) would be less misleading?",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#even-better",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#even-better",
     "title": "Critiquing figures",
     "section": "Even better?",
-    "text": "Even better?\n\n\nCode\nn_family &lt;- n_docs*p_family_practice\nn_non_family &lt;- n_docs*(1 - p_family_practice)\nn_docs_specialty &lt;- c(n_family, n_non_family)\nyears &lt;- rep(year, 2)\nspecialty &lt;- rep(c(\"Family Practice\", \"Non-Family Practice\"), each = length(year))\n\ndocs_df_new &lt;- data.frame(years, specialty, n_docs = n_docs_specialty)"
+    "text": "Even better?\n\n\nCode\nn_family &lt;- n_docs*p_family_practice\nn_non_family &lt;- n_docs*(1 - p_family_practice)\nn_docs_specialty &lt;- c(n_family, n_non_family)\nyears &lt;- rep(year, 2)\nspecialty &lt;- rep(c(\"Family Practice\", \"Non-Family Practice\"), each = length(year))\n\ndocs_df_new &lt;- data.frame(years, specialty, n_docs = n_docs_specialty)",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#another-alternative",
     "href": "slides/wk-08-2026-10-12-critiquing-figs.html#another-alternative",
     "title": "Critiquing figures",
     "section": "Another alternative",
-    "text": "Another alternative"
+    "text": "Another alternative",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Mon Oct 12"
+    ]
   }
 ]

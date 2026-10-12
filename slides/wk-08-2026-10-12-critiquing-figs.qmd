@@ -7,6 +7,8 @@ format: revealjs
 
 ## Announcements
 
+- Exercise 04 due Friday
+- Final Project proposal due Friday
 
 ## Today's topics
 
@@ -33,6 +35,44 @@ format: revealjs
 ---
 
 ![https://www.edwardtufte.com/online-course/](../include/img/tufte-online-course.png){#fig-online-course width="55%"}
+
+---
+
+>*Excellence in statistical graphics consists of complex ideas communicated with clarity, precision, and efficiency.*
+
+-- @Tufte2001-cb, p. 13
+
+---
+
+>*Graphical displays should...*
+
+>*Show the data^[Gilmore says all or as much as possible of the data.]*
+
+>*Induce the viewer to think about the substance rather than about methodology, graphic design, the technology of graphic production, or something else*
+
+-- @Tufte2001-cb, p. 13
+
+---
+
+>*Avoid distorting what the data have to say*
+
+>*Present many numbers in a small space*
+
+>*Make large data sets coherent*
+
+-- @Tufte2001-cb, p. 13
+
+---
+
+>*encourage the eye to compare different pieces of data*
+
+>*reveal the data at several levels of detail, from a broad overvifew to the fine structure*
+
+>*serve a reasonably clear purpose: description, exploration, tabulation, or decoration*
+
+>*be closely integrated with the statistical and verbal descriptions of a data set.*
+
+-- @Tufte2001-cb, p. 13
 
 ## Figures can enlighten
 
