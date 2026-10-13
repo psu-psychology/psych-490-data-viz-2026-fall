@@ -12,13 +12,17 @@ format: revealjs
 
 ## Last time...
 
+:::: {.columns}
+
+::: {.column width=50%}
 - Tufte on critiquing figures
+:::
 
+::: {.column width=50%}
 ![@Tufte2001-cb p. 75](../include/img/tufte-p75.png){#fig-tufte-p75 width="45%"}
+:::
 
-## Your turn
-
-- What sort of data picture (figure) would be less misleading?
+::::
 
 ## An alternative
 
@@ -99,17 +103,41 @@ docs_df_another <- data.frame(years, docs_general, pop)
 
 ```{r}
 #| label: fig-docs-as-p-population
-#| fig-cap: "Doctors vs. non-doctors in California as a fraction of the total population 1964-1990."
+#| fig-cap: "California population 1964-1990."
 #| echo: true
 docs_df_another |>
-  mutate(years = factor(years)) |>
+  mutate(pop_millions = pop/1e6) |>
+  filter(docs_general == "Non-doctors") |>
   ggplot() +
-  aes(x = years, y = pop, fill = docs_general) +
-  geom_bar(stat = "identity", position = position_dodge2(preserve = "single")) +
-  ylab("Population") +
+  aes(x = years, y = pop_millions) +
+  geom_point() +
+  geom_line() +
+  ylab("Population (M)") +
   xlab("") +
+  ylim(0, 30) +
   theme_classic() +
-  theme(legend.title = element_blank())
+  ggtitle("California's population has increased since 1964 by 8 million")
+```
+
+---
+
+```{r}
+#| label: fig-population
+#| fig-cap: "California doctors 1964-1990."
+#| echo: true
+docs_df_another |>
+  # mutate(years = factor(years)) |>
+  filter(docs_general == "Doctors") |>
+  ggplot() +
+  aes(x = years, y = pop) +
+  geom_point() +
+  geom_line() +
+  ylab("Doctors") +
+  xlab("") +
+  ylim(0, 10000) +
+  theme_classic() +
+  theme(legend.title = element_blank()) +
+  ggtitle("But the number of doctors has declined by 1,800.")
 ```
 
 ## Today's topics
@@ -218,7 +246,7 @@ https://literaryterms.net/story/
 
 ## Case study 1: After
 
-![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-01-after.png){#knafflic-case-01-after width="65%" fig-align="center"}
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-01-after.png){#knafflic-case-01-after width="55%" fig-align="center"}
 
 ## Case 2: Before
 

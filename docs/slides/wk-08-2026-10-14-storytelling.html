@@ -216,19 +216,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-answer.callout {
-    border-left-color: blue;
-  }
-  .reveal div.callout-answer.callout-style-default .callout-title {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\f00c' !important;
-    background-image: none;
-  }
   .reveal div.callout-question.callout {
     border-left-color: pink;
   }
@@ -240,6 +227,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\3f' !important;
+    background-image: none;
+  }
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
     background-image: none;
   }
   </style>
@@ -278,9 +278,12 @@ Rick Gilmore
 </section>
 <section id="last-time" class="slide level2">
 <h2>Last time…</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Tufte on critiquing figures</li>
 </ul>
+</div><div class="column" style="width:50%;">
 <div id="fig-tufte-p75" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-tufte-p75-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -291,12 +294,7 @@ Figure&nbsp;1: <span class="citation" data-cites="Tufte2001-cb">Tufte (<a href="
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn</h2>
-<ul>
-<li>What sort of data picture (figure) would be less misleading?</li>
-</ul>
+</div></div>
 </section>
 <section id="an-alternative" class="slide level2">
 <h2>An alternative</h2>
@@ -389,23 +387,59 @@ Figure&nbsp;2: Doctors in California by speciality 1964-1990.
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>docs_df_another <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb4-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop, <span class="at">fill =</span> docs_general) <span class="sc">+</span></span>
-<span id="cb4-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge2</span>(<span class="at">preserve =</span> <span class="st">"single"</span>)) <span class="sc">+</span></span>
-<span id="cb4-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Population"</span>) <span class="sc">+</span></span>
-<span id="cb4-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb4-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(<span class="at">pop_millions =</span> pop<span class="sc">/</span><span class="fl">1e6</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">filter</span>(docs_general <span class="sc">==</span> <span class="st">"Non-doctors"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop_millions) <span class="sc">+</span></span>
+<span id="cb4-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-7"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-8"><a></a>  <span class="fu">ylab</span>(<span class="st">"Population (M)"</span>) <span class="sc">+</span></span>
+<span id="cb4-9"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb4-10"><a></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">30</span>) <span class="sc">+</span></span>
+<span id="cb4-11"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb4-12"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"California's population has increased since 1964 by 8 million"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-docs-as-p-population" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-docs-as-p-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-docs-as-p-population-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990."><img data-src="include/fig/fig-docs-as-p-population-1.png" width="960"></a>
+<a href="include/fig/fig-docs-as-p-population-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: California population 1964-1990."><img data-src="include/fig/fig-docs-as-p-population-1.png" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-docs-as-p-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990.
+Figure&nbsp;3: California population 1964-1990.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>docs_df_another <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="co"># mutate(years = factor(years)) |&gt;</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">filter</span>(docs_general <span class="sc">==</span> <span class="st">"Doctors"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop) <span class="sc">+</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-7"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb5-8"><a></a>  <span class="fu">ylab</span>(<span class="st">"Doctors"</span>) <span class="sc">+</span></span>
+<span id="cb5-9"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb5-10"><a></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">10000</span>) <span class="sc">+</span></span>
+<span id="cb5-11"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb5-12"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb5-13"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"But the number of doctors has declined by 1,800."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-population" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-population-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;4: California doctors 1964-1990."><img data-src="include/fig/fig-population-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: California doctors 1964-1990.
 </figcaption>
 </figure>
 </div>
@@ -429,10 +463,10 @@ Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the t
 <div id="fig-what-is-a-story" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-what-is-a-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/what-is-a-story.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;4: https://literaryterms.net/story/"><img data-src="../include/img/what-is-a-story.png"></a>
+<a href="../include/img/what-is-a-story.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;5: https://literaryterms.net/story/"><img data-src="../include/img/what-is-a-story.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-what-is-a-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: https://literaryterms.net/story/
+Figure&nbsp;5: https://literaryterms.net/story/
 </figcaption>
 </figure>
 </div>
@@ -459,7 +493,7 @@ Figure&nbsp;4: https://literaryterms.net/story/
 </iframe>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vonnegut-shapes-of-stories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span>
+Figure&nbsp;6: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -482,10 +516,10 @@ Figure&nbsp;5: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a hr
 <div id="fig-schema-definition" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-schema-definition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/schema-definition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: "><img data-src="../include/img/schema-definition.png" id="fig-schema-definition"></a>
+<a href="../include/img/schema-definition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: "><img data-src="../include/img/schema-definition.png" id="fig-schema-definition"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-schema-definition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6
+Figure&nbsp;7
 </figcaption>
 </figure>
 </div>
@@ -524,10 +558,10 @@ Figure&nbsp;6
 <div id="fig-semantic-maps" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-semantic-maps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: "><img data-src="https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png" id="fig-semantic-maps" class="quarto-figure quarto-figure-center"></a>
+<a href="https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: "><img data-src="https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png" id="fig-semantic-maps" class="quarto-figure quarto-figure-center"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-semantic-maps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7
+Figure&nbsp;8
 </figcaption>
 </figure>
 </div>
@@ -555,7 +589,7 @@ Figure&nbsp;7
 <h2>Case study 1: Before</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/knafflic-case-01-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-01-before.png" style="width:75.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<p><a href="../include/img/knafflic-case-01-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-01-before.png" style="width:75.0%" alt="Knaflic (2015) Chapter 1"></a></p>
 <figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
 </figure>
 </div>
@@ -566,7 +600,7 @@ Figure&nbsp;7
 <figure>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/knafflic-case-01-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-01-after.png" class="quarto-figure quarto-figure-center" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<p><a href="../include/img/knafflic-case-01-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-01-after.png" class="quarto-figure quarto-figure-center" style="width:55.0%" alt="Knaflic (2015) Chapter 1"></a></p>
 </figure>
 </div>
 <figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
@@ -577,7 +611,7 @@ Figure&nbsp;7
 <h2>Case 2: Before</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/knafflic-case-02-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-02-before.png" style="width:85.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<p><a href="../include/img/knafflic-case-02-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-02-before.png" style="width:85.0%" alt="Knaflic (2015) Chapter 1"></a></p>
 <figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
 </figure>
 </div>
@@ -586,7 +620,7 @@ Figure&nbsp;7
 <h2>Case 2: After</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/knafflic-case-02-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-02-after.png" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<p><a href="../include/img/knafflic-case-02-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-02-after.png" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
 <figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
 </figure>
 </div>
@@ -595,7 +629,7 @@ Figure&nbsp;7
 <h2>Case 3: Before</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/knafflic-case-03-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-03-before.png" style="width:75.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<p><a href="../include/img/knafflic-case-03-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-03-before.png" style="width:75.0%" alt="Knaflic (2015) Chapter 1"></a></p>
 <figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
 </figure>
 </div>
@@ -604,7 +638,7 @@ Figure&nbsp;7
 <h2>Case 3: After</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="../include/img/knafflic-case-03-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-03-after.png" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<p><a href="../include/img/knafflic-case-03-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-03-after.png" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
 <figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
 </figure>
 </div>
@@ -614,10 +648,10 @@ Figure&nbsp;7
 <div id="fig-knafflic-storyboarding" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-knafflic-storyboarding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/knafflic-fig-1.2-storyboarding.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;8: @Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-fig-1.2-storyboarding.png" style="width:70.0%"></a>
+<a href="../include/img/knafflic-fig-1.2-storyboarding.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;9: @Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-fig-1.2-storyboarding.png" style="width:70.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-knafflic-storyboarding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1
+Figure&nbsp;9: <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1
 </figcaption>
 </figure>
 </div>
