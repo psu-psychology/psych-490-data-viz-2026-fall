@@ -1,5 +1,5 @@
 ---
-title: "Storytelling"
+title: "Storytelling with data"
 format: revealjs
 ---
 
@@ -153,17 +153,29 @@ https://literaryterms.net/story/
 
 ## Why are stories important?
 
+::: {.incremental}
 - Human memory fallible, often brittle
 - Stories facilitate memory
+- Enhance understanding
+- Can be shared by or with others
+:::
+
+## On schemas
+
+::: {.fragment}
+![](../include/img/schema-definition.png){#fig-schema-definition}
+:::
 
 ## Schemas
 
-- Organize, categorize information
+::: {.incremental}
+- Organize, interpret, categorize, make sense of information
 - Provide cognitive shortcuts
 - Guide behavior and expectations
 - Filter information
 
 -- @Wikipedia-contributors2025-ad
+:::
 
 ## Schema types
 
@@ -179,7 +191,100 @@ https://literaryterms.net/story/
 - Neurologists: Frederic Bartlett, Henry Head
 - Cognitive psychologists: David Rumelhart [@Rumelhart2017-pc]
 
+## Semantic maps as visual schemas
+
+![](https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png){#fig-semantic-maps fig-align="center"}
+
 ## Storytelling with data
+
+>We aren't naturally good at storytelling with data.
+
+-- @Knaflic2015-wq
+
+## Take home lessons
+
+- Understand the context 
+- Choose an appropriate visual display
+- Eliminate clutter
+- Focus attention where you want it
+- Think like a designer
+- Tell a story
+
+-- @Knaflic2015-wq Chapter 1
+
+## Case study 1: Before
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-01-before.png){#knafflic-case-01-before width="75%"}
+
+## Case study 1: After
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-01-after.png){#knafflic-case-01-after width="65%" fig-align="center"}
+
+## Case 2: Before
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-02-before.png){#knafflic-case-02-before width="85%"}
+
+## Case 2: After
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-02-after.png){#knafflic-case-02-after  width="65%"}
+
+## Case 3: Before
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-03-before.png){#knafflic-case-03-before width="75%"}
+
+## Case 3: After
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-case-03-after.png){#knafflic-case-03-after  width="65%"}
+
+## Storyboarding
+
+![@Knaflic2015-wq Chapter 1](../include/img/knafflic-fig-1.2-storyboarding.png){#fig-knafflic-storyboarding width="70%"}
+
+## What aspect of academic paper writing like storyboarding?
+
+::: {.incremental}
+- Outlines!
+- Plan your work; work your plan.
+:::
+
+## Make outlines/storyboards!
+
+::: {.incremental}
+- Introduction
+  - Tell 'em what you're going to tell them.
+- Body
+  - Tell 'em (what & why)
+- Conclusion
+  - Tell 'em what you told 'em.
+:::
+
+## Take home lessons
+
+- Understand the context (who, what, how)
+  - To whom are you communicating?
+  - What do they need to know or do?
+  - How will you communicate?
+  
+-- @Knaflic2015-wq Chapter 1
+  
+## Take home lessons
+
+- Choose an appropriate *visual display*
+- *Eliminate clutter*
+- *Focus attention where you want it*
+- *Think like a designer*
+
+-- @Knaflic2015-wq Chapter 1
+
+## Take home lessons
+
+- Tell a story
+  - Characters
+  - Setting
+  - Conflict (& resolution)
+  - Tone & mood
+
+-- @Knaflic2015-wq Chapter 1
 
 # Resources
 

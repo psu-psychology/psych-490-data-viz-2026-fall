@@ -448,7 +448,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#announcements",
     "href": "slides/wk-08-2026-10-14-storytelling.html#announcements",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Announcements",
     "text": "Announcements\n\nExercise 04 due Friday\nFinal Project proposal due Friday",
     "crumbs": [
@@ -459,7 +459,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#last-time",
     "href": "slides/wk-08-2026-10-14-storytelling.html#last-time",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Last time…",
     "text": "Last time…\n\nTufte on critiquing figures\n\n\n\n\n\n\n\nFigure 1: Tufte (2001) p. 75",
     "crumbs": [
@@ -470,7 +470,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#your-turn",
     "href": "slides/wk-08-2026-10-14-storytelling.html#your-turn",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Your turn",
     "text": "Your turn\n\nWhat sort of data picture (figure) would be less misleading?",
     "crumbs": [
@@ -481,7 +481,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#an-alternative",
     "href": "slides/wk-08-2026-10-14-storytelling.html#an-alternative",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "An alternative",
     "text": "An alternative\n\n\nCode\np_family_practice &lt;- c(.27, .16, .12)\nyear &lt;- c(1964, 1975, 1990)\nratio_to_pop &lt;- c(2247, 3167, 4232)\nn_docs &lt;- c(8023, 6694, 6212)\n\ndocs_df &lt;- data.frame(year, p_family_practice, ratio_to_pop, n_docs)",
     "crumbs": [
@@ -492,7 +492,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#even-better",
     "href": "slides/wk-08-2026-10-14-storytelling.html#even-better",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Even better?",
     "text": "Even better?\n\n\nCode\nn_family &lt;- n_docs*p_family_practice\nn_non_family &lt;- n_docs*(1 - p_family_practice)\nn_docs_specialty &lt;- c(n_family, n_non_family)\nyears &lt;- rep(year, 2)\nspecialty &lt;- rep(c(\"Family Practice\", \"Non-Family Practice\"), each = length(year))\n\ndocs_df_new &lt;- data.frame(years, specialty, n_docs = n_docs_specialty)",
     "crumbs": [
@@ -503,9 +503,9 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#another-alternative",
     "href": "slides/wk-08-2026-10-14-storytelling.html#another-alternative",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Another alternative",
-    "text": "Another alternative\n\n\nCode\ntotal_pop &lt;- n_docs*ratio_to_pop\npop &lt;- c(total_pop, n_docs)\ndocs_general &lt;- rep(c(\"Non-doctors\", \"Doctors\"), each = 3)\n\ndocs_df_another &lt;- data.frame(years, docs_general, pop)",
+    "text": "Another alternative",
     "crumbs": [
       "Slides",
       "Wk 08 • Wed Oct 14"
@@ -514,7 +514,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#todays-topics",
     "href": "slides/wk-08-2026-10-14-storytelling.html#todays-topics",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Today’s topics",
     "text": "Today’s topics\n\nStorytelling with data",
     "crumbs": [
@@ -525,7 +525,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#what-is-a-story",
     "href": "slides/wk-08-2026-10-14-storytelling.html#what-is-a-story",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "What is a story?",
     "text": "What is a story?\n\n\n\n\n\n\n\nFigure 4: https://literaryterms.net/story/",
     "crumbs": [
@@ -536,7 +536,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#components-of-stories",
     "href": "slides/wk-08-2026-10-14-storytelling.html#components-of-stories",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Components of stories?",
     "text": "Components of stories?\n\nCharacter\nSetting\nPlot\nConflict (& resolution)\nTheme\nTone & mood\nPoint of view",
     "crumbs": [
@@ -547,7 +547,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#what-makes-a-good-one",
     "href": "slides/wk-08-2026-10-14-storytelling.html#what-makes-a-good-one",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "What makes a good one?",
     "text": "What makes a good one?\n\n\n\n\n\n\n\nFigure 5: Comberg (2010)",
     "crumbs": [
@@ -558,7 +558,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#what-makes-a-good-one-1",
     "href": "slides/wk-08-2026-10-14-storytelling.html#what-makes-a-good-one-1",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "What makes a good one?",
     "text": "What makes a good one?",
     "crumbs": [
@@ -569,9 +569,9 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#why-are-stories-important",
     "href": "slides/wk-08-2026-10-14-storytelling.html#why-are-stories-important",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Why are stories important?",
-    "text": "Why are stories important?\n\nHuman memory fallible, often brittle\nStories facilitate memory",
+    "text": "Why are stories important?\n\nHuman memory fallible, often brittle\nStories facilitate memory\nEnhance understanding\nCan be shared by or with others",
     "crumbs": [
       "Slides",
       "Wk 08 • Wed Oct 14"
@@ -580,9 +580,9 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#schemas",
     "href": "slides/wk-08-2026-10-14-storytelling.html#schemas",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Schemas",
-    "text": "Schemas\n\nOrganize, categorize information\nProvide cognitive shortcuts\nGuide behavior and expectations\nFilter information\n\n– Wikipedia contributors (2025)",
+    "text": "Schemas\n\nOrganize, interpret, categorize, make sense of information\nProvide cognitive shortcuts\nGuide behavior and expectations\nFilter information\n\n– Wikipedia contributors (2025)",
     "crumbs": [
       "Slides",
       "Wk 08 • Wed Oct 14"
@@ -591,7 +591,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#schema-types",
     "href": "slides/wk-08-2026-10-14-storytelling.html#schema-types",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Schema types",
     "text": "Schema types\n\nEvents (scripts)\nRole\nSelf\nSocial",
     "crumbs": [
@@ -602,7 +602,7 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#proponents",
     "href": "slides/wk-08-2026-10-14-storytelling.html#proponents",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Proponents",
     "text": "Proponents\n\nDevelopmental psychologists: Piaget (Piaget 2001)\nGestalt psychologists\nNeurologists: Frederic Bartlett, Henry Head\nCognitive psychologists: David Rumelhart (Rumelhart 2017)",
     "crumbs": [
@@ -613,9 +613,9 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#storytelling-with-data-1",
     "href": "slides/wk-08-2026-10-14-storytelling.html#storytelling-with-data-1",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "Storytelling with data",
-    "text": "Storytelling with data",
+    "text": "Storytelling with data\n\nWe aren’t naturally good at storytelling with data.\n\n– Knaflic (2015)",
     "crumbs": [
       "Slides",
       "Wk 08 • Wed Oct 14"
@@ -624,9 +624,9 @@
   {
     "objectID": "slides/wk-08-2026-10-14-storytelling.html#references",
     "href": "slides/wk-08-2026-10-14-storytelling.html#references",
-    "title": "Storytelling",
+    "title": "Storytelling with data",
     "section": "References",
-    "text": "References\n\n\n\n\nComberg, David. 2010. Kurt Vonnegut on the Shapes of Stories. YouTube. https://www.youtube.com/watch?v=oP3c1h8v2ZQ&t=83s.\n\n\nPiaget, Jean. 2001. The Language and Thought of the Child. Translated by Marjorie Gabain and Ruth Gabain. Routledge Classics. Routledge. https://www.google.com/books/edition/The_Language_and_Thought_of_the_Child/WYoEXQLGRLEC?hl=en.\n\n\nRumelhart, David E. 2017. “Schemata: The Building Blocks of Cognition.” In Theoretical Issues in Reading Comprehension, 1st Edition. Routledge. https://doi.org/10.4324/9781315107493-4.\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. Graphics Pr.\n\n\nWikipedia contributors. 2025. “Schema (Psychology).” Wikimedia Foundation, Inc., July 10. https://en.wikipedia.org/wiki/Schema_(psychology).",
+    "text": "References\n\n\n\n\nComberg, David. 2010. Kurt Vonnegut on the Shapes of Stories. YouTube. https://www.youtube.com/watch?v=oP3c1h8v2ZQ&t=83s.\n\n\nKnaflic, Cole Nussbaumer. 2015. Storytelling with Data. John Wiliey & Sons.\n\n\nPiaget, Jean. 2001. The Language and Thought of the Child. Translated by Marjorie Gabain and Ruth Gabain. Routledge Classics. Routledge. https://www.google.com/books/edition/The_Language_and_Thought_of_the_Child/WYoEXQLGRLEC?hl=en.\n\n\nRumelhart, David E. 2017. “Schemata: The Building Blocks of Cognition.” In Theoretical Issues in Reading Comprehension, 1st Edition. Routledge. https://doi.org/10.4324/9781315107493-4.\n\n\nTufte, Edward R. 2001. The Visual Display of Quantitative Information. Graphics Pr.\n\n\nWikipedia contributors. 2025. “Schema (Psychology).” Wikimedia Foundation, Inc., July 10. https://en.wikipedia.org/wiki/Schema_(psychology).",
     "crumbs": [
       "Slides",
       "Wk 08 • Wed Oct 14"
@@ -6853,6 +6853,182 @@
     "crumbs": [
       "Tutorials",
       "Visualizing sports data"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons",
+    "title": "Storytelling with data",
+    "section": "Take home lessons",
+    "text": "Take home lessons\n\nUnderstand the context\nChoose an appropriate visual display\nEliminate clutter\nFocus attention where you want it\nThink like a designer\nTell a story\n\n– Knaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#case-study-1-before",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#case-study-1-before",
+    "title": "Storytelling with data",
+    "section": "Case study 1: Before",
+    "text": "Case study 1: Before\n\n\n\nKnaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#case-study-1-after",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#case-study-1-after",
+    "title": "Storytelling with data",
+    "section": "Case study 1: After",
+    "text": "Case study 1: After\n\n\n\n\n\n\n\nKnaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#case-2-after",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#case-2-after",
+    "title": "Storytelling with data",
+    "section": "Case 2: After",
+    "text": "Case 2: After\n\n\n\nKnaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#case-3-before",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#case-3-before",
+    "title": "Storytelling with data",
+    "section": "Case 3: Before",
+    "text": "Case 3: Before\n\n\n\nKnaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#case-3-after",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#case-3-after",
+    "title": "Storytelling with data",
+    "section": "Case 3: After",
+    "text": "Case 3: After\n\n\n\nKnaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#storyboarding",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#storyboarding",
+    "title": "Storytelling with data",
+    "section": "Storyboarding",
+    "text": "Storyboarding\n\n\n\n\n\n\nFigure 8: Knaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#what-aspect-of-academic-paper-writing-like-storyboarding",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#what-aspect-of-academic-paper-writing-like-storyboarding",
+    "title": "Storytelling with data",
+    "section": "What aspect of academic paper writing like storyboarding?",
+    "text": "What aspect of academic paper writing like storyboarding?\n\nOutlines!\nPlan your work; work your plan.",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons-1",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons-1",
+    "title": "Storytelling with data",
+    "section": "Take home lessons",
+    "text": "Take home lessons\n\nUnderstand the context (who, what, how)\n\nTo whom are you communicating?\nWhat do they need to know or do?\nHow will you communicate?\n\n\n– Knaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons-2",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons-2",
+    "title": "Storytelling with data",
+    "section": "Take home lessons",
+    "text": "Take home lessons\n\nChoose an appropriate visual display\nEliminate clutter\nFocus attention where you want it\nThink like a designer\n\n– Knaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons-3",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#take-home-lessons-3",
+    "title": "Storytelling with data",
+    "section": "Take home lessons",
+    "text": "Take home lessons\n\nTell a story\n\nCharacters\nSetting\nConflict (& resolution)\nTone & mood\n\n\n– Knaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#on-schemas",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#on-schemas",
+    "title": "Storytelling with data",
+    "section": "On schemas",
+    "text": "On schemas\n\n\n\n\n\n\n\nFigure 6",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#semantic-maps-as-visual-schemas",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#semantic-maps-as-visual-schemas",
+    "title": "Storytelling with data",
+    "section": "Semantic maps as visual schemas",
+    "text": "Semantic maps as visual schemas\n\n\n\n\n\n\nFigure 7",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#case-2-before",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#case-2-before",
+    "title": "Storytelling with data",
+    "section": "Case 2: Before",
+    "text": "Case 2: Before\n\n\n\nKnaflic (2015) Chapter 1",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#make-outlines",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#make-outlines",
+    "title": "Storytelling with data",
+    "section": "Make outlines!",
+    "text": "Make outlines!\n\nIntroduction\n\nTell ’em what you’re going to tell them.\n\nBody\n\nTell ’em (what & why)\n\nConclusion\n\nTell ’em what you told ’em.",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
+    ]
+  },
+  {
+    "objectID": "slides/wk-08-2026-10-14-storytelling.html#make-outlinesstoryboards",
+    "href": "slides/wk-08-2026-10-14-storytelling.html#make-outlinesstoryboards",
+    "title": "Storytelling with data",
+    "section": "Make outlines/storyboards!",
+    "text": "Make outlines/storyboards!\n\nIntroduction\n\nTell ’em what you’re going to tell them.\n\nBody\n\nTell ’em (what & why)\n\nConclusion\n\nTell ’em what you told ’em.",
+    "crumbs": [
+      "Slides",
+      "Wk 08 • Wed Oct 14"
     ]
   }
 ]

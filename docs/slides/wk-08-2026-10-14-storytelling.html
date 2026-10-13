@@ -14,7 +14,7 @@
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490.007 – Storytelling</title>
+  <title>PSYCH 490.007 – Storytelling with data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -216,19 +216,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -242,6 +229,19 @@
     content: '\f00c' !important;
     background-image: none;
   }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
+    background-image: none;
+  }
   </style>
 </head>
 <body class="quarto-light">
@@ -249,7 +249,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Storytelling</h1>
+  <h1 class="title">Storytelling with data</h1>
   <p class="subtitle">PSY 490.007 Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -315,37 +315,10 @@ Figure&nbsp;1: <span class="citation" data-cites="Tufte2001-cb">Tufte (<a href="
 <section class="slide level2">
 
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-2"><a></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
-
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
-
-    intersect, setdiff, setequal, union</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>docs_df <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">factor</span>(year)) <span class="sc">|&gt;</span></span>
-<span id="cb6-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, p_family_practice) <span class="sc">+</span></span>
-<span id="cb6-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><a href="include/fig/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="include/fig/unnamed-chunk-2-1.png" width="672"></a></p>
+<p><a href="include/fig/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="include/fig/unnamed-chunk-2-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
@@ -354,18 +327,10 @@ Attaching package: 'dplyr'</code></pre>
 <section class="slide level2">
 
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>docs_df <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">factor</span>(year)) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb7-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, n_docs) <span class="sc">+</span></span>
-<span id="cb7-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><a href="include/fig/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="include/fig/unnamed-chunk-3-1.png" width="672"></a></p>
+<p><a href="include/fig/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="include/fig/unnamed-chunk-3-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
@@ -376,13 +341,13 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>n_family <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>p_family_practice</span>
-<span id="cb8-2"><a></a>n_non_family <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">-</span> p_family_practice)</span>
-<span id="cb8-3"><a></a>n_docs_specialty <span class="ot">&lt;-</span> <span class="fu">c</span>(n_family, n_non_family)</span>
-<span id="cb8-4"><a></a>years <span class="ot">&lt;-</span> <span class="fu">rep</span>(year, <span class="dv">2</span>)</span>
-<span id="cb8-5"><a></a>specialty <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Family Practice"</span>, <span class="st">"Non-Family Practice"</span>), <span class="at">each =</span> <span class="fu">length</span>(year))</span>
-<span id="cb8-6"><a></a></span>
-<span id="cb8-7"><a></a>docs_df_new <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(years, specialty, <span class="at">n_docs =</span> n_docs_specialty)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>n_family <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>p_family_practice</span>
+<span id="cb2-2"><a></a>n_non_family <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">-</span> p_family_practice)</span>
+<span id="cb2-3"><a></a>n_docs_specialty <span class="ot">&lt;-</span> <span class="fu">c</span>(n_family, n_non_family)</span>
+<span id="cb2-4"><a></a>years <span class="ot">&lt;-</span> <span class="fu">rep</span>(year, <span class="dv">2</span>)</span>
+<span id="cb2-5"><a></a>specialty <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Family Practice"</span>, <span class="st">"Non-Family Practice"</span>), <span class="at">each =</span> <span class="fu">length</span>(year))</span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a>docs_df_new <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(years, specialty, <span class="at">n_docs =</span> n_docs_specialty)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -391,21 +356,21 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>docs_df_new <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb9-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> n_docs, <span class="at">fill =</span> specialty) <span class="sc">+</span></span>
-<span id="cb9-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb9-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Doctors"</span>) <span class="sc">+</span></span>
-<span id="cb9-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb9-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb9-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>docs_df_new <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> n_docs, <span class="at">fill =</span> specialty) <span class="sc">+</span></span>
+<span id="cb3-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Doctors"</span>) <span class="sc">+</span></span>
+<span id="cb3-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb3-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb3-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-docs-by-specialty" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-docs-by-specialty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-docs-by-specialty-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: Doctors in California by speciality 1964-1990."><img data-src="include/fig/fig-docs-by-specialty-1.png" width="672"></a>
+<a href="include/fig/fig-docs-by-specialty-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: Doctors in California by speciality 1964-1990."><img data-src="include/fig/fig-docs-by-specialty-1.png" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-docs-by-specialty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Doctors in California by speciality 1964-1990.
@@ -417,37 +382,27 @@ Figure&nbsp;2: Doctors in California by speciality 1964-1990.
 </section>
 <section id="another-alternative" class="slide level2">
 <h2>Another alternative</h2>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>total_pop <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>ratio_to_pop</span>
-<span id="cb10-2"><a></a>pop <span class="ot">&lt;-</span> <span class="fu">c</span>(total_pop, n_docs)</span>
-<span id="cb10-3"><a></a>docs_general <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Non-doctors"</span>, <span class="st">"Doctors"</span>), <span class="at">each =</span> <span class="dv">3</span>)</span>
-<span id="cb10-4"><a></a></span>
-<span id="cb10-5"><a></a>docs_df_another <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(years, docs_general, pop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
 </section>
 <section class="slide level2">
 
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>docs_df_another <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb11-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop, <span class="at">fill =</span> docs_general) <span class="sc">+</span></span>
-<span id="cb11-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge2</span>(<span class="at">preserve =</span> <span class="st">"single"</span>)) <span class="sc">+</span></span>
-<span id="cb11-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Population"</span>) <span class="sc">+</span></span>
-<span id="cb11-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb11-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb11-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>docs_df_another <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop, <span class="at">fill =</span> docs_general) <span class="sc">+</span></span>
+<span id="cb4-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge2</span>(<span class="at">preserve =</span> <span class="st">"single"</span>)) <span class="sc">+</span></span>
+<span id="cb4-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Population"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb4-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-docs-as-p-population" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-docs-as-p-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-docs-as-p-population-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990."><img data-src="include/fig/fig-docs-as-p-population-1.png" width="672"></a>
+<a href="include/fig/fig-docs-as-p-population-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990."><img data-src="include/fig/fig-docs-as-p-population-1.png" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-docs-as-p-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990.
@@ -515,17 +470,34 @@ Figure&nbsp;5: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a hr
 <section id="why-are-stories-important" class="slide level2">
 <h2>Why are stories important?</h2>
 <ul>
-<li>Human memory fallible, often brittle</li>
-<li>Stories facilitate memory</li>
+<li class="fragment">Human memory fallible, often brittle</li>
+<li class="fragment">Stories facilitate memory</li>
+<li class="fragment">Enhance understanding</li>
+<li class="fragment">Can be shared by or with others</li>
 </ul>
+</section>
+<section id="on-schemas" class="slide level2">
+<h2>On schemas</h2>
+<div class="fragment">
+<div id="fig-schema-definition" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-schema-definition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/schema-definition.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: "><img data-src="../include/img/schema-definition.png" id="fig-schema-definition"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-schema-definition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
 <section id="schemas" class="slide level2">
 <h2>Schemas</h2>
 <ul>
-<li>Organize, categorize information</li>
-<li>Provide cognitive shortcuts</li>
-<li>Guide behavior and expectations</li>
-<li>Filter information</li>
+<li class="fragment">Organize, interpret, categorize, make sense of information</li>
+<li class="fragment">Provide cognitive shortcuts</li>
+<li class="fragment">Guide behavior and expectations</li>
+<li class="fragment">Filter information</li>
 </ul>
 <p>– <span class="citation" data-cites="Wikipedia-contributors2025-ad">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
 </section>
@@ -547,8 +519,167 @@ Figure&nbsp;5: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a hr
 <li>Cognitive psychologists: David Rumelhart <span class="citation" data-cites="Rumelhart2017-pc">(<a href="#/references" role="doc-biblioref" onclick="">Rumelhart 2017</a>)</span></li>
 </ul>
 </section>
+<section id="semantic-maps-as-visual-schemas" class="slide level2">
+<h2>Semantic maps as visual schemas</h2>
+<div id="fig-semantic-maps" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-semantic-maps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: "><img data-src="https://images.edrawsoft.com/articles/semantic-mapping/weather-concept-map.png" id="fig-semantic-maps" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-semantic-maps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</section>
 <section id="storytelling-with-data-1" class="slide level2">
 <h2>Storytelling with data</h2>
+<blockquote>
+<p>We aren’t naturally good at storytelling with data.</p>
+</blockquote>
+<p>– <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span></p>
+</section>
+<section id="take-home-lessons" class="slide level2">
+<h2>Take home lessons</h2>
+<ul>
+<li>Understand the context</li>
+<li>Choose an appropriate visual display</li>
+<li>Eliminate clutter</li>
+<li>Focus attention where you want it</li>
+<li>Think like a designer</li>
+<li>Tell a story</li>
+</ul>
+<p>– <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</p>
+</section>
+<section id="case-study-1-before" class="slide level2">
+<h2>Case study 1: Before</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/knafflic-case-01-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-01-before.png" style="width:75.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="case-study-1-after" class="slide level2">
+<h2>Case study 1: After</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/knafflic-case-01-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-01-after.png" class="quarto-figure quarto-figure-center" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+</figure>
+</div>
+<figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="case-2-before" class="slide level2">
+<h2>Case 2: Before</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/knafflic-case-02-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-02-before.png" style="width:85.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="case-2-after" class="slide level2">
+<h2>Case 2: After</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/knafflic-case-02-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-02-after.png" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="case-3-before" class="slide level2">
+<h2>Case 3: Before</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/knafflic-case-03-before.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-03-before.png" style="width:75.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="case-3-after" class="slide level2">
+<h2>Case 3: After</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/knafflic-case-03-after.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="@Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-case-03-after.png" style="width:65.0%" alt="Knaflic (2015) Chapter 1"></a></p>
+<figcaption><span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</figcaption>
+</figure>
+</div>
+</section>
+<section id="storyboarding" class="slide level2">
+<h2>Storyboarding</h2>
+<div id="fig-knafflic-storyboarding" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-knafflic-storyboarding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/knafflic-fig-1.2-storyboarding.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;8: @Knaflic2015-wq Chapter 1"><img data-src="../include/img/knafflic-fig-1.2-storyboarding.png" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-knafflic-storyboarding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-aspect-of-academic-paper-writing-like-storyboarding" class="slide level2">
+<h2>What aspect of academic paper writing like storyboarding?</h2>
+<ul>
+<li class="fragment">Outlines!</li>
+<li class="fragment">Plan your work; work your plan.</li>
+</ul>
+</section>
+<section id="make-outlinesstoryboards" class="slide level2">
+<h2>Make outlines/storyboards!</h2>
+<ul>
+<li class="fragment">Introduction
+<ul>
+<li class="fragment">Tell ’em what you’re going to tell them.</li>
+</ul></li>
+<li class="fragment">Body
+<ul>
+<li class="fragment">Tell ’em (what &amp; why)</li>
+</ul></li>
+<li class="fragment">Conclusion
+<ul>
+<li class="fragment">Tell ’em what you told ’em.</li>
+</ul></li>
+</ul>
+</section>
+<section id="take-home-lessons-1" class="slide level2">
+<h2>Take home lessons</h2>
+<ul>
+<li>Understand the context (who, what, how)
+<ul>
+<li>To whom are you communicating?</li>
+<li>What do they need to know or do?</li>
+<li>How will you communicate?</li>
+</ul></li>
+</ul>
+<p>– <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</p>
+</section>
+<section id="take-home-lessons-2" class="slide level2">
+<h2>Take home lessons</h2>
+<ul>
+<li>Choose an appropriate <em>visual display</em></li>
+<li><em>Eliminate clutter</em></li>
+<li><em>Focus attention where you want it</em></li>
+<li><em>Think like a designer</em></li>
+</ul>
+<p>– <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</p>
+</section>
+<section id="take-home-lessons-3" class="slide level2">
+<h2>Take home lessons</h2>
+<ul>
+<li>Tell a story
+<ul>
+<li>Characters</li>
+<li>Setting</li>
+<li>Conflict (&amp; resolution)</li>
+<li>Tone &amp; mood</li>
+</ul></li>
+</ul>
+<p>– <span class="citation" data-cites="Knaflic2015-wq">Knaflic (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span> Chapter 1</p>
 </section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
@@ -562,6 +693,9 @@ Figure&nbsp;5: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a hr
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-Comberg2010-mo" class="csl-entry" role="listitem">
 Comberg, David. 2010. <em>Kurt <span>V</span>onnegut on the Shapes of Stories</em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ&amp;t=83s">https://www.youtube.com/watch?v=oP3c1h8v2ZQ&amp;t=83s</a>.
+</div>
+<div id="ref-Knaflic2015-wq" class="csl-entry" role="listitem">
+Knaflic, Cole Nussbaumer. 2015. <em>Storytelling with Data</em>. John Wiliey &amp; Sons.
 </div>
 <div id="ref-Piaget2001-md" class="csl-entry" role="listitem">
 Piaget, Jean. 2001. <em>The Language and Thought of the Child</em>. Translated by Marjorie Gabain and Ruth Gabain. Routledge Classics. Routledge. <a href="https://www.google.com/books/edition/The_Language_and_Thought_of_the_Child/WYoEXQLGRLEC?hl=en">https://www.google.com/books/edition/The_Language_and_Thought_of_the_Child/WYoEXQLGRLEC?hl=en</a>.
@@ -795,6 +929,44 @@ Wikipedia contributors. 2025. <span>“Schema (Psychology).”</span> Wikimedia 
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
