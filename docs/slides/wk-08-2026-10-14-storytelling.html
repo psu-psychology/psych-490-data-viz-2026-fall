@@ -7,11 +7,14 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Rick Gilmore">
-  <title>PSYCH 490.007 – Work session: Making figures on your own</title>
+  <title>PSYCH 490.007 – Storytelling</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -98,7 +101,26 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -194,19 +216,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-answer.callout {
-    border-left-color: blue;
-  }
-  .reveal div.callout-answer.callout-style-default .callout-title {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\f00c' !important;
-    background-image: none;
-  }
   .reveal div.callout-question.callout {
     border-left-color: pink;
   }
@@ -220,6 +229,19 @@
     content: '\3f' !important;
     background-image: none;
   }
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
+    background-image: none;
+  }
   </style>
 </head>
 <body class="quarto-light">
@@ -227,7 +249,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Work session: Making figures on your own</h1>
+  <h1 class="title">Storytelling</h1>
   <p class="subtitle">PSY 490.007 Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -243,233 +265,317 @@ Rick Gilmore
 
 </section>
 <section>
-<section id="overview" class="title-slide slide level1 center">
-<h1>Overview</h1>
+<section id="prelude" class="title-slide slide level1 center">
+<h1>Prelude</h1>
 
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><a href="../exercises/ex-04-making-figs-ggplot.html">Exercise 04</a> due this Friday</li>
+<li><a href="../exercises/ex-04-making-figs-ggplot.html">Exercise 04</a> due Friday</li>
+<li><a href="../exercises/final-project.html">Final Project proposal</a> due Friday</li>
 </ul>
 </section>
 <section id="last-time" class="slide level2">
 <h2>Last time…</h2>
 <ul>
-<li>Work session: Visualizing sports data</li>
+<li>Tufte on critiquing figures</li>
+</ul>
+<div id="fig-tufte-p75" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-tufte-p75-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/tufte-p75.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: @Tufte2001-cb p.&nbsp;75"><img data-src="../include/img/tufte-p75.png" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tufte-p75-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <span class="citation" data-cites="Tufte2001-cb">Tufte (<a href="#/references" role="doc-biblioref" onclick="">2001</a>)</span> p.&nbsp;75
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn</h2>
+<ul>
+<li>What sort of data picture (figure) would be less misleading?</li>
 </ul>
 </section>
-<section id="today" class="slide level2">
-<h2>Today</h2>
+<section id="an-alternative" class="slide level2">
+<h2>An alternative</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>p_family_practice <span class="ot">&lt;-</span> <span class="fu">c</span>(.<span class="dv">27</span>, .<span class="dv">16</span>, .<span class="dv">12</span>)</span>
+<span id="cb1-2"><a></a>year <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1964</span>, <span class="dv">1975</span>, <span class="dv">1990</span>)</span>
+<span id="cb1-3"><a></a>ratio_to_pop <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2247</span>, <span class="dv">3167</span>, <span class="dv">4232</span>)</span>
+<span id="cb1-4"><a></a>n_docs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">8023</span>, <span class="dv">6694</span>, <span class="dv">6212</span>)</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a>docs_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(year, p_family_practice, ratio_to_pop, n_docs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>docs_df <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">factor</span>(year)) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, p_family_practice) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="include/fig/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="include/fig/unnamed-chunk-2-1.png" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>docs_df <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">factor</span>(year)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, n_docs) <span class="sc">+</span></span>
+<span id="cb7-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><a href="include/fig/unnamed-chunk-3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="include/fig/unnamed-chunk-3-1.png" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="even-better" class="slide level2">
+<h2>Even better?</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>n_family <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>p_family_practice</span>
+<span id="cb8-2"><a></a>n_non_family <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">-</span> p_family_practice)</span>
+<span id="cb8-3"><a></a>n_docs_specialty <span class="ot">&lt;-</span> <span class="fu">c</span>(n_family, n_non_family)</span>
+<span id="cb8-4"><a></a>years <span class="ot">&lt;-</span> <span class="fu">rep</span>(year, <span class="dv">2</span>)</span>
+<span id="cb8-5"><a></a>specialty <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Family Practice"</span>, <span class="st">"Non-Family Practice"</span>), <span class="at">each =</span> <span class="fu">length</span>(year))</span>
+<span id="cb8-6"><a></a></span>
+<span id="cb8-7"><a></a>docs_df_new <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(years, specialty, <span class="at">n_docs =</span> n_docs_specialty)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>docs_df_new <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> n_docs, <span class="at">fill =</span> specialty) <span class="sc">+</span></span>
+<span id="cb9-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Doctors"</span>) <span class="sc">+</span></span>
+<span id="cb9-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb9-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-docs-by-specialty" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-docs-by-specialty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-docs-by-specialty-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;2: Doctors in California by speciality 1964-1990."><img data-src="include/fig/fig-docs-by-specialty-1.png" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-docs-by-specialty-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Doctors in California by speciality 1964-1990.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="another-alternative" class="slide level2">
+<h2>Another alternative</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>total_pop <span class="ot">&lt;-</span> n_docs<span class="sc">*</span>ratio_to_pop</span>
+<span id="cb10-2"><a></a>pop <span class="ot">&lt;-</span> <span class="fu">c</span>(total_pop, n_docs)</span>
+<span id="cb10-3"><a></a>docs_general <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Non-doctors"</span>, <span class="st">"Doctors"</span>), <span class="at">each =</span> <span class="dv">3</span>)</span>
+<span id="cb10-4"><a></a></span>
+<span id="cb10-5"><a></a>docs_df_another <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(years, docs_general, pop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>docs_df_another <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">mutate</span>(<span class="at">years =</span> <span class="fu">factor</span>(years)) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop, <span class="at">fill =</span> docs_general) <span class="sc">+</span></span>
+<span id="cb11-5"><a></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge2</span>(<span class="at">preserve =</span> <span class="st">"single"</span>)) <span class="sc">+</span></span>
+<span id="cb11-6"><a></a>  <span class="fu">ylab</span>(<span class="st">"Population"</span>) <span class="sc">+</span></span>
+<span id="cb11-7"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb11-8"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb11-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-docs-as-p-population" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-docs-as-p-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-docs-as-p-population-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990."><img data-src="include/fig/fig-docs-as-p-population-1.png" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-docs-as-p-population-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Doctors vs.&nbsp;non-doctors in California as a fraction of the total population 1964-1990.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="todays-topics" class="slide level2">
+<h2>Today’s topics</h2>
 <ul>
-<li>Work session: Making figures on your own
-<ul>
-<li>Preparation for <a href="../exercises/ex-04-making-figs-ggplot.html">Exercise 04</a></li>
-</ul></li>
+<li>Storytelling with data</li>
 </ul>
 </section></section>
 <section>
-<section id="making-figures-on-your-own" class="title-slide slide level1 center">
-<h1>Making figures on your own</h1>
+<section id="storytelling-with-data" class="title-slide slide level1 center">
+<h1>Storytelling with data</h1>
 
 </section>
-<section id="make-a-new-rstudio-project" class="slide level2">
-<h2>Make a new RStudio project</h2>
-<ul>
-<li>Call it <code>psych-490-ex-04</code> or similar</li>
-</ul>
-</section>
-<section id="make-a-quarto-document-inside-the-project" class="slide level2">
-<h2>Make a Quarto document inside the project</h2>
-<ul>
-<li>Call it <code>ex-04-&lt;last_name&gt;-&lt;first_name&gt;.qmd</code> or similar</li>
-<li>Add an <code>author</code> section to the header</li>
-<li>Add a <code>date</code> to the header</li>
-<li>Add the following code to the header so that your rendered HTML includes your figures:</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb1-2"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb1-3"><a></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
-<ul>
-<li>Add <code>About</code> and <code>Setup</code> sections with headers
-<ul>
-<li>Populate these sections with relevant text</li>
-</ul></li>
-<li>Add an R code chunk to run your setup commands</li>
-</ul>
-</section>
-<section id="section-1" class="slide level2 scrollable">
-<h2></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown rmarkdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a><span class="co">---</span></span>
-<span id="cb2-2"><a></a><span class="an">title:</span><span class="co"> "psych-490-ex-04"</span></span>
-<span id="cb2-3"><a></a><span class="an">author:</span><span class="co"> "Rick Gilmore"</span></span>
-<span id="cb2-4"><a></a><span class="an">date:</span><span class="co"> today</span></span>
-<span id="cb2-5"><a></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb2-6"><a></a><span class="co">  html:</span></span>
-<span id="cb2-7"><a></a><span class="co">    embed-resources: true</span></span>
-<span id="cb2-8"><a></a><span class="co">---</span></span>
-<span id="cb2-9"><a></a></span>
-<span id="cb2-10"><a></a><span class="fu">## About</span></span>
-<span id="cb2-11"><a></a></span>
-<span id="cb2-12"><a></a><span class="fu">## Setup</span></span>
-<span id="cb2-13"><a></a></span>
-<span id="cb2-14"><a></a><span class="in">````{r}</span></span>
-<span id="cb2-15"><a></a></span>
-<span id="cb2-16"><a></a><span class="in">````</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<ul>
-<li>Save and render the document so far.</li>
-<li>Once it renders, add placeholder sections as follows:
-<ul>
-<li><code>Load dataset</code></li>
-<li><code>Figure 1</code></li>
-<li><code>Figure 2</code></li>
-<li><code>Figure 3</code></li>
-<li><code>Discussion and Conclusion</code></li>
-<li><code>Resources</code></li>
-</ul></li>
-<li>Save and render again</li>
-</ul>
-</section>
-<section id="choose-your-dataset" class="slide level2">
-<h2>Choose your dataset</h2>
-<ul>
-<li>You might try the <code>data()</code> command to see what is available inside R.</li>
-<li>If you want to use the data in <code>nflreadr</code>, you will need to add <code>library(nflreadr</code>) to your R code in your <code>Setup</code> section.</li>
-</ul>
-</section>
-<section id="load-your-dataset" class="slide level2">
-<h2>Load your dataset</h2>
-<ul>
-<li>Some datasets are available to you without doing anything special, e.g., <em>mtcars</em>.</li>
-<li>Some datasets, e.g., <em>diamonds</em>, are available when you load the R package that contains it, using <code>library(ggplot2)</code></li>
-<li>If you use the <code>nflreadr</code> package, you will need to use <code>nflreadr::load_</code> function. See the <a href="../tutorials/tutorial-visualizing-sports-data.html">tutorial</a>.</li>
-</ul>
-</section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="callout callout-important callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Explain why</strong></p>
-</div>
-<div class="callout-content">
-<p>A best practice to adopt is to explain your choices. So, if you use a dataset built in to R, say that’s what you did. If you choose a package that must be loaded from another source, explain that.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="make-your-first-figure" class="slide level2">
-<h2>Make your first figure</h2>
-<ul>
-<li>Decide on a variable or variables to plot</li>
-<li>Describe in a short paragraph under your <code>Figure 1 header</code> what the plot should show you or what question the plot should help you answer.</li>
-<li>Add an R code chunk and write the R code to make the plot.</li>
-</ul>
-</section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown quarto number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a></span>
-<span id="cb3-2"><a></a><span class="fu">## Figure 1</span></span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a>In this figure, I will plot the <span class="dt">&lt;</span><span class="kw">variable</span><span class="dt">&gt;</span> from the <span class="dt">&lt;</span><span class="kw">dataset</span><span class="dt">&gt;</span> dataset.</span>
-<span id="cb3-5"><a></a>The variable is continuous, so I will use a <span class="dt">&lt;</span><span class="kw">plot_type</span><span class="dt">&gt;</span> that should show me...</span>
-<span id="cb3-6"><a></a></span>
-<span id="cb3-7"><a></a><span class="in">```{r}</span></span>
-<span id="cb3-8"><a></a><span class="co">#| label: fig-01</span></span>
-<span id="cb3-9"><a></a>dataset <span class="sc">|&gt;</span></span>
-<span id="cb3-10"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb3-11"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> variable) <span class="sc">+</span></span>
-<span id="cb3-12"><a></a>  </span>
-<span id="cb3-13"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Figure numbering is optional</strong></p>
-</div>
-<div class="callout-content">
-<p>Note that the code chunk on the previous page added <code>#| label: fig-01</code> before the actual code.</p>
-<p>This tells Quarto to add a figure number automatically.</p>
-<p>If you get this to work, bravo!</p>
-<p>The main benefit is that you can now write <code>@fig-01</code> in your text, and Quarto will create a link to the figure.</p>
-<p>So, your <code>Figure 1</code> section could look like the following.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown quarto number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a></span>
-<span id="cb4-2"><a></a><span class="fu">## Figure 1</span></span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a>In @fig-01, I will plot the <span class="dt">&lt;</span><span class="kw">variable</span><span class="dt">&gt;</span> from the <span class="dt">&lt;</span><span class="kw">dataset</span><span class="dt">&gt;</span> dataset.</span>
-<span id="cb4-5"><a></a>The variable is continuous, so I will use a <span class="dt">&lt;</span><span class="kw">plot_type</span><span class="dt">&gt;</span> that should show me...</span>
-<span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a><span class="in">```{r}</span></span>
-<span id="cb4-8"><a></a><span class="co">#| label: fig-01</span></span>
-<span id="cb4-9"><a></a>dataset <span class="sc">|&gt;</span></span>
-<span id="cb4-10"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb4-11"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> variable) <span class="sc">+</span></span>
-<span id="cb4-12"><a></a>  </span>
-<span id="cb4-13"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="what-is-a-story" class="slide level2">
+<h2>What is a story?</h2>
 <div class="fragment">
-<ul>
-<li>I’m trying very hard not to do your work for you here, so I won’t give you code that you might be tempted to just copy and paste.</li>
-</ul>
+<div id="fig-what-is-a-story" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-what-is-a-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/what-is-a-story.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;4: https://literaryterms.net/story/"><img data-src="../include/img/what-is-a-story.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-what-is-a-story-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: https://literaryterms.net/story/
+</figcaption>
+</figure>
+</div>
 </div>
 </section>
-<section id="render-figure-1" class="slide level2">
-<h2>Render Figure 1</h2>
+<section id="components-of-stories" class="slide level2">
+<h2>Components of stories?</h2>
 <ul>
-<li>Save and render your Quarto document</li>
-<li>Kalvin and I will check in with you</li>
-<li>If you successfully created Figure 1, then provide some brief commentary about it</li>
+<li class="fragment">Character</li>
+<li class="fragment">Setting</li>
+<li class="fragment">Plot</li>
+<li class="fragment">Conflict (&amp; resolution)</li>
+<li class="fragment">Theme</li>
+<li class="fragment">Tone &amp; mood</li>
+<li class="fragment">Point of view</li>
 </ul>
 </section>
-<section id="section-7" class="slide level2">
-<h2></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown quarto number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>In @fig-01, I will plot the <span class="dt">&lt;</span><span class="kw">variable</span><span class="dt">&gt;</span> from the <span class="dt">&lt;</span><span class="kw">dataset</span><span class="dt">&gt;</span> dataset.</span>
-<span id="cb5-2"><a></a>The variable is continuous, so I will use a <span class="dt">&lt;</span><span class="kw">plot_type</span><span class="dt">&gt;</span> that should show me...</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="in">```{r}</span></span>
-<span id="cb5-5"><a></a><span class="co">#| label: fig-01</span></span>
-<span id="cb5-6"><a></a>dataset <span class="sc">|&gt;</span></span>
-<span id="cb5-7"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb5-8"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> variable) <span class="sc">+</span></span>
-<span id="cb5-9"><a></a>  </span>
-<span id="cb5-10"><a></a><span class="in">```</span></span>
-<span id="cb5-11"><a></a></span>
-<span id="cb5-12"><a></a>@fig-01 shows that the variable is...</span>
-<span id="cb5-13"><a></a>The figure could be more effective if...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section></section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap-up</h1>
-
+<section id="what-makes-a-good-one" class="slide level2">
+<h2>What makes a <em>good</em> one?</h2>
+<div id="fig-vonnegut-shapes-of-stories" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-vonnegut-shapes-of-stories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe width="1280" height="450" src="https://www.youtube.com/embed/oP3c1h8v2ZQ?si=cV1JwXAblZ-ApZMJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-vonnegut-shapes-of-stories-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: <span class="citation" data-cites="Comberg2010-mo">Comberg (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span>
+</figcaption>
+</figure>
+</div>
 </section>
-
+<section id="what-makes-a-good-one-1" class="slide level2">
+<h2>What makes a <em>good</em> one?</h2>
+</section>
+<section id="why-are-stories-important" class="slide level2">
+<h2>Why are stories important?</h2>
+<ul>
+<li>Human memory fallible, often brittle</li>
+<li>Stories facilitate memory</li>
+</ul>
+</section>
+<section id="schemas" class="slide level2">
+<h2>Schemas</h2>
+<ul>
+<li>Organize, categorize information</li>
+<li>Provide cognitive shortcuts</li>
+<li>Guide behavior and expectations</li>
+<li>Filter information</li>
+</ul>
+<p>– <span class="citation" data-cites="Wikipedia-contributors2025-ad">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span></p>
+</section>
+<section id="schema-types" class="slide level2">
+<h2>Schema types</h2>
+<ul>
+<li>Events (scripts)</li>
+<li>Role</li>
+<li>Self</li>
+<li>Social</li>
+</ul>
+</section>
+<section id="proponents" class="slide level2">
+<h2>Proponents</h2>
+<ul>
+<li>Developmental psychologists: Piaget <span class="citation" data-cites="Piaget2001-md">(<a href="#/references" role="doc-biblioref" onclick="">Piaget 2001</a>)</span></li>
+<li>Gestalt psychologists</li>
+<li>Neurologists: Frederic Bartlett, Henry Head</li>
+<li>Cognitive psychologists: David Rumelhart <span class="citation" data-cites="Rumelhart2017-pc">(<a href="#/references" role="doc-biblioref" onclick="">Rumelhart 2017</a>)</span></li>
+</ul>
+</section>
+<section id="storytelling-with-data-1" class="slide level2">
+<h2>Storytelling with data</h2>
+</section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
 <h1>Resources</h1>
 
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Comberg2010-mo" class="csl-entry" role="listitem">
+Comberg, David. 2010. <em>Kurt <span>V</span>onnegut on the Shapes of Stories</em>. You<span>T</span>ube. <a href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ&amp;t=83s">https://www.youtube.com/watch?v=oP3c1h8v2ZQ&amp;t=83s</a>.
+</div>
+<div id="ref-Piaget2001-md" class="csl-entry" role="listitem">
+Piaget, Jean. 2001. <em>The Language and Thought of the Child</em>. Translated by Marjorie Gabain and Ruth Gabain. Routledge Classics. Routledge. <a href="https://www.google.com/books/edition/The_Language_and_Thought_of_the_Child/WYoEXQLGRLEC?hl=en">https://www.google.com/books/edition/The_Language_and_Thought_of_the_Child/WYoEXQLGRLEC?hl=en</a>.
+</div>
+<div id="ref-Rumelhart2017-pc" class="csl-entry" role="listitem">
+Rumelhart, David E. 2017. <span>“Schemata: The Building Blocks of Cognition.”</span> In <em>Theoretical Issues in Reading Comprehension</em>, 1st Edition. Routledge. <a href="https://doi.org/10.4324/9781315107493-4">https://doi.org/10.4324/9781315107493-4</a>.
+</div>
+<div id="ref-Tufte2001-cb" class="csl-entry" role="listitem">
+Tufte, Edward R. 2001. <em>The <span>V</span>isual <span>D</span>isplay of <span>Q</span>uantitative <span>I</span>nformation</em>. Graphics Pr.
+</div>
+<div id="ref-Wikipedia-contributors2025-ad" class="csl-entry" role="listitem">
+Wikipedia contributors. 2025. <span>“Schema (Psychology).”</span> Wikimedia Foundation, Inc., July 10. <a href="https://en.wikipedia.org/wiki/Schema_(psychology)">https://en.wikipedia.org/wiki/Schema_(psychology)</a>.
+</div>
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -859,6 +965,38 @@ Rick Gilmore
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

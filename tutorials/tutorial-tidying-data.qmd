@@ -20,6 +20,15 @@ suppressPackageStartupMessages(library(dplyr))
 suppressPackageStartupMessages(library(readr))
 ```
 
+If you are following this tutorial, you will want to do the following:
+
+- Create an RStudio project called `tutorial-tidying-data` or something similar.
+- Create a Quarto document inside the project.
+  - Modify the `title` in the document header.
+  - Add `author`, and `date` fields in the document header.
+  - Optionally add parameters so that your HTML document is self-contained.
+  - Add `About` and `Setup` sections to your main document and fill them with content, especially the R chunk you will use to load the required packages like *ggplot2*, *readr*, and *dplyr* using `library(ggplot2)` etc.
+
 ## Background
 
 Even when a data analyst controls how some dataset is generated, it's essential to transform it into a form that can be easily plotted using *ggplot2*.
@@ -35,7 +44,7 @@ The major steps involved are as follows:
 - Visualizing
   
 We will do this with some survey data that Dr. Gilmore created.
-For Exercise 05, you'll do the same process with the data you created in Exercise 03.
+For [Exercise 05](../exercises/ex-05-tidy-data.qmd), you'll do the same process with the data you created in [Exercise 03](../exercises/ex-03-making-data.qmd).
 
 The response form for the survey is here: <https://docs.google.com/forms/d/e/1FAIpQLSdlQvk6kFl6pw1LPpvL_iB-CrLXyRuinuSTl1MKFgJ4TDuH3g/viewform?usp=header>.
 If you like the shortened form Google provides, it is here: <https://forms.gle/add8aEUUjMowesaQ6>.
@@ -66,7 +75,9 @@ The precise file name depends on how many times you've downloaded this file, but
 ```{r}
 #| label: show-downloaded-file-name
 
-list.files(path = "~/Downloads", pattern = "PSYCH 490.007", full.names = TRUE)
+list.files(path = "~/Downloads",
+           pattern = "PSYCH 490.007",
+           full.names = TRUE)
 ```
 
 ::: {.callout-note}
@@ -83,8 +94,16 @@ That's how the file name starts.
 :::
 
 Now that we've confirmed we have downloaded a `.csv` file, we can drag it to the folder where we're doing our work.
-I suggest creating a `csv` folder for your data.
+I suggest creating a `data/csv` folder for your data.
 Make a directory for the data and copy the file there now.
+
+If you want to use R for this, the following code should work.
+
+```{r}
+#| eval: false
+dir.create(file.path("data"))
+dir.create(file.path("data", "csv"))
+```
 
 ### Import into R
 
@@ -94,7 +113,7 @@ Call the data `survey_df`.
 
 ```{r}
 #| label: import-csv
-survey_df <- read_csv("include/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv", show_col_types = FALSE)
+survey_df <- read_csv("data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv", show_col_types = FALSE)
 ```
 
 ::: {.callout-important}
@@ -196,7 +215,7 @@ survey_dd
 Let's quit while we're ahead and export this as a `.csv` in the same directory where our raw data came from, but with a shorter and human-readable name.
 
 ```{r}
-write_csv(survey_dd, file = "include/csv/survey_data_dictionary.csv")
+write_csv(survey_dd, file = "data/csv/survey_data_dictionary.csv")
 ```
 
 Okay, back to data cleaning the main dataset.
@@ -261,6 +280,14 @@ survey_cleaned_df |>
   theme_classic()
 ```
 
+::: {.callout-important}
+## Make this better
+
+What would make this figure more informative and compelling?
+
+How about sorting the bars, adding some color, adding a better title?
+:::
+
 In @fig-swallow-speed-histogram, we plot the `swallow_speed` variable.
 
 ```{r}
@@ -276,6 +303,9 @@ survey_cleaned_df |>
 
 This specific figure is not very appealing or informative because we have too few data points for a histogram.
 But it shows how we can go from raw data to some visualizations in just a few steps.
+When you make figures from your own data in Exercise 05, you may discover that some datasets don't work especially well with certain figure types.
+This is why I recommend using Quarto and code chunks to make different versions of your figures.
+It's a way to build upon previous work *AND* keep track of the history of your exploration.
 
 ## Advanced Gathering
 

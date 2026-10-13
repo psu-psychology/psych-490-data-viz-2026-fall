@@ -1,0 +1,186 @@
+---
+title: "Storytelling"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+- [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd) due Friday
+- [Final Project proposal](../exercises/final-project.qmd) due Friday
+
+## Last time...
+
+- Tufte on critiquing figures
+
+![@Tufte2001-cb p. 75](../include/img/tufte-p75.png){#fig-tufte-p75 width="45%"}
+
+## Your turn
+
+- What sort of data picture (figure) would be less misleading?
+
+## An alternative
+
+```{r}
+#| echo: true
+p_family_practice <- c(.27, .16, .12)
+year <- c(1964, 1975, 1990)
+ratio_to_pop <- c(2247, 3167, 4232)
+n_docs <- c(8023, 6694, 6212)
+
+docs_df <- data.frame(year, p_family_practice, ratio_to_pop, n_docs)
+```
+
+---
+
+```{r}
+library(ggplot2)
+library(dplyr)
+docs_df |>
+  mutate(year = factor(year)) |>
+  ggplot() +
+  aes(x = year, p_family_practice) +
+  geom_bar(stat = "identity")
+```
+
+---
+
+```{r}
+docs_df |>
+  mutate(year = factor(year)) |>
+  ggplot() +
+  aes(x = year, n_docs) +
+  geom_bar(stat = "identity")
+```
+
+## Even better?
+
+```{r}
+#| echo: true
+
+n_family <- n_docs*p_family_practice
+n_non_family <- n_docs*(1 - p_family_practice)
+n_docs_specialty <- c(n_family, n_non_family)
+years <- rep(year, 2)
+specialty <- rep(c("Family Practice", "Non-Family Practice"), each = length(year))
+
+docs_df_new <- data.frame(years, specialty, n_docs = n_docs_specialty)
+```
+
+---
+
+```{r}
+#| label: fig-docs-by-specialty
+#| fig-cap: "Doctors in California by speciality 1964-1990."
+#| echo: true
+docs_df_new |>
+  mutate(years = factor(years)) |>
+  ggplot() +
+  aes(x = years, y = n_docs, fill = specialty) +
+  geom_bar(stat = "identity") +
+  ylab("Doctors") +
+  xlab("") +
+  theme_classic() +
+  theme(legend.title = element_blank())
+```
+
+## Another alternative
+
+```{r}
+total_pop <- n_docs*ratio_to_pop
+pop <- c(total_pop, n_docs)
+docs_general <- rep(c("Non-doctors", "Doctors"), each = 3)
+
+docs_df_another <- data.frame(years, docs_general, pop)
+```
+
+---
+
+```{r}
+#| label: fig-docs-as-p-population
+#| fig-cap: "Doctors vs. non-doctors in California as a fraction of the total population 1964-1990."
+#| echo: true
+docs_df_another |>
+  mutate(years = factor(years)) |>
+  ggplot() +
+  aes(x = years, y = pop, fill = docs_general) +
+  geom_bar(stat = "identity", position = position_dodge2(preserve = "single")) +
+  ylab("Population") +
+  xlab("") +
+  theme_classic() +
+  theme(legend.title = element_blank())
+```
+
+## Today's topics
+
+- Storytelling with data
+
+# Storytelling with data
+
+## What is a story?
+
+::: {.fragment}
+::: {#fig-what-is-a-story}
+![](../include/img/what-is-a-story.png)
+
+https://literaryterms.net/story/
+:::
+
+:::
+
+## Components of stories?
+
+::: {.incremental}
+- Character
+- Setting
+- Plot
+- Conflict (& resolution)
+- Theme
+- Tone & mood
+- Point of view
+:::
+
+## What makes a *good* one?
+
+::: {#fig-vonnegut-shapes-of-stories}
+<iframe width="1280" height="450" src="https://www.youtube.com/embed/oP3c1h8v2ZQ?si=cV1JwXAblZ-ApZMJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+@Comberg2010-mo
+:::
+
+## What makes a *good* one?
+
+## Why are stories important?
+
+- Human memory fallible, often brittle
+- Stories facilitate memory
+
+## Schemas
+
+- Organize, categorize information
+- Provide cognitive shortcuts
+- Guide behavior and expectations
+- Filter information
+
+-- @Wikipedia-contributors2025-ad
+
+## Schema types
+
+- Events (scripts)
+- Role
+- Self
+- Social
+
+## Proponents
+
+- Developmental psychologists: Piaget [@Piaget2001-md]
+- Gestalt psychologists
+- Neurologists: Frederic Bartlett, Henry Head
+- Cognitive psychologists: David Rumelhart [@Rumelhart2017-pc]
+
+## Storytelling with data
+
+# Resources
+
+## References

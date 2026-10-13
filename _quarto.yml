@@ -2,6 +2,8 @@ project:
   type: website
   output-dir: "docs"
   lib-dir: site_libs
+  render:
+    - "*.qmd"
 
 website:
   title: "PSYCH 490.007"
@@ -60,6 +62,8 @@ website:
         href: slides/wk-07-2026-10-09-work-session.qmd
       - text: "Wk 08 • Mon Oct 12"
         href: slides/wk-08-2026-10-12-critiquing-figs.qmd
+      - text: "Wk 08 • Wed Oct 14"
+        href: slides/wk-08-2026-10-14-storytelling.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

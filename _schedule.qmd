@@ -227,7 +227,7 @@
   - @Knaflic2015-wq, pp. 33-69, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922725)
 - *Skim*: @Woodside2008-yv, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922828)
 - [Assigned]{.green_assigned}: [Exercise-05](exercises/ex-05-tidy-data.qmd)
-- [Slides](404.qmd)
+- [Slides](slides/wk-08-2026-10-14-storytelling.qmd)
 
 ### Fri, Oct 16 {-}
 
@@ -235,7 +235,6 @@
 
 - {{< fa calendar >}} *Due* [Exercise-04](exercises/ex-04-making-figs-ggplot.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18448438) |
 - {{< fa calendar >}} *Due* [Final Project](exercises/final-project.qmd) proposal | [{{< fa folder >}} *Canvas dropbox* ](https://psu.instructure.com/courses/2484925/assignments/18448439)
-- Assigned [Exercise-05](exercises/ex-05-tidy-data.qmd)
 - [Tutorial](tutorials/tutorial-tidying-data.qmd)
 
 ## Week 09 {- #week-09}
