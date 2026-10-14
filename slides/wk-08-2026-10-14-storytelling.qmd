@@ -106,12 +106,13 @@ docs_df_another <- data.frame(years, docs_general, pop)
 #| fig-cap: "California population 1964-1990."
 #| echo: true
 docs_df_another |>
-  mutate(pop_millions = pop/1e6) |>
+  mutate(pop_millions = round(pop/1e6, digits = 2)) |>
   filter(docs_general == "Non-doctors") |>
   ggplot() +
   aes(x = years, y = pop_millions) +
-  geom_point() +
-  geom_line() +
+  geom_point(color = "blue", size = 2) +
+  geom_line(color = "blue") +
+  geom_text(aes(label = pop_millions), vjust = -1, color = "blue") +
   ylab("Population (M)") +
   xlab("") +
   ylim(0, 30) +
@@ -130,8 +131,9 @@ docs_df_another |>
   filter(docs_general == "Doctors") |>
   ggplot() +
   aes(x = years, y = pop) +
-  geom_point() +
-  geom_line() +
+  geom_point(color = "red", size = 2) +
+  geom_line(color = "red") +
+  geom_text(aes(label = pop), vjust = -1, color = "red") +
   ylab("Doctors") +
   xlab("") +
   ylim(0, 10000) +
