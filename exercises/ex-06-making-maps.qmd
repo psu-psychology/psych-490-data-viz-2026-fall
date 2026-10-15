@@ -1,0 +1,34 @@
+---
+title: "Exercise 06"
+subtitle: "Oh, the place you will go!"
+format: html
+---
+
+::: {.callout-warning}
+This page is a under construction.
+:::
+
+## Dates {-}
+
+## Goals {-}
+
+1. To make use of several R packages that make it easy to create data-informed maps.
+
+## Assignment {-}
+
+0. Create a Quarto document where you will document your work.
+  - The document should have an "About" and "Setup" sections with suitable text and R code that explains what you're doing and why.
+  - Create "Making Data" and "Map-making" headers for the sections that document your work described below.
+1. Make a data frame with four cities you have enjoyed visiting or living in and four cities you hope to visit someday.
+  - Your data frame should have the following variables: `city`, `lat`, `lon`, `status`.
+  - The `city` variable should contain the names of the cities; e.g., `city = c("Pittsburgh", "State College")` would be the start of my own list.
+  - The `lat` and `lon` variables are the *decimal* latitude and longitude values for these locations. There are many ways to find these, including Google maps^[Right click on a location and copy the decimal latitude and longitude from the window that pops up.]. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: `lat <- c(38.363328856857876)` and `lon <- c(, -75.61075873207025)`. Remember that your latitude and longitude values need to line up with your city names.
+  - The `status` variable should contain a value for each city such as "lived_in", "hope_to_visit". I would start this for my own cities as follows: `status <- c("lived_in", "lived_in").
+  - If you follow the pattern above, then your data frame could be created as follows: `my_travels <- data.frame(city, lat, lon, status)`.
+2. Make a map of these locations using the *sf*, *rnaturalearth*, *rnaturalearthdata*, *ggplot2*, and *dplyr* packages.
+  - Map the color or shape of the points on your plot to the `status` variable.
+3. Create a short "Discussion & Conclusions" section where you comment on the exercise. What did you learn? Can you see other situations where you might use this workflow?
+4. Tips
+    - Make sure to add `embed-resources: true` into the header of your Quarto document.
+    - Submit the `.html` file.
+    - Make sure that your file has a suitable name, e.g., `psych-490.007-2026-ex-06-<last_name>-<first_name>.html`.

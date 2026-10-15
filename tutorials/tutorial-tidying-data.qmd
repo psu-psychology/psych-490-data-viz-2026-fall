@@ -123,7 +123,7 @@ If you pause your typing after you type the first few characters of the path to 
 
 In fact, type-ahead helps in all sorts of ways.
 
-Slow down and enjoy the good life!
+Slow down, let the computer do more work, and enjoy the good life!
 
 :::
 
@@ -212,6 +212,7 @@ survey_dd$data_type <- data_type
 survey_dd$comments <- comments
 survey_dd
 ```
+
 Let's quit while we're ahead and export this as a `.csv` in the same directory where our raw data came from, but with a shorter and human-readable name.
 
 ```{r}
@@ -261,7 +262,65 @@ Isn't the one with shorter names easier to handle?
 ### Further cleaning
 
 We have two variables we could plot right now, `name`, and `swallow_speed`.
-I'm going to do that next and come back to cleaning the date and date/timestamps later on.
+In the section [below](#visualizing) we create simple visualizations of these variables.
+
+### Alternative method
+
+If you don't want to make a data dictionary, there is another way to rename variables in a data frame.
+We use a function from the *dplyr* package called `rename()`.
+
+First, make sure that you have installed *dplyr*.
+In your R console, run `install.packages("dplyr")`.
+Then, load the package by adding `library(dplyr)` to your setup section R chunk.
+
+Now, we're ready to use `rename()`.
+
+In the code below, we "pipe" (`|>`) the original survey data (`survey_df`) to the `rename()` function, then assign (`<-`) the output to a new data frame called `survey_df_renamed`.
+Notice that the `rename()` function takes a data frame and returns a new data frame with renamed columns.
+The `rename()` function also allows you to specify new column names using a formula-like syntax, such as `new_name = old_name`.
+Here, because our old names contain spaces, we surround them with back ticks so that *dplyr* will understand.
+We can rename multiple variables using the same command if we separate each `new_name = \`old name\`` by a comma.
+
+::: {.callout-important}
+## Expert tip: Use code formatting
+
+RStudio will reformat your code for you to make it more human readable.
+
+Select the section of code you want to reformat, then select the "Reformat section" command from the RStudio "Code" menu.
+
+:::
+
+```{r}
+#| label: use-dplyr-rename
+#| echo: true
+#| code-fold: false
+#| 
+survey_df_renamed <- survey_df |>
+  rename(
+    timestamp = `Timestamp`,
+    name = `What is your name?`,
+    swallow_speed = `What is the air speed of a fully laden swallow (in m/s)?`,
+    favorite_date = `What is your favorite date (month, day, year)?`
+  )
+
+survey_df_renamed
+```
+
+Notice that this gives us the same result as before.
+
+::: {.callout-note}
+## What technique to use when?
+
+Should you create a data dictionary and use the `short_name` field to reassign new names to your original data frame, or should you use the `dplyr::rename()` function we just demonstrated? 
+As with many (most?) things in life, the answer is: It depends.
+I use both.
+
+Creating a data dictionary is a best practice for organizing and documenting your data, especially when working with complex datasets or collaborating with others.
+However, you may just want to rename variables and get on with your work.
+
+For work in this class, especially on [Exercise 05](../exercises/ex-05-tidy-data.qmd), you decide.
+Maybe try the `rename()` function for this tutorial but snag the extra credit points for Exercise 05 by making a data dictionary.
+:::
 
 ## Visualizing
 

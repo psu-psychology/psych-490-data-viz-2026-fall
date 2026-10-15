@@ -1,0 +1,124 @@
+---
+title: "_mapmaking"
+---
+
+## Install & load packages
+
+```{r}
+library(sf)
+library(ggplot2)
+library(rnaturalearth)
+library(readr)
+library(dplyr)
+
+source("../R/strip_lat_lon_fr_pt.R")
+```
+
+## Map with coordinates: World
+
+```{r}
+#| label: fetch-world-map
+# Fetch world map data as an 'sf' object
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Plot the map
+ggplot(data = world) +
+  geom_sf()
+```
+
+## Map three cities
+
+```{r}
+#| label: plot-basic-map
+#| 
+# A standard data frame with coordinates
+cities_df <- data.frame(
+  city = c("New York", "Paris", "Tokyo"),
+  lon = c(-74.0060, 2.3522, 139.6503),
+  lat = c(40.7128, 48.8566, 35.6762)
+)
+
+# Convert to an sf object (4326 is the standard GPS CRS, WGS84)
+cities_sf <- st_as_sf(cities_df, coords = c("lon", "lat"), crs = 4326)
+
+# Layer the points over the base map
+ggplot() +
+  geom_sf(data = world, fill = "antiquewhite", color = "gray80") +
+  geom_sf(data = cities_sf, color = "red", size = 3) +
+  coord_sf(xlim = c(-100, 150), ylim = c(-20, 60)) # Zooming into an area
+```
+
+## Getting states
+
+```{r}
+#| label: get-states
+us_states <- ne_states(country = "United States of America")
+```
+
+## Map my location
+
+```{r}
+#| label: fig-my-location
+cities_df <- data.frame(
+  city = c("State College"),
+  lon = c(-77.84922),
+  lat = c(40.79766)
+)
+
+# Convert to an sf object (4326 is the standard GPS CRS, WGS84)
+cities_sf <- st_as_sf(cities_df, coords = c("lon", "lat"), crs = 4326)
+
+ggplot() +
+  geom_sf(data = us_states, fill = "antiquewhite", color = "gray80") +
+  geom_sf(data = cities_sf, color = "red", size = 1) +
+  coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area
+```
+
+## Import PA higher ed data
+
+```{r}
+#| label: import-higher-ed-data
+pa_higher_ed <- readr::read_csv("../include/xlsx/PA_Higher_Education_Institutions_by_Sector_Current_Statewide_Education_20261015.csv", show_col_types = FALSE)
+
+summary(pa_higher_ed)
+```
+
+## Trim the data
+
+```{r}
+#| label: trim-higher-ed
+pa_higher_ed_trimmed <- pa_higher_ed |>
+  rename(lon = Longitude,
+         lat = Latitude) |>
+  select(Sector, College, Type, County, lon, lat) |>
+  filter(!is.na(lat) &
+         !is.na(lon))
+
+```
+
+
+```{r}
+#| label: convert-higher-ed-data
+# Convert to an sf object (4326 is the standard GPS CRS, WGS84)
+
+pa_higher_ed_sf <-
+  sf::st_as_sf(
+    x = pa_higher_ed_trimmed,
+    coords = c("lon", "lat"),
+    crs = 4326
+  )
+```
+
+## Map the data
+
+```{r}
+#| label: fig-pa-higher-ed
+ggplot() +
+  geom_sf(data = us_states, fill = "antiquewhite", color = "gray80") +
+  geom_sf(data = pa_higher_ed_sf, aes(color = Sector), size = 1) +
+  coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area
+```
+
+## *ggmap*
+
+Requires API key. Don't use for class.

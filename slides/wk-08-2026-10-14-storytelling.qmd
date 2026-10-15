@@ -106,7 +106,7 @@ docs_df_another <- data.frame(years, docs_general, pop)
 #| fig-cap: "California population 1964-1990."
 #| echo: true
 docs_df_another |>
-  mutate(pop_millions = round(pop/1e6, digits = 2)) |>
+  mutate(pop_millions = round(pop/1e6, digits = 1)) |>
   filter(docs_general == "Non-doctors") |>
   ggplot() +
   aes(x = years, y = pop_millions) +
@@ -117,7 +117,7 @@ docs_df_another |>
   xlab("") +
   ylim(0, 30) +
   theme_classic() +
-  ggtitle("California's population has increased since 1964 by 8 million")
+  ggtitle("California's population has increased since 1964 by 8.3 million, a 45% jump.")
 ```
 
 ---
@@ -139,7 +139,7 @@ docs_df_another |>
   ylim(0, 10000) +
   theme_classic() +
   theme(legend.title = element_blank()) +
-  ggtitle("But the number of doctors has declined by 1,800.")
+  ggtitle("But the number of doctors has declined by 1,811 since 1964, a 29% drop.")
 ```
 
 ## Today's topics

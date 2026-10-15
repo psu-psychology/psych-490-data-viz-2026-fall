@@ -1,0 +1,340 @@
+---
+title: "Making maps with data: Part I"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+- [Exercise 05](../exercises/ex-05-tidy-data.qmd) due on Monday, October 26, 2026
+
+## Last week...
+
+- Critiquing figures
+- Storytelling with data
+
+## Today
+
+- Making maps with data: Part I
+  - General considerations
+  - Making maps in R
+
+# General considerations
+
+## What are maps?
+
+## Projections
+
+---
+
+![@Wilke2019-mx, Figure 15.1](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-orthographic-1.png){#fig-wilke-fig-15.1 width="55%"}
+
+---
+
+![@Wilke2019-mx, Figure 15.2](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-mercator-1.png){#fig-wilke-fig-15.2 width="65%"}
+
+## Equal Earth projection
+
+![Wikipedia^[By Strebe - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72769307]](https://upload.wikimedia.org/wikipedia/commons/6/61/Equal_Earth_projection_SW.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-equal-earth-static}
+
+---
+
+![Wikipedia^[By Dariusz Kowalczyk - Own workThis map was created with Generic Mapping Tools.(version 6.8.0_2026.09.21, only frames, animation created with GIF Movie Gear), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=200664498]](https://upload.wikimedia.org/wikipedia/commons/9/99/Mercator_and_Equal_Earth_projections%2C_animated_GIF.gif?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled){#fig-equal-earth-gif width="40%"}
+
+## Equal Earth projection
+
+- United Nations adopted a resolution on September 4, 2026 to phase out use of the Mercator projection in favor of the Equal Earth, and similar equal-area projections.
+- 164 nations voted yes; 6 abstained; the U.S. voted no.
+- Data visualizations can be, and often are, political matters.
+
+---
+
+### The U.S. is the ___ largest country in the world by *area*.
+
+- 1st
+- 2nd
+- 3rd
+- 4th
+- 5th
+
+## Largest countries by area
+
+::: {.fragment}
+![](../include/img/largest-countries-by-area.png)
+:::
+
+---
+
+![@Wilke2019-mx, Figure 15.3](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-goode-1.png){#fig-wilke-fig-15.3}
+
+---
+
+![@Wilke2019-mx, Figure 15.5](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-true-albers-1.png){#fig-wilke-fig-15.5 width="65%"}
+
+---
+
+![@Wilke2019-mx, Figure 15.6](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-1.png){#fig-wilke-fig-15.6 width="75%"}
+
+---
+
+![@Wilke2019-mx, Figure 15.6](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-revised-1.png){#fig-wilke-fig-15.6 width="75%"}
+
+## Coordinates
+
+:::: {.columns}
+::: {.column width=50%}
+- Latitude & longitude
+- Landmass
+- Continent
+- Country
+:::
+::: {.column width=50%}
+- State/Province
+- County/Region
+- City
+- Zip
+:::
+::::
+
+## Coordinates: Natural
+
+:::: {.columns}
+::: {.column width=50%}
+- Latitude & longitude
+- **Landmass**
+- Continent
+- Country
+:::
+::: {.column width=50%}
+- State/Province
+- County/Region
+- City
+- Zip
+:::
+::::
+
+## Coordinates: Continuous
+
+:::: {.columns}
+::: {.column width=50%}
+- **Latitude & longitude**
+- Landmass
+- Continent
+- Country
+:::
+::: {.column width=50%}
+- State/Province
+- County/Region
+- City
+- Zip
+:::
+::::
+
+## U.S. Census
+
+- Required under the U.S. Constitution
+
+::: {.fragment}
+
+![@SchmeckebierUnknown-ns](../include/img/enumeration-clause-census.png){#fig-enumeration-clause width="65%"}
+
+:::
+
+
+## U.S. Census: Geometry
+
+:::: {.columns}
+::: {.column width=50%}
+- Nation
+- State
+- County
+:::
+::: {.column width=50%}
+- Census Tract
+- Census Block group
+- Census Block
+:::
+::::
+
+## U.S. Census
+
+![U.S. Census, <https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf>](../include/img/census-geodiagram.png){#fig-census-geocoding width="45%"}
+
+---
+
+![https://learn.arcgis.com/en/related-concepts/united-states-census-geography.htm](https://learn.arcgis.com/en/related-concepts/GUID-D7AA4FD1-E7FE-49D7-9D11-07915C9ACC68-web.png){#fig-census-geocoding-arcgis}
+
+## U.S. Census: Preserving privacy
+
+:::: {.columns}
+::: {.column width=50%}
+- Nation
+- State
+- County
+:::
+::: {.column width=50%}
+- Census Tract
+- Census Block group
+- Census Block
+:::
+::::
+
+## U.S. Census: Preserving privacy
+
+:::: {.columns}
+::: {.column width=50%}
+- **Nation**
+- **State**
+- ~~County~~
+:::
+::: {.column width=50%}
+- ~~Census Tract~~
+- ~~Census Block group~~
+- ~~Census Block~~
+:::
+::::
+
+## Layers
+
+![@Wilke2019-mx, Figure 15.8](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-overview-1.png){#fig-wilke-15.8 width="65%"}
+
+---
+
+![@Wilke2019-mx, Figure 15.9](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-layers-1.png){#fig-wilke-15.9 width="65%"}
+
+## Choropleths
+
+- Quantities $\rightarrow$ location
+
+---
+
+![@Wilke2019-mx, Figure 15.11](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/population-density-counties-1.png){#fig-wilke-15.11 width="65%"}
+
+---
+
+![@Wilke2019-mx, Figure 15.13](https://clauswilke.com/dataviz/geospatial_data_files/figure-html/median-income-counties-binned-1.png){#fig-wilke-15.13 width="65%"}
+
+# Making maps in R
+
+## Install & load packages
+
+```{r}
+#| echo: true
+library(sf)
+library(ggplot2)
+library(rnaturalearth)
+library(readr)
+library(dplyr)
+```
+
+## Help from search/AI
+
+![Response to search query "making maps in r ggplot2" on 2026-10-15.](../include/img/maps-r-ai-guidance.png){#fig-help-ai width="55%"}
+
+## Map with coordinates: World
+
+```{r}
+#| label: fig-fetch-world-map
+#| echo: true
+# Fetch world map data as an 'sf' object
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Plot the map
+ggplot(data = world) +
+  geom_sf()
+```
+
+## Map with coordinates: Cities
+
+```{r}
+#| label: plot-basic-map
+#| echo: true
+# A standard data frame with coordinates
+cities_df <- data.frame(
+  city = c("New York", "Paris", "Tokyo"),
+  lon = c(-74.0060, 2.3522, 139.6503),
+  lat = c(40.7128, 48.8566, 35.6762)
+)
+
+# Convert to an sf object (4326 is the standard GPS CRS, WGS84)
+cities_sf <- st_as_sf(cities_df, 
+                      coords = c("lon", "lat"), crs = 4326)
+```
+
+---
+
+```{r}
+#| label: fig-three-cities
+#| echo: true
+# Layer the points over the base map
+ggplot() +
+  geom_sf(data = world, fill = "antiquewhite", color = "gray80") +
+  geom_sf(data = cities_sf, color = "red", size = 3) +
+  coord_sf(xlim = c(-100, 150), ylim = c(-20, 60))
+```
+
+## Getting data about states
+
+```{r}
+#| label: get-states
+#| echo: true
+us_states <- ne_states(country = "United States of America")
+```
+
+## Plot my location
+
+```{r}
+#| label: fig-my-location
+#| echo: true
+cities_df <- data.frame(
+  city = c("State College"),
+  lon = c(-77.84922),
+  lat = c(40.79766)
+)
+
+# Convert to an sf object (4326 is the standard GPS CRS, WGS84)
+cities_sf <- st_as_sf(cities_df, coords = c("lon", "lat"), crs = 4326)
+```
+
+## Plot my location
+
+```{r}
+#| label: fig-state-college
+#| echo: true
+ggplot() +
+  geom_sf(data = us_states,
+          fill = "antiquewhite",
+          color = "gray80") +
+  geom_sf(data = cities_sf,
+          color = "red",
+          size = 1) +
+  coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area
+```
+
+# Wrap up
+
+## Main points
+
+- Making maps involves multiple considerations
+- Projections, coordinates/scale, geometries, layers
+- Map-making often controversial
+- Using R to make maps makes them reproducible
+
+## Next time
+
+- Making maps with data: Part II
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.10.0.233.
+
+The source files are in R and R Markdown, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages at:
+<https://psu-psychology.github.io/psych-490-data-viz-2026-fall>
+
+## References

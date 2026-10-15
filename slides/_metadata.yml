@@ -31,3 +31,8 @@ filters:
 knitr:
   opts_chunk:
     fig.path: include/fig/
+    
+params:
+  rstudio_ver: 2026.9.0.174
+  site_url: "https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  github_repo: "https://github.com/psu-psychology/psych-490-data-viz-2026-fall"

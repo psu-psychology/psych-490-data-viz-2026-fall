@@ -216,19 +216,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -240,6 +227,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
     background-image: none;
   }
   </style>
@@ -387,7 +387,7 @@ Figure&nbsp;2: Doctors in California by speciality 1964-1990.
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>docs_df_another <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(<span class="at">pop_millions =</span> <span class="fu">round</span>(pop<span class="sc">/</span><span class="fl">1e6</span>, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(<span class="at">pop_millions =</span> <span class="fu">round</span>(pop<span class="sc">/</span><span class="fl">1e6</span>, <span class="at">digits =</span> <span class="dv">1</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a></a>  <span class="fu">filter</span>(docs_general <span class="sc">==</span> <span class="st">"Non-doctors"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb4-4"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb4-5"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> years, <span class="at">y =</span> pop_millions) <span class="sc">+</span></span>
@@ -398,7 +398,7 @@ Figure&nbsp;2: Doctors in California by speciality 1964-1990.
 <span id="cb4-10"><a></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
 <span id="cb4-11"><a></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">30</span>) <span class="sc">+</span></span>
 <span id="cb4-12"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
-<span id="cb4-13"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"California's population has increased since 1964 by 8 million"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-13"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"California's population has increased since 1964 by 8.3 million, a 45% jump."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-docs-as-p-population" class="quarto-float quarto-figure quarto-figure-center">
@@ -432,7 +432,7 @@ Figure&nbsp;3: California population 1964-1990.
 <span id="cb5-11"><a></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">10000</span>) <span class="sc">+</span></span>
 <span id="cb5-12"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
 <span id="cb5-13"><a></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb5-14"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"But the number of doctors has declined by 1,800."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-14"><a></a>  <span class="fu">ggtitle</span>(<span class="st">"But the number of doctors has declined by 1,811 since 1964, a 29% drop."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-population" class="quarto-float quarto-figure quarto-figure-center">

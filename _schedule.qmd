@@ -194,13 +194,6 @@
 
 - [Slides](slides/wk-07-2026-10-07-making-figs-II.qmd)
 
-<!-- *Communicating uncertainty and risk*   -->
-
-<!-- - *Read*:  -->
-<!--   - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618) -->
-<!--   - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829) -->
-<!-- - [Slides](404.qmd) -->
-
 ### Fri, Oct 09 {-}
 
 *Work Session*
@@ -289,6 +282,7 @@
 ### Mon, Nov 02 {-}
 
 - [Slides](404.qmd)
+- Assigned: [Exercise-06](exercises/exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
 
 ### Wed, Nov 04 {-}
 
@@ -300,7 +294,20 @@
 
 ### Mon, Nov 09 {-}
 
+*Exploring data*
+
+- *Read*:
+  - @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922548)
+- [Slides](404.qmd)
+
 ### Wed, Nov 11 {-}
+
+*Communicating uncertainty and risk*
+
+- *Read*:
+  - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618)
+  - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829)
+- [Slides](404.qmd)
 
 ### Fri, Nov 13 {-}
 
@@ -317,7 +324,7 @@
 *Synthesize before you analyze*
 
 - [Slides](404.qmd)
-- {{< fa calendar >}} *Due* [Exercise-06](exercises/ex-06-tbd.qmd)
+- {{< fa calendar >}} *Due* [Exercise-06](exercises/exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
 
 ### Wed, Nov 18 {-}
 
