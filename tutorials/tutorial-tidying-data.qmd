@@ -46,7 +46,7 @@ The major steps involved are as follows:
 We will do this with some survey data that Dr. Gilmore created.
 For [Exercise 05](../exercises/ex-05-tidy-data.qmd), you'll do the same process with the data you created in [Exercise 03](../exercises/ex-03-making-data.qmd).
 
-The response form for the survey is here: <https://docs.google.com/forms/d/e/1FAIpQLSdlQvk6kFl6pw1LPpvL_iB-CrLXyRuinuSTl1MKFgJ4TDuH3g/viewform?usp=header>.
+The response form for the survey is here: <https://docs.google.com/forms/d/1-3A8QFqwNABsbOmCAgnrcdjxXULp-aKOW1HqQvPVd3k/edit>.
 If you like the shortened form Google provides, it is here: <https://forms.gle/add8aEUUjMowesaQ6>.
 
 ## Gathering
