@@ -101,7 +101,26 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -197,19 +216,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-answer.callout {
-    border-left-color: blue;
-  }
-  .reveal div.callout-answer.callout-style-default .callout-title {
-    background-color: rgb(from blue r g b / 13%);
-  }
-  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\f00c' !important;
-    background-image: none;
-  }
   .reveal div.callout-question.callout {
     border-left-color: pink;
   }
@@ -221,6 +227,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\3f' !important;
+    background-image: none;
+  }
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
     background-image: none;
   }
   </style>
@@ -277,9 +296,10 @@ Rick Gilmore
 <span id="cb1-2"><a></a><span class="fu">library</span>(rnaturalearth)</span>
 <span id="cb1-3"><a></a><span class="fu">library</span>(rnaturalearthdata)</span>
 <span id="cb1-4"><a></a><span class="fu">library</span>(rnaturalearthhires)</span>
-<span id="cb1-5"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-6"><a></a><span class="fu">library</span>(readr)</span>
-<span id="cb1-7"><a></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-5"><a></a><span class="fu">library</span>(tigris)</span>
+<span id="cb1-6"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-7"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-8"><a></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="gathering-data" class="slide level2">
@@ -383,23 +403,23 @@ Figure&nbsp;2: https://data.pa.gov/Post-Secondary-Education/PA-Higher-Education-
 </section>
 <section id="make-the-plot-output" class="slide level2 output-location-slide"><h2>Make the plot</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div id="fig-pa-higher-ed" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<div id="fig-pa-higher-ed" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-pa-higher-ed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-pa-higher-ed-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: "><img data-src="include/fig/fig-pa-higher-ed-1.png" id="fig-pa-higher-ed" width="960"></a>
+<a href="include/fig/fig-pa-higher-ed-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: A map of the locations of institutions of higher education in Pennsylvania from data.pa.gov."><img data-src="include/fig/fig-pa-higher-ed-1.png" width="960"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-pa-higher-ed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pa-higher-ed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A map of the locations of institutions of higher education in Pennsylvania from data.pa.gov.
 </figcaption>
 </figure>
 </div>
 </div>
-</div></section><section class="slide level2">
-
+</div></section><section id="compare-to-the-states" class="slide level2">
+<h2>Compare to the State’s</h2>
 <div id="fig-pa-higher-ed-map" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-pa-higher-ed-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/pa-higher-ed-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Education-Institutions-by-Sector-Edu/9nnc-tk9e"><img data-src="../include/img/pa-higher-ed-map.png" style="width:55.0%"></a>
+<a href="../include/img/pa-higher-ed-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Education-Institutions-by-Sector-Edu/9nnc-tk9e"><img data-src="../include/img/pa-higher-ed-map.png" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pa-higher-ed-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Education-Institutions-by-Sector-Edu/9nnc-tk9e
@@ -409,6 +429,56 @@ Figure&nbsp;4: https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Educat
 </section>
 <section id="choropleths" class="slide level2">
 <h2>Choropleths</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Statistical thematic map <span class="citation" data-cites="Wikipedia-contributors2026-qf">(<a href="#/references" role="doc-biblioref" onclick="">Wikipedia contributors 2026</a>)</span></li>
+<li>Data element maps to fill shading or color</li>
+<li>First known example 1826</li>
+<li>Term comes from the Greek for “multitude of regions”</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/38/Carte_figurative_de_l%27instruction_populaire_de_la_France.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Charles Dupin’s 1826 map. Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/38/Carte_figurative_de_l%27instruction_populaire_de_la_France.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Charles Dupin’s 1826 map. Wikipedia"></a></p>
+<figcaption>Charles Dupin’s 1826 map. Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></figcaption>
+</figure>
+</div>
+</div></div>
+<aside></aside></section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/e/e9/Choropleth_Map.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Choropleth_Map.png?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" alt="Wikipedia"></a></p>
+<figcaption>Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a></figcaption>
+</figure>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<iframe src="https://ourworldindata.org/grapher/population-density?tab=map" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</section>
+<section class="slide level2">
+
+<iframe src="https://ourworldindata.org/explorers/food-prices?Diet=Healthy+diet&amp;Cost+or+Affordability=Affordability&amp;Affordability+metric=Share+that+cannot+afford&amp;country=NGA~BGD~IND~ETH~MEX~USA~BRA~GBR&amp;tab=map&amp;hideControls=false" loading="lazy" style="width: 100%; height: 696px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</section>
+<section class="slide level2">
+
+<iframe src="https://ourworldindata.org/explorers/plastic-pollution?Metric=Plastic+waste+generation&amp;Per+capita=false&amp;Share+of+world+total=false&amp;Source=Jambeck+et+al.+%282015%29&amp;country=USA~CHN~IND&amp;tab=map&amp;hideControls=false" loading="lazy" style="width: 100%; height: 696px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</section>
+<section class="slide level2">
+
+<iframe src="https://ourworldindata.org/grapher/migrant-populations?metric=immigrants&amp;unit=number&amp;tab=map&amp;hideControls=false" loading="lazy" style="width: 100%; height: 674px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</section></section>
+<section>
+<section id="making-choropleth-maps" class="title-slide slide level1 center">
+<h1>Making choropleth maps</h1>
+
 </section>
 <section class="slide level2">
 
@@ -421,11 +491,32 @@ Figure&nbsp;4: https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Educat
 <section class="slide level2">
 
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> world_map) <span class="sc">+</span></span>
+<span id="cb9-2"><a></a>  <span class="co"># Map the color fill to GDP, and draw light white borders between regions</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> gdp_md), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a></a>  </span>
+<span id="cb9-5"><a></a>  <span class="co"># Apply a colorblind-friendly continuous color scale</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">name =</span> <span class="st">"GDP (Millions)"</span>, <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">comma_format</span>()) <span class="sc">+</span></span>
+<span id="cb9-7"><a></a>  </span>
+<span id="cb9-8"><a></a>  <span class="co"># Remove background grid lines and latitude/longitude labels</span></span>
+<span id="cb9-9"><a></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb9-10"><a></a>  </span>
+<span id="cb9-11"><a></a>  <span class="co"># Add titles</span></span>
+<span id="cb9-12"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Global GDP Choropleth Map"</span>,</span>
+<span id="cb9-13"><a></a>       <span class="at">subtitle =</span> <span class="st">"Created using ggplot2 and sf in R"</span>,</span>
+<span id="cb9-14"><a></a>       <span class="at">caption =</span> <span class="st">"Source: Natural Earth"</span>) <span class="sc">+</span></span>
+<span id="cb9-15"><a></a>  </span>
+<span id="cb9-16"><a></a>  <span class="co"># Position the legend at the bottom</span></span>
+<span id="cb9-17"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="" class="slide level2 output-location-slide"><div class="cell output-location-slide">
 <div class="cell-output-display">
 <div id="fig-gdp-map" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-gdp-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-gdp-map-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: "><img data-src="include/fig/fig-gdp-map-1.png" id="fig-gdp-map" width="960"></a>
+<a href="include/fig/fig-gdp-map-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;5: "><img data-src="include/fig/fig-gdp-map-1.png" id="fig-gdp-map" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gdp-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5
@@ -433,7 +524,619 @@ Figure&nbsp;5
 </figure>
 </div>
 </div>
+</div></section><section id="higher-ed-data" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Get the county geo data from the <em>tigris</em> package</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>pa_county_sf <span class="ot">&lt;-</span> <span class="fu">counties</span>(<span class="at">state =</span> <span class="st">"PA"</span>, <span class="at">cb =</span> <span class="cn">TRUE</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |                                                                      |   1%
+  |                                                                            
+  |=                                                                     |   1%
+  |                                                                            
+  |=                                                                     |   2%
+  |                                                                            
+  |==                                                                    |   2%
+  |                                                                            
+  |==                                                                    |   3%
+  |                                                                            
+  |==                                                                    |   4%
+  |                                                                            
+  |===                                                                   |   4%
+  |                                                                            
+  |===                                                                   |   5%
+  |                                                                            
+  |====                                                                  |   5%
+  |                                                                            
+  |====                                                                  |   6%
+  |                                                                            
+  |=====                                                                 |   7%
+  |                                                                            
+  |=====                                                                 |   8%
+  |                                                                            
+  |======                                                                |   8%
+  |                                                                            
+  |======                                                                |   9%
+  |                                                                            
+  |=======                                                               |   9%
+  |                                                                            
+  |=======                                                               |  10%
+  |                                                                            
+  |=======                                                               |  11%
+  |                                                                            
+  |========                                                              |  11%
+  |                                                                            
+  |========                                                              |  12%
+  |                                                                            
+  |=========                                                             |  12%
+  |                                                                            
+  |=========                                                             |  13%
+  |                                                                            
+  |=========                                                             |  14%
+  |                                                                            
+  |==========                                                            |  14%
+  |                                                                            
+  |==========                                                            |  15%
+  |                                                                            
+  |===========                                                           |  15%
+  |                                                                            
+  |===========                                                           |  16%
+  |                                                                            
+  |============                                                          |  16%
+  |                                                                            
+  |============                                                          |  17%
+  |                                                                            
+  |============                                                          |  18%
+  |                                                                            
+  |=============                                                         |  18%
+  |                                                                            
+  |=============                                                         |  19%
+  |                                                                            
+  |==============                                                        |  19%
+  |                                                                            
+  |==============                                                        |  20%
+  |                                                                            
+  |===============                                                       |  21%
+  |                                                                            
+  |===============                                                       |  22%
+  |                                                                            
+  |================                                                      |  22%
+  |                                                                            
+  |================                                                      |  23%
+  |                                                                            
+  |================                                                      |  24%
+  |                                                                            
+  |=================                                                     |  24%
+  |                                                                            
+  |=================                                                     |  25%
+  |                                                                            
+  |==================                                                    |  25%
+  |                                                                            
+  |==================                                                    |  26%
+  |                                                                            
+  |===================                                                   |  27%
+  |                                                                            
+  |===================                                                   |  28%
+  |                                                                            
+  |====================                                                  |  28%
+  |                                                                            
+  |====================                                                  |  29%
+  |                                                                            
+  |=====================                                                 |  29%
+  |                                                                            
+  |=====================                                                 |  30%
+  |                                                                            
+  |=====================                                                 |  31%
+  |                                                                            
+  |======================                                                |  31%
+  |                                                                            
+  |======================                                                |  32%
+  |                                                                            
+  |=======================                                               |  32%
+  |                                                                            
+  |=======================                                               |  33%
+  |                                                                            
+  |=======================                                               |  34%
+  |                                                                            
+  |========================                                              |  34%
+  |                                                                            
+  |========================                                              |  35%
+  |                                                                            
+  |=========================                                             |  35%
+  |                                                                            
+  |=========================                                             |  36%
+  |                                                                            
+  |==========================                                            |  36%
+  |                                                                            
+  |==========================                                            |  37%
+  |                                                                            
+  |==========================                                            |  38%
+  |                                                                            
+  |===========================                                           |  38%
+  |                                                                            
+  |===========================                                           |  39%
+  |                                                                            
+  |============================                                          |  39%
+  |                                                                            
+  |============================                                          |  40%
+  |                                                                            
+  |============================                                          |  41%
+  |                                                                            
+  |=============================                                         |  41%
+  |                                                                            
+  |=============================                                         |  42%
+  |                                                                            
+  |==============================                                        |  42%
+  |                                                                            
+  |==============================                                        |  43%
+  |                                                                            
+  |===============================                                       |  44%
+  |                                                                            
+  |===============================                                       |  45%
+  |                                                                            
+  |================================                                      |  45%
+  |                                                                            
+  |================================                                      |  46%
+  |                                                                            
+  |=================================                                     |  47%
+  |                                                                            
+  |=================================                                     |  48%
+  |                                                                            
+  |==================================                                    |  48%
+  |                                                                            
+  |==================================                                    |  49%
+  |                                                                            
+  |===================================                                   |  49%
+  |                                                                            
+  |===================================                                   |  50%
+  |                                                                            
+  |===================================                                   |  51%
+  |                                                                            
+  |====================================                                  |  51%
+  |                                                                            
+  |====================================                                  |  52%
+  |                                                                            
+  |=====================================                                 |  52%
+  |                                                                            
+  |=====================================                                 |  53%
+  |                                                                            
+  |=====================================                                 |  54%
+  |                                                                            
+  |======================================                                |  54%
+  |                                                                            
+  |======================================                                |  55%
+  |                                                                            
+  |=======================================                               |  55%
+  |                                                                            
+  |=======================================                               |  56%
+  |                                                                            
+  |========================================                              |  57%
+  |                                                                            
+  |========================================                              |  58%
+  |                                                                            
+  |=========================================                             |  58%
+  |                                                                            
+  |=========================================                             |  59%
+  |                                                                            
+  |==========================================                            |  59%
+  |                                                                            
+  |==========================================                            |  60%
+  |                                                                            
+  |==========================================                            |  61%
+  |                                                                            
+  |===========================================                           |  61%
+  |                                                                            
+  |===========================================                           |  62%
+  |                                                                            
+  |============================================                          |  62%
+  |                                                                            
+  |============================================                          |  63%
+  |                                                                            
+  |============================================                          |  64%
+  |                                                                            
+  |=============================================                         |  64%
+  |                                                                            
+  |=============================================                         |  65%
+  |                                                                            
+  |==============================================                        |  65%
+  |                                                                            
+  |==============================================                        |  66%
+  |                                                                            
+  |===============================================                       |  67%
+  |                                                                            
+  |===============================================                       |  68%
+  |                                                                            
+  |================================================                      |  68%
+  |                                                                            
+  |================================================                      |  69%
+  |                                                                            
+  |=================================================                     |  69%
+  |                                                                            
+  |=================================================                     |  70%
+  |                                                                            
+  |=================================================                     |  71%
+  |                                                                            
+  |==================================================                    |  71%
+  |                                                                            
+  |==================================================                    |  72%
+  |                                                                            
+  |===================================================                   |  72%
+  |                                                                            
+  |===================================================                   |  73%
+  |                                                                            
+  |===================================================                   |  74%
+  |                                                                            
+  |====================================================                  |  74%
+  |                                                                            
+  |====================================================                  |  75%
+  |                                                                            
+  |=====================================================                 |  75%
+  |                                                                            
+  |=====================================================                 |  76%
+  |                                                                            
+  |======================================================                |  77%
+  |                                                                            
+  |======================================================                |  78%
+  |                                                                            
+  |=======================================================               |  78%
+  |                                                                            
+  |=======================================================               |  79%
+  |                                                                            
+  |========================================================              |  79%
+  |                                                                            
+  |========================================================              |  80%
+  |                                                                            
+  |========================================================              |  81%
+  |                                                                            
+  |=========================================================             |  81%
+  |                                                                            
+  |=========================================================             |  82%
+  |                                                                            
+  |==========================================================            |  82%
+  |                                                                            
+  |==========================================================            |  83%
+  |                                                                            
+  |==========================================================            |  84%
+  |                                                                            
+  |===========================================================           |  84%
+  |                                                                            
+  |===========================================================           |  85%
+  |                                                                            
+  |============================================================          |  85%
+  |                                                                            
+  |============================================================          |  86%
+  |                                                                            
+  |=============================================================         |  87%
+  |                                                                            
+  |=============================================================         |  88%
+  |                                                                            
+  |==============================================================        |  88%
+  |                                                                            
+  |==============================================================        |  89%
+  |                                                                            
+  |===============================================================       |  89%
+  |                                                                            
+  |===============================================================       |  90%
+  |                                                                            
+  |===============================================================       |  91%
+  |                                                                            
+  |================================================================      |  91%
+  |                                                                            
+  |================================================================      |  92%
+  |                                                                            
+  |=================================================================     |  92%
+  |                                                                            
+  |=================================================================     |  93%
+  |                                                                            
+  |==================================================================    |  94%
+  |                                                                            
+  |==================================================================    |  95%
+  |                                                                            
+  |===================================================================   |  95%
+  |                                                                            
+  |===================================================================   |  96%
+  |                                                                            
+  |====================================================================  |  97%
+  |                                                                            
+  |====================================================================  |  98%
+  |                                                                            
+  |===================================================================== |  98%
+  |                                                                            
+  |===================================================================== |  99%
+  |                                                                            
+  |======================================================================|  99%
+  |                                                                            
+  |======================================================================| 100%</code></pre>
 </div>
+</div>
+</section>
+<section id="higher-ed-data-1" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Summarize the data</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>pa_county_sf <span class="sc">|&gt;</span> <span class="fu">summary</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      STATEFP        COUNTYFP       COUNTYNS       GEOIDFQ         GEOID   
+ Length   :67   Length   :67   Length   :67   Length   :67   Length   :67  
+ N.unique : 1   N.unique :67   N.unique :67   N.unique :67   N.unique :67  
+ N.blank  : 0   N.blank  : 0   N.blank  : 0   N.blank  : 0   N.blank  : 0  
+ Min.nchar: 2   Min.nchar: 3   Min.nchar: 8   Min.nchar:14   Min.nchar: 5  
+ Max.nchar: 2   Max.nchar: 3   Max.nchar: 8   Max.nchar:14   Max.nchar: 5  
+                                                                           
+        NAME         NAMELSAD        STUSPS       STATE_NAME        LSAD   
+ Length   :67   Length   :67   Length   :67   Length   :67   Length   :67  
+ N.unique :67   N.unique :67   N.unique : 1   N.unique : 1   N.unique : 1  
+ N.blank  : 0   N.blank  : 0   N.blank  : 0   N.blank  : 0   N.blank  : 0  
+ Min.nchar: 3   Min.nchar:10   Min.nchar: 2   Min.nchar:12   Min.nchar: 2  
+ Max.nchar:14   Max.nchar:21   Max.nchar: 2   Max.nchar:12   Max.nchar: 2  
+                                                                           
+     ALAND               AWATER                   geometry 
+ Min.   :3.376e+08   Min.   :5.590e+05   MULTIPOLYGON :67  
+ 1st Qu.:1.149e+09   1st Qu.:9.727e+06   epsg:4269    : 0  
+ Median :1.692e+09   Median :1.710e+07   +proj=long...: 0  
+ Mean   :1.730e+09   Mean   :5.071e+07                     
+ 3rd Qu.:2.242e+09   3rd Qu.:2.419e+07                     
+ Max.   :3.183e+09   Max.   :1.966e+09                     </code></pre>
+</div>
+</div>
+</section>
+<section id="higher-ed-data-2" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Inspect <code>NAME</code> variable.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>pa_county_sf<span class="sc">$</span>NAME <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Adams"          "Allegheny"      "Armstrong"      "Beaver"        
+ [5] "Bedford"        "Berks"          "Blair"          "Bradford"      
+ [9] "Bucks"          "Butler"         "Cambria"        "Cameron"       
+[13] "Carbon"         "Centre"         "Chester"        "Clarion"       
+[17] "Clearfield"     "Clinton"        "Columbia"       "Crawford"      
+[21] "Cumberland"     "Dauphin"        "Delaware"       "Elk"           
+[25] "Erie"           "Fayette"        "Forest"         "Franklin"      
+[29] "Fulton"         "Greene"         "Huntingdon"     "Indiana"       
+[33] "Jefferson"      "Juniata"        "Lackawanna"     "Lancaster"     
+[37] "Lawrence"       "Lebanon"        "Lehigh"         "Luzerne"       
+[41] "Lycoming"       "McKean"         "Mercer"         "Mifflin"       
+[45] "Monroe"         "Montgomery"     "Montour"        "Northampton"   
+[49] "Northumberland" "Perry"          "Philadelphia"   "Pike"          
+[53] "Potter"         "Schuylkill"     "Snyder"         "Somerset"      
+[57] "Sullivan"       "Susquehanna"    "Tioga"          "Union"         
+[61] "Venango"        "Warren"         "Washington"     "Wayne"         
+[65] "Westmoreland"   "Wyoming"        "York"          </code></pre>
+</div>
+</div>
+</section>
+<section id="higher-ed-data-3" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Compare with data from the PA gov</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>pa_higher_ed_trimmed<span class="sc">$</span>County </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "Franklin"       "Luzerne"        "York"           "Montgomery"    
+  [5] "Montgomery"     "Lawrence"       "Dauphin"        "Lehigh"        
+  [9] "Montgomery"     "Schuylkill"     "Berks"          "Lackawanna"    
+ [13] "Lackawanna"     "Montgomery"     "Delaware"       "Montgomery"    
+ [17] "Montgomery"     "Dauphin"        "Bucks"          "Lehigh"        
+ [21] "Cambria"        "Dauphin"        "Allegheny"      "Beaver"        
+ [25] "Allegheny"      "Columbia"       "Allegheny"      "Lehigh"        
+ [29] "Lawrence"       "Allegheny"      "Luzerne"        "Northampton"   
+ [33] "Butler"         "Berks"          "Allegheny"      "Washington"    
+ [37] "Chester"        "Bradford"       "Somerset"       "Westmoreland"  
+ [41] "Monroe"         "Delaware"       "Philadelphia"   "Delaware"      
+ [45] "Dauphin"        "Delaware"       "Crawford"       "Luzerne"       
+ [49] "Philadelphia"   "Northampton"    "Erie"           "Chester"       
+ [53] "Luzerne"        "Erie"           "Crawford"       "Lebanon"       
+ [57] "Philadelphia"   "Montgomery"     "Erie"           "Cumberland"    
+ [61] "Lackawanna"     "Bucks"          "Greene"         "Northampton"   
+ [65] "Philadelphia"   "Clinton"        "Erie"           "Dauphin"       
+ [69] "Philadelphia"   "Allegheny"      "Luzerne"        "Allegheny"     
+ [73] "Philadelphia"   "Westmoreland"   "Philadelphia"   "Beaver"        
+ [77] "Lancaster"      "Fayette"        "Beaver"         "Bucks"         
+ [81] "Lehigh"         "Cumberland"     "Schuylkill"     "Northumberland"
+ [85] "Lehigh"         "Indiana"        "Dauphin"        "Westmoreland"  
+ [89] "Lackawanna"     "Erie"           "Cumberland"     "Butler"        
+ [93] "Northampton"    "Allegheny"      "Lancaster"      "Warren"        
+ [97] "Luzerne"        "Berks"          "Philadelphia"   "Lehigh"        
+[101] "Cumberland"     "Philadelphia"   "Philadelphia"   "Chester"       
+[105] "Fayette"        "Lackawanna"     "Washington"     "Bucks"         
+[109] "Lycoming"       "York"           "Cambria"        "Allegheny"     
+[113] "Philadelphia"   "Lancaster"      "Lancaster"      "Mercer"        
+[117] "Philadelphia"   "Cumberland"     "Jefferson"      "Philadelphia"  
+[121] "Delaware"       "Clarion"        "Luzerne"        "Clearfield"    
+[125] "Montgomery"     "Centre"         "Montgomery"     "Washington"    
+[129] "Armstrong"      "Westmoreland"   "Montgomery"     "Union"         
+[133] "Clearfield"     "Lebanon"        "McKean"         "Chester"       
+[137] "Philadelphia"   "Allegheny"      "Adams"          "Blair"         
+[141] "Snyder"         "Northumberland" "Westmoreland"   "Westmoreland"  
+[145] "Montgomery"     "Chester"        "Franklin"       "Delaware"      
+[149] "Chester"        "Westmoreland"   "Lycoming"       "Cambria"       
+[153] "Westmoreland"   "Delaware"       "Erie"           "Allegheny"     
+[157] "Blair"          "Northampton"    "Delaware"       "Montgomery"    
+[161] "Delaware"       "Snyder"         "Erie"           "Butler"        
+[165] "Delaware"       "Lehigh"         "Bucks"          "Armstrong"     
+[169] "Adams"          "Luzerne"        "Philadelphia"   "Delaware"      
+[173] "Lehigh"         "Huntingdon"     "Lancaster"      "Philadelphia"  
+[177] "Columbia"       "Tioga"          "Allegheny"      "Delaware"      
+[181] "Berks"          "Allegheny"      "Lackawanna"     "Mercer"        
+[185] "Allegheny"      "Bucks"          "York"           "Luzerne"       
+[189] "Delaware"       "Allegheny"      "Jefferson"      "Chester"       
+[193] "Cambria"        "Lackawanna"     "Westmoreland"   "Philadelphia"  
+[197] "Bucks"          "Montgomery"     "Philadelphia"   "Allegheny"     
+[201] "Cambria"        "Lackawanna"     "Montgomery"     "Monroe"        
+[205] "Philadelphia"   "Cumberland"     "Lackawanna"     "Chester"       
+[209] "Mercer"         "Allegheny"      "Philadelphia"   "Mercer"        
+[213] "Lancaster"      "Lancaster"      "Berks"          "Luzerne"       
+[217] "Westmoreland"   "Northampton"    "Indiana"       </code></pre>
+</div>
+</div>
+</section>
+<section id="higher-ed-data-4" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Pick <em>unique</em> values and sort them</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>pa_higher_ed_trimmed<span class="sc">$</span>County <span class="sc">|&gt;</span> <span class="fu">unique</span>() <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Adams"          "Allegheny"      "Armstrong"      "Beaver"        
+ [5] "Berks"          "Blair"          "Bradford"       "Bucks"         
+ [9] "Butler"         "Cambria"        "Centre"         "Chester"       
+[13] "Clarion"        "Clearfield"     "Clinton"        "Columbia"      
+[17] "Crawford"       "Cumberland"     "Dauphin"        "Delaware"      
+[21] "Erie"           "Fayette"        "Franklin"       "Greene"        
+[25] "Huntingdon"     "Indiana"        "Jefferson"      "Lackawanna"    
+[29] "Lancaster"      "Lawrence"       "Lebanon"        "Lehigh"        
+[33] "Luzerne"        "Lycoming"       "McKean"         "Mercer"        
+[37] "Monroe"         "Montgomery"     "Northampton"    "Northumberland"
+[41] "Philadelphia"   "Schuylkill"     "Snyder"         "Somerset"      
+[45] "Tioga"          "Union"          "Warren"         "Washington"    
+[49] "Westmoreland"   "York"          </code></pre>
+</div>
+</div>
+</section>
+<section id="higher-ed-data-5" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Summarize the number of institutions per county</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>pa_higher_ed_counties <span class="ot">&lt;-</span> pa_higher_ed_trimmed <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">group_by</span>(County) <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">summarize</span>(<span class="at">n_institutions =</span> <span class="fu">n</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="higher-ed-data-6" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Merge (join) the databases based on the variable(s) that match</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>pa_map_sf <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pa_county_sf, </span>
+<span id="cb21-2"><a></a>                       pa_higher_ed_counties, </span>
+<span id="cb21-3"><a></a>                       <span class="fu">join_by</span>(NAME <span class="sc">==</span> County))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="higher-ed-data-7" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Make the map</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> pa_map_sf) <span class="sc">+</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> n_institutions), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb22-3"><a></a>  <span class="co"># scale_fill_viridis_c(option = "plasma", name = "Value") +</span></span>
+<span id="cb22-4"><a></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb22-5"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-6"><a></a>    <span class="at">title =</span> <span class="st">"County-Level Choropleth Map"</span>,</span>
+<span id="cb22-7"><a></a>    <span class="at">subtitle =</span> <span class="st">"PA Counties Colored by number of higher ed institutions"</span>,</span>
+<span id="cb22-8"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau / tigris"</span></span>
+<span id="cb22-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-higher-ed-map-v1" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-higher-ed-map-v1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-higher-ed-map-v1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;6: "><img data-src="include/fig/fig-higher-ed-map-v1-1.png" id="fig-higher-ed-map-v1" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-higher-ed-map-v1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="higher-ed-data-8" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Make a histogram to see the distribution</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> pa_map_sf) <span class="sc">+</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> n_institutions) <span class="sc">+</span></span>
+<span id="cb23-3"><a></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="higher-ed-data-8-output" class="slide level2 output-location-slide"><h2>Higher ed data</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-institutions-histogram" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-institutions-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-institutions-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;7: "><img data-src="include/fig/fig-institutions-histogram-1.png" id="fig-institutions-histogram" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-institutions-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="higher-ed-data-9" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Create a nominal (ordinal) variable with tiers based on the number of institutions</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>pa_map_sf_tiers <span class="ot">&lt;-</span> pa_map_sf <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb24-3"><a></a>    <span class="at">tier =</span> <span class="fu">case_when</span>(</span>
+<span id="cb24-4"><a></a>      <span class="fu">is.na</span>(n_institutions) <span class="sc">~</span> <span class="st">"none"</span>,</span>
+<span id="cb24-5"><a></a>      n_institutions <span class="sc">&lt;=</span> <span class="dv">5</span> <span class="sc">~</span> <span class="st">"&lt;=5"</span>,</span>
+<span id="cb24-6"><a></a>      n_institutions <span class="sc">&lt;=</span> <span class="dv">10</span> <span class="sc">~</span> <span class="st">"6-10"</span>,</span>
+<span id="cb24-7"><a></a>      n_institutions <span class="sc">&lt;=</span> <span class="dv">15</span> <span class="sc">~</span> <span class="st">"11-15"</span>,</span>
+<span id="cb24-8"><a></a>      n_institutions <span class="sc">&lt;</span> <span class="dv">21</span> <span class="sc">~</span> <span class="st">"16-20"</span></span>
+<span id="cb24-9"><a></a>    )</span>
+<span id="cb24-10"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb24-11"><a></a>  <span class="fu">mutate</span>(<span class="at">tier =</span> <span class="fu">ordered</span>(tier, </span>
+<span id="cb24-12"><a></a>                        <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"none"</span>, <span class="st">"&lt;=5"</span>, <span class="st">"6-10"</span>, </span>
+<span id="cb24-13"><a></a>                                   <span class="st">"11-15"</span>, <span class="st">"16-20"</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="higher-ed-data-10" class="slide level2">
+<h2>Higher ed data</h2>
+<ul>
+<li>Plot the data by tier</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>pa_map_sf_tiers <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb25-3"><a></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> tier), <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb25-4"><a></a>  <span class="co"># scale_fill_viridis_c(option = "plasma", name = "Value") +</span></span>
+<span id="cb25-5"><a></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb25-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb25-7"><a></a>    <span class="at">title =</span> <span class="st">"County-Level Choropleth Map"</span>,</span>
+<span id="cb25-8"><a></a>    <span class="at">subtitle =</span> <span class="st">"PA Counties Colored by number of higher ed institutions"</span>,</span>
+<span id="cb25-9"><a></a>    <span class="at">caption =</span> <span class="st">"Source: U.S. Census Bureau / tigris"</span></span>
+<span id="cb25-10"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="higher-ed-data-10-output" class="slide level2 output-location-slide"><h2>Higher ed data</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-map-institution-tiers" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-map-institution-tiers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-map-institution-tiers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;8: "><img data-src="include/fig/fig-map-institution-tiers-1.png" id="fig-map-institution-tiers" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-map-institution-tiers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="why-might-psychologists-care-about-making-maps" class="slide level2">
+<h2>Why might <em>psychologists</em> care about making maps?</h2>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -442,9 +1145,21 @@ Figure&nbsp;5
 </section>
 <section id="main-points" class="slide level2">
 <h2>Main points</h2>
+<ul>
+<li>Maps as figures require
+<ul>
+<li>Data about geographic entity boundaries, names or IDs</li>
+<li>Data about properties associated with geographic entities</li>
+<li>Map location data or statistical data linked to location</li>
+</ul></li>
+<li>R packages: <em>sf</em>, <em>tigris</em>, <em>rnaturalearth</em>, <em>rnaturalearthdata</em>, <em>rnaturalearthhires</em></li>
+</ul>
 </section>
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
+<ul>
+<li>Work session</li>
+</ul>
 </section></section>
 <section>
 <section id="resources" class="title-slide slide level1 center">
@@ -456,11 +1171,23 @@ Figure&nbsp;5
 <p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.10.0.233.</p>
 <p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages at: <a href="https://psu-psychology.github.io/psych-490-data-viz-2026-fall" class="uri">https://psu-psychology.github.io/psych-490-data-viz-2026-fall</a></p>
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Wikipedia-contributors2026-qf" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026. <span>“Choropleth Map.”</span> Wikimedia Foundation, Inc., September 21. <a href="https://en.wikipedia.org/wiki/Choropleth_map">https://en.wikipedia.org/wiki/Choropleth_map</a>.
+</div>
+</div>
 </section></section>
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>By Charles Dupin - http://math.yorku.ca/SCS/Gallery/images/dupin1826-map_200.jpg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=29383521</p></li>
+<li id="fn2"><p>By Derek Montaño - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=25660032</p></li>
+</ol>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>

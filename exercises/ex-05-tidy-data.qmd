@@ -4,10 +4,6 @@ subtitle: "Tidy data"
 format: html
 ---
 
-::: {.callout-warning}
-This page is a under construction.
-:::
-
 ## Dates {-}
 
 {{< fa calendar >}} *Due* Monday, October 26, 2026.

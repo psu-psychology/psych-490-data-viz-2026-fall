@@ -4196,6 +4196,64 @@
       "Maintainer": "Philippe Massicotte <pmassicotte@hotmail.com>",
       "Repository": "CRAN"
     },
+    "rnaturalearthdata": {
+      "Package": "rnaturalearthdata",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Title": "World Vector Map Data from Natural Earth Used in 'rnaturalearth'",
+      "Authors@R": "c( person( family = \"South\", given = \"Andy\", email = \"southandy@gmail.com\", role = c(\"aut\"), comment = c(ORCID = \"0000-0003-4051-6135\") ), person( family = \"Michael\", given = \"Schramm\", email = \"mpschramm@gmail.com\", role = c(\"aut\") ), person( family = \"Massicotte\", given = \"Philippe\", email = \"pmassicotte@hotmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-5919-4116\") ))",
+      "Description": "Vector map data from <https://www.naturalearthdata.com/>. Access functions are provided in the accompanying package 'rnaturalearth'.",
+      "License": "CC0",
+      "LazyData": "true",
+      "LazyDataCompression": "xz",
+      "Encoding": "UTF-8",
+      "URL": "https://docs.ropensci.org/rnaturalearthdata/, https://github.com/ropensci/rnaturalearthdata",
+      "BugReports": "https://github.com/ropensci/rnaturalearthdata/issues",
+      "Depends": [
+        "R (>= 3.1.1)"
+      ],
+      "Imports": [],
+      "Suggests": [
+        "knitr (>= 1.12.3)",
+        "testthat (>= 0.9.1)"
+      ],
+      "RoxygenNote": "7.3.1",
+      "NeedsCompilation": "no",
+      "Author": "Andy South [aut] (<https://orcid.org/0000-0003-4051-6135>), Schramm Michael [aut], Philippe Massicotte [aut, cre] (<https://orcid.org/0000-0002-5919-4116>)",
+      "Maintainer": "Philippe Massicotte <pmassicotte@hotmail.com>",
+      "Repository": "CRAN"
+    },
+    "rnaturalearthhires": {
+      "Package": "rnaturalearthhires",
+      "Version": "1.0.0.9000",
+      "Source": "GitHub",
+      "Title": "High Resolution World Vector Map Data from Natural Earth used in rnaturalearth",
+      "Authors@R": "c( person( family = \"South\", given = \"Andy\", email = \"southandy@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4051-6135\") ), person( family = \"Michael\", given = \"Schramm\", email = \"mpschramm@gmail.com\", role = c(\"aut\") ), person( family = \"Massicotte\", given = \"Philippe\", email = \"pmassicotte@hotmail.com\", role = c(\"aut\"), comment = c(ORCID = \"0000-0002-5919-4116\") ))",
+      "Description": "Facilitates mapping by making natural earth map data from http:// www.naturalearthdata.com/ more easily available to R users. Focuses on vector data.",
+      "License": "CC0",
+      "LazyData": "true",
+      "LazyDataCompression": "xz",
+      "URL": "https://docs.ropensci.org/rnaturalearthhires, https://github.com/ropensci/rnaturalearthhires",
+      "BugReports": "https://github.com/ropensci/rnaturalearthhires/issues",
+      "Depends": [
+        "R (>= 3.1.1)"
+      ],
+      "Suggests": [
+        "testthat (>= 0.9.1)"
+      ],
+      "RoxygenNote": "7.3.1",
+      "Encoding": "UTF-8",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "rnaturalearthhires",
+      "RemoteUsername": "ropensci",
+      "RemotePkgRef": "ropensci/rnaturalearthhires",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "e4736f636baa1c013d77d2ba028dd5bc334defee",
+      "NeedsCompilation": "no",
+      "Author": "Andy South [aut, cre] (ORCID: <https://orcid.org/0000-0003-4051-6135>), Schramm Michael [aut], Philippe Massicotte [aut] (ORCID: <https://orcid.org/0000-0002-5919-4116>)",
+      "Maintainer": "Andy South <southandy@gmail.com>"
+    },
     "rprojroot": {
       "Package": "rprojroot",
       "Version": "2.1.1",
@@ -5175,6 +5233,49 @@
       "NeedsCompilation": "no",
       "Author": "Hadley Wickham [aut, cre], RStudio [cph, fnd]",
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "CRAN"
+    },
+    "tigris": {
+      "Package": "tigris",
+      "Version": "2.2.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Load Census TIGER/Line Shapefiles",
+      "Date": "2025-04-15",
+      "Authors@R": "c( person(given=\"Kyle\", family=\"Walker\", email=\"kyle@walker-data.com\", role=c(\"aut\", \"cre\")), person(given=\"Bob\", family=\"Rudis\", email=\"bob@rudis.net\", role=\"ctb\") )",
+      "URL": "https://github.com/walkerke/tigris",
+      "BugReports": "https://github.com/walkerke/tigris/issues",
+      "Description": "Download TIGER/Line shapefiles from the United States Census Bureau (<https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html>) and load into R as 'sf' objects.",
+      "License": "MIT + file LICENSE",
+      "LazyData": "TRUE",
+      "Encoding": "UTF-8",
+      "Depends": [
+        "R (>= 3.3.0)"
+      ],
+      "Suggests": [
+        "testthat",
+        "ggplot2",
+        "ggthemes",
+        "leaflet",
+        "knitr",
+        "tidycensus",
+        "sp"
+      ],
+      "Imports": [
+        "stringr",
+        "magrittr",
+        "utils",
+        "rappdirs",
+        "httr",
+        "uuid",
+        "sf",
+        "dplyr",
+        "methods"
+      ],
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "Kyle Walker [aut, cre], Bob Rudis [ctb]",
+      "Maintainer": "Kyle Walker <kyle@walker-data.com>",
       "Repository": "CRAN"
     },
     "timechange": {

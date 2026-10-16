@@ -1,0 +1,145 @@
+---
+title: "Tutorial: More *ggplot2* tools"
+format: html
+---
+
+## About
+
+## Setup
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+## Acquire data
+
+Let's make some continuous data that have different degrees of relatedness.
+
+```{r}
+#| label: x-y-error
+x <- rnorm(n = 1000, mean = 0, sd = 1)
+y_25 <- x + rnorm(1000, mean = 0, sd = 0.25)
+y_35 <- x + rnorm(1000, mean = 0, sd = 0.35)
+y_45 <- x + rnorm(1000, mean = 0, sd = 0.45)
+y_55 <- x + rnorm(1000, mean = 0, sd = 0.55)
+y_65 <- x + rnorm(1000, mean = 0, sd = 0.65)
+y_75 <- x + rnorm(1000, mean = 0, sd = 0.75)
+
+df <- data.frame(x = rep(x, 6), 
+                 y = c(y_25, y_35, y_45, y_55, y_65, y_75), 
+                 noise = c(.25, .35, .45, .55, .65, .75), 
+                 each = 1000)
+```
+
+## Visualize
+
+### Figure 0.0
+
+```{r}
+#| label: fig-0.0
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point()
+```
+
+### Figure 0.1
+
+Try reducing clutter by adjusting alpha.
+Here I tried `alpha = 0.3`.
+
+```{r}
+#| label: fig-0.1
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3)
+```
+
+### Figure 0.2
+
+Keep `alpha = 0.3` and add `theme_classic()`.
+
+```{r}
+#| label: fig-0.2
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  theme_classic()
+```
+
+### Figure 0.3
+
+Keep previous changes and add some labels using `labs()`
+
+```{r}
+#| label: fig-0.3
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  theme_classic() +
+  labs(title = "A scatter plot with random data.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.")
+```
+
+### Figure 0.4
+
+Add a best-fitting line using `geom_smooth(method = "lm")`.
+
+```{r}
+#| label: fig-0.4
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.")
+```
+
+### Figure 0.5
+
+Add an annotation with the correlation using `annotate()`.
+
+```{r}
+#| label: fig-0.5
+
+xy_corr <- with(df, cor.test(x,y))
+
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.") +
+  annotate("text", x = -2, y = 3, label = "r = .89")
+```
+
+### Figure 0.5.1
+
+Add an annotation with the correlation using `annotate()`, but grabe the correlation from a variable.
+
+```{r}
+#| label: fig-0.5.1
+
+xy_corr <- with(df, cor.test(x,y))
+
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.") +
+  annotate("text", x = -2, y = 3, label = paste0("r = ", xy_corr$estimate))
+```

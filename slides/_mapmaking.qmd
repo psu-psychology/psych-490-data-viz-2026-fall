@@ -122,3 +122,170 @@ ggplot() +
 ## *ggmap*
 
 Requires API key. Don't use for class.
+
+## Choropleth
+
+AI suggested
+
+---
+
+```{r}
+#| label: get-world-map
+#| echo: true
+#| code-fold: false
+# Load country shapes (excluding Antarctica for a cleaner view)
+world_map <- ne_countries(scale = "medium", returnclass = "sf") %>% 
+  filter(name != "Antarctica")
+```
+
+---
+
+```{r}
+#| label: fig-gdp-map
+#| echo: false
+#| code-fold: false
+#| output-location: slide
+ggplot(data = world_map) +
+  # Map the color fill to GDP, and draw light white borders between regions
+  geom_sf(aes(fill = gdp_md), color = "white", size = 0.1) +
+  
+  # Apply a colorblind-friendly continuous color scale
+  scale_fill_viridis_c(name = "GDP (Millions)", labels = scales::comma_format()) +
+  
+  # Remove background grid lines and latitude/longitude labels
+  theme_void() +
+  
+  # Add titles
+  labs(
+    title = "Global GDP Choropleth Map",
+    subtitle = "Created using ggplot2 and sf in R",
+    caption = "Source: Natural Earth"
+  ) +
+  
+  # Position the legend at the bottom
+  theme(legend.position = "bottom")
+```
+
+```{r}
+# 1. Install and load necessary packages
+library(sf)
+library(tigris)
+library(dplyr)
+library(ggplot2)
+
+# Set tigris options to cache shapefiles
+options(tigris_use_cache = TRUE)
+
+# 2. Get county sf polygon data for a state (e.g., Virginia 'VA')
+# Use cb = TRUE for generalized/lighter polygons
+county_sf <- counties(state = "VA", cb = TRUE, class = "sf")
+
+# 3. Create or load your sample county-level dataset
+# Ensure your county identifier matches the FIPS code ('GEOID' in tigris)
+set.seed(123)
+county_data <- data.frame(
+  GEOID = county_sf$GEOID,
+  value = rnorm(nrow(county_sf), mean = 50, sd = 10)
+)
+
+# 4. Join the spatial sf object with your data
+map_sf <- left_join(county_sf, county_data, by = "GEOID")
+
+# 5. Plot the choropleth map with ggplot2 and geom_sf()
+ggplot(data = map_sf) +
+  geom_sf(aes(fill = value), color = "white", size = 0.1) +
+  scale_fill_viridis_c(option = "plasma", name = "Value") +
+  theme_void() +
+  labs(
+    title = "County-Level Choropleth Map",
+    subtitle = "Virginia Counties Colored by Sample Values",
+    caption = "Source: U.S. Census Bureau / tigris"
+  )
+```
+
+## Map of PA higher ed institutions by county
+
+```{r}
+pa_county_sf <- counties(state = "PA", cb = TRUE, class = "sf")
+pa_county_sf |> summary()
+```
+
+What does the `NAME` variable look like?
+
+```{r}
+pa_county_sf$NAME
+```
+
+How does this compare with the PA higher ed data?
+
+```{r}
+pa_higher_ed_sf$County
+```
+So, we should be able to merge/join these by `County`.
+
+```{r}
+pa_higher_ed_counties <- pa_higher_ed_trimmed |>
+  group_by(County) |>
+  summarize(n_institutions = n())
+
+pa_map_sf <- left_join(pa_county_sf, pa_higher_ed_counties, join_by(NAME == County))
+```
+
+Make the map.
+
+```{r}
+ggplot(data = pa_map_sf) +
+  geom_sf(aes(fill = n_institutions), color = "white", size = 0.1) +
+  # scale_fill_viridis_c(option = "plasma", name = "Value") +
+  theme_void() +
+  labs(
+    title = "County-Level Choropleth Map",
+    subtitle = "PA Counties Colored by number of higher ed institutions",
+    caption = "Source: U.S. Census Bureau / tigris"
+  )
+```
+
+```{r}
+ggplot(data = pa_map_sf) +
+  aes(x = n_institutions) +
+  geom_histogram()
+```
+
+Based on the histogram, we can create an discrete/ordinal variable for the number of institutions in a county.
+
+```{r}
+pa_map_sf |>
+  ggplot() +
+  aes(x = cut_interval(n_institutions, n = 4)) +
+  geom_histogram(stat = "count")
+```
+
+```{r}
+pa_map_sf_tiers <- pa_map_sf |>
+  mutate(
+    tier = case_when(
+      is.na(n_institutions) ~ "none",
+      n_institutions <= 5 ~ "<=5",
+      n_institutions <= 10 ~ "6-10",
+      n_institutions <= 15 ~ "11-15",
+      n_institutions < 21 ~ "16-20"
+    )
+  ) |>
+  mutate(tier = ordered(tier, 
+                        levels = c("none", "<=5", "6-10", 
+                                   "11-15", "16-20")))
+```
+
+```{r}
+pa_map_sf_tiers |>
+ggplot() +
+  geom_sf(aes(fill = tier), color = "white", size = 0.1) +
+  # scale_fill_viridis_c(option = "plasma", name = "Value") +
+  theme_void() +
+  labs(
+    title = "County-Level Choropleth Map",
+    subtitle = "PA Counties Colored by number of higher ed institutions",
+    caption = "Source: U.S. Census Bureau / tigris"
+  )
+```
+
