@@ -7208,21 +7208,21 @@
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#announcements",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#announcements",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "Announcements",
     "text": "Announcements"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#last-time",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#last-time",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "Last time…",
     "text": "Last time…\n\nMaking maps with data: Part I"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#today",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#today",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "Today",
     "text": "Today\n\nMaking maps with data: Part II"
   },
@@ -7257,9 +7257,9 @@
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#choropleths",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#choropleths",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "Choropleths",
-    "text": "Choropleths\n\nQuantities \\(\\rightarrow\\) location"
+    "text": "Choropleths"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#install-load-packages",
@@ -7299,28 +7299,28 @@
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#main-points",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#main-points",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "Main points",
     "text": "Main points"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#next-time",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#next-time",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "Next time",
     "text": "Next time"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#about",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#about",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "About",
     "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#references",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#references",
-    "title": "Making maps with data: Part I",
+    "title": "Making maps with data: Part II",
     "section": "References",
     "text": "References"
   },
@@ -7561,5 +7561,75 @@
     "title": "Making maps with data: Part I",
     "section": "Largest countries by area",
     "text": "Largest countries by area"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#setup",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#setup",
+    "title": "Making maps with data: Part II",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(sf)\nlibrary(rnaturalearth)\nlibrary(rnaturalearthdata)\nlibrary(rnaturalearthhires)\nlibrary(ggplot2)\nlibrary(readr)\nlibrary(dplyr)"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#gathering-data",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#gathering-data",
+    "title": "Making maps with data: Part II",
+    "section": "Gathering data",
+    "text": "Gathering data\n\n\n\n\n\n\nFigure 1: https://data.pa.gov"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#gathering-data-1",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#gathering-data-1",
+    "title": "Making maps with data: Part II",
+    "section": "Gathering data",
+    "text": "Gathering data\n\n\n\n\n\n\nFigure 2: https://data.pa.gov/Post-Secondary-Education/PA-Higher-Education-Institutions-by-Sector-Current/8u5h-xvus/about_data"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#clean-data",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#clean-data",
+    "title": "Making maps with data: Part II",
+    "section": "Clean data",
+    "text": "Clean data\n\npa_higher_ed_trimmed &lt;- pa_higher_ed |&gt;\n  rename(lon = Longitude,\n         lat = Latitude) |&gt;\n  select(Sector, College, Type, County, lon, lat) |&gt;\n  filter(!is.na(lat) &\n         !is.na(lon))"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#convert",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#convert",
+    "title": "Making maps with data: Part II",
+    "section": "Convert",
+    "text": "Convert"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#acquire-base-map",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#acquire-base-map",
+    "title": "Making maps with data: Part II",
+    "section": "Acquire base map",
+    "text": "Acquire base map\n\nus_states &lt;- ne_states(country = \"United States of America\")"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#make-the-plot",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#make-the-plot",
+    "title": "Making maps with data: Part II",
+    "section": "Make the plot",
+    "text": "Make the plot\n\nggplot() +\n  geom_sf(data = us_states, fill = \"antiquewhite\", color = \"gray80\") +\n  geom_sf(data = pa_higher_ed_sf, aes(color = Sector), size = 1) +\n  coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#import-as-csv",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#import-as-csv",
+    "title": "Making maps with data: Part II",
+    "section": "Import as CSV",
+    "text": "Import as CSV\n\npa_higher_ed &lt;- readr::read_csv(\"../include/xlsx/PA_Higher_Education_Institutions_by_Sector_Current_Statewide_Education_20261015.csv\", show_col_types = FALSE)\n\nsummary(pa_higher_ed)\n\n       Sector         College           Type           County   \n Length   :237   Length   :237   Length   :237   Length   :237  \n N.unique :  6   N.unique :236   N.unique :  3   N.unique : 55  \n N.blank  :  0   N.blank  :  0   N.blank  :  0   N.blank  :  0  \n Min.nchar:  6   Min.nchar:  4   Min.nchar: 13   Min.nchar:  3  \n Max.nchar: 37   Max.nchar: 51   Max.nchar: 20   Max.nchar: 14  \n                                                                \n                                                                \n    zip code          Address       Latitude       Longitude     \n Min.   :15010   Length   :237   Min.   :39.80   Min.   :-80.51  \n 1st Qu.:16229   N.unique :219   1st Qu.:40.05   1st Qu.:-79.39  \n Median :17602   N.blank  :  0   Median :40.36   Median :-76.32  \n Mean   :17465   Min.nchar: 29   Mean   :40.52   Mean   :-77.14  \n 3rd Qu.:19009   Max.nchar: 50   3rd Qu.:40.81   3rd Qu.:-75.38  \n Max.   :19610   NAs      : 18   Max.   :42.13   Max.   :-74.88  \n                                 NAs    :18      NAs    :18      \n Georeferenced Latitude & Longitude  Sector and Type\n Length   :237                      Length   :237   \n N.unique :219                      N.unique : 14   \n N.blank  :  0                      N.blank  :  0   \n Min.nchar: 27                      Min.nchar: 20   \n Max.nchar: 32                      Max.nchar: 53   \n NAs      : 18"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#convert-to-sf",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#convert-to-sf",
+    "title": "Making maps with data: Part II",
+    "section": "Convert to sf",
+    "text": "Convert to sf\n\n# Convert to an sf object (4326 is the standard GPS CRS, WGS84)\npa_higher_ed_sf &lt;-\n  sf::st_as_sf(\n    x = pa_higher_ed_trimmed,\n    coords = c(\"lon\", \"lat\"),\n    crs = 4326\n  )"
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#make-the-plot-output",
+    "href": "slides/wk-09-2026-10-21-mapmaking-II.html#make-the-plot-output",
+    "title": "Making maps with data: Part II",
+    "section": "Make the plot",
+    "text": "Make the plot\n\n\n\n\n\n\n\nFigure 3"
   }
 ]

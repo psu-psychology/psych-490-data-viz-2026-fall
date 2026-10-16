@@ -17,33 +17,61 @@ format: revealjs
 
 # Map making
 
-## Import 
+## Setup
+
+```{r}
+#| label: setup
+#| echo: true
+#| code-fold: false
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(rnaturalearthhires)
+library(ggplot2)
+library(readr)
+library(dplyr)
+```
+
+## Gathering data
+
+![https://data.pa.gov](../include/img/pa-data-gov.png){#fig-data-pa-gov width="65%"}
+
+## Gathering data
+
+![https://data.pa.gov/Post-Secondary-Education/PA-Higher-Education-Institutions-by-Sector-Current/8u5h-xvus/about_data](../include/img/pa-higher-ed-institutions.png){#fig-pa-higher-ed-data}
+
+## Import as CSV
 
 ```{r}
 #| label: import-higher-ed-data
+#| echo: true
+#| code-fold: false
 pa_higher_ed <- readr::read_csv("../include/xlsx/PA_Higher_Education_Institutions_by_Sector_Current_Statewide_Education_20261015.csv", show_col_types = FALSE)
 
 summary(pa_higher_ed)
 ```
 
-##
+## Clean data
 
 ```{r}
 #| label: trim-higher-ed
+#| echo: true
+#| code-fold: false
 pa_higher_ed_trimmed <- pa_higher_ed |>
   rename(lon = Longitude,
          lat = Latitude) |>
   select(Sector, College, Type, County, lon, lat) |>
   filter(!is.na(lat) &
          !is.na(lon))
-
 ```
 
+## Convert to sf
 
 ```{r}
 #| label: convert-higher-ed-data
+#| echo: true
+#| code-fold: false
 # Convert to an sf object (4326 is the standard GPS CRS, WGS84)
-
 pa_higher_ed_sf <-
   sf::st_as_sf(
     x = pa_higher_ed_trimmed,
@@ -52,14 +80,71 @@ pa_higher_ed_sf <-
   )
 ```
 
----
+## Acquire base map
+
+```{r}
+#| label: get-states
+#| echo: true
+#| code-fold: false
+us_states <- ne_states(country = "United States of America")
+```
+
+## Make the plot
 
 ```{r}
 #| label: fig-pa-higher-ed
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 ggplot() +
   geom_sf(data = us_states, fill = "antiquewhite", color = "gray80") +
   geom_sf(data = pa_higher_ed_sf, aes(color = Sector), size = 1) +
   coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area
+```
+
+---
+
+![https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Education-Institutions-by-Sector-Edu/9nnc-tk9e](../include/img/pa-higher-ed-map.png){#fig-pa-higher-ed-map width="55%"}
+
+## Choropleths
+
+---
+
+```{r}
+#| label: get-world-map
+#| echo: true
+#| code-fold: false
+# Load country shapes (excluding Antarctica for a cleaner view)
+world_map <- ne_countries(scale = "medium", returnclass = "sf") %>% 
+  filter(name != "Antarctica")
+```
+
+---
+
+```{r}
+#| label: fig-gdp-map
+#| echo: false
+#| code-fold: false
+#| output-location: slide
+ggplot(data = world_map) +
+  # Map the color fill to GDP, and draw light white borders between regions
+  geom_sf(aes(fill = gdp_md), color = "white", size = 0.1) +
+  
+  # Apply a colorblind-friendly continuous color scale
+  scale_fill_viridis_c(name = "GDP (Millions)", labels = scales::comma_format()) +
+  
+  # Remove background grid lines and latitude/longitude labels
+  theme_void() +
+  
+  # Add titles
+  labs(
+    title = "Global GDP Choropleth Map",
+    subtitle = "Created using ggplot2 and sf in R",
+    caption = "Source: Natural Earth"
+  ) +
+  
+  # Position the legend at the bottom
+  theme(legend.position = "bottom")
 ```
 
 # Wrap up
