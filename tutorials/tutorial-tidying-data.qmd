@@ -61,6 +61,14 @@ Click it.
 
 That will open a Google Sheet with the data as shown in @fig-google-sheet.
 
+::: {.callout-important}
+## Sample data file
+
+You can download this datafile at the following link:
+
+<https://docs.google.com/spreadsheets/d/1ecLcV1IPGf2UyJKWHH6s81iG0vuiqJJaCELi9di_KHQ/edit?usp=sharing>
+:::
+
 ![Screen shot of the sample data file as of 2026-10-12.](../include/img/google-sheet.png){#fig-google-sheet width="75%"}
 
 On 2026-10-12 when I drafted this tutorial, there were 5 responses.
@@ -92,6 +100,8 @@ The `pattern` parameter tells R to look for the text 'PSYCH 490.007'.
 That's how the file name starts.
 
 :::
+
+
 
 Now that we've confirmed we have downloaded a `.csv` file, we can drag it to the folder where we're doing our work.
 I suggest creating a `data/csv` folder for your data.
