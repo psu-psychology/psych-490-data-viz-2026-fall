@@ -240,12 +240,12 @@
 
 - Read: 
   - @Wilke2019-mx, Chapter 15, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308831)
-- [Slides](404.qmd)
+- [Slides](slides/wk-09-2026-10-19-mapmaking-I.qmd)
 
 ### Wed, Oct 21 {-}
 
 - Assigned: [Exercise-06](exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
-- [Slides](404.qmd)
+- [Slides](slides/wk-09-2026-10-21-mapmaking-II.qmd)
 
 ### Fri, Oct 23 {-}
 

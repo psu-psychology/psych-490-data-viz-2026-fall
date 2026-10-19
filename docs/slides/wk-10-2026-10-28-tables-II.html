@@ -198,8 +198,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
   <style>
   .reveal div.callout-answer.callout {
     border-left-color: blue;
@@ -257,15 +255,18 @@ Rick Gilmore
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><a href="exercises/ex-05-tidy-data.qmd">Exercise-05</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18779443"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>Due</em> on Friday, October 30, 2026.</li>
-<li><a href="exercises/exercises/ex-06-making-maps.qmd">Exercise-06</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18789309"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>due</em> on Monday, November 16, 2026.</li>
+<li><a href="../exercises/ex-05-tidy-data.html">Exercise-05</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18779443"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>Due</em> on Friday, October 30, 2026.</li>
+<li><a href="../exercises/ex-06-making-maps.html">Exercise-06</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18789309"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>due</em> on Monday, November 16, 2026.</li>
 </ul>
 </section>
 <section id="todays-topics" class="slide level2">
 <h2>Today’s topics</h2>
 <ul>
-<li>Last time…</li>
-<li>Making tables in base R</li>
+<li>Last time…
+<ul>
+<li>Making tables in R</li>
+</ul></li>
+<li>Making (better) tables</li>
 </ul>
 </section></section>
 <section id="last-time" class="title-slide slide level1 center">
@@ -274,20 +275,9 @@ Rick Gilmore
 </section>
 
 <section>
-<section id="making-tables" class="title-slide slide level1 center">
-<h1>Making tables</h1>
+<section id="making-better-tables" class="title-slide slide level1 center">
+<h1>Making (better) tables</h1>
 
-</section>
-<section id="ingredients" class="slide level2">
-<h2>Ingredients</h2>
-<ul>
-<li>A tidy data frame
-<ul>
-<li>Named columns are variables</li>
-<li>Rows are observations</li>
-</ul></li>
-<li>Start with base R: No additional packages</li>
-</ul>
 </section>
 <section id="gathering-data-penguins" class="slide level2">
 <h2>Gathering data: Penguins</h2>
@@ -345,563 +335,2179 @@ Rick Gilmore
 </div>
 </div>
 </section>
-<section id="considerations-table-type" class="slide level2">
-<h2>Considerations: Table type?</h2>
-<ul>
-<li>Summary
-<ul>
-<li>Statistics</li>
-<li>Cross-tabulations</li>
-</ul></li>
-<li>Raw data</li>
-</ul>
-</section>
-<section id="basic-table" class="slide level2">
-<h2>Basic table</h2>
-</section>
-<section id="basic-table-1" class="slide level2">
-<h2>Basic table</h2>
-</section>
-<section id="cross-tabulation" class="slide level2">
-<h2>Cross-tabulation</h2>
-</section>
-<section id="wait-you-said-base-r" class="slide level2">
-<h2>Wait! You said Base R</h2>
-<ul>
-<li>I did, but I wanted to select two variables from <em>mtcars</em>.</li>
-<li>The select function from <em>dplyr</em> does that easily.</li>
-<li><em>Note:</em> These slides did not start with a setup chunk
-<ul>
-<li>So, no <code>library(dplyr)</code> statement</li>
-<li>But I can access the <em>dplyr</em> commands with <code>dplyr::&lt;command&gt;</code>.</li>
-</ul></li>
-</ul>
-</section>
-<section id="under-the-hood" class="slide level2">
-<h2>Under the hood</h2>
-<ul>
-<li>To make tables with titles and sequential numbers using Quarto…</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb7-2"><a></a><span class="co">#| label: tbl-cyl-gear</span></span>
-<span id="cb7-3"><a></a><span class="co">#| tbl-cap: "Number of cars in the *mtcars* dataset by the number of cylinders in the engine and the number of gears in the transmission."</span></span>
-<span id="cb7-4"><a></a>mtcars <span class="sc">|&gt;</span></span>
-<span id="cb7-5"><a></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(cyl, gear) <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a></a>  <span class="fu">table</span>()</span>
-<span id="cb7-7"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Give your R chunk a <code>label</code> starting with <code>tbl-</code></li>
-<li>Add a <code>tbl-cap</code> for the caption</li>
-<li>Then you can link to the table, for example <strong>?@tbl-cyl-gear</strong></li>
-</ul>
-</section>
-<section id="bottom-line-on-table" class="slide level2">
-<h2>Bottom line on <code>table()</code></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>A quick check of <code>help("table")</code> (<a href="#/fig-help-table" class="quarto-xref">Figure&nbsp;1</a> at right) shows</li>
-<li><code>table()</code> is for making cross tabulations</li>
-<li>Or when you take all the data…</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div id="fig-help-table" class="quarto-float quarto-figure quarto-figure-center">
+<section id="package-gt" class="slide level2">
+<h2>Package <em>gt</em></h2>
+<div id="fig-parts-of-gt-table" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
+<div aria-describedby="fig-parts-of-gt-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://gt.rstudio.com/reference/figures/gt_parts_of_a_table.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: https://gt.rstudio.com"><img data-src="https://gt.rstudio.com/reference/figures/gt_parts_of_a_table.svg"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Output from R’s <code>help()</code> function for the <code>table()</code> command.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-parts-of-gt-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <a href="https://gt.rstudio.com" class="uri">https://gt.rstudio.com</a>
 </figcaption>
 </figure>
 </div>
-</div></div>
 </section>
-<section id="prettier-output" class="slide level2 scrollable">
-<h2>Prettier output</h2>
+<section id="gt-tutorial" class="slide level2">
+<h2><em>gt</em> tutorial</h2>
+<ul>
+<li>Gather data</li>
+<li>Format it as a ‘tibble’, a special type of data frame</li>
+</ul>
+<p>https://gt.rstudio.com/articles/gt.html</p>
+</section>
+<section id="setup" class="slide level2">
+<h2>Setup</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>formattable<span class="sc">::</span><span class="fu">formattable</span>(<span class="fu">head</span>(mtcars, <span class="at">n =</span> <span class="dv">6</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">library</span>(gt)</span>
+<span id="cb7-2"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-3"><a></a><span class="fu">library</span>(tibble)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="gathering-formatting" class="slide level2">
+<h2>Gathering &amp; formatting</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>islands_tbl <span class="ot">&lt;-</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">tibble</span>(</span>
+<span id="cb8-3"><a></a>    <span class="at">name =</span> <span class="fu">names</span>(islands),</span>
+<span id="cb8-4"><a></a>    <span class="at">size =</span> islands</span>
+<span id="cb8-5"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb8-6"><a></a>  <span class="fu">slice_max</span>(size, <span class="at">n =</span> <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="inspecting" class="slide level2">
+<h2>Inspecting</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>islands_tbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   name           size
+   &lt;chr&gt;         &lt;dbl&gt;
+ 1 Asia          16988
+ 2 Africa        11506
+ 3 North America  9390
+ 4 South America  6795
+ 5 Antarctica     5500
+ 6 Europe         3745
+ 7 Australia      2968
+ 8 Greenland       840
+ 9 New Guinea      306
+10 Borneo          280</code></pre>
+</div>
+</div>
+</section>
+<section id="display-islands" class="slide level2">
+<h2>Display islands</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Create a display table showing ten of</span></span>
+<span id="cb11-2"><a></a><span class="co"># the largest islands in the world</span></span>
+<span id="cb11-3"><a></a>gt_tbl <span class="ot">&lt;-</span> <span class="fu">gt</span>(islands_tbl)</span>
+<span id="cb11-4"><a></a></span>
+<span id="cb11-5"><a></a><span class="co"># Show the gt Table</span></span>
+<span id="cb11-6"><a></a>gt_tbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+<p>https://gt.rstudio.com/articles/gt.html</p>
+</section>
+<section id="display-islands-output" class="slide level2 output-location-slide"><h2>Display islands</h2><div class="cell output-location-slide">
+<div id="tbl-islands-gt" class="cell quarto-float quarto-figure quarto-figure-center" data-output-location="slide">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-islands-gt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption>
+<div aria-describedby="tbl-islands-gt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="mmrjiekulf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mmrjiekulf table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mmrjiekulf thead, #mmrjiekulf tbody, #mmrjiekulf tfoot, #mmrjiekulf tr, #mmrjiekulf td, #mmrjiekulf th {
+  border-style: none;
+}
+
+#mmrjiekulf p {
+  margin: 0;
+  padding: 0;
+}
+
+#mmrjiekulf .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mmrjiekulf .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mmrjiekulf .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mmrjiekulf .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mmrjiekulf .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mmrjiekulf .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mmrjiekulf .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mmrjiekulf .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mmrjiekulf .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mmrjiekulf .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mmrjiekulf .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mmrjiekulf .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mmrjiekulf .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mmrjiekulf .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mmrjiekulf .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mmrjiekulf .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mmrjiekulf .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mmrjiekulf .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mmrjiekulf .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mmrjiekulf .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mmrjiekulf .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mmrjiekulf .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mmrjiekulf .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mmrjiekulf .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mmrjiekulf .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mmrjiekulf .gt_left {
+  text-align: left;
+}
+
+#mmrjiekulf .gt_center {
+  text-align: center;
+}
+
+#mmrjiekulf .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mmrjiekulf .gt_font_normal {
+  font-weight: normal;
+}
+
+#mmrjiekulf .gt_font_bold {
+  font-weight: bold;
+}
+
+#mmrjiekulf .gt_font_italic {
+  font-style: italic;
+}
+
+#mmrjiekulf .gt_super {
+  font-size: 65%;
+}
+
+#mmrjiekulf .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mmrjiekulf .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mmrjiekulf .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mmrjiekulf .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mmrjiekulf .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mmrjiekulf .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mmrjiekulf .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mmrjiekulf .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mmrjiekulf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th id="size" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">size</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Asia</td>
+<td class="gt_row gt_right" headers="size">16988</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Africa</td>
+<td class="gt_row gt_right" headers="size">11506</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">North America</td>
+<td class="gt_row gt_right" headers="size">9390</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">South America</td>
+<td class="gt_row gt_right" headers="size">6795</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Antarctica</td>
+<td class="gt_row gt_right" headers="size">5500</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Europe</td>
+<td class="gt_row gt_right" headers="size">3745</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Australia</td>
+<td class="gt_row gt_right" headers="size">2968</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Greenland</td>
+<td class="gt_row gt_right" headers="size">840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">New Guinea</td>
+<td class="gt_row gt_right" headers="size">306</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Borneo</td>
+<td class="gt_row gt_right" headers="size">280</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div></section><section id="adorn-the-table-header" class="slide level2">
+<h2>Adorn the table: Header</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># Make a display table with the `islands_tbl`</span></span>
+<span id="cb12-2"><a></a><span class="co"># table; put a heading just above the column labels</span></span>
+<span id="cb12-3"><a></a>gt_tbl <span class="ot">&lt;-</span></span>
+<span id="cb12-4"><a></a>  gt_tbl <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb12-6"><a></a>    <span class="at">title =</span> <span class="st">"Large Landmasses of the World"</span>,</span>
+<span id="cb12-7"><a></a>    <span class="at">subtitle =</span> <span class="st">"The top ten largest are presented"</span></span>
+<span id="cb12-8"><a></a>  )</span>
+<span id="cb12-9"><a></a></span>
+<span id="cb12-10"><a></a><span class="co"># Show the gt Table</span></span>
+<span id="cb12-11"><a></a>gt_tbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 </section>
-<section id="prettier-output-output" class="slide level2 scrollable output-location-slide"><h2>Prettier output</h2><div class="cell output-location-slide">
-<div id="tbl-formattable-mtcars" class="cell quarto-float quarto-figure quarto-figure-center" data-output-location="slide">
+<section id="adorn-the-table-header-output" class="slide level2 output-location-slide"><h2>Adorn the table: Header</h2><div class="cell output-location-slide">
+<div id="tbl-islands-header" class="cell quarto-float quarto-figure quarto-figure-center" data-output-location="slide">
 <figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-formattable-mtcars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: A prettier table of a subset of the <em>mtcars</em> dataset.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-islands-header-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: A table of the ‘islands’ data with a header.
 </figcaption>
-<div aria-describedby="tbl-formattable-mtcars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-islands-header-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="table table-condensed">
+<div id="jqihsouyiy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jqihsouyiy table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jqihsouyiy thead, #jqihsouyiy tbody, #jqihsouyiy tfoot, #jqihsouyiy tr, #jqihsouyiy td, #jqihsouyiy th {
+  border-style: none;
+}
+
+#jqihsouyiy p {
+  margin: 0;
+  padding: 0;
+}
+
+#jqihsouyiy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jqihsouyiy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jqihsouyiy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jqihsouyiy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jqihsouyiy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jqihsouyiy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jqihsouyiy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jqihsouyiy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jqihsouyiy .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jqihsouyiy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jqihsouyiy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jqihsouyiy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jqihsouyiy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jqihsouyiy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jqihsouyiy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jqihsouyiy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jqihsouyiy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jqihsouyiy .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jqihsouyiy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jqihsouyiy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jqihsouyiy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jqihsouyiy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jqihsouyiy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jqihsouyiy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jqihsouyiy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jqihsouyiy .gt_left {
+  text-align: left;
+}
+
+#jqihsouyiy .gt_center {
+  text-align: center;
+}
+
+#jqihsouyiy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jqihsouyiy .gt_font_normal {
+  font-weight: normal;
+}
+
+#jqihsouyiy .gt_font_bold {
+  font-weight: bold;
+}
+
+#jqihsouyiy .gt_font_italic {
+  font-style: italic;
+}
+
+#jqihsouyiy .gt_super {
+  font-size: 65%;
+}
+
+#jqihsouyiy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jqihsouyiy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jqihsouyiy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jqihsouyiy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jqihsouyiy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jqihsouyiy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jqihsouyiy .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jqihsouyiy .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jqihsouyiy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top" data-quarto-bootstrap="false">
 <thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:right;">
-mpg
-</th>
-<th style="text-align:right;">
-cyl
-</th>
-<th style="text-align:right;">
-disp
-</th>
-<th style="text-align:right;">
-hp
-</th>
-<th style="text-align:right;">
-drat
-</th>
-<th style="text-align:right;">
-wt
-</th>
-<th style="text-align:right;">
-qsec
-</th>
-<th style="text-align:right;">
-vs
-</th>
-<th style="text-align:right;">
-am
-</th>
-<th style="text-align:right;">
-gear
-</th>
-<th style="text-align:right;">
-carb
-</th>
+<tr class="gt_heading header">
+<td colspan="2" class="gt_heading gt_title gt_font_normal">Large Landmasses of the World</td>
+</tr>
+<tr class="gt_heading even">
+<td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">The top ten largest are presented</td>
+</tr>
+<tr class="gt_col_headings header">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th id="size" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">size</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Mazda RX4
-</td>
-<td style="text-align:right;">
-21.0
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-160
-</td>
-<td style="text-align:right;">
-110
-</td>
-<td style="text-align:right;">
-3.90
-</td>
-<td style="text-align:right;">
-2.620
-</td>
-<td style="text-align:right;">
-16.46
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-4
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Mazda RX4 Wag
-</td>
-<td style="text-align:right;">
-21.0
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-160
-</td>
-<td style="text-align:right;">
-110
-</td>
-<td style="text-align:right;">
-3.90
-</td>
-<td style="text-align:right;">
-2.875
-</td>
-<td style="text-align:right;">
-17.02
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-4
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Datsun 710
-</td>
-<td style="text-align:right;">
-22.8
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-108
-</td>
-<td style="text-align:right;">
-93
-</td>
-<td style="text-align:right;">
-3.85
-</td>
-<td style="text-align:right;">
-2.320
-</td>
-<td style="text-align:right;">
-18.61
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hornet 4 Drive
-</td>
-<td style="text-align:right;">
-21.4
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-258
-</td>
-<td style="text-align:right;">
-110
-</td>
-<td style="text-align:right;">
-3.08
-</td>
-<td style="text-align:right;">
-3.215
-</td>
-<td style="text-align:right;">
-19.44
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Hornet Sportabout
-</td>
-<td style="text-align:right;">
-18.7
-</td>
-<td style="text-align:right;">
-8
-</td>
-<td style="text-align:right;">
-360
-</td>
-<td style="text-align:right;">
-175
-</td>
-<td style="text-align:right;">
-3.15
-</td>
-<td style="text-align:right;">
-3.440
-</td>
-<td style="text-align:right;">
-17.02
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-2
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Valiant
-</td>
-<td style="text-align:right;">
-18.1
-</td>
-<td style="text-align:right;">
-6
-</td>
-<td style="text-align:right;">
-225
-</td>
-<td style="text-align:right;">
-105
-</td>
-<td style="text-align:right;">
-2.76
-</td>
-<td style="text-align:right;">
-3.460
-</td>
-<td style="text-align:right;">
-20.22
-</td>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:right;">
-0
-</td>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:right;">
-1
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</figure>
-</div>
-</div></section><section id="a-custom-summary-table" class="slide level2">
-<h2>A custom summary table</h2>
-<div id="fig-custom-summary" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-custom-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>variable</th>
-<th>min</th>
-<th>median</th>
-<th>mean</th>
-<th>max</th>
-</tr>
-</thead>
-<tbody>
+<tbody class="gt_table_body">
 <tr class="odd">
-<td>mpg</td>
-<td>10.4</td>
-<td>19.2</td>
-<td>20.09</td>
-<td>33.90</td>
+<td class="gt_row gt_left" headers="name">Asia</td>
+<td class="gt_row gt_right" headers="size">16988</td>
 </tr>
 <tr class="even">
-<td>disp</td>
-<td>71.1</td>
-<td>196.3</td>
-<td>230.7</td>
-<td>472.0</td>
+<td class="gt_row gt_left" headers="name">Africa</td>
+<td class="gt_row gt_right" headers="size">11506</td>
 </tr>
 <tr class="odd">
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-custom-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: A sketch of a statistical summary table we might want to create.
-</figcaption>
-</figure>
-</div>
-<div class="fragment">
-<ul>
-<li>Need a different data frame</li>
-<li>Columns must be computed from <em>mtcars</em></li>
-</ul>
-</div>
-</section>
-<section id="under-the-hood-1" class="slide level2">
-<h2>Under the hood</h2>
-<ul>
-<li><a href="#/fig-custom-summary" class="quarto-xref">Figure&nbsp;2</a> is built using Markdown tables.</li>
-</ul>
-<div id="fig-markdown-table-code" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-markdown-table-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="pp">|</span> variable  <span class="pp">|</span> min  <span class="pp">|</span> median <span class="pp">|</span> mean  <span class="pp">|</span> max   <span class="pp">|</span></span>
-<span id="cb9-2"><a></a><span class="pp">|-----------|------|--------|-------|-------|</span></span>
-<span id="cb9-3"><a></a><span class="pp">|</span> mpg       <span class="pp">|</span> 10.4 <span class="pp">|</span> 19.2   <span class="pp">|</span> 20.09 <span class="pp">|</span> 33.90 <span class="pp">|</span></span>
-<span id="cb9-4"><a></a><span class="pp">|</span> disp      <span class="pp">|</span> 71.1 <span class="pp">|</span> 196.3  <span class="pp">|</span> 230.7 <span class="pp">|</span> 472.0 <span class="pp">|</span></span>
-<span id="cb9-5"><a></a><span class="pp">|</span> ...       <span class="pp">|</span> ...  <span class="pp">|</span> ...    <span class="pp">|</span> ...   <span class="pp">|</span> ...   <span class="pp">|</span>  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-markdown-table-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: A table built using the <a href="https://www.markdownguide.org/extended-syntax/#tables">Markdown tables</a> syntax.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="making-a-summary-table" class="slide level2">
-<h2>Making a summary table</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>variables <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"mpg"</span>, <span class="st">"disp"</span>)</span>
-<span id="cb10-2"><a></a>mins <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(mtcars<span class="sc">$</span>mpg), </span>
-<span id="cb10-3"><a></a>          <span class="fu">min</span>(mtcars<span class="sc">$</span>disp))</span>
-<span id="cb10-4"><a></a>meds <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">median</span>(mtcars<span class="sc">$</span>mpg), </span>
-<span id="cb10-5"><a></a>          <span class="fu">median</span>(mtcars<span class="sc">$</span>disp))</span>
-<span id="cb10-6"><a></a>means <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">mean</span>(mtcars<span class="sc">$</span>mpg), </span>
-<span id="cb10-7"><a></a>           <span class="fu">mean</span>(mtcars<span class="sc">$</span>disp))</span>
-<span id="cb10-8"><a></a>maxs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">max</span>(mtcars<span class="sc">$</span>mpg), </span>
-<span id="cb10-9"><a></a>          <span class="fu">max</span>(mtcars<span class="sc">$</span>disp))</span>
-<span id="cb10-10"><a></a></span>
-<span id="cb10-11"><a></a>my_stats_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">variable =</span> variables,</span>
-<span id="cb10-12"><a></a>                       <span class="at">min =</span> mins,</span>
-<span id="cb10-13"><a></a>                       <span class="at">median =</span> meds,</span>
-<span id="cb10-14"><a></a>                       <span class="at">mean =</span> means,</span>
-<span id="cb10-15"><a></a>                       <span class="at">max =</span> maxs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="show-it" class="slide level2">
-<h2>Show it</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>formattable<span class="sc">::</span><span class="fu">format_table</span>(my_stats_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="tbl-show-my_stats_df" class="cell quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-show-my_stats_df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: A table showing summary statistics of two of the variables from the <em>mtcars</em> dataset.
-</figcaption>
-<div aria-describedby="tbl-show-my_stats_df-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<table class="table table-condensed cell caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: right;" data-quarto-table-cell-role="th">variable</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">min</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">median</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">max</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">mpg</td>
-<td style="text-align: right;">10.4</td>
-<td style="text-align: right;">19.2</td>
-<td style="text-align: right;">20.09062</td>
-<td style="text-align: right;">33.9</td>
+<td class="gt_row gt_left" headers="name">North America</td>
+<td class="gt_row gt_right" headers="size">9390</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">disp</td>
-<td style="text-align: right;">71.1</td>
-<td style="text-align: right;">196.3</td>
-<td style="text-align: right;">230.72188</td>
-<td style="text-align: right;">472.0</td>
+<td class="gt_row gt_left" headers="name">South America</td>
+<td class="gt_row gt_right" headers="size">6795</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Antarctica</td>
+<td class="gt_row gt_right" headers="size">5500</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Europe</td>
+<td class="gt_row gt_right" headers="size">3745</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Australia</td>
+<td class="gt_row gt_right" headers="size">2968</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Greenland</td>
+<td class="gt_row gt_right" headers="size">840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">New Guinea</td>
+<td class="gt_row gt_right" headers="size">306</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Borneo</td>
+<td class="gt_row gt_right" headers="size">280</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 </div>
 </div>
 </figure>
 </div>
-</div>
-</section>
-<section id="another-way-to-show-it" class="slide level2">
-<h2>Another way to show it</h2>
-<ul>
-<li>The <em>kableExtra</em> package has many features for making HTML-format tables.</li>
-<li>You could try making a table if you choose to work on <a href="../exercises/ex-05-tidy-data.html">Exercise 05</a>.</li>
-</ul>
+</div></section><section id="style-the-header" class="slide level2">
+<h2>Style the header</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>my_stats_df <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># Use markdown for the heading's `title` and `subtitle` to</span></span>
+<span id="cb13-2"><a></a><span class="co"># add bold and italicized characters</span></span>
+<span id="cb13-3"><a></a><span class="fu">gt</span>(islands_tbl[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, ]) <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb13-5"><a></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">"**Large Landmasses of the World**"</span>),</span>
+<span id="cb13-6"><a></a>    <span class="at">subtitle =</span> <span class="fu">md</span>(<span class="st">"The *top two* largest are presented"</span>)</span>
+<span id="cb13-7"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 </section>
-<section id="another-way-to-show-it-output" class="slide level2 output-location-slide"><h2>Another way to show it</h2><div class="cell output-location-slide">
-<div id="tbl-show-my_stats_df-kable" class="cell quarto-float quarto-figure quarto-figure-center" data-output-location="slide">
+<section id="style-the-header-output" class="slide level2 output-location-slide"><h2>Style the header</h2><div class="cell output-location-slide">
+<div id="tbl-islands-header-styled" class="cell quarto-float quarto-figure quarto-figure-center" data-output-location="slide">
 <figure class="quarto-float quarto-float-tbl">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-show-my_stats_df-kable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: A table showing summary statistics of two of the variables from the <em>mtcars</em> dataset. It uses the <em>kableExtra</em> package.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-islands-header-styled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: A table of the ‘islands’ data with a header styled using markdown. Notice that the title is in <strong>boldface</strong> and the subtitle has some words in <em>italics</em>.
 </figcaption>
-<div aria-describedby="tbl-show-my_stats_df-kable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-islands-header-styled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="lightable-classic cell caption-top" style="font-family: &quot;Arial Narrow&quot;, &quot;Source Sans Pro&quot;, sans-serif; margin-left: auto; margin-right: auto;">
+<div id="uejuazcygc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uejuazcygc table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#uejuazcygc thead, #uejuazcygc tbody, #uejuazcygc tfoot, #uejuazcygc tr, #uejuazcygc td, #uejuazcygc th {
+  border-style: none;
+}
+
+#uejuazcygc p {
+  margin: 0;
+  padding: 0;
+}
+
+#uejuazcygc .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#uejuazcygc .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#uejuazcygc .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#uejuazcygc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#uejuazcygc .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#uejuazcygc .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#uejuazcygc .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#uejuazcygc .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#uejuazcygc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#uejuazcygc .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#uejuazcygc .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#uejuazcygc .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#uejuazcygc .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#uejuazcygc .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#uejuazcygc .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uejuazcygc .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#uejuazcygc .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#uejuazcygc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#uejuazcygc .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uejuazcygc .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#uejuazcygc .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uejuazcygc .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#uejuazcygc .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uejuazcygc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#uejuazcygc .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#uejuazcygc .gt_left {
+  text-align: left;
+}
+
+#uejuazcygc .gt_center {
+  text-align: center;
+}
+
+#uejuazcygc .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#uejuazcygc .gt_font_normal {
+  font-weight: normal;
+}
+
+#uejuazcygc .gt_font_bold {
+  font-weight: bold;
+}
+
+#uejuazcygc .gt_font_italic {
+  font-style: italic;
+}
+
+#uejuazcygc .gt_super {
+  font-size: 65%;
+}
+
+#uejuazcygc .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#uejuazcygc .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#uejuazcygc .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#uejuazcygc .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#uejuazcygc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#uejuazcygc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#uejuazcygc .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#uejuazcygc .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#uejuazcygc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top" data-quarto-bootstrap="false">
 <thead>
-<tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">variable</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">min</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">median</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">mean</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">max</th>
+<tr class="gt_heading header">
+<td colspan="2" class="gt_heading gt_title gt_font_normal"><strong>Large Landmasses of the World</strong></td>
+</tr>
+<tr class="gt_heading even">
+<td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">The <em>top two</em> largest are presented</td>
+</tr>
+<tr class="gt_col_headings header">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th id="size" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">size</th>
 </tr>
 </thead>
-<tbody>
+<tbody class="gt_table_body">
 <tr class="odd">
-<td style="text-align: left;">mpg</td>
-<td style="text-align: right;">10.4</td>
-<td style="text-align: right;">19.2</td>
-<td style="text-align: right;">20.09062</td>
-<td style="text-align: right;">33.9</td>
+<td class="gt_row gt_left" headers="name">Asia</td>
+<td class="gt_row gt_right" headers="size">16988</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">disp</td>
-<td style="text-align: right;">71.1</td>
-<td style="text-align: right;">196.3</td>
-<td style="text-align: right;">230.72188</td>
-<td style="text-align: right;">472.0</td>
+<td class="gt_row gt_left" headers="name">Africa</td>
+<td class="gt_row gt_right" headers="size">11506</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 </div>
 </div>
 </figure>
 </div>
-</div></section><section id="some-take-homes" class="slide level2">
-<h2>Some take-homes</h2>
-<ul>
-<li>Data frames are useful and flexible structures</li>
-<li>The custom summary table is similar to the data dictionary we made in the <a href="../tutorials/tutorial-tidying-data.html#cleaning">Tidying Data tutorial</a>.</li>
-</ul>
-</section></section>
+</div></section><section id="add-a-source-note" class="slide level2">
+<h2>Add a source note</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Display the `islands_tbl` data with a heading and</span></span>
+<span id="cb14-2"><a></a><span class="co"># two source notes</span></span>
+<span id="cb14-3"><a></a>gt_tbl <span class="ot">&lt;-</span></span>
+<span id="cb14-4"><a></a>  gt_tbl <span class="sc">|&gt;</span></span>
+<span id="cb14-5"><a></a>  <span class="fu">tab_source_note</span>(</span>
+<span id="cb14-6"><a></a>    <span class="at">source_note =</span> <span class="st">"Source: The World Almanac and Book of Facts, 1975, page 406."</span></span>
+<span id="cb14-7"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb14-8"><a></a>  <span class="fu">tab_source_note</span>(</span>
+<span id="cb14-9"><a></a>    <span class="at">source_note =</span> <span class="fu">md</span>(<span class="st">"Reference: McNeil, D. R. (1977) *Interactive Data Analysis*. Wiley."</span>)</span>
+<span id="cb14-10"><a></a>  )</span>
+<span id="cb14-11"><a></a></span>
+<span id="cb14-12"><a></a><span class="co"># Show the gt table</span></span>
+<span id="cb14-13"><a></a>gt_tbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section><section id="add-a-source-note-output" class="slide level2 output-location-slide"><h2>Add a source note</h2><div class="cell output-location-slide">
+<div id="tbl-islands-with-source-note" class="cell quarto-float quarto-figure quarto-figure-center" data-output-location="slide">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-islands-with-source-note-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: A table of the ‘islands’ data with a source note.
+</figcaption>
+<div aria-describedby="tbl-islands-with-source-note-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="fivkskyiyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fivkskyiyi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fivkskyiyi thead, #fivkskyiyi tbody, #fivkskyiyi tfoot, #fivkskyiyi tr, #fivkskyiyi td, #fivkskyiyi th {
+  border-style: none;
+}
+
+#fivkskyiyi p {
+  margin: 0;
+  padding: 0;
+}
+
+#fivkskyiyi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fivkskyiyi .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fivkskyiyi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fivkskyiyi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fivkskyiyi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fivkskyiyi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fivkskyiyi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fivkskyiyi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fivkskyiyi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fivkskyiyi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fivkskyiyi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fivkskyiyi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fivkskyiyi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fivkskyiyi .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fivkskyiyi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fivkskyiyi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fivkskyiyi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fivkskyiyi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fivkskyiyi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fivkskyiyi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fivkskyiyi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fivkskyiyi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fivkskyiyi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fivkskyiyi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fivkskyiyi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fivkskyiyi .gt_left {
+  text-align: left;
+}
+
+#fivkskyiyi .gt_center {
+  text-align: center;
+}
+
+#fivkskyiyi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fivkskyiyi .gt_font_normal {
+  font-weight: normal;
+}
+
+#fivkskyiyi .gt_font_bold {
+  font-weight: bold;
+}
+
+#fivkskyiyi .gt_font_italic {
+  font-style: italic;
+}
+
+#fivkskyiyi .gt_super {
+  font-size: 65%;
+}
+
+#fivkskyiyi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fivkskyiyi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fivkskyiyi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fivkskyiyi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fivkskyiyi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fivkskyiyi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fivkskyiyi .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fivkskyiyi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fivkskyiyi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table cell caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="2" class="gt_heading gt_title gt_font_normal">Large Landmasses of the World</td>
+</tr>
+<tr class="gt_heading even">
+<td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">The top ten largest are presented</td>
+</tr>
+<tr class="gt_col_headings header">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th id="size" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">size</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Asia</td>
+<td class="gt_row gt_right" headers="size">16988</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Africa</td>
+<td class="gt_row gt_right" headers="size">11506</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">North America</td>
+<td class="gt_row gt_right" headers="size">9390</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">South America</td>
+<td class="gt_row gt_right" headers="size">6795</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Antarctica</td>
+<td class="gt_row gt_right" headers="size">5500</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Europe</td>
+<td class="gt_row gt_right" headers="size">3745</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Australia</td>
+<td class="gt_row gt_right" headers="size">2968</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Greenland</td>
+<td class="gt_row gt_right" headers="size">840</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">New Guinea</td>
+<td class="gt_row gt_right" headers="size">306</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Borneo</td>
+<td class="gt_row gt_right" headers="size">280</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="2" class="gt_sourcenote">Source: The World Almanac and Book of Facts, 1975, page 406.</td>
+</tr>
+<tr class="gt_sourcenotes even">
+<td colspan="2" class="gt_sourcenote">Reference: McNeil, D. R. (1977) <em>Interactive Data Analysis</em>. Wiley.</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div></section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap-up</h1>
@@ -911,9 +2517,9 @@ Table&nbsp;3: A table showing summary statistics of two of the variables from th
 <h2>Main points</h2>
 <ul>
 <li>Tables can be informative accompaniments to figures</li>
-<li>Data frames are useful and flexible structures for making both</li>
+<li>Data frames (or their cousins tibbles) are useful and flexible structures for making both</li>
 <li>Think about the <em>kind</em> of table you want to produce</li>
-<li>Making pretty tables in R can be done; we’re getting there</li>
+<li>Making pretty tables in R can be done; <em>gt</em> makes it possible</li>
 <li><em>Scripting</em> the generation of tables makes them less error-prone</li>
 </ul>
 </section>
@@ -1156,6 +2762,44 @@ Table&nbsp;3: A table showing summary statistics of two of the variables from th
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

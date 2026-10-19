@@ -7492,7 +7492,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#todays-topics",
     "title": "More tables",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nLast time…\nMaking tables in base R"
+    "text": "Today’s topics\n\nLast time…\n\nMaking tables in R\n\nMaking (better) tables"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#ingredients",
@@ -7569,7 +7569,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#bottom-line-on-table",
     "title": "More tables",
     "section": "Bottom line on table()",
-    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 1 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 1: Output from R’s help() function for the table() command."
+    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 2 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 2: Output from R’s help() function for the table() command."
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#prettier-output",
@@ -7583,21 +7583,21 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#prettier-output-output",
     "title": "More tables",
     "section": "Prettier output",
-    "text": "Prettier output\n\n\n\nTable 1: A prettier table of a subset of the mtcars dataset.\n\n\n\n\n\n\n\n\n\nmpg\n\n\ncyl\n\n\ndisp\n\n\nhp\n\n\ndrat\n\n\nwt\n\n\nqsec\n\n\nvs\n\n\nam\n\n\ngear\n\n\ncarb\n\n\n\n\n\n\nMazda RX4\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.620\n\n\n16.46\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nMazda RX4 Wag\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.875\n\n\n17.02\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nDatsun 710\n\n\n22.8\n\n\n4\n\n\n108\n\n\n93\n\n\n3.85\n\n\n2.320\n\n\n18.61\n\n\n1\n\n\n1\n\n\n4\n\n\n1\n\n\n\n\nHornet 4 Drive\n\n\n21.4\n\n\n6\n\n\n258\n\n\n110\n\n\n3.08\n\n\n3.215\n\n\n19.44\n\n\n1\n\n\n0\n\n\n3\n\n\n1\n\n\n\n\nHornet Sportabout\n\n\n18.7\n\n\n8\n\n\n360\n\n\n175\n\n\n3.15\n\n\n3.440\n\n\n17.02\n\n\n0\n\n\n0\n\n\n3\n\n\n2\n\n\n\n\nValiant\n\n\n18.1\n\n\n6\n\n\n225\n\n\n105\n\n\n2.76\n\n\n3.460\n\n\n20.22\n\n\n1\n\n\n0\n\n\n3\n\n\n1"
+    "text": "Prettier output\n\n\n\nTable 2: A prettier table of a subset of the mtcars dataset.\n\n\n\n\n\n\n\n\n\nmpg\n\n\ncyl\n\n\ndisp\n\n\nhp\n\n\ndrat\n\n\nwt\n\n\nqsec\n\n\nvs\n\n\nam\n\n\ngear\n\n\ncarb\n\n\n\n\n\n\nMazda RX4\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.620\n\n\n16.46\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nMazda RX4 Wag\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.875\n\n\n17.02\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nDatsun 710\n\n\n22.8\n\n\n4\n\n\n108\n\n\n93\n\n\n3.85\n\n\n2.320\n\n\n18.61\n\n\n1\n\n\n1\n\n\n4\n\n\n1\n\n\n\n\nHornet 4 Drive\n\n\n21.4\n\n\n6\n\n\n258\n\n\n110\n\n\n3.08\n\n\n3.215\n\n\n19.44\n\n\n1\n\n\n0\n\n\n3\n\n\n1\n\n\n\n\nHornet Sportabout\n\n\n18.7\n\n\n8\n\n\n360\n\n\n175\n\n\n3.15\n\n\n3.440\n\n\n17.02\n\n\n0\n\n\n0\n\n\n3\n\n\n2\n\n\n\n\nValiant\n\n\n18.1\n\n\n6\n\n\n225\n\n\n105\n\n\n2.76\n\n\n3.460\n\n\n20.22\n\n\n1\n\n\n0\n\n\n3\n\n\n1"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#a-custom-summary-table",
     "href": "slides/wk-10-2026-10-28-tables-II.html#a-custom-summary-table",
     "title": "More tables",
     "section": "A custom summary table",
-    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 2: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
+    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 3: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#under-the-hood-1",
     "href": "slides/wk-10-2026-10-28-tables-II.html#under-the-hood-1",
     "title": "More tables",
     "section": "Under the hood",
-    "text": "Under the hood\n\nFigure 2 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 3: A table built using the Markdown tables syntax."
+    "text": "Under the hood\n\nFigure 3 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 4: A table built using the Markdown tables syntax."
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#making-a-summary-table",
@@ -7611,7 +7611,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#show-it",
     "title": "More tables",
     "section": "Show it",
-    "text": "Show it\n\nformattable::format_table(my_stats_df)\n\n\n\nTable 2: A table showing summary statistics of two of the variables from the mtcars dataset.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+    "text": "Show it\n\nformattable::format_table(my_stats_df)\n\n\n\nTable 3: A table showing summary statistics of two of the variables from the mtcars dataset.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#another-way-to-show-it",
@@ -7625,7 +7625,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#another-way-to-show-it-output",
     "title": "More tables",
     "section": "Another way to show it",
-    "text": "Another way to show it\n\n\n\nTable 3: A table showing summary statistics of two of the variables from the mtcars dataset. It uses the kableExtra package.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+    "text": "Another way to show it\n\n\n\nTable 4: A table showing summary statistics of two of the variables from the mtcars dataset. It uses the kableExtra package.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#some-take-homes",
@@ -7639,7 +7639,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#main-points",
     "title": "More tables",
     "section": "Main points",
-    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone"
+    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames (or their cousins tibbles) are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; gt makes it possible\nScripting the generation of tables makes them less error-prone"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#next-time",
@@ -8132,5 +8132,96 @@
       "Tutorials",
       "Visualizing sports data"
     ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#package-gt",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#package-gt",
+    "title": "More tables",
+    "section": "Package gt",
+    "text": "Package gt\n\n\n\n\n\n\nFigure 1: https://gt.rstudio.com"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#gt-tutorial",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#gt-tutorial",
+    "title": "More tables",
+    "section": "gt tutorial",
+    "text": "gt tutorial\n\nGather data\nFormat it as a ‘tibble’, a special type of data frame\n\nhttps://gt.rstudio.com/articles/gt.html"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#setup",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#setup",
+    "title": "More tables",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(gt)\nlibrary(dplyr)\nlibrary(tibble)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#gathering-formatting",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#gathering-formatting",
+    "title": "More tables",
+    "section": "Gathering & formatting",
+    "text": "Gathering & formatting\n\nislands_tbl &lt;-\n  tibble(\n    name = names(islands),\n    size = islands\n  ) |&gt;\n  slice_max(size, n = 10)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#display-islands",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#display-islands",
+    "title": "More tables",
+    "section": "Display islands",
+    "text": "Display islands\n\n# Create a display table showing ten of\n# the largest islands in the world\ngt_tbl &lt;- gt(islands_tbl)\n\n# Show the gt Table\ngt_tbl\n\n\nhttps://gt.rstudio.com/articles/gt.html"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#display-islands-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#display-islands-output",
+    "title": "More tables",
+    "section": "Display islands",
+    "text": "Display islands\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header",
+    "title": "More tables",
+    "section": "Adorn the table: Header",
+    "text": "Adorn the table: Header\n\n# Make a display table with the `islands_tbl`\n# table; put a heading just above the column labels\ngt_tbl &lt;-\n  gt_tbl |&gt;\n  tab_header(\n    title = \"Large Landmasses of the World\",\n    subtitle = \"The top ten largest are presented\"\n  )\n\n# Show the gt Table\ngt_tbl"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#style-the-header",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#style-the-header",
+    "title": "More tables",
+    "section": "Style the header",
+    "text": "Style the header\n\n# Use markdown for the heading's `title` and `subtitle` to\n# add bold and italicized characters\ngt(islands_tbl[1:2, ]) |&gt;\n  tab_header(\n    title = md(\"**Large Landmasses of the World**\"),\n    subtitle = md(\"The *top two* largest are presented\")\n  )"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note",
+    "title": "More tables",
+    "section": "Add a source note",
+    "text": "Add a source note\n\n# Display the `islands_tbl` data with a heading and\n# two source notes\ngt_tbl &lt;-\n  gt_tbl |&gt;\n  tab_source_note(\n    source_note = \"Source: The World Almanac and Book of Facts, 1975, page 406.\"\n  ) |&gt;\n  tab_source_note(\n    source_note = md(\"Reference: McNeil, D. R. (1977) *Interactive Data Analysis*. Wiley.\")\n  )\n\n# Show the gt table\ngt_tbl"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#inspecting",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#inspecting",
+    "title": "More tables",
+    "section": "Inspecting",
+    "text": "Inspecting\n\nislands_tbl\n\n# A tibble: 10 × 2\n   name           size\n   &lt;chr&gt;         &lt;dbl&gt;\n 1 Asia          16988\n 2 Africa        11506\n 3 North America  9390\n 4 South America  6795\n 5 Antarctica     5500\n 6 Europe         3745\n 7 Australia      2968\n 8 Greenland       840\n 9 New Guinea      306\n10 Borneo          280"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header-output",
+    "title": "More tables",
+    "section": "Adorn the table: Header",
+    "text": "Adorn the table: Header\n\n\n\nTable 2: A table of the ‘islands’ data with a header.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top ten largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#style-the-header-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#style-the-header-output",
+    "title": "More tables",
+    "section": "Style the header",
+    "text": "Style the header\n\n\n\nTable 3: A table of the ‘islands’ data with a header styled using markdown. Notice that the title is in boldface and the subtitle has some words in italics.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top two largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note-output",
+    "title": "More tables",
+    "section": "Add a source note",
+    "text": "Add a source note\n\n\n\nTable 4: A table of the ‘islands’ data with a source note.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top ten largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280\n\n\n\nSource: The World Almanac and Book of Facts, 1975, page 406.\n\n\nReference: McNeil, D. R. (1977) Interactive Data Analysis. Wiley."
   }
 ]
