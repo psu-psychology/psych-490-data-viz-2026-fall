@@ -244,13 +244,16 @@
 
 ### Wed, Oct 21 {-}
 
+- Assigned: [Exercise-06](exercises/exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
 - [Slides](404.qmd)
 
 ### Fri, Oct 23 {-}
 
-*Work Session: TidyTuesday*
+*Work Session*
 
-- [Slides](404.qmd)
+- [Exercise-05](exercises/ex-05-tidy-data.qmd)
+- [Exercise-06](exercises/exercises/ex-06-making-maps.qmd)
+- [Tutorial](tutorials/tutorial-more-ggplot2.qmd)
 
 ## Week 10 {- #week-10}
 
@@ -282,7 +285,6 @@
 ### Mon, Nov 02 {-}
 
 - [Slides](404.qmd)
-- Assigned: [Exercise-06](exercises/exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
 
 ### Wed, Nov 04 {-}
 
@@ -311,7 +313,7 @@
 
 ### Fri, Nov 13 {-}
 
-*Work Session: More TidyTuesday*
+*Work Session: TidyTuesday*
 
 - [Slides](404.qmd)
 

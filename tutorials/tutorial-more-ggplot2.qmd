@@ -1,9 +1,14 @@
 ---
-title: "Tutorial: More *ggplot2* tools"
+title: "Tutorial: Customizing *ggplot* figures"
 format: html
+number-sections: true
 ---
 
 ## About
+
+This tutorial shows how to use additional commands in *ggplot2* to customize figures.
+
+I recommend that you create your own RStudio project with a new Quarto document to work through this tutorial.
 
 ## Setup
 
@@ -18,26 +23,59 @@ Let's make some continuous data that have different degrees of relatedness.
 
 ```{r}
 #| label: x-y-error
-x <- rnorm(n = 1000, mean = 0, sd = 1)
-y_25 <- x + rnorm(1000, mean = 0, sd = 0.25)
-y_35 <- x + rnorm(1000, mean = 0, sd = 0.35)
-y_45 <- x + rnorm(1000, mean = 0, sd = 0.45)
-y_55 <- x + rnorm(1000, mean = 0, sd = 0.55)
-y_65 <- x + rnorm(1000, mean = 0, sd = 0.65)
-y_75 <- x + rnorm(1000, mean = 0, sd = 0.75)
+#| echo: true
+#| code-fold: false
+#| 
+n_pts = 600
+x <- rnorm(n = n_pts, mean = 0, sd = 1)
+y_25 <- x + rnorm(n_pts, mean = 0, sd = 0.25)
+y_50 <- x + rnorm(n_pts, mean = 0, sd = 0.50)
+y_75 <- x + rnorm(n_pts, mean = 0, sd = 0.75)
+y_100 <- x + rnorm(n_pts, mean = 0, sd = 1)
+y_125 <- x + rnorm(n_pts, mean = 0, sd = 1.25)
+y_150 <- x + rnorm(n_pts, mean = 0, sd = 1.50)
 
 df <- data.frame(x = rep(x, 6), 
-                 y = c(y_25, y_35, y_45, y_55, y_65, y_75), 
-                 noise = c(.25, .35, .45, .55, .65, .75), 
-                 each = 1000)
+                 y = c(y_25, y_50, y_75, y_100, y_125, y_150), 
+                 noise = c(.25, .50, .75, 1.00, 1.25, 1.50), 
+                 each = n_pts)
 ```
+
+::: {.callout-important}
+## Change any variable you like
+
+One powerful way to learn a new skill is to take sample code, alter it, and see what happens.
+Here, you could change the `n_pts` variable to see how the figures look with different number of points.
+:::
 
 ## Visualize
 
-### Figure 0.0
+### Basic scatterplot
+
+In @fig-0.0, I filter the bigger dataset using the `filter(noise == 0.25)` command.
+This selects the subset where the noise is 0.25.
+
+::: {.callout-note}
+## Troubleshooting
+
+Make sure that your Quarto document's `Setup` chunk has `library(dplyr)` in it.
+Alternatively, you could change the `filter(noise == 0.25)` line to `dplyr::filter(noise == 0.25)`.
+This tells R to find and use *dplyr* even if you haven't run `library(dplyr)` in your Quarto document.
+
+If this fails, then you may need to install *dplyr*.
+In your R console, outside of your Quarto document, run `install.packages("dplyr")`.
+Then go back and render your Quarto document.
+
+Think of the problem this way.
+Let's say that your friend says "I have to call Mike."
+But you know lots of Mike's, so unless it's obvious from context which Mike you're talking about, things could go sideways.
+By telling R `library(dplyr)`, we're saying that we're talking about `filter()` from the *dplyr* package, not some other `filter()` command.
+:::
 
 ```{r}
 #| label: fig-0.0
+#| echo: true
+#| code-fold: false
 df |>
   filter(noise == .25) |>
   ggplot() +
@@ -45,13 +83,21 @@ df |>
   geom_point()
 ```
 
-### Figure 0.1
+### Adjust alpha
 
-Try reducing clutter by adjusting alpha.
+In @fig-0.1 I try reducing clutter by adjusting alpha.
+The `alpha` parameter controls the saturation (intensity) of the dots based on how many points overlap.
+Lower values of alpha mean that more points have to overlap for that point to appear darker or more saturated.
+Notice that the alpha parameter belongs with `geom_point()`.
+If we had other layers, say lines or annotations, these could have their own alpha levels.
+
 Here I tried `alpha = 0.3`.
 
 ```{r}
 #| label: fig-0.1
+#| echo: true
+#| code-fold: false
+
 df |>
   filter(noise == .25) |>
   ggplot() +
@@ -59,12 +105,16 @@ df |>
   geom_point(alpha = .3)
 ```
 
-### Figure 0.2
+## Change theme
 
-Keep `alpha = 0.3` and add `theme_classic()`.
+In @fig-0.2 I eliminate the gray background, by adding a theme.
+There are many *ggplot2* themes, but `theme_classic()` is a decent place to start.
 
 ```{r}
 #| label: fig-0.2
+#| echo: true
+#| code-fold: false
+
 df |>
   filter(noise == .25) |>
   ggplot() +
@@ -73,12 +123,16 @@ df |>
   theme_classic()
 ```
 
-### Figure 0.3
+## Add labels
 
-Keep previous changes and add some labels using `labs()`
+In @fig-0.3, I keep the previous changes and add some labels using `labs()`, short for labels.
+Notice that the `labs()` function has a parameter for `title`, `subtitle`, and `caption`.
 
 ```{r}
 #| label: fig-0.3
+#| echo: true
+#| code-fold: false
+
 df |>
   filter(noise == .25) |>
   ggplot() +
@@ -88,12 +142,38 @@ df |>
   labs(title = "A scatter plot with random data.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.")
 ```
 
-### Figure 0.4
+### Change text size
 
-Add a best-fitting line using `geom_smooth(method = "lm")`.
+The text is small.
+In @fig-0.3.1, I adjust it with another `theme()` command.
+
+```{r}
+#| label: fig-0.3.1
+#| echo: true
+#| code-fold: false
+
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  theme_classic() +
+  labs(title = "A scatter plot with random data.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.") +
+  theme(title = element_text(size = 14))
+```
+
+Read the help document about the `labs()` command to learn more.
+Enter `help("labs")` into your R console.
+
+## Add best-fitting line
+
+In @fig-0.4 we add a best-fitting line using `geom_smooth(method = "lm")`.
 
 ```{r}
 #| label: fig-0.4
+#| echo: true
+#| code-fold: false
+
 df |>
   filter(noise == .25) |>
   ggplot() +
@@ -101,17 +181,22 @@ df |>
   geom_point(alpha = .3) +
   geom_smooth(method = "lm") +
   theme_classic() +
-  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.")
+  labs(title = "A scatter plot with random data and a best-fitting line.",
+       subtitle = "y = x + N(0, .25).",
+       caption = "The data show an expected strong linear relationship.") +
+  theme(title = element_text(size = 14))
 ```
 
-### Figure 0.5
+## Add annotation
 
-Add an annotation with the correlation using `annotate()`.
+In @fig-0.5 we add an annotations featuring the the correlation (`r` value) using `annotate()`.
 
 ```{r}
 #| label: fig-0.5
+#| echo: true
+#| code-fold: false
 
-xy_corr <- with(df, cor.test(x,y))
+xy_corr <- with(df, cor.test(x, y))
 
 df |>
   filter(noise == .25) |>
@@ -120,18 +205,64 @@ df |>
   geom_point(alpha = .3) +
   geom_smooth(method = "lm") +
   theme_classic() +
-  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.") +
-  annotate("text", x = -2, y = 3, label = "r = .89")
+  labs(title = "A scatter plot with random data and a best-fitting line.",
+       subtitle = "y = x + N(0, .25).",
+       caption = "The data show an expected strong linear relationship.") +
+  annotate("text",
+           x = -2,
+           y = 3,
+           label = "r = .89") +
+  theme(title = element_text(size = 14))
 ```
 
-### Figure 0.5.1
+### Grab correlation
 
-Add an annotation with the correlation using `annotate()`, but grabe the correlation from a variable.
+Add an annotation with the correlation using `annotate()`, but grab the correlation from a variable.
 
 ```{r}
 #| label: fig-0.5.1
+#| echo: true
+#| code-fold: false
+
+xy_corr <- with(df, cor.test(x, y))
+
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line.",
+       subtitle = "y = x + N(0, .25).",
+       caption = "The data show an expected strong linear relationship.") +
+  annotate(
+    "text",
+    x = -1,
+    y = 3,
+    label = paste0("r = ", xy_corr$estimate)
+  ) +
+  theme(title = element_text(size = 14))
+```
+
+::: {.callout-important}
+## What the coordinates mean in `annotate()`
+
+You might notice that the x and y coordinates we give to the `annotate()` layer specify the *middle* point of the text for our annotation.
+:::
+
+### Format annotation
+
+The correlation value has too many digits, so let's fix that.
+
+```{r}
+#| label: fig-0.5.2
+#| echo: true
+#| code-fold: false
 
 xy_corr <- with(df, cor.test(x,y))
+corr_r <- xy_corr$estimate |>
+  format(digits = 3)
 
 df |>
   filter(noise == .25) |>
@@ -141,5 +272,165 @@ df |>
   geom_smooth(method = "lm") +
   theme_classic() +
   labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.") +
-  annotate("text", x = -2, y = 3, label = paste0("r = ", xy_corr$estimate))
+  annotate("text", x = -2, y = 3, label = paste0("r = ", corr_r)) +
+  theme(title = element_text(size = 14))
+```
+
+### Extend annotation
+
+Add a *p* value and degrees of freedom to the annotation.
+
+```{r}
+#| label: fig-0.5.3
+#| echo: true
+#| code-fold: false
+
+df_25 <- filter(df, noise == .25)
+
+xy_corr <- with(df_25, cor.test(x,y))
+corr_r <- xy_corr$estimate |>
+  format(digits = 3)
+sample_n <- xy_corr$parameter
+p_value <- format(xy_corr$p.value, digits = 3)
+est_lo <- format(xy_corr$conf.int[1], digits = 2)
+est_hi <- format(xy_corr$conf.int[2], digits = 2)
+
+corr_text <- paste0("r(", sample_n, ")=", corr_r, ", p=", p_value)
+
+df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, .25).", caption = "The data show an expected strong linear relationship.") +
+  annotate("text", x = -2, y = 3.75, label = corr_text) +
+  theme(title = element_text(size = 14))
+```
+
+### Different noise level
+
+Let's try one with a different noise level.
+
+```{r}
+#| label: fig-0.5.4
+#| echo: true
+#| code-fold: false
+
+df_150 <- filter(df, noise == 1.50)
+
+xy_corr <- with(df_150, cor.test(x,y))
+corr_r <- xy_corr$estimate |>
+  format(digits = 3)
+sample_n <- xy_corr$parameter
+p_value <- format(xy_corr$p.value, digits = 3)
+est_lo <- format(xy_corr$conf.int[1], digits = 2)
+est_hi <- format(xy_corr$conf.int[2], digits = 2)
+
+corr_text <- paste0("r(", sample_n, ")=", corr_r, ", p=", p_value)
+
+df_150 |>
+  # filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .3) +
+  geom_smooth(method = "lm") +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line.", subtitle= "y = x + N(0, 1.50).", caption = "The data show an expected strong linear relationship.") +
+  annotate("text", x = -2, y = 3.75, label = corr_text) +
+  theme(title = element_text(size = 14))
+```
+
+## Facets
+
+Let's take the gist of @fig-0.5.2 and make a plot with multiple facets based on the amount of random noise added to `y`.
+
+```{r}
+#| label: fig-0.6
+#| echo: true
+#| code-fold: false
+
+df_categorical_noise <- df |>
+  mutate(noise_cat = ordered(noise))
+
+df_categorical_noise |>
+  ggplot() +
+  aes(x, y) +
+  geom_point(alpha = .1) +
+  geom_smooth(method = "lm") +
+  facet_wrap(facets = ~ noise_cat, ncol = 3) +
+  theme_classic() +
+  labs(title = "A scatter plot with random data and a best-fitting line at various levels of random noise.") +
+  theme(title = element_text(size = 14))
+```
+
+## Assigning names
+
+In the next series of figures, we'll take advantage of a cool feature of the *ggplot2* syntax: Assigning figures to a variable.
+This can make the process of exploring different figure options much easier.
+
+So, in @fig-1.0 below we give a very basic plot a name: `p`.
+
+```{r}
+#| label: fig-1.0
+#| echo: true
+#| code-fold: false
+
+p <- df |>
+  filter(noise == .25) |>
+  ggplot() +
+  aes(x, y) +
+  geom_point()
+
+p
+```
+
+Now, we can "add" new layers or themese to the base figure using the syntax indicated below.
+
+### Add a layer
+
+```{r}
+#| label: fig-1.1
+#| echo: true
+#| code-fold: false
+p + theme_classic()
+
+p_classic <- p + theme_classic()
+```
+
+### Add a line
+
+@fig-1.2 adds a smooth, best-fitting line to @fig-1.1.
+Note that in the previous code gave @fig-1.1 the name `p_classic`.
+This let's us "add" the `geom_smooth()` to `p_classic` as indicated below.
+
+```{r}
+#| label: fig-1.2
+#| echo: true
+#| code-fold: false
+p_classic + geom_smooth(method = "lm")
+```
+
+### Dark theme
+
+We can use this syntax to explore the space of features we want for our plot.
+@fig-1.3 tries `theme_dark()`.
+
+```{r}
+#| label: fig-1.3
+#| echo: true
+#| code-fold: false
+p + theme_dark() + geom_smooth(method = "lm")
+```
+
+### Light theme
+
+@fig-1.4 tries `theme_light()`.
+
+```{r}
+#| label: fig-1.4
+#| echo: true
+#| code-fold: false
+p + theme_light() + geom_smooth(method = "lm")
 ```
