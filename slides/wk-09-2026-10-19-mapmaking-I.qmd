@@ -7,12 +7,13 @@ format: revealjs
 
 ## Announcements
 
-- [Exercise 05](../exercises/ex-05-tidy-data.qmd) due on Monday, October 26, 2026
+- [Exercise-05](../exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443) {{< fa calendar >}} *due* on Friday, October 30, 2026.
 
 ## Last week...
 
 - Critiquing figures
 - Storytelling with data
+- [Tutorial](../tutorials/tutorial-tidying-data.qmd) on tidy data; supports work on [Exercise-05](../exercises/ex-05-tidy-data.qmd).
 
 ## Today
 
@@ -24,7 +25,40 @@ format: revealjs
 
 ## What are maps?
 
-## Projections
+::: {.incremental}
+- Visualizations of spatial relationships
+- Terrestrial
+- Astronomical
+- Fantastical
+:::
+
+---
+
+![The night sky from State College in October, 2026. Sky & Telescope^[<https://skyandtelescope.org/interactive-sky-chart/>]](../include/img/sky-telescope-oct-2026.png){#fig-october-2026-sky}
+
+---
+
+![A map of Tolkien's Middle Earth^[<https://static.wikia.nocookie.net/pjmidearthfilms/images/a/a2/Middle_Earth_map.jpg/revision/latest?cb=20230517165953>].](../include/img/middle-earth-map.png){#fig-middle-earth}
+
+## History
+
+:::: {.columns}
+::: {.column width=50%}
+- May be > 25K old!
+- @Wikipedia-contributors2026-pj
+- Earliest data visualizations?
+:::
+::: {.column width=50%}
+![The oldest surviving map? Wikipedia^[By Zde - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=69695100]](https://upload.wikimedia.org/wikipedia/commons/4/42/Engraving_on_a_mammoth_tusk%2C_map%2C_Gravettian%2C_076872x.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-wikipedia-oldest-map}
+:::
+::::
+
+## Geometric considerations
+
+- Frame of reference
+- Coordinate system
+- Projection
+  - 3D $\rightarrow$ 2D
 
 ---
 
@@ -312,6 +346,11 @@ ggplot() +
   coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area
 ```
 
+## Introducing: Exercise 06
+
+- Map-maker, map-maker, [make me a map](../exercises/ex-06-making-maps.qmd)...
+- Due Monday, November 16, 2026.
+
 # Wrap up
 
 ## Main points
@@ -319,7 +358,7 @@ ggplot() +
 - Making maps involves multiple considerations
 - Projections, coordinates/scale, geometries, layers
 - Map-making often controversial
-- Using R to make maps makes them reproducible
+- Using R to make maps makes them reproducible (to you, others)
 
 ## Next time
 

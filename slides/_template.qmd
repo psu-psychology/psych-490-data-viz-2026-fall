@@ -1,17 +1,9 @@
 ---
-title: "slide-template"
+title: "template"
 format: revealjs
 ---
 
 # Preliminaries
-
-## For fun
-
-::: {#fig-stevie-wonder-superstition}
-<iframe width="1240" height="450" src="https://www.youtube.com/embed/97hwNY3ni10?si=2k0feL7PKLxzhtNm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-@Musikladen2020-id
-:::
 
 ## Announcements
 
@@ -53,7 +45,7 @@ format: revealjs
 ## About
 
 This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
-Integrated Development Environment (IDE), version 2026.9.0.174.
+Integrated Development Environment (IDE), version 2026.10.0.233.
 
 The source files are in R and R Markdown, then rendered to HTML using the
 [revealJS](https://revealjs.com) framework.

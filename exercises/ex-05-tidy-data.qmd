@@ -6,7 +6,7 @@ format: html
 
 ## Dates {-}
 
-{{< fa calendar >}} *Due* Monday, October 26, 2026.
+{{< fa calendar >}} *Due* Friday, October 30, 2026.
 
 ## Goals {-}
 

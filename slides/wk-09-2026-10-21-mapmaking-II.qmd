@@ -113,7 +113,7 @@ ggplot() +
 :::: {.columns}
 ::: {.column width=50%}
 - Statistical thematic map [@Wikipedia-contributors2026-qf]
-- Data element maps to fill shading or color 
+- Data element $\rightarrow$ fill, shading or color 
 - First known example 1826
 - Term comes from the Greek for "multitude of regions"
 :::
@@ -343,6 +343,11 @@ ggplot() +
 ```
 
 ## Why might *psychologists* care about making maps?
+
+- Influence of contextual factors on
+  - Behavior
+  - Internal states (emotions, thoughts, memories)
+  - Trajectories of development
 
 # Wrap up
 

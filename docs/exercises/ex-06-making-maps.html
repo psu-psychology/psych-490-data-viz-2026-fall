@@ -305,6 +305,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Wk 08 • Wed Oct 14</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-09-2026-10-19-mapmaking-I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 09 • Mon Oct 19</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -479,7 +485,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 15, 2026</p>
+      <p class="date-modified">October 19, 2026</p>
     </div>
   </div>
     
@@ -505,6 +511,7 @@ Warning
 </div>
 <section id="dates" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="dates">Dates</h2>
+<p>Due Monday, November 16, 2026.</p>
 </section>
 <section id="goals" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="goals">Goals</h2>
@@ -1036,28 +1043,30 @@ Warning
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dates {-}</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Goals {-}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Due Monday, November 16, 2026.</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To make use of several R packages that make it easy to create data-informed maps.</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Goals {-}</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment {-}</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>To make use of several R packages that make it easy to create data-informed maps.</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">0. </span>Create a Quarto document where you will document your work.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The document should have an "About" and "Setup" sections with suitable text and R code that explains what you're doing and why.</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Create "Making Data" and "Map-making" headers for the sections that document your work described below.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make a data frame with four cities you have enjoyed visiting or living in and four cities you hope to visit someday.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Your data frame should have the following variables: <span class="in">`city`</span>, <span class="in">`lat`</span>, <span class="in">`lon`</span>, <span class="in">`status`</span>.</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`city`</span> variable should contain the names of the cities; e.g., <span class="in">`city = c("Pittsburgh", "State College")`</span> would be the start of my own list.</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`lat`</span> and <span class="in">`lon`</span> variables are the *decimal* latitude and longitude values for these locations. There are many ways to find these, including Google maps^<span class="co">[</span><span class="ot">Right click on a location and copy the decimal latitude and longitude from the window that pops up.</span><span class="co">]</span>. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: <span class="in">`lat &lt;- c(38.363328856857876)`</span> and <span class="in">`lon &lt;- c(, -75.61075873207025)`</span>. Remember that your latitude and longitude values need to line up with your city names.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`status`</span> variable should contain a value for each city such as "lived_in", "hope_to_visit". I would start this for my own cities as follows: `status &lt;- c("lived_in", "lived_in").</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>If you follow the pattern above, then your data frame could be created as follows: <span class="in">`my_travels &lt;- data.frame(city, lat, lon, status)`</span>.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Make a map of these locations using the *sf*, *rnaturalearth*, *rnaturalearthdata*, *ggplot2*, and *dplyr* packages.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Map the color or shape of the points on your plot to the <span class="in">`status`</span> variable.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Create a short "Discussion &amp; Conclusions" section where you comment on the exercise. What did you learn? Can you see other situations where you might use this workflow?</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Tips</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Make sure to add <span class="in">`embed-resources: true`</span> into the header of your Quarto document.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Submit the <span class="in">`.html`</span> file.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Make sure that your file has a suitable name, e.g., <span class="in">`psych-490.007-2026-ex-06-&lt;last_name&gt;-&lt;first_name&gt;.html`</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment {-}</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">0. </span>Create a Quarto document where you will document your work.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The document should have an "About" and "Setup" sections with suitable text and R code that explains what you're doing and why.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Create "Making Data" and "Map-making" headers for the sections that document your work described below.</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make a data frame with four cities you have enjoyed visiting or living in and four cities you hope to visit someday.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Your data frame should have the following variables: <span class="in">`city`</span>, <span class="in">`lat`</span>, <span class="in">`lon`</span>, <span class="in">`status`</span>.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`city`</span> variable should contain the names of the cities; e.g., <span class="in">`city = c("Pittsburgh", "State College")`</span> would be the start of my own list.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`lat`</span> and <span class="in">`lon`</span> variables are the *decimal* latitude and longitude values for these locations. There are many ways to find these, including Google maps^<span class="co">[</span><span class="ot">Right click on a location and copy the decimal latitude and longitude from the window that pops up.</span><span class="co">]</span>. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: <span class="in">`lat &lt;- c(38.363328856857876)`</span> and <span class="in">`lon &lt;- c(, -75.61075873207025)`</span>. Remember that your latitude and longitude values need to line up with your city names.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`status`</span> variable should contain a value for each city such as "lived_in", "hope_to_visit". I would start this for my own cities as follows: `status &lt;- c("lived_in", "lived_in").</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>If you follow the pattern above, then your data frame could be created as follows: <span class="in">`my_travels &lt;- data.frame(city, lat, lon, status)`</span>.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Make a map of these locations using the *sf*, *rnaturalearth*, *rnaturalearthdata*, *ggplot2*, and *dplyr* packages.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Map the color or shape of the points on your plot to the <span class="in">`status`</span> variable.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Create a short "Discussion &amp; Conclusions" section where you comment on the exercise. What did you learn? Can you see other situations where you might use this workflow?</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Tips</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Make sure to add <span class="in">`embed-resources: true`</span> into the header of your Quarto document.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Submit the <span class="in">`.html`</span> file.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Make sure that your file has a suitable name, e.g., <span class="in">`psych-490.007-2026-ex-06-&lt;last_name&gt;-&lt;first_name&gt;.html`</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

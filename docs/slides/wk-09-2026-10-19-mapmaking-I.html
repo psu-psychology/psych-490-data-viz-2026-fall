@@ -8,6 +8,8 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
@@ -216,19 +218,6 @@
     }
   </style>
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -240,6 +229,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
     background-image: none;
   }
   </style>
@@ -272,7 +274,7 @@ Rick Gilmore
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><a href="../exercises/ex-05-tidy-data.html">Exercise 05</a> due on Monday, October 26, 2026</li>
+<li><a href="../exercises/ex-05-tidy-data.html">Exercise-05</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18779443"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>due</em> on Friday, October 30, 2026.</li>
 </ul>
 </section>
 <section id="last-week" class="slide level2">
@@ -280,6 +282,7 @@ Rick Gilmore
 <ul>
 <li>Critiquing figures</li>
 <li>Storytelling with data</li>
+<li><a href="../tutorials/tutorial-tidying-data.html">Tutorial</a> on tidy data; supports work on <a href="../exercises/ex-05-tidy-data.html">Exercise-05</a>.</li>
 </ul>
 </section>
 <section id="today" class="slide level2">
@@ -299,19 +302,81 @@ Rick Gilmore
 </section>
 <section id="what-are-maps" class="slide level2">
 <h2>What are maps?</h2>
+<ul>
+<li class="fragment">Visualizations of spatial relationships</li>
+<li class="fragment">Terrestrial</li>
+<li class="fragment">Astronomical</li>
+<li class="fragment">Fantastical</li>
+</ul>
 </section>
-<section id="projections" class="slide level2">
-<h2>Projections</h2>
+<section class="slide level2">
+
+<div id="fig-october-2026-sky" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-october-2026-sky-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/sky-telescope-oct-2026.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: The night sky from State College in October, 2026. Sky &amp; Telescope"><img data-src="../include/img/sky-telescope-oct-2026.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-october-2026-sky-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The night sky from State College in October, 2026. Sky &amp; Telescope<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
+</figcaption>
+</figure>
+</div>
+<aside></aside></section>
+<section class="slide level2">
+
+<div id="fig-middle-earth" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-middle-earth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/middle-earth-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: A map of Tolkien’s Middle Earth."><img data-src="../include/img/middle-earth-map.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-middle-earth-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A map of Tolkien’s Middle Earth<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>.
+</figcaption>
+</figure>
+</div>
+<aside></aside></section>
+<section id="history" class="slide level2">
+<h2>History</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>May be &gt; 25K old!</li>
+<li><span class="citation" data-cites="Wikipedia-contributors2026-pj">Wikipedia contributors (<a href="#/references" role="doc-biblioref" onclick="">2026</a>)</span></li>
+<li>Earliest data visualizations?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div id="fig-wikipedia-oldest-map" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-wikipedia-oldest-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://upload.wikimedia.org/wikipedia/commons/4/42/Engraving_on_a_mammoth_tusk%2C_map%2C_Gravettian%2C_076872x.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: The oldest surviving map? Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/4/42/Engraving_on_a_mammoth_tusk%2C_map%2C_Gravettian%2C_076872x.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wikipedia-oldest-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The oldest surviving map? Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref3" role="doc-noteref" data-footnote-href="#/fn3" onclick=""><sup>3</sup></a>
+</figcaption>
+</figure>
+</div>
+</div></div>
+<aside></aside></section>
+<section id="geometric-considerations" class="slide level2">
+<h2>Geometric considerations</h2>
+<ul>
+<li>Frame of reference</li>
+<li>Coordinate system</li>
+<li>Projection
+<ul>
+<li>3D <span class="math inline">\(\rightarrow\)</span> 2D</li>
+</ul></li>
+</ul>
 </section>
 <section class="slide level2">
 
 <div id="fig-wilke-fig-15.1" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-fig-15.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-orthographic-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: @Wilke2019-mx, Figure 15.1"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-orthographic-1.png" style="width:55.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-orthographic-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: @Wilke2019-mx, Figure 15.1"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-orthographic-1.png" style="width:55.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-fig-15.1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.1
+Figure&nbsp;4: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.1
 </figcaption>
 </figure>
 </div>
@@ -321,10 +386,10 @@ Figure&nbsp;1: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="
 <div id="fig-wilke-fig-15.2" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-fig-15.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-mercator-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: @Wilke2019-mx, Figure 15.2"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-mercator-1.png" style="width:65.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-mercator-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: @Wilke2019-mx, Figure 15.2"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-mercator-1.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-fig-15.2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.2
+Figure&nbsp;5: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.2
 </figcaption>
 </figure>
 </div>
@@ -334,10 +399,10 @@ Figure&nbsp;2: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="
 <div id="fig-equal-earth-static" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-equal-earth-static-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/6/61/Equal_Earth_projection_SW.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;3: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/6/61/Equal_Earth_projection_SW.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled"></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/6/61/Equal_Earth_projection_SW.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/6/61/Equal_Earth_projection_SW.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=imageinfo&amp;utm_content=thumbnail_unscaled"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-equal-earth-static-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>
+Figure&nbsp;6: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref4" role="doc-noteref" data-footnote-href="#/fn4" onclick=""><sup>4</sup></a>
 </figcaption>
 </figure>
 </div>
@@ -347,10 +412,10 @@ Figure&nbsp;3: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref1" r
 <div id="fig-equal-earth-gif" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-equal-earth-gif-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://upload.wikimedia.org/wikipedia/commons/9/99/Mercator_and_Equal_Earth_projections%2C_animated_GIF.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;4: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/9/99/Mercator_and_Equal_Earth_projections%2C_animated_GIF.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled" style="width:40.0%"></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/9/99/Mercator_and_Equal_Earth_projections%2C_animated_GIF.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;7: Wikipedia"><img data-src="https://upload.wikimedia.org/wikipedia/commons/9/99/Mercator_and_Equal_Earth_projections%2C_animated_GIF.gif?utm_source=en.wikipedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled" style="width:40.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-equal-earth-gif-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref2" role="doc-noteref" data-footnote-href="#/fn2" onclick=""><sup>2</sup></a>
+Figure&nbsp;7: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref5" role="doc-noteref" data-footnote-href="#/fn5" onclick=""><sup>5</sup></a>
 </figcaption>
 </figure>
 </div>
@@ -377,7 +442,7 @@ Figure&nbsp;4: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref2" r
 <section id="largest-countries-by-area" class="slide level2">
 <h2>Largest countries by area</h2>
 <div class="fragment">
-<p><a href="../include/img/largest-countries-by-area.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="../include/img/largest-countries-by-area.png"></a></p>
+<p><a href="../include/img/largest-countries-by-area.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="../include/img/largest-countries-by-area.png"></a></p>
 </div>
 </section>
 <section class="slide level2">
@@ -385,10 +450,10 @@ Figure&nbsp;4: Wikipedia<a href="#/footnotes" class="footnote-ref" id="fnref2" r
 <div id="fig-wilke-fig-15.3" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-fig-15.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-goode-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: @Wilke2019-mx, Figure 15.3"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-goode-1.png"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-goode-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: @Wilke2019-mx, Figure 15.3"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/world-goode-1.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-fig-15.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.3
+Figure&nbsp;8: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.3
 </figcaption>
 </figure>
 </div>
@@ -398,10 +463,10 @@ Figure&nbsp;5: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="
 <div id="fig-wilke-fig-15.5" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-fig-15.5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-true-albers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: @Wilke2019-mx, Figure 15.5"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-true-albers-1.png" style="width:65.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-true-albers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: @Wilke2019-mx, Figure 15.5"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-true-albers-1.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-fig-15.5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.5
+Figure&nbsp;9: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.5
 </figcaption>
 </figure>
 </div>
@@ -411,10 +476,10 @@ Figure&nbsp;6: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="
 <div id="fig-wilke-fig-15.6" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-fig-15.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: @Wilke2019-mx, Figure 15.6"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-1.png" style="width:75.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;10: @Wilke2019-mx, Figure 15.6"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-1.png" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-fig-15.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.6
+Figure&nbsp;10: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.6
 </figcaption>
 </figure>
 </div>
@@ -424,10 +489,10 @@ Figure&nbsp;7: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="
 <div id="fig-wilke-fig-15.6" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-fig-15.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-revised-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: @Wilke2019-mx, Figure 15.6"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-revised-1.png" style="width:75.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-revised-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;11: @Wilke2019-mx, Figure 15.6"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/usa-albers-revised-1.png" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-fig-15.6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.6
+Figure&nbsp;11: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.6
 </figcaption>
 </figure>
 </div>
@@ -498,10 +563,10 @@ Figure&nbsp;8: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="
 <div id="fig-enumeration-clause" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-enumeration-clause-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/enumeration-clause-census.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: @SchmeckebierUnknown-ns"><img data-src="../include/img/enumeration-clause-census.png" style="width:65.0%"></a>
+<a href="../include/img/enumeration-clause-census.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;12: @SchmeckebierUnknown-ns"><img data-src="../include/img/enumeration-clause-census.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-enumeration-clause-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: <span class="citation" data-cites="SchmeckebierUnknown-ns">Schmeckebier (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+Figure&nbsp;12: <span class="citation" data-cites="SchmeckebierUnknown-ns">Schmeckebier (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -529,10 +594,10 @@ Figure&nbsp;9: <span class="citation" data-cites="SchmeckebierUnknown-ns">Schmec
 <div id="fig-census-geocoding" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-census-geocoding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/census-geodiagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;10: U.S. Census, https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf"><img data-src="../include/img/census-geodiagram.png" style="width:45.0%"></a>
+<a href="../include/img/census-geodiagram.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;13: U.S. Census, https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf"><img data-src="../include/img/census-geodiagram.png" style="width:45.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-census-geocoding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: U.S. Census, <a href="https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf" class="uri">https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf</a>
+Figure&nbsp;13: U.S. Census, <a href="https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf" class="uri">https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf</a>
 </figcaption>
 </figure>
 </div>
@@ -542,10 +607,10 @@ Figure&nbsp;10: U.S. Census, <a href="https://www2.census.gov/geo/pdfs/reference
 <div id="fig-census-geocoding-arcgis" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-census-geocoding-arcgis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://learn.arcgis.com/en/related-concepts/GUID-D7AA4FD1-E7FE-49D7-9D11-07915C9ACC68-web.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;11: https://learn.arcgis.com/en/related-concepts/united-states-census-geography.htm"><img data-src="https://learn.arcgis.com/en/related-concepts/GUID-D7AA4FD1-E7FE-49D7-9D11-07915C9ACC68-web.png"></a>
+<a href="https://learn.arcgis.com/en/related-concepts/GUID-D7AA4FD1-E7FE-49D7-9D11-07915C9ACC68-web.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;14: https://learn.arcgis.com/en/related-concepts/united-states-census-geography.htm"><img data-src="https://learn.arcgis.com/en/related-concepts/GUID-D7AA4FD1-E7FE-49D7-9D11-07915C9ACC68-web.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-census-geocoding-arcgis-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: https://learn.arcgis.com/en/related-concepts/united-states-census-geography.htm
+Figure&nbsp;14: https://learn.arcgis.com/en/related-concepts/united-states-census-geography.htm
 </figcaption>
 </figure>
 </div>
@@ -589,10 +654,10 @@ Figure&nbsp;11: https://learn.arcgis.com/en/related-concepts/united-states-censu
 <div id="fig-wilke-15.8" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-15.8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-overview-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;12: @Wilke2019-mx, Figure 15.8"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-overview-1.png" style="width:65.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-overview-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;15: @Wilke2019-mx, Figure 15.8"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-overview-1.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-15.8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.8
+Figure&nbsp;15: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.8
 </figcaption>
 </figure>
 </div>
@@ -602,10 +667,10 @@ Figure&nbsp;12: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href=
 <div id="fig-wilke-15.9" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-15.9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-layers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;13: @Wilke2019-mx, Figure 15.9"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-layers-1.png" style="width:65.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-layers-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;16: @Wilke2019-mx, Figure 15.9"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/sfbay-layers-1.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-15.9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.9
+Figure&nbsp;16: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.9
 </figcaption>
 </figure>
 </div>
@@ -621,10 +686,10 @@ Figure&nbsp;13: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href=
 <div id="fig-wilke-15.11" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-15.11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/population-density-counties-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;14: @Wilke2019-mx, Figure 15.11"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/population-density-counties-1.png" style="width:65.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/population-density-counties-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;17: @Wilke2019-mx, Figure 15.11"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/population-density-counties-1.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-15.11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.11
+Figure&nbsp;17: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.11
 </figcaption>
 </figure>
 </div>
@@ -634,10 +699,10 @@ Figure&nbsp;14: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href=
 <div id="fig-wilke-15.13" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-wilke-15.13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/median-income-counties-binned-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;15: @Wilke2019-mx, Figure 15.13"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/median-income-counties-binned-1.png" style="width:65.0%"></a>
+<a href="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/median-income-counties-binned-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;18: @Wilke2019-mx, Figure 15.13"><img data-src="https://clauswilke.com/dataviz/geospatial_data_files/figure-html/median-income-counties-binned-1.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-15.13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.13
+Figure&nbsp;18: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>, Figure 15.13
 </figcaption>
 </figure>
 </div>
@@ -665,10 +730,10 @@ Figure&nbsp;15: <span class="citation" data-cites="Wilke2019-mx">Wilke (<a href=
 <div id="fig-help-ai" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-help-ai-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/maps-r-ai-guidance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Figure&nbsp;16: Response to search query “making maps in r ggplot2” on 2026-10-15."><img data-src="../include/img/maps-r-ai-guidance.png" style="width:55.0%"></a>
+<a href="../include/img/maps-r-ai-guidance.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;19: Response to search query “making maps in r ggplot2” on 2026-10-15."><img data-src="../include/img/maps-r-ai-guidance.png" style="width:55.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-help-ai-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;16: Response to search query “making maps in r ggplot2” on 2026-10-15.
+Figure&nbsp;19: Response to search query “making maps in r ggplot2” on 2026-10-15.
 </figcaption>
 </figure>
 </div>
@@ -689,10 +754,10 @@ Figure&nbsp;16: Response to search query “making maps in r ggplot2” on 2026-
 <div id="fig-fetch-world-map" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-fetch-world-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-fetch-world-map-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;17: "><img data-src="include/fig/fig-fetch-world-map-1.png" id="fig-fetch-world-map" width="960"></a>
+<a href="include/fig/fig-fetch-world-map-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;20: "><img data-src="include/fig/fig-fetch-world-map-1.png" id="fig-fetch-world-map" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-fetch-world-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17
+Figure&nbsp;20
 </figcaption>
 </figure>
 </div>
@@ -732,10 +797,10 @@ Figure&nbsp;17
 <div id="fig-three-cities" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-three-cities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-three-cities-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Figure&nbsp;18: "><img data-src="include/fig/fig-three-cities-1.png" id="fig-three-cities" width="960"></a>
+<a href="include/fig/fig-three-cities-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;21: "><img data-src="include/fig/fig-three-cities-1.png" id="fig-three-cities" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-three-cities-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;18
+Figure&nbsp;21
 </figcaption>
 </figure>
 </div>
@@ -785,15 +850,22 @@ Figure&nbsp;18
 <div id="fig-state-college" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-state-college-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-state-college-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;19: "><img data-src="include/fig/fig-state-college-1.png" id="fig-state-college" width="960"></a>
+<a href="include/fig/fig-state-college-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figure&nbsp;22: "><img data-src="include/fig/fig-state-college-1.png" id="fig-state-college" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-state-college-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;19
+Figure&nbsp;22
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
+</section>
+<section id="introducing-exercise-06" class="slide level2">
+<h2>Introducing: Exercise 06</h2>
+<ul>
+<li>Map-maker, map-maker, <a href="../exercises/ex-06-making-maps.html">make me a map</a>…</li>
+<li>Due Monday, November 16, 2026.</li>
+</ul>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -806,7 +878,7 @@ Figure&nbsp;19
 <li>Making maps involves multiple considerations</li>
 <li>Projections, coordinates/scale, geometries, layers</li>
 <li>Map-making often controversial</li>
-<li>Using R to make maps makes them reproducible</li>
+<li>Using R to make maps makes them reproducible (to you, others)</li>
 </ul>
 </section>
 <section id="next-time" class="slide level2">
@@ -833,6 +905,9 @@ Figure&nbsp;19
 <div id="ref-SchmeckebierUnknown-ns" class="csl-entry" role="listitem">
 Schmeckebier, L. n.d. <span>“Enumeration Clause and Apportioning Seats in the House of Representatives.”</span> Accessed October 15, 2026. <a href="https://constitution.congress.gov/browse/essay/artI-S2-C3-1/ALDE_00001034/">https://constitution.congress.gov/browse/essay/artI-S2-C3-1/ALDE_00001034/</a>.
 </div>
+<div id="ref-Wikipedia-contributors2026-pj" class="csl-entry" role="listitem">
+Wikipedia contributors. 2026. <span>“History of Cartography.”</span> Wikimedia Foundation, Inc., October 15. <a href="https://en.wikipedia.org/wiki/History_of_cartography">https://en.wikipedia.org/wiki/History_of_cartography</a>.
+</div>
 <div id="ref-Wilke2019-mx" class="csl-entry" role="listitem">
 Wilke, Claus O. 2019. <em>Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures</em>. O’Reilly Media. <a href="https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089">https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089</a>.
 </div>
@@ -841,8 +916,11 @@ Wilke, Claus O. 2019. <em>Fundamentals of Data Visualization: A Primer on Making
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>By Strebe - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72769307</p></li>
-<li id="fn2"><p>By Dariusz Kowalczyk - Own workThis map was created with Generic Mapping Tools.(version 6.8.0_2026.09.21, only frames, animation created with GIF Movie Gear), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=200664498</p></li>
+<li id="fn1"><p><a href="https://skyandtelescope.org/interactive-sky-chart/" class="uri">https://skyandtelescope.org/interactive-sky-chart/</a></p></li>
+<li id="fn2"><p><a href="https://static.wikia.nocookie.net/pjmidearthfilms/images/a/a2/Middle_Earth_map.jpg/revision/latest?cb=20230517165953" class="uri">https://static.wikia.nocookie.net/pjmidearthfilms/images/a/a2/Middle_Earth_map.jpg/revision/latest?cb=20230517165953</a></p></li>
+<li id="fn3"><p>By Zde - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=69695100</p></li>
+<li id="fn4"><p>By Strebe - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72769307</p></li>
+<li id="fn5"><p>By Dariusz Kowalczyk - Own workThis map was created with Generic Mapping Tools.(version 6.8.0_2026.09.21, only frames, animation created with GIF Movie Gear), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=200664498</p></li>
 </ol>
 </section>
     </div>

@@ -64,6 +64,8 @@ website:
         href: slides/wk-08-2026-10-12-critiquing-figs.qmd
       - text: "Wk 08 • Wed Oct 14"
         href: slides/wk-08-2026-10-14-storytelling.qmd
+      - text: "Wk 09 • Mon Oct 19"
+        href: slides/wk-09-2026-10-19-mapmaking-I.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

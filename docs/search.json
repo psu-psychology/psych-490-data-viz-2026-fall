@@ -524,7 +524,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xbdcdd2b68&gt;\n&lt;environment: 0xbdcdd2660&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x9e31435e8&gt;\n&lt;environment: 0x9e31432a0&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -607,7 +607,7 @@
     "href": "supplemental/psych-490-ex-04.html#load-dataset",
     "title": "PSYCH 490.007: Exercise 04",
     "section": "Load dataset",
-    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.98   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :180                      NAs    :180                    \n     result            total           overtime          old_game_id  \n Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.317   Mean   : 44.28   Mean   :0.06121   Min.nchar:  10  \n 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   \n NAs    :180       NAs    :180      NAs    :180                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.886e+04   N.unique : 272   N.unique :7548   1st Qu.: 2150  \n Median :5.574e+04   N.blank  :   0   N.blank  :   0   Median : 3590  \n Mean   :3.156e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7914  \n 3rd Qu.:5.811e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.:13771  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30698  \n NAs    :179                                           NAs    :2907   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds \n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.00  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.00  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.00  \n Mean   :   78.73   Mean   : -129.4   Mean   :  2.241   Mean   : -59.26  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.00  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.00  \n NAs    :2146       NAs    :2146      NAs    :165       NAs    :2146     \n home_spread_odds   total_line      under_odds        over_odds      \n Min.   :-146.0   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.0   1st Qu.:40.50   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.0   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.8   Mean   :43.58   Mean   : -73.74   Mean   : -82.18  \n 3rd Qu.:-101.0   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.0   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2146     NAs    :165     NAs    :2149      NAs    :2149     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  71   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  29                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 165   NAs      : 165   NAs      : 165  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 165                                     NAs      : 208  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
+    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.98   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :180                      NAs    :180                    \n     result            total           overtime          old_game_id  \n Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.317   Mean   : 44.28   Mean   :0.06121   Min.nchar:  10  \n 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   \n NAs    :180       NAs    :180      NAs    :180                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.886e+04   N.unique : 272   N.unique :7548   1st Qu.: 2150  \n Median :5.574e+04   N.blank  :   0   N.blank  :   0   Median : 3590  \n Mean   :3.156e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7914  \n 3rd Qu.:5.811e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.:13771  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30698  \n NAs    :179                                           NAs    :2907   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds\n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.0  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.0  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.0  \n Mean   :   78.73   Mean   : -129.4   Mean   :  2.241   Mean   : -59.3  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.0  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.0  \n NAs    :2146       NAs    :2146      NAs    :165       NAs    :2146    \n home_spread_odds   total_line      under_odds        over_odds      \n Min.   :-146.0   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.0   1st Qu.:40.50   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.0   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.8   Mean   :43.58   Mean   : -73.78   Mean   : -82.18  \n 3rd Qu.:-101.0   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.0   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2146     NAs    :165     NAs    :2149      NAs    :2149     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  71   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  29                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 165   NAs      : 165   NAs      : 165  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 165                                     NAs      : 208  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#make-figures",
@@ -631,214 +631,545 @@
     "text": "Resources"
   },
   {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#announcements",
+    "href": "slides/wk-10-2026-10-26-tables.html#announcements",
+    "title": "Making tables",
+    "section": "Announcements",
+    "text": "Announcements"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#todays-topics",
+    "href": "slides/wk-10-2026-10-26-tables.html#todays-topics",
+    "title": "Making tables",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nBackground\nMaking tables in base R"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#ingredients",
+    "href": "slides/wk-10-2026-10-26-tables.html#ingredients",
+    "title": "Making tables",
+    "section": "Ingredients",
+    "text": "Ingredients\n\nA tidy data frame\n\nNamed columns are variables\nRows are observations\n\nStart with base R: No additional packages"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#gathering-data",
+    "href": "slides/wk-10-2026-10-26-tables.html#gathering-data",
+    "title": "Making tables",
+    "section": "Gathering data",
+    "text": "Gathering data\n\n\n\nHow about mtcars?\n\n\nhelp(\"mtcars\")\n\n\n\n\n\n\n\n\nFigure 1: Help document for the mtcars dataset."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#exploring-data-summary",
+    "href": "slides/wk-10-2026-10-26-tables.html#exploring-data-summary",
+    "title": "Making tables",
+    "section": "Exploring data: summary()",
+    "text": "Exploring data: summary()\n\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#exploring-data-str",
+    "href": "slides/wk-10-2026-10-26-tables.html#exploring-data-str",
+    "title": "Making tables",
+    "section": "Exploring data: str()",
+    "text": "Exploring data: str()\n\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ..."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#considerations-table-type",
+    "href": "slides/wk-10-2026-10-26-tables.html#considerations-table-type",
+    "title": "Making tables",
+    "section": "Considerations: Table type?",
+    "text": "Considerations: Table type?\n\nSummary\n\nStatistics\nCross-tabulations\n\nRaw data"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#basic-table",
+    "href": "slides/wk-10-2026-10-26-tables.html#basic-table",
+    "title": "Making tables",
+    "section": "Basic table",
+    "text": "Basic table\n\n\n\nTable 1\n\n\ntable(mtcars$cyl)\n\n\n 4  6  8 \n11  7 14"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#basic-table-1",
+    "href": "slides/wk-10-2026-10-26-tables.html#basic-table-1",
+    "title": "Making tables",
+    "section": "Basic table",
+    "text": "Basic table\n\n\n\nTable 2\n\n\ntable(mtcars$disp)\n\n\n 71.1  75.7  78.7    79  95.1   108 120.1 120.3   121 140.8   145 146.7   160 \n    1     1     1     1     1     1     1     1     1     1     1     1     2 \n167.6   225   258 275.8   301   304   318   350   351   360   400   440   460 \n    2     1     1     3     1     1     1     1     1     2     1     1     1 \n  472 \n    1"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#lesson-learned",
+    "href": "slides/wk-10-2026-10-26-tables.html#lesson-learned",
+    "title": "Making tables",
+    "section": "Lesson learned",
+    "text": "Lesson learned\n\nBasic tables work best with variables that are (or can be made to be) discrete (nominal or ordinal)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#cross-tabulation",
+    "href": "slides/wk-10-2026-10-26-tables.html#cross-tabulation",
+    "title": "Making tables",
+    "section": "Cross-tabulation",
+    "text": "Cross-tabulation\n\n\n\nTable 3: Number of cars in the mtcars dataset by the number of cylinders in the engine and the number of gears in the transmission.\n\n\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n\n   gear\ncyl  3  4  5\n  4  1  8  2\n  6  2  4  1\n  8 12  0  2"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#wait-you-said-base-r",
+    "href": "slides/wk-10-2026-10-26-tables.html#wait-you-said-base-r",
+    "title": "Making tables",
+    "section": "Wait! You said Base R",
+    "text": "Wait! You said Base R\n\nI did, but I wanted to select two variables from mtcars.\nThe select function from dplyr does that easily.\nNote: These slides did not start with a setup chunk\n\nSo, no library(dplyr) statement\nBut I can access the dplyr commands with dplyr::&lt;command&gt;."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#under-the-hood",
+    "href": "slides/wk-10-2026-10-26-tables.html#under-the-hood",
+    "title": "Making tables",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nTo make tables with titles and sequential numbers using Quarto…\n\n```{r}\n#| label: tbl-cyl-gear\n#| tbl-cap: \"Number of cars in the *mtcars* dataset by the number of cylinders in the engine and the number of gears in the transmission.\"\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n```\n\nGive your R chunk a label starting with tbl-\nAdd a tbl-cap for the caption\nThen you can link to the table, for example Table 3"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#bottom-line-on-table",
+    "href": "slides/wk-10-2026-10-26-tables.html#bottom-line-on-table",
+    "title": "Making tables",
+    "section": "Bottom line on table()",
+    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 2 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 2: Output from R’s help() function for the table() command."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#prettier-output",
+    "href": "slides/wk-10-2026-10-26-tables.html#prettier-output",
+    "title": "Making tables",
+    "section": "Prettier output",
+    "text": "Prettier output\n\nformattable::formattable(head(mtcars, n = 6))"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#prettier-output-output",
+    "href": "slides/wk-10-2026-10-26-tables.html#prettier-output-output",
+    "title": "Making tables",
+    "section": "Prettier output",
+    "text": "Prettier output\n\n\n\nTable 4: A prettier table of a subset of the mtcars dataset.\n\n\n\n\n\n\n\n\n\nmpg\n\n\ncyl\n\n\ndisp\n\n\nhp\n\n\ndrat\n\n\nwt\n\n\nqsec\n\n\nvs\n\n\nam\n\n\ngear\n\n\ncarb\n\n\n\n\n\n\nMazda RX4\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.620\n\n\n16.46\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nMazda RX4 Wag\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.875\n\n\n17.02\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nDatsun 710\n\n\n22.8\n\n\n4\n\n\n108\n\n\n93\n\n\n3.85\n\n\n2.320\n\n\n18.61\n\n\n1\n\n\n1\n\n\n4\n\n\n1\n\n\n\n\nHornet 4 Drive\n\n\n21.4\n\n\n6\n\n\n258\n\n\n110\n\n\n3.08\n\n\n3.215\n\n\n19.44\n\n\n1\n\n\n0\n\n\n3\n\n\n1\n\n\n\n\nHornet Sportabout\n\n\n18.7\n\n\n8\n\n\n360\n\n\n175\n\n\n3.15\n\n\n3.440\n\n\n17.02\n\n\n0\n\n\n0\n\n\n3\n\n\n2\n\n\n\n\nValiant\n\n\n18.1\n\n\n6\n\n\n225\n\n\n105\n\n\n2.76\n\n\n3.460\n\n\n20.22\n\n\n1\n\n\n0\n\n\n3\n\n\n1"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#a-custom-summary-table",
+    "href": "slides/wk-10-2026-10-26-tables.html#a-custom-summary-table",
+    "title": "Making tables",
+    "section": "A custom summary table",
+    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 3: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#under-the-hood-1",
+    "href": "slides/wk-10-2026-10-26-tables.html#under-the-hood-1",
+    "title": "Making tables",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nFigure 3 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 4: A table built using the Markdown tables syntax."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#making-a-summary-table",
+    "href": "slides/wk-10-2026-10-26-tables.html#making-a-summary-table",
+    "title": "Making tables",
+    "section": "Making a summary table",
+    "text": "Making a summary table\n\nvariables &lt;- c(\"mpg\", \"disp\")\nmins &lt;- c(min(mtcars$mpg), \n          min(mtcars$disp))\nmeds &lt;- c(median(mtcars$mpg), \n          median(mtcars$disp))\nmeans &lt;- c(mean(mtcars$mpg), \n           mean(mtcars$disp))\nmaxs &lt;- c(max(mtcars$mpg), \n          max(mtcars$disp))\n\nmy_stats_df &lt;- data.frame(variable = variables,\n                       min = mins,\n                       median = meds,\n                       mean = means,\n                       max = maxs)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#show-it",
+    "href": "slides/wk-10-2026-10-26-tables.html#show-it",
+    "title": "Making tables",
+    "section": "Show it",
+    "text": "Show it\n\nformattable::format_table(my_stats_df)\n\n\n\nTable 5: A table showing summary statistics of two of the variables from the mtcars dataset.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it",
+    "href": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it",
+    "title": "Making tables",
+    "section": "Another way to show it",
+    "text": "Another way to show it\n\nThe kableExtra package has many features for making HTML-format tables.\nYou could try making a table if you choose to work on Exercise 05.\n\n\nmy_stats_df |&gt;\n  kableExtra::kable() |&gt;\n  kableExtra::kable_classic()"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it-output",
+    "href": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it-output",
+    "title": "Making tables",
+    "section": "Another way to show it",
+    "text": "Another way to show it\n\n\n\nTable 6: A table showing summary statistics of two of the variables from the mtcars dataset. It uses the kableExtra package.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#some-take-homes",
+    "href": "slides/wk-10-2026-10-26-tables.html#some-take-homes",
+    "title": "Making tables",
+    "section": "Some take-homes",
+    "text": "Some take-homes\n\nData frames are useful and flexible structures\nThe custom summary table is similar to the data dictionary we made in the Tidying Data tutorial."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#main-points",
+    "href": "slides/wk-10-2026-10-26-tables.html#main-points",
+    "title": "Making tables",
+    "section": "Main points",
+    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#next-time",
+    "href": "slides/wk-10-2026-10-26-tables.html#next-time",
+    "title": "Making tables",
+    "section": "Next time",
+    "text": "Next time\n\nTables in gt and knitr::kable"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#about",
+    "href": "slides/wk-10-2026-10-26-tables.html#about",
+    "title": "Making tables",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#references",
+    "href": "slides/wk-10-2026-10-26-tables.html#references",
+    "title": "Making tables",
+    "section": "References",
+    "text": "References"
+  },
+  {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#announcements",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#announcements",
     "title": "Making maps with data: Part I",
     "section": "Announcements",
-    "text": "Announcements\n\nExercise 05 due on Monday, October 26, 2026"
+    "text": "Announcements\n\nExercise-05 |  Canvas dropbox  due on Friday, October 30, 2026.",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#last-week",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#last-week",
     "title": "Making maps with data: Part I",
     "section": "Last week…",
-    "text": "Last week…\n\nCritiquing figures\nStorytelling with data"
+    "text": "Last week…\n\nCritiquing figures\nStorytelling with data\nTutorial on tidy data; supports work on Exercise-05.",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#today",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#today",
     "title": "Making maps with data: Part I",
     "section": "Today",
-    "text": "Today\n\nMaking maps with data: Part I\n\nGeneral considerations\nMaking maps in R"
+    "text": "Today\n\nMaking maps with data: Part I\n\nGeneral considerations\nMaking maps in R",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#what-are-maps",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#what-are-maps",
     "title": "Making maps with data: Part I",
     "section": "What are maps?",
-    "text": "What are maps?"
+    "text": "What are maps?\n\nVisualizations of spatial relationships\nTerrestrial\nAstronomical\nFantastical",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
-    "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#projections",
-    "href": "slides/wk-09-2026-10-19-mapmaking-I.html#projections",
+    "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#history",
+    "href": "slides/wk-09-2026-10-19-mapmaking-I.html#history",
     "title": "Making maps with data: Part I",
-    "section": "Projections",
-    "text": "Projections"
+    "section": "History",
+    "text": "History\n\n\n\nMay be &gt; 25K old!\nWikipedia contributors (2026)\nEarliest data visualizations?\n\n\n\n\n\n\n\n\nFigure 3: The oldest surviving map? Wikipedia3",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#geometric-considerations",
+    "href": "slides/wk-09-2026-10-19-mapmaking-I.html#geometric-considerations",
+    "title": "Making maps with data: Part I",
+    "section": "Geometric considerations",
+    "text": "Geometric considerations\n\nFrame of reference\nCoordinate system\nProjection\n\n3D \\(\\rightarrow\\) 2D",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#equal-earth-projection",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#equal-earth-projection",
     "title": "Making maps with data: Part I",
     "section": "Equal Earth projection",
-    "text": "Equal Earth projection\n\n\n\n\n\n\nFigure 3: Wikipedia1"
+    "text": "Equal Earth projection\n\n\n\n\n\n\nFigure 6: Wikipedia4",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#equal-earth-projection-1",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#equal-earth-projection-1",
     "title": "Making maps with data: Part I",
     "section": "Equal Earth projection",
-    "text": "Equal Earth projection\n\nUnited Nations adopted a resolution on September 4, 2026 to phase out use of the Mercator projection in favor of the Equal Earth, and similar equal-area projections.\n164 nations voted yes; 6 abstained; the U.S. voted no.\nData visualizations can be, and often are, political matters."
+    "text": "Equal Earth projection\n\nUnited Nations adopted a resolution on September 4, 2026 to phase out use of the Mercator projection in favor of the Equal Earth, and similar equal-area projections.\n164 nations voted yes; 6 abstained; the U.S. voted no.\nData visualizations can be, and often are, political matters.",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#largest-countries-by-area",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#largest-countries-by-area",
     "title": "Making maps with data: Part I",
     "section": "Largest countries by area",
-    "text": "Largest countries by area"
+    "text": "Largest countries by area",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#coordinates",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#coordinates",
     "title": "Making maps with data: Part I",
     "section": "Coordinates",
-    "text": "Coordinates\n\n\n\nLatitude & longitude\nLandmass\nContinent\nCountry\n\n\n\nState/Province\nCounty/Region\nCity\nZip"
+    "text": "Coordinates\n\n\n\nLatitude & longitude\nLandmass\nContinent\nCountry\n\n\n\nState/Province\nCounty/Region\nCity\nZip",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#coordinates-natural",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#coordinates-natural",
     "title": "Making maps with data: Part I",
     "section": "Coordinates: Natural",
-    "text": "Coordinates: Natural\n\n\n\nLatitude & longitude\nLandmass\nContinent\nCountry\n\n\n\nState/Province\nCounty/Region\nCity\nZip"
+    "text": "Coordinates: Natural\n\n\n\nLatitude & longitude\nLandmass\nContinent\nCountry\n\n\n\nState/Province\nCounty/Region\nCity\nZip",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#coordinates-continuous",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#coordinates-continuous",
     "title": "Making maps with data: Part I",
     "section": "Coordinates: Continuous",
-    "text": "Coordinates: Continuous\n\n\n\nLatitude & longitude\nLandmass\nContinent\nCountry\n\n\n\nState/Province\nCounty/Region\nCity\nZip"
+    "text": "Coordinates: Continuous\n\n\n\nLatitude & longitude\nLandmass\nContinent\nCountry\n\n\n\nState/Province\nCounty/Region\nCity\nZip",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census",
     "title": "Making maps with data: Part I",
     "section": "U.S. Census",
-    "text": "U.S. Census\n\nRequired under the U.S. Constitution\n\n\n\n\n\n\n\n\nFigure 9: Schmeckebier (n.d.)"
+    "text": "U.S. Census\n\nRequired under the U.S. Constitution\n\n\n\n\n\n\n\n\nFigure 12: Schmeckebier (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-geometry",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-geometry",
     "title": "Making maps with data: Part I",
     "section": "U.S. Census: Geometry",
-    "text": "U.S. Census: Geometry\n\n\n\nNation\nState\nCounty\n\n\n\nCensus Tract\nCensus Block group\nCensus Block"
+    "text": "U.S. Census: Geometry\n\n\n\nNation\nState\nCounty\n\n\n\nCensus Tract\nCensus Block group\nCensus Block",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-1",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-1",
     "title": "Making maps with data: Part I",
     "section": "U.S. Census",
-    "text": "U.S. Census\n\n\n\n\n\n\nFigure 10: U.S. Census, https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf"
+    "text": "U.S. Census\n\n\n\n\n\n\nFigure 13: U.S. Census, https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-preserving-privacy",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-preserving-privacy",
     "title": "Making maps with data: Part I",
     "section": "U.S. Census: Preserving privacy",
-    "text": "U.S. Census: Preserving privacy\n\n\n\nNation\nState\nCounty\n\n\n\nCensus Tract\nCensus Block group\nCensus Block"
+    "text": "U.S. Census: Preserving privacy\n\n\n\nNation\nState\nCounty\n\n\n\nCensus Tract\nCensus Block group\nCensus Block",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-preserving-privacy-1",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#u.s.-census-preserving-privacy-1",
     "title": "Making maps with data: Part I",
     "section": "U.S. Census: Preserving privacy",
-    "text": "U.S. Census: Preserving privacy\n\n\n\nNation\nState\nCounty\n\n\n\nCensus Tract\nCensus Block group\nCensus Block"
+    "text": "U.S. Census: Preserving privacy\n\n\n\nNation\nState\nCounty\n\n\n\nCensus Tract\nCensus Block group\nCensus Block",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#layers",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#layers",
     "title": "Making maps with data: Part I",
     "section": "Layers",
-    "text": "Layers\n\n\n\n\n\n\nFigure 12: Wilke (2019), Figure 15.8"
+    "text": "Layers\n\n\n\n\n\n\nFigure 15: Wilke (2019), Figure 15.8",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#choropleths",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#choropleths",
     "title": "Making maps with data: Part I",
     "section": "Choropleths",
-    "text": "Choropleths\n\nQuantities \\(\\rightarrow\\) location"
+    "text": "Choropleths\n\nQuantities \\(\\rightarrow\\) location",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#install-load-packages",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#install-load-packages",
     "title": "Making maps with data: Part I",
     "section": "Install & load packages",
-    "text": "Install & load packages\n\n\nCode\nlibrary(sf)\nlibrary(ggplot2)\nlibrary(rnaturalearth)\nlibrary(readr)\nlibrary(dplyr)"
+    "text": "Install & load packages\n\n\nCode\nlibrary(sf)\nlibrary(ggplot2)\nlibrary(rnaturalearth)\nlibrary(readr)\nlibrary(dplyr)",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#help-from-searchai",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#help-from-searchai",
     "title": "Making maps with data: Part I",
     "section": "Help from search/AI",
-    "text": "Help from search/AI\n\n\n\n\n\n\nFigure 16: Response to search query “making maps in r ggplot2” on 2026-10-15."
+    "text": "Help from search/AI\n\n\n\n\n\n\nFigure 19: Response to search query “making maps in r ggplot2” on 2026-10-15.",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#map-with-coordinates-world",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#map-with-coordinates-world",
     "title": "Making maps with data: Part I",
     "section": "Map with coordinates: World",
-    "text": "Map with coordinates: World\n\n\nCode\n# Fetch world map data as an 'sf' object\nworld &lt;- ne_countries(scale = \"medium\", returnclass = \"sf\")\n\n# Plot the map\nggplot(data = world) +\n  geom_sf()\n\n\n\n\n\n\n\n\nFigure 17"
+    "text": "Map with coordinates: World\n\n\nCode\n# Fetch world map data as an 'sf' object\nworld &lt;- ne_countries(scale = \"medium\", returnclass = \"sf\")\n\n# Plot the map\nggplot(data = world) +\n  geom_sf()\n\n\n\n\n\n\n\n\nFigure 20",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#map-with-coordinates-cities",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#map-with-coordinates-cities",
     "title": "Making maps with data: Part I",
     "section": "Map with coordinates: Cities",
-    "text": "Map with coordinates: Cities\n\n\nCode\n# A standard data frame with coordinates\ncities_df &lt;- data.frame(\n  city = c(\"New York\", \"Paris\", \"Tokyo\"),\n  lon = c(-74.0060, 2.3522, 139.6503),\n  lat = c(40.7128, 48.8566, 35.6762)\n)\n\n# Convert to an sf object (4326 is the standard GPS CRS, WGS84)\ncities_sf &lt;- st_as_sf(cities_df, \n                      coords = c(\"lon\", \"lat\"), crs = 4326)"
+    "text": "Map with coordinates: Cities\n\n\nCode\n# A standard data frame with coordinates\ncities_df &lt;- data.frame(\n  city = c(\"New York\", \"Paris\", \"Tokyo\"),\n  lon = c(-74.0060, 2.3522, 139.6503),\n  lat = c(40.7128, 48.8566, 35.6762)\n)\n\n# Convert to an sf object (4326 is the standard GPS CRS, WGS84)\ncities_sf &lt;- st_as_sf(cities_df, \n                      coords = c(\"lon\", \"lat\"), crs = 4326)",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#getting-data-about-states",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#getting-data-about-states",
     "title": "Making maps with data: Part I",
     "section": "Getting data about states",
-    "text": "Getting data about states\n\n\nCode\nus_states &lt;- ne_states(country = \"United States of America\")"
+    "text": "Getting data about states\n\n\nCode\nus_states &lt;- ne_states(country = \"United States of America\")",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#plot-my-location",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#plot-my-location",
     "title": "Making maps with data: Part I",
     "section": "Plot my location",
-    "text": "Plot my location\n\n\nCode\ncities_df &lt;- data.frame(\n  city = c(\"State College\"),\n  lon = c(-77.84922),\n  lat = c(40.79766)\n)\n\n# Convert to an sf object (4326 is the standard GPS CRS, WGS84)\ncities_sf &lt;- st_as_sf(cities_df, coords = c(\"lon\", \"lat\"), crs = 4326)"
+    "text": "Plot my location\n\n\nCode\ncities_df &lt;- data.frame(\n  city = c(\"State College\"),\n  lon = c(-77.84922),\n  lat = c(40.79766)\n)\n\n# Convert to an sf object (4326 is the standard GPS CRS, WGS84)\ncities_sf &lt;- st_as_sf(cities_df, coords = c(\"lon\", \"lat\"), crs = 4326)",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#plot-my-location-1",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#plot-my-location-1",
     "title": "Making maps with data: Part I",
     "section": "Plot my location",
-    "text": "Plot my location\n\n\nCode\nggplot() +\n  geom_sf(data = us_states,\n          fill = \"antiquewhite\",\n          color = \"gray80\") +\n  geom_sf(data = cities_sf,\n          color = \"red\",\n          size = 1) +\n  coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area\n\n\n\n\n\n\n\n\nFigure 19"
+    "text": "Plot my location\n\n\nCode\nggplot() +\n  geom_sf(data = us_states,\n          fill = \"antiquewhite\",\n          color = \"gray80\") +\n  geom_sf(data = cities_sf,\n          color = \"red\",\n          size = 1) +\n  coord_sf(xlim = c(-80.5, -74.8), ylim = c(39.5, 42.5)) # Zooming into an area\n\n\n\n\n\n\n\n\nFigure 22",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
+  },
+  {
+    "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#introducing-exercise-06",
+    "href": "slides/wk-09-2026-10-19-mapmaking-I.html#introducing-exercise-06",
+    "title": "Making maps with data: Part I",
+    "section": "Introducing: Exercise 06",
+    "text": "Introducing: Exercise 06\n\nMap-maker, map-maker, make me a map…\nDue Monday, November 16, 2026.",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#main-points",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#main-points",
     "title": "Making maps with data: Part I",
     "section": "Main points",
-    "text": "Main points\n\nMaking maps involves multiple considerations\nProjections, coordinates/scale, geometries, layers\nMap-making often controversial\nUsing R to make maps makes them reproducible"
+    "text": "Main points\n\nMaking maps involves multiple considerations\nProjections, coordinates/scale, geometries, layers\nMap-making often controversial\nUsing R to make maps makes them reproducible (to you, others)",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#next-time",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#next-time",
     "title": "Making maps with data: Part I",
     "section": "Next time",
-    "text": "Next time\n\nMaking maps with data: Part II"
+    "text": "Next time\n\nMaking maps with data: Part II",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#about",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#about",
     "title": "Making maps with data: Part I",
     "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#references",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#references",
     "title": "Making maps with data: Part I",
     "section": "References",
-    "text": "References\n\n\n\n\nSchmeckebier, L. n.d. “Enumeration Clause and Apportioning Seats in the House of Representatives.” Accessed October 15, 2026. https://constitution.congress.gov/browse/essay/artI-S2-C3-1/ALDE_00001034/.\n\n\nWilke, Claus O. 2019. Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures. O’Reilly Media. https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089."
+    "text": "References\n\n\n\n\nSchmeckebier, L. n.d. “Enumeration Clause and Apportioning Seats in the House of Representatives.” Accessed October 15, 2026. https://constitution.congress.gov/browse/essay/artI-S2-C3-1/ALDE_00001034/.\n\n\nWikipedia contributors. 2026. “History of Cartography.” Wikimedia Foundation, Inc., October 15. https://en.wikipedia.org/wiki/History_of_cartography.\n\n\nWilke, Claus O. 2019. Fundamentals of Data Visualization: A Primer on Making Informative and Compelling Figures. O’Reilly Media. https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089.",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-19-mapmaking-I.html#footnotes",
     "href": "slides/wk-09-2026-10-19-mapmaking-I.html#footnotes",
     "title": "Making maps with data: Part I",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nBy Strebe - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72769307\nBy Dariusz Kowalczyk - Own workThis map was created with Generic Mapping Tools.(version 6.8.0_2026.09.21, only frames, animation created with GIF Movie Gear), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=200664498"
+    "text": "Footnotes\n\n\nhttps://skyandtelescope.org/interactive-sky-chart/\nhttps://static.wikia.nocookie.net/pjmidearthfilms/images/a/a2/Middle_Earth_map.jpg/revision/latest?cb=20230517165953\nBy Zde - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=69695100\nBy Strebe - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72769307\nBy Dariusz Kowalczyk - Own workThis map was created with Generic Mapping Tools.(version 6.8.0_2026.09.21, only frames, animation created with GIF Movie Gear), CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=200664498",
+    "crumbs": [
+      "Slides",
+      "Wk 09 • Mon Oct 19"
+    ]
   },
   {
     "objectID": "slides/wk-08-2026-10-12-critiquing-figs.html#announcements",
@@ -3506,7 +3837,7 @@
     "href": "exercises/ex-06-making-maps.html#dates",
     "title": "Exercise 06",
     "section": "Dates",
-    "text": "Dates",
+    "text": "Dates\nDue Monday, November 16, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 06"
@@ -3695,7 +4026,7 @@
     "href": "deadlines.html",
     "title": "Deadlines",
     "section": "",
-    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-25\nExercise 02\n\n\n2026-10-02\nExercise 03\n\n\n2026-10-16\nExercise 04\n\n\n2026-10-16\nFinal project proposal\n\n\n2025-10-26\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\nFigure Figure 1 below shows one way to visualize these deadlines. We’ll examine it and attempt to improve it at some point in the class.\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\n\nFigure 1: Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month.",
+    "text": "This page summarizes some of the key deadlines in the course.\n\n\n\nDate\nWhat’s due/happening\n\n\n\n\n2026-09-04\nExercise 01\n\n\n2026-09-25\nExercise 02\n\n\n2026-10-02\nExercise 03\n\n\n2026-10-16\nExercise 04\n\n\n2026-10-16\nFinal project proposal\n\n\n2025-10-30\nExercise 05\n\n\n2026-11-16\nExercise 06\n\n\n2026-12-16\nFinal project writeup due\n\n\n\n\n\n\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\ndeadlines &lt;- readr::read_csv(\"include/csv/assignments.csv\", show_col_types = FALSE)\n\ndeadlines |&gt;\n    mutate(day = ordered(day, levels = 1:3, labels = c(\"Mon\", \"Wed\", \"Fri\"))) |&gt;\n    ggplot() +\n    geom_point(aes(x = day, y = week, color = month)) +\n    scale_y_reverse() +\n    theme(axis.title.x.bottom = element_blank()) +\n    theme(legend.position = \"none\")",
     "crumbs": [
       "Deadlines"
     ]
@@ -3867,7 +4198,7 @@
     "href": "exercises/ex-05-tidy-data.html",
     "title": "Exercise 05",
     "section": "",
-    "text": "Due Monday, October 26, 2026.",
+    "text": "Due Friday, October 30, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 05"
@@ -3878,7 +4209,7 @@
     "href": "exercises/ex-05-tidy-data.html#dates",
     "title": "Exercise 05",
     "section": "",
-    "text": "Due Monday, October 26, 2026.",
+    "text": "Due Friday, October 30, 2026.",
     "crumbs": [
       "Exercises",
       "Exercise 05"
@@ -4127,7 +4458,7 @@
     "href": "schedule.html#week-10",
     "title": "Schedule",
     "section": "Week 10",
-    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\n Due Exercise-05 |  Canvas dropbox\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session: Tables\n\nSlides",
+    "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in Base R\n\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session\n\n Due Exercise-05 |  Canvas dropbox\nSlides",
     "crumbs": [
       "Schedule"
     ]
@@ -7014,14 +7345,14 @@
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#choropleths",
     "title": "Making maps with data: Part II",
     "section": "Choropleths",
-    "text": "Choropleths\n\n\n\nStatistical thematic map (Wikipedia contributors 2026)\nData element maps to fill shading or color\nFirst known example 1826\nTerm comes from the Greek for “multitude of regions”\n\n\n\n\n\nCharles Dupin’s 1826 map. Wikipedia1"
+    "text": "Choropleths\n\n\n\nStatistical thematic map (Wikipedia contributors 2026)\nData element \\(\\rightarrow\\) fill, shading or color\nFirst known example 1826\nTerm comes from the Greek for “multitude of regions”\n\n\n\n\n\nCharles Dupin’s 1826 map. Wikipedia1"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#higher-ed-data",
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#higher-ed-data",
     "title": "Making maps with data: Part II",
     "section": "Higher ed data",
-    "text": "Higher ed data\n\nGet the county geo data from the tigris package\n\n\npa_county_sf &lt;- counties(state = \"PA\", cb = TRUE, class = \"sf\")\n\n\n  |                                                                            \n  |                                                                      |   0%\n  |                                                                            \n  |                                                                      |   1%\n  |                                                                            \n  |=                                                                     |   1%\n  |                                                                            \n  |=                                                                     |   2%\n  |                                                                            \n  |==                                                                    |   2%\n  |                                                                            \n  |==                                                                    |   3%\n  |                                                                            \n  |==                                                                    |   4%\n  |                                                                            \n  |===                                                                   |   4%\n  |                                                                            \n  |===                                                                   |   5%\n  |                                                                            \n  |====                                                                  |   5%\n  |                                                                            \n  |====                                                                  |   6%\n  |                                                                            \n  |=====                                                                 |   7%\n  |                                                                            \n  |=====                                                                 |   8%\n  |                                                                            \n  |======                                                                |   8%\n  |                                                                            \n  |======                                                                |   9%\n  |                                                                            \n  |=======                                                               |   9%\n  |                                                                            \n  |=======                                                               |  10%\n  |                                                                            \n  |=======                                                               |  11%\n  |                                                                            \n  |========                                                              |  11%\n  |                                                                            \n  |========                                                              |  12%\n  |                                                                            \n  |=========                                                             |  12%\n  |                                                                            \n  |=========                                                             |  13%\n  |                                                                            \n  |=========                                                             |  14%\n  |                                                                            \n  |==========                                                            |  14%\n  |                                                                            \n  |==========                                                            |  15%\n  |                                                                            \n  |===========                                                           |  15%\n  |                                                                            \n  |===========                                                           |  16%\n  |                                                                            \n  |============                                                          |  16%\n  |                                                                            \n  |============                                                          |  17%\n  |                                                                            \n  |============                                                          |  18%\n  |                                                                            \n  |=============                                                         |  18%\n  |                                                                            \n  |=============                                                         |  19%\n  |                                                                            \n  |==============                                                        |  19%\n  |                                                                            \n  |==============                                                        |  20%\n  |                                                                            \n  |===============                                                       |  21%\n  |                                                                            \n  |===============                                                       |  22%\n  |                                                                            \n  |================                                                      |  22%\n  |                                                                            \n  |================                                                      |  23%\n  |                                                                            \n  |================                                                      |  24%\n  |                                                                            \n  |=================                                                     |  24%\n  |                                                                            \n  |=================                                                     |  25%\n  |                                                                            \n  |==================                                                    |  25%\n  |                                                                            \n  |==================                                                    |  26%\n  |                                                                            \n  |===================                                                   |  27%\n  |                                                                            \n  |===================                                                   |  28%\n  |                                                                            \n  |====================                                                  |  28%\n  |                                                                            \n  |====================                                                  |  29%\n  |                                                                            \n  |=====================                                                 |  29%\n  |                                                                            \n  |=====================                                                 |  30%\n  |                                                                            \n  |=====================                                                 |  31%\n  |                                                                            \n  |======================                                                |  31%\n  |                                                                            \n  |======================                                                |  32%\n  |                                                                            \n  |=======================                                               |  32%\n  |                                                                            \n  |=======================                                               |  33%\n  |                                                                            \n  |=======================                                               |  34%\n  |                                                                            \n  |========================                                              |  34%\n  |                                                                            \n  |========================                                              |  35%\n  |                                                                            \n  |=========================                                             |  35%\n  |                                                                            \n  |=========================                                             |  36%\n  |                                                                            \n  |==========================                                            |  36%\n  |                                                                            \n  |==========================                                            |  37%\n  |                                                                            \n  |==========================                                            |  38%\n  |                                                                            \n  |===========================                                           |  38%\n  |                                                                            \n  |===========================                                           |  39%\n  |                                                                            \n  |============================                                          |  39%\n  |                                                                            \n  |============================                                          |  40%\n  |                                                                            \n  |============================                                          |  41%\n  |                                                                            \n  |=============================                                         |  41%\n  |                                                                            \n  |=============================                                         |  42%\n  |                                                                            \n  |==============================                                        |  42%\n  |                                                                            \n  |==============================                                        |  43%\n  |                                                                            \n  |===============================                                       |  44%\n  |                                                                            \n  |===============================                                       |  45%\n  |                                                                            \n  |================================                                      |  45%\n  |                                                                            \n  |================================                                      |  46%\n  |                                                                            \n  |=================================                                     |  47%\n  |                                                                            \n  |=================================                                     |  48%\n  |                                                                            \n  |==================================                                    |  48%\n  |                                                                            \n  |==================================                                    |  49%\n  |                                                                            \n  |===================================                                   |  49%\n  |                                                                            \n  |===================================                                   |  50%\n  |                                                                            \n  |===================================                                   |  51%\n  |                                                                            \n  |====================================                                  |  51%\n  |                                                                            \n  |====================================                                  |  52%\n  |                                                                            \n  |=====================================                                 |  52%\n  |                                                                            \n  |=====================================                                 |  53%\n  |                                                                            \n  |=====================================                                 |  54%\n  |                                                                            \n  |======================================                                |  54%\n  |                                                                            \n  |======================================                                |  55%\n  |                                                                            \n  |=======================================                               |  55%\n  |                                                                            \n  |=======================================                               |  56%\n  |                                                                            \n  |========================================                              |  57%\n  |                                                                            \n  |========================================                              |  58%\n  |                                                                            \n  |=========================================                             |  58%\n  |                                                                            \n  |=========================================                             |  59%\n  |                                                                            \n  |==========================================                            |  59%\n  |                                                                            \n  |==========================================                            |  60%\n  |                                                                            \n  |==========================================                            |  61%\n  |                                                                            \n  |===========================================                           |  61%\n  |                                                                            \n  |===========================================                           |  62%\n  |                                                                            \n  |============================================                          |  62%\n  |                                                                            \n  |============================================                          |  63%\n  |                                                                            \n  |============================================                          |  64%\n  |                                                                            \n  |=============================================                         |  64%\n  |                                                                            \n  |=============================================                         |  65%\n  |                                                                            \n  |==============================================                        |  65%\n  |                                                                            \n  |==============================================                        |  66%\n  |                                                                            \n  |===============================================                       |  67%\n  |                                                                            \n  |===============================================                       |  68%\n  |                                                                            \n  |================================================                      |  68%\n  |                                                                            \n  |================================================                      |  69%\n  |                                                                            \n  |=================================================                     |  69%\n  |                                                                            \n  |=================================================                     |  70%\n  |                                                                            \n  |=================================================                     |  71%\n  |                                                                            \n  |==================================================                    |  71%\n  |                                                                            \n  |==================================================                    |  72%\n  |                                                                            \n  |===================================================                   |  72%\n  |                                                                            \n  |===================================================                   |  73%\n  |                                                                            \n  |===================================================                   |  74%\n  |                                                                            \n  |====================================================                  |  74%\n  |                                                                            \n  |====================================================                  |  75%\n  |                                                                            \n  |=====================================================                 |  75%\n  |                                                                            \n  |=====================================================                 |  76%\n  |                                                                            \n  |======================================================                |  77%\n  |                                                                            \n  |======================================================                |  78%\n  |                                                                            \n  |=======================================================               |  78%\n  |                                                                            \n  |=======================================================               |  79%\n  |                                                                            \n  |========================================================              |  79%\n  |                                                                            \n  |========================================================              |  80%\n  |                                                                            \n  |========================================================              |  81%\n  |                                                                            \n  |=========================================================             |  81%\n  |                                                                            \n  |=========================================================             |  82%\n  |                                                                            \n  |==========================================================            |  82%\n  |                                                                            \n  |==========================================================            |  83%\n  |                                                                            \n  |==========================================================            |  84%\n  |                                                                            \n  |===========================================================           |  84%\n  |                                                                            \n  |===========================================================           |  85%\n  |                                                                            \n  |============================================================          |  85%\n  |                                                                            \n  |============================================================          |  86%\n  |                                                                            \n  |=============================================================         |  87%\n  |                                                                            \n  |=============================================================         |  88%\n  |                                                                            \n  |==============================================================        |  88%\n  |                                                                            \n  |==============================================================        |  89%\n  |                                                                            \n  |===============================================================       |  89%\n  |                                                                            \n  |===============================================================       |  90%\n  |                                                                            \n  |===============================================================       |  91%\n  |                                                                            \n  |================================================================      |  91%\n  |                                                                            \n  |================================================================      |  92%\n  |                                                                            \n  |=================================================================     |  92%\n  |                                                                            \n  |=================================================================     |  93%\n  |                                                                            \n  |==================================================================    |  94%\n  |                                                                            \n  |==================================================================    |  95%\n  |                                                                            \n  |===================================================================   |  95%\n  |                                                                            \n  |===================================================================   |  96%\n  |                                                                            \n  |====================================================================  |  97%\n  |                                                                            \n  |====================================================================  |  98%\n  |                                                                            \n  |===================================================================== |  98%\n  |                                                                            \n  |===================================================================== |  99%\n  |                                                                            \n  |======================================================================|  99%\n  |                                                                            \n  |======================================================================| 100%"
+    "text": "Higher ed data\n\nGet the county geo data from the tigris package\n\n\npa_county_sf &lt;- counties(state = \"PA\", cb = TRUE, class = \"sf\")\n\n\n  |                                                                            \n  |                                                                      |   0%\n  |                                                                            \n  |                                                                      |   1%\n  |                                                                            \n  |=                                                                     |   1%\n  |                                                                            \n  |=                                                                     |   2%\n  |                                                                            \n  |==                                                                    |   2%\n  |                                                                            \n  |==                                                                    |   3%\n  |                                                                            \n  |==                                                                    |   4%\n  |                                                                            \n  |===                                                                   |   4%\n  |                                                                            \n  |===                                                                   |   5%\n  |                                                                            \n  |====                                                                  |   5%\n  |                                                                            \n  |====                                                                  |   6%\n  |                                                                            \n  |=====                                                                 |   7%\n  |                                                                            \n  |=====                                                                 |   8%\n  |                                                                            \n  |======                                                                |   8%\n  |                                                                            \n  |======                                                                |   9%\n  |                                                                            \n  |=======                                                               |   9%\n  |                                                                            \n  |=======                                                               |  10%\n  |                                                                            \n  |=======                                                               |  11%\n  |                                                                            \n  |========                                                              |  11%\n  |                                                                            \n  |========                                                              |  12%\n  |                                                                            \n  |=========                                                             |  12%\n  |                                                                            \n  |=========                                                             |  13%\n  |                                                                            \n  |=========                                                             |  14%\n  |                                                                            \n  |==========                                                            |  14%\n  |                                                                            \n  |==========                                                            |  15%\n  |                                                                            \n  |===========                                                           |  15%\n  |                                                                            \n  |===========                                                           |  16%\n  |                                                                            \n  |============                                                          |  17%\n  |                                                                            \n  |============                                                          |  18%\n  |                                                                            \n  |=============                                                         |  18%\n  |                                                                            \n  |=============                                                         |  19%\n  |                                                                            \n  |==============                                                        |  19%\n  |                                                                            \n  |==============                                                        |  20%\n  |                                                                            \n  |==============                                                        |  21%\n  |                                                                            \n  |===============                                                       |  21%\n  |                                                                            \n  |===============                                                       |  22%\n  |                                                                            \n  |================                                                      |  22%\n  |                                                                            \n  |================                                                      |  23%\n  |                                                                            \n  |================                                                      |  24%\n  |                                                                            \n  |=================                                                     |  24%\n  |                                                                            \n  |=================                                                     |  25%\n  |                                                                            \n  |==================                                                    |  25%\n  |                                                                            \n  |==================                                                    |  26%\n  |                                                                            \n  |===================                                                   |  26%\n  |                                                                            \n  |===================                                                   |  27%\n  |                                                                            \n  |===================                                                   |  28%\n  |                                                                            \n  |====================                                                  |  28%\n  |                                                                            \n  |====================                                                  |  29%\n  |                                                                            \n  |=====================                                                 |  29%\n  |                                                                            \n  |=====================                                                 |  30%\n  |                                                                            \n  |=====================                                                 |  31%\n  |                                                                            \n  |======================                                                |  31%\n  |                                                                            \n  |======================                                                |  32%\n  |                                                                            \n  |=======================                                               |  32%\n  |                                                                            \n  |=======================                                               |  33%\n  |                                                                            \n  |=======================                                               |  34%\n  |                                                                            \n  |========================                                              |  34%\n  |                                                                            \n  |========================                                              |  35%\n  |                                                                            \n  |=========================                                             |  35%\n  |                                                                            \n  |=========================                                             |  36%\n  |                                                                            \n  |==========================                                            |  36%\n  |                                                                            \n  |==========================                                            |  37%\n  |                                                                            \n  |==========================                                            |  38%\n  |                                                                            \n  |===========================                                           |  38%\n  |                                                                            \n  |===========================                                           |  39%\n  |                                                                            \n  |============================                                          |  39%\n  |                                                                            \n  |============================                                          |  40%\n  |                                                                            \n  |============================                                          |  41%\n  |                                                                            \n  |=============================                                         |  41%\n  |                                                                            \n  |=============================                                         |  42%\n  |                                                                            \n  |==============================                                        |  42%\n  |                                                                            \n  |==============================                                        |  43%\n  |                                                                            \n  |==============================                                        |  44%\n  |                                                                            \n  |===============================                                       |  44%\n  |                                                                            \n  |===============================                                       |  45%\n  |                                                                            \n  |================================                                      |  45%\n  |                                                                            \n  |================================                                      |  46%\n  |                                                                            \n  |=================================                                     |  47%\n  |                                                                            \n  |=================================                                     |  48%\n  |                                                                            \n  |==================================                                    |  48%\n  |                                                                            \n  |==================================                                    |  49%\n  |                                                                            \n  |===================================                                   |  49%\n  |                                                                            \n  |===================================                                   |  50%\n  |                                                                            \n  |===================================                                   |  51%\n  |                                                                            \n  |====================================                                  |  51%\n  |                                                                            \n  |====================================                                  |  52%\n  |                                                                            \n  |=====================================                                 |  52%\n  |                                                                            \n  |=====================================                                 |  53%\n  |                                                                            \n  |=====================================                                 |  54%\n  |                                                                            \n  |======================================                                |  54%\n  |                                                                            \n  |======================================                                |  55%\n  |                                                                            \n  |=======================================                               |  55%\n  |                                                                            \n  |=======================================                               |  56%\n  |                                                                            \n  |========================================                              |  57%\n  |                                                                            \n  |========================================                              |  58%\n  |                                                                            \n  |=========================================                             |  58%\n  |                                                                            \n  |=========================================                             |  59%\n  |                                                                            \n  |==========================================                            |  59%\n  |                                                                            \n  |==========================================                            |  60%\n  |                                                                            \n  |==========================================                            |  61%\n  |                                                                            \n  |===========================================                           |  61%\n  |                                                                            \n  |===========================================                           |  62%\n  |                                                                            \n  |============================================                          |  62%\n  |                                                                            \n  |============================================                          |  63%\n  |                                                                            \n  |============================================                          |  64%\n  |                                                                            \n  |=============================================                         |  64%\n  |                                                                            \n  |=============================================                         |  65%\n  |                                                                            \n  |==============================================                        |  65%\n  |                                                                            \n  |==============================================                        |  66%\n  |                                                                            \n  |===============================================                       |  67%\n  |                                                                            \n  |===============================================                       |  68%\n  |                                                                            \n  |================================================                      |  68%\n  |                                                                            \n  |================================================                      |  69%\n  |                                                                            \n  |=================================================                     |  69%\n  |                                                                            \n  |=================================================                     |  70%\n  |                                                                            \n  |=================================================                     |  71%\n  |                                                                            \n  |==================================================                    |  71%\n  |                                                                            \n  |==================================================                    |  72%\n  |                                                                            \n  |===================================================                   |  72%\n  |                                                                            \n  |===================================================                   |  73%\n  |                                                                            \n  |====================================================                  |  74%\n  |                                                                            \n  |====================================================                  |  75%\n  |                                                                            \n  |=====================================================                 |  75%\n  |                                                                            \n  |=====================================================                 |  76%\n  |                                                                            \n  |======================================================                |  77%\n  |                                                                            \n  |======================================================                |  78%\n  |                                                                            \n  |=======================================================               |  78%\n  |                                                                            \n  |=======================================================               |  79%\n  |                                                                            \n  |========================================================              |  79%\n  |                                                                            \n  |========================================================              |  80%\n  |                                                                            \n  |========================================================              |  81%\n  |                                                                            \n  |=========================================================             |  81%\n  |                                                                            \n  |=========================================================             |  82%\n  |                                                                            \n  |==========================================================            |  82%\n  |                                                                            \n  |==========================================================            |  83%\n  |                                                                            \n  |==========================================================            |  84%\n  |                                                                            \n  |===========================================================           |  84%\n  |                                                                            \n  |===========================================================           |  85%\n  |                                                                            \n  |============================================================          |  85%\n  |                                                                            \n  |============================================================          |  86%\n  |                                                                            \n  |=============================================================         |  87%\n  |                                                                            \n  |=============================================================         |  88%\n  |                                                                            \n  |==============================================================        |  88%\n  |                                                                            \n  |==============================================================        |  89%\n  |                                                                            \n  |===============================================================       |  89%\n  |                                                                            \n  |===============================================================       |  90%\n  |                                                                            \n  |===============================================================       |  91%\n  |                                                                            \n  |================================================================      |  91%\n  |                                                                            \n  |================================================================      |  92%\n  |                                                                            \n  |=================================================================     |  92%\n  |                                                                            \n  |=================================================================     |  93%\n  |                                                                            \n  |==================================================================    |  94%\n  |                                                                            \n  |==================================================================    |  95%\n  |                                                                            \n  |===================================================================   |  95%\n  |                                                                            \n  |===================================================================   |  96%\n  |                                                                            \n  |====================================================================  |  97%\n  |                                                                            \n  |====================================================================  |  98%\n  |                                                                            \n  |===================================================================== |  98%\n  |                                                                            \n  |===================================================================== |  99%\n  |                                                                            \n  |======================================================================|  99%\n  |                                                                            \n  |======================================================================| 100%"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#higher-ed-data-1",
@@ -7112,7 +7443,7 @@
     "href": "slides/wk-09-2026-10-21-mapmaking-II.html#why-might-psychologists-care-about-making-maps",
     "title": "Making maps with data: Part II",
     "section": "Why might psychologists care about making maps?",
-    "text": "Why might psychologists care about making maps?"
+    "text": "Why might psychologists care about making maps?\n\nInfluence of contextual factors on\n\nBehavior\nInternal states (emotions, thoughts, memories)\nTrajectories of development"
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#main-points",
@@ -7150,6 +7481,188 @@
     "text": "Footnotes\n\n\nBy Charles Dupin - http://math.yorku.ca/SCS/Gallery/images/dupin1826-map_200.jpg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=29383521\nBy Derek Montaño - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=25660032"
   },
   {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#announcements",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#announcements",
+    "title": "More tables",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-05 |  Canvas dropbox  Due on Friday, October 30, 2026.\nExercise-06 |  Canvas dropbox  due on Monday, November 16, 2026."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#todays-topics",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#todays-topics",
+    "title": "More tables",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nLast time…\nMaking tables in base R"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#ingredients",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#ingredients",
+    "title": "More tables",
+    "section": "Ingredients",
+    "text": "Ingredients\n\nA tidy data frame\n\nNamed columns are variables\nRows are observations\n\nStart with base R: No additional packages"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#gathering-data-penguins",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#gathering-data-penguins",
+    "title": "More tables",
+    "section": "Gathering data: Penguins",
+    "text": "Gathering data: Penguins\n\npenguins |&gt; head()\n\n  species    island bill_len bill_dep flipper_len body_mass    sex year\n1  Adelie Torgersen     39.1     18.7         181      3750   male 2007\n2  Adelie Torgersen     39.5     17.4         186      3800 female 2007\n3  Adelie Torgersen     40.3     18.0         195      3250 female 2007\n4  Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007\n5  Adelie Torgersen     36.7     19.3         193      3450 female 2007\n6  Adelie Torgersen     39.3     20.6         190      3650   male 2007"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-summary",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-summary",
+    "title": "More tables",
+    "section": "Exploring data: summary()",
+    "text": "Exploring data: summary()\n\nsummary(penguins)\n\n      species          island       bill_len        bill_dep    \n Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  \n Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  \n Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  \n                                 Mean   :43.92   Mean   :17.15  \n                                 3rd Qu.:48.50   3rd Qu.:18.70  \n                                 Max.   :59.60   Max.   :21.50  \n                                 NAs    :2       NAs    :2      \n  flipper_len      body_mass        sex           year     \n Min.   :172.0   Min.   :2700   female:165   Min.   :2007  \n 1st Qu.:190.0   1st Qu.:3550   male  :168   1st Qu.:2007  \n Median :197.0   Median :4050   NAs   : 11   Median :2008  \n Mean   :200.9   Mean   :4202                Mean   :2008  \n 3rd Qu.:213.0   3rd Qu.:4750                3rd Qu.:2009  \n Max.   :231.0   Max.   :6300                Max.   :2009  \n NAs    :2       NAs    :2"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-str",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-str",
+    "title": "More tables",
+    "section": "Exploring data: str()",
+    "text": "Exploring data: str()\n\nstr(penguins)\n\n'data.frame':   344 obs. of  8 variables:\n $ species    : Factor w/ 3 levels \"Adelie\",\"Chinstrap\",..: 1 1 1 1 1 1 1 1 1 1 ...\n $ island     : Factor w/ 3 levels \"Biscoe\",\"Dream\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ bill_len   : num  39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_dep   : num  18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_len: int  181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass  : int  3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...\n $ sex        : Factor w/ 2 levels \"female\",\"male\": 2 1 1 NA 1 2 1 2 NA NA ...\n $ year       : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ..."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#considerations-table-type",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#considerations-table-type",
+    "title": "More tables",
+    "section": "Considerations: Table type?",
+    "text": "Considerations: Table type?\n\nSummary\n\nStatistics\nCross-tabulations\n\nRaw data"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#basic-table",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#basic-table",
+    "title": "More tables",
+    "section": "Basic table",
+    "text": "Basic table"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#basic-table-1",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#basic-table-1",
+    "title": "More tables",
+    "section": "Basic table",
+    "text": "Basic table"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#cross-tabulation",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#cross-tabulation",
+    "title": "More tables",
+    "section": "Cross-tabulation",
+    "text": "Cross-tabulation"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#wait-you-said-base-r",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#wait-you-said-base-r",
+    "title": "More tables",
+    "section": "Wait! You said Base R",
+    "text": "Wait! You said Base R\n\nI did, but I wanted to select two variables from mtcars.\nThe select function from dplyr does that easily.\nNote: These slides did not start with a setup chunk\n\nSo, no library(dplyr) statement\nBut I can access the dplyr commands with dplyr::&lt;command&gt;."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#under-the-hood",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#under-the-hood",
+    "title": "More tables",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nTo make tables with titles and sequential numbers using Quarto…\n\n```{r}\n#| label: tbl-cyl-gear\n#| tbl-cap: \"Number of cars in the *mtcars* dataset by the number of cylinders in the engine and the number of gears in the transmission.\"\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n```\n\nGive your R chunk a label starting with tbl-\nAdd a tbl-cap for the caption\nThen you can link to the table, for example ?@tbl-cyl-gear"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#bottom-line-on-table",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#bottom-line-on-table",
+    "title": "More tables",
+    "section": "Bottom line on table()",
+    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 1 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 1: Output from R’s help() function for the table() command."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#prettier-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#prettier-output",
+    "title": "More tables",
+    "section": "Prettier output",
+    "text": "Prettier output\n\nformattable::formattable(head(mtcars, n = 6))"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#prettier-output-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#prettier-output-output",
+    "title": "More tables",
+    "section": "Prettier output",
+    "text": "Prettier output\n\n\n\nTable 1: A prettier table of a subset of the mtcars dataset.\n\n\n\n\n\n\n\n\n\nmpg\n\n\ncyl\n\n\ndisp\n\n\nhp\n\n\ndrat\n\n\nwt\n\n\nqsec\n\n\nvs\n\n\nam\n\n\ngear\n\n\ncarb\n\n\n\n\n\n\nMazda RX4\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.620\n\n\n16.46\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nMazda RX4 Wag\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.875\n\n\n17.02\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nDatsun 710\n\n\n22.8\n\n\n4\n\n\n108\n\n\n93\n\n\n3.85\n\n\n2.320\n\n\n18.61\n\n\n1\n\n\n1\n\n\n4\n\n\n1\n\n\n\n\nHornet 4 Drive\n\n\n21.4\n\n\n6\n\n\n258\n\n\n110\n\n\n3.08\n\n\n3.215\n\n\n19.44\n\n\n1\n\n\n0\n\n\n3\n\n\n1\n\n\n\n\nHornet Sportabout\n\n\n18.7\n\n\n8\n\n\n360\n\n\n175\n\n\n3.15\n\n\n3.440\n\n\n17.02\n\n\n0\n\n\n0\n\n\n3\n\n\n2\n\n\n\n\nValiant\n\n\n18.1\n\n\n6\n\n\n225\n\n\n105\n\n\n2.76\n\n\n3.460\n\n\n20.22\n\n\n1\n\n\n0\n\n\n3\n\n\n1"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#a-custom-summary-table",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#a-custom-summary-table",
+    "title": "More tables",
+    "section": "A custom summary table",
+    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 2: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#under-the-hood-1",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#under-the-hood-1",
+    "title": "More tables",
+    "section": "Under the hood",
+    "text": "Under the hood\n\nFigure 2 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 3: A table built using the Markdown tables syntax."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#making-a-summary-table",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#making-a-summary-table",
+    "title": "More tables",
+    "section": "Making a summary table",
+    "text": "Making a summary table\n\nvariables &lt;- c(\"mpg\", \"disp\")\nmins &lt;- c(min(mtcars$mpg), \n          min(mtcars$disp))\nmeds &lt;- c(median(mtcars$mpg), \n          median(mtcars$disp))\nmeans &lt;- c(mean(mtcars$mpg), \n           mean(mtcars$disp))\nmaxs &lt;- c(max(mtcars$mpg), \n          max(mtcars$disp))\n\nmy_stats_df &lt;- data.frame(variable = variables,\n                       min = mins,\n                       median = meds,\n                       mean = means,\n                       max = maxs)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#show-it",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#show-it",
+    "title": "More tables",
+    "section": "Show it",
+    "text": "Show it\n\nformattable::format_table(my_stats_df)\n\n\n\nTable 2: A table showing summary statistics of two of the variables from the mtcars dataset.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#another-way-to-show-it",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#another-way-to-show-it",
+    "title": "More tables",
+    "section": "Another way to show it",
+    "text": "Another way to show it\n\nThe kableExtra package has many features for making HTML-format tables.\nYou could try making a table if you choose to work on Exercise 05.\n\n\nmy_stats_df |&gt;\n  kableExtra::kable() |&gt;\n  kableExtra::kable_classic()"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#another-way-to-show-it-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#another-way-to-show-it-output",
+    "title": "More tables",
+    "section": "Another way to show it",
+    "text": "Another way to show it\n\n\n\nTable 3: A table showing summary statistics of two of the variables from the mtcars dataset. It uses the kableExtra package.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#some-take-homes",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#some-take-homes",
+    "title": "More tables",
+    "section": "Some take-homes",
+    "text": "Some take-homes\n\nData frames are useful and flexible structures\nThe custom summary table is similar to the data dictionary we made in the Tidying Data tutorial."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#main-points",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#main-points",
+    "title": "More tables",
+    "section": "Main points",
+    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#next-time",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#next-time",
+    "title": "More tables",
+    "section": "Next time",
+    "text": "Next time\n\nTables in gt and knitr::kable"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#about",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#about",
+    "title": "More tables",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#references",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#references",
+    "title": "More tables",
+    "section": "References",
+    "text": "References"
+  },
+  {
     "objectID": "supplemental/other-field-figs.html",
     "href": "supplemental/other-field-figs.html",
     "title": "Findings: Data viz outside psych sci",
@@ -7175,7 +7688,7 @@
     "href": "supplemental/other-field-figs.html#preparation",
     "title": "Findings: Data viz outside psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x7731e0bd8&gt;\n&lt;environment: 0x7731e0858&gt;"
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xa2645a4a0&gt;\n&lt;environment: 0xa2645a0b0&gt;"
   },
   {
     "objectID": "supplemental/other-field-figs.html#gathering",

@@ -7,16 +7,17 @@ This page summarizes some of the key deadlines in the course.
 | [2026-10-02](schedule.qmd#fri-oct-02) | [Exercise 03](exercises/ex-03-making-data.qmd) |
 | [2026-10-16](schedule.qmd#fri-oct-16) | [Exercise 04](exercises/ex-04-making-figs-ggplot.qmd) |
 | [2026-10-16](schedule.qmd#mon-oct-16) | [Final project proposal](exercises/final-project.qmd) |
-| [2025-10-26](schedule.qmd#mon-oct-26) | [Exercise 05](exercises/ex-05-tidy-data.qmd) |
-| [2026-11-16](schedule.qmd#mon-nov-16) | [Exercise 06](exercises/ex-06-tbd.qmd) |
+| [2025-10-30](schedule.qmd#mon-oct-26) | [Exercise 05](exercises/ex-05-tidy-data.qmd) |
+| [2026-11-16](schedule.qmd#mon-nov-16) | [Exercise 06](exercises/ex-06-making-maps.qmd) |
 | [2026-12-16](schedule.qmd#we-dec-16)  | [Final project](exercises/final-project.qmd) writeup due |
 
-Figure @fig-deadlines below shows one way to visualize these deadlines. We'll examine it and attempt to improve it at some point in the class.
+<!-- Figure @fig-deadlines below shows one way to visualize these deadlines. We'll examine it and attempt to improve it at some point in the class. -->
 
 ```{r}
 #| label: fig-deadlines
 #| fig-cap: "Visualization of assignment deadlines in PSYCH 490.007 Fall 2026 by week of the semester, day of the week, and month."
-#| echo: false
+#| eval: false
+#| 
 library(ggplot2)
 library(dplyr)
 
