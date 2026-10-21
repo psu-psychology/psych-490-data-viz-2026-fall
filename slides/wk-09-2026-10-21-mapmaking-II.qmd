@@ -5,7 +5,22 @@ format: revealjs
 
 # Prelude
 
+---
+
+![Status of people with bachelor's degrees in physics, one year after graduation. @Unknown2026-dd](https://aip.brightspotcdn.com/dims4/default/381fd04/2147483647/strip/true/crop/10125x8238+0+0/resize/1640x1334!/format/webp/quality/90/?url=https%3A%2F%2Fk1-prod-aip.s3.us-east-2.amazonaws.com%2Fbrightspot%2Fc8%2F62%2Fb0b28c0b4b599217cb5bfd4f80c9%2Ffigure-2-status-over-time-v2.png){#fig-aip-status-over-time width="65%"}
+
+---
+
+![Employment sectors. @Unknown2026-dd](https://aip.brightspotcdn.com/dims4/default/8b8484b/2147483647/strip/true/crop/10125x7349+0+0/resize/1640x1190!/format/webp/quality/90/?url=https%3A%2F%2Fk1-prod-aip.s3.us-east-2.amazonaws.com%2Fbrightspot%2Ff1%2F22%2F599eb7d845a3b129cc6051844132%2Ffigure-3-empsector.png){#fig-aip-employment-sectors width="65%"}
+
+---
+
+![triprisk.net](../include/img/triprisk-net.png){#fig-triprisk}
+
 ## Announcements
+
+- [Exercise-05](../exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443) due next Friday, October 30, 2026.
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
 
 ## Last time...
 
@@ -106,7 +121,7 @@ ggplot() +
 
 ## Compare to the State's
 
-![https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Education-Institutions-by-Sector-Edu/9nnc-tk9e](../include/img/pa-higher-ed-map.png){#fig-pa-higher-ed-map width="60%"}
+![https://data.pa.gov/Post-Secondary-Education/Map-PA-Higher-Education-Institutions-by-Sector-Edu/9nnc-tk9e](../include/img/pa-higher-ed-map.png){#fig-pa-higher-ed-map width="55%"}
 
 ## Choropleths
 
@@ -118,13 +133,19 @@ ggplot() +
 - Term comes from the Greek for "multitude of regions"
 :::
 ::: {.column width=50%}
-![Charles Dupin's 1826 map. Wikipedia^[By Charles Dupin - http://math.yorku.ca/SCS/Gallery/images/dupin1826-map_200.jpg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=29383521]](https://upload.wikimedia.org/wikipedia/commons/3/38/Carte_figurative_de_l%27instruction_populaire_de_la_France.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled)
+![Charles Dupin's 1826 map. Wikipedia^[By Charles Dupin - http://math.yorku.ca/SCS/Gallery/images/dupin1826-map_200.jpg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=29383521]](https://upload.wikimedia.org/wikipedia/commons/3/38/Carte_figurative_de_l%27instruction_populaire_de_la_France.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-chorpleth-dupin}
 :::
 ::::
 
+## triprisk.net example
+
+- What data is mapped to what map element(s)?
+
+![](../include/img/triprisk-net.png){width="55%" align="center"}
+
 ---
 
-![Wikipedia^[By Derek Montaño - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=25660032]](https://upload.wikimedia.org/wikipedia/commons/e/e9/Choropleth_Map.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled)
+![Wikipedia^[By Derek Montaño - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=25660032]](https://upload.wikimedia.org/wikipedia/commons/e/e9/Choropleth_Map.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-choropleth-wikipedia}
 
 ---
 
@@ -162,12 +183,16 @@ world_map <- ne_countries(scale = "medium", returnclass = "sf") %>%
 #| echo: true
 #| code-fold: false
 #| output-location: slide
+#| code-line-numbers: "|1|4-5|8-9|12|15-17|20"
 ggplot(data = world_map) +
-  # Map the color fill to GDP, and draw light white borders between regions
-  geom_sf(aes(fill = gdp_md), color = "white", size = 0.1) +
+  # Map the color fill to GDP, and draw light white borders between 
+  # regions
+  geom_sf(aes(fill = gdp_md), 
+          color = "white", size = 0.1) +
   
   # Apply a colorblind-friendly continuous color scale
-  scale_fill_viridis_c(name = "GDP (Millions)", labels = scales::comma_format()) +
+  scale_fill_viridis_c(name = "GDP (Millions)", 
+                       labels = scales::comma_format()) +
   
   # Remove background grid lines and latitude/longitude labels
   theme_void() +
@@ -245,9 +270,24 @@ pa_higher_ed_trimmed$County |> unique() |> sort()
 #| label: summarize-n-institutions-per-county
 #| echo: true
 #| code-fold: false
+#| code-line-numbers: "|1|2|3"
 pa_higher_ed_counties <- pa_higher_ed_trimmed |>
   group_by(County) |>
   summarize(n_institutions = n())
+```
+
+## Higher ed data {.scrollable}
+
+```{r}
+#| label: tbl-n-institutions-per-county
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+#| code-line-numbers: "|1|2|3" 
+
+pa_higher_ed_counties |>
+  kableExtra::kable() |>
+  kableExtra::kable_material()
 ```
 
 ## Higher ed data
@@ -258,8 +298,7 @@ pa_higher_ed_counties <- pa_higher_ed_trimmed |>
 #| label: join-datasets
 #| echo: true
 #| code-fold: false
-pa_map_sf <- left_join(pa_county_sf, 
-                       pa_higher_ed_counties, 
+pa_map_sf <- left_join(pa_county_sf, pa_higher_ed_counties, 
                        join_by(NAME == County))
 ```
 
@@ -271,10 +310,10 @@ pa_map_sf <- left_join(pa_county_sf,
 #| label: fig-higher-ed-map-v1
 #| echo: true
 #| code-fold: false
-#| 
+#| output-location: slide
+#| code-line-numbers: "|1|2|3|4-7"
 ggplot(data = pa_map_sf) +
   geom_sf(aes(fill = n_institutions), color = "white", size = 0.1) +
-  # scale_fill_viridis_c(option = "plasma", name = "Value") +
   theme_void() +
   labs(
     title = "County-Level Choropleth Map",
@@ -282,6 +321,10 @@ ggplot(data = pa_map_sf) +
     caption = "Source: U.S. Census Bureau / tigris"
   )
 ```
+
+## Higher ed data map
+
+- Notice that the `n_institutions` variable is mapped to a *continuous* value.
 
 ## Higher ed data
 
@@ -299,12 +342,17 @@ ggplot(data = pa_map_sf) +
 
 ## Higher ed data
 
-- Create a nominal (ordinal) variable with tiers based on the number of institutions
+- Is there a more "natural" grouping?
+
+## Higher ed data
+
+- Create a nominal (ordinal) variable called `tier` based on the number of institutions
 
 ```{r}
 #| label: create-institution-tiers
 #| echo: true
 #| code-fold: false
+#| code-line-numbers: "|1|2|3-9|11-13"
 pa_map_sf_tiers <- pa_map_sf |>
   mutate(
     tier = case_when(
@@ -329,25 +377,25 @@ pa_map_sf_tiers <- pa_map_sf |>
 #| echo: true
 #| code-fold: false
 #| output-location: slide
-
+#| code-line-numbers: "|1-2|3|5-8"
 pa_map_sf_tiers |>
-ggplot() +
+  ggplot() +
   geom_sf(aes(fill = tier), color = "white", size = 0.1) +
-  # scale_fill_viridis_c(option = "plasma", name = "Value") +
   theme_void() +
-  labs(
-    title = "County-Level Choropleth Map",
-    subtitle = "PA Counties Colored by number of higher ed institutions",
-    caption = "Source: U.S. Census Bureau / tigris"
-  )
+  labs(title = "County-Level Choropleth Map",
+       subtitle = "PA Counties Colored by number of higher ed institutions",
+       caption = "Source: U.S. Census Bureau / tigris")
 ```
 
 ## Why might *psychologists* care about making maps?
 
+::: {.incremental}
 - Influence of contextual factors on
   - Behavior
   - Internal states (emotions, thoughts, memories)
   - Trajectories of development
+
+:::
 
 # Wrap up
 

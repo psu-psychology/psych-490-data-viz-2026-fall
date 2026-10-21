@@ -261,8 +261,7 @@
 
 ### Mon, Oct 26 {-}
 
-*Tables in Base R*
-
+*Tables in (mostly) Base R*
 
 - [Slides](404.qmd)
 
