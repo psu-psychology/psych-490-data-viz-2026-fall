@@ -24,25 +24,6 @@ execute:
 
 # Making (better) tables
 
-## Gathering data: Penguins
-
-```{r}
-penguins |> head()
-```
-
-## Exploring data: `summary()`
-
-```{r}
-#| label: summary-penguins
-summary(penguins)
-```
-
-## Exploring data: `str()`
-
-```{r}
-#| label: str-penguins
-str(penguins)
-```
 
 ## Package *gt*
 
@@ -69,6 +50,7 @@ library(tibble)
 
 ```{r}
 #| label: gather-islands
+#| code-line-numbers: "|1|2-5|6"
 islands_tbl <-
   tibble(
     name = names(islands),
@@ -105,6 +87,7 @@ https://gt.rstudio.com/articles/gt.html
 #| label: tbl-islands-header
 #| tbl-cap: "A table of the 'islands' data with a header."
 #| output-location: slide
+#| code-line-numbers: "|3-4|5-8|11"
 # Make a display table with the `islands_tbl`
 # table; put a heading just above the column labels
 gt_tbl <-
@@ -118,12 +101,29 @@ gt_tbl <-
 gt_tbl
 ```
 
+## An aside about markdown
+
+```markdown
+Here is some text in *italics*.
+Here is some text in **boldface**.
+Here is some text with ~~strike-through formatting.~~ 
+Here is a footnote^[Some additional information.]
+```
+
+::: {.fragment}
+Here is some text in *italics*. \
+Here is some text in **boldface**. \
+Here is some text with ~~strike-through formatting.~~ \
+Here is a footnote^[Some additional information.]
+:::
+
 ## Style the header
 
 ```{r}
 #| label: tbl-islands-header-styled
 #| tbl-cap: "A table of the 'islands' data with a header styled using markdown. Notice that the title is in **boldface** and the subtitle has some words in *italics*."
 #| output-location: slide
+#| code-line-numbers: "|3|4-7"
 # Use markdown for the heading's `title` and `subtitle` to
 # add bold and italicized characters
 gt(islands_tbl[1:2, ]) |>
@@ -133,13 +133,31 @@ gt(islands_tbl[1:2, ]) |>
   )
 ```
 
+## Wait a second
+
+- What does that square brackets business do?
+
+:::: {.columns}
+::: {.column width=50%}
+```{r}
+gt(islands_tbl)
+```
+
+:::
+::: {.column width=50%}
+```{r}
+gt(islands_tbl[1:2, ])
+```
+:::
+::::
+
 ## Add a source note
 
 ```{r}
 #| label: tbl-islands-with-source-note
 #| tbl-cap: "A table of the 'islands' data with a source note."
 #| output-location: slide
-
+#| code-line-numbers: "|3-4|5-7|8-10|13"
 # Display the `islands_tbl` data with a heading and
 # two source notes
 gt_tbl <-
@@ -155,6 +173,83 @@ gt_tbl <-
 gt_tbl
 ```
 
+## Another example
+
+:::: {.columns}
+::: {.column width=50%}
+- Palmer penguins
+- @horst_hill_penguins
+:::
+::: {.column width=50%}
+![@horst_hill_penguins](https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/man/figures/lter_penguins.png)
+:::
+::::
+
+
+
+## Gathering data: Palmer pe
+
+```{r}
+penguins |> head()
+```
+
+## Exploring data: `summary()`
+
+```{r}
+#| label: summary-penguins
+summary(penguins)
+```
+
+## Exploring data: `str()`
+
+```{r}
+#| label: str-penguins
+str(penguins)
+```
+
+## Selecting data
+
+- Remember, we often want a continuous variable and one or more discrete (nominal or ordinal) variables
+
+```{r}
+penquins_island_sex_mass <- penguins |>
+  select(island, body_mass, sex)
+```
+
+## Summarize
+
+```{r}
+#| label: make-tbl-penguins-data
+#| code-line-numbers: "|1|2|3-7|8"
+penguins_tbl <- penquins_island_sex_mass |>
+  group_by(sex) |>
+  summarize(sample_n = n(),
+            mean = mean(body_mass),
+            median = median(body_mass),
+            min = min(body_mass),
+            max = max(body_mass)) |>
+  gt()
+```
+
+## Plot the table
+
+```{r}
+#| label: tbl-penguins
+#| echo: true
+#| code-fold: false
+#| tbl-cap: "A summary table from the *penguins* dataset. Inspired by the *gt* package demo."
+#| output-location: slide
+#| code-line-numbers: "|1|2-5|8"
+penguins_gt_tbl <- penguins_tbl |>
+  tab_header(
+    title = "Penguin mass by sex",
+    subtitle = "This table needs a figure, don't you think?"
+  )
+
+# Show the gt Table
+penguins_gt_tbl
+```
+
 # Wrap-up
 
 ## Main points
@@ -167,7 +262,7 @@ gt_tbl
 
 ## Next time
 
-- Tables in *gt* and *knitr::kable*
+- Work session
 
 # Resources
 

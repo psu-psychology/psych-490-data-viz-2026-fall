@@ -9,7 +9,14 @@ execute:
 
 # Preliminaries
 
+## {.scrollable}
+
+![](../include/img/most-common-birthdates-canada.png)
+
 ## Announcements
+
+- [Exercise-05](../exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443) {{< fa calendar >}} *Due* on Friday, October 30, 2026.
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) {{< fa calendar >}} *due* on Monday, November 16, 2026.
 
 ## Today's topics
 
@@ -177,6 +184,7 @@ A table built using the [Markdown tables](https://www.markdownguide.org/extended
 
 ```{r}
 #| label: make-my_stats-df
+#| code-line-numbers: "|1|2-3|4-5|6-7|8-9|11-15"
 variables <- c("mpg", "disp")
 mins <- c(min(mtcars$mpg), 
           min(mtcars$disp))
@@ -211,7 +219,7 @@ formattable::format_table(my_stats_df)
 #| label: tbl-show-my_stats_df-kable
 #| tbl-cap: "A table showing summary statistics of two of the variables from the *mtcars* dataset. It uses the *kableExtra* package."
 #| output-location: slide
-#| 
+#| code-line-numbers: "|1|2|3"
 my_stats_df |>
   kableExtra::kable() |>
   kableExtra::kable_classic()
@@ -235,7 +243,7 @@ my_stats_df |>
 
 ## Next time
 
-- Tables in *gt* and *knitr::kable*
+- Tables in *gt**
 
 # Resources
 

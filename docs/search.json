@@ -7646,7 +7646,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#next-time",
     "title": "More tables",
     "section": "Next time",
-    "text": "Next time\n\nTables in gt and knitr::kable"
+    "text": "Next time\n\nWork session"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#about",
@@ -7660,7 +7660,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#references",
     "title": "More tables",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\n\n\nHorst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. https://doi.org/10.5281/zenodo.3960218."
   },
   {
     "objectID": "supplemental/other-field-figs.html",
@@ -8279,5 +8279,68 @@
     "title": "Making maps with data: Part II",
     "section": "Higher ed data",
     "text": "Higher ed data\n\n\n\n\n\n\n\nFigure 13"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#another-example",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#another-example",
+    "title": "More tables",
+    "section": "Another example",
+    "text": "Another example\n\n\n\nPalmer penguins\nHorst et al. (2020)\n\n\n\n\n\nHorst et al. (2020)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#summarize",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#summarize",
+    "title": "More tables",
+    "section": "Summarize",
+    "text": "Summarize\n\npenguins_tbl &lt;- penquins_island_sex_mass |&gt;\n  group_by(sex) |&gt;\n  summarize(sample_n = n(),\n            mean = mean(body_mass),\n            median = median(body_mass),\n            min = min(body_mass),\n            max = max(body_mass)) |&gt;\n  gt()"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table",
+    "title": "More tables",
+    "section": "Plot the table",
+    "text": "Plot the table\n\npenguins_gt_tbl &lt;- penguins_tbl |&gt;\n  tab_header(\n    title = \"Penguin mass by sex\",\n    subtitle = \"This table needs a figure, don't you think?\"\n  )\n\n# Show the gt Table\npenguins_gt_tbl"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table-output",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table-output",
+    "title": "More tables",
+    "section": "Plot the table",
+    "text": "Plot the table\n\n\n\nTable 5: A summary table from the penguins dataset. Inspired by the gt package demo.\n\n\n\n\n\n\n\n\n\nPenguin mass by sex\n\n\nThis table needs a figure, don't you think?\n\n\nsex\nsample_n\nmean\nmedian\nmin\nmax\n\n\n\n\nfemale\n165\n3862.273\n3650\n2700\n5200\n\n\nmale\n168\n4545.685\n4300\n3250\n6300\n\n\nNA\n11\nNA\nNA\nNA\nNA"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#selecting-data",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#selecting-data",
+    "title": "More tables",
+    "section": "Selecting data",
+    "text": "Selecting data\n\nRemember, we often want a continuous variable and one or more discrete (nominal or ordinal) variables\n\n\npenquins_island_sex_mass &lt;- penguins |&gt;\n  select(island, body_mass, sex)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#an-aside-about-markdown",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#an-aside-about-markdown",
+    "title": "More tables",
+    "section": "An aside about markdown",
+    "text": "An aside about markdown\nHere is some text in *italics*.\nHere is some text in **boldface**.\nHere is some text with ~~strike-through formatting.~~ \nHere is a footnote^[Some additional information.]\n\nHere is some text in italics.\nHere is some text in boldface.\nHere is some text with strike-through formatting.\nHere is a footnote1"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#footnotes",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#footnotes",
+    "title": "More tables",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nSome additional information."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#wait-a-second",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#wait-a-second",
+    "title": "More tables",
+    "section": "Wait a second",
+    "text": "Wait a second\n\nWhat does that square brackets business do?\n\n\n\n\ngt(islands_tbl)\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280\n\n\n\n\n\n\n\n\n\ngt(islands_tbl[1:2, ])\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#gathering-data-palmer-pe",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#gathering-data-palmer-pe",
+    "title": "More tables",
+    "section": "Gathering data: Palmer pe",
+    "text": "Gathering data: Palmer pe\n\npenguins |&gt; head()\n\n  species    island bill_len bill_dep flipper_len body_mass    sex year\n1  Adelie Torgersen     39.1     18.7         181      3750   male 2007\n2  Adelie Torgersen     39.5     17.4         186      3800 female 2007\n3  Adelie Torgersen     40.3     18.0         195      3250 female 2007\n4  Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007\n5  Adelie Torgersen     36.7     19.3         193      3450 female 2007\n6  Adelie Torgersen     39.3     20.6         190      3650   male 2007"
   }
 ]
