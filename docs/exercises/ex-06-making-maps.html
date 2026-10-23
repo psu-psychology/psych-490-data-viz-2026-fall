@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../slides/wk-09-2026-10-23-work-session.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Wk 09 Fri Oct 23</span></a>
+ <span class="menu-text">Wk 09 • Fri Oct 23</span></a>
   </div>
 </li>
       </ul>
@@ -497,7 +497,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">October 19, 2026</p>
+      <p class="date-modified">October 23, 2026</p>
     </div>
   </div>
     
@@ -546,7 +546,7 @@ Warning
 <ul>
 <li>Your data frame should have the following variables: <code>city</code>, <code>lat</code>, <code>lon</code>, <code>status</code>.</li>
 <li>The <code>city</code> variable should contain the names of the cities; e.g., <code>city = c("Pittsburgh", "State College")</code> would be the start of my own list.</li>
-<li>The <code>lat</code> and <code>lon</code> variables are the <em>decimal</em> latitude and longitude values for these locations. There are many ways to find these, including Google maps<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: <code>lat &lt;- c(38.363328856857876)</code> and <code>lon &lt;- c(, -75.61075873207025)</code>. Remember that your latitude and longitude values need to line up with your city names.</li>
+<li>The <code>lat</code> and <code>lon</code> variables are the <em>decimal</em> latitude and longitude values for these locations. There are many ways to find these, including Google maps<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: <code>lat &lt;- c(38.363328856857876)</code> and <code>lon &lt;- c(-75.61075873207025)</code>. Remember that your latitude and longitude values need to line up with your city names.</li>
 <li>The <code>status</code> variable should contain a value for each city such as “lived_in”, “hope_to_visit”. I would start this for my own cities as follows: `status &lt;- c(“lived_in”, “lived_in”).</li>
 <li>If you follow the pattern above, then your data frame could be created as follows: <code>my_travels &lt;- data.frame(city, lat, lon, status)</code>.</li>
 </ul>
@@ -1069,7 +1069,7 @@ Warning
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Make a data frame with four cities you have enjoyed visiting or living in and four cities you hope to visit someday.</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Your data frame should have the following variables: <span class="in">`city`</span>, <span class="in">`lat`</span>, <span class="in">`lon`</span>, <span class="in">`status`</span>.</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`city`</span> variable should contain the names of the cities; e.g., <span class="in">`city = c("Pittsburgh", "State College")`</span> would be the start of my own list.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`lat`</span> and <span class="in">`lon`</span> variables are the *decimal* latitude and longitude values for these locations. There are many ways to find these, including Google maps^<span class="co">[</span><span class="ot">Right click on a location and copy the decimal latitude and longitude from the window that pops up.</span><span class="co">]</span>. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: <span class="in">`lat &lt;- c(38.363328856857876)`</span> and <span class="in">`lon &lt;- c(, -75.61075873207025)`</span>. Remember that your latitude and longitude values need to line up with your city names.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`lat`</span> and <span class="in">`lon`</span> variables are the *decimal* latitude and longitude values for these locations. There are many ways to find these, including Google maps^<span class="co">[</span><span class="ot">Right click on a location and copy the decimal latitude and longitude from the window that pops up.</span><span class="co">]</span>. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: <span class="in">`lat &lt;- c(38.363328856857876)`</span> and <span class="in">`lon &lt;- c(-75.61075873207025)`</span>. Remember that your latitude and longitude values need to line up with your city names.</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>The <span class="in">`status`</span> variable should contain a value for each city such as "lived_in", "hope_to_visit". I would start this for my own cities as follows: `status &lt;- c("lived_in", "lived_in").</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>If you follow the pattern above, then your data frame could be created as follows: <span class="in">`my_travels &lt;- data.frame(city, lat, lon, status)`</span>.</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Make a map of these locations using the *sf*, *rnaturalearth*, *rnaturalearthdata*, *ggplot2*, and *dplyr* packages.</span>

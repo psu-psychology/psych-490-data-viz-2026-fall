@@ -1,0 +1,91 @@
+---
+title: "Visualizing election-related data"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
+
+## Last time...
+
+## Today's topics
+
+- Voter registration
+- Population
+
+# Voter registration
+
+## Republicans
+
+![@Harris2025-uw](../include/img/pa-voter-reg-republican.png){#fig-repub-reg width="55%"}
+
+## Democrats
+
+![@Harris2025-uw](../include/img/par-voter-reg-democrat.png){#fig-dem-reg width="55%"}
+
+## No party
+
+![@Harris2025-uw](../include/img/pa-voter-reg-no-party.png){#fig-none-reg width="55%"}
+
+## Other
+
+![@Harris2025-uw](../include/img/pa-voter-reg-other.png){#fig-other-reg width="55%"}
+
+## Summary
+
+![@Harris2025-uw](../include/img/pa-voter-reg-barchart-totals.png){#fig-voter-reg-summary width="65%"}
+
+## Young people registrations
+
+![@Brill2026-xf](https://images.squarespace-cdn.com/content/v1/652314331193f371477bb625/ec9593b2-b4af-4f03-8621-15956b2ebc00/tcc-data-portal.png?format=750w){#fig-registration-18-year-olds}
+
+## 
+
+![@Walker2026-tl](../include/img/pa-spotlight-pa-last-registration.png){width="70%"}
+
+## Why?
+
+::: {.fragment}
+>...it’s not the young people’s fault, said Laura Brill, CEO and Founder of The Civics Center.
+
+:::
+
+::: {.fragment}
+>“It's not that young people in Michigan are so much more impassioned and and inherently organized than young people in Pennsylvania,” Brill said. “It's that they're involved in different systems and [have] different supports to help them do it.”
+
+:::
+
+---
+
+>“Half of U.S. teens live in states where they can preregister at age 16, and what we are definitely seeing is that states with preregistration have higher registration rates for 18-year-olds, just because there's a bigger on-ramp for people to learn about it,” she said.
+
+## Population
+
+![@PyramidsUnknown-cl](../include/img/pa-population-pyramid.png){#fig-pa-pop-pyramid width="65%"}
+
+## Population changes
+
+![@UnknownUnknown-vu](../include/img/pa-pop-change-by-county.png){#fig-pa-pop-changes width="65%"}
+
+# Wrap up
+
+## Next time
+
+- Data visualization in politics
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.10.0.233.
+
+The source files are in R and R Markdown, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages at:
+<https://psu-psychology.github.io/psych-490-data-viz-2026-fall>
+
+## References

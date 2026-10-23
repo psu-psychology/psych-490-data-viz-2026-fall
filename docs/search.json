@@ -524,7 +524,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xc9d76a190&gt;\n&lt;environment: 0xc9d76d9d8&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xae1eea900&gt;\n&lt;environment: 0xae1eea628&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -607,7 +607,7 @@
     "href": "supplemental/psych-490-ex-04.html#load-dataset",
     "title": "PSYCH 490.007: Exercise 04",
     "section": "Load dataset",
-    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.98   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :178                      NAs    :178                    \n     result            total           overtime          old_game_id  \n Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.318   Mean   : 44.28   Mean   :0.06119   Min.nchar:  10  \n 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   \n NAs    :178       NAs    :178      NAs    :178                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.886e+04   N.unique : 272   N.unique :7548   1st Qu.: 2150  \n Median :5.575e+04   N.blank  :   0   N.blank  :   0   Median : 3590  \n Mean   :3.152e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7914  \n 3rd Qu.:5.812e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.:13771  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30698  \n NAs    :165                                           NAs    :2907   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds \n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.00  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.00  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.00  \n Mean   :   78.74   Mean   : -129.5   Mean   :  2.243   Mean   : -59.36  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.00  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.00  \n NAs    :2132       NAs    :2132      NAs    :151       NAs    :2132     \n home_spread_odds    total_line      under_odds        over_odds      \n Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.00   1st Qu.:40.50   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.89   Mean   :43.58   Mean   : -73.83   Mean   : -82.25  \n 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2132      NAs    :151     NAs    :2135      NAs    :2135     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  73   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  29                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 151   NAs      : 151   NAs      : 151  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 151                                     NAs      : 208  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
+    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.98   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :178                      NAs    :178                    \n     result            total           overtime          old_game_id  \n Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.318   Mean   : 44.28   Mean   :0.06119   Min.nchar:  10  \n 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   \n NAs    :178       NAs    :178      NAs    :178                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.886e+04   N.unique : 272   N.unique :7548   1st Qu.: 2150  \n Median :5.575e+04   N.blank  :   0   N.blank  :   0   Median : 3590  \n Mean   :3.152e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7914  \n 3rd Qu.:5.812e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.:13771  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30698  \n NAs    :165                                           NAs    :2907   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds \n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.00  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.00  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.00  \n Mean   :   78.74   Mean   : -129.5   Mean   :  2.243   Mean   : -59.36  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.00  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.00  \n NAs    :2132       NAs    :2132      NAs    :151       NAs    :2132     \n home_spread_odds    total_line      under_odds        over_odds      \n Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.00   1st Qu.:40.50   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.93   Mean   :43.58   Mean   : -73.83   Mean   : -82.25  \n 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2132      NAs    :151     NAs    :2135      NAs    :2135     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  73   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  29                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 151   NAs      : 151   NAs      : 151  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 151                                     NAs      : 208  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#make-figures",
@@ -629,6 +629,48 @@
     "title": "PSYCH 490.007: Exercise 04",
     "section": "Resources",
     "text": "Resources"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-30-work-session.html#announcements",
+    "href": "slides/wk-10-2026-10-30-work-session.html#announcements",
+    "title": "Work session",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-05 |  Canvas dropbox due today, October 30, 2026.\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026.\nTutorial on modifying and enhancing ggplot2 figures in useful ways."
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-30-work-session.html#last-time",
+    "href": "slides/wk-10-2026-10-30-work-session.html#last-time",
+    "title": "Work session",
+    "section": "Last time…",
+    "text": "Last time…"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-30-work-session.html#todays-topics",
+    "href": "slides/wk-10-2026-10-30-work-session.html#todays-topics",
+    "title": "Work session",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWork session\n\nExercise-05\nExercise-06\nFinal projects"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-30-work-session.html#next-time",
+    "href": "slides/wk-10-2026-10-30-work-session.html#next-time",
+    "title": "Work session",
+    "section": "Next time",
+    "text": "Next time\n\nData visualization in politics"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-30-work-session.html#about",
+    "href": "slides/wk-10-2026-10-30-work-session.html#about",
+    "title": "Work session",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-30-work-session.html#references",
+    "href": "slides/wk-10-2026-10-30-work-session.html#references",
+    "title": "Work session",
+    "section": "References",
+    "text": "References"
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#announcements",
@@ -4659,7 +4701,7 @@
     "href": "exercises/ex-06-making-maps.html#assignment",
     "title": "Exercise 06",
     "section": "Assignment",
-    "text": "Assignment\n\nCreate a Quarto document where you will document your work.\n\n\nThe document should have an “About” and “Setup” sections with suitable text and R code that explains what you’re doing and why.\nCreate “Making Data” and “Map-making” headers for the sections that document your work described below.\n\n\nMake a data frame with four cities you have enjoyed visiting or living in and four cities you hope to visit someday.\n\n\nYour data frame should have the following variables: city, lat, lon, status.\nThe city variable should contain the names of the cities; e.g., city = c(\"Pittsburgh\", \"State College\") would be the start of my own list.\nThe lat and lon variables are the decimal latitude and longitude values for these locations. There are many ways to find these, including Google maps1. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: lat &lt;- c(38.363328856857876) and lon &lt;- c(, -75.61075873207025). Remember that your latitude and longitude values need to line up with your city names.\nThe status variable should contain a value for each city such as “lived_in”, “hope_to_visit”. I would start this for my own cities as follows: `status &lt;- c(“lived_in”, “lived_in”).\nIf you follow the pattern above, then your data frame could be created as follows: my_travels &lt;- data.frame(city, lat, lon, status).\n\n\nMake a map of these locations using the sf, rnaturalearth, rnaturalearthdata, ggplot2, and dplyr packages.\n\n\nMap the color or shape of the points on your plot to the status variable.\n\n\nCreate a short “Discussion & Conclusions” section where you comment on the exercise. What did you learn? Can you see other situations where you might use this workflow?\nTips\n\nMake sure to add embed-resources: true into the header of your Quarto document.\nSubmit the .html file.\nMake sure that your file has a suitable name, e.g., psych-490.007-2026-ex-06-&lt;last_name&gt;-&lt;first_name&gt;.html.",
+    "text": "Assignment\n\nCreate a Quarto document where you will document your work.\n\n\nThe document should have an “About” and “Setup” sections with suitable text and R code that explains what you’re doing and why.\nCreate “Making Data” and “Map-making” headers for the sections that document your work described below.\n\n\nMake a data frame with four cities you have enjoyed visiting or living in and four cities you hope to visit someday.\n\n\nYour data frame should have the following variables: city, lat, lon, status.\nThe city variable should contain the names of the cities; e.g., city = c(\"Pittsburgh\", \"State College\") would be the start of my own list.\nThe lat and lon variables are the decimal latitude and longitude values for these locations. There are many ways to find these, including Google maps1. For example, I visited Salisbury, Maryland once. If I added it to my list of cities, I would do the following: lat &lt;- c(38.363328856857876) and lon &lt;- c(-75.61075873207025). Remember that your latitude and longitude values need to line up with your city names.\nThe status variable should contain a value for each city such as “lived_in”, “hope_to_visit”. I would start this for my own cities as follows: `status &lt;- c(“lived_in”, “lived_in”).\nIf you follow the pattern above, then your data frame could be created as follows: my_travels &lt;- data.frame(city, lat, lon, status).\n\n\nMake a map of these locations using the sf, rnaturalearth, rnaturalearthdata, ggplot2, and dplyr packages.\n\n\nMap the color or shape of the points on your plot to the status variable.\n\n\nCreate a short “Discussion & Conclusions” section where you comment on the exercise. What did you learn? Can you see other situations where you might use this workflow?\nTips\n\nMake sure to add embed-resources: true into the header of your Quarto document.\nSubmit the .html file.\nMake sure that your file has a suitable name, e.g., psych-490.007-2026-ex-06-&lt;last_name&gt;-&lt;first_name&gt;.html.",
     "crumbs": [
       "Exercises",
       "Exercise 06"
@@ -7686,7 +7728,7 @@
     "text": "Announcements\n\nExercise-05 |  Canvas dropbox due next Friday, October 30, 2026.\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026.\nTutorial on modifying and enhancing ggplot2 figures in useful ways.",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7697,7 +7739,7 @@
     "text": "Last time…\n\n\n\nMaking maps with data: Part II\n\nLocations\n\n\n\n\n\n\n\n\n\nFigure 1: See slides from 2026-10-21.",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7708,7 +7750,7 @@
     "text": "Last time…\n\n\n\nMaking maps with data: Part II\n\nLocations\nChoropleths\n\n\n\n\n\n\n\n\n\nFigure 2: See slides from 2026-10-21.",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7719,7 +7761,7 @@
     "text": "Today’s topics\n\nMaps in psychology\nWork session\n\nExercise-05\nExercise-06\nFinal projects",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7730,7 +7772,7 @@
     "text": "Brain imaging\n\n\n\n\n\n\n\n\nFigure 4: Functional MRI image. “Neuroreccovery” (n.d.)\n\n\n\n\n\n\n\n\n\n\nFigure 5: Structural MRI image. “Neuroreccovery” (n.d.)",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7741,7 +7783,7 @@
     "text": "Statistical parametric maps\n\nStatistical test or measurement (t, F) \\(\\rightarrow\\) parameter\nParameter \\(\\rightarrow\\) location in the nervous system\nFrame of reference, coordinate system, data to map, color scheme\nA kind of choropleth",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7752,7 +7794,7 @@
     "text": "Feeling emotion\n\n\n\n\n\n\nFigure 6: Nummenmaa et al. (2014) Figure 1",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7763,7 +7805,7 @@
     "text": "Under the hood\n\nLocations on body outline +\nValence (increase/decrease) in sensation \\(\\rightarrow\\) “activation”\nCombined over participants \\(\\rightarrow\\) color scheme",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7774,7 +7816,7 @@
     "text": "Next time\n\nTables",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7785,7 +7827,7 @@
     "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -7796,7 +7838,7 @@
     "text": "References\n\n\n\n\n“Neuroreccovery: Technology.” n.d. Accessed October 23, 2026. https://www.nmr.mgh.harvard.edu/neurorecovery/technology.htm.\n\n\nNummenmaa, Lauri, Enrico Glerean, Riitta Hari, and Jari K Hietanen. 2014. “Bodily Maps of Emotions.” Proceedings of the National Academy of Sciences of the United States of America 111 (2): 646–51. https://doi.org/10.1073/pnas.1321664111.",
     "crumbs": [
       "Slides",
-      "Wk 09 Fri Oct 23"
+      "Wk 09 • Fri Oct 23"
     ]
   },
   {
@@ -8010,6 +8052,118 @@
     "text": "Footnotes\n\n\nSome additional information."
   },
   {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#announcements",
+    "href": "slides/wk-11-2026-11-02-voting.html#announcements",
+    "title": "Visualizing election-related data",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#last-time",
+    "href": "slides/wk-11-2026-11-02-voting.html#last-time",
+    "title": "Visualizing election-related data",
+    "section": "Last time…",
+    "text": "Last time…"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#todays-topics",
+    "href": "slides/wk-11-2026-11-02-voting.html#todays-topics",
+    "title": "Visualizing election-related data",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nVoter registration\nPopulation"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#republicans",
+    "href": "slides/wk-11-2026-11-02-voting.html#republicans",
+    "title": "Visualizing election-related data",
+    "section": "Republicans",
+    "text": "Republicans\n\n\n\n\n\n\nFigure 1: Harris (2025)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#democrats",
+    "href": "slides/wk-11-2026-11-02-voting.html#democrats",
+    "title": "Visualizing election-related data",
+    "section": "Democrats",
+    "text": "Democrats\n\n\n\n\n\n\nFigure 2: Harris (2025)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#no-party",
+    "href": "slides/wk-11-2026-11-02-voting.html#no-party",
+    "title": "Visualizing election-related data",
+    "section": "No party",
+    "text": "No party\n\n\n\n\n\n\nFigure 3: Harris (2025)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#other",
+    "href": "slides/wk-11-2026-11-02-voting.html#other",
+    "title": "Visualizing election-related data",
+    "section": "Other",
+    "text": "Other\n\n\n\n\n\n\nFigure 4: Harris (2025)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#summary",
+    "href": "slides/wk-11-2026-11-02-voting.html#summary",
+    "title": "Visualizing election-related data",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\nFigure 5: Harris (2025)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#young-people-registrations",
+    "href": "slides/wk-11-2026-11-02-voting.html#young-people-registrations",
+    "title": "Visualizing election-related data",
+    "section": "Young people registrations",
+    "text": "Young people registrations\n\n\n\n\n\n\nFigure 6: Brill et al. (2026)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#section",
+    "href": "slides/wk-11-2026-11-02-voting.html#section",
+    "title": "Visualizing election-related data",
+    "section": "",
+    "text": "Walker (2026)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#why",
+    "href": "slides/wk-11-2026-11-02-voting.html#why",
+    "title": "Visualizing election-related data",
+    "section": "Why?",
+    "text": "Why?\n\n\n…it’s not the young people’s fault, said Laura Brill, CEO and Founder of The Civics Center.\n\n\n\n\n“It’s not that young people in Michigan are so much more impassioned and and inherently organized than young people in Pennsylvania,” Brill said. “It’s that they’re involved in different systems and [have] different supports to help them do it.”"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#population",
+    "href": "slides/wk-11-2026-11-02-voting.html#population",
+    "title": "Visualizing election-related data",
+    "section": "Population",
+    "text": "Population\n\n\n\n\n\n\nFigure 7: Pyramids (n.d.)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#population-changes",
+    "href": "slides/wk-11-2026-11-02-voting.html#population-changes",
+    "title": "Visualizing election-related data",
+    "section": "Population changes",
+    "text": "Population changes\n\n\n\n\n\n\nFigure 8: “Population Change for Pennsylvania Counties, 2020-2025” (n.d.)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#next-time",
+    "href": "slides/wk-11-2026-11-02-voting.html#next-time",
+    "title": "Visualizing election-related data",
+    "section": "Next time",
+    "text": "Next time\n\nData visualization in politics"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#about",
+    "href": "slides/wk-11-2026-11-02-voting.html#about",
+    "title": "Visualizing election-related data",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#references",
+    "href": "slides/wk-11-2026-11-02-voting.html#references",
+    "title": "Visualizing election-related data",
+    "section": "References",
+    "text": "References\n\n\n\n\nBrill, Laura, Andy Zack, and Tadea Martin-Gonzalez. 2026. “New Findings from the Civics Center Show 18-Year-Olds Are Massively Under-Registered Heading into the Midterms. Wide Disparities Exist Among States.” June 25. https://www.thecivicscenter.org/research/18-year-old-voter-registration-rates.\n\n\nHarris, Alexandra. 2025. “Tracking Pennsylvania Voter Registration Trends.” November 3. https://www.spotlightpa.org/pennsylvania-voter-registration/.\n\n\n“Population Change for Pennsylvania Counties, 2020-2025.” n.d. Accessed October 23, 2026. https://datawrapper.dwcdn.net/n4QDM/5/.\n\n\nPyramids, Population. n.d. “Pennsylvania Population by Age and Sex, 2000 to 2025.” Population Pyramids. Accessed October 23, 2026. https://www.populationpyramids.org/states/pennsylvania.\n\n\nWalker, Carter. 2026. “Pennsylvania Ranks Last in New Study of 18-Year-Olds’ Voter Registration Rates.” July 20. https://www.spotlightpa.org/news/2026/07/student-voter-registration-rates-lowest-civics-center-study-elections/."
+  },
+  {
     "objectID": "supplemental/other-field-figs.html",
     "href": "supplemental/other-field-figs.html",
     "title": "Findings: Data viz outside psych sci",
@@ -8035,7 +8189,7 @@
     "href": "supplemental/other-field-figs.html#preparation",
     "title": "Findings: Data viz outside psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8f7a82858&gt;\n&lt;environment: 0x8f7a82580&gt;"
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8257a88c8&gt;\n&lt;environment: 0x8257a85f0&gt;"
   },
   {
     "objectID": "supplemental/other-field-figs.html#gathering",
