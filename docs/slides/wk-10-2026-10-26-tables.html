@@ -8,6 +8,8 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
@@ -252,8 +254,16 @@ Rick Gilmore
 <h1>Preliminaries</h1>
 
 </section>
+<section id="section" class="slide level2 scrollable">
+<h2></h2>
+<p><a href="../include/img/most-common-birthdates-canada.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../include/img/most-common-birthdates-canada.png"></a></p>
+</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
+<ul>
+<li><a href="../exercises/ex-05-tidy-data.html">Exercise-05</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18779443"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>Due</em> on Friday, October 30, 2026.</li>
+<li><a href="../exercises/ex-06-making-maps.html">Exercise-06</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18789309"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> <i class="fa-solid fa-calendar" aria-label="calendar"></i> <em>due</em> on Monday, November 16, 2026.</li>
+</ul>
 </section>
 <section id="todays-topics" class="slide level2">
 <h2>Today’s topics</h2>
@@ -297,7 +307,7 @@ Rick Gilmore
 <div id="fig-mtcars-help" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-mtcars-help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/mtcars-help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Help document for the mtcars dataset."><img data-src="../include/img/mtcars-help.png" style="width:65.0%"></a>
+<a href="../include/img/mtcars-help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Help document for the mtcars dataset."><img data-src="../include/img/mtcars-help.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mtcars-help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Help document for the <em>mtcars</em> dataset.
@@ -477,7 +487,7 @@ cyl  3  4  5
 <div id="fig-help-table" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
+<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Output from R’s <code>help()</code> function for the <code>table()</code> command.
@@ -851,7 +861,7 @@ Figure&nbsp;4: A table built using the <a href="https://www.markdownguide.org/ex
 <section id="making-a-summary-table" class="slide level2">
 <h2>Making a summary table</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>variables <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"mpg"</span>, <span class="st">"disp"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="|1|2-3|4-5|6-7|8-9|11-15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>variables <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"mpg"</span>, <span class="st">"disp"</span>)</span>
 <span id="cb15-2"><a></a>mins <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(mtcars<span class="sc">$</span>mpg), </span>
 <span id="cb15-3"><a></a>          <span class="fu">min</span>(mtcars<span class="sc">$</span>disp))</span>
 <span id="cb15-4"><a></a>meds <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">median</span>(mtcars<span class="sc">$</span>mpg), </span>
@@ -919,7 +929,7 @@ Table&nbsp;5: A table showing summary statistics of two of the variables from th
 <li>You could try making a table if you choose to work on <a href="../exercises/ex-05-tidy-data.html">Exercise 05</a>.</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>my_stats_df <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|1|2|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>my_stats_df <span class="sc">|&gt;</span></span>
 <span id="cb17-2"><a></a>  kableExtra<span class="sc">::</span><span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
 <span id="cb17-3"><a></a>  kableExtra<span class="sc">::</span><span class="fu">kable_classic</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -989,7 +999,7 @@ Table&nbsp;6: A table showing summary statistics of two of the variables from th
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li>Tables in <em>gt</em> and <em>knitr::kable</em></li>
+<li>Tables in *gt**</li>
 </ul>
 </section></section>
 <section>

@@ -1,0 +1,115 @@
+---
+title: "Work session"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+- [Exercise-05](../exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443) due next Friday, October 30, 2026.
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
+- [Tutorial](../tutorial/tutorial-more-ggplot2.qmd) on modifying and enhancing *ggplot2* figures in useful ways.
+
+## Last time...
+
+:::: {.columns}
+
+::: {.column width=50%}
+- Making maps with data: Part II
+  - Locations
+
+:::
+
+::: {.column width=50%}
+![See [slides](wk-09-2026-10-21-mapmaking-II.qmd) from 2026-10-21.](include/fig/fig-pa-higher-ed-1.png){#fig-point-map-higher-ed}
+
+:::
+
+::::
+
+## Last time...
+
+:::: {.columns}
+
+::: {.column width=50%}
+- Making maps with data: Part II
+  - Locations
+  - Choropleths
+
+:::
+
+::: {.column width=50%}
+![See [slides](wk-09-2026-10-21-mapmaking-II.qmd) from 2026-10-21.](include/fig/fig-map-institution-tiers-1.png){#fig-choropleth-higher-ed}
+
+:::
+
+::::
+
+## Today's topics
+
+- Maps in psychology
+- Work session
+  - [Exercise-05](../exercises/ex-05-tidy-data.qmd)
+  - [Exercise-06](../exercises/ex-06-making-maps.qmd)
+  - Final projects
+
+# Maps in psychology
+
+---
+
+![Rick Gilmore's ancestry.](../include/img/gilmore-7-gen-ancestry.png){#fig-gilmore-ancestry width="75%"}
+
+## Brain imaging
+
+:::: {.columns}
+::: {.column width=50%}
+![Functional MRI image. @UnknownUnknown-sn](https://www.nmr.mgh.harvard.edu/neurorecovery/images/fMRI_labeled.png){#fig-fmri}
+:::
+::: {.column width=50%}
+![Structural MRI image. @UnknownUnknown-sn](https://www.nmr.mgh.harvard.edu/neurorecovery/images/MRI_sequence.png){#fig-structural-mri}
+:::
+::::
+
+## Statistical parametric maps
+
+- Statistical test or measurement (*t*, *F*) $\rightarrow$ parameter 
+- Parameter $\rightarrow$ location in the nervous system
+- Frame of reference, coordinate system, data to map, color scheme
+- A kind of choropleth
+
+## Feeling emotion {.scrollable}
+
+![@Nummenmaa2014-ub Figure 1](https://www.pnas.org/cms/10.1073/pnas.1321664111/asset/dcc3da97-2288-4f1c-a175-cad39b111aab/assets/graphic/pnas.1321664111fig01.jpeg){#fig-nummenaa-2014-fig-1 width="75%"}
+
+---
+
+![@Nummenmaa2014-ub Figure 2](https://www.pnas.org/cms/10.1073/pnas.1321664111/asset/3263030e-acb8-4654-9064-b18db4a3a146/assets/graphic/pnas.1321664111fig02.jpeg){#fig-nummenaa-2014-fig-2 width="75%"}
+
+## Under the hood
+
+- Locations on body outline + 
+- Valence (increase/decrease) in sensation $\rightarrow$ "activation"
+- Combined over participants $\rightarrow$ color scheme
+
+# Work session
+
+# Wrap up
+
+## Next time
+
+- Tables
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.10.0.233.
+
+The source files are in R and R Markdown, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages at:
+<https://psu-psychology.github.io/psych-490-data-viz-2026-fall>
+
+## References

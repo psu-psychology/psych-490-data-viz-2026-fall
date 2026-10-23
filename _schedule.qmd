@@ -254,6 +254,7 @@
 - [Exercise-05](exercises/ex-05-tidy-data.qmd)
 - [Exercise-06](exercises/ex-06-making-maps.qmd)
 - [Tutorial](tutorials/tutorial-more-ggplot2.qmd)
+- [Slides](slides/wk-09-2026-10-23-work-session.qmd)
 
 ## Week 10 {- #week-10}
 
