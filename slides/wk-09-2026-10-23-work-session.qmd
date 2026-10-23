@@ -9,7 +9,7 @@ format: revealjs
 
 - [Exercise-05](../exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443) due next Friday, October 30, 2026.
 - [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
-- [Tutorial](../tutorial/tutorial-more-ggplot2.qmd) on modifying and enhancing *ggplot2* figures in useful ways.
+- [Tutorial](../tutorials/tutorial-more-ggplot2.qmd) on modifying and enhancing *ggplot2* figures in useful ways.
 
 ## Last time...
 
@@ -91,6 +91,10 @@ format: revealjs
 - Locations on body outline + 
 - Valence (increase/decrease) in sensation $\rightarrow$ "activation"
 - Combined over participants $\rightarrow$ color scheme
+
+---
+
+<iframe src="https://ourworldindata.org/grapher/share-who-report-lifetime-anxiety-or-depression?tab=map" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 
 # Work session
 
