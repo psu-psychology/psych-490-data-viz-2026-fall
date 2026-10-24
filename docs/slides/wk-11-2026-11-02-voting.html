@@ -37,6 +37,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -357,7 +423,82 @@ Figure&nbsp;8: <span class="citation" data-cites="UnknownUnknown-vu"><span>“Po
 </figcaption>
 </figure>
 </div>
-</section></section>
+</section>
+<section id="presidential-approval-ratings" class="slide level2">
+<h2>Presidential approval ratings</h2>
+<div id="fig-trump-approval" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-trump-approval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/trump-approval-cook-report-2026-10-23.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: https://www.cookpolitical.com/survey-research/cpr-polltracker/trump-trendlines"><img data-src="../include/img/trump-approval-cook-report-2026-10-23.png" style="width:70.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trump-approval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: https://www.cookpolitical.com/survey-research/cpr-polltracker/trump-trendlines
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="vs.-biden-obama" class="slide level2">
+<h2>vs.&nbsp;Biden &amp; Obama</h2>
+<div id="fig-trump-biden-obama-approval" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-trump-biden-obama-approval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/approval-trump-biden-obama.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;10: https://ropercenter.cornell.edu/presidential-approval/builder"><img data-src="../include/img/approval-trump-biden-obama.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-trump-biden-obama-approval-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: https://ropercenter.cornell.edu/presidential-approval/builder
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="a-broader-lens" class="slide level2 scrollable">
+<h2>A broader lens</h2>
+<div id="fig-approval-highs-lows" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-approval-highs-lows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/presidential-approval-highs-lows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;11: https://ropercenter.cornell.edu/presidential-approval/highslows"><img data-src="../include/img/presidential-approval-highs-lows.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-approval-highs-lows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: https://ropercenter.cornell.edu/presidential-approval/highslows
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1|2-3|4-5|6-7|8-10|11-17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>prez_approval_df <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"../include/csv/prez-approval.csv"</span>)</span>
+<span id="cb1-2"><a></a>prez_approval_df <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">date =</span> lubridate<span class="sc">::</span><span class="fu">as_date</span>(date)) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a></a>  <span class="fu">ggplot</span>()  <span class="sc">+</span></span>
+<span id="cb1-5"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> approval) <span class="sc">+</span></span>
+<span id="cb1-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-7"><a></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">group =</span> president, <span class="at">color =</span> party)) <span class="sc">+</span></span>
+<span id="cb1-8"><a></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> president),</span>
+<span id="cb1-9"><a></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>,</span>
+<span id="cb1-10"><a></a>            <span class="at">color =</span> <span class="st">"slategrey"</span>) <span class="sc">+</span></span>
+<span id="cb1-11"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb1-12"><a></a>  <span class="fu">xlab</span>(<span class="st">"Year"</span>) <span class="sc">+</span></span>
+<span id="cb1-13"><a></a>  <span class="fu">ylab</span>(<span class="st">"Approval %"</span>) <span class="sc">+</span></span>
+<span id="cb1-14"><a></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">100</span>) <span class="sc">+</span></span>
+<span id="cb1-15"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Highest and lowest U.S. presidential approval ratings"</span>,</span>
+<span id="cb1-16"><a></a>       <span class="at">subtitle =</span> <span class="st">"Ford to Trump"</span>,</span>
+<span id="cb1-17"><a></a>       <span class="at">caption =</span> <span class="st">"Does not include current Trump term."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section><section id="" class="slide level2 output-location-slide"><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-prez-approval-ford-trump" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-prez-approval-ford-trump-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-prez-approval-ford-trump-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;12: All presidents but Clinton experienced their highest approval ratings before the lowest."><img data-src="include/fig/fig-prez-approval-ford-trump-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prez-approval-ford-trump-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: All presidents but Clinton experienced their highest approval ratings before the lowest.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap up</h1>
@@ -619,6 +760,44 @@ Walker, Carter. 2026. <span>“Pennsylvania Ranks Last in New Study of 18-Year-O
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

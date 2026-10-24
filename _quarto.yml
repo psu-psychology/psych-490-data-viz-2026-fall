@@ -124,7 +124,6 @@ format:
     crossrefs-hover: true
 
     link-external-icon: true
-    date-modified: last-modified
     date: today
     bibliography: [include/bib/packages.bib, include/bib/data-viz.bib, include/bib/grateful-refs.bib]
     csl: include/bib/apa.csl

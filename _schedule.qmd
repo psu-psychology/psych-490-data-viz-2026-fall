@@ -285,9 +285,7 @@
 
 ### Mon, Nov 02 {-}
 
-
-
-- [Slides](404.qmd)
+- [Slides](slides/wk-11-2026-11-02-voting.qmd)
 
 ### Wed, Nov 04 {-}
 

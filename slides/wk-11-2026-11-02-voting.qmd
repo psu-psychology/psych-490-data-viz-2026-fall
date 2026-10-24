@@ -70,6 +70,59 @@ format: revealjs
 
 ![@UnknownUnknown-vu](../include/img/pa-pop-change-by-county.png){#fig-pa-pop-changes width="65%"}
 
+## Presidential approval ratings
+
+![https://www.cookpolitical.com/survey-research/cpr-polltracker/trump-trendlines](../include/img/trump-approval-cook-report-2026-10-23.png){#fig-trump-approval width="70%"}
+
+## vs. Biden & Obama
+
+![https://ropercenter.cornell.edu/presidential-approval/builder](../include/img/approval-trump-biden-obama.png){#fig-trump-biden-obama-approval}
+
+## A broader lens {.scrollable}
+
+![https://ropercenter.cornell.edu/presidential-approval/highslows](../include/img/presidential-approval-highs-lows.png){#fig-approval-highs-lows}
+
+---
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+#| eval: false
+googlesheets4::gs4_auth(email = Sys.getenv("GMAIL_ROG"))
+prez_approval_df <- googledrive::drive_get("psych-490.007-2026-fall-presidential-approval") |>
+  googlesheets4::read_sheet()
+readr::write_csv(prez_approval_df, "../include/csv/prez-approval.csv")
+```
+
+```{r}
+#| label: fig-prez-approval-ford-trump
+#| fig-cap: "All presidents but Clinton experienced their highest approval ratings before the lowest."
+#| output-location: slide
+#| echo: true
+#| code-fold: false
+#| code-line-numbers: "1|2-3|4-5|6-7|8-10|11-17"
+prez_approval_df <- readr::read_csv("../include/csv/prez-approval.csv")
+prez_approval_df |>
+  dplyr::mutate(date = lubridate::as_date(date)) |>
+  ggplot()  +
+  aes(x = date, y = approval) +
+  geom_point() +
+  geom_line(aes(group = president, color = party)) +
+  geom_text(aes(label = president),
+            vjust = -0.5,
+            color = "slategrey") +
+  theme_classic() +
+  xlab("Year") +
+  ylab("Approval %") +
+  ylim(0, 100) +
+  labs(title = "Highest and lowest U.S. presidential approval ratings",
+       subtitle = "Ford to Trump",
+       caption = "Does not include current Trump term.")
+```
+
+
 # Wrap up
 
 ## Next time
