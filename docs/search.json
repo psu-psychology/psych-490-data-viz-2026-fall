@@ -698,7 +698,7 @@
     "href": "slides/wk-10-2026-10-26-tables.html#gathering-data",
     "title": "Making tables",
     "section": "Gathering data",
-    "text": "Gathering data\n\n\n\nHow about mtcars?\n\n\nhelp(\"mtcars\")\n\n\n\n\n\n\n\n\nFigure 1: Help document for the mtcars dataset."
+    "text": "Gathering data\n\n\n\nHow about mtcars?\n\n\nhelp(\"mtcars\")\n\n\n\n\n\n\n\n\nFigure 4: Help document for the mtcars dataset."
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#exploring-data-summary",
@@ -768,7 +768,7 @@
     "href": "slides/wk-10-2026-10-26-tables.html#bottom-line-on-table",
     "title": "Making tables",
     "section": "Bottom line on table()",
-    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 2 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 2: Output from R’s help() function for the table() command."
+    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 5 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 5: Output from R’s help() function for the table() command."
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#prettier-output",
@@ -789,14 +789,14 @@
     "href": "slides/wk-10-2026-10-26-tables.html#a-custom-summary-table",
     "title": "Making tables",
     "section": "A custom summary table",
-    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 3: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
+    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 6: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#under-the-hood-1",
     "href": "slides/wk-10-2026-10-26-tables.html#under-the-hood-1",
     "title": "Making tables",
     "section": "Under the hood",
-    "text": "Under the hood\n\nFigure 3 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 4: A table built using the Markdown tables syntax."
+    "text": "Under the hood\n\nFigure 6 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 7: A table built using the Markdown tables syntax."
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#making-a-summary-table",
@@ -845,7 +845,7 @@
     "href": "slides/wk-10-2026-10-26-tables.html#next-time",
     "title": "Making tables",
     "section": "Next time",
-    "text": "Next time\n\nTables in *gt**"
+    "text": "Next time\n\nTables in gt"
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#about",
@@ -859,7 +859,7 @@
     "href": "slides/wk-10-2026-10-26-tables.html#references",
     "title": "Making tables",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\n\n\nCDC. 2025. “FastStats: Sleep in Adults.” January 31. https://www.cdc.gov/sleep/data-research/facts-stats/adults-sleep-facts-and-stats.html.\n\n\nGovernment of Canada, and Statistics Canada. 2026. “Live Births, by Month.” Government of Canada, Statistics Canada, September 23. https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501."
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#announcements",
@@ -7853,14 +7853,14 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#todays-topics",
     "title": "More tables",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nLast time…\n\nMaking tables in R\n\nMaking (better) tables"
+    "text": "Today’s topics\n\nMaking (better) tables"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#package-gt",
     "href": "slides/wk-10-2026-10-28-tables-II.html#package-gt",
     "title": "More tables",
     "section": "Package gt",
-    "text": "Package gt\n\n\n\n\n\n\nFigure 1: https://gt.rstudio.com"
+    "text": "Package gt\n\n\n\n\n\n\nFigure 3: https://gt.rstudio.com"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#gt-tutorial",
@@ -8021,7 +8021,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#main-points",
     "title": "More tables",
     "section": "Main points",
-    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames (or their cousins tibbles) are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; gt makes it possible\nScripting the generation of tables makes them less error-prone"
+    "text": "Main points\n\nTables can be informative accompaniments to figures; sometimes more informative than figures.\nData frames (or their cousins tibbles) are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; gt makes it possible\nScripting the generation of tables makes them less error-prone"
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#next-time",
@@ -8042,7 +8042,7 @@
     "href": "slides/wk-10-2026-10-28-tables-II.html#references",
     "title": "More tables",
     "section": "References",
-    "text": "References\n\n\n\n\nHorst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. https://doi.org/10.5281/zenodo.3960218."
+    "text": "References\n\n\n\n\nCDC. 2025. “About Sleep.” February 12. https://www.cdc.gov/sleep/about/index.html.\n\n\nHorst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. https://doi.org/10.5281/zenodo.3960218."
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#footnotes",
@@ -8654,5 +8654,26 @@
     "title": "Visualizing election-related data",
     "section": "A broader lens",
     "text": "A broader lens\n\n\n\n\n\n\nFigure 11: https://ropercenter.cornell.edu/presidential-approval/highslows"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#maps",
+    "href": "slides/wk-10-2026-10-26-tables.html#maps",
+    "title": "Making tables",
+    "section": "Maps!",
+    "text": "Maps!\n\n\n\n\n\n\n\n\nFigure 1: CDC (2025)\n\n\n\n\n\n\n\n\n\n\nFigure 2: CDC (2025)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#section",
+    "href": "slides/wk-10-2026-10-26-tables.html#section",
+    "title": "Making tables",
+    "section": "",
+    "text": "Government of Canada and Canada (2026)"
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#more-sleep",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#more-sleep",
+    "title": "More tables",
+    "section": "More sleep",
+    "text": "More sleep\n\n\n\n\n\n\nFigure 1: CDC (2025)"
   }
 ]

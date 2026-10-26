@@ -11,7 +11,22 @@ execute:
 
 ## {.scrollable}
 
-![](../include/img/most-common-birthdates-canada.png)
+![@Government-of-Canada2026-xt](../include/img/most-common-birthdates-canada.png)
+
+## Maps!
+
+:::: {.columns}
+::: {.column width=50%}
+![@CDC2025-ll](../include/img/insufficient-sleep-cdc-2022-states.png){#fig-sleep-states width="65%"}
+:::
+::: {.column width=50%}
+![@CDC2025-ll](../include/img/insufficient-sleep-cdc-2022-us-counties.png){#fig-sleep-all-counties width="65%"}
+:::
+::::
+
+---
+
+![@CDC2025-ll](../include/img/insufficient-sleep-cdc-2022-pa.png){#fig-sleep-pa width="45%"}
 
 ## Announcements
 
@@ -243,7 +258,7 @@ my_stats_df |>
 
 ## Next time
 
-- Tables in *gt**
+- Tables in *gt*
 
 # Resources
 

@@ -9,6 +9,39 @@ execute:
 
 # Preliminaries
 
+## More sleep
+
+![@CDC2025-ty](../include/img/cdc-sleep-recs.png){#fig-cdc-sleep-recs}
+
+---
+
+```{r}
+#| echo: false
+library(ggplot2)
+library(dplyr)
+cdc_sleep <- readr::read_csv("../include/csv/cdc-sleep-recs.csv", show_col_types = FALSE)
+```
+
+```{r}
+#| label: fig-cdc-sleep-recs
+#| fig-cap: "Figure based on @CDC2025-ty"
+#| output-location: slide
+#| code-line-numbers: "|1|2-3|4|5-6|7-8|9|10-13"
+cdc_sleep |>
+  mutate(hrs = (hrs_min + hrs_max)/2,
+         age = (age_min + age_max)/2) |>
+  ggplot() +
+  geom_errorbar(aes(x = age, ymin = hrs_min, 
+                    ymax = hrs_max), width = 0.2, color = "gray40") +
+  geom_errorbarh(aes(y = hrs, xmin = age_min, 
+                     xmax = age_max), height = 0.2, color = "gray40") +
+  geom_smooth(aes(x = age, y = hrs), se = FALSE) +
+  theme_minimal() +
+  ylim(0,17) +
+  labs(title = "Daily sleep recommendations across age.", 
+       caption = "Source: U.S. Centers for Disease Control.")
+```
+
 ## Announcements
 
 - [Exercise-05](../exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443) {{< fa calendar >}} *Due* on Friday, October 30, 2026.
@@ -16,14 +49,9 @@ execute:
 
 ## Today's topics
 
-- Last time...
-  - Making tables in R
 - Making (better) tables
 
-# Last time...
-
 # Making (better) tables
-
 
 ## Package *gt*
 
@@ -44,7 +72,6 @@ library(gt)
 library(dplyr)
 library(tibble)
 ```
-
 
 ## Gathering & formatting
 
@@ -254,7 +281,7 @@ penguins_gt_tbl
 
 ## Main points
 
-- Tables can be informative accompaniments to figures
+- Tables can be informative accompaniments to figures; sometimes more informative than figures.
 - Data frames (or their cousins tibbles) are useful and flexible structures for making both
 - Think about the *kind* of table you want to produce
 - Making pretty tables in R can be done; *gt* makes it possible

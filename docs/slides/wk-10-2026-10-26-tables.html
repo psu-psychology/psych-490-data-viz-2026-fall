@@ -103,7 +103,26 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -256,7 +275,52 @@ Rick Gilmore
 </section>
 <section id="section" class="slide level2 scrollable">
 <h2></h2>
-<p><a href="../include/img/most-common-birthdates-canada.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="../include/img/most-common-birthdates-canada.png"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/most-common-birthdates-canada.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="@Government-of-Canada2026-xt"><img data-src="../include/img/most-common-birthdates-canada.png" alt="Government of Canada and Canada (2026)"></a></p>
+<figcaption><span class="citation" data-cites="Government-of-Canada2026-xt">Government of Canada and Canada (<a href="#/references" role="doc-biblioref" onclick="">2026</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="maps" class="slide level2">
+<h2>Maps!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div id="fig-sleep-states" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-sleep-states-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/insufficient-sleep-cdc-2022-states.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: @CDC2025-ll"><img data-src="../include/img/insufficient-sleep-cdc-2022-states.png" style="width:65.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sleep-states-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <span class="citation" data-cites="CDC2025-ll">CDC (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div id="fig-sleep-all-counties" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-sleep-all-counties-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/insufficient-sleep-cdc-2022-us-counties.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: @CDC2025-ll"><img data-src="../include/img/insufficient-sleep-cdc-2022-us-counties.png" style="width:65.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sleep-all-counties-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <span class="citation" data-cites="CDC2025-ll">CDC (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<div id="fig-sleep-pa" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-sleep-pa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/insufficient-sleep-cdc-2022-pa.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: @CDC2025-ll"><img data-src="../include/img/insufficient-sleep-cdc-2022-pa.png" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sleep-pa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: <span class="citation" data-cites="CDC2025-ll">CDC (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
@@ -307,10 +371,10 @@ Rick Gilmore
 <div id="fig-mtcars-help" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-mtcars-help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/mtcars-help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Help document for the mtcars dataset."><img data-src="../include/img/mtcars-help.png" style="width:65.0%"></a>
+<a href="../include/img/mtcars-help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: Help document for the mtcars dataset."><img data-src="../include/img/mtcars-help.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mtcars-help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Help document for the <em>mtcars</em> dataset.
+Figure&nbsp;4: Help document for the <em>mtcars</em> dataset.
 </figcaption>
 </figure>
 </div>
@@ -479,7 +543,7 @@ cyl  3  4  5
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>A quick check of <code>help("table")</code> (<a href="#/fig-help-table" class="quarto-xref">Figure&nbsp;2</a> at right) shows</li>
+<li>A quick check of <code>help("table")</code> (<a href="#/fig-help-table" class="quarto-xref">Figure&nbsp;5</a> at right) shows</li>
 <li><code>table()</code> is for making cross tabulations</li>
 <li>Or when you take all the data…</li>
 </ul>
@@ -487,10 +551,10 @@ cyl  3  4  5
 <div id="fig-help-table" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
+<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Output from R’s <code>help()</code> function for the <code>table()</code> command.
+Figure&nbsp;5: Output from R’s <code>help()</code> function for the <code>table()</code> command.
 </figcaption>
 </figure>
 </div>
@@ -827,7 +891,7 @@ Valiant
 </table>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-custom-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: A sketch of a statistical summary table we might want to create.
+Figure&nbsp;6: A sketch of a statistical summary table we might want to create.
 </figcaption>
 </figure>
 </div>
@@ -841,7 +905,7 @@ Figure&nbsp;3: A sketch of a statistical summary table we might want to create.
 <section id="under-the-hood-1" class="slide level2">
 <h2>Under the hood</h2>
 <ul>
-<li><a href="#/fig-custom-summary" class="quarto-xref">Figure&nbsp;3</a> is built using Markdown tables.</li>
+<li><a href="#/fig-custom-summary" class="quarto-xref">Figure&nbsp;6</a> is built using Markdown tables.</li>
 </ul>
 <div id="fig-markdown-table-code" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
@@ -853,7 +917,7 @@ Figure&nbsp;3: A sketch of a statistical summary table we might want to create.
 <span id="cb14-5"><a></a><span class="pp">|</span> ...       <span class="pp">|</span> ...  <span class="pp">|</span> ...    <span class="pp">|</span> ...   <span class="pp">|</span> ...   <span class="pp">|</span>  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-markdown-table-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: A table built using the <a href="https://www.markdownguide.org/extended-syntax/#tables">Markdown tables</a> syntax.
+Figure&nbsp;7: A table built using the <a href="https://www.markdownguide.org/extended-syntax/#tables">Markdown tables</a> syntax.
 </figcaption>
 </figure>
 </div>
@@ -999,7 +1063,7 @@ Table&nbsp;6: A table showing summary statistics of two of the variables from th
 <section id="next-time" class="slide level2">
 <h2>Next time</h2>
 <ul>
-<li>Tables in *gt**</li>
+<li>Tables in <em>gt</em></li>
 </ul>
 </section></section>
 <section>
@@ -1012,10 +1076,18 @@ Table&nbsp;6: A table showing summary statistics of two of the variables from th
 <p>This talk was produced using <a href="https://quarto.org">Quarto</a>, using the <a href="https://posit.co/products/open-source/rstudio/">RStudio</a> Integrated Development Environment (IDE), version 2026.10.0.233.</p>
 <p>The source files are in R and R Markdown, then rendered to HTML using the <a href="https://revealjs.com">revealJS</a> framework. The HTML slides are hosted in a <a href="https://github.com/psu-psychology/psych-490-data-viz-2026-fall">GitHub repo</a> and served by GitHub pages at: <a href="https://psu-psychology.github.io/psych-490-data-viz-2026-fall" class="uri">https://psu-psychology.github.io/psych-490-data-viz-2026-fall</a></p>
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-CDC2025-ll" class="csl-entry" role="listitem">
+CDC. 2025. <span>“<span>FastStats</span>: Sleep in Adults.”</span> January 31. <a href="https://www.cdc.gov/sleep/data-research/facts-stats/adults-sleep-facts-and-stats.html">https://www.cdc.gov/sleep/data-research/facts-stats/adults-sleep-facts-and-stats.html</a>.
+</div>
+<div id="ref-Government-of-Canada2026-xt" class="csl-entry" role="listitem">
+Government of Canada, and Statistics Canada. 2026. <span>“Live Births, by Month.”</span> Government of Canada, Statistics Canada, September 23. <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501</a>.
+</div>
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
