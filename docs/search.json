@@ -838,7 +838,7 @@
     "href": "slides/wk-10-2026-10-26-tables.html#main-points",
     "title": "Making tables",
     "section": "Main points",
-    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone"
+    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nConsider the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone"
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#next-time",

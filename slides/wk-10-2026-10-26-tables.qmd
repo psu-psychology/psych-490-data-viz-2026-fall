@@ -252,7 +252,7 @@ my_stats_df |>
 
 - Tables can be informative accompaniments to figures
 - Data frames are useful and flexible structures for making both
-- Think about the *kind* of table you want to produce
+- Consider the *kind* of table you want to produce
 - Making pretty tables in R can be done; we're getting there
 - *Scripting* the generation of tables makes them less error-prone
 
