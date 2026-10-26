@@ -1,0 +1,177 @@
+---
+title: "Visualizing policy-related data"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
+
+## Last time...
+
+- Voter registration
+- Population
+- Presidential approval
+
+## Today's topics
+
+- What matters most?
+
+# What matters most to young people?
+
+## Harvard Youth Poll
+
+- 
+
+---
+
+### All in all, do you think that things in the nation are...?
+
+- Generally headed in the right direction
+- Off on the wrong track
+
+---
+
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp?itok=piMD4hsA)
+
+---
+
+### How likely is it that you will vote in the midterm elections for Congress in November 2026?
+
+---
+
+![](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/NsKEM-2.-how-likely-is-it-that-you-will-vote-in-the-midterm-elections-for-congress-in-november-2026-.webp?itok)
+
+---
+
+### If the 2026 election for the U.S. House of Representatives were being held today, would you vote for:
+
+- The Democratic candidate
+- The Republican candidate
+- I will not vote
+- Don't know
+
+---
+
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ZuBlH-3.-if-the-2026-election-for-the-u.s.-house-of-representatives-were-being-held-today-would-you-vote-for-.webp)
+
+---
+
+### In general, when I am my parent's age, I believe that I will be...
+
+- Better off financially than they are now
+- Worse off financially than they are now
+
+---
+
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/2qNUa-5.-in-general-when-i-am-my-parent-s-age-i-believe-that-i-will-be-%20%281%29.webp)
+
+---
+
+### How serious a threat, if at all, do you think each of the following is to your long-term financial security?
+
+- Immigration increasing competition for jobs
+- The wealth and power of billionaires
+- Artificial intelligence (AI) replacing jobs
+- Government spending and the national debt
+
+---
+
+### How serious a threat, if at all, do you think each of the following is to your long-term financial security?
+
+- Trade wars and barriers to global trade
+- The power of large corporations
+- Rising prices and the cost of living
+
+---
+
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/DiZnQ-6.-how-serious-a-threat-if-at-all-do-you-think-each-of-the-following-is-to-your-long-term-financial-security-the-power-of-large-corporations-.webp)
+
+---
+
+### How important will each of the following issues be in determining your vote in the 2026 midterm elections?
+
+- The cost of living
+- Corruption in government
+- U.S. involvement in wars and conflicts overseas
+- Free and fair elections
+- Immigration enforcement and deportations
+
+---
+
+### How important will each of the following issues be in determining your vote in the 2026 midterm elections?
+
+- Trade with other countries
+- Abortion
+- Climate and the environment
+- Drug trafficking
+- Transgender issues
+
+## {.scrollable}
+
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/qIpKW-7.-how-important-will-each-of-the-following-issues-be-in-determining-your-vote-in-the-2026-midterm-elections-.webp)
+
+## Yale Youth Poll
+
+>Results from survey of 3,429 registered voters, including 2,008 voters aged 18-34, enabling a comparison of young voters to the electorate as a whole. Full results available on the Spring 2026 Results page.
+
+-- https://youthpoll.yale.edu
+
+---
+
+### Here is a seven-point scale of political views arranged from extremely liberal to extremely conservative. Where would you place yourself on this scale?
+
+---
+
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/QylEg-younger-voters-are-more-liberal-than-older-voters-_0.png)
+
+---
+
+### Here is a seven-point scale of political views, arranged from extremely liberal to extremely conservative. Thinking about the political views of your parent(s) when you were a teenager, where would you place YOUR PARENT(S) on this scale?
+
+---
+
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/3ZCIw-most-americans-are-ideologically-similar-to-their-parents-more-common-to-be-more-liberal-than-more-conservative-_0.png)
+
+---
+
+### When it comes to deciding your vote, which of the following issues is most important to you?
+
+## {.scrollable}
+
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/ic0W1-voters-rank-cost-of-living-healthcare-democracy-and-corruption-as-top-concerns-_0.png)
+---
+
+>Voters care least about Israel and Palestine (28%), Ukraine and Russia (27%), China (27%), artificial intelligence (24%), acceptance of gay people (22%), and acceptance of transgender people (19%), despite the prominence of these issues in the news. 
+
+---
+
+### How often do you interact with any form of AI (such as ChatGPT, Claude, Grok)?
+
+---
+
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/8bLTt-voters-ages-65-use-ai-less-often-than-younger-voters-_0.png)
+
+---
+
+# Wrap up
+
+## Next time
+
+- Work session
+
+# Resources
+
+## About
+
+This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
+Integrated Development Environment (IDE), version 2026.10.0.233.
+
+The source files are in R and R Markdown, then rendered to HTML using the
+[revealJS](https://revealjs.com) framework.
+The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages at:
+<https://psu-psychology.github.io/psych-490-data-viz-2026-fall>
+
+## References

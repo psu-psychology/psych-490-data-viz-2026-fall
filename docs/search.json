@@ -8675,5 +8675,75 @@
     "title": "More tables",
     "section": "More sleep",
     "text": "More sleep\n\n\n\n\n\n\nFigure 1: CDC (2025)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#announcements",
+    "href": "slides/wk-11-2026-11-04-policy.html#announcements",
+    "title": "Visualizing policy-related data",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#last-time",
+    "href": "slides/wk-11-2026-11-04-policy.html#last-time",
+    "title": "Visualizing policy-related data",
+    "section": "Last time…",
+    "text": "Last time…\n\nVoter registration\nPopulation\nPresidential approval"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#todays-topics",
+    "href": "slides/wk-11-2026-11-04-policy.html#todays-topics",
+    "title": "Visualizing policy-related data",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWhat matters most?"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
+    "href": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
+    "title": "Visualizing policy-related data",
+    "section": "Harvard Youth Poll",
+    "text": "Harvard Youth Poll"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
+    "href": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
+    "title": "Visualizing policy-related data",
+    "section": "Yale Youth Poll",
+    "text": "Yale Youth Poll\n\nResults from survey of 3,429 registered voters, including 2,008 voters aged 18-34, enabling a comparison of young voters to the electorate as a whole. Full results available on the Spring 2026 Results page.\n\n– https://youthpoll.yale.edu"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#unknownunknown-ce",
+    "href": "slides/wk-11-2026-11-04-policy.html#unknownunknown-ce",
+    "title": "Visualizing policy-related data",
+    "section": "",
+    "text": "Voters care least about Israel and Palestine (28%), Ukraine and Russia (27%), China (27%), artificial intelligence (24%), acceptance of gay people (22%), and acceptance of transgender people (19%), despite the prominence of these issues in the news."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#next-time",
+    "href": "slides/wk-11-2026-11-04-policy.html#next-time",
+    "title": "Visualizing policy-related data",
+    "section": "Next time",
+    "text": "Next time\n\nWork session"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#about",
+    "href": "slides/wk-11-2026-11-04-policy.html#about",
+    "title": "Visualizing policy-related data",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#references",
+    "href": "slides/wk-11-2026-11-04-policy.html#references",
+    "title": "Visualizing policy-related data",
+    "section": "References",
+    "text": "References\n\n\n\n\n“53rd Edition - Fall 2026.” n.d. Accessed October 26, 2026. https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026.\n\n\n“Spring 2026 Results.” n.d. Accessed October 26, 2026. https://youthpoll.yale.edu/spring-2026-results."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#section",
+    "href": "slides/wk-11-2026-11-04-policy.html#section",
+    "title": "Visualizing policy-related data",
+    "section": "",
+    "text": "“53rd Edition - Fall 2026” (n.d.)"
   }
 ]

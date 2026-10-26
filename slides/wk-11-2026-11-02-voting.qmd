@@ -15,6 +15,7 @@ format: revealjs
 
 - Voter registration
 - Population
+- Presidential approval
 
 # Voter registration
 
@@ -62,13 +63,15 @@ format: revealjs
 
 >“Half of U.S. teens live in states where they can preregister at age 16, and what we are definitely seeing is that states with preregistration have higher registration rates for 18-year-olds, just because there's a bigger on-ramp for people to learn about it,” she said.
 
-## Population
+# Population
 
 ![@PyramidsUnknown-cl](../include/img/pa-population-pyramid.png){#fig-pa-pop-pyramid width="65%"}
 
 ## Population changes
 
 ![@UnknownUnknown-vu](../include/img/pa-pop-change-by-county.png){#fig-pa-pop-changes width="65%"}
+
+# Presidential approval
 
 ## Presidential approval ratings
 
@@ -122,12 +125,11 @@ prez_approval_df |>
        caption = "Does not include current Trump term.")
 ```
 
-
 # Wrap up
 
 ## Next time
 
-- Data visualization in politics
+- What matters most?
 
 # Resources
 
