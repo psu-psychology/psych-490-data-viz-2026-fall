@@ -23,7 +23,15 @@ format: revealjs
 
 ## Harvard Youth Poll
 
-- 
+>This poll of 2,024 18-to-29-year-olds was organized with undergraduate students from the Harvard Public Opinion Project (HPOP) and supervised by John Della Volpe, Director of Polling. Ipsos Public Affairs collected data using the KnowledgePanel^[https://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel]. 
+
+<https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026#toc-4>
+
+---
+
+>KnowledgePanel provides probability-based samples with an “organic representation” of the study population for measurement of public opinions, attitudes, and behaviors. Interviews were conducted in English and Spanish between September 30 and October 7, 2026.
+
+<https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026#toc-4>
 
 ---
 
@@ -153,8 +161,6 @@ format: revealjs
 ---
 
 ![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/8bLTt-voters-ages-65-use-ai-less-often-than-younger-voters-_0.png)
-
----
 
 # Wrap up
 

@@ -264,20 +264,20 @@
 
 *Tables in (mostly) Base R*
 
-- [Slides](404.qmd)
+- [Slides](slides/wk-10-2026-10-26-tables.qmd)
 
 ### Wed, Oct 28 {-}
 
 *`gt` and `knitr::kable`*
 
-- [Slides](404.qmd)
+- [Slides](slides/wk-10-2026-10-28-tables-II.qmd)
 
 ### Fri, Oct 30 {-}
 
 *Work Session*
 
 - {{< fa calendar >}} *Due* [Exercise-05](exercises/ex-05-tidy-data.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18779443)
-- [Slides](404.qmd)
+- [Slides](slides/wk-10-2026-10-30-work-session.qmd)
 
 ## Week 11 {- #week-11}
 

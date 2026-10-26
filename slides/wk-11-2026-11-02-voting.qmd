@@ -125,6 +125,10 @@ prez_approval_df |>
        caption = "Does not include current Trump term.")
 ```
 
+## In the news...
+
+![@Bidgood2026-kh](../include/img/fake-polls-nyt.png){#fig-nyt-fake-polls}
+
 # Wrap up
 
 ## Next time

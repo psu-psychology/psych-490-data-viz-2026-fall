@@ -3999,7 +3999,7 @@
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
-    "title": "Schedule",
+    "title": "Home",
     "section": "",
     "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing R & RStudio\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim:\n\nhttps://quarto.org/docs/get-started/hello/jupyter.html1\nhttps://education.rstudio.com/learn/beginner/\n\nSlides",
     "crumbs": [
@@ -4009,7 +4009,7 @@
   {
     "objectID": "schedule.html#week-01",
     "href": "schedule.html#week-01",
-    "title": "Schedule",
+    "title": "Home",
     "section": "",
     "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing R & RStudio\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim:\n\nhttps://quarto.org/docs/get-started/hello/jupyter.html1\nhttps://education.rstudio.com/learn/beginner/\n\nSlides",
     "crumbs": [
@@ -4019,7 +4019,7 @@
   {
     "objectID": "schedule.html#week-02",
     "href": "schedule.html#week-02",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 02",
     "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nSlides\n\n\n\nWed, Sep 02\nVisualization in art, sports, and journalism\n\nRead\n\nGelman & Unwin (2013) (recommended), follow citation link to online version or PDF on Canvas.\n\nAssigned: Exercise 02\nSlides\nResults from Exercise 01\n\n\n\nFri, Sep 04\nWork Session: Exercise 02 and Quarto\n\n Due Exercise 01 |  Canvas dropbox\nSlides",
     "crumbs": [
@@ -4029,7 +4029,7 @@
   {
     "objectID": "schedule.html#week-03",
     "href": "schedule.html#week-03",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 03",
     "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nSlides\n\n\n\nFri, Sep 11\nWork Session: Making data with R\n\nSlides",
     "crumbs": [
@@ -4039,7 +4039,7 @@
   {
     "objectID": "schedule.html#week-04",
     "href": "schedule.html#week-04",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 04",
     "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nAssigned: Exercise-03\nSlides\n\n\n\nWed, Sep 16\nMore figure types and figure components\n\nRead: Tutorial: Making data\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nSlides\nggplot2 tutorial\nContinue work on Exercise 02 and Exercise 03.",
     "crumbs": [
@@ -4049,7 +4049,7 @@
   {
     "objectID": "schedule.html#week-05",
     "href": "schedule.html#week-05",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 05",
     "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise 02 |  Canvas dropbox |\nTutorial",
     "crumbs": [
@@ -4059,7 +4059,7 @@
   {
     "objectID": "schedule.html#week-06",
     "href": "schedule.html#week-06",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 06",
     "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\n Due Exercise-03 |  Canvas dropbox ](https://psu.instructure.com/courses/2484925/assignments/18448437) |\nTutorial\nSlides",
     "crumbs": [
@@ -4069,7 +4069,7 @@
   {
     "objectID": "schedule.html#week-07",
     "href": "schedule.html#week-07",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 07",
     "text": "Week 07\n\nMon, Oct 05\nWork session: Making figures on your own I\n\nSlides\n\n\n\n\n\n\nWed, Oct 07\nWork session: Making figures on your own II\n\nSlides\n\n\n\nFri, Oct 09\nWork Session\n\nSlides",
     "crumbs": [
@@ -4079,7 +4079,7 @@
   {
     "objectID": "schedule.html#week-08",
     "href": "schedule.html#week-08",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 08",
     "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: Making data tidy\n\n Due Exercise-04 |  Canvas dropbox |\n Due Final Project proposal |  Canvas dropbox\nTutorial",
     "crumbs": [
@@ -4089,7 +4089,7 @@
   {
     "objectID": "schedule.html#week-09",
     "href": "schedule.html#week-09",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 09",
     "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 15, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 21\n\nAssigned: Exercise-06 |  Canvas dropbox\nSlides\n\n\n\nFri, Oct 23\nWork Session\n\nExercise-05\nExercise-06\nTutorial\nSlides",
     "crumbs": [
@@ -4099,7 +4099,7 @@
   {
     "objectID": "schedule.html#week-10",
     "href": "schedule.html#week-10",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 10",
     "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in (mostly) Base R\n\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session\n\n Due Exercise-05 |  Canvas dropbox\nSlides",
     "crumbs": [
@@ -4109,7 +4109,7 @@
   {
     "objectID": "schedule.html#week-11",
     "href": "schedule.html#week-11",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 11",
     "text": "Week 11\nData viz in policy & politics\n\nMon, Nov 02\n\nSlides\n\n\n\nWed, Nov 04\n\nSlides\n\n\n\nFri, Nov 06",
     "crumbs": [
@@ -4119,7 +4119,7 @@
   {
     "objectID": "schedule.html#week-12",
     "href": "schedule.html#week-12",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 12",
     "text": "Week 12\n\nMon, Nov 09\nExploring data\n\nRead:\n\nTukey (1977), Chapter 1, PDF on Canvas\n\nSlides\n\n\n\nWed, Nov 11\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nFri, Nov 13\nWork Session: TidyTuesday\n\nSlides",
     "crumbs": [
@@ -4129,7 +4129,7 @@
   {
     "objectID": "schedule.html#week-13",
     "href": "schedule.html#week-13",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 13",
     "text": "Week 13\nData viz and quantitative inference\n\nMon, Nov 16\nSynthesize before you analyze\n\nSlides\n Due Exercise-06 |  Canvas dropbox\n\n\n\nWed, Nov 18\nSample size, effect size, statistical power\n\nSlides\n\n\n\nFri, Nov 20\nWork Session: Final projects",
     "crumbs": [
@@ -4139,7 +4139,7 @@
   {
     "objectID": "schedule.html#thanksgiving-break",
     "href": "schedule.html#thanksgiving-break",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Thanksgiving Break",
     "text": "Thanksgiving Break\nNO CLASS",
     "crumbs": [
@@ -4149,7 +4149,7 @@
   {
     "objectID": "schedule.html#week-14",
     "href": "schedule.html#week-14",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 14",
     "text": "Week 14\n\nMon, Nov 30\nMaking data dashboards and apps\n\nExplore:\n\nKohler (2024)\n\nSlides\n\n\n\nWed, Dec 02\nWork Session: Final projects\n\n\nFri, Dec 04\nWork Session: Final projects",
     "crumbs": [
@@ -4159,7 +4159,7 @@
   {
     "objectID": "schedule.html#week-15",
     "href": "schedule.html#week-15",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Week 15",
     "text": "Week 15\n\nMon, Dec 07\nFinal Project Presentations\n\n\nWed, Dec 09\nFinal Project Presentations\n\n\nFri, Dec 11\nFinal Project Presentations",
     "crumbs": [
@@ -4169,7 +4169,7 @@
   {
     "objectID": "schedule.html#finals-week",
     "href": "schedule.html#finals-week",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Finals Week",
     "text": "Finals Week\n\nWed, Dec 16\n\n Due Final project write-up |  Canvas dropbox",
     "crumbs": [
@@ -4179,7 +4179,7 @@
   {
     "objectID": "schedule.html#footnotes",
     "href": "schedule.html#footnotes",
-    "title": "Schedule",
+    "title": "Home",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nWe won’t use Python in this course, but the basic ideas apply to Python and R.↩︎",
     "crumbs": [
@@ -8702,7 +8702,7 @@
     "href": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
     "title": "Visualizing policy-related data",
     "section": "Harvard Youth Poll",
-    "text": "Harvard Youth Poll"
+    "text": "Harvard Youth Poll\n\nThis poll of 2,024 18-to-29-year-olds was organized with undergraduate students from the Harvard Public Opinion Project (HPOP) and supervised by John Della Volpe, Director of Polling. Ipsos Public Affairs collected data using the KnowledgePanel1.\n\nhttps://iop.harvard.edu/youth-poll/53rd-edition-fall-2026#toc-4"
   },
   {
     "objectID": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
@@ -8808,5 +8808,22 @@
     "title": "Making tables",
     "section": "“Reading” a table",
     "text": "“Reading” a table\n\n\n\nStructural knowledge\n\nRows: Variables\nColumns: Types of data\n\nSequential visual scanning\n\n\n\nMemory\n\nVerbal (row, column labels)\nQuantitative (numeric values)\nSemantic"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#footnotes",
+    "href": "slides/wk-11-2026-11-04-policy.html#footnotes",
+    "title": "Visualizing policy-related data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel"
+  },
+  {
+    "objectID": "schedule.html#references",
+    "href": "schedule.html#references",
+    "title": "Home",
+    "section": "References",
+    "text": "References\n\n\n\n\n{{&lt; include _index.qmd &gt;}}\n{{&lt; include _about.qmd &gt;}}\n#| warning: false\n#| message: false\n#| code-fold: false\n#| eval: false\n#| echo: false\ngrateful::cite_packages(output=\"file\", out.dir = \"include/bib\")",
+    "crumbs": [
+      "Schedule"
+    ]
   }
 ]
