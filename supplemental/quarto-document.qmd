@@ -22,10 +22,17 @@ The section includes a code chunk where he likes to add code needed to get to wo
 If he finds that he needs another package, he should install the package in the R console then add the `library()` command here.
 
 ```{r}
+#| label: setup
 library(ggplot2)
 ```
 
 ## Load data
+
+```{r}
+#| label: load-data
+
+# Put R code here to load your data, if needed.
+```
 
 ## Make figures
 
@@ -35,7 +42,9 @@ Your goals for Figure 1 should go here.
 The R code to generate Figure 1 should go in the code chunk below.
 
 ```{r}
+#| label: fig-01
 
+# Put plotting code here, e.g. `ggplot(data = my_dataframe) +`
 ```
 
 ::: {.callout-important}
@@ -51,9 +60,24 @@ This isn't the only way to organize information for this report, but it is an ea
 
 Code for Figure 2 goes in the chunk below.
 
+```{r}
+#| label: fig-02
+
+# Code to make another figure goes here.
+
+```
+
+
 ### Figure 3
 
 Code for Figure 3 goes in the chunk below.
+
+```{r}
+#| label: fig-03
+
+# Code to make another figure goes here.
+
+```
 
 ## Discussion and Conclusion
 

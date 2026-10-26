@@ -220,19 +220,6 @@
   <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
   <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
   <style>
-  .reveal div.callout-question.callout {
-    border-left-color: pink;
-  }
-  .reveal div.callout-question.callout-style-default .callout-title {
-    background-color: rgb(from pink r g b / 13%);
-  }
-  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
-    font-family: 'Font Awesome 7 Free';
-    font-weight: 900;
-    font-style: normal;
-    content: '\3f' !important;
-    background-image: none;
-  }
   .reveal div.callout-answer.callout {
     border-left-color: blue;
   }
@@ -244,6 +231,19 @@
     font-weight: 900;
     font-style: normal;
     content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
     background-image: none;
   }
   </style>
@@ -332,15 +332,33 @@ Figure&nbsp;3: <span class="citation" data-cites="CDC2025-ll">CDC (<a href="#/re
 <section id="todays-topics" class="slide level2">
 <h2>Today’s topics</h2>
 <ul>
+<li><a href="../supplemental/quarto-document.html">Anatomy</a> of a Quarto document</li>
 <li>Background</li>
 <li>Making tables in base R</li>
 </ul>
 </section></section>
+<section>
 <section id="background" class="title-slide slide level1 center">
 <h1>Background</h1>
 
 </section>
-
+<section id="what-is-a-table" class="slide level2">
+<h2>What is a table?</h2>
+<div class="fragment">
+<div id="fig-apa-table-guide" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-apa-table-guide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<blockquote>
+<p>Tables are visual displays composed of columns and rows in which numbers, text, or a combination of numbers and text are presented.</p>
+</blockquote>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apa-table-guide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: <span class="citation" data-cites="APA-table-guide"><span>“Table Setup”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section></section>
 <section>
 <section id="making-tables" class="title-slide slide level1 center">
 <h1>Making tables</h1>
@@ -371,10 +389,10 @@ Figure&nbsp;3: <span class="citation" data-cites="CDC2025-ll">CDC (<a href="#/re
 <div id="fig-mtcars-help" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-mtcars-help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/mtcars-help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: Help document for the mtcars dataset."><img data-src="../include/img/mtcars-help.png" style="width:65.0%"></a>
+<a href="../include/img/mtcars-help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;5: Help document for the mtcars dataset."><img data-src="../include/img/mtcars-help.png" style="width:65.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mtcars-help-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Help document for the <em>mtcars</em> dataset.
+Figure&nbsp;5: Help document for the <em>mtcars</em> dataset.
 </figcaption>
 </figure>
 </div>
@@ -516,10 +534,10 @@ cyl  3  4  5
 <li><em>Note:</em> These slides did not start with a setup chunk
 <ul>
 <li>So, no <code>library(dplyr)</code> statement</li>
-<li>But I can access the <em>dplyr</em> commands with <code>dplyr::&lt;command&gt;</code>.</li>
+<li>But I can access any <em>dplyr</em> commands with <code>dplyr::&lt;command&gt;()</code><a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a>.</li>
 </ul></li>
 </ul>
-</section>
+<aside></aside></section>
 <section id="under-the-hood" class="slide level2">
 <h2>Under the hood</h2>
 <ul>
@@ -543,7 +561,7 @@ cyl  3  4  5
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>A quick check of <code>help("table")</code> (<a href="#/fig-help-table" class="quarto-xref">Figure&nbsp;5</a> at right) shows</li>
+<li>A quick check of <code>help("table")</code> (<a href="#/fig-help-table" class="quarto-xref">Figure&nbsp;6</a> at right) shows</li>
 <li><code>table()</code> is for making cross tabulations</li>
 <li>Or when you take all the data…</li>
 </ul>
@@ -551,10 +569,10 @@ cyl  3  4  5
 <div id="fig-help-table" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
+<a href="../include/img/help-table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;6: Output from R’s help() function for the table() command."><img data-src="../include/img/help-table.png"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-help-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Output from R’s <code>help()</code> function for the <code>table()</code> command.
+Figure&nbsp;6: Output from R’s <code>help()</code> function for the <code>table()</code> command.
 </figcaption>
 </figure>
 </div>
@@ -891,7 +909,7 @@ Valiant
 </table>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-custom-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: A sketch of a statistical summary table we might want to create.
+Figure&nbsp;7: A sketch of a statistical summary table we might want to create.
 </figcaption>
 </figure>
 </div>
@@ -905,7 +923,7 @@ Figure&nbsp;6: A sketch of a statistical summary table we might want to create.
 <section id="under-the-hood-1" class="slide level2">
 <h2>Under the hood</h2>
 <ul>
-<li><a href="#/fig-custom-summary" class="quarto-xref">Figure&nbsp;6</a> is built using Markdown tables.</li>
+<li><a href="#/fig-custom-summary" class="quarto-xref">Figure&nbsp;7</a> is built using Markdown tables.</li>
 </ul>
 <div id="fig-markdown-table-code" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
@@ -917,7 +935,7 @@ Figure&nbsp;6: A sketch of a statistical summary table we might want to create.
 <span id="cb14-5"><a></a><span class="pp">|</span> ...       <span class="pp">|</span> ...  <span class="pp">|</span> ...    <span class="pp">|</span> ...   <span class="pp">|</span> ...   <span class="pp">|</span>  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-markdown-table-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: A table built using the <a href="https://www.markdownguide.org/extended-syntax/#tables">Markdown tables</a> syntax.
+Figure&nbsp;8: A table built using the <a href="https://www.markdownguide.org/extended-syntax/#tables">Markdown tables</a> syntax.
 </figcaption>
 </figure>
 </div>
@@ -1044,6 +1062,86 @@ Table&nbsp;6: A table showing summary statistics of two of the variables from th
 <li>Data frames are useful and flexible structures</li>
 <li>The custom summary table is similar to the data dictionary we made in the <a href="../tutorials/tutorial-tidying-data.html#cleaning">Tidying Data tutorial</a>.</li>
 </ul>
+</section>
+<section id="apa-tables-how-to" class="slide level2">
+<h2>APA tables: How to</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="../include/img/apa-table-construction-principles.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="@APA-table-guide"><img data-src="../include/img/apa-table-construction-principles.png" alt="“Table Setup” (n.d.)"></a></p>
+<figcaption><span class="citation" data-cites="APA-table-guide"><span>“Table Setup”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="apa-tables-anatomy" class="slide level2">
+<h2>APA tables: Anatomy</h2>
+<div id="fig-apa-table-illustration" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-apa-table-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/apa-table-setup.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;9: @APA-table-guide"><img data-src="../include/img/apa-table-setup.jpg" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apa-table-illustration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: <span class="citation" data-cites="APA-table-guide"><span>“Table Setup”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="reading-a-table" class="slide level2">
+<h2>“Reading” a table</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>How would you explain how to answer questions about this table:
+<ul>
+<li>Who has greater love for “The Lord of the Rings”?</li>
+<li>Which group has greater variability?</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Group</th>
+<th>LOTR_love</th>
+<th>range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nerds</td>
+<td>8.5</td>
+<td>[6-10]</td>
+</tr>
+<tr class="even">
+<td>Jocks</td>
+<td>6</td>
+<td>[2-10]</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+<section id="reading-a-table-1" class="slide level2">
+<h2>“Reading” a table</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Structural knowledge
+<ul>
+<li>Rows: Variables</li>
+<li>Columns: Types of data</li>
+</ul></li>
+<li>Sequential visual scanning</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Memory
+<ul>
+<li>Verbal (row, column labels)</li>
+<li>Quantitative (numeric values)</li>
+<li>Semantic</li>
+</ul></li>
+</ul>
+</div></div>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -1087,8 +1185,17 @@ CDC. 2025. <span>“<span>FastStats</span>: Sleep in Adults.”</span> January 3
 <div id="ref-Government-of-Canada2026-xt" class="csl-entry" role="listitem">
 Government of Canada, and Statistics Canada. 2026. <span>“Live Births, by Month.”</span> Government of Canada, Statistics Canada, September 23. <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501</a>.
 </div>
+<div id="ref-APA-table-guide" class="csl-entry" role="listitem">
+<span>“Table Setup.”</span> n.d. Accessed October 26, 2026. <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables">https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables</a>.
+</div>
 </div>
 </section></section>
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Don’t put the <code>&lt;</code> or <code>&gt;</code> character. Use, for example, <code>dplyr::select()</code>.</p></li>
+</ol>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>

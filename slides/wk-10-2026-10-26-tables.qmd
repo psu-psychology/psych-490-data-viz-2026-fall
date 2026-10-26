@@ -35,10 +35,23 @@ execute:
 
 ## Today's topics
 
+- [Anatomy](../supplemental/quarto-document.qmd) of a Quarto document
 - Background
 - Making tables in base R
 
 # Background
+
+## What is a table?
+
+::: {.fragment}
+
+::: {#fig-apa-table-guide}
+>Tables are visual displays composed of columns and rows in which numbers, text, or a combination of numbers and text are presented.
+
+@APA-table-guide
+:::
+
+:::
 
 # Making tables
 
@@ -120,7 +133,7 @@ mtcars |>
 - The select function from *dplyr* does that easily.
 - *Note:* These slides did not start with a setup chunk
   - So, no `library(dplyr)` statement
-  - But I can access the *dplyr* commands with `dplyr::<command>`.
+  - But I can access any *dplyr* commands with `dplyr::<command>()`^[Don't put the `<` or `>` character. Use, for example, `dplyr::select()`.].
 
 ## Under the hood
 
@@ -240,11 +253,60 @@ my_stats_df |>
   kableExtra::kable_classic()
 ```
 
-
 ## Some take-homes
 
 - Data frames are useful and flexible structures
 - The custom summary table is similar to the data dictionary we made in the [Tidying Data tutorial](../tutorials/tutorial-tidying-data.qmd#cleaning).
+  
+## APA tables: How to
+
+![@APA-table-guide](../include/img/apa-table-construction-principles.png)
+
+## APA tables: Anatomy
+
+![@APA-table-guide](../include/img/apa-table-setup.jpg){#fig-apa-table-illustration width="45%"}
+
+
+
+## "Reading" a table
+
+:::: {.columns}
+::: {.column width=50%}
+- How would you explain how to answer questions about this table:
+  - Who has greater love for "The Lord of the Rings"?
+  - Which group has greater variability?
+:::
+
+::: {.column width=50%}
+
+| Group | LOTR_love | range   |
+|-------|-----------|---------|
+| Nerds | 8.5       | [6-10]  |
+| Jocks | 6         | [2-10]  |
+
+:::
+::::
+
+## "Reading" a table
+
+:::: {.columns}
+
+::: {.column width=50%}
+- Structural knowledge
+  - Rows: Variables
+  - Columns: Types of data
+- Sequential visual scanning
+
+:::
+
+::: {.column width=50%}
+- Memory
+  - Verbal (row, column labels)
+  - Quantitative (numeric values)
+  - Semantic
+:::
+
+::::
 
 # Wrap-up
 
