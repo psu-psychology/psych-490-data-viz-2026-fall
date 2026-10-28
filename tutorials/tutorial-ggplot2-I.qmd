@@ -1,8 +1,5 @@
 ---
 title: "*ggplot2* tutorial I"
-format:
-  html:
-    code-fold: false
 ---
 
 ## About

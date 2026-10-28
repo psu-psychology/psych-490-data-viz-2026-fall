@@ -8,13 +8,13 @@ format: revealjs
 ## Announcements
 
 - Due next Friday: [Final Project](../exercises/final-project.qmd) proposal
-- [Exercise 04](../exercises/ex-04-making-figs-ggplot2.qmd) due date moved from today to next Friday.
+- [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd) due date moved from today to next Friday.
 
 ## Today
 
 - Final project check-in
 - Complete [student surveys](../supplemental/student-generated-surveys.qmd)
-- Work on [Exercise 04](../exercises/ex-04-making-figs-ggplot2.qmd)
+- Work on [Exercise 04](../exercises/ex-04-making-figs-ggplot.qmd)
 - (Optional) Add [bells & whistles](wk-07-2026-10-07-making-figs-II.qmd#/some-bells-whistles) to Exercise 04 figs or [`nflreadr` data](../tutorials/tutorial-visualizing-sports-data.qmd).
 
 # Final project check-in
@@ -27,7 +27,6 @@ format: revealjs
 - *Read*: 
     - @Tufte2001-cb, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
     - @Tufte2001-cb, Chapter 2, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922717)
-- [Slides](404.qmd)
 
 # Resources
 

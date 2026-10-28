@@ -173,7 +173,7 @@ colors_df |>
 
 ## Meals eaten vs. not-eaten
 
-- See slides from [2026-09-11](wk-03-2026-09-11-making-data.qmd), [2026-09-14](wk-04-2026-09-14-figure-types.qmd).
+- See slides from [2026-09-11](wk-03-2026-09-09-making-data.qmd), [2026-09-14](wk-04-2026-09-14-figure-types.qmd).
 
 ```{r}
 #| label: setup-meals-example

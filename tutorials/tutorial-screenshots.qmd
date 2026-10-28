@@ -1,6 +1,5 @@
 ---
 title: "Capturing images"
-format: html
 ---
 
 ## About {-}

@@ -1,6 +1,5 @@
 ---
 title: "Installing R and RStudio Desktop"
-format: html
 ---
 
 ## About

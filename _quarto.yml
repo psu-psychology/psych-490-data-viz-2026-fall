@@ -72,6 +72,8 @@ website:
         href: slides/wk-09-2026-10-23-work-session.qmd
       - text: "Wk 10 • Mon Oct 26"
         href: slides/wk-10-2026-10-26-tables.qmd
+      - text: "Wk 10 • Wed Oct 28"
+        href: slides/wk-10-2026-10-28-tables-II.qmd
     - section: Exercises
       contents:
         - exercises/ex-01-figs-in-psych-sci.qmd

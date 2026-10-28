@@ -1,6 +1,5 @@
 ---
 title: "Tidying data"
-format: html
 ---
 
 ## About {-}
@@ -12,12 +11,9 @@ The format is a data frame in a "tidy" format, where each row is an observation 
 
 ```{r}
 #| label: setup
-#| message: false
-#| warning: false
-# Load required package dependencies "quietly"
-suppressPackageStartupMessages(library(ggplot2))
-suppressPackageStartupMessages(library(dplyr))
-suppressPackageStartupMessages(library(readr))
+library(ggplot2)
+library(dplyr)
+library(readr)
 ```
 
 If you are following this tutorial, you will want to do the following:
@@ -82,7 +78,6 @@ The precise file name depends on how many times you've downloaded this file, but
 
 ```{r}
 #| label: show-downloaded-file-name
-
 list.files(path = "~/Downloads",
            pattern = "PSYCH 490.007",
            full.names = TRUE)
@@ -100,8 +95,6 @@ The `pattern` parameter tells R to look for the text 'PSYCH 490.007'.
 That's how the file name starts.
 
 :::
-
-
 
 Now that we've confirmed we have downloaded a `.csv` file, we can drag it to the folder where we're doing our work.
 I suggest creating a `data/csv` folder for your data.
@@ -123,8 +116,17 @@ Call the data `survey_df`.
 
 ```{r}
 #| label: import-csv
-survey_df <- read_csv("data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv", show_col_types = FALSE)
+survey_df <- read_csv(file = "data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv", show_col_types = FALSE)
 ```
+
+::: {.callout-warning}
+## Your file name may differ!
+
+Note that the code in the chunk above indicates a file name that is specific to my demo, namely `file = "data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv"`.
+Your file name may be different. 
+Change it accordingly before running the import code.
+
+:::
 
 ::: {.callout-important}
 ## Type-ahead is your friend
@@ -144,11 +146,20 @@ To confirm that the dataset imported properly, we run `summary(survey_df)`.
 summary(survey_df)
 ```
 
+::: {.callout-important}
+## `summary()` can be fussy
+
+We have discovered that the `summary()` function doesn't always work well with CSVs downloaded from Google Drive survey sheets.
+
+The `str()` command seems more robust.
+So, if `summary()` doesn't work for you, delete that code and move on.
+Even better, add `#| eval: false` to the header of the code chunk that doesn't work and add a comment like this: "The code chunk below does not evaluate when we render this Quarto file because the `summary()` function gives an error. I've kept the code in the document for transparency purposes."
+:::
+
 An even more useful command to summarize the data is the `str()` for "structure" command.
 
 ```{r}
 #| label: str-survey-df
-
 str(survey_df)
 ```
 
@@ -171,6 +182,7 @@ This command extracts the column names from a data frame.
 We assign it to a variable because we'll want to use it in our data dictionary.
 
 ```{r}
+#| label: questions
 questions <- names(survey_df)
 questions
 ```
@@ -181,6 +193,7 @@ We want a name that will be informative, but look good in our initial plots.
 Here are the choices I made:
 
 ```{r}
+#| label: short-names
 short_names <- c("timestamp",
                 "name",
                 "swallow_speed",
@@ -200,6 +213,7 @@ You could add other columns if you like.
 A `comments` column isn't a bad idea.
 
 ```{r}
+#| label: comments
 comments <- c("Provided by Google Forms in MM/DD/YYYY HH:MM:SS format",
               "Fixed responses",
               "A bad reference to 'Monty Python and the Holy Grail'.",
@@ -209,6 +223,7 @@ comments <- c("Provided by Google Forms in MM/DD/YYYY HH:MM:SS format",
 And you could add a column about the data type.
 
 ```{r}
+#| label: data-type
 data_type <- c("Date/time stamp", 
                "Discrete/Nominal",
                "Continuous",
@@ -218,6 +233,7 @@ data_type <- c("Date/time stamp",
 Then add these to the data dictionary data frame.
 
 ```{r}
+#| label: add-to-data-dictionary-data-frame
 survey_dd$data_type <- data_type
 survey_dd$comments <- comments
 survey_dd
@@ -226,6 +242,7 @@ survey_dd
 Let's quit while we're ahead and export this as a `.csv` in the same directory where our raw data came from, but with a shorter and human-readable name.
 
 ```{r}
+#| label: save-data-dictionary
 write_csv(survey_dd, file = "data/csv/survey_data_dictionary.csv")
 ```
 
@@ -393,3 +410,4 @@ This section is a work-in-progress.
 This section is a work-in-progress.
 
 :::
+

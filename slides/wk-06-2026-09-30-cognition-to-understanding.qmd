@@ -23,7 +23,7 @@ format: revealjs
 
 ## Last time...
 
-- Link to 2026-09-28 [slides](wk-06-sensation-to-perception.qmd#closure)
+- Link to 2026-09-28 [slides](wk-06-2026-09-28-sensation-to-perception.qmd#closure)
 
 # From specific to general; concrete to abstract
 

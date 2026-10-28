@@ -40,7 +40,7 @@
     "href": "tutorials/tutorial-tidying-data.html#setup",
     "title": "Tidying data",
     "section": "Setup",
-    "text": "Setup\n\n\nCode\n# Load required package dependencies \"quietly\"\nsuppressPackageStartupMessages(library(ggplot2))\nsuppressPackageStartupMessages(library(dplyr))\nsuppressPackageStartupMessages(library(readr))\n\n\nIf you are following this tutorial, you will want to do the following:\n\nCreate an RStudio project called tutorial-tidying-data or something similar.\nCreate a Quarto document inside the project.\n\nModify the title in the document header.\nAdd author, and date fields in the document header.\nOptionally add parameters so that your HTML document is self-contained.\nAdd About and Setup sections to your main document and fill them with content, especially the R chunk you will use to load the required packages like ggplot2, readr, and dplyr using library(ggplot2) etc.",
+    "text": "Setup\n\n\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(readr)\n\n\nIf you are following this tutorial, you will want to do the following:\n\nCreate an RStudio project called tutorial-tidying-data or something similar.\nCreate a Quarto document inside the project.\n\nModify the title in the document header.\nAdd author, and date fields in the document header.\nOptionally add parameters so that your HTML document is self-contained.\nAdd About and Setup sections to your main document and fill them with content, especially the R chunk you will use to load the required packages like ggplot2, readr, and dplyr using library(ggplot2) etc.",
     "crumbs": [
       "Tutorials",
       "Tidying data"
@@ -62,7 +62,7 @@
     "href": "tutorials/tutorial-tidying-data.html#gathering",
     "title": "Tidying data",
     "section": "Gathering",
-    "text": "Gathering\nThere are two ways to gather these data. One involves downloading a *.csv file manually. If you visit the “Responses” tab for a survey you have permission to access, you’ll see a “View in Sheets” button as shown in Figure 1.\n\n\n\n\n\n\nFigure 1: Screenshot of the Responses tab of the sample dataset.\n\n\n\nClick it.\nThat will open a Google Sheet with the data as shown in Figure 2.\n\n\n\n\n\n\nImportantSample data file\n\n\n\nYou can download this datafile at the following link:\nhttps://docs.google.com/spreadsheets/d/1ecLcV1IPGf2UyJKWHH6s81iG0vuiqJJaCELi9di_KHQ/edit?usp=sharing\n\n\n\n\n\n\n\n\nFigure 2: Screen shot of the sample data file as of 2026-10-12.\n\n\n\nOn 2026-10-12 when I drafted this tutorial, there were 5 responses.\nTo download a CSV, select “File/Download/Comma Separated Values (.csv)” as shown in Figure 3.\n\n\n\n\n\n\nFigure 3: Google Sheets menu command to generate and download a .csv file.\n\n\n\nThis will download the file to the default download location on your computer. The precise file name depends on how many times you’ve downloaded this file, but on my computer right now, the following code shows the long target file name.\n\n\nCode\nlist.files(path = \"~/Downloads\",\n           pattern = \"PSYCH 490.007\",\n           full.names = TRUE)\n\n\n[1] \"/Users/rog1/Downloads/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv\"\n\n\n\n\n\n\n\n\nNoteWhat are those parameters?\n\n\n\nFor this exercise, you don’t need to automate determining the file name using the list.files() function. However, the path parameter tells R where to look for files. Here, it’s in the Downloads directory under my root user account which I appreviate using the ~ symbol. Note: This works on Mac OS and Linux systems, but I’m not sure it works like this in Windows.\nThe pattern parameter tells R to look for the text ‘PSYCH 490.007’. That’s how the file name starts.\n\n\nNow that we’ve confirmed we have downloaded a .csv file, we can drag it to the folder where we’re doing our work. I suggest creating a data/csv folder for your data. Make a directory for the data and copy the file there now.\nIf you want to use R for this, the following code should work.\n\n\nCode\ndir.create(file.path(\"data\"))\ndir.create(file.path(\"data\", \"csv\"))\n\n\n\nImport into R\nNow we can import the data into R. Create a chunk to do that. Call the data survey_df.\n\n\nCode\nsurvey_df &lt;- read_csv(\"data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv\", show_col_types = FALSE)\n\n\n\n\n\n\n\n\nImportantType-ahead is your friend\n\n\n\nIf you pause your typing after you type the first few characters of the path to your file, RStudio will fill in the rest.\nIn fact, type-ahead helps in all sorts of ways.\nSlow down, let the computer do more work, and enjoy the good life!\n\n\nTo confirm that the dataset imported properly, we run summary(survey_df).\n\n\nCode\nsummary(survey_df)\n\n\n     Timestamp  What is your name?\n Length   : 5   Length   : 5      \n N.unique : 5   N.unique : 4      \n N.blank  : 0   N.blank  : 0      \n Min.nchar:17   Min.nchar: 7      \n Max.nchar:19   Max.nchar:10      \n                                  \n What is the air speed of a fully laden swallow (in m/s)?\n Min.   : 1.0                                            \n 1st Qu.: 5.5                                            \n Median :15.0                                            \n Mean   :18.1                                            \n 3rd Qu.:25.0                                            \n Max.   :44.0                                            \n What is your favorite date (month, day, year)?\n Length   : 5                                  \n N.unique : 5                                  \n N.blank  : 0                                  \n Min.nchar: 9                                  \n Max.nchar:10                                  \n                                               \n\n\nAn even more useful command to summarize the data is the str() for “structure” command.\n\n\nCode\nstr(survey_df)\n\n\nspc_tbl_ [5 × 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ Timestamp                                               : chr [1:5] \"10/6/2026 7:47:36\" \"10/6/2026 7:47:44\" \"10/6/2026 7:47:53\" \"10/6/2026 7:48:08\" ...\n $ What is your name?                                      : chr [1:5] \"Puddintane\" \"Mayflower\" \"Janeway\" \"Aragorn\" ...\n $ What is the air speed of a fully laden swallow (in m/s)?: num [1:5] 25 15 1 44 5.5\n $ What is your favorite date (month, day, year)?          : chr [1:5] \"01/17/1993\" \"03/18/1965\" \"06/02/1981\" \"07/04/1776\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   Timestamp = col_character(),\n  ..   `What is your name?` = col_character(),\n  ..   `What is the air speed of a fully laden swallow (in m/s)?` = col_double(),\n  ..   `What is your favorite date (month, day, year)?` = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;pointer: 0xb20cf0100&gt; \n\n\nNotice that this command provides us even more information than we had before.\nOkay, we’re ready to move on to cleaning.",
+    "text": "Gathering\nThere are two ways to gather these data. One involves downloading a *.csv file manually. If you visit the “Responses” tab for a survey you have permission to access, you’ll see a “View in Sheets” button as shown in Figure 1.\n\n\n\n\n\n\nFigure 1: Screenshot of the Responses tab of the sample dataset.\n\n\n\nClick it.\nThat will open a Google Sheet with the data as shown in Figure 2.\n\n\n\n\n\n\nImportantSample data file\n\n\n\nYou can download this datafile at the following link:\nhttps://docs.google.com/spreadsheets/d/1ecLcV1IPGf2UyJKWHH6s81iG0vuiqJJaCELi9di_KHQ/edit?usp=sharing\n\n\n\n\n\n\n\n\nFigure 2: Screen shot of the sample data file as of 2026-10-12.\n\n\n\nOn 2026-10-12 when I drafted this tutorial, there were 5 responses.\nTo download a CSV, select “File/Download/Comma Separated Values (.csv)” as shown in Figure 3.\n\n\n\n\n\n\nFigure 3: Google Sheets menu command to generate and download a .csv file.\n\n\n\nThis will download the file to the default download location on your computer. The precise file name depends on how many times you’ve downloaded this file, but on my computer right now, the following code shows the long target file name.\n\n\nCode\nlist.files(path = \"~/Downloads\",\n           pattern = \"PSYCH 490.007\",\n           full.names = TRUE)\n\n\n[1] \"/Users/rog1/Downloads/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv\"\n\n\n\n\n\n\n\n\nNoteWhat are those parameters?\n\n\n\nFor this exercise, you don’t need to automate determining the file name using the list.files() function. However, the path parameter tells R where to look for files. Here, it’s in the Downloads directory under my root user account which I appreviate using the ~ symbol. Note: This works on Mac OS and Linux systems, but I’m not sure it works like this in Windows.\nThe pattern parameter tells R to look for the text ‘PSYCH 490.007’. That’s how the file name starts.\n\n\nNow that we’ve confirmed we have downloaded a .csv file, we can drag it to the folder where we’re doing our work. I suggest creating a data/csv folder for your data. Make a directory for the data and copy the file there now.\nIf you want to use R for this, the following code should work.\n\n\nCode\ndir.create(file.path(\"data\"))\ndir.create(file.path(\"data\", \"csv\"))\n\n\n\nImport into R\nNow we can import the data into R. Create a chunk to do that. Call the data survey_df.\n\n\nCode\nsurvey_df &lt;- read_csv(file = \"data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv\", show_col_types = FALSE)\n\n\n\n\n\n\n\n\nWarningYour file name may differ!\n\n\n\nNote that the code in the chunk above indicates a file name that is specific to my demo, namely file = \"data/csv/PSYCH 490.007 Ex-05 (Responses) - Form Responses 1.csv\". Your file name may be different. Change it accordingly before running the import code.\n\n\n\n\n\n\n\n\nImportantType-ahead is your friend\n\n\n\nIf you pause your typing after you type the first few characters of the path to your file, RStudio will fill in the rest.\nIn fact, type-ahead helps in all sorts of ways.\nSlow down, let the computer do more work, and enjoy the good life!\n\n\nTo confirm that the dataset imported properly, we run summary(survey_df).\n\n\nCode\nsummary(survey_df)\n\n\n     Timestamp  What is your name?\n Length   : 5   Length   : 5      \n N.unique : 5   N.unique : 4      \n N.blank  : 0   N.blank  : 0      \n Min.nchar:17   Min.nchar: 7      \n Max.nchar:19   Max.nchar:10      \n                                  \n What is the air speed of a fully laden swallow (in m/s)?\n Min.   : 1.0                                            \n 1st Qu.: 5.5                                            \n Median :15.0                                            \n Mean   :18.1                                            \n 3rd Qu.:25.0                                            \n Max.   :44.0                                            \n What is your favorite date (month, day, year)?\n Length   : 5                                  \n N.unique : 5                                  \n N.blank  : 0                                  \n Min.nchar: 9                                  \n Max.nchar:10                                  \n                                               \n\n\n\n\n\n\n\n\nImportantsummary() can be fussy\n\n\n\nWe have discovered that the summary() function doesn’t always work well with CSVs downloaded from Google Drive survey sheets.\nThe str() command seems more robust. So, if summary() doesn’t work for you, delete that code and move on. Even better, add #| eval: false to the header of the code chunk that doesn’t work and add a comment like this: “The code chunk below does not evaluate when we render this Quarto file because the summary() function gives an error. I’ve kept the code in the document for transparency purposes.”\n\n\nAn even more useful command to summarize the data is the str() for “structure” command.\n\n\nCode\nstr(survey_df)\n\n\nspc_tbl_ [5 × 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ Timestamp                                               : chr [1:5] \"10/6/2026 7:47:36\" \"10/6/2026 7:47:44\" \"10/6/2026 7:47:53\" \"10/6/2026 7:48:08\" ...\n $ What is your name?                                      : chr [1:5] \"Puddintane\" \"Mayflower\" \"Janeway\" \"Aragorn\" ...\n $ What is the air speed of a fully laden swallow (in m/s)?: num [1:5] 25 15 1 44 5.5\n $ What is your favorite date (month, day, year)?          : chr [1:5] \"01/17/1993\" \"03/18/1965\" \"06/02/1981\" \"07/04/1776\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   Timestamp = col_character(),\n  ..   `What is your name?` = col_character(),\n  ..   `What is the air speed of a fully laden swallow (in m/s)?` = col_double(),\n  ..   `What is your favorite date (month, day, year)?` = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;pointer: 0xc0eabc0c0&gt; \n\n\nNotice that this command provides us even more information than we had before.\nOkay, we’re ready to move on to cleaning.",
     "crumbs": [
       "Tutorials",
       "Tidying data"
@@ -524,7 +524,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xae1eea900&gt;\n&lt;environment: 0xae1eea628&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x85433c430&gt;\n&lt;environment: 0x85433c158&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -607,14 +607,14 @@
     "href": "supplemental/psych-490-ex-04.html#load-dataset",
     "title": "PSYCH 490.007: Exercise 04",
     "section": "Load dataset",
-    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score        location   \n Min.   : 0.00   Length   :7548   Min.   : 0.0   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.0   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.0   N.blank  :   0  \n Mean   :20.98   Min.nchar:   2   Mean   :23.3   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.0   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.0                   \n NAs    :178                      NAs    :178                    \n     result            total           overtime          old_game_id  \n Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.318   Mean   : 44.28   Mean   :0.06119   Min.nchar:  10  \n 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   \n NAs    :178       NAs    :178      NAs    :178                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.886e+04   N.unique : 272   N.unique :7548   1st Qu.: 2150  \n Median :5.575e+04   N.blank  :   0   N.blank  :   0   Median : 3590  \n Mean   :3.152e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7914  \n 3rd Qu.:5.812e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.:13771  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30698  \n NAs    :165                                           NAs    :2907   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds \n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.00  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.00  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.00  \n Mean   :   78.74   Mean   : -129.5   Mean   :  2.243   Mean   : -59.36  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.00  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.00  \n NAs    :2132       NAs    :2132      NAs    :151       NAs    :2132     \n home_spread_odds    total_line      under_odds        over_odds      \n Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.00   1st Qu.:40.50   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -58.93   Mean   :43.58   Mean   : -73.83   Mean   : -82.25  \n 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2132      NAs    :151     NAs    :2135      NAs    :2135     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  73   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  29                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 151   NAs      : 151   NAs      : 151  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 151                                     NAs      : 208  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
+    "text": "Load dataset\n\n\nCode\nnfl_scheds &lt;- load_schedules() # nflreadr\n\n\nUsing summary(nfl_scheds), I discover that the dataset has the following variables:\n\n\nCode\nsummary(nfl_scheds)\n\n\n      game_id         season         game_type         week       \n Length   :7548   Min.   :1999   Length   :7548   Min.   : 1.000  \n N.unique :7548   1st Qu.:2006   N.unique :   5   1st Qu.: 5.000  \n N.blank  :   0   Median :2013   N.blank  :   0   Median :10.000  \n Min.nchar:  13   Mean   :2013   Min.nchar:   2   Mean   : 9.597  \n Max.nchar:  15   3rd Qu.:2020   Max.nchar:   3   3rd Qu.:14.000  \n                  Max.   :2026                    Max.   :22.000  \n                                                                  \n      gameday          weekday          gametime        away_team   \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique :1479   N.unique :   7   N.unique :  57   N.unique :  35  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:  10   Min.nchar:   6   Min.nchar:   5   Min.nchar:   2  \n Max.nchar:  10   Max.nchar:   9   Max.nchar:   5   Max.nchar:   3  \n                                   NAs      : 259                   \n                                                                    \n   away_score        home_team      home_score         location   \n Min.   : 0.00   Length   :7548   Min.   : 0.00   Length   :7548  \n 1st Qu.:14.00   N.unique :  35   1st Qu.:16.00   N.unique :   2  \n Median :20.00   N.blank  :   0   Median :23.00   N.blank  :   0  \n Mean   :20.99   Min.nchar:   2   Mean   :23.29   Min.nchar:   4  \n 3rd Qu.:27.00   Max.nchar:   3   3rd Qu.:30.00   Max.nchar:   7  \n Max.   :59.00                    Max.   :70.00                   \n NAs    :165                      NAs    :165                     \n     result            total           overtime          old_game_id  \n Min.   :-49.000   Min.   :  3.00   Min.   :0.00000   Length   :7548  \n 1st Qu.: -7.000   1st Qu.: 34.00   1st Qu.:0.00000   N.unique :7540  \n Median :  3.000   Median : 44.00   Median :0.00000   N.blank  :   0  \n Mean   :  2.303   Mean   : 44.28   Mean   :0.06122   Min.nchar:  10  \n 3rd Qu.: 11.000   3rd Qu.: 53.00   3rd Qu.:0.00000   Max.nchar:  10  \n Max.   : 59.000   Max.   :106.00   Max.   :1.00000                   \n NAs    :165       NAs    :165      NAs    :165                       \n      gsis             nfl_detail_id         pfr            pff       \n Min.   :5.880e+02   Length   :7548   Length   :7548   Min.   :  731  \n 1st Qu.:2.886e+04   N.unique : 272   N.unique :7548   1st Qu.: 2154  \n Median :5.575e+04   N.blank  :   0   N.blank  :   0   Median : 3597  \n Mean   :3.152e+05   Min.nchar:  36   Min.nchar:  12   Mean   : 7982  \n 3rd Qu.:5.812e+04   Max.nchar:  36   Max.nchar:  12   3rd Qu.:13782  \n Max.   :1.999e+09   NAs      :7276                    Max.   :30712  \n NAs    :165                                           NAs    :2893   \n        espn           ftn         away_rest       home_rest     \n Length   :7548   Min.   :5058   Min.   : 4.00   Min.   : 4.000  \n N.unique :7536   1st Qu.:5545   1st Qu.: 7.00   1st Qu.: 7.000  \n N.blank  :   0   Median :6032   Median : 7.00   Median : 7.000  \n Min.nchar:   9   Mean   :6155   Mean   : 7.47   Mean   : 7.513  \n Max.nchar:   9   3rd Qu.:6804   3rd Qu.: 7.00   3rd Qu.: 7.000  \n                  Max.   :7290   Max.   :21.00   Max.   :16.000  \n                  NAs    :5602                                   \n away_moneyline     home_moneyline     spread_line      away_spread_odds \n Min.   :-1800.00   Min.   :-5000.0   Min.   :-19.000   Min.   :-137.00  \n 1st Qu.: -148.00   1st Qu.: -271.0   1st Qu.: -3.000   1st Qu.:-110.00  \n Median :  137.00   Median : -155.0   Median :  3.000   Median :-105.00  \n Mean   :   78.71   Mean   : -129.4   Mean   :  2.241   Mean   : -59.38  \n 3rd Qu.:  239.00   3rd Qu.:  131.0   3rd Qu.:  6.500   3rd Qu.:-100.00  \n Max.   : 2173.00   Max.   : 1100.0   Max.   : 27.000   Max.   : 138.00  \n NAs    :2117       NAs    :2117      NAs    :136       NAs    :2117     \n home_spread_odds    total_line      under_odds        over_odds      \n Min.   :-146.00   Min.   :28.50   Min.   :-125.00   Min.   :-125.00  \n 1st Qu.:-110.00   1st Qu.:40.50   1st Qu.:-110.00   1st Qu.:-110.00  \n Median :-106.00   Median :43.50   Median :-105.00   Median :-107.00  \n Mean   : -59.04   Mean   :43.59   Mean   : -73.94   Mean   : -82.25  \n 3rd Qu.:-101.00   3rd Qu.:47.00   3rd Qu.:-102.00   3rd Qu.:-103.00  \n Max.   : 126.00   Max.   :63.50   Max.   : 113.00   Max.   : 113.00  \n NAs    :2117      NAs    :136     NAs    :2120      NAs    :2120     \n    div_game             roof           surface          temp       \n Min.   :0.0000   Length   :7548   Length   :7548   Min.   : -6.00  \n 1st Qu.:0.0000   N.unique :   4   N.unique :  10   1st Qu.: 46.00  \n Median :0.0000   N.blank  :   0   N.blank  :  86   Median : 59.00  \n Mean   :0.3751   Min.nchar:   4   Min.nchar:   0   Mean   : 58.06  \n 3rd Qu.:1.0000   Max.nchar:   8   Max.nchar:  10   3rd Qu.: 71.00  \n Max.   :1.0000   NAs      :  26                    Max.   :109.00  \n                                                    NAs    :2297    \n      wind            away_qb_id       home_qb_id      away_qb_name \n Min.   : 0.000   Length   :7548   Length   :7548   Length   :7548  \n 1st Qu.: 5.000   N.unique : 336   N.unique : 320   N.unique : 338  \n Median : 8.000   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Mean   : 8.468   Min.nchar:  10   Min.nchar:  10   Min.nchar:   6  \n 3rd Qu.:11.000   Max.nchar:  10   Max.nchar:  10   Max.nchar:  24  \n Max.   :71.000   NAs      : 151   NAs      : 151   NAs      : 151  \n NAs    :2297                                                       \n    home_qb_name      away_coach       home_coach        referee    \n Length   :7548   Length   :7548   Length   :7548   Length   :7548  \n N.unique : 323   N.unique : 177   N.unique : 177   N.unique :  91  \n N.blank  :   0   N.blank  :   0   N.blank  :   0   N.blank  :   0  \n Min.nchar:   6   Min.nchar:   7   Min.nchar:   7   Min.nchar:   8  \n Max.nchar:  24   Max.nchar:  20   Max.nchar:  20   Max.nchar:  16  \n NAs      : 151                                     NAs      : 208  \n                                                                    \n     stadium_id        stadium    \n Length   :7548   Length   :7548  \n N.unique :  67   N.unique : 111  \n N.blank  :   0   N.blank  :   0  \n Min.nchar:   5   Min.nchar:   8  \n Max.nchar:   5   Max.nchar:  35"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#make-figures",
     "href": "supplemental/psych-490-ex-04.html#make-figures",
     "title": "PSYCH 490.007: Exercise 04",
     "section": "Make figures",
-    "text": "Make figures\n\nFigure 1\nThis figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.\n\n\nCode\nnfl_scheds |&gt;\n  ggplot() +\n  aes(x = home_score) +\n  geom_violin()\n\n\nWarning: Removed 178 rows containing non-finite outside the scale range\n(`stat_ydensity()`).\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\nThe violin shape is widest between 20 and about 25, indicating that scores in this range are the most common.\nI could confirm this with the following R code:\n\n\nCode\nwith(nfl_scheds, summary(home_score))\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs \n    0.0    16.0    23.0    23.3    30.0    70.0     178 \n\n\nSure enough, the mean is 23.3 and the median 23.\n\n\nFigure 2\nFor Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.\nHere is the figure from Exercise 02:\n\n\n\n\n\n\nFigure 2: Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\nHere is the figure I made:\n\n\nCode\nage &lt;- seq(from=3, to = 18)\nmean_t &lt;- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)\nsex = rep(\"male\", length(age))\n\nactivity &lt;- data.frame(age, mean_t)\n\nactivity |&gt;\n  ggplot() +\n  aes(x = age, y = mean_t, color = sex) +\n  geom_line()\n\n\n\n\n\n\n\n\nFigure 3: Regenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\n\n\nNote that I only show the male data. I had to enter the data by hand, and I got tired of that. You get the general idea.\n\n\nFigure 3\nFor Figure 3, I decided to plot…"
+    "text": "Make figures\n\nFigure 1\nThis figure shows a violin plot of home team scores. It should show whether there is a modal (most common) value.\n\n\nCode\nnfl_scheds |&gt;\n  ggplot() +\n  aes(x = home_score) +\n  geom_violin()\n\n\nWarning: Removed 165 rows containing non-finite outside the scale range\n(`stat_ydensity()`).\n\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\nThe violin shape is widest between 20 and about 25, indicating that scores in this range are the most common.\nI could confirm this with the following R code:\n\n\nCode\nwith(nfl_scheds, summary(home_score))\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.     NAs \n   0.00   16.00   23.00   23.29   30.00   70.00     165 \n\n\nSure enough, the mean is 23.3 and the median 23.\n\n\nFigure 2\nFor Figure 2, I decided to try to plot my own version of a figure I linked to in Exercise 02.\nHere is the figure from Exercise 02:\n\n\n\n\n\n\nFigure 2: Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\nHere is the figure I made:\n\n\nCode\nage &lt;- seq(from=3, to = 18)\nmean_t &lt;- c(54, 54, 54, 52, 51, 50.5, 49.5, 49, 48, 47.5, 47.25, 46, 45, 44.5, 44, 45)\nsex = rep(\"male\", length(age))\n\nactivity &lt;- data.frame(age, mean_t)\n\nactivity |&gt;\n  ggplot() +\n  aes(x = age, y = mean_t, color = sex) +\n  geom_line()\n\n\n\n\n\n\n\n\nFigure 3: Regenerating Figure 1 from https://www.psychologicalscience.org/redesign/wp-content/uploads/2015/12/TCD_fig_1.jpg\n\n\n\n\n\nNote that I only show the male data. I had to enter the data by hand, and I got tired of that. You get the general idea.\n\n\nFigure 3\nFor Figure 3, I decided to plot…"
   },
   {
     "objectID": "supplemental/psych-490-ex-04.html#discusion-and-conclusion",
@@ -629,6 +629,83 @@
     "title": "PSYCH 490.007: Exercise 04",
     "section": "Resources",
     "text": "Resources"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#announcements",
+    "href": "slides/wk-11-2026-11-04-policy.html#announcements",
+    "title": "Visualizing policy-related data",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#last-time",
+    "href": "slides/wk-11-2026-11-04-policy.html#last-time",
+    "title": "Visualizing policy-related data",
+    "section": "Last time…",
+    "text": "Last time…\n\nVoter registration\nPopulation\nPresidential approval"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#todays-topics",
+    "href": "slides/wk-11-2026-11-04-policy.html#todays-topics",
+    "title": "Visualizing policy-related data",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWhat matters most?"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
+    "href": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
+    "title": "Visualizing policy-related data",
+    "section": "Harvard Youth Poll",
+    "text": "Harvard Youth Poll\n\nThis poll of 2,024 18-to-29-year-olds was organized with undergraduate students from the Harvard Public Opinion Project (HPOP) and supervised by John Della Volpe, Director of Polling. Ipsos Public Affairs collected data using the KnowledgePanel1.\n\nhttps://iop.harvard.edu/youth-poll/53rd-edition-fall-2026#toc-4"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#section",
+    "href": "slides/wk-11-2026-11-04-policy.html#section",
+    "title": "Visualizing policy-related data",
+    "section": "",
+    "text": "“53rd Edition - Fall 2026” (n.d.)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
+    "href": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
+    "title": "Visualizing policy-related data",
+    "section": "Yale Youth Poll",
+    "text": "Yale Youth Poll\n\nResults from survey of 3,429 registered voters, including 2,008 voters aged 18-34, enabling a comparison of young voters to the electorate as a whole. Full results available on the Spring 2026 Results page.\n\n– https://youthpoll.yale.edu"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#unknownunknown-ce",
+    "href": "slides/wk-11-2026-11-04-policy.html#unknownunknown-ce",
+    "title": "Visualizing policy-related data",
+    "section": "",
+    "text": "Voters care least about Israel and Palestine (28%), Ukraine and Russia (27%), China (27%), artificial intelligence (24%), acceptance of gay people (22%), and acceptance of transgender people (19%), despite the prominence of these issues in the news."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#next-time",
+    "href": "slides/wk-11-2026-11-04-policy.html#next-time",
+    "title": "Visualizing policy-related data",
+    "section": "Next time",
+    "text": "Next time\n\nWork session"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#about",
+    "href": "slides/wk-11-2026-11-04-policy.html#about",
+    "title": "Visualizing policy-related data",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#references",
+    "href": "slides/wk-11-2026-11-04-policy.html#references",
+    "title": "Visualizing policy-related data",
+    "section": "References",
+    "text": "References\n\n\n\n\n“53rd Edition - Fall 2026.” n.d. Accessed October 26, 2026. https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026.\n\n\n“Spring 2026 Results.” n.d. Accessed October 26, 2026. https://youthpoll.yale.edu/spring-2026-results."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#footnotes",
+    "href": "slides/wk-11-2026-11-04-policy.html#footnotes",
+    "title": "Visualizing policy-related data",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel"
   },
   {
     "objectID": "slides/wk-10-2026-10-30-work-session.html#announcements",
@@ -673,193 +750,389 @@
     "text": "References"
   },
   {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#section",
+    "href": "slides/wk-10-2026-10-26-tables.html#section",
+    "title": "Making tables",
+    "section": "",
+    "text": "Government of Canada and Canada (2026)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#maps",
+    "href": "slides/wk-10-2026-10-26-tables.html#maps",
+    "title": "Making tables",
+    "section": "Maps!",
+    "text": "Maps!\n\n\n\n\n\n\n\n\nFigure 1: CDC (2025)\n\n\n\n\n\n\n\n\n\n\nFigure 2: CDC (2025)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
     "objectID": "slides/wk-10-2026-10-26-tables.html#announcements",
     "href": "slides/wk-10-2026-10-26-tables.html#announcements",
     "title": "Making tables",
     "section": "Announcements",
-    "text": "Announcements\n\nExercise-05 |  Canvas dropbox  Due on Friday, October 30, 2026.\nExercise-06 |  Canvas dropbox  due on Monday, November 16, 2026."
+    "text": "Announcements\n\nExercise-05 |  Canvas dropbox  Due on Friday, October 30, 2026.\nExercise-06 |  Canvas dropbox  due on Monday, November 16, 2026.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#todays-topics",
     "href": "slides/wk-10-2026-10-26-tables.html#todays-topics",
     "title": "Making tables",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nAnatomy of a Quarto document\nBackground\nMaking tables in base R"
+    "text": "Today’s topics\n\nAnatomy of a Quarto document\nBackground\nMaking tables in base R",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#what-is-a-table",
+    "href": "slides/wk-10-2026-10-26-tables.html#what-is-a-table",
+    "title": "Making tables",
+    "section": "What is a table?",
+    "text": "What is a table?\n\n\n\n\n\nTables are visual displays composed of columns and rows in which numbers, text, or a combination of numbers and text are presented.\n\n\n\nFigure 4: “Table Setup” (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#ingredients",
     "href": "slides/wk-10-2026-10-26-tables.html#ingredients",
     "title": "Making tables",
     "section": "Ingredients",
-    "text": "Ingredients\n\nA tidy data frame\n\nNamed columns are variables\nRows are observations\n\nStart with base R: No additional packages"
+    "text": "Ingredients\n\nA tidy data frame\n\nNamed columns are variables\nRows are observations\n\nStart with base R: No additional packages",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#gathering-data",
     "href": "slides/wk-10-2026-10-26-tables.html#gathering-data",
     "title": "Making tables",
     "section": "Gathering data",
-    "text": "Gathering data\n\n\n\nHow about mtcars?\n\n\nhelp(\"mtcars\")\n\n\n\n\n\n\n\n\nFigure 5: Help document for the mtcars dataset."
+    "text": "Gathering data\n\n\n\nHow about mtcars?\n\n\nhelp(\"mtcars\")\n\n\n\n\n\n\n\n\nFigure 5: Help document for the mtcars dataset.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#exploring-data-summary",
     "href": "slides/wk-10-2026-10-26-tables.html#exploring-data-summary",
     "title": "Making tables",
     "section": "Exploring data: summary()",
-    "text": "Exploring data: summary()\n\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000"
+    "text": "Exploring data: summary()\n\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#exploring-data-str",
     "href": "slides/wk-10-2026-10-26-tables.html#exploring-data-str",
     "title": "Making tables",
     "section": "Exploring data: str()",
-    "text": "Exploring data: str()\n\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ..."
+    "text": "Exploring data: str()\n\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#considerations-table-type",
     "href": "slides/wk-10-2026-10-26-tables.html#considerations-table-type",
     "title": "Making tables",
     "section": "Considerations: Table type?",
-    "text": "Considerations: Table type?\n\nSummary\n\nStatistics\nCross-tabulations\n\nRaw data"
+    "text": "Considerations: Table type?\n\nSummary\n\nStatistics\nCross-tabulations\n\nRaw data",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#basic-table",
     "href": "slides/wk-10-2026-10-26-tables.html#basic-table",
     "title": "Making tables",
     "section": "Basic table",
-    "text": "Basic table\n\n\n\nTable 1\n\n\ntable(mtcars$cyl)\n\n\n 4  6  8 \n11  7 14"
+    "text": "Basic table\n\n\n\nTable 1\n\n\ntable(mtcars$cyl)\n\n\n 4  6  8 \n11  7 14",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#basic-table-1",
     "href": "slides/wk-10-2026-10-26-tables.html#basic-table-1",
     "title": "Making tables",
     "section": "Basic table",
-    "text": "Basic table\n\n\n\nTable 2\n\n\ntable(mtcars$disp)\n\n\n 71.1  75.7  78.7    79  95.1   108 120.1 120.3   121 140.8   145 146.7   160 \n    1     1     1     1     1     1     1     1     1     1     1     1     2 \n167.6   225   258 275.8   301   304   318   350   351   360   400   440   460 \n    2     1     1     3     1     1     1     1     1     2     1     1     1 \n  472 \n    1"
+    "text": "Basic table\n\n\n\nTable 2\n\n\ntable(mtcars$disp)\n\n\n 71.1  75.7  78.7    79  95.1   108 120.1 120.3   121 140.8   145 146.7   160 \n    1     1     1     1     1     1     1     1     1     1     1     1     2 \n167.6   225   258 275.8   301   304   318   350   351   360   400   440   460 \n    2     1     1     3     1     1     1     1     1     2     1     1     1 \n  472 \n    1",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#lesson-learned",
     "href": "slides/wk-10-2026-10-26-tables.html#lesson-learned",
     "title": "Making tables",
     "section": "Lesson learned",
-    "text": "Lesson learned\n\nBasic tables work best with variables that are (or can be made to be) discrete (nominal or ordinal)"
+    "text": "Lesson learned\n\nBasic tables work best with variables that are (or can be made to be) discrete (nominal or ordinal)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#cross-tabulation",
     "href": "slides/wk-10-2026-10-26-tables.html#cross-tabulation",
     "title": "Making tables",
     "section": "Cross-tabulation",
-    "text": "Cross-tabulation\n\n\n\nTable 3: Number of cars in the mtcars dataset by the number of cylinders in the engine and the number of gears in the transmission.\n\n\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n\n   gear\ncyl  3  4  5\n  4  1  8  2\n  6  2  4  1\n  8 12  0  2"
+    "text": "Cross-tabulation\n\n\n\nTable 3: Number of cars in the mtcars dataset by the number of cylinders in the engine and the number of gears in the transmission.\n\n\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n\n   gear\ncyl  3  4  5\n  4  1  8  2\n  6  2  4  1\n  8 12  0  2",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#wait-you-said-base-r",
     "href": "slides/wk-10-2026-10-26-tables.html#wait-you-said-base-r",
     "title": "Making tables",
     "section": "Wait! You said Base R",
-    "text": "Wait! You said Base R\n\nI did, but I wanted to select two variables from mtcars.\nThe select function from dplyr does that easily.\nNote: These slides did not start with a setup chunk\n\nSo, no library(dplyr) statement\nBut I can access any dplyr commands with dplyr::&lt;command&gt;()1."
+    "text": "Wait! You said Base R\n\nI did, but I wanted to select two variables from mtcars.\nThe select function from dplyr does that easily.\nNote: These slides did not start with a setup chunk\n\nSo, no library(dplyr) statement\nBut I can access any dplyr commands with dplyr::&lt;command&gt;()1.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#under-the-hood",
     "href": "slides/wk-10-2026-10-26-tables.html#under-the-hood",
     "title": "Making tables",
     "section": "Under the hood",
-    "text": "Under the hood\n\nTo make tables with titles and sequential numbers using Quarto…\n\n```{r}\n#| label: tbl-cyl-gear\n#| tbl-cap: \"Number of cars in the *mtcars* dataset by the number of cylinders in the engine and the number of gears in the transmission.\"\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n```\n\nGive your R chunk a label starting with tbl-\nAdd a tbl-cap for the caption\nThen you can link to the table, for example Table 3"
+    "text": "Under the hood\n\nTo make tables with titles and sequential numbers using Quarto…\n\n```{r}\n#| label: tbl-cyl-gear\n#| tbl-cap: \"Number of cars in the *mtcars* dataset by the number of cylinders in the engine and the number of gears in the transmission.\"\nmtcars |&gt;\n  dplyr::select(cyl, gear) |&gt;\n  table()\n```\n\nGive your R chunk a label starting with tbl-\nAdd a tbl-cap for the caption\nThen you can link to the table, for example Table 3",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#bottom-line-on-table",
     "href": "slides/wk-10-2026-10-26-tables.html#bottom-line-on-table",
     "title": "Making tables",
     "section": "Bottom line on table()",
-    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 6 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 6: Output from R’s help() function for the table() command."
+    "text": "Bottom line on table()\n\n\n\nA quick check of help(\"table\") (Figure 6 at right) shows\ntable() is for making cross tabulations\nOr when you take all the data…\n\n\n\n\n\n\n\n\nFigure 6: Output from R’s help() function for the table() command.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#prettier-output",
     "href": "slides/wk-10-2026-10-26-tables.html#prettier-output",
     "title": "Making tables",
     "section": "Prettier output",
-    "text": "Prettier output\n\nformattable::formattable(head(mtcars, n = 6))"
+    "text": "Prettier output\n\nformattable::formattable(head(mtcars, n = 6))",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#prettier-output-output",
     "href": "slides/wk-10-2026-10-26-tables.html#prettier-output-output",
     "title": "Making tables",
     "section": "Prettier output",
-    "text": "Prettier output\n\n\n\nTable 4: A prettier table of a subset of the mtcars dataset.\n\n\n\n\n\n\n\n\n\nmpg\n\n\ncyl\n\n\ndisp\n\n\nhp\n\n\ndrat\n\n\nwt\n\n\nqsec\n\n\nvs\n\n\nam\n\n\ngear\n\n\ncarb\n\n\n\n\n\n\nMazda RX4\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.620\n\n\n16.46\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nMazda RX4 Wag\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.875\n\n\n17.02\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nDatsun 710\n\n\n22.8\n\n\n4\n\n\n108\n\n\n93\n\n\n3.85\n\n\n2.320\n\n\n18.61\n\n\n1\n\n\n1\n\n\n4\n\n\n1\n\n\n\n\nHornet 4 Drive\n\n\n21.4\n\n\n6\n\n\n258\n\n\n110\n\n\n3.08\n\n\n3.215\n\n\n19.44\n\n\n1\n\n\n0\n\n\n3\n\n\n1\n\n\n\n\nHornet Sportabout\n\n\n18.7\n\n\n8\n\n\n360\n\n\n175\n\n\n3.15\n\n\n3.440\n\n\n17.02\n\n\n0\n\n\n0\n\n\n3\n\n\n2\n\n\n\n\nValiant\n\n\n18.1\n\n\n6\n\n\n225\n\n\n105\n\n\n2.76\n\n\n3.460\n\n\n20.22\n\n\n1\n\n\n0\n\n\n3\n\n\n1"
+    "text": "Prettier output\n\n\n\nTable 4: A prettier table of a subset of the mtcars dataset.\n\n\n\n\n\n\n\n\n\nmpg\n\n\ncyl\n\n\ndisp\n\n\nhp\n\n\ndrat\n\n\nwt\n\n\nqsec\n\n\nvs\n\n\nam\n\n\ngear\n\n\ncarb\n\n\n\n\n\n\nMazda RX4\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.620\n\n\n16.46\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nMazda RX4 Wag\n\n\n21.0\n\n\n6\n\n\n160\n\n\n110\n\n\n3.90\n\n\n2.875\n\n\n17.02\n\n\n0\n\n\n1\n\n\n4\n\n\n4\n\n\n\n\nDatsun 710\n\n\n22.8\n\n\n4\n\n\n108\n\n\n93\n\n\n3.85\n\n\n2.320\n\n\n18.61\n\n\n1\n\n\n1\n\n\n4\n\n\n1\n\n\n\n\nHornet 4 Drive\n\n\n21.4\n\n\n6\n\n\n258\n\n\n110\n\n\n3.08\n\n\n3.215\n\n\n19.44\n\n\n1\n\n\n0\n\n\n3\n\n\n1\n\n\n\n\nHornet Sportabout\n\n\n18.7\n\n\n8\n\n\n360\n\n\n175\n\n\n3.15\n\n\n3.440\n\n\n17.02\n\n\n0\n\n\n0\n\n\n3\n\n\n2\n\n\n\n\nValiant\n\n\n18.1\n\n\n6\n\n\n225\n\n\n105\n\n\n2.76\n\n\n3.460\n\n\n20.22\n\n\n1\n\n\n0\n\n\n3\n\n\n1",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#a-custom-summary-table",
     "href": "slides/wk-10-2026-10-26-tables.html#a-custom-summary-table",
     "title": "Making tables",
     "section": "A custom summary table",
-    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 7: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars"
+    "text": "A custom summary table\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09\n33.90\n\n\ndisp\n71.1\n196.3\n230.7\n472.0\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nFigure 7: A sketch of a statistical summary table we might want to create.\n\n\n\n\n\nNeed a different data frame\nColumns must be computed from mtcars",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#under-the-hood-1",
     "href": "slides/wk-10-2026-10-26-tables.html#under-the-hood-1",
     "title": "Making tables",
     "section": "Under the hood",
-    "text": "Under the hood\n\nFigure 7 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 8: A table built using the Markdown tables syntax."
+    "text": "Under the hood\n\nFigure 7 is built using Markdown tables.\n\n\n\n\n| variable  | min  | median | mean  | max   |\n|-----------|------|--------|-------|-------|\n| mpg       | 10.4 | 19.2   | 20.09 | 33.90 |\n| disp      | 71.1 | 196.3  | 230.7 | 472.0 |\n| ...       | ...  | ...    | ...   | ...   |  \n\n\nFigure 8: A table built using the Markdown tables syntax.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#making-a-summary-table",
     "href": "slides/wk-10-2026-10-26-tables.html#making-a-summary-table",
     "title": "Making tables",
     "section": "Making a summary table",
-    "text": "Making a summary table\n\nvariables &lt;- c(\"mpg\", \"disp\")\nmins &lt;- c(min(mtcars$mpg), \n          min(mtcars$disp))\nmeds &lt;- c(median(mtcars$mpg), \n          median(mtcars$disp))\nmeans &lt;- c(mean(mtcars$mpg), \n           mean(mtcars$disp))\nmaxs &lt;- c(max(mtcars$mpg), \n          max(mtcars$disp))\n\nmy_stats_df &lt;- data.frame(variable = variables,\n                       min = mins,\n                       median = meds,\n                       mean = means,\n                       max = maxs)"
+    "text": "Making a summary table\n\nvariables &lt;- c(\"mpg\", \"disp\")\nmins &lt;- c(min(mtcars$mpg), \n          min(mtcars$disp))\nmeds &lt;- c(median(mtcars$mpg), \n          median(mtcars$disp))\nmeans &lt;- c(mean(mtcars$mpg), \n           mean(mtcars$disp))\nmaxs &lt;- c(max(mtcars$mpg), \n          max(mtcars$disp))\n\nmy_stats_df &lt;- data.frame(variable = variables,\n                       min = mins,\n                       median = meds,\n                       mean = means,\n                       max = maxs)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#show-it",
     "href": "slides/wk-10-2026-10-26-tables.html#show-it",
     "title": "Making tables",
     "section": "Show it",
-    "text": "Show it\n\nformattable::format_table(my_stats_df)\n\n\n\nTable 5: A table showing summary statistics of two of the variables from the mtcars dataset.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+    "text": "Show it\n\nformattable::format_table(my_stats_df)\n\n\n\nTable 5: A table showing summary statistics of two of the variables from the mtcars dataset.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it",
     "href": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it",
     "title": "Making tables",
     "section": "Another way to show it",
-    "text": "Another way to show it\n\nThe kableExtra package has many features for making HTML-format tables.\nYou could try making a table if you choose to work on Exercise 05.\n\n\nmy_stats_df |&gt;\n  kableExtra::kable() |&gt;\n  kableExtra::kable_classic()"
+    "text": "Another way to show it\n\nThe kableExtra package has many features for making HTML-format tables.\nYou could try making a table if you choose to work on Exercise 05.\n\n\nmy_stats_df |&gt;\n  kableExtra::kable() |&gt;\n  kableExtra::kable_classic()",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it-output",
     "href": "slides/wk-10-2026-10-26-tables.html#another-way-to-show-it-output",
     "title": "Making tables",
     "section": "Another way to show it",
-    "text": "Another way to show it\n\n\n\nTable 6: A table showing summary statistics of two of the variables from the mtcars dataset. It uses the kableExtra package.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0"
+    "text": "Another way to show it\n\n\n\nTable 6: A table showing summary statistics of two of the variables from the mtcars dataset. It uses the kableExtra package.\n\n\n\n\n\n\nvariable\nmin\nmedian\nmean\nmax\n\n\n\n\nmpg\n10.4\n19.2\n20.09062\n33.9\n\n\ndisp\n71.1\n196.3\n230.72188\n472.0",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#some-take-homes",
     "href": "slides/wk-10-2026-10-26-tables.html#some-take-homes",
     "title": "Making tables",
     "section": "Some take-homes",
-    "text": "Some take-homes\n\nData frames are useful and flexible structures\nThe custom summary table is similar to the data dictionary we made in the Tidying Data tutorial."
+    "text": "Some take-homes\n\nData frames are useful and flexible structures\nThe custom summary table is similar to the data dictionary we made in the Tidying Data tutorial.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#apa-tables-how-to",
+    "href": "slides/wk-10-2026-10-26-tables.html#apa-tables-how-to",
+    "title": "Making tables",
+    "section": "APA tables: How to",
+    "text": "APA tables: How to\n\n\n\n“Table Setup” (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#apa-tables-anatomy",
+    "href": "slides/wk-10-2026-10-26-tables.html#apa-tables-anatomy",
+    "title": "Making tables",
+    "section": "APA tables: Anatomy",
+    "text": "APA tables: Anatomy\n\n\n\n\n\n\nFigure 9: “Table Setup” (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#reading-a-table",
+    "href": "slides/wk-10-2026-10-26-tables.html#reading-a-table",
+    "title": "Making tables",
+    "section": "“Reading” a table",
+    "text": "“Reading” a table\n\n\n\nHow would you explain how to answer questions about this table:\n\nWho has greater love for “The Lord of the Rings”?\nWhich group has greater variability?\n\n\n\n\n\n\nGroup\nLOTR_love\nrange\n\n\n\n\nNerds\n8.5\n[6-10]\n\n\nJocks\n6\n[2-10]",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#reading-a-table-1",
+    "href": "slides/wk-10-2026-10-26-tables.html#reading-a-table-1",
+    "title": "Making tables",
+    "section": "“Reading” a table",
+    "text": "“Reading” a table\n\n\n\nStructural knowledge\n\nRows: Variables\nColumns: Types of data\n\nSequential visual scanning\n\n\n\nMemory\n\nVerbal (row, column labels)\nQuantitative (numeric values)\nSemantic",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#main-points",
     "href": "slides/wk-10-2026-10-26-tables.html#main-points",
     "title": "Making tables",
     "section": "Main points",
-    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nConsider the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone"
+    "text": "Main points\n\nTables can be informative accompaniments to figures\nData frames are useful and flexible structures for making both\nConsider the kind of table you want to produce\nMaking pretty tables in R can be done; we’re getting there\nScripting the generation of tables makes them less error-prone",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#next-time",
     "href": "slides/wk-10-2026-10-26-tables.html#next-time",
     "title": "Making tables",
     "section": "Next time",
-    "text": "Next time\n\nTables in gt"
+    "text": "Next time\n\nTables in gt",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#about",
     "href": "slides/wk-10-2026-10-26-tables.html#about",
     "title": "Making tables",
     "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-26-tables.html#references",
     "href": "slides/wk-10-2026-10-26-tables.html#references",
     "title": "Making tables",
     "section": "References",
-    "text": "References\n\n\n\n\nCDC. 2025. “FastStats: Sleep in Adults.” January 31. https://www.cdc.gov/sleep/data-research/facts-stats/adults-sleep-facts-and-stats.html.\n\n\nGovernment of Canada, and Statistics Canada. 2026. “Live Births, by Month.” Government of Canada, Statistics Canada, September 23. https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501.\n\n\n“Table Setup.” n.d. Accessed October 26, 2026. https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables."
+    "text": "References\n\n\n\n\nCDC. 2025. “FastStats: Sleep in Adults.” January 31. https://www.cdc.gov/sleep/data-research/facts-stats/adults-sleep-facts-and-stats.html.\n\n\nGovernment of Canada, and Statistics Canada. 2026. “Live Births, by Month.” Government of Canada, Statistics Canada, September 23. https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310041501.\n\n\n“Table Setup.” n.d. Accessed October 26, 2026. https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
+  },
+  {
+    "objectID": "slides/wk-10-2026-10-26-tables.html#footnotes",
+    "href": "slides/wk-10-2026-10-26-tables.html#footnotes",
+    "title": "Making tables",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDon’t put the &lt; or &gt; character. Use, for example, dplyr::select().",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Mon Oct 26"
+    ]
   },
   {
     "objectID": "slides/wk-09-2026-10-21-mapmaking-II.html#announcements",
@@ -1658,7 +1931,7 @@
     "href": "slides/wk-07-2026-10-09-work-session.html#next-time",
     "title": "Work session",
     "section": "Next time",
-    "text": "Next time\n\nCritiquing figures\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides",
+    "text": "Next time\n\nCritiquing figures\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas",
     "crumbs": [
       "Slides",
       "Wk 07 • Fri Oct 09"
@@ -2604,7 +2877,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare-them",
     "title": "Figure components",
     "section": "Let’s compare them",
-    "text": "Let’s compare them\n\n\nCode\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(forcats)\n\ncolors &lt;- c(\"red\", \"orange\", \"yellow\", \"green\", \"cyan\", \"blue\", \"violet\", \"white\", \"black\", \"gray\")\nour_color_sample &lt;- sample(colors, size=200, replace=TRUE)\ncolors_df &lt;- data.frame(favorite_color = our_color_sample)\n\n\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nCode\nxtabs(formula = ~favorite_color, data = colors_df)\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    26     20     19     18     19     17     25     15     17     24 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\nCode\ncolors_xtab &lt;- data.frame(table(colors_df))\nnames(colors_xtab) &lt;- c(\"favorite_color\", \"count\")\n\ncolors_xtab |&gt;\n  ggplot(aes(x = \"\", y = count, fill = favorite_color)) +\n  geom_bar(stat = \"identity\", width = 1) +\n  coord_polar(\"y\", start = 0) +\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\nCode\n# https://r-graph-gallery.com/128-ring-or-donut-plot.html\n\n# Compute percentages\ncolors_xtab$fraction = colors_xtab$count / sum(colors_xtab$count)\n\n# Compute the cumulative percentages (top of each rectangle)\ncolors_xtab$ymax = cumsum(colors_xtab$fraction)\n\n# Compute the bottom of each rectangle\ncolors_xtab$ymin = c(0, head(colors_xtab$ymax, n = -1))\n\n# Make the plot\ncolors_xtab |&gt;\n  ggplot(aes(\n    ymax = ymax,\n    ymin = ymin,\n    xmax = 4,\n    xmin = 3,\n    fill = favorite_color\n  )) +\n  geom_rect() +\n  coord_polar(theta = \"y\") + # Try to remove that to understand how the chart is built initially\n  xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\nCode\ncolors_df |&gt;\n  ggplot() +\n  aes(x = favorite_color, fill = favorite_color) +\n  geom_bar() +\n  scale_discrete_manual(aesthetics = c(\"color\", \"fill\"),\n                        values = sort(colors))\n\n\n\n\n\n\n\n\nFigure 6: A barplot of the random favorite color data.\n\n\n\n\n\n\n\n\n\nCode\ncolors_df |&gt;\n  dplyr::count(favorite_color) |&gt;\n  dplyr::arrange(desc(n)) |&gt;\n  dplyr::mutate(favorite_color = factor(favorite_color, levels = favorite_color)) |&gt;\n  ggplot() +\n  geom_bar(aes(x = favorite_color, y = n, fill = favorite_color), stat = \"identity\") +\n  scale_fill_identity()\n\n\n\n\n\n\n\n\nFigure 7: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "text": "Let’s compare them\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nfavorite_color\n black   blue   cyan   gray  green orange    red violet  white yellow \n    20     24     15     20     20     20     17     21     23     20 \n\n\n\n\n\n\n\n\nWhat’s the ‘story’ with these data?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: A pie chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: A ring/donut chart of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: A barplot of the random favorite color data.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: A colorful barplot of the random favorite color data sorted by the number of responses.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -2615,7 +2888,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#meals-eaten-vs.-not-eaten",
     "title": "Figure components",
     "section": "Meals eaten vs. not-eaten",
-    "text": "Meals eaten vs. not-eaten\n\nSee slides from 2026-09-11, 2026-09-14.\n\n\n\nCode\ndays &lt;- factor(\n  c(\"sun\", \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\"),\n  levels = c(\"sun\", \"mon\", \"tue\", \"wed\", \"thu\", \"fri\", \"sat\"),\n  ordered = TRUE\n)\nmeals &lt;- factor(\n  c(\"breakfast\", \"lunch\", \"dinner\", \"snack\", \"dessert\"),\n  levels = c(\"breakfast\", \"lunch\", \"snack\", \"dinner\", \"dessert\"),\n  ordered = TRUE\n)\nmeal_days &lt;- rep(days, each = length(meals))\nweekly_meals &lt;- rep(meals, 7)\n\nmy_meals &lt;- data.frame(day_of_wk = meal_days, \n                       meal = weekly_meals)\nate_it &lt;- sample(c(TRUE, FALSE), size = 35, \n                 replace = TRUE, prob = c(.6, .4))\nmy_meals$ate_it &lt;- ate_it\n\nmeals_eaten &lt;- my_meals$meal[my_meals$ate_it == TRUE]\nmeals_eaten_df &lt;- data.frame(meal = meals_eaten)",
+    "text": "Meals eaten vs. not-eaten\n\nSee slides from 2026-09-11, 2026-09-14.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -2626,7 +2899,7 @@
     "href": "slides/wk-04-2026-09-16-figure-components.html#lets-compare",
     "title": "Figure components",
     "section": "Let’s compare",
-    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nCode\nxtabs(formula = ~meal, data = meals_eaten_df)\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        6         6         4         7         3 \n\n\n\n\n\n\nCode\nmeals_xtab &lt;- data.frame(table(meals_eaten_df))\n\nmeals_xtab |&gt;\n  ggplot(aes(x = \"\", y = Freq, fill = meal)) +\n  geom_bar(stat = \"identity\", width = 1) +\n  coord_polar(\"y\", start = 0)\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\nCode\n# https://r-graph-gallery.com/128-ring-or-donut-plot.html\n\n# Compute percentages\nmeals_xtab$fraction = meals_xtab$Freq / sum(meals_xtab$Freq)\n\n# Compute the cumulative percentages (top of each rectangle)\nmeals_xtab$ymax = cumsum(meals_xtab$fraction)\n\n# Compute the bottom of each rectangle\nmeals_xtab$ymin = c(0, head(meals_xtab$ymax, n = -1))\n\n# Make the plot\nmeals_xtab |&gt;\n  ggplot(aes(\n    ymax = ymax,\n    ymin = ymin,\n    xmax = 4,\n    xmin = 3,\n    fill = meal\n  )) +\n  geom_rect() +\n  coord_polar(theta = \"y\") + # Try to remove that to understand how the chart is built initially\n  xlim(c(2, 4))  # Try to remove that to see how to make a pie chart\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\nCode\nmeals_xtab |&gt;\n  ggplot() +\n  aes(x = meal, y = Freq, fill = meal) +\n  geom_bar(stat = \"identity\")\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\nCode\nmeals_xtab |&gt;\n  mutate(ordered_meal = forcats::fct_reorder(meal, desc(Freq))) |&gt;\n  ggplot() +\n  geom_bar(aes(x = ordered_meal, y = Freq, fill = meal), stat = \"identity\")\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
+    "text": "Let’s compare\n\nTablePieRingBarplot-1Barplot-2\n\n\n\n\nmeal\nbreakfast     lunch     snack    dinner   dessert \n        5         4         2         4         4 \n\n\n\n\n\n\n\n\n\n\n\n\nFigure 8: A pie chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9: A ring/donut chart of the random meals data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 10: A colorful barplot of the random favorite color data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 11: A colorful barplot of the random favorite color data sorted by the number of responses.",
     "crumbs": [
       "Slides",
       "Wk 04 • Wed Sep 16"
@@ -3999,7 +4272,7 @@
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
-    "title": "Home",
+    "title": "Schedule",
     "section": "",
     "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing R & RStudio\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim:\n\nhttps://quarto.org/docs/get-started/hello/jupyter.html1\nhttps://education.rstudio.com/learn/beginner/\n\nSlides",
     "crumbs": [
@@ -4009,7 +4282,7 @@
   {
     "objectID": "schedule.html#week-01",
     "href": "schedule.html#week-01",
-    "title": "Home",
+    "title": "Schedule",
     "section": "",
     "text": "Surveying the landscape\n\n\nCourse introduction\n\nWatch:\n\nPBSoffbook (2013)\n\nSlides\n\n\n\n\nThe semiotics of data visualization\n\nRead:\n\nCairo (2013), Chapter 1-2, PDF on Canvas\n\nAssigned: Exercise 01 assigned\nSlides\nHomework:\n\nInstall R and RStudio Desktop\n\nTutorial\n\n(Optional) Install Quarto\n\n\n\n\n\nWork Session: Introducing R & RStudio\n\nComplete: R and RStudio Desktop installation and setup\nRead: Get Started from the RStudio User Guide.\nSkim:\n\nhttps://quarto.org/docs/get-started/hello/jupyter.html1\nhttps://education.rstudio.com/learn/beginner/\n\nSlides",
     "crumbs": [
@@ -4019,7 +4292,7 @@
   {
     "objectID": "schedule.html#week-02",
     "href": "schedule.html#week-02",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 02",
     "text": "Week 02\nWho visualizes data and why\n\nMon, Aug 31\nVisualization in government & business\n\nSlides\n\n\n\nWed, Sep 02\nVisualization in art, sports, and journalism\n\nRead\n\nGelman & Unwin (2013) (recommended), follow citation link to online version or PDF on Canvas.\n\nAssigned: Exercise 02\nSlides\nResults from Exercise 01\n\n\n\nFri, Sep 04\nWork Session: Exercise 02 and Quarto\n\n Due Exercise 01 |  Canvas dropbox\nSlides",
     "crumbs": [
@@ -4029,7 +4302,7 @@
   {
     "objectID": "schedule.html#week-03",
     "href": "schedule.html#week-03",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 03",
     "text": "Week 03\nUnderstanding figures\n\nMon, Sep 07\nNO CLASS: Labor Day\n\n\nWed, Sep 09\nMaking (sense of) data\n\nRead:\n\nStevens (1946) | PDF on Canvas\nWikipedia contributors (2024) (Optional)\nTourangeau, Rips, & Rasinski (2012) | PDF on Canvas. (Optional)\n\nSlides\n\n\n\nFri, Sep 11\nWork Session: Making data with R\n\nSlides",
     "crumbs": [
@@ -4039,7 +4312,7 @@
   {
     "objectID": "schedule.html#week-04",
     "href": "schedule.html#week-04",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 04",
     "text": "Week 04\nThe anatomy of figures\n\nMon, Sep 14\nFigure types\n\nExplore (pick at least two):\n\nRibecca (n.d.)\nHammond (2024)\nDiscovery (2024)\nAtlassian (n.d.)\n\nWatch:\n\nChannel (2024)\n\nAssigned: Exercise-03\nSlides\n\n\n\nWed, Sep 16\nMore figure types and figure components\n\nRead: Tutorial: Making data\nSlides\n\n\n\nFri, Sep 18\nWork Session: Intro to ggplot\n\nSlides\nggplot2 tutorial\nContinue work on Exercise 02 and Exercise 03.",
     "crumbs": [
@@ -4049,7 +4322,7 @@
   {
     "objectID": "schedule.html#week-05",
     "href": "schedule.html#week-05",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 05",
     "text": "Week 05\nPerceptual foundations\n\nMon, Sep 21\n\nNO CLASS\n\n\nWed, Sep 23\nFrom stimulus to sensation\n\nRead:\n\nCairo (2013), Chapter 5, PDF on Canvas\n\nSlides\n\n\n\nFri, Sep 25\nWork Session: More ggplot\n\n Due Exercise 02 |  Canvas dropbox |\nTutorial",
     "crumbs": [
@@ -4059,7 +4332,7 @@
   {
     "objectID": "schedule.html#week-06",
     "href": "schedule.html#week-06",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 06",
     "text": "Week 06\nVisual perception and cognition\n\nMon, Sep 28\nFrom sensation to perception\n\nRead:\n\nCairo (2013), Chapter 6, PDF on Canvas\nFew (2004), Chapter 5, PDF on Canvas\n\nOptional:\n\nCleveland & McGill (1984)\n\n\nSlides\n\n\n\nWed, Sep 30\nFrom cognition to understanding\n\nRead:\n\nFranconeri, Padilla, Shah, Zacks, & Hullman (2021), pp. 109-122, PDF on Canvas\nCairo (2013), Chapter 7, PDF on Canvas\n\nAssigned: Final Project proposal\nSlides\n\n\n\nFri, Oct 02\nWork Session: Visualizing sports data\n\n Due Exercise-03 |  Canvas dropbox ](https://psu.instructure.com/courses/2484925/assignments/18448437) |\nTutorial\nSlides",
     "crumbs": [
@@ -4069,7 +4342,7 @@
   {
     "objectID": "schedule.html#week-07",
     "href": "schedule.html#week-07",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 07",
     "text": "Week 07\n\nMon, Oct 05\nWork session: Making figures on your own I\n\nSlides\n\n\n\n\n\n\nWed, Oct 07\nWork session: Making figures on your own II\n\nSlides\n\n\n\nFri, Oct 09\nWork Session\n\nSlides",
     "crumbs": [
@@ -4079,7 +4352,7 @@
   {
     "objectID": "schedule.html#week-08",
     "href": "schedule.html#week-08",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 08",
     "text": "Week 08\n\nMon, Oct 12\nCritiquing figures\n\nRead:\n\nTufte (2001), Chapter 1, PDF on Canvas\nTufte (2001), Chapter 2, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 14\nStorytelling with data\n\nRead:\n\nKnaflic (2015), pp. ix-33, PDF on Canvas\nKnaflic (2015), pp. 33-69, PDF on Canvas\n\nSkim: Woodside, Sood, & Miller (2008), PDF on Canvas\nAssigned: Exercise-05\nSlides\n\n\n\nFri, Oct 16\nWork Session: Making data tidy\n\n Due Exercise-04 |  Canvas dropbox |\n Due Final Project proposal |  Canvas dropbox\nTutorial",
     "crumbs": [
@@ -4089,7 +4362,7 @@
   {
     "objectID": "schedule.html#week-09",
     "href": "schedule.html#week-09",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 09",
     "text": "Week 09\nVisualizing spatial data\n\nMon, Oct 19\nMap-making\n\nRead:\n\nWilke (2019), Chapter 15, PDF on Canvas\n\nSlides\n\n\n\nWed, Oct 21\n\nAssigned: Exercise-06 |  Canvas dropbox\nSlides\n\n\n\nFri, Oct 23\nWork Session\n\nExercise-05\nExercise-06\nTutorial\nSlides",
     "crumbs": [
@@ -4099,7 +4372,7 @@
   {
     "objectID": "schedule.html#week-10",
     "href": "schedule.html#week-10",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 10",
     "text": "Week 10\nTurning the table(s)\n\nMon, Oct 26\nTables in (mostly) Base R\n\nSlides\n\n\n\nWed, Oct 28\ngt and knitr::kable\n\nSlides\n\n\n\nFri, Oct 30\nWork Session\n\n Due Exercise-05 |  Canvas dropbox\nSlides",
     "crumbs": [
@@ -4109,7 +4382,7 @@
   {
     "objectID": "schedule.html#week-11",
     "href": "schedule.html#week-11",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 11",
     "text": "Week 11\nData viz in policy & politics\n\nMon, Nov 02\n\nSlides\n\n\n\nWed, Nov 04\n\nSlides\n\n\n\nFri, Nov 06",
     "crumbs": [
@@ -4119,7 +4392,7 @@
   {
     "objectID": "schedule.html#week-12",
     "href": "schedule.html#week-12",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 12",
     "text": "Week 12\n\nMon, Nov 09\nExploring data\n\nRead:\n\nTukey (1977), Chapter 1, PDF on Canvas\n\nSlides\n\n\n\nWed, Nov 11\nCommunicating uncertainty and risk\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nFri, Nov 13\nWork Session: TidyTuesday\n\nSlides",
     "crumbs": [
@@ -4129,7 +4402,7 @@
   {
     "objectID": "schedule.html#week-13",
     "href": "schedule.html#week-13",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 13",
     "text": "Week 13\nData viz and quantitative inference\n\nMon, Nov 16\nSynthesize before you analyze\n\nSlides\n Due Exercise-06 |  Canvas dropbox\n\n\n\nWed, Nov 18\nSample size, effect size, statistical power\n\nSlides\n\n\n\nFri, Nov 20\nWork Session: Final projects",
     "crumbs": [
@@ -4139,7 +4412,7 @@
   {
     "objectID": "schedule.html#thanksgiving-break",
     "href": "schedule.html#thanksgiving-break",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Thanksgiving Break",
     "text": "Thanksgiving Break\nNO CLASS",
     "crumbs": [
@@ -4149,7 +4422,7 @@
   {
     "objectID": "schedule.html#week-14",
     "href": "schedule.html#week-14",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 14",
     "text": "Week 14\n\nMon, Nov 30\nMaking data dashboards and apps\n\nExplore:\n\nKohler (2024)\n\nSlides\n\n\n\nWed, Dec 02\nWork Session: Final projects\n\n\nFri, Dec 04\nWork Session: Final projects",
     "crumbs": [
@@ -4159,7 +4432,7 @@
   {
     "objectID": "schedule.html#week-15",
     "href": "schedule.html#week-15",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Week 15",
     "text": "Week 15\n\nMon, Dec 07\nFinal Project Presentations\n\n\nWed, Dec 09\nFinal Project Presentations\n\n\nFri, Dec 11\nFinal Project Presentations",
     "crumbs": [
@@ -4169,7 +4442,7 @@
   {
     "objectID": "schedule.html#finals-week",
     "href": "schedule.html#finals-week",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Finals Week",
     "text": "Finals Week\n\nWed, Dec 16\n\n Due Final project write-up |  Canvas dropbox",
     "crumbs": [
@@ -4179,7 +4452,7 @@
   {
     "objectID": "schedule.html#footnotes",
     "href": "schedule.html#footnotes",
-    "title": "Home",
+    "title": "Schedule",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nWe won’t use Python in this course, but the basic ideas apply to Python and R.↩︎",
     "crumbs": [
@@ -7842,221 +8115,352 @@
     ]
   },
   {
+    "objectID": "slides/wk-10-2026-10-28-tables-II.html#more-sleep",
+    "href": "slides/wk-10-2026-10-28-tables-II.html#more-sleep",
+    "title": "More tables",
+    "section": "More sleep",
+    "text": "More sleep\n\n\n\n\n\n\nFigure 1: CDC (2025)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
+  },
+  {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#announcements",
     "href": "slides/wk-10-2026-10-28-tables-II.html#announcements",
     "title": "More tables",
     "section": "Announcements",
-    "text": "Announcements\n\nExercise-05 |  Canvas dropbox  Due on Friday, October 30, 2026.\nExercise-06 |  Canvas dropbox  due on Monday, November 16, 2026."
+    "text": "Announcements\n\nExercise-05 |  Canvas dropbox  Due on Friday, October 30, 2026.\nExercise-06 |  Canvas dropbox  due on Monday, November 16, 2026.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#todays-topics",
     "href": "slides/wk-10-2026-10-28-tables-II.html#todays-topics",
     "title": "More tables",
     "section": "Today’s topics",
-    "text": "Today’s topics\n\nMaking (better) tables"
+    "text": "Today’s topics\n\nMaking (better) tables",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#package-gt",
     "href": "slides/wk-10-2026-10-28-tables-II.html#package-gt",
     "title": "More tables",
     "section": "Package gt",
-    "text": "Package gt\n\n\n\n\n\n\nFigure 3: https://gt.rstudio.com"
+    "text": "Package gt\n\n\n\n\n\n\nFigure 3: https://gt.rstudio.com",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#gt-tutorial",
     "href": "slides/wk-10-2026-10-28-tables-II.html#gt-tutorial",
     "title": "More tables",
     "section": "gt tutorial",
-    "text": "gt tutorial\n\nGather data\nFormat it as a ‘tibble’, a special type of data frame\n\nhttps://gt.rstudio.com/articles/gt.html"
+    "text": "gt tutorial\n\nGather data\nFormat it as a ‘tibble’, a special type of data frame\n\nhttps://gt.rstudio.com/articles/gt.html",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#setup",
     "href": "slides/wk-10-2026-10-28-tables-II.html#setup",
     "title": "More tables",
     "section": "Setup",
-    "text": "Setup\n\nlibrary(gt)\nlibrary(dplyr)\nlibrary(tibble)"
+    "text": "Setup\n\nlibrary(gt)\nlibrary(dplyr)\nlibrary(tibble)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#gathering-formatting",
     "href": "slides/wk-10-2026-10-28-tables-II.html#gathering-formatting",
     "title": "More tables",
     "section": "Gathering & formatting",
-    "text": "Gathering & formatting\n\nislands_tbl &lt;-\n  tibble(\n    name = names(islands),\n    size = islands\n  ) |&gt;\n  slice_max(size, n = 10)"
+    "text": "Gathering & formatting\n\nislands_tbl &lt;-\n  tibble(\n    name = names(islands),\n    size = islands\n  ) |&gt;\n  slice_max(size, n = 10)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#inspecting",
     "href": "slides/wk-10-2026-10-28-tables-II.html#inspecting",
     "title": "More tables",
     "section": "Inspecting",
-    "text": "Inspecting\n\nislands_tbl\n\n# A tibble: 10 × 2\n   name           size\n   &lt;chr&gt;         &lt;dbl&gt;\n 1 Asia          16988\n 2 Africa        11506\n 3 North America  9390\n 4 South America  6795\n 5 Antarctica     5500\n 6 Europe         3745\n 7 Australia      2968\n 8 Greenland       840\n 9 New Guinea      306\n10 Borneo          280"
+    "text": "Inspecting\n\nislands_tbl\n\n# A tibble: 10 × 2\n   name           size\n   &lt;chr&gt;         &lt;dbl&gt;\n 1 Asia          16988\n 2 Africa        11506\n 3 North America  9390\n 4 South America  6795\n 5 Antarctica     5500\n 6 Europe         3745\n 7 Australia      2968\n 8 Greenland       840\n 9 New Guinea      306\n10 Borneo          280",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#display-islands",
     "href": "slides/wk-10-2026-10-28-tables-II.html#display-islands",
     "title": "More tables",
     "section": "Display islands",
-    "text": "Display islands\n\n# Create a display table showing ten of\n# the largest islands in the world\ngt_tbl &lt;- gt(islands_tbl)\n\n# Show the gt Table\ngt_tbl\n\n\nhttps://gt.rstudio.com/articles/gt.html"
+    "text": "Display islands\n\n# Create a display table showing ten of\n# the largest islands in the world\ngt_tbl &lt;- gt(islands_tbl)\n\n# Show the gt Table\ngt_tbl\n\n\nhttps://gt.rstudio.com/articles/gt.html",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#display-islands-output",
     "href": "slides/wk-10-2026-10-28-tables-II.html#display-islands-output",
     "title": "More tables",
     "section": "Display islands",
-    "text": "Display islands\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280"
+    "text": "Display islands\n\n\n\nTable 1\n\n\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header",
     "href": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header",
     "title": "More tables",
     "section": "Adorn the table: Header",
-    "text": "Adorn the table: Header\n\n# Make a display table with the `islands_tbl`\n# table; put a heading just above the column labels\ngt_tbl &lt;-\n  gt_tbl |&gt;\n  tab_header(\n    title = \"Large Landmasses of the World\",\n    subtitle = \"The top ten largest are presented\"\n  )\n\n# Show the gt Table\ngt_tbl"
+    "text": "Adorn the table: Header\n\n# Make a display table with the `islands_tbl`\n# table; put a heading just above the column labels\ngt_tbl &lt;-\n  gt_tbl |&gt;\n  tab_header(\n    title = \"Large Landmasses of the World\",\n    subtitle = \"The top ten largest are presented\"\n  )\n\n# Show the gt Table\ngt_tbl",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header-output",
     "href": "slides/wk-10-2026-10-28-tables-II.html#adorn-the-table-header-output",
     "title": "More tables",
     "section": "Adorn the table: Header",
-    "text": "Adorn the table: Header\n\n\n\nTable 2: A table of the ‘islands’ data with a header.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top ten largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280"
+    "text": "Adorn the table: Header\n\n\n\nTable 2: A table of the ‘islands’ data with a header.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top ten largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#an-aside-about-markdown",
     "href": "slides/wk-10-2026-10-28-tables-II.html#an-aside-about-markdown",
     "title": "More tables",
     "section": "An aside about markdown",
-    "text": "An aside about markdown\nHere is some text in *italics*.\nHere is some text in **boldface**.\nHere is some text with ~~strike-through formatting.~~ \nHere is a footnote^[Some additional information.]\n\nHere is some text in italics.\nHere is some text in boldface.\nHere is some text with strike-through formatting.\nHere is a footnote1"
+    "text": "An aside about markdown\nHere is some text in *italics*.\nHere is some text in **boldface**.\nHere is some text with ~~strike-through formatting.~~ \nHere is a footnote^[Some additional information.]\n\nHere is some text in italics.\nHere is some text in boldface.\nHere is some text with strike-through formatting.\nHere is a footnote1",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#style-the-header",
     "href": "slides/wk-10-2026-10-28-tables-II.html#style-the-header",
     "title": "More tables",
     "section": "Style the header",
-    "text": "Style the header\n\n# Use markdown for the heading's `title` and `subtitle` to\n# add bold and italicized characters\ngt(islands_tbl[1:2, ]) |&gt;\n  tab_header(\n    title = md(\"**Large Landmasses of the World**\"),\n    subtitle = md(\"The *top two* largest are presented\")\n  )"
+    "text": "Style the header\n\n# Use markdown for the heading's `title` and `subtitle` to\n# add bold and italicized characters\ngt(islands_tbl[1:2, ]) |&gt;\n  tab_header(\n    title = md(\"**Large Landmasses of the World**\"),\n    subtitle = md(\"The *top two* largest are presented\")\n  )",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#style-the-header-output",
     "href": "slides/wk-10-2026-10-28-tables-II.html#style-the-header-output",
     "title": "More tables",
     "section": "Style the header",
-    "text": "Style the header\n\n\n\nTable 3: A table of the ‘islands’ data with a header styled using markdown. Notice that the title is in boldface and the subtitle has some words in italics.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top two largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506"
+    "text": "Style the header\n\n\n\nTable 3: A table of the ‘islands’ data with a header styled using markdown. Notice that the title is in boldface and the subtitle has some words in italics.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top two largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#wait-a-second",
     "href": "slides/wk-10-2026-10-28-tables-II.html#wait-a-second",
     "title": "More tables",
     "section": "Wait a second",
-    "text": "Wait a second\n\nWhat does that square brackets business do?\n\n\n\n\ngt(islands_tbl)\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280\n\n\n\n\n\n\n\n\n\ngt(islands_tbl[1:2, ])\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506"
+    "text": "Wait a second\n\nWhat does that square brackets business do?\n\n\n\n\ngt(islands_tbl)\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280\n\n\n\n\n\n\n\n\n\ngt(islands_tbl[1:2, ])\n\n\n\n\n\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note",
     "href": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note",
     "title": "More tables",
     "section": "Add a source note",
-    "text": "Add a source note\n\n# Display the `islands_tbl` data with a heading and\n# two source notes\ngt_tbl &lt;-\n  gt_tbl |&gt;\n  tab_source_note(\n    source_note = \"Source: The World Almanac and Book of Facts, 1975, page 406.\"\n  ) |&gt;\n  tab_source_note(\n    source_note = md(\"Reference: McNeil, D. R. (1977) *Interactive Data Analysis*. Wiley.\")\n  )\n\n# Show the gt table\ngt_tbl"
+    "text": "Add a source note\n\n# Display the `islands_tbl` data with a heading and\n# two source notes\ngt_tbl &lt;-\n  gt_tbl |&gt;\n  tab_source_note(\n    source_note = \"Source: The World Almanac and Book of Facts, 1975, page 406.\"\n  ) |&gt;\n  tab_source_note(\n    source_note = md(\"Reference: McNeil, D. R. (1977) *Interactive Data Analysis*. Wiley.\")\n  )\n\n# Show the gt table\ngt_tbl",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note-output",
     "href": "slides/wk-10-2026-10-28-tables-II.html#add-a-source-note-output",
     "title": "More tables",
     "section": "Add a source note",
-    "text": "Add a source note\n\n\n\nTable 4: A table of the ‘islands’ data with a source note.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top ten largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280\n\n\n\nSource: The World Almanac and Book of Facts, 1975, page 406.\n\n\nReference: McNeil, D. R. (1977) Interactive Data Analysis. Wiley."
+    "text": "Add a source note\n\n\n\nTable 4: A table of the ‘islands’ data with a source note.\n\n\n\n\n\n\n\n\n\nLarge Landmasses of the World\n\n\nThe top ten largest are presented\n\n\nname\nsize\n\n\n\n\nAsia\n16988\n\n\nAfrica\n11506\n\n\nNorth America\n9390\n\n\nSouth America\n6795\n\n\nAntarctica\n5500\n\n\nEurope\n3745\n\n\nAustralia\n2968\n\n\nGreenland\n840\n\n\nNew Guinea\n306\n\n\nBorneo\n280\n\n\n\nSource: The World Almanac and Book of Facts, 1975, page 406.\n\n\nReference: McNeil, D. R. (1977) Interactive Data Analysis. Wiley.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#another-example",
     "href": "slides/wk-10-2026-10-28-tables-II.html#another-example",
     "title": "More tables",
     "section": "Another example",
-    "text": "Another example\n\n\n\nPalmer penguins\nHorst et al. (2020)\n\n\n\n\n\nHorst et al. (2020)"
+    "text": "Another example\n\n\n\nPalmer penguins\nHorst et al. (2020)\n\n\n\n\n\nHorst et al. (2020)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#gathering-data-palmer-pe",
     "href": "slides/wk-10-2026-10-28-tables-II.html#gathering-data-palmer-pe",
     "title": "More tables",
     "section": "Gathering data: Palmer pe",
-    "text": "Gathering data: Palmer pe\n\npenguins |&gt; head()\n\n  species    island bill_len bill_dep flipper_len body_mass    sex year\n1  Adelie Torgersen     39.1     18.7         181      3750   male 2007\n2  Adelie Torgersen     39.5     17.4         186      3800 female 2007\n3  Adelie Torgersen     40.3     18.0         195      3250 female 2007\n4  Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007\n5  Adelie Torgersen     36.7     19.3         193      3450 female 2007\n6  Adelie Torgersen     39.3     20.6         190      3650   male 2007"
+    "text": "Gathering data: Palmer pe\n\npenguins |&gt; head()\n\n  species    island bill_len bill_dep flipper_len body_mass    sex year\n1  Adelie Torgersen     39.1     18.7         181      3750   male 2007\n2  Adelie Torgersen     39.5     17.4         186      3800 female 2007\n3  Adelie Torgersen     40.3     18.0         195      3250 female 2007\n4  Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007\n5  Adelie Torgersen     36.7     19.3         193      3450 female 2007\n6  Adelie Torgersen     39.3     20.6         190      3650   male 2007",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-summary",
     "href": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-summary",
     "title": "More tables",
     "section": "Exploring data: summary()",
-    "text": "Exploring data: summary()\n\nsummary(penguins)\n\n      species          island       bill_len        bill_dep    \n Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  \n Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  \n Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  \n                                 Mean   :43.92   Mean   :17.15  \n                                 3rd Qu.:48.50   3rd Qu.:18.70  \n                                 Max.   :59.60   Max.   :21.50  \n                                 NAs    :2       NAs    :2      \n  flipper_len      body_mass        sex           year     \n Min.   :172.0   Min.   :2700   female:165   Min.   :2007  \n 1st Qu.:190.0   1st Qu.:3550   male  :168   1st Qu.:2007  \n Median :197.0   Median :4050   NAs   : 11   Median :2008  \n Mean   :200.9   Mean   :4202                Mean   :2008  \n 3rd Qu.:213.0   3rd Qu.:4750                3rd Qu.:2009  \n Max.   :231.0   Max.   :6300                Max.   :2009  \n NAs    :2       NAs    :2"
+    "text": "Exploring data: summary()\n\nsummary(penguins)\n\n      species          island       bill_len        bill_dep    \n Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  \n Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  \n Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  \n                                 Mean   :43.92   Mean   :17.15  \n                                 3rd Qu.:48.50   3rd Qu.:18.70  \n                                 Max.   :59.60   Max.   :21.50  \n                                 NAs    :2       NAs    :2      \n  flipper_len      body_mass        sex           year     \n Min.   :172.0   Min.   :2700   female:165   Min.   :2007  \n 1st Qu.:190.0   1st Qu.:3550   male  :168   1st Qu.:2007  \n Median :197.0   Median :4050   NAs   : 11   Median :2008  \n Mean   :200.9   Mean   :4202                Mean   :2008  \n 3rd Qu.:213.0   3rd Qu.:4750                3rd Qu.:2009  \n Max.   :231.0   Max.   :6300                Max.   :2009  \n NAs    :2       NAs    :2",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-str",
     "href": "slides/wk-10-2026-10-28-tables-II.html#exploring-data-str",
     "title": "More tables",
     "section": "Exploring data: str()",
-    "text": "Exploring data: str()\n\nstr(penguins)\n\n'data.frame':   344 obs. of  8 variables:\n $ species    : Factor w/ 3 levels \"Adelie\",\"Chinstrap\",..: 1 1 1 1 1 1 1 1 1 1 ...\n $ island     : Factor w/ 3 levels \"Biscoe\",\"Dream\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ bill_len   : num  39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_dep   : num  18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_len: int  181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass  : int  3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...\n $ sex        : Factor w/ 2 levels \"female\",\"male\": 2 1 1 NA 1 2 1 2 NA NA ...\n $ year       : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ..."
+    "text": "Exploring data: str()\n\nstr(penguins)\n\n'data.frame':   344 obs. of  8 variables:\n $ species    : Factor w/ 3 levels \"Adelie\",\"Chinstrap\",..: 1 1 1 1 1 1 1 1 1 1 ...\n $ island     : Factor w/ 3 levels \"Biscoe\",\"Dream\",..: 3 3 3 3 3 3 3 3 3 3 ...\n $ bill_len   : num  39.1 39.5 40.3 NA 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_dep   : num  18.7 17.4 18 NA 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_len: int  181 186 195 NA 193 190 181 195 193 190 ...\n $ body_mass  : int  3750 3800 3250 NA 3450 3650 3625 4675 3475 4250 ...\n $ sex        : Factor w/ 2 levels \"female\",\"male\": 2 1 1 NA 1 2 1 2 NA NA ...\n $ year       : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#selecting-data",
     "href": "slides/wk-10-2026-10-28-tables-II.html#selecting-data",
     "title": "More tables",
     "section": "Selecting data",
-    "text": "Selecting data\n\nRemember, we often want a continuous variable and one or more discrete (nominal or ordinal) variables\n\n\npenquins_island_sex_mass &lt;- penguins |&gt;\n  select(island, body_mass, sex)"
+    "text": "Selecting data\n\nRemember, we often want a continuous variable and one or more discrete (nominal or ordinal) variables\n\n\npenquins_island_sex_mass &lt;- penguins |&gt;\n  select(island, body_mass, sex)",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#summarize",
     "href": "slides/wk-10-2026-10-28-tables-II.html#summarize",
     "title": "More tables",
     "section": "Summarize",
-    "text": "Summarize\n\npenguins_tbl &lt;- penquins_island_sex_mass |&gt;\n  group_by(sex) |&gt;\n  summarize(sample_n = n(),\n            mean = mean(body_mass),\n            median = median(body_mass),\n            min = min(body_mass),\n            max = max(body_mass)) |&gt;\n  gt()"
+    "text": "Summarize\n\npenguins_tbl &lt;- penquins_island_sex_mass |&gt;\n  group_by(sex) |&gt;\n  summarize(sample_n = n(),\n            mean = mean(body_mass),\n            median = median(body_mass),\n            min = min(body_mass),\n            max = max(body_mass)) |&gt;\n  gt()",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table",
     "href": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table",
     "title": "More tables",
     "section": "Plot the table",
-    "text": "Plot the table\n\npenguins_gt_tbl &lt;- penguins_tbl |&gt;\n  tab_header(\n    title = \"Penguin mass by sex\",\n    subtitle = \"This table needs a figure, don't you think?\"\n  )\n\n# Show the gt Table\npenguins_gt_tbl"
+    "text": "Plot the table\n\npenguins_gt_tbl &lt;- penguins_tbl |&gt;\n  tab_header(\n    title = \"Penguin mass by sex\",\n    subtitle = \"This table needs a figure, don't you think?\"\n  )\n\n# Show the gt Table\npenguins_gt_tbl",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table-output",
     "href": "slides/wk-10-2026-10-28-tables-II.html#plot-the-table-output",
     "title": "More tables",
     "section": "Plot the table",
-    "text": "Plot the table\n\n\n\nTable 5: A summary table from the penguins dataset. Inspired by the gt package demo.\n\n\n\n\n\n\n\n\n\nPenguin mass by sex\n\n\nThis table needs a figure, don't you think?\n\n\nsex\nsample_n\nmean\nmedian\nmin\nmax\n\n\n\n\nfemale\n165\n3862.273\n3650\n2700\n5200\n\n\nmale\n168\n4545.685\n4300\n3250\n6300\n\n\nNA\n11\nNA\nNA\nNA\nNA"
+    "text": "Plot the table\n\n\n\nTable 5: A summary table from the penguins dataset. Inspired by the gt package demo.\n\n\n\n\n\n\n\n\n\nPenguin mass by sex\n\n\nThis table needs a figure, don't you think?\n\n\nsex\nsample_n\nmean\nmedian\nmin\nmax\n\n\n\n\nfemale\n165\n3862.273\n3650\n2700\n5200\n\n\nmale\n168\n4545.685\n4300\n3250\n6300\n\n\nNA\n11\nNA\nNA\nNA\nNA",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#main-points",
     "href": "slides/wk-10-2026-10-28-tables-II.html#main-points",
     "title": "More tables",
     "section": "Main points",
-    "text": "Main points\n\nTables can be informative accompaniments to figures; sometimes more informative than figures.\nData frames (or their cousins tibbles) are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; gt makes it possible\nScripting the generation of tables makes them less error-prone"
+    "text": "Main points\n\nTables can be informative accompaniments to figures; sometimes more informative than figures.\nData frames (or their cousins tibbles) are useful and flexible structures for making both\nThink about the kind of table you want to produce\nMaking pretty tables in R can be done; gt makes it possible\nScripting the generation of tables makes them less error-prone",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#next-time",
     "href": "slides/wk-10-2026-10-28-tables-II.html#next-time",
     "title": "More tables",
     "section": "Next time",
-    "text": "Next time\n\nWork session"
+    "text": "Next time\n\nWork session",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#about",
     "href": "slides/wk-10-2026-10-28-tables-II.html#about",
     "title": "More tables",
     "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#references",
     "href": "slides/wk-10-2026-10-28-tables-II.html#references",
     "title": "More tables",
     "section": "References",
-    "text": "References\n\n\n\n\nCDC. 2025. “About Sleep.” February 12. https://www.cdc.gov/sleep/about/index.html.\n\n\nHorst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. https://doi.org/10.5281/zenodo.3960218."
+    "text": "References\n\n\n\n\nCDC. 2025. “About Sleep.” February 12. https://www.cdc.gov/sleep/about/index.html.\n\n\nHorst, Allison Marie, Alison Presmanes Hill, and Kristen B Gorman. 2020. Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data. https://doi.org/10.5281/zenodo.3960218.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-10-2026-10-28-tables-II.html#footnotes",
     "href": "slides/wk-10-2026-10-28-tables-II.html#footnotes",
     "title": "More tables",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nSome additional information."
+    "text": "Footnotes\n\n\nSome additional information.",
+    "crumbs": [
+      "Slides",
+      "Wk 10 • Wed Oct 28"
+    ]
   },
   {
     "objectID": "slides/wk-11-2026-11-02-voting.html#announcements",
     "href": "slides/wk-11-2026-11-02-voting.html#announcements",
     "title": "Visualizing election-related data",
-    "section": "",
-    "text": "Exercise-06 |  Canvas dropbox due Monday, November 16, 2026."
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026."
   },
   {
     "objectID": "slides/wk-11-2026-11-02-voting.html#last-time",
@@ -8069,8 +8473,8 @@
     "objectID": "slides/wk-11-2026-11-02-voting.html#todays-topics",
     "href": "slides/wk-11-2026-11-02-voting.html#todays-topics",
     "title": "Visualizing election-related data",
-    "section": "",
-    "text": "Voter registration\nPopulation\nPresidential approval"
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nVoter registration\nPopulation\nPresidential approval"
   },
   {
     "objectID": "slides/wk-11-2026-11-02-voting.html#republicans",
@@ -8112,7 +8516,7 @@
     "href": "slides/wk-11-2026-11-02-voting.html#young-people-registrations",
     "title": "Visualizing election-related data",
     "section": "Young people registrations",
-    "text": "Young people registrations\n\n\n\n\n\n\nFigure 6: Brill, Zack, & Martin-Gonzalez (2026)"
+    "text": "Young people registrations\n\n\n\n\n\n\nFigure 6: Brill et al. (2026)"
   },
   {
     "objectID": "slides/wk-11-2026-11-02-voting.html#section",
@@ -8126,21 +8530,42 @@
     "href": "slides/wk-11-2026-11-02-voting.html#why",
     "title": "Visualizing election-related data",
     "section": "Why?",
-    "text": "Why?\n\n\n…it’s not the young people’s fault, said Laura Brill, CEO and Founder of The Civics Center.\n\n\n\n\n“It’s not that young people in Michigan are so much more impassioned and and inherently organized than young people in Pennsylvania,” Brill said. “It’s that they’re involved in different systems and [have] different supports to help them do it.”\n\n\n\n\n“Half of U.S. teens live in states where they can preregister at age 16, and what we are definitely seeing is that states with preregistration have higher registration rates for 18-year-olds, just because there’s a bigger on-ramp for people to learn about it,” she said."
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-02-voting.html#population",
-    "href": "slides/wk-11-2026-11-02-voting.html#population",
-    "title": "Visualizing election-related data",
-    "section": "Population",
-    "text": "Population\n\n\n\n\n\n\nFigure 7: Pyramids (n.d.)"
+    "text": "Why?\n\n\n…it’s not the young people’s fault, said Laura Brill, CEO and Founder of The Civics Center.\n\n\n\n\n“It’s not that young people in Michigan are so much more impassioned and and inherently organized than young people in Pennsylvania,” Brill said. “It’s that they’re involved in different systems and [have] different supports to help them do it.”"
   },
   {
     "objectID": "slides/wk-11-2026-11-02-voting.html#population-changes",
     "href": "slides/wk-11-2026-11-02-voting.html#population-changes",
     "title": "Visualizing election-related data",
     "section": "Population changes",
-    "text": "Population changes\n\n\n\n\n\n\nFigure 8: “Population change for pennsylvania counties, 2020-2025” (n.d.)"
+    "text": "Population changes\n\n\n\n\n\n\nFigure 8: “Population Change for Pennsylvania Counties, 2020-2025” (n.d.)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#presidential-approval-ratings",
+    "href": "slides/wk-11-2026-11-02-voting.html#presidential-approval-ratings",
+    "title": "Visualizing election-related data",
+    "section": "Presidential approval ratings",
+    "text": "Presidential approval ratings\n\n\n\n\n\n\nFigure 9: https://www.cookpolitical.com/survey-research/cpr-polltracker/trump-trendlines"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#vs.-biden-obama",
+    "href": "slides/wk-11-2026-11-02-voting.html#vs.-biden-obama",
+    "title": "Visualizing election-related data",
+    "section": "vs. Biden & Obama",
+    "text": "vs. Biden & Obama\n\n\n\n\n\n\nFigure 10: https://ropercenter.cornell.edu/presidential-approval/builder"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#a-broader-lens",
+    "href": "slides/wk-11-2026-11-02-voting.html#a-broader-lens",
+    "title": "Visualizing election-related data",
+    "section": "A broader lens",
+    "text": "A broader lens\n\n\n\n\n\n\nFigure 11: https://ropercenter.cornell.edu/presidential-approval/highslows"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-02-voting.html#in-the-news",
+    "href": "slides/wk-11-2026-11-02-voting.html#in-the-news",
+    "title": "Visualizing election-related data",
+    "section": "In the news…",
+    "text": "In the news…\n\n\n\n\n\n\nFigure 13: Bidgood (2026)"
   },
   {
     "objectID": "slides/wk-11-2026-11-02-voting.html#next-time",
@@ -8161,7 +8586,49 @@
     "href": "slides/wk-11-2026-11-02-voting.html#references",
     "title": "Visualizing election-related data",
     "section": "References",
-    "text": "References\n\n\n\n\nBrill, Laura, Andy Zack, and Tadea Martin-Gonzalez. 2026. “New Findings from the Civics Center Show 18-Year-Olds Are Massively Under-Registered Heading into the Midterms. Wide Disparities Exist Among States.” June 25. https://www.thecivicscenter.org/research/18-year-old-voter-registration-rates.\n\n\nHarris, Alexandra. 2025. “Tracking Pennsylvania Voter Registration Trends.” November 3. https://www.spotlightpa.org/pennsylvania-voter-registration/.\n\n\n“Population Change for Pennsylvania Counties, 2020-2025.” n.d. Accessed October 23, 2026. https://datawrapper.dwcdn.net/n4QDM/5/.\n\n\nPyramids, Population. n.d. “Pennsylvania Population by Age and Sex, 2000 to 2025.” Population Pyramids. Accessed October 23, 2026. https://www.populationpyramids.org/states/pennsylvania.\n\n\nWalker, Carter. 2026. “Pennsylvania Ranks Last in New Study of 18-Year-Olds’ Voter Registration Rates.” July 20. https://www.spotlightpa.org/news/2026/07/student-voter-registration-rates-lowest-civics-center-study-elections/."
+    "text": "References\n\n\n\n\nBidgood, Jess. 2026. “Discovery of New Fake Polls Puts a Spotlight on Trust in Surveys.” In The New York Times. The New York Times. https://www.nytimes.com/2026/10/21/us/midterm-election-fake-polling-wedgewood.html.\n\n\nBrill, Laura, Andy Zack, and Tadea Martin-Gonzalez. 2026. “New Findings from the Civics Center Show 18-Year-Olds Are Massively Under-Registered Heading into the Midterms. Wide Disparities Exist Among States.” June 25. https://www.thecivicscenter.org/research/18-year-old-voter-registration-rates.\n\n\nHarris, Alexandra. 2025. “Tracking Pennsylvania Voter Registration Trends.” November 3. https://www.spotlightpa.org/pennsylvania-voter-registration/.\n\n\n“Population Change for Pennsylvania Counties, 2020-2025.” n.d. Accessed October 23, 2026. https://datawrapper.dwcdn.net/n4QDM/5/.\n\n\nPyramids, Population. n.d. “Pennsylvania Population by Age and Sex, 2000 to 2025.” Population Pyramids. Accessed October 23, 2026. https://www.populationpyramids.org/states/pennsylvania.\n\n\nWalker, Carter. 2026. “Pennsylvania Ranks Last in New Study of 18-Year-Olds’ Voter Registration Rates.” July 20. https://www.spotlightpa.org/news/2026/07/student-voter-registration-rates-lowest-civics-center-study-elections/."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#in-the-news",
+    "href": "slides/wk-11-2026-11-06-work-session.html#in-the-news",
+    "title": "Work session",
+    "section": "In the news…",
+    "text": "In the news…\n\n\n\nTavernise et al. (2026)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#announcements",
+    "href": "slides/wk-11-2026-11-06-work-session.html#announcements",
+    "title": "Work session",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#todays-topics",
+    "href": "slides/wk-11-2026-11-06-work-session.html#todays-topics",
+    "title": "Work session",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWork session\n\nExercise-06\nFinal projects"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#next-time",
+    "href": "slides/wk-11-2026-11-06-work-session.html#next-time",
+    "title": "Work session",
+    "section": "Next time",
+    "text": "Next time"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#about",
+    "href": "slides/wk-11-2026-11-06-work-session.html#about",
+    "title": "Work session",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#references",
+    "href": "slides/wk-11-2026-11-06-work-session.html#references",
+    "title": "Work session",
+    "section": "References",
+    "text": "References\n\n\n\n\nTavernise, Sabrina, Eden Weingart, Nico Chilla, Georgia Gee, and Steven Rich. 2026. “Life Feeling Too Expensive? It’s Not Just You. And It’s Not Just Inflation.” In The New York Times. The New York Times. https://www.nytimes.com/interactive/2026/10/21/us/inflation-prices-real-estate-child-care-affordabilty.html."
   },
   {
     "objectID": "supplemental/other-field-figs.html",
@@ -8189,7 +8656,7 @@
     "href": "supplemental/other-field-figs.html#preparation",
     "title": "Findings: Data viz outside psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x8257a88c8&gt;\n&lt;environment: 0x8257a85f0&gt;"
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x82938b2a0&gt;\n&lt;environment: 0x82938afc8&gt;"
   },
   {
     "objectID": "supplemental/other-field-figs.html#gathering",
@@ -8632,198 +9099,6 @@
     "crumbs": [
       "Tutorials",
       "Visualizing sports data"
-    ]
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-02-voting.html#presidential-approval-ratings",
-    "href": "slides/wk-11-2026-11-02-voting.html#presidential-approval-ratings",
-    "title": "Visualizing election-related data",
-    "section": "Presidential approval ratings",
-    "text": "Presidential approval ratings\n\n\n\n\n\n\nFigure 9: https://www.cookpolitical.com/survey-research/cpr-polltracker/trump-trendlines"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-02-voting.html#vs.-biden-obama",
-    "href": "slides/wk-11-2026-11-02-voting.html#vs.-biden-obama",
-    "title": "Visualizing election-related data",
-    "section": "vs. Biden & Obama",
-    "text": "vs. Biden & Obama\n\n\n\n\n\n\nFigure 10: https://ropercenter.cornell.edu/presidential-approval/builder"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-02-voting.html#a-broader-lens",
-    "href": "slides/wk-11-2026-11-02-voting.html#a-broader-lens",
-    "title": "Visualizing election-related data",
-    "section": "A broader lens",
-    "text": "A broader lens\n\n\n\n\n\n\nFigure 11: https://ropercenter.cornell.edu/presidential-approval/highslows\n\n\n\n\n\n\nCode\nlibrary(ggplot2)\n\n\n\n\nCode\ngooglesheets4::gs4_auth(email = Sys.getenv(\"GMAIL_ROG\"))\nprez_approval_df &lt;- googledrive::drive_get(\"psych-490.007-2026-fall-presidential-approval\") |&gt;\n  googlesheets4::read_sheet()\nreadr::write_csv(prez_approval_df, \"../include/csv/prez-approval.csv\")\n\n\n\nprez_approval_df &lt;- readr::read_csv(\"../include/csv/prez-approval.csv\")\n\nRows: 18 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (3): president, type, party\ndbl  (1): approval\ndttm (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nprez_approval_df |&gt;\n  dplyr::mutate(date = lubridate::as_date(date)) |&gt;\n  ggplot()  +\n  aes(x = date, y = approval) +\n  geom_point() +\n  geom_line(aes(group = president, color = party)) +\n  geom_text(aes(label = president),\n            vjust = -0.5,\n            color = \"slategrey\") +\n  theme_classic() +\n  xlab(\"Year\") +\n  ylab(\"Approval %\") +\n  ylim(0, 100) +\n  labs(title = \"Highest and lowest U.S. presidential approval ratings\",\n       subtitle = \"Ford to Trump\",\n       caption = \"Does not include current Trump term.\")\n\n\n\n\n\n\n\nFigure 12: All presidents but Clinton experienced their highest approval ratings before the lowest."
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#maps",
-    "href": "slides/wk-10-2026-10-26-tables.html#maps",
-    "title": "Making tables",
-    "section": "Maps!",
-    "text": "Maps!\n\n\n\n\n\n\n\n\nFigure 1: CDC (2025)\n\n\n\n\n\n\n\n\n\n\nFigure 2: CDC (2025)"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#section",
-    "href": "slides/wk-10-2026-10-26-tables.html#section",
-    "title": "Making tables",
-    "section": "",
-    "text": "Government of Canada and Canada (2026)"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-28-tables-II.html#more-sleep",
-    "href": "slides/wk-10-2026-10-28-tables-II.html#more-sleep",
-    "title": "More tables",
-    "section": "More sleep",
-    "text": "More sleep\n\n\n\n\n\n\nFigure 1: CDC (2025)"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#announcements",
-    "href": "slides/wk-11-2026-11-04-policy.html#announcements",
-    "title": "Visualizing policy-related data",
-    "section": "Announcements",
-    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026."
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#last-time",
-    "href": "slides/wk-11-2026-11-04-policy.html#last-time",
-    "title": "Visualizing policy-related data",
-    "section": "Last time…",
-    "text": "Last time…\n\nVoter registration\nPopulation\nPresidential approval"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#todays-topics",
-    "href": "slides/wk-11-2026-11-04-policy.html#todays-topics",
-    "title": "Visualizing policy-related data",
-    "section": "Today’s topics",
-    "text": "Today’s topics\n\nWhat matters most?"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
-    "href": "slides/wk-11-2026-11-04-policy.html#harvard-youth-poll",
-    "title": "Visualizing policy-related data",
-    "section": "Harvard Youth Poll",
-    "text": "Harvard Youth Poll\n\nThis poll of 2,024 18-to-29-year-olds was organized with undergraduate students from the Harvard Public Opinion Project (HPOP) and supervised by John Della Volpe, Director of Polling. Ipsos Public Affairs collected data using the KnowledgePanel1.\n\nhttps://iop.harvard.edu/youth-poll/53rd-edition-fall-2026#toc-4"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
-    "href": "slides/wk-11-2026-11-04-policy.html#yale-youth-poll",
-    "title": "Visualizing policy-related data",
-    "section": "Yale Youth Poll",
-    "text": "Yale Youth Poll\n\nResults from survey of 3,429 registered voters, including 2,008 voters aged 18-34, enabling a comparison of young voters to the electorate as a whole. Full results available on the Spring 2026 Results page.\n\n– https://youthpoll.yale.edu"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#unknownunknown-ce",
-    "href": "slides/wk-11-2026-11-04-policy.html#unknownunknown-ce",
-    "title": "Visualizing policy-related data",
-    "section": "",
-    "text": "Voters care least about Israel and Palestine (28%), Ukraine and Russia (27%), China (27%), artificial intelligence (24%), acceptance of gay people (22%), and acceptance of transgender people (19%), despite the prominence of these issues in the news."
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#next-time",
-    "href": "slides/wk-11-2026-11-04-policy.html#next-time",
-    "title": "Visualizing policy-related data",
-    "section": "Next time",
-    "text": "Next time\n\nWork session"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#about",
-    "href": "slides/wk-11-2026-11-04-policy.html#about",
-    "title": "Visualizing policy-related data",
-    "section": "About",
-    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.10.0.233.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#references",
-    "href": "slides/wk-11-2026-11-04-policy.html#references",
-    "title": "Visualizing policy-related data",
-    "section": "References",
-    "text": "References\n\n\n\n\n“53rd Edition - Fall 2026.” n.d. Accessed October 26, 2026. https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026.\n\n\n“Spring 2026 Results.” n.d. Accessed October 26, 2026. https://youthpoll.yale.edu/spring-2026-results."
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#section",
-    "href": "slides/wk-11-2026-11-04-policy.html#section",
-    "title": "Visualizing policy-related data",
-    "section": "",
-    "text": "“53rd Edition - Fall 2026” (n.d.)"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-02-voting.html",
-    "href": "slides/wk-11-2026-11-02-voting.html",
-    "title": "Visualizing election-related data",
-    "section": "",
-    "text": "Exercise-06 |  Canvas dropbox due Monday, November 16, 2026.\n\n\n\n\n\n\n\n\nVoter registration\nPopulation\nPresidential approval"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#what-is-a-table",
-    "href": "slides/wk-10-2026-10-26-tables.html#what-is-a-table",
-    "title": "Making tables",
-    "section": "What is a table?",
-    "text": "What is a table?\n\n\n\n\n\nTables are visual displays composed of columns and rows in which numbers, text, or a combination of numbers and text are presented.\n\n\n\nFigure 4: “Table Setup” (n.d.)"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#apa-tables-how-to",
-    "href": "slides/wk-10-2026-10-26-tables.html#apa-tables-how-to",
-    "title": "Making tables",
-    "section": "APA tables: How to",
-    "text": "APA tables: How to\n\n\n\n“Table Setup” (n.d.)"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#apa-tables-anatomy",
-    "href": "slides/wk-10-2026-10-26-tables.html#apa-tables-anatomy",
-    "title": "Making tables",
-    "section": "APA tables: Anatomy",
-    "text": "APA tables: Anatomy\n\n\n\n\n\n\nFigure 9: “Table Setup” (n.d.)"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#requirements-for-reading-a-table",
-    "href": "slides/wk-10-2026-10-26-tables.html#requirements-for-reading-a-table",
-    "title": "Making tables",
-    "section": "Requirements for “reading” a table",
-    "text": "Requirements for “reading” a table\n\n\n\nStructural knowledge\n\nRows: Variables\nColumns: Types of data\n\nSequential visual scanning\n\n\n\nMemory\n\nVerbal (row, column labels)\nQuantitative (numeric values)\nSemantic"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#footnotes",
-    "href": "slides/wk-10-2026-10-26-tables.html#footnotes",
-    "title": "Making tables",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nDon’t put the &lt; or &gt; character. Use, for example, dplyr::select()."
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#requirements-for-reading-a-table-1",
-    "href": "slides/wk-10-2026-10-26-tables.html#requirements-for-reading-a-table-1",
-    "title": "Making tables",
-    "section": "Requirements for “reading” a table",
-    "text": "Requirements for “reading” a table\n\n\n\nHow would you explain how to answer questions about this table:\n\nWho has greater love for “The Lord of the Rings”?\nWhich group has greater variability?\n\n\n\n\n\n\nGroup\nLOTR_love\nrange\n\n\n\n\nNerds\n8.5\n[6-10]\n\n\nJocks\n6\n[2-10]"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#reading-a-table",
-    "href": "slides/wk-10-2026-10-26-tables.html#reading-a-table",
-    "title": "Making tables",
-    "section": "“Reading” a table",
-    "text": "“Reading” a table\n\n\n\nHow would you explain how to answer questions about this table:\n\nWho has greater love for “The Lord of the Rings”?\nWhich group has greater variability?\n\n\n\n\n\n\nGroup\nLOTR_love\nrange\n\n\n\n\nNerds\n8.5\n[6-10]\n\n\nJocks\n6\n[2-10]"
-  },
-  {
-    "objectID": "slides/wk-10-2026-10-26-tables.html#reading-a-table-1",
-    "href": "slides/wk-10-2026-10-26-tables.html#reading-a-table-1",
-    "title": "Making tables",
-    "section": "“Reading” a table",
-    "text": "“Reading” a table\n\n\n\nStructural knowledge\n\nRows: Variables\nColumns: Types of data\n\nSequential visual scanning\n\n\n\nMemory\n\nVerbal (row, column labels)\nQuantitative (numeric values)\nSemantic"
-  },
-  {
-    "objectID": "slides/wk-11-2026-11-04-policy.html#footnotes",
-    "href": "slides/wk-11-2026-11-04-policy.html#footnotes",
-    "title": "Visualizing policy-related data",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nhttps://www.ipsos.com/en-us/solutions/public-affairs/knowledgepanel"
-  },
-  {
-    "objectID": "schedule.html#references",
-    "href": "schedule.html#references",
-    "title": "Home",
-    "section": "References",
-    "text": "References\n\n\n\n\n{{&lt; include _index.qmd &gt;}}\n{{&lt; include _about.qmd &gt;}}\n#| warning: false\n#| message: false\n#| code-fold: false\n#| eval: false\n#| echo: false\ngrateful::cite_packages(output=\"file\", out.dir = \"include/bib\")",
-    "crumbs": [
-      "Schedule"
     ]
   }
 ]
