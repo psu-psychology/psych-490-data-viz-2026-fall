@@ -224,7 +224,7 @@ p_ent_2 <- expensive_df |>
     breaks = c(0, 1000, 2000, 3000),
     labels = c("0", "1,000", "2,000", "3,000")
   ) +
-  ylab("") +
+  ylab("price ($)") +
   xlab("Year") +
   theme(legend.position = "none") +
   ggtitle("Entertainment")

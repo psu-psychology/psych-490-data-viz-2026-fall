@@ -10,9 +10,14 @@ params:
 
 ## In the news...
 
-![@Tavernise2026-zb](../include/img/life-feeling-expensive-nytimes.png){#fig-life-expensive width="55%"}
-
-{{< include _life_expensive.qmd >}}
+:::: {.columns}
+::: {.column width=50%}
+![@Tavernise2026-zb](../include/img/life-feeling-expensive-nytimes.png){#fig-life-expensive}
+:::
+::: {.column width=50%}
+- Visualizing these data in [figures](../supplemental/life_expensive_nytimes.qmd)
+:::
+::::
 
 ## Announcements
 
