@@ -99,6 +99,8 @@ website:
         # - supplemental/other-field-figs.qmd
         - text: "Student-generated surveys"
           href: supplemental/student-generated-surveys.qmd
+        - text: "Visualizing data from the *NY Times*"
+          href: supplemental/life_expensive_nytimes.qmd
   repo-url: https://github.com/psu-psychology/psych-490-data-viz-2026-fall
   repo-actions: [edit, issue]
   page-footer:

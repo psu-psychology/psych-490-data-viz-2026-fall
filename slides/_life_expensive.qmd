@@ -11,6 +11,7 @@ library(readr)
 library(googledrive)
 library(ggplot2)
 library(dplyr)
+library(patchwork)
 ```
 
 ## Download
@@ -62,7 +63,7 @@ str(expensive_df)
 #| output-location: slide
 #| code-fold: false
 #| code-line-numbers: "|1|2|4-5|6-8|9-12"
-expensive_df |>
+p_housing <- expensive_df |>
   dplyr::filter(category == "housing") |>
   ggplot() +
   aes(x = year, y = price, color = location, 
@@ -72,8 +73,18 @@ expensive_df |>
                 group = location, color = location)) +
   ylim(0, 1700000) +
   theme_classic() +
-  labs(title = "Price changes in housing expenses.", 
-       caption = "Source: @Tavernise2026-zb.")
+  labs(title = "Price changes in illustrative expenses: mid 1980s-present",
+       subtitle = "Housing", 
+       caption = "Source: Tavernise et al. (2026).") +
+  scale_y_continuous(
+    breaks = c(0, 500000, 1000000, 1500000),
+    labels = c("0", "500,000", "1,000,000", "1,500,000")
+  ) +
+  ylab("price ($)") +
+  theme(legend.title = element_blank()) +
+  theme(text = element_text(size = 14))
+
+p_housing
 ```
 
 ## Visualization: Childcare
@@ -84,7 +95,7 @@ expensive_df |>
 #| output-location: slide
 #| code-fold: false
 #| 
-expensive_df |>
+p_child <- expensive_df |>
   dplyr::filter(category == "child_care") |>
   ggplot() +
   aes(x = year, y = price, color = location, 
@@ -94,8 +105,14 @@ expensive_df |>
                 group = location, color = location)) +
   ylim(0, 450) +
   theme_classic() +   
-  labs(title = "Price changes in child-care expenses.", 
-       caption = "Source: @Tavernise2026-zb.")
+  labs(title = "Price changes in illustrative expenses: mid 1980s-present",
+       subtitle = "Childcare",
+       caption = "Source: Tavernise et al. (2026).") +
+  ylab("price ($)") +
+  theme(legend.title = element_blank()) +
+  theme(text = element_text(size = 14))
+
+p_child
 ```
 
 ## Visualization: Entertainment
@@ -105,17 +122,112 @@ expensive_df |>
 #| echo: true
 #| output-location: slide
 #| code-fold: false
-expensive_df |>
+#| fig-cap: "Price changes for a set of entertainment expenses. The huge increase in the cost of a Super Bowl ticket is apparent. Price changes in items less than $1,000 are hard to see on this scale."
+citation <- "Source: Tavernise et al. (2026)."
+
+p_ent <- expensive_df |>
   dplyr::filter(category == "entertainment") |>
   ggplot() +
-  aes(x = year, y = price, color = category_type, 
+  aes(x = year,
+      y = price,
+      color = category_type,
       fill = category_type) |>
+  geom_point() +
+  geom_line(aes(
+    x = year,
+    y = price,
+    group = category_type,
+    color = category_type
+  )) +
+  theme_classic() +
+  labs(title = "Price changes in illustrative expenses: mid 1980s-present",
+       subtitle = "Entertainment",
+       caption = citation) +
+  scale_y_continuous(
+    breaks = c(0, 1000, 2000, 3000),
+    labels = c("0", "1,000", "2,000", "3,000")
+  ) +
+  ylab("price ($)") +
+  theme(text = element_text(size = 14)) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+p_ent
+```
+
+## A composite
+
+```{r}
+( p_housing | p_child | p_ent )
+```
+
+::: {.callout-note}
+## Reduce adornments
+
+To make the composite work, I need to reduce some of the plot-specific adornments.
+
+:::
+
+## Composite again
+
+```{r}
+p_housing_2 <- expensive_df |>
+  dplyr::filter(category == "housing") |>
+  ggplot() +
+  aes(x = year, y = price, color = location, 
+      fill = location, shape = price_type) |>
   geom_point() + 
   geom_line(aes(x = year, y = price, 
-                group = category_type, 
-                color = category_type)) +
+                group = location, color = location)) +
+  ylim(0, 1700000) +
   theme_classic() +
-  labs(title = "Price changes in illustrative entertainment expenses.", 
-       caption = "Source: @Tavernise2026-zb.")
+  scale_y_continuous(
+    breaks = c(0, 500000, 1000000, 1500000),
+    labels = c("0", "500,000", "1,000,000", "1,500,000")
+  ) +
+  ylab("") +
+  xlab("") +
+  theme(legend.position = "none") +
+  ggtitle("Housing")
+
+p_child_2 <- expensive_df |>
+  dplyr::filter(category == "child_care") |>
+  ggplot() +
+  aes(x = year, y = price, color = location, 
+      fill = location, shape = price_type) |>
+  geom_point() + 
+  geom_line(aes(x = year, y = price, 
+                group = location, color = location)) +
+  ylim(0, 450) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  ylab("price ($)") +
+  xlab("") +
+  ggtitle("Child Care")
+
+p_ent_2 <- expensive_df |>
+  dplyr::filter(category == "entertainment") |>
+  ggplot() +
+  aes(x = year,
+      y = price,
+      color = category_type,
+      fill = category_type) |>
+  geom_point() +
+  geom_line(aes(
+    x = year,
+    y = price,
+    group = category_type,
+    color = category_type
+  )) +
+  theme_classic() +
+  scale_y_continuous(
+    breaks = c(0, 1000, 2000, 3000),
+    labels = c("0", "1,000", "2,000", "3,000")
+  ) +
+  ylab("") +
+  xlab("Year") +
+  theme(legend.position = "none") +
+  ggtitle("Entertainment")
+
+(p_housing_2 + plot_spacer() + p_child_2) / (plot_spacer()  + p_ent_2 + plot_spacer())
 ```
 

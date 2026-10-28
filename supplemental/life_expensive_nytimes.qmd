@@ -1,0 +1,248 @@
+---
+title: "Visualizing 'Life feeling too expensive?'"
+subtitle: "An interactive story from the *New York Times*."
+format: 
+  html:
+    code-fold: false
+params:
+  update_data: true
+  fn: "life-gotten-expensive-nytimes.csv"
+---
+
+## About
+
+This page documents Rick Gilmore's work to visualize data from @Tavernise2026-zb.
+
+## Setup
+
+```{r}
+#| label: setup
+#| echo: true
+library(readr)
+library(googledrive)
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+```
+
+## Download
+
+```{r, eval=params$update_data}
+#| label: gather-data-from-google
+#| message: false
+if (!dir.exists('../include/csv')) {
+  message("Creating missing `csv/`.")
+  dir.create("../include/csv")
+}
+
+if (params$update_data) {
+  options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
+  googledrive::drive_auth()
+
+  googledrive::drive_download(
+    "life-gotten-expensive-nytimes",
+    path = file.path("../include/csv", params$fn),
+    type = "csv",
+    overwrite = TRUE
+  )
+  message("Data updated.")
+} else {
+  message("Using stored data.")
+}
+```
+
+## Import
+
+```{r}
+#| label: import-data
+expensive_df <- readr::read_csv(file.path("../include/csv", 
+                params$fn), show_col_types = FALSE)
+
+str(expensive_df)
+```
+
+## Visualizations
+
+### Housing
+
+```{r}
+#| label: fig-housing
+p_housing <- expensive_df |>
+  dplyr::filter(category == "housing") |>
+  ggplot() +
+  aes(x = year, y = price, color = location, 
+      fill = location, shape = price_type) |>
+  geom_point() + 
+  geom_line(aes(x = year, y = price, 
+                group = location, color = location)) +
+  ylim(0, 1700000) +
+  theme_classic() +
+  labs(title = "Price changes in illustrative expenses: mid 1980s-present",
+       subtitle = "Housing", 
+       caption = "Source: Tavernise et al. (2026).") +
+  scale_y_continuous(
+    breaks = c(0, 500000, 1000000, 1500000),
+    labels = c("0", "500,000", "1,000,000", "1,500,000")
+  ) +
+  ylab("price ($)") +
+  theme(legend.title = element_blank()) +
+  theme(text = element_text(size = 14))
+
+p_housing
+```
+
+### Childcare
+
+```{r}
+#| label: fig-child-care
+p_child <- expensive_df |>
+  dplyr::filter(category == "child_care") |>
+  ggplot() +
+  aes(x = year, y = price, color = location, 
+      fill = location, shape = price_type) |>
+  geom_point() + 
+  geom_line(aes(x = year, y = price, 
+                group = location, color = location)) +
+  ylim(0, 450) +
+  theme_classic() +   
+  labs(title = "Price changes in illustrative expenses: mid 1980s-present",
+       subtitle = "Childcare",
+       caption = "Source: Tavernise et al. (2026).") +
+  ylab("price ($)") +
+  theme(legend.title = element_blank()) +
+  theme(text = element_text(size = 14))
+
+p_child
+```
+
+### Entertainment
+
+```{r}
+#| label: fig-entertainment
+#| fig-cap: "Price changes for a set of entertainment expenses. The huge increase in the cost of a Super Bowl ticket is apparent. Price changes in items less than $1,000 are hard to see on this scale."
+citation <- "Source: Tavernise et al. (2026)."
+
+p_ent <- expensive_df |>
+  dplyr::filter(category == "entertainment") |>
+  ggplot() +
+  aes(x = year,
+      y = price,
+      color = category_type,
+      fill = category_type) |>
+  geom_point() +
+  geom_line(aes(
+    x = year,
+    y = price,
+    group = category_type,
+    color = category_type
+  )) +
+  theme_classic() +
+  labs(title = "Price changes in illustrative expenses: mid 1980s-present",
+       subtitle = "Entertainment",
+       caption = citation) +
+  scale_y_continuous(
+    breaks = c(0, 1000, 2000, 3000),
+    labels = c("0", "1,000", "2,000", "3,000")
+  ) +
+  ylab("price ($)") +
+  theme(text = element_text(size = 14)) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+p_ent
+```
+
+## Composites
+
+In the code that follows, I attempt to use the *patchwork* package [@patchwork] that enables a simple syntax to make composite figures.
+
+```{r}
+#| label: fig-composite-1
+( p_housing | p_child | p_ent )
+```
+
+::: {.callout-note}
+## Reduce adornments
+
+To make the composite work, I need to reduce some of the plot-specific adornments.
+
+:::
+
+### Another composite
+
+```{r}
+#| label: fig-composite-2
+p_housing_2 <- expensive_df |>
+  dplyr::filter(category == "housing") |>
+  ggplot() +
+  aes(x = year, y = price, color = location, 
+      fill = location, shape = price_type) |>
+  geom_point() + 
+  geom_line(aes(x = year, y = price, 
+                group = location, color = location)) +
+  ylim(0, 1700000) +
+  theme_classic() +
+  scale_y_continuous(
+    breaks = c(0, 500000, 1000000, 1500000),
+    labels = c("0", "500,000", "1,000,000", "1,500,000")
+  ) +
+  ylab("price ($)") +
+  xlab("") +
+  theme(legend.position = "none") +
+  ggtitle("Housing")
+
+p_child_2 <- expensive_df |>
+  dplyr::filter(category == "child_care") |>
+  ggplot() +
+  aes(x = year, y = price, color = location, 
+      fill = location, shape = price_type) |>
+  geom_point() + 
+  geom_line(aes(x = year, y = price, 
+                group = location, color = location)) +
+  ylim(0, 450) +
+  theme_classic() +
+  theme(legend.position = "none") +
+  ylab("price ($)") +
+  xlab("") +
+  ggtitle("Child Care")
+
+p_ent_2 <- expensive_df |>
+  dplyr::filter(category == "entertainment") |>
+  ggplot() +
+  aes(x = year,
+      y = price,
+      color = category_type,
+      fill = category_type) |>
+  geom_point() +
+  geom_line(aes(
+    x = year,
+    y = price,
+    group = category_type,
+    color = category_type
+  )) +
+  theme_classic() +
+  scale_y_continuous(
+    breaks = c(0, 1000, 2000, 3000),
+    labels = c("0", "1,000", "2,000", "3,000")
+  ) +
+  ylab("") +
+  xlab("Year") +
+  theme(legend.position = "none") +
+  ggtitle("Entertainment")
+
+(p_housing_2 + plot_spacer() + p_child_2) / (plot_spacer()  + p_ent_2 + plot_spacer())
+```
+
+This is more attractive.
+But the composite loses some of the detail of the larger, separate figures above, namely @fig-housing, @fig-child-care, and @fig-entertainment.
+
+::: {.callout-important}
+## Next steps
+
+In addition to cleaning these up, I could do the following:
+
+1. Tidy-up the theming.
+2. Make a subplot of the less expensive entertainment expenses.
+3. Add text annotations to highlight specific features.
+4. Supplement the figure legends.
+
+:::

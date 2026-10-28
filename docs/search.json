@@ -9219,5 +9219,117 @@
     "title": "Work session",
     "section": "Visualization: Entertainment",
     "text": "Visualization: Entertainment\n\n\n\n\n\n\n\nFigure 4"
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html",
+    "href": "supplemental/life_expensive_nytimes.html",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "",
+    "text": "This page documents Rick Gilmore’s work to visualize data from Tavernise, Weingart, Chilla, Gee, & Rich (2026).",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#about",
+    "href": "supplemental/life_expensive_nytimes.html#about",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "",
+    "text": "This page documents Rick Gilmore’s work to visualize data from Tavernise, Weingart, Chilla, Gee, & Rich (2026).",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#setup",
+    "href": "supplemental/life_expensive_nytimes.html#setup",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(readr)\nlibrary(googledrive)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(patchwork)",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#download",
+    "href": "supplemental/life_expensive_nytimes.html#download",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Download",
+    "text": "Download\n\nif (!dir.exists('../include/csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"../include/csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"life-gotten-expensive-nytimes\",\n    path = file.path(\"../include/csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#import",
+    "href": "supplemental/life_expensive_nytimes.html#import",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Import",
+    "text": "Import\n\nexpensive_df &lt;- readr::read_csv(file.path(\"../include/csv\", \n                params$fn), show_col_types = FALSE)\n\nstr(expensive_df)\n\nspc_tbl_ [35 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ category     : chr [1:35] \"housing\" \"housing\" \"housing\" \"housing\" ...\n $ category_type: chr [1:35] \"house_4BR\" \"house_4BR\" \"house_4BR\" \"house_2story\" ...\n $ location     : chr [1:35] \"chicago\" \"chicago\" \"chicago\" \"brooklyn\" ...\n $ year         : num [1:35] 1986 1986 2026 1985 2026 ...\n $ price        : num [1:35] 244000 692853 1250000 406576 1600000 ...\n $ price_type   : chr [1:35] \"market\" \"inflation-adjusted\" \"market\" \"inflation-adjusted\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   category = col_character(),\n  ..   category_type = col_character(),\n  ..   location = col_character(),\n  ..   year = col_double(),\n  ..   price = col_double(),\n  ..   price_type = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;pointer: 0x9deda04c0&gt;",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#visualization-housing",
+    "href": "supplemental/life_expensive_nytimes.html#visualization-housing",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Visualization: Housing",
+    "text": "Visualization: Housing\n\n\nCode\np_housing &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative expenses: mid 1980s-present\",\n       subtitle = \"Housing\", \n       caption = \"Source: Tavernise et al. (2026).\") +\n  scale_y_continuous(\n    breaks = c(0, 500000, 1000000, 1500000),\n    labels = c(\"0\", \"500,000\", \"1,000,000\", \"1,500,000\")\n  ) +\n  ylab(\"price ($)\") +\n  theme(legend.title = element_blank()) +\n  theme(text = element_text(size = 14))\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\np_housing\n\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#visualization-childcare",
+    "href": "supplemental/life_expensive_nytimes.html#visualization-childcare",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Visualization: Childcare",
+    "text": "Visualization: Childcare\n\n\nCode\np_child &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +   \n  labs(title = \"Price changes in illustrative expenses: mid 1980s-present\",\n       subtitle = \"Childcare\",\n       caption = \"Source: Tavernise et al. (2026).\") +\n  ylab(\"price ($)\") +\n  theme(legend.title = element_blank()) +\n  theme(text = element_text(size = 14))\n\np_child\n\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#visualization-entertainment",
+    "href": "supplemental/life_expensive_nytimes.html#visualization-entertainment",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Visualization: Entertainment",
+    "text": "Visualization: Entertainment\n\n\nCode\ncitation &lt;- \"Source: Tavernise et al. (2026).\"\n\np_ent &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year,\n      y = price,\n      color = category_type,\n      fill = category_type) |&gt;\n  geom_point() +\n  geom_line(aes(\n    x = year,\n    y = price,\n    group = category_type,\n    color = category_type\n  )) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative expenses: mid 1980s-present\",\n       subtitle = \"Entertainment\",\n       caption = citation) +\n  scale_y_continuous(\n    breaks = c(0, 1000, 2000, 3000),\n    labels = c(\"0\", \"1,000\", \"2,000\", \"3,000\")\n  ) +\n  ylab(\"price ($)\") +\n  theme(text = element_text(size = 14)) +\n  theme(legend.position = \"bottom\", legend.title = element_blank())\n\np_ent\n\n\n\n\n\n\n\n\nFigure 3: Price changes for a set of entertainment expenses. The huge increase in the cost of a Super Bowl ticket is apparent. Price changes in items less than $1,000 are hard to see on this scale."
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#a-composite",
+    "href": "supplemental/life_expensive_nytimes.html#a-composite",
+    "title": "Visualizing ‘Life has gotten expensive’",
+    "section": "A composite",
+    "text": "A composite\nIn the code that follows, I attempt to use the patchwork package that enables a simple syntax to make composite figures.\n\n\nCode\n( p_housing | p_child | p_ent )\n\n\n\n\n\n\n\n\nFigure 4\n\n\n\n\n\n\n\n\n\n\n\nNoteReduce adornments\n\n\n\nTo make the composite work, I need to reduce some of the plot-specific adornments."
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#composite-again",
+    "href": "supplemental/life_expensive_nytimes.html#composite-again",
+    "title": "Visualizing ‘Life has gotten expensive’",
+    "section": "Composite again",
+    "text": "Composite again\n\n\nCode\np_housing_2 &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  scale_y_continuous(\n    breaks = c(0, 500000, 1000000, 1500000),\n    labels = c(\"0\", \"500,000\", \"1,000,000\", \"1,500,000\")\n  ) +\n  ylab(\"\") +\n  xlab(\"\") +\n  theme(legend.position = \"none\") +\n  ggtitle(\"Housing\")\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\np_child_2 &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +\n  theme(legend.position = \"none\") +\n  ylab(\"price ($)\") +\n  xlab(\"\") +\n  ggtitle(\"Child Care\")\n\np_ent_2 &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year,\n      y = price,\n      color = category_type,\n      fill = category_type) |&gt;\n  geom_point() +\n  geom_line(aes(\n    x = year,\n    y = price,\n    group = category_type,\n    color = category_type\n  )) +\n  theme_classic() +\n  scale_y_continuous(\n    breaks = c(0, 1000, 2000, 3000),\n    labels = c(\"0\", \"1,000\", \"2,000\", \"3,000\")\n  ) +\n  ylab(\"\") +\n  xlab(\"Year\") +\n  theme(legend.position = \"none\") +\n  ggtitle(\"Entertainment\")\n\n(p_housing_2 + plot_spacer() + p_child_2) / (plot_spacer()  + p_ent_2 + plot_spacer())\n\n\n\n\n\n\n\n\nFigure 5"
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#composites",
+    "href": "supplemental/life_expensive_nytimes.html#composites",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Composites",
+    "text": "Composites\nIn the code that follows, I attempt to use the patchwork package (Pedersen, 2025) that enables a simple syntax to make composite figures.\n\n( p_housing | p_child | p_ent )\n\n\n\n\n\n\n\nFigure 4\n\n\n\n\n\n\n\n\n\n\n\nNoteReduce adornments\n\n\n\nTo make the composite work, I need to reduce some of the plot-specific adornments.\n\n\n\nAnother composite\n\np_housing_2 &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  scale_y_continuous(\n    breaks = c(0, 500000, 1000000, 1500000),\n    labels = c(\"0\", \"500,000\", \"1,000,000\", \"1,500,000\")\n  ) +\n  ylab(\"price ($)\") +\n  xlab(\"\") +\n  theme(legend.position = \"none\") +\n  ggtitle(\"Housing\")\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\np_child_2 &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +\n  theme(legend.position = \"none\") +\n  ylab(\"price ($)\") +\n  xlab(\"\") +\n  ggtitle(\"Child Care\")\n\np_ent_2 &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year,\n      y = price,\n      color = category_type,\n      fill = category_type) |&gt;\n  geom_point() +\n  geom_line(aes(\n    x = year,\n    y = price,\n    group = category_type,\n    color = category_type\n  )) +\n  theme_classic() +\n  scale_y_continuous(\n    breaks = c(0, 1000, 2000, 3000),\n    labels = c(\"0\", \"1,000\", \"2,000\", \"3,000\")\n  ) +\n  ylab(\"\") +\n  xlab(\"Year\") +\n  theme(legend.position = \"none\") +\n  ggtitle(\"Entertainment\")\n\n(p_housing_2 + plot_spacer() + p_child_2) / (plot_spacer()  + p_ent_2 + plot_spacer())\n\n\n\n\n\n\n\nFigure 5\n\n\n\n\n\nThis is more attractive. But the composite loses some of the detail of the larger, separate figures above, namely Figure 1, Figure 2, and Figure 3.\n\n\n\n\n\n\nImportantNext steps\n\n\n\nIn addition to cleaning these up, I could do the following:\n\nTidy-up the theming.\nMake a subplot of the less expensive entertainment expenses.\nAdd text annotations to highlight specific features.\nSupplement the figure legends.",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
+  },
+  {
+    "objectID": "supplemental/life_expensive_nytimes.html#visualizations",
+    "href": "supplemental/life_expensive_nytimes.html#visualizations",
+    "title": "Visualizing ‘Life feeling too expensive?’",
+    "section": "Visualizations",
+    "text": "Visualizations\n\nHousing\n\np_housing &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative expenses: mid 1980s-present\",\n       subtitle = \"Housing\", \n       caption = \"Source: Tavernise et al. (2026).\") +\n  scale_y_continuous(\n    breaks = c(0, 500000, 1000000, 1500000),\n    labels = c(\"0\", \"500,000\", \"1,000,000\", \"1,500,000\")\n  ) +\n  ylab(\"price ($)\") +\n  theme(legend.title = element_blank()) +\n  theme(text = element_text(size = 14))\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\np_housing\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\nChildcare\n\np_child &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +   \n  labs(title = \"Price changes in illustrative expenses: mid 1980s-present\",\n       subtitle = \"Childcare\",\n       caption = \"Source: Tavernise et al. (2026).\") +\n  ylab(\"price ($)\") +\n  theme(legend.title = element_blank()) +\n  theme(text = element_text(size = 14))\n\np_child\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n\n\nEntertainment\n\ncitation &lt;- \"Source: Tavernise et al. (2026).\"\n\np_ent &lt;- expensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year,\n      y = price,\n      color = category_type,\n      fill = category_type) |&gt;\n  geom_point() +\n  geom_line(aes(\n    x = year,\n    y = price,\n    group = category_type,\n    color = category_type\n  )) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative expenses: mid 1980s-present\",\n       subtitle = \"Entertainment\",\n       caption = citation) +\n  scale_y_continuous(\n    breaks = c(0, 1000, 2000, 3000),\n    labels = c(\"0\", \"1,000\", \"2,000\", \"3,000\")\n  ) +\n  ylab(\"price ($)\") +\n  theme(text = element_text(size = 14)) +\n  theme(legend.position = \"bottom\", legend.title = element_blank())\n\np_ent\n\n\n\n\n\n\n\nFigure 3: Price changes for a set of entertainment expenses. The huge increase in the cost of a Super Bowl ticket is apparent. Price changes in items less than $1,000 are hard to see on this scale.",
+    "crumbs": [
+      "Supplemental",
+      "Visualizing data from the *NY Times*"
+    ]
   }
 ]
