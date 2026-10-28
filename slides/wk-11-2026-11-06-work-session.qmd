@@ -1,13 +1,18 @@
 ---
 title: "Work session"
 format: revealjs
+params:
+  update_data: true
+  fn: "life-gotten-expensive-nytimes.csv"
 ---
 
 # Prelude
 
 ## In the news...
 
-![@Tavernise2026-zb](../include/img/life-feeling-expensive-nytimes.png)
+![@Tavernise2026-zb](../include/img/life-feeling-expensive-nytimes.png){#fig-life-expensive width="55%"}
+
+{{< include _life_expensive.qmd >}}
 
 ## Announcements
 

@@ -8593,7 +8593,7 @@
     "href": "slides/wk-11-2026-11-06-work-session.html#in-the-news",
     "title": "Work session",
     "section": "In the news…",
-    "text": "In the news…\n\n\n\nTavernise et al. (2026)"
+    "text": "In the news…\n\n\n\n\n\n\nFigure 1: Tavernise et al. (2026)"
   },
   {
     "objectID": "slides/wk-11-2026-11-06-work-session.html#announcements",
@@ -9100,5 +9100,124 @@
       "Tutorials",
       "Visualizing sports data"
     ]
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#setup",
+    "href": "slides/wk-11-2026-11-06-work-session.html#setup",
+    "title": "Work session",
+    "section": "Setup",
+    "text": "Setup"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#download",
+    "href": "slides/wk-11-2026-11-06-work-session.html#download",
+    "title": "Work session",
+    "section": "Download",
+    "text": "Download\n\nif (!dir.exists('../include/csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"../include/csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"life-gotten-expensive-nytimes\",\n    path = file.path(\"../include/csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#import",
+    "href": "slides/wk-11-2026-11-06-work-session.html#import",
+    "title": "Work session",
+    "section": "Import",
+    "text": "Import\n\nexpensive_df &lt;- readr::read_csv(file.path(\"../include/csv\", \n                params$fn), show_col_types = FALSE)\n\nstr(expensive_df)"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-1.0",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-1.0",
+    "title": "Work session",
+    "section": "Visualization 1.0",
+    "text": "Visualization 1.0\nLet’s focus on a single category for now."
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-1.1",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-1.1",
+    "title": "Work session",
+    "section": "Visualization 1.1",
+    "text": "Visualization 1.1\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +   \n  labs(title = \"Price changes in child-care expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-1.2",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-1.2",
+    "title": "Work session",
+    "section": "Visualization 1.2",
+    "text": "Visualization 1.2\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = category_type, \n      fill = category_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = category_type, \n                color = category_type)) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative entertainment expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")\n\n\n\n\n\n\n\nFigure 4"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html",
+    "href": "slides/wk-11-2026-11-06-work-session.html",
+    "title": "Work session",
+    "section": "",
+    "text": "Figure 1: Tavernise, Weingart, Chilla, Gee, & Rich (2026)\n\n\n\n\n\n\n\n\nCode\nlibrary(readr)\nlibrary(googledrive)\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n\n\n\n\nCode\nif (!dir.exists('../include/csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"../include/csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"life-gotten-expensive-nytimes\",\n    path = file.path(\"../include/csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\n\n\n\n\n\nexpensive_df &lt;- readr::read_csv(file.path(\"../include/csv\", params$fn), show_col_types = FALSE)\n\nstr(expensive_df)\n\nspc_tbl_ [35 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ category     : chr [1:35] \"housing\" \"housing\" \"housing\" \"housing\" ...\n $ category_type: chr [1:35] \"house_4BR\" \"house_4BR\" \"house_4BR\" \"house_2story\" ...\n $ location     : chr [1:35] \"chicago\" \"chicago\" \"chicago\" \"brooklyn\" ...\n $ year         : num [1:35] 1986 1986 2026 1985 2026 ...\n $ price        : num [1:35] 244000 692853 1250000 406576 1600000 ...\n $ price_type   : chr [1:35] \"market\" \"inflation-adjusted\" \"market\" \"inflation-adjusted\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   category = col_character(),\n  ..   category_type = col_character(),\n  ..   location = col_character(),\n  ..   year = col_double(),\n  ..   price = col_double(),\n  ..   price_type = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;pointer: 0x7333cf910&gt; \n\n\n\n\n\nLet’s focus on a single category for now.\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  labs(title = \"Price changes in housing expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")\n\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\n\n\n\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +   \n  labs(title = \"Price changes in child-care expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")\n\n\n\n\n\n\n\nFigure 3\n\n\n\n\n\n\n\n\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = category_type, \n      fill = category_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = category_type, \n                color = category_type)) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative entertainment expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")\n\n\n\n\n\n\n\nFigure 4\n\n\n\n\n\n\n\n\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026.\n\n\n\n\n\nWork session\n\nExercise-06\nFinal projects"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization",
+    "title": "Work session",
+    "section": "Visualization",
+    "text": "Visualization\nLet’s focus on a single category for now.\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  labs(title = \"Price changes in housing expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-output",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-output",
+    "title": "Work session",
+    "section": "Visualization",
+    "text": "Visualization\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-1.1-output",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-1.1-output",
+    "title": "Work session",
+    "section": "Visualization 1.1",
+    "text": "Visualization 1.1\n\n\n\n\n\n\n\nFigure 3"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#import-output",
+    "href": "slides/wk-11-2026-11-06-work-session.html#import-output",
+    "title": "Work session",
+    "section": "Import",
+    "text": "Import\n\nspc_tbl_ [35 × 6] (S3: spec_tbl_df/tbl_df/tbl/data.frame)\n $ category     : chr [1:35] \"housing\" \"housing\" \"housing\" \"housing\" ...\n $ category_type: chr [1:35] \"house_4BR\" \"house_4BR\" \"house_4BR\" \"house_2story\" ...\n $ location     : chr [1:35] \"chicago\" \"chicago\" \"chicago\" \"brooklyn\" ...\n $ year         : num [1:35] 1986 1986 2026 1985 2026 ...\n $ price        : num [1:35] 244000 692853 1250000 406576 1600000 ...\n $ price_type   : chr [1:35] \"market\" \"inflation-adjusted\" \"market\" \"inflation-adjusted\" ...\n - attr(*, \"spec\")=\n  .. cols(\n  ..   category = col_character(),\n  ..   category_type = col_character(),\n  ..   location = col_character(),\n  ..   year = col_double(),\n  ..   price = col_double(),\n  ..   price_type = col_character()\n  .. )\n - attr(*, \"problems\")=&lt;pointer: 0xb297e1fe0&gt;"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-housing",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-housing",
+    "title": "Work session",
+    "section": "Visualization: Housing",
+    "text": "Visualization: Housing\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"housing\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 1700000) +\n  theme_classic() +\n  labs(title = \"Price changes in housing expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-housing-output",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-housing-output",
+    "title": "Work session",
+    "section": "Visualization: Housing",
+    "text": "Visualization: Housing\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-childcare",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-childcare",
+    "title": "Work session",
+    "section": "Visualization: Childcare",
+    "text": "Visualization: Childcare\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"child_care\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = location, \n      fill = location, shape = price_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = location, color = location)) +\n  ylim(0, 450) +\n  theme_classic() +   \n  labs(title = \"Price changes in child-care expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-childcare-output",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-childcare-output",
+    "title": "Work session",
+    "section": "Visualization: Childcare",
+    "text": "Visualization: Childcare\n\n\n\n\n\n\n\nFigure 3"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-entertainment",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-entertainment",
+    "title": "Work session",
+    "section": "Visualization: Entertainment",
+    "text": "Visualization: Entertainment\n\nexpensive_df |&gt;\n  dplyr::filter(category == \"entertainment\") |&gt;\n  ggplot() +\n  aes(x = year, y = price, color = category_type, \n      fill = category_type) |&gt;\n  geom_point() + \n  geom_line(aes(x = year, y = price, \n                group = category_type, \n                color = category_type)) +\n  theme_classic() +\n  labs(title = \"Price changes in illustrative entertainment expenses.\", \n       caption = \"Source: @Tavernise2026-zb.\")"
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-06-work-session.html#visualization-entertainment-output",
+    "href": "slides/wk-11-2026-11-06-work-session.html#visualization-entertainment-output",
+    "title": "Work session",
+    "section": "Visualization: Entertainment",
+    "text": "Visualization: Entertainment\n\n\n\n\n\n\n\nFigure 4"
   }
 ]
