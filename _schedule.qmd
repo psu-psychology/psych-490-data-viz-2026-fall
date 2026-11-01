@@ -289,32 +289,42 @@
 
 ### Wed, Nov 04 {-}
 
-- [Slides](404.qmd)
+*Visualization in public policy data*
+
+- Review:
+  - @UnknownUnknown-vw
+  - @@UnknownUnknown-ce
+- [Slides](slides/wk-11-2026-11-04-policy.qmd)
 
 ### Fri, Nov 06 {-}
+
+*Work session*
+
+- [Slides](slides/wk-11-2026-11-06-work-session.qmd)
 
 ## Week 12 {- #week-12}
 
 ### Mon, Nov 09 {-}
 
-*Exploring data*
-
-- *Read*:
-  - @Tukey1977-ro, Chapter 1, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922548)
-- [Slides](404.qmd)
-
-### Wed, Nov 11 {-}
-
-*Communicating uncertainty and risk*
+*Communicating uncertainty: Part I*
 
 - *Read*:
   - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618)
   - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829)
-- [Slides](404.qmd)
+- [Slides](slides/wk-12-2026-11-09-viz-uncertainty-risk.qmd)
+
+### Wed, Nov 11 {-}
+
+*Communicating uncertainty: Part II*
+
+- *Read*:
+  - @Franconeri2021-uv, pp. 139-150, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=193922618)
+  - @Wilke2019-mx, Ch. 16, [PDF on Canvas](https://psu.instructure.com/courses/2484925/files?preview=196308829)
+- [Slides](slides/wk-12-2026-11-09-viz-uncertainty-risk.qmd)
 
 ### Fri, Nov 13 {-}
 
-*Work Session: TidyTuesday*
+*Work Session*
 
 - [Slides](404.qmd)
 
@@ -331,7 +341,7 @@
 
 ### Wed, Nov 18 {-}
 
-*Sample size, effect size, statistical power*
+*Alpha, Power, Effect size, & Sample Size*
 
 - [Slides](404.qmd)
 

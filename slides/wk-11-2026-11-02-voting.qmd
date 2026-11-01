@@ -9,8 +9,6 @@ format: revealjs
 
 - [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
 
-## Last time...
-
 ## Today's topics
 
 - Voter registration
@@ -39,7 +37,7 @@ format: revealjs
 
 ![@Harris2025-uw](../include/img/pa-voter-reg-barchart-totals.png){#fig-voter-reg-summary width="65%"}
 
-## Young people registrations
+## 18-year-olds' voter registration
 
 ![@Brill2026-xf](https://images.squarespace-cdn.com/content/v1/652314331193f371477bb625/ec9593b2-b4af-4f03-8621-15956b2ebc00/tcc-data-portal.png?format=750w){#fig-registration-18-year-olds}
 
@@ -70,6 +68,27 @@ format: revealjs
 ## Population changes
 
 ![@UnknownUnknown-vu](../include/img/pa-pop-change-by-county.png){#fig-pa-pop-changes width="65%"}
+
+---
+
+![@Unknown2024-jq](https://populationeducation.org/wp-content/uploads/2024/10/mystery-us-pyramid-1880-e1729535828671.png){#fig-pop-pyramid-1880 width="65%"}
+
+---
+
+![@Unknown2024-jq](https://populationeducation.org/wp-content/uploads/2024/10/mystery-us-pyramid-1920-e1729278712520.png){#fig-pop-pyramid-1920 width="65%"}
+
+
+---
+
+![@Unknown2024-jq](https://populationeducation.org/wp-content/uploads/2024/10/mystery-us-pyramid-1960.png){#fig-pop-pyramid-1960 width="65%"}
+
+---
+
+![@Unknown2024-jq](https://populationeducation.org/wp-content/uploads/2024/10/mystery-us-pyramid-2020-e1729278892410.png){#fig-pop-pyramid-2020 width="65%"}
+
+---
+
+![@Unknown2024-jq](https://populationeducation.org/wp-content/uploads/2024/10/mystery-us-pyramid-2050.png){#fig-pop-pyramid-2050 width="65%"}
 
 # Presidential approval
 
@@ -127,7 +146,7 @@ prez_approval_df |>
 
 ## In the news...
 
-![@Bidgood2026-kh](../include/img/fake-polls-nyt.png){#fig-nyt-fake-polls}
+![@Bidgood2026-kh](../include/img/fake-polls-nyt.png){#fig-nyt-fake-polls width="40%"}
 
 # Wrap up
 

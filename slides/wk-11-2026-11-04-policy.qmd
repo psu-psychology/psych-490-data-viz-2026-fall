@@ -3,7 +3,7 @@ title: "Visualizing policy-related data"
 format: revealjs
 ---
 
-# Prelude
+# Preliminaries
 
 ## Announcements
 
@@ -42,7 +42,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp?itok=piMD4hsA)
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp?itok=piMD4hsA){#fig-harvard-poll-right-track width="75%"}
 
 ---
 
@@ -50,7 +50,7 @@ format: revealjs
 
 ---
 
-![](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/NsKEM-2.-how-likely-is-it-that-you-will-vote-in-the-midterm-elections-for-congress-in-november-2026-.webp?itok)
+![](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/NsKEM-2.-how-likely-is-it-that-you-will-vote-in-the-midterm-elections-for-congress-in-november-2026-.webp){#fig-harvard-poll-likely-vote width="75%"}
 
 ---
 
@@ -63,7 +63,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ZuBlH-3.-if-the-2026-election-for-the-u.s.-house-of-representatives-were-being-held-today-would-you-vote-for-.webp)
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ZuBlH-3.-if-the-2026-election-for-the-u.s.-house-of-representatives-were-being-held-today-would-you-vote-for-.webp){#fig-harvard-poll-vote-for width="75%"}
 
 ---
 
@@ -74,7 +74,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/2qNUa-5.-in-general-when-i-am-my-parent-s-age-i-believe-that-i-will-be-%20%281%29.webp)
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/2qNUa-5.-in-general-when-i-am-my-parent-s-age-i-believe-that-i-will-be-%20%281%29.webp){#fig-harvard-poll-better-off-worse width="75%"}
 
 ---
 
@@ -95,7 +95,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/DiZnQ-6.-how-serious-a-threat-if-at-all-do-you-think-each-of-the-following-is-to-your-long-term-financial-security-the-power-of-large-corporations-.webp)
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/DiZnQ-6.-how-serious-a-threat-if-at-all-do-you-think-each-of-the-following-is-to-your-long-term-financial-security-the-power-of-large-corporations-.webp){#fig-harvard-poll-threats-to-fin-security width="75%"}
 
 ---
 
@@ -119,7 +119,7 @@ format: revealjs
 
 ## {.scrollable}
 
-![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/qIpKW-7.-how-important-will-each-of-the-following-issues-be-in-determining-your-vote-in-the-2026-midterm-elections-.webp)
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/qIpKW-7.-how-important-will-each-of-the-following-issues-be-in-determining-your-vote-in-the-2026-midterm-elections-.webp){#fig-harvard-poll-issue-importance width="75%"}
 
 ## Yale Youth Poll
 
@@ -133,7 +133,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/QylEg-younger-voters-are-more-liberal-than-older-voters-_0.png)
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/QylEg-younger-voters-are-more-liberal-than-older-voters-_0.png){#fig-yale-poll-political-views width="85%"}
 
 ---
 
@@ -141,7 +141,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/3ZCIw-most-americans-are-ideologically-similar-to-their-parents-more-common-to-be-more-liberal-than-more-conservative-_0.png)
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/3ZCIw-most-americans-are-ideologically-similar-to-their-parents-more-common-to-be-more-liberal-than-more-conservative-_0.png){#fig-yale-poll-similar-to-parents width="65%"}
 
 ---
 
@@ -149,7 +149,8 @@ format: revealjs
 
 ## {.scrollable}
 
-![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/ic0W1-voters-rank-cost-of-living-healthcare-democracy-and-corruption-as-top-concerns-_0.png)
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/ic0W1-voters-rank-cost-of-living-healthcare-democracy-and-corruption-as-top-concerns-_0.png){#fig-yale-poll-important-issues width="65%"}
+
 ---
 
 >Voters care least about Israel and Palestine (28%), Ukraine and Russia (27%), China (27%), artificial intelligence (24%), acceptance of gay people (22%), and acceptance of transgender people (19%), despite the prominence of these issues in the news. 
@@ -160,7 +161,30 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/8bLTt-voters-ages-65-use-ai-less-often-than-younger-voters-_0.png)
+![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/8bLTt-voters-ages-65-use-ai-less-often-than-younger-voters-_0.png){#fig-yale-us-ai width="85%"}
+
+## 
+
+![@USAFacts2025-an](../include/img/usa-facts-us-govt-income-expenses.png){#fig-federal-budget width="85%"}
+
+---
+
+::: {#fig-fed-debt-surplus}
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=20nBq&width=1280&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
+
+-- @Unknown2026-ap
+
+:::
+
+---
+
+::: {#fig-fed-public-debt}
+
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=20in1&width=1280&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
+
+-- @Unknown2026-tq
+
+:::
 
 # Wrap up
 
@@ -170,14 +194,4 @@ format: revealjs
 
 # Resources
 
-## About
-
-This talk was produced using [Quarto](https://quarto.org), using the [RStudio](https://posit.co/products/open-source/rstudio/)
-Integrated Development Environment (IDE), version 2026.10.0.233.
-
-The source files are in R and R Markdown, then rendered to HTML using the
-[revealJS](https://revealjs.com) framework.
-The HTML slides are hosted in a [GitHub repo](https://github.com/psu-psychology/psych-490-data-viz-2026-fall) and served by GitHub pages at:
-<https://psu-psychology.github.io/psych-490-data-viz-2026-fall>
-
-## References
+{{< include _about_refs.qmd >}}
