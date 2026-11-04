@@ -973,7 +973,7 @@
     "href": "slides/wk-11-2026-11-04-policy.html#section",
     "title": "Visualizing policy-related data",
     "section": "",
-    "text": "Figure 6: “53rd Edition - Fall 2026” (n.d.)",
+    "text": "Figure 6: “Harvard Youth Poll 53rd Edition - Fall 2026” (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 11 • Wed Nov 4"
@@ -1028,7 +1028,7 @@
     "href": "slides/wk-11-2026-11-04-policy.html#references",
     "title": "Visualizing policy-related data",
     "section": "References",
-    "text": "References\n\n\n\n\n“53rd Edition - Fall 2026.” n.d. Accessed October 26, 2026. https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026.\n\n\n“Federal Debt: Total Public Debt as Percent of Gross Domestic Product.” 2026. October 28. https://fred.stlouisfed.org/series/gfdegdq188s.\n\n\n“Federal Surplus or Deficit [-] as Percent of Gross Domestic Product.” 2026. October 28. https://fred.stlouisfed.org/series/fyfsgda188s.\n\n\n“Spring 2026 Results.” n.d. Accessed October 26, 2026. https://youthpoll.yale.edu/spring-2026-results.\n\n\nUSAFacts. 2025. “This Chart Tells You Everything You Want to Know about Government Spending.” February 6. https://usafacts.org/articles/this-chart-tells-you-everything-you-want-to-know-about-government-spending/.",
+    "text": "References\n\n\n\n\n“Federal Debt: Total Public Debt as Percent of Gross Domestic Product.” 2026. October 28. https://fred.stlouisfed.org/series/gfdegdq188s.\n\n\n“Federal Surplus or Deficit [-] as Percent of Gross Domestic Product.” 2026. October 28. https://fred.stlouisfed.org/series/fyfsgda188s.\n\n\n“Harvard Youth Poll 53rd Edition - Fall 2026.” n.d. Accessed October 26, 2026. https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026.\n\n\n“How Are CO₂ Concentrations Related to Warming?” n.d. Accessed February 17, 2025. https://factsonclimate.org/infographics/concentration-warming-relationship.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\nRoser, Max, Hannah Ritchie, and Veronika Samborska. 2023. “Two Centuries of Rapid Global Population Growth Will Come to an End.” Our World in Data, March 18. https://ourworldindata.org/world-population-growth-past-future.\n\n\nUSAFacts. 2025. “This Chart Tells You Everything You Want to Know about Government Spending.” February 6. https://usafacts.org/articles/this-chart-tells-you-everything-you-want-to-know-about-government-spending/.\n\n\n“Yale Youth Poll: Spring 2026 Results.” n.d. Accessed October 26, 2026. https://youthpoll.yale.edu/spring-2026-results.",
     "crumbs": [
       "Slides",
       "Wk 11 • Wed Nov 4"
@@ -9588,7 +9588,7 @@
     "href": "slides/wk-11-2026-11-04-policy.html#section-1",
     "title": "Visualizing policy-related data",
     "section": "",
-    "text": "Figure 9: “Spring 2026 Results” (n.d.)",
+    "text": "Figure 9: “Yale Youth Poll” (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 11 • Wed Nov 4"
@@ -9852,5 +9852,467 @@
     "title": "Communicating uncertainty and risk",
     "section": "Alternatives",
     "text": "Alternatives\n\n\n\nWilke (n.d.) Figure 16.9"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#announcements",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#announcements",
+    "title": "Communicating uncertainty and risk",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#todays-topic",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#todays-topic",
+    "title": "Communicating uncertainty and risk",
+    "section": "Today’s topic",
+    "text": "Today’s topic\n\nCommunicating uncertainty and risk",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#frequencies-vs.-probabilities",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#frequencies-vs.-probabilities",
+    "title": "Communicating uncertainty and risk",
+    "section": "Frequencies vs. probabilities",
+    "text": "Frequencies vs. probabilities\n\np = .01 vs. 1% chance vs. 1 chance in 100\np = .10 vs. 10% chance vs. 10 chances in 100\np = .40 vs. 40% chance vs. 40 chances in 100",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#example-closer-to-home",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#example-closer-to-home",
+    "title": "Communicating uncertainty and risk",
+    "section": "Example closer to home",
+    "text": "Example closer to home\n\nWhat’s the probability that Penn State football ends up with a winning (regular) season?\nCurrent record (2026-11-02) is 4-4; 4 games left.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#visualizing-uncertainty-of-point-estimates",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#visualizing-uncertainty-of-point-estimates",
+    "title": "Communicating uncertainty and risk",
+    "section": "Visualizing uncertainty of point estimates",
+    "text": "Visualizing uncertainty of point estimates\n\n\n\n\n\n\nFigure 2: Wilke (n.d.) Figure 16.3",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#point-estimates",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#point-estimates",
+    "title": "Communicating uncertainty and risk",
+    "section": "Point estimates",
+    "text": "Point estimates\n\nTypes\n\nMean: center of mass\nMedian: middle-most\nMode: peak value(s)\n\nWhy use them?",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#point-estimates-considerations",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#point-estimates-considerations",
+    "title": "Communicating uncertainty and risk",
+    "section": "Point estimates: Considerations",
+    "text": "Point estimates: Considerations\n\nIs the distribution unimodal?\nIs it bell-shaped (e.g., normal) or symmetric?\nDo the mean or median capture the peak of the data? Are they representative?\n\n\n\nHow do I answer these questions?",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-it-matters",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-it-matters",
+    "title": "Communicating uncertainty and risk",
+    "section": "When it matters…",
+    "text": "When it matters…\n\n\n\n\n\n\nFigure 4: Real median vs. mean family income in the U.S. median income is now &gt; 40% higher than mean income suggesting that the income distribution has a very long rightward tail. Source: “FRED Economic Data” (n.d.)",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-else-it-matters",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-else-it-matters",
+    "title": "Communicating uncertainty and risk",
+    "section": "When (else) it matters…",
+    "text": "When (else) it matters…\n\np1 &lt;- rnorm(100, 0, 1)\np2 &lt;- rnorm(100, 2, 1)\np_both &lt;- data.frame(value = c(p1, p2), \n                     source = rep(c(\"p1\", \"p2\"), \n                                  each = 100))\n                    \np_both |&gt;\n  ggplot() +\n  aes(x = value) +\n  geom_histogram(bins = 20)\n\n\n\nWe create two random normal datasets with different means, 0 and 2\nThe standard deviation is the same\nThen we combine and plot them as one",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#comparing-two-or-more-distributions",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#comparing-two-or-more-distributions",
+    "title": "Communicating uncertainty and risk",
+    "section": "Comparing two (or more) distributions",
+    "text": "Comparing two (or more) distributions\n\nmake_data &lt;- function(sample_n, pop_mean = 0, pop_sd = 1) {\n  x &lt;- rnorm(sample_n, pop_mean, pop_sd)\n  df &lt;- data.frame(sample_n, \n                   pop_mean,\n                   pop_sd,\n                   value = x)\n  df |&gt;\n    dplyr::mutate(sample_mean = mean(value),\n                  sample_sd = sd(value),\n                  sample_sem = sample_sd/sqrt(sample_n))\n}",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#boxplot-anatomy",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#boxplot-anatomy",
+    "title": "Communicating uncertainty and risk",
+    "section": "Boxplot anatomy",
+    "text": "Boxplot anatomy\n\n\n\nBar, box & whiskers (geom_boxplot())\n\nBar: median\nBox: middle 50% (25th…75th percentile)\nWhiskers: middle 90% (5th…95th percentile)",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#comparing-measures-of-uncertainty",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#comparing-measures-of-uncertainty",
+    "title": "Communicating uncertainty and risk",
+    "section": "Comparing measures of uncertainty",
+    "text": "Comparing measures of uncertainty\n\n\n\n\n\n\nFigure 15: Wilke (n.d.) Figure 16.3",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#confidence-intervals",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#confidence-intervals",
+    "title": "Communicating uncertainty and risk",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\n\nWilke (n.d.) Figure 16.7",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#what-are-confidence-intervals",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#what-are-confidence-intervals",
+    "title": "Communicating uncertainty and risk",
+    "section": "What are confidence intervals?",
+    "text": "What are confidence intervals?\n\nIf we did the same study multiple times under similar conditions…\nX% of the time the confidence interval would contain the true value of the parameter of interest (here, the mean)\nCalculated from standard error of the mean (SEM)\nWilke recommends plotting multiple CIs",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#lets-make-some-data",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#lets-make-some-data",
+    "title": "Communicating uncertainty and risk",
+    "section": "Let’s make some data",
+    "text": "Let’s make some data\n\nSame n\nSame standard deviation\nDifferent means: 0 vs. 1\n\n\nx0 &lt;- rnorm(n = 100, mean = 0, sd = 1) \nx1 &lt;- rnorm(n = 100, mean = 1, sd = 1)",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-the-data",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-the-data",
+    "title": "Communicating uncertainty and risk",
+    "section": "Plot the data",
+    "text": "Plot the data\n\nplot(x0, x1, asp = 1)\n\n\n\n\n\n\n\nFigure 16: A scatterplot using the plot() function in base R.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histograms",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histograms",
+    "title": "Communicating uncertainty and risk",
+    "section": "Histograms",
+    "text": "Histograms\n\n\n\nhist(x0)\n\n\n\n\n\n\n\nFigure 17: Histogram of x0 with mean 0\n\n\n\n\n\n\n\nhist(x1)\n\n\n\n\n\n\n\nFigure 18: Histogram of x1 with mean 1",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#lets-tidy-up",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#lets-tidy-up",
+    "title": "Communicating uncertainty and risk",
+    "section": "Let’s ‘tidy’-up",
+    "text": "Let’s ‘tidy’-up\n\n“Tidy” data \\(\\rightarrow\\) rectangular data; columns are variables; rows are observations.\nA data frame (data.frame()) is a useful way to store tidy data\n\n\ntwo_sets &lt;- data.frame(sample_name = c(rep(\"x0\", 100), \n                                       rep(\"x1\", 100)), \n                                       value = c(x0, x1))\n\ndim(two_sets) # What is the dimension (size) of two_sets?\n\n[1] 200   2",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#double-checking",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#double-checking",
+    "title": "Communicating uncertainty and risk",
+    "section": "Double-checking",
+    "text": "Double-checking\n\n\n\nhead(two_sets)\n\n  sample_name      value\n1          x0 -0.2437401\n2          x0  0.1295070\n3          x0 -0.2160337\n4          x0  1.5150869\n5          x0 -1.7914406\n6          x0 -0.8825586\n\n\n\n\ntail(two_sets)\n\n    sample_name     value\n195          x1 1.4423832\n196          x1 1.1128841\n197          x1 0.5606528\n198          x1 0.7648605\n199          x1 2.1821525\n200          x1 0.6135545",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#another-way-to-plot",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#another-way-to-plot",
+    "title": "Communicating uncertainty and risk",
+    "section": "Another way to plot",
+    "text": "Another way to plot\n\ntwo_sets |&gt;\n  ggplot() +\n  aes(x = value) +\n  geom_histogram() +\n  facet_grid(cols = vars(sample_name))\n\n\n\n\nfacet_grid() makes composite figures where the columns (cols) or rows (rows) specify which variables in the data frame to subset on",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#another-way-to-plot-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#another-way-to-plot-output",
+    "title": "Communicating uncertainty and risk",
+    "section": "Another way to plot",
+    "text": "Another way to plot\n\n\n\n\n\n\n\nFigure 19: Side by side histograms of the x0 and x1 variables using ggplot’s facet_grid() function.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#more-histogram-like-figures",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#more-histogram-like-figures",
+    "title": "Communicating uncertainty and risk",
+    "section": "More histogram-like figures",
+    "text": "More histogram-like figures\n\ntwo_sets |&gt;\n  ggplot() +\n  aes(x = value, fill = sample_name) +\n  geom_density(alpha = .5) +\n  theme(legend.position = \"none\")",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#more-histogram-like-figures-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#more-histogram-like-figures-output",
+    "title": "Communicating uncertainty and risk",
+    "section": "More histogram-like figures",
+    "text": "More histogram-like figures\n\n\n\n\n\n\n\nFigure 20: A density plot of x0 and x1 using the geom_density() function.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#points-error-bars",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#points-error-bars",
+    "title": "Communicating uncertainty and risk",
+    "section": "Points + error bars",
+    "text": "Points + error bars\n\ntwo_sets |&gt;\n  dplyr::group_by(sample_name) |&gt;\n  dplyr::mutate(mean_val = mean(value), sdev = sd(value)) |&gt;\n  dplyr::ungroup() |&gt;\n  ggplot() +\n  aes(x = sample_name, y = mean_val) +\n  geom_point() +\n  geom_errorbar(aes(ymin = mean_val - sdev, \n                    ymax = mean_val + sdev, \n                    width = .1)) +\n  ylim(-3, 3)",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#points-error-bars-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#points-error-bars-output",
+    "title": "Communicating uncertainty and risk",
+    "section": "Points + error bars",
+    "text": "Points + error bars\n\n\n\n\n\n\n\nFigure 21: Mean + 1 standard deviation",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#sd-vs.-sem-vs.-cis",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#sd-vs.-sem-vs.-cis",
+    "title": "Communicating uncertainty and risk",
+    "section": "SD vs. SEM vs. CIs?",
+    "text": "SD vs. SEM vs. CIs?\n\nStandard deviation (SD)\n\nDescribes this sample, but usually derives from population\nShould stay the same with larger n\n\nStandard error of the mean (SEM)\n\nMakes an inference based on assumptions about the current sample\nShrinks with larger n\n\nConfidence intervals (CIs)",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#alternatives",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#alternatives",
+    "title": "Communicating uncertainty and risk",
+    "section": "Alternatives",
+    "text": "Alternatives\n\n\n\nWilke (n.d.) Figure 16.9",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#next-time",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#next-time",
+    "title": "Communicating uncertainty and risk",
+    "section": "Next time",
+    "text": "Next time\n\nWork session",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#references",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#references",
+    "title": "Communicating uncertainty and risk",
+    "section": "References",
+    "text": "References\n\n\n\n\n“FRED Economic Data.” n.d. Accessed November 2, 2026. https://fred.stlouisfed.org/graph/?g=1c0s.\n\n\nWilke, Claus O. n.d. “Fundamentals of Data Visualization.” Accessed September 9, 2024. https://clauswilke.com/dataviz/.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-else-it-matters-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-else-it-matters-output",
+    "title": "Communicating uncertainty and risk",
+    "section": "When (else) it matters…",
+    "text": "When (else) it matters…\n\n\n\n\n\n\n\nFigure 5: Histogram of two normal distributions with different means.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-your-data",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-your-data",
+    "title": "Communicating uncertainty and risk",
+    "section": "“Plot your data!”",
+    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 3: Gilmore’s graduate statistics professor.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#commentary",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#commentary",
+    "title": "Communicating uncertainty and risk",
+    "section": "Commentary",
+    "text": "Commentary\n\nPlotting the data is no panacea1\nSome plot types don’t even hint that there might be two different distributions\nHere’s an extreme example",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#footnotes",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#footnotes",
+    "title": "Communicating uncertainty and risk",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nA panacea is a hypothetical or actual remedy, cure-all, or general solution designed to fix all diseases, difficulties, or problem. Source: Dictionary.com",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#commentary-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#commentary-output",
+    "title": "Communicating uncertainty and risk",
+    "section": "Commentary",
+    "text": "Commentary\n\n\n\n\n\n\n\nFigure 10: Illustration of extremely bimodal distribution with roughly equivalent mean and median.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#back-to-normality",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#back-to-normality",
+    "title": "Communicating uncertainty and risk",
+    "section": "Back to normality",
+    "text": "Back to normality\n\nmake_data &lt;- function(i) {\n  df &lt;- data.frame(i,\n                   sample_n = 100, \n                   pop_mean = 0,\n                   pop_sd = 1,\n                   value = rnorm(n = 100, mean = 0, sd = 1))\n  df |&gt;\n    dplyr::mutate(sample_mean = mean(value),\n                  sample_sd = sd(value),\n                  sample_sem = sample_sd/sqrt(sample_n),\n                  ci80 = sample_sem*qnorm(.1),\n                  ci95 = sample_sem*qnorm(.025),\n                  ci99 = sample_sem*qnorm(.005))\n}",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#four-plots-of-the-same-data",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#four-plots-of-the-same-data",
+    "title": "Communicating uncertainty and risk",
+    "section": "Four plots of the same data",
+    "text": "Four plots of the same data\n\n\n\n\n\n\n\n\n\n\nFigure 11: Density plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 12: Histogram plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13: Violin plot.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 14: Boxplot.",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#features",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#features",
+    "title": "Communicating uncertainty and risk",
+    "section": "Features",
+    "text": "Features\n\nDon’t show raw data points (too many: 100*100 = 10,000)\nDo show shape, symmetry\nMean ~ median are representative of “typical” values",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#calculating-cis",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#calculating-cis",
+    "title": "Communicating uncertainty and risk",
+    "section": "Calculating CIs",
+    "text": "Calculating CIs\n\nCI_low = Sample_mean - Critical_value * SEM\nCI_high = Sample_mean + Critical_value * SEM\nCritical_value: output from qnorm() function\n\n80% CI: -1.2815516\n95% CI: -1.9431338\n99% CI: -2.5758293",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#cis-and-graphical-inference",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#cis-and-graphical-inference",
+    "title": "Communicating uncertainty and risk",
+    "section": "CIs and graphical inference",
+    "text": "CIs and graphical inference\n\n\n\n\n\n\nFigure 16: Wilke (n.d.) Figure 16.3",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#do-cis-really-behave-that-way",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#do-cis-really-behave-that-way",
+    "title": "Communicating uncertainty and risk",
+    "section": "Do CIs really behave that way?",
+    "text": "Do CIs really behave that way?",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#main-points",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#main-points",
+    "title": "Communicating uncertainty and risk",
+    "section": "Main points",
+    "text": "Main points",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-11-2026-11-04-policy.html#your-thoughts",
+    "href": "slides/wk-11-2026-11-04-policy.html#your-thoughts",
+    "title": "Visualizing policy-related data",
+    "section": "Your thoughts?",
+    "text": "Your thoughts?",
+    "crumbs": [
+      "Slides",
+      "Wk 11 • Wed Nov 4"
+    ]
   }
 ]

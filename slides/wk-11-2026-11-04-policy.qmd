@@ -155,6 +155,8 @@ format: revealjs
 
 >Voters care least about Israel and Palestine (28%), Ukraine and Russia (27%), China (27%), artificial intelligence (24%), acceptance of gay people (22%), and acceptance of transgender people (19%), despite the prominence of these issues in the news. 
 
+-- @UnknownUnknown-ce
+
 ---
 
 ### How often do you interact with any form of AI (such as ChatGPT, Claude, Grok)?
@@ -163,28 +165,51 @@ format: revealjs
 
 ![@UnknownUnknown-ce](https://youthpoll.yale.edu/sites/default/files/styles/max_width_2400/public/2026-04/8bLTt-voters-ages-65-use-ai-less-often-than-younger-voters-_0.png){#fig-yale-us-ai width="85%"}
 
+## Your thoughts?
+
 ## 
 
 ![@USAFacts2025-an](../include/img/usa-facts-us-govt-income-expenses.png){#fig-federal-budget width="85%"}
 
 ---
 
-::: {#fig-fed-debt-surplus}
-<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=20nBq&width=1280&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
-
--- @Unknown2026-ap
-
-:::
+![@Unknown2026-ap](../include/img/defict-prop-gdp.png)
 
 ---
 
-::: {#fig-fed-public-debt}
+![@Unknown2026-tq](../include/img/debt-prop-gdp.png)
 
-<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=20in1&width=1280&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
+---
 
--- @Unknown2026-tq
+![@Lindsey2024-ob](../include/img/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png){width="65%"}
 
-:::
+---
+
+![@UnknownUnknown-ss](https://factsonclimate.org/assets/generated/concentration-warming-relationship_1920.png){fig-align="center" width="75%"}
+
+---
+
+<iframe src="https://ourworldindata.org/grapher/temperature-anomaly?tab=line" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+---
+
+<iframe src="https://ourworldindata.org/explorers/co2?facet=none&hideControls=false&Gas+or+warming=CO%E2%82%82&Accounting=Territorial&Count=Per+capita&country=CHN~USA~IND~GBR~OWID_WRL&tab=line" loading="lazy" style="width: 100%; height: 696px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+---
+
+<iframe src="https://archive.ourworldindata.org/20261102-112946/grapher/per-capita-co2-emissions-from-domestic-aviation.html?tab=map" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+---
+
+<iframe src="https://archive.ourworldindata.org/20261102-112946/grapher/per-capita-co2-international-flights-adjusted.html?tab=map" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+---
+
+![@Roser2023-fw](../include/img/world_population_growth.png){width="65%"}
+
+---
+
+<iframe src="https://archive.ourworldindata.org/20261102-112946/grapher/cereal-yield-vs-gdp-per-capita.html?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
 
 # Wrap up
 

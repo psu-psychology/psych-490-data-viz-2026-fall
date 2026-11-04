@@ -15,564 +15,645 @@ format: revealjs
   
 # Communicating uncertainty and risk
 
-## Setup
+## Frequencies vs. probabilities
+
+- *p* = .01 vs. 1% chance vs. 1 chance in 100
+- *p* = .10 vs. 10% chance vs. 10 chances in 100
+- *p* = .40 vs. 40% chance vs. 40 chances in 100
+
+---
+
+![@WilkeUnknown-qn Figure 16.1](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/probability-waffle-1.png)
+
+## Example closer to home
+
+- What's the probability that Penn State football ends up with a winning (regular) season?
+- Current record (2026-11-02) is 4-4; 4 games left.
+
+---
 
 ```{r}
+#| label: setup
+#| echo: true
+#| code-fold: false
+
 library(ggplot2)
 library(dplyr)
 ```
 
-## Let's make some data
-
-- Same *n*
-- Same standard deviation
-- Different means: 0 vs. 1
-
 ```{r}
+#| label: generate-data
 #| echo: true
 #| code-fold: false
-x0 <- rnorm(n = 100, mean = 0, sd = 1) 
-x1 <- rnorm(n = 100, mean = 1, sd = 1)
+#| code-line-numbers: "1-2|3-5"
+sim_40 <- rbinom(n = 100, size = 4, prob = .4)
+sim_60 <- rbinom(n = 100, size = 4, prob = .6)
+psu_proj_df <- data.frame(wins = c(sim_40, sim_60), 
+                          p_win = rep(c(40, 60), 
+                                      each = 100))
 ```
 
-## Plot the data
-
-```{r}
-#| echo: true
-#| label: fig-base-r-scatterplot
-#| code-fold: false
-#| fig-cap: "A scatterplot using the `plot()` function in base R."
-plot(x0, x1)
-```
-
-## Histograms
-
-:::: {.columns}
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| fig-cap: "Histogram of x0 with mean 0"
-#| label: fig-base-r-histogram-x0
-#| code-fold: false
-hist(x0)
-```
-:::
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| fig-cap: "Histogram of x1 with mean 1"
-#| label: fig-base-r-histogram-x1
-#| code-fold: false
-hist(x1)
-```
-:::
-::::
-
-## Let's 'tidy'-up
-
-- "Tidy" data $\rightarrow$ rectangular data; columns are variables; rows are observations.
-- A data frame (`data.frame()`) is a useful way to store tidy data
-
-```{r}
-#| echo: true
-#| code-fold: false
-two_sets <- data.frame(sample_name = c(rep("x0", 100), 
-                                       rep("x1", 100)), 
-                                       value = c(x0, x1))
-
-dim(two_sets) # What is the dimension (size) of two_sets?
-```
-
-```{r}
-readr::write_csv(two_sets, "../include/csv/two_sets_1_sd.csv")
-```
-
-## Double-checking
-
-:::: {.columns}
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| code-fold: false
-head(two_sets)
-```
-:::
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| code-fold: false
-tail(two_sets)
-```
-:::
-::::
+- Binomial distribution models binary outcomes
+- In the code above, `size = 4` is the number of games
+- `prob = .4` and `prob = .6` is the probability of winning each game
+- We simulate running this experiment `n = 100` times
 
 ---
 
-::: {.callout-note}
-`data.frame()`: makes a rectangular table of data with labeled columns.
-
-`rep()`: replicates or repeats its arguments. So `rep('x0', 100)` makes a vector/array with 100 copies of 'x0'.
-
-We use `value = c(x0, x1)` to combine x0 and x1 into one long set of values.
-
-**Wait!**: You said don't use the equal sign (`=`), but use it here. What gives? Long-story shortened: The equal sign (`=`) only works when we're defining parameters inside a function; the left arrow (`<-`) does not. So, use left arrows for assigning names outside a function and equal signs inside functions.
-
-Syntax is kind of a pain. Remember when you had to learn English grammar?
-:::
-
-## Another way to plot
+- The data are the number of expected wins
 
 ```{r}
-#| label: fig-ggplot-side-by-side
-#| code-fold: false
+#| label: show-the-data
 #| echo: true
-#| output-location: slide
-#| code-line-numbers: "|5"
-#| fig-cap: "Side by side histograms of the x0 and x1 variables using ggplot's `facet_grid()` function."
-two_sets |>
-  ggplot() +
-  aes(x = value) +
-  geom_histogram() +
-  facet_grid(cols = vars(sample_name))
+#| code-fold: false
+
+head(sim_40)
+head(sim_60)
 ```
+
+
+---
+
+```{r}
+#| label: fig-psu-winning-season
+#| fig-cap: "There are more ways Penn State could wind up with a winning record for the season if the probability of winning each of the remaining games is 60% than if it is 40%."
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+#| code-line-numbers: "|2|3|5-8"
+
+psu_proj_df |>
+  mutate(p_win = factor(p_win)) |>
+  mutate(season_outcome = if_else(wins >= 3, "winning_season", "losing_season")) |>
+  
+  ggplot() +
+  aes(x = wins, fill = season_outcome) +
+  geom_histogram(bins = 5) +
+  facet_grid(cols = vars(p_win)) +
+  theme_classic() +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  labs(title = "Simulated full 2026 season record outcome for Penn State football.",
+       subtitle = "Assume two different probabilities (.4, .6) of winning each of the remaining four games.") +
+  xlab("Wins next 4 games") +
+  theme(text = element_text(size = 14))
+```
+
+## Visualizing uncertainty of point estimates
+
+![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/sampling-schematic-1.png){#fig-wilke-16.3 width="45%"}
+
+## Point estimates
+
+- Types
+  - Mean: center of mass
+  - Median: middle-most
+  - Mode: peak value(s)
+- Why use them?
+
+---
+
+![https://medium.com/neuralspace/how-bayesian-methods-embody-occams-razor-43f3d0253137](https://miro.medium.com/v2/resize:fit:1066/format:webp/0*ixgk7pTe2E--J7wI.png)
 
 ::: {.fragment}
-
-- `facet_grid()` makes composite figures where the columns (`cols`) or rows (`rows`) specify which variables in the data frame to subset on
-
+- One number < *n* numbers
 :::
 
-## More histogram-like figures
+## Point estimates: Considerations
+
+- Is the distribution unimodal?
+- Is it bell-shaped (e.g., normal) or symmetric?
+- Do the mean or median capture the peak of the data? Are they representative?
+
+::: {.fragment}
+- How do I answer these questions?
+:::
+
+## "Plot your data!"
+
+![Gilmore's graduate statistics professor.](../include/img/mike-meyer-linked-in.png){#fig-mike-meyer width="80%"}
+
+## When it matters...
+
+![Real median vs. mean family income in the U.S. median income is now > 40% higher than mean income suggesting that the income distribution has a very long rightward tail. Source: @UnknownUnknown-rt](../include/img/real-mean-median-us-income.png){#fig-fred-median-vs-mean-us-income}
+
+## When (else) it matters...
 
 ```{r}
-#| label: fig-ggplot-density
-#| code-fold: false
+#| label: fig-bimodal-random-normal-histogram
+#| fig-cap: "Histogram of two normal distributions with different means."
 #| echo: true
+#| code-fold: false
 #| output-location: slide
-#| code-line-numbers: "|4|5"
-#| fig-cap: "A density plot of x0 and x1 using the `geom_density()` function."
-two_sets |>
+#| code-line-numbers: "1-2|3-5|7-10"
+p1 <- rnorm(100, 0, 1)
+p2 <- rnorm(100, 2, 1)
+p_both <- data.frame(value = c(p1, p2), 
+                     source = rep(c("p1", "p2"), 
+                                  each = 100))
+                    
+p_both |>
   ggplot() +
-  aes(x = value, fill = sample_name) +
-  geom_density(alpha = .5) +
-  theme(legend.position = "none")
+  aes(x = value) +
+  geom_histogram(bins = 20)
 ```
 
-## Points + error bars
+::: {.incremental}
+- We create two random normal datasets with different means, 0 and 2
+- The standard deviation is the same
+- Then we combine and plot them as one
+::: 
+
+---
 
 ```{r}
-#| fig-cap: "Mean + 1 standard deviation"
-#| label: fig-ggplot-mean-sd 
-#| code-fold: false
-#| echo: true
+#| label: fig-bimodal-random-normal-violin
+#| fig-cap: "Violin plot of two normal distributions with different means."
 #| output-location: slide
-#| code-line-numbers: "|2|3|7-10"
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), sdev = sd(value)) |>
-  dplyr::ungroup() |>
+p_both |>
   ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_point() +
-  geom_errorbar(aes(ymin = mean_val - sdev, 
-                    ymax = mean_val + sdev, 
-                    width = .1)) +
-  ylim(-3, 3)
+  aes(x = value) +
+  geom_violin()
 ```
 
 ---
 
 ```{r}
-#| fig-cap: "Mean + 1 standard error of the mean" 
-#| label: fig-ggplot-mean-sem
-#| code-fold: false
-#| echo: true
+#| label: fig-bimodal-random-normal-boxplot
+#| fig-cap: "Boxplot of two normal distributions with different means."
 #| output-location: slide
-#| code-line-numbers: "2|3-5|7|9-11"
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::summarise(mean_val = mean(value), 
-                   sdev = sd(value), n = n(), 
-                   sem = sdev/sqrt(n)) |>
+p_both |>
   ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_point() +
-  geom_errorbar(aes(ymin = mean_val - sem, 
-                    ymax = mean_val + sem, 
-                    width = .1)) +
-  ylim(-3, 3)
+  aes(x = value) +
+  geom_boxplot()
 ```
 
-## When to SD vs. SEM?
+---
 
-:::: {.columns}
-::: {.column width=50%}
-### Standard deviation (SD)
-- *Describes* this sample
-- Should stay the same with larger *n*
-:::
-::: {.column width=50%}
-### Standard error of the mean (SEM)
-- Makes an *inference* based on assumptions about the current sample
-- Shrinks with larger *n*
-:::
-::::
+```{r}
+#| label: fig-bimodal-random-normal-density-with-source
+#| fig-cap: "A density plot of two normal distributions with different means with the source distribution indicated by color."
+#| output-location: slide
+p_both |>
+  ggplot() +
+  aes(x = value, color = source) +
+  geom_density()
+```
 
-## Let's visualize that!
+---
+
+```{r}
+#| label: fig-bimodal-random-normal-histogram-with-source
+#| fig-cap: "A histogram of two normal distributions with different means with the source distribution indicated by color."
+#| output-location: slide
+p_both |>
+  ggplot() +
+  aes(x = value, fill = source) +
+  geom_histogram(bins = 20)
+```
+
+## Commentary
+
+- Plotting the data is no panacea^[A panacea is a hypothetical or actual remedy, cure-all, or general solution designed to fix all diseases, difficulties, or problem. Source: Dictionary.com]
+- Some plot types don't even *hint* that there might be two different distributions
+- Here's an extreme example
+
+---
+
+```{r}
+#| label: fig-extreme-bimodal-random-normal-histogram
+#| fig-cap: "Illustration of extremely bimodal distribution with roughly equivalent mean and median."
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+p1 <- rnorm(100, -2, 1)
+p2 <- rnorm(100, 2, 1)
+p_both <- data.frame(value = c(p1, p2), 
+                     source = rep(c("p1", "p2"), 
+                                  each = 100))
+
+x_mean <- mean(p_both$value)
+x_med <- median(p_both$value)
+p_both |>
+  ggplot() +
+  aes(x = value) +
+  geom_histogram(bins = 20) +
+  annotate("text",
+           x = 0,
+           y = 30,
+           label = paste0("Mean = ", 
+                          format(x_mean, digits = 3))) + 
+  annotate("text", 
+           x = 0, 
+           y = 25, 
+           label = paste0("Median = ",
+                          format(x_med, digits = 3)))
+```
+
+
+## Back to normality
 
 ```{r}
 #| label: viz-sd-vs-sem
 #| echo: true
 #| code-fold: false
-#| code-line-numbers: "1-2|4-13|15-17"
-in_df <- data.frame(sample_n = c(10, 10, 50, 50, 100, 100),
-                    mean = c(0, 1, 0, 1, 0, 1))
-
-make_data <- function(sample_n, sample_mean) {
-  x <- rnorm(sample_n, sample_mean)
-  df <- data.frame(n = sample_n, 
-                   target_mean = sample_mean, 
-                   value = x)
+#| code-line-numbers: "1|2|3-13|15-17"
+make_data <- function(i) {
+  df <- data.frame(i,
+                   sample_n = 100, 
+                   pop_mean = 0,
+                   pop_sd = 1,
+                   value = rnorm(n = 100, mean = 0, sd = 1))
   df |>
-    dplyr::mutate(mean_val = mean(value),
-                  sdev = sd(value),
-                  sem = sdev/sqrt(sample_n))
+    dplyr::mutate(sample_mean = mean(value),
+                  sample_sd = sd(value),
+                  sample_sem = sample_sd/sqrt(sample_n),
+                  ci80 = sample_sem*qnorm(.1),
+                  ci95 = sample_sem*qnorm(.025),
+                  ci99 = sample_sem*qnorm(.005))
 }
+```
 
-samples_df <- purrr::map2(in_df$sample_n, 
-                          in_df$mean, make_data) |>
+---
+
+```{r}
+#| label: generate-multi-dist-data
+#| echo: true
+#| code-fold: false
+#| code-line-numbers: "1-4|6-7"
+in_df <- data.frame(i = rep(1:100, each=100),
+                    sample_n = rep(100, 100), 
+                 pop_mean = rep(0, 100), 
+                 pop_sd = rep(1, 100))
+
+samples_df <- purrr::map(1:100, make_data) |>
   purrr::list_rbind()
 ```
 
----
-
-```{r}
-#| label: fig-sd-n-increase
-#| echo: true
-#| code-fold: false
-#| output-location: slide
-#| code-line-numbers: "2|3|4|6"
-#| fig-cap: "Visualizing the relationship between SD and n using simulated random data."
-samples_df |>
-  dplyr::select(n, target_mean, sdev, sem) |>
-  dplyr::mutate(target_mean = factor(target_mean)) |>
-  dplyr::distinct() |>
-  ggplot() +
-  aes(x = n, y = sdev, color = target_mean) + 
-  geom_point() +
-  ylim(0, 1.2) +
-  labs(title = "Standard deviation as n increases.")
-```
-
----
-
-```{r}
-#| label: fig-sem-n-increase
-#| echo: true
-#| code-fold: false
-#| output-location: slide
-#| fig-cap: "Visualizing the relationship between SEM and n using simulated random data."
-#| code-line-numbers: "|9"
-samples_df |>
-  dplyr::select(n, target_mean, sdev, sem) |>
-  dplyr::mutate(target_mean = factor(target_mean)) |>
-  dplyr::distinct() |>
-  ggplot() +
-  aes(x = n, y = sem, target_mean) + 
-  geom_point() +
-  ylim(0, 0.4) +
-  labs(title = "Standard error of the mean (SEM) as n increases.")
-```
-
-## Show me the data!
-
-```{r}
-#| label: fig-ggplot-mean-sd-pts
-#| code-fold: false
-#| echo: true
-#| output-location: slide
-#| fig-cap: "Using `geom_jitter()` to show all of the data, but with random 'jitter' in the x dimension."
-#| code-line-numbers: "|11"
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sdev, 
-                    ymax=mean_val + sdev, width = .1)) +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
-## Make the bars easier to see
-
-```{r}
-#| fig-cap: "Mean + 1 standard deviation + jittered points"
-#| label: fig-ggplot-mean-sd-pts-red
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sdev, 
-                    ymax=mean_val + sdev, width = .1),
-                color = "red") +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
----
-
-```{r}
-#| fig-cap: "Mean + 1 standard error of the mean + jittered points" 
-#| label: fig-ggplot-mean-sem-pts
-#| output-location: slide
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value), n = n(), 
-                sem = sdev/sqrt(n)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sem, 
-                    ymax=mean_val + sem, width = .1)) +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
----
-
-```{r}
-#| fig-cap: "Mean + 1 standard error of the mean + jittered points" 
-#| label: fig-ggplot-mean-sem-pts-red
-#| output-location: slide
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value), n = n(), 
-                sem = sdev/sqrt(n)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sem, 
-                    ymax=mean_val + sem, width = .1), 
-                color = "red") +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
----
-
-::: {.callout-warning}
-## Adding random noise
-
-Notice that the two plots with jittered data are *not* identical.
-
-Why is that?
-
-The input data are the same, but separate calls to `geom_jitter()` add different amounts of random noise to the points.
-:::
-
-## Boxplot + violin + raw
-
-```{r}
-#| echo: true
-#| label: fig-violin-box-scatter
-#| code-fold: false
-#| output-location: slide
-#| fig-cap: "A combination of a jittered scatterplot with a boxplot and violin plot."
-two_sets |>
-  ggplot() +
-  aes(x = sample_name, y = value) +
-  geom_violin() +
-  geom_boxplot(alpha = .4) +
-  geom_jitter(width = .1, height = 0) +
-  theme(text = element_text(size = 14))
-```
-
-## Using "beeswarm"
-
-```{r}
-#| echo: true
-#| label: fig-violin-box-beeswarm
-#| code-fold: false
-#| output-location: slide
-#| fig-cap: "A combination of a 'beeswarm' scatterplot with a boxplot and violin plot."
-
-library(ggbeeswarm)
-two_sets |>
-  ggplot() +
-  aes(x = sample_name, y = value) +
-  geom_violin() +
-  geom_boxplot(alpha = .4) +
-  # geom_jitter(width = .1, height = 0) +
-  geom_beeswarm(cex = 1.5) +
-  theme(text = element_text(size = 14))
-```
-
-## Visualizing relationships between variables
-
-- $y=F(x) + error$
-- e.g., shoe_size = F(height)
-- Make data that are related to one another
-- Can we see the relationship?
-
----
-
-```{r}
-#| echo: true
-#| code-fold: false
-x <- runif(n = 100, min = 0, max = 1) # Uniform distribution with min 0 and max 1
-e <- rnorm(n = 100, mean = 0, sd = 1)
-y1 <- x + 0.5*e
-y2 <- x + 0.75*e
-y3 <- x + e
-y4 <- x + 1.5*e
-y5 <- e
-
-linear_df <- data.frame(x = x, y1 = y1, y2 = y2, y3 = y3, y4 = y4)
-```
-
----
-
-```{r}
-#| label: fig-lin-fit-sd-5
-#| fig-cap: "Linear fit with sd=.5"
-#| code-fold: false
-#| output-location: slide
-linear_df |>
-  ggplot() +
-  aes(x = x, y = y1) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y1))
-```
-
----
-
-```{r}
-#| label: fig-lin-fit-sd-75
-#| fig-cap: "Linear fit with sd=.75"
-#| code-fold: false
-#| output-location: slide
-linear_df |>
-  ggplot() +
-  aes(x = x, y = y2) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y2)) 
-```
-
----
-
-```{r}
-#| label: fig-lin-fit-sd-1
-#| fig-cap: "Linear fit with sd=1"
-#| code-fold: false
-#| output-location: slide
-linear_df |>
-  ggplot() +
-  aes(x = x, y = y3) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y3))
-```
-
----
-
-```{r}
-#| label: fig-lin-fit-sd-1.5
-#| fig-cap: "Linear fit with sd=1.5"
-#| code-fold: false
-#| output-location: slide
-linear_df |>
-  ggplot() +
-  aes(x = x, y = y4) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y4))
-```
-
----
-
-```{r}
-#| label: fig-lin-fit-indep-xy
-#| code-fold: false
-#| output-location: slide
-#| fig-cap: "Linear fit with *independent* unrelated variables"
-linear_df |>
-  ggplot() +
-  aes(x = x, y = y5) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y5))
-```
-
-
-## Interim summary
-
-- Even when we *know* there are patterns/effects, conveying them accurately and effectively can be challenging
-
-## @Franconeri2021-uv
-
-- Reasoning about statistical properties is *hard*
-- Describing relative changes or relative risk is *hard*
-- Describing central tendencies of random processes is *hard*
-- More vs. less informative ways of conveying same data
-- Graphic experience/literacy varies [@Zikmund-Fisher2014-lg]]
-
----
-
-![Figure 22 from @Franconeri2021-uv](../include/img/franconeri-fig-22.png){#fig-franconeri-fig-22}
-
-## {.scrollable}
-
-![Figure 24 from @Franconeri2021-uv](../include/img/franconeri-fig-24.png){#fig-franconeri-fig-24}
-
----
-
-![Figure 25 from @Franconeri2021-uv](../include/img/franconeri-fig-25.png){#fig-franconeri-fig-25 width="75%"}
-
----
-
-![Figure 26 from @Franconeri2021-uv](../include/img/franconeri-fig-26.png){#fig-franconeri-fig-26 width="75%"}
-
----
-
-![Figure 27 from @Franconeri2021-uv; @Zikmund-Fisher2014-lg](../include/img/franconeri-fig-27.png){#franconeri-fig-27 width="55%"}
-
----
-
->Risk recall was significantly higher with more anthropomorphic icons (restroom icons, head outlines, and photos) than with other icon types, and participants rated restroom icons as most preferred. However, while restroom icons resulted in the highest correlations between perceived and actual risk among more numerate/graphically literate participants, they performed no better than other icon types among less numerate/graphically literate participants.
-
--- @Zikmund-Fisher2014-lg
-
-## Who understands what?
+## Four plots of the same data
 
 :::: {.columns}
 ::: {.column width=50%}
-![@Lindsey2024-ob](../include/img/ClimateDashboard-atmospheric-carbon-dioxide-image-paleo-20240405-1400px.png)
+```{r}
+#| label: fig-all-values-density
+#| fig-cap: "Density plot."
+samples_df |>
+  ggplot() +
+  aes(x = value) +
+  geom_density()
+```
 :::
 ::: {.column width=50%}
-![@UnknownUnknown-ss](https://factsonclimate.org/assets/generated/concentration-warming-relationship_1920.png){fig-align="center"}
+```{r}
+#| label: fig-all-values-histogram
+#| fig-cap: "Histogram plot."
+samples_df |>
+  ggplot() +
+  aes(x = value) |>
+  geom_histogram()
+```
 :::
 ::::
 
-## Or this?
+:::: {.columns}
+::: {.column width=50%}
+```{r}
+#| label: fig-all-values-violin
+#| fig-cap: "Violin plot."
+samples_df |>
+  ggplot() +
+  aes(y = value) |>
+  geom_violin() +
+  coord_flip()
+```
+:::
+::: {.column width=50%}
+```{r}
+#| label: fig-all-values-boxplot
+#| fig-cap: "Boxplot."
+samples_df |>
+  ggplot() +
+  aes(x = value, y = "") |>
+  geom_boxplot()
+```
+:::
+::::
 
-::: {#fig-owid-measles-cases-death-us}
+## Boxplot anatomy
 
-<iframe src="https://ourworldindata.org/grapher/measles-cases-and-death-rate?time=earliest..2024&tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+:::: {.columns}
+::: {.column width=50%}
+- Bar, box & whiskers (`geom_boxplot()`)
+  - Bar: median
+  - Box: middle 50% (25th...75th percentile)
+  - Whiskers: middle 90% (5th...95th percentile)
+:::
+::: {.column width=50%}
+![](https://miro.medium.com/v2/resize:fit:700/format:webp/1*JJSEEZ6cWNHJiYkb-y7lKg.png)
+:::
+::::
 
-@UnknownUnknown-ew
+## Features
+
+- Don't show raw data points (too many: 100*100 = 10,000)
+- Do show shape, symmetry
+- Mean ~ median are representative of "typical" values
+
+## Comparing measures of uncertainty
+
+![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){#fig-wilke-16.3 width="65%"}
+
+---
+
+::: {.callout-important}
+## Ordinal or continous?
+
+Are the flavor ratings nominal (ordinal) or continuous?
+
+Why do you think so?
 :::
 
+## Confidence intervals
+
+![@WilkeUnknown-qn Figure 16.7](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/mean-chocolate-ratings-1.png)
+
+## What are confidence intervals?
+
+- If we did the same study multiple times under similar conditions...
+- X% of the time the *confidence interval* would contain the true value of the parameter of interest (here, the mean)
+- Calculated from standard error of the mean (SEM)
+- Wilke recommends plotting multiple CIs
+
+## Calculating CIs
+
+- CI_low = Sample_mean - Critical_value * SEM
+- CI_high = Sample_mean + Critical_value * SEM
+- Critical_value: output from `qnorm()` function
+  - 80% CI: `{r} qnorm(p = .10)`
+  - 95% CI: `{r} qnorm(p = .026)`
+  - 99% CI: `{r} qnorm(p = .005)`
+
+<!-- ## Let's make some data -->
+
+<!-- - Same *n* -->
+<!-- - Same standard deviation -->
+<!-- - Different means: 0 vs. 1 -->
+
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- x0 <- rnorm(n = 100, mean = 0, sd = 1)  -->
+<!-- x1 <- rnorm(n = 100, mean = 1, sd = 1) -->
+<!-- ``` -->
+
+<!-- ## Plot the data -->
+
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| label: fig-base-r-scatterplot -->
+<!-- #| code-fold: false -->
+<!-- #| fig-cap: "A scatterplot using the `plot()` function in base R." -->
+<!-- plot(x0, x1, asp = 1) -->
+<!-- ``` -->
+
+<!-- ## Histograms -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| fig-cap: "Histogram of x0 with mean 0" -->
+<!-- #| label: fig-base-r-histogram-x0 -->
+<!-- #| code-fold: false -->
+<!-- hist(x0) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| fig-cap: "Histogram of x1 with mean 1" -->
+<!-- #| label: fig-base-r-histogram-x1 -->
+<!-- #| code-fold: false -->
+<!-- hist(x1) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- ## Let's 'tidy'-up -->
+
+<!-- - "Tidy" data $\rightarrow$ rectangular data; columns are variables; rows are observations. -->
+<!-- - A data frame (`data.frame()`) is a useful way to store tidy data -->
+
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- two_sets <- data.frame(sample_name = c(rep("x0", 100),  -->
+<!--                                        rep("x1", 100)),  -->
+<!--                                        value = c(x0, x1)) -->
+
+<!-- dim(two_sets) # What is the dimension (size) of two_sets? -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- readr::write_csv(two_sets, "../include/csv/two_sets_1_sd.csv") -->
+<!-- ``` -->
+
+<!-- ## Double-checking -->
+
+<!-- :::: {.columns} -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- head(two_sets) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- tail(two_sets) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+
+<!-- --- -->
+
+<!-- ::: {.callout-note} -->
+<!-- `data.frame()`: makes a rectangular table of data with labeled columns. -->
+
+<!-- `rep()`: replicates or repeats its arguments. So `rep('x0', 100)` makes a vector/array with 100 copies of 'x0'. -->
+
+<!-- We use `value = c(x0, x1)` to combine x0 and x1 into one long set of values. -->
+
+<!-- **Wait!**: You said don't use the equal sign (`=`), but use it here. What gives? Long-story shortened: The equal sign (`=`) only works when we're defining parameters inside a function; the left arrow (`<-`) does not. So, use left arrows for assigning names outside a function and equal signs inside functions. -->
+
+<!-- Syntax is kind of a pain. Remember when you had to learn English grammar? -->
+<!-- ::: -->
+
+<!-- ## Another way to plot -->
+
+<!-- ```{r} -->
+<!-- #| label: fig-ggplot-side-by-side -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "|5" -->
+<!-- #| fig-cap: "Side by side histograms of the x0 and x1 variables using ggplot's `facet_grid()` function." -->
+<!-- two_sets |> -->
+<!--   ggplot() + -->
+<!--   aes(x = value) + -->
+<!--   geom_histogram() + -->
+<!--   facet_grid(cols = vars(sample_name)) -->
+<!-- ``` -->
+
+<!-- ::: {.fragment} -->
+
+<!-- - `facet_grid()` makes composite figures where the columns (`cols`) or rows (`rows`) specify which variables in the data frame to subset on -->
+
+<!-- ::: -->
+
+<!-- ## More histogram-like figures -->
+
+<!-- ```{r} -->
+<!-- #| label: fig-ggplot-density -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "|4|5" -->
+<!-- #| fig-cap: "A density plot of x0 and x1 using the `geom_density()` function." -->
+<!-- two_sets |> -->
+<!--   ggplot() + -->
+<!--   aes(x = value, fill = sample_name) + -->
+<!--   geom_density(alpha = .5) + -->
+<!--   theme(legend.position = "none") -->
+<!-- ``` -->
+
+<!-- ## Points + error bars -->
+
+<!-- ```{r} -->
+<!-- #| fig-cap: "Mean + 1 standard deviation" -->
+<!-- #| label: fig-ggplot-mean-sd  -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "|2|3|7-10" -->
+<!-- two_sets |> -->
+<!--   dplyr::group_by(sample_name) |> -->
+<!--   dplyr::mutate(mean_val = mean(value), sdev = sd(value)) |> -->
+<!--   dplyr::ungroup() |> -->
+<!--   ggplot() + -->
+<!--   aes(x = sample_name, y = mean_val) + -->
+<!--   geom_point() + -->
+<!--   geom_errorbar(aes(ymin = mean_val - sdev,  -->
+<!--                     ymax = mean_val + sdev,  -->
+<!--                     width = .1)) + -->
+<!--   ylim(-3, 3) -->
+<!-- ``` -->
+
+<!-- --- -->
+
+<!-- ```{r} -->
+<!-- #| fig-cap: "Mean + 1 standard error of the mean"  -->
+<!-- #| label: fig-ggplot-mean-sem -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "2|3-5|7|9-11" -->
+<!-- two_sets |> -->
+<!--   dplyr::group_by(sample_name) |> -->
+<!--   dplyr::summarise(mean_val = mean(value),  -->
+<!--                    sdev = sd(value), n = n(),  -->
+<!--                    sem = sdev/sqrt(n)) |> -->
+<!--   ggplot() + -->
+<!--   aes(x = sample_name, y = mean_val) + -->
+<!--   geom_point() + -->
+<!--   geom_errorbar(aes(ymin = mean_val - sem,  -->
+<!--                     ymax = mean_val + sem,  -->
+<!--                     width = .1)) + -->
+<!--   ylim(-3, 3) -->
+<!-- ``` -->
+
+<!-- ## SD vs. SEM vs. CIs? -->
+
+<!-- - Standard deviation (SD) -->
+<!--   - *Describes* this sample, but usually derives from population -->
+<!--   - Should stay the same with larger *n* -->
+<!-- - Standard error of the mean (SEM) -->
+<!--   - Makes an *inference* based on assumptions about the current sample -->
+<!--   - Shrinks with larger *n* -->
+<!-- - Confidence intervals (CIs) -->
+
+## CIs and graphical inference
+
+![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){#fig-wilke-16.3 width="65%"}
+
+---
+
+![@WilkeUnknown-qn Figure 16.8](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/chocolate-ratings-contrasts-1.png)
+
+## Alternatives {.scrollable}
+
+![@WilkeUnknown-qn Figure 16.9](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/confidence-visualizations-1.png)
+
+## Do CIs really behave that way?
+
+```{r}
+set.seed(34512)
+more_samples_df <- 
+  data.frame(i = rep(1:30, each=100),
+             value = rnorm(30*100, 0, 1))
+
+df <- more_samples_df |>
+  group_by(i) |>
+  summarize(sample_n = n(),
+            sample_mean = mean(value),
+            sample_sd = sd(value),
+            sample_sem = sample_sd/sqrt(sample_n),
+                  ci80 = sample_sem*qnorm(.1),
+                  ci95 = sample_sem*qnorm(.025),
+                  ci99 = sample_sem*qnorm(.005))
+```
+
+---
+
+```{r}
+#| label: fig-ci-80
+#| fig-cap: "80% CI"
+df |>
+  ggplot() +
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .01) +
+  geom_pointrange(aes(xmin = sample_mean - ci80, xmax = sample_mean + ci80))
+```
+
+---
+
+```{r}
+#| label: fig-ci-95
+#| fig-cap: "95% CI"
+df |>
+  ggplot() +
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .01) +
+  geom_pointrange(aes(xmin = sample_mean - ci95, xmax = sample_mean + ci95))
+```
+
+---
+
+```{r}
+#| label: fig-ci-99
+#| fig-cap: "99% CI"
+df |>
+  ggplot() +
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .01) +
+  geom_pointrange(aes(xmin = sample_mean - ci99, xmax = sample_mean + ci99))
+```
+
 # Wrap up
+
+## Main points
 
 ## Next time
 

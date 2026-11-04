@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome-7-free-7.2.0/fontawesome.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Rick Gilmore">
+  <title>PSYCH 490.007 – Communicating uncertainty and risk</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <style>
+  .reveal div.callout-answer.callout {
+    border-left-color: blue;
+  }
+  .reveal div.callout-answer.callout-style-default .callout-title {
+    background-color: rgb(from blue r g b / 13%);
+  }
+  .reveal div.callout-answer.callout-style-default .callout-icon::before, .reveal div.callout-answer.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\f00c' !important;
+    background-image: none;
+  }
+  .reveal div.callout-question.callout {
+    border-left-color: pink;
+  }
+  .reveal div.callout-question.callout-style-default .callout-title {
+    background-color: rgb(from pink r g b / 13%);
+  }
+  .reveal div.callout-question.callout-style-default .callout-icon::before, .reveal div.callout-question.callout-titled .callout-icon::before {
+    font-family: 'Font Awesome 7 Free';
+    font-weight: 900;
+    font-style: normal;
+    content: '\3f' !important;
+    background-image: none;
+  }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Communicating uncertainty and risk</h1>
+  <p class="subtitle">PSY 490.007 Fall 2026</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Rick Gilmore 
+</div>
+        <p class="quarto-title-affiliation">
+            Department of Psychology
+          </p>
+    </div>
+</div>
+
+</section>
+<section>
+<section id="preliminaries" class="title-slide slide level1 center">
+<h1>Preliminaries</h1>
+
+</section>
+<section id="announcements" class="slide level2">
+<h2>Announcements</h2>
+<ul>
+<li><a href="../exercises/ex-06-making-maps.html">Exercise-06</a> | <a href="https://psu.instructure.com/courses/2484925/assignments/18789309"><i class="fa-solid fa-folder" aria-label="folder"></i> <em>Canvas dropbox</em></a> due Monday, November 16, 2026.</li>
+</ul>
+</section>
+<section id="todays-topic" class="slide level2">
+<h2>Today’s topic</h2>
+<ul>
+<li>Communicating uncertainty and risk</li>
+</ul>
+</section></section>
+<section>
+<section id="communicating-uncertainty-and-risk" class="title-slide slide level1 center">
+<h1>Communicating uncertainty and risk</h1>
+
+</section>
+<section id="frequencies-vs.-probabilities" class="slide level2">
+<h2>Frequencies vs.&nbsp;probabilities</h2>
+<ul>
+<li><em>p</em> = .01 vs.&nbsp;1% chance vs.&nbsp;1 chance in 100</li>
+<li><em>p</em> = .10 vs.&nbsp;10% chance vs.&nbsp;10 chances in 100</li>
+<li><em>p</em> = .40 vs.&nbsp;40% chance vs.&nbsp;40 chances in 100</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/probability-waffle-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="@WilkeUnknown-qn Figure 16.1"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/probability-waffle-1.png" alt="Wilke (n.d.) Figure 16.1"></a></p>
+<figcaption><span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.1</figcaption>
+</figure>
+</div>
+</section>
+<section id="example-closer-to-home" class="slide level2">
+<h2>Example closer to home</h2>
+<ul>
+<li>What’s the probability that Penn State football ends up with a winning (regular) season?</li>
+<li>Current record (2026-11-02) is 4-4; 4 games left.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1-2|3-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>sim_40 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">prob =</span> .<span class="dv">4</span>)</span>
+<span id="cb2-2"><a></a>sim_60 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">prob =</span> .<span class="dv">6</span>)</span>
+<span id="cb2-3"><a></a>psu_proj_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">wins =</span> <span class="fu">c</span>(sim_40, sim_60), </span>
+<span id="cb2-4"><a></a>                          <span class="at">p_win =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">60</span>), </span>
+<span id="cb2-5"><a></a>                                      <span class="at">each =</span> <span class="dv">100</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Binomial distribution models binary outcomes</li>
+<li>In the code above, <code>size = 4</code> is the number of games</li>
+<li><code>prob = .4</code> and <code>prob = .6</code> is the probability of winning each game</li>
+<li>We simulate running this experiment <code>n = 100</code> times</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>The data are the number of expected wins</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">head</span>(sim_40)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3 2 2 2 2 2</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">head</span>(sim_60)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 3 3 4 3 1</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|3|5-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>psu_proj_df <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">mutate</span>(<span class="at">p_win =</span> <span class="fu">factor</span>(p_win)) <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">mutate</span>(<span class="at">season_outcome =</span> <span class="fu">if_else</span>(wins <span class="sc">&gt;=</span> <span class="dv">3</span>, <span class="st">"winning_season"</span>, <span class="st">"losing_season"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a></a>  </span>
+<span id="cb7-5"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-6"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> wins, <span class="at">fill =</span> season_outcome) <span class="sc">+</span></span>
+<span id="cb7-7"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a></a>  <span class="fu">facet_grid</span>(<span class="at">cols =</span> <span class="fu">vars</span>(p_win)) <span class="sc">+</span></span>
+<span id="cb7-9"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb7-10"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb7-11"><a></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb7-12"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulated full 2026 season record outcome for Penn State football."</span>,</span>
+<span id="cb7-13"><a></a>       <span class="at">subtitle =</span> <span class="st">"Assume two different probabilities (.4, .6) of winning each of the remaining four games."</span>) <span class="sc">+</span></span>
+<span id="cb7-14"><a></a>  <span class="fu">xlab</span>(<span class="st">"Wins next 4 games"</span>) <span class="sc">+</span></span>
+<span id="cb7-15"><a></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="" class="slide level2 output-location-slide"><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-psu-winning-season" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-psu-winning-season-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-psu-winning-season-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: There are more ways Penn State could wind up with a winning record for the season if the probability of winning each of the remaining games is 60% than if it is 40%."><img data-src="include/fig/fig-psu-winning-season-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psu-winning-season-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: There are more ways Penn State could wind up with a winning record for the season if the probability of winning each of the remaining games is 60% than if it is 40%.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="visualizing-uncertainty-of-point-estimates" class="slide level2">
+<h2>Visualizing uncertainty of point estimates</h2>
+<div id="fig-wilke-16.3" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-wilke-16.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/sampling-schematic-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: @WilkeUnknown-qn Figure 16.3"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/sampling-schematic-1.png" style="width:45.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-16.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.3
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="point-estimates" class="slide level2">
+<h2>Point estimates</h2>
+<ul>
+<li>Types
+<ul>
+<li>Mean: center of mass</li>
+<li>Median: middle-most</li>
+<li>Mode: peak value(s)</li>
+</ul></li>
+<li>Why use them?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://miro.medium.com/v2/resize:fit:1066/format:webp/0*ixgk7pTe2E--J7wI.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="https://medium.com/neuralspace/how-bayesian-methods-embody-occams-razor-43f3d0253137"><img data-src="https://miro.medium.com/v2/resize:fit:1066/format:webp/0*ixgk7pTe2E--J7wI.png" alt="https://medium.com/neuralspace/how-bayesian-methods-embody-occams-razor-43f3d0253137"></a></p>
+<figcaption>https://medium.com/neuralspace/how-bayesian-methods-embody-occams-razor-43f3d0253137</figcaption>
+</figure>
+</div>
+<div class="fragment">
+<ul>
+<li>One number &lt; <em>n</em> numbers</li>
+</ul>
+</div>
+</section>
+<section id="point-estimates-considerations" class="slide level2">
+<h2>Point estimates: Considerations</h2>
+<ul>
+<li>Is the distribution unimodal?</li>
+<li>Is it bell-shaped (e.g., normal) or symmetric?</li>
+<li>Do the mean or median capture the peak of the data? Are they representative?</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>How do I answer these questions?</li>
+</ul>
+</div>
+</section>
+<section id="plot-your-data" class="slide level2">
+<h2>“Plot your data!”</h2>
+<div id="fig-mike-meyer" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-mike-meyer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/mike-meyer-linked-in.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;3: Gilmore’s graduate statistics professor."><img data-src="../include/img/mike-meyer-linked-in.png" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mike-meyer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Gilmore’s graduate statistics professor.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="when-it-matters" class="slide level2">
+<h2>When it matters…</h2>
+<div id="fig-fred-median-vs-mean-us-income" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fred-median-vs-mean-us-income-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/real-mean-median-us-income.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;4: Real median vs.&nbsp;mean family income in the U.S. median income is now > 40% higher than mean income suggesting that the income distribution has a very long rightward tail. Source: @UnknownUnknown-rt"><img data-src="../include/img/real-mean-median-us-income.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fred-median-vs-mean-us-income-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Real median vs.&nbsp;mean family income in the U.S. median income is now &gt; 40% higher than mean income suggesting that the income distribution has a very long rightward tail. Source: <span class="citation" data-cites="UnknownUnknown-rt"><span>“<span>FRED</span> Economic Data”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="when-else-it-matters" class="slide level2">
+<h2>When (else) it matters…</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" data-code-line-numbers="1-2|3-5|7-10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb8-2"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb8-3"><a></a>p_both <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">value =</span> <span class="fu">c</span>(p1, p2), </span>
+<span id="cb8-4"><a></a>                     <span class="at">source =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"p1"</span>, <span class="st">"p2"</span>), </span>
+<span id="cb8-5"><a></a>                                  <span class="at">each =</span> <span class="dv">100</span>))</span>
+<span id="cb8-6"><a></a>                    </span>
+<span id="cb8-7"><a></a>p_both <span class="sc">|&gt;</span></span>
+<span id="cb8-8"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-9"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> value) <span class="sc">+</span></span>
+<span id="cb8-10"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+<ul>
+<li class="fragment">We create two random normal datasets with different means, 0 and 2</li>
+<li class="fragment">The standard deviation is the same</li>
+<li class="fragment">Then we combine and plot them as one</li>
+</ul>
+</section>
+<section id="when-else-it-matters-output" class="slide level2 output-location-slide"><h2>When (else) it matters…</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-bimodal-random-normal-histogram" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bimodal-random-normal-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-bimodal-random-normal-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;5: Histogram of two normal distributions with different means."><img data-src="include/fig/fig-bimodal-random-normal-histogram-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bimodal-random-normal-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Histogram of two normal distributions with different means.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal-random-normal-violin" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bimodal-random-normal-violin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-bimodal-random-normal-violin-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;6: Violin plot of two normal distributions with different means."><img data-src="include/fig/fig-bimodal-random-normal-violin-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bimodal-random-normal-violin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Violin plot of two normal distributions with different means.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal-random-normal-boxplot" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bimodal-random-normal-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-bimodal-random-normal-boxplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;7: Boxplot of two normal distributions with different means."><img data-src="include/fig/fig-bimodal-random-normal-boxplot-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bimodal-random-normal-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Boxplot of two normal distributions with different means.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal-random-normal-density-with-source" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bimodal-random-normal-density-with-source-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-bimodal-random-normal-density-with-source-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;8: A density plot of two normal distributions with different means with the source distribution indicated by color."><img data-src="include/fig/fig-bimodal-random-normal-density-with-source-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bimodal-random-normal-density-with-source-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: A density plot of two normal distributions with different means with the source distribution indicated by color.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-bimodal-random-normal-histogram-with-source" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bimodal-random-normal-histogram-with-source-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-bimodal-random-normal-histogram-with-source-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;9: A histogram of two normal distributions with different means with the source distribution indicated by color."><img data-src="include/fig/fig-bimodal-random-normal-histogram-with-source-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bimodal-random-normal-histogram-with-source-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: A histogram of two normal distributions with different means with the source distribution indicated by color.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="commentary" class="slide level2">
+<h2>Commentary</h2>
+<ul>
+<li>Plotting the data is no panacea<a href="#/footnotes" class="footnote-ref" id="fnref1" role="doc-noteref" data-footnote-href="#/fn1" onclick=""><sup>1</sup></a></li>
+<li>Some plot types don’t even <em>hint</em> that there might be two different distributions</li>
+<li>Here’s an extreme example</li>
+</ul>
+<aside></aside></section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>p1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb9-2"><a></a>p2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb9-3"><a></a>p_both <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">value =</span> <span class="fu">c</span>(p1, p2), </span>
+<span id="cb9-4"><a></a>                     <span class="at">source =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"p1"</span>, <span class="st">"p2"</span>), </span>
+<span id="cb9-5"><a></a>                                  <span class="at">each =</span> <span class="dv">100</span>))</span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a>x_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(p_both<span class="sc">$</span>value)</span>
+<span id="cb9-8"><a></a>x_med <span class="ot">&lt;-</span> <span class="fu">median</span>(p_both<span class="sc">$</span>value)</span>
+<span id="cb9-9"><a></a>p_both <span class="sc">|&gt;</span></span>
+<span id="cb9-10"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-11"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> value) <span class="sc">+</span></span>
+<span id="cb9-12"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb9-13"><a></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>,</span>
+<span id="cb9-14"><a></a>           <span class="at">x =</span> <span class="dv">0</span>,</span>
+<span id="cb9-15"><a></a>           <span class="at">y =</span> <span class="dv">30</span>,</span>
+<span id="cb9-16"><a></a>           <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"Mean = "</span>, </span>
+<span id="cb9-17"><a></a>                          <span class="fu">format</span>(x_mean, <span class="at">digits =</span> <span class="dv">3</span>))) <span class="sc">+</span> </span>
+<span id="cb9-18"><a></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, </span>
+<span id="cb9-19"><a></a>           <span class="at">x =</span> <span class="dv">0</span>, </span>
+<span id="cb9-20"><a></a>           <span class="at">y =</span> <span class="dv">25</span>, </span>
+<span id="cb9-21"><a></a>           <span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"Median = "</span>,</span>
+<span id="cb9-22"><a></a>                          <span class="fu">format</span>(x_med, <span class="at">digits =</span> <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="" class="slide level2 output-location-slide"><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-extreme-bimodal-random-normal-histogram" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-extreme-bimodal-random-normal-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-extreme-bimodal-random-normal-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;10: Illustration of extremely bimodal distribution with roughly equivalent mean and median."><img data-src="include/fig/fig-extreme-bimodal-random-normal-histogram-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-extreme-bimodal-random-normal-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Illustration of extremely bimodal distribution with roughly equivalent mean and median.
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="back-to-normality" class="slide level2">
+<h2>Back to normality</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" data-code-line-numbers="1|2|3-13|15-17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>make_data <span class="ot">&lt;-</span> <span class="cf">function</span>(i) {</span>
+<span id="cb10-2"><a></a>  df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(i,</span>
+<span id="cb10-3"><a></a>                   <span class="at">sample_n =</span> <span class="dv">100</span>, </span>
+<span id="cb10-4"><a></a>                   <span class="at">pop_mean =</span> <span class="dv">0</span>,</span>
+<span id="cb10-5"><a></a>                   <span class="at">pop_sd =</span> <span class="dv">1</span>,</span>
+<span id="cb10-6"><a></a>                   <span class="at">value =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>))</span>
+<span id="cb10-7"><a></a>  df <span class="sc">|&gt;</span></span>
+<span id="cb10-8"><a></a>    dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">sample_mean =</span> <span class="fu">mean</span>(value),</span>
+<span id="cb10-9"><a></a>                  <span class="at">sample_sd =</span> <span class="fu">sd</span>(value),</span>
+<span id="cb10-10"><a></a>                  <span class="at">sample_sem =</span> sample_sd<span class="sc">/</span><span class="fu">sqrt</span>(sample_n),</span>
+<span id="cb10-11"><a></a>                  <span class="at">ci80 =</span> sample_sem<span class="sc">*</span><span class="fu">qnorm</span>(.<span class="dv">1</span>),</span>
+<span id="cb10-12"><a></a>                  <span class="at">ci95 =</span> sample_sem<span class="sc">*</span><span class="fu">qnorm</span>(.<span class="dv">025</span>),</span>
+<span id="cb10-13"><a></a>                  <span class="at">ci99 =</span> sample_sem<span class="sc">*</span><span class="fu">qnorm</span>(.<span class="dv">005</span>))</span>
+<span id="cb10-14"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" data-code-line-numbers="1-4|6-7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>in_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">i =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">each=</span><span class="dv">100</span>),</span>
+<span id="cb11-2"><a></a>                    <span class="at">sample_n =</span> <span class="fu">rep</span>(<span class="dv">100</span>, <span class="dv">100</span>), </span>
+<span id="cb11-3"><a></a>                 <span class="at">pop_mean =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">100</span>), </span>
+<span id="cb11-4"><a></a>                 <span class="at">pop_sd =</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">100</span>))</span>
+<span id="cb11-5"><a></a></span>
+<span id="cb11-6"><a></a>samples_df <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, make_data) <span class="sc">|&gt;</span></span>
+<span id="cb11-7"><a></a>  purrr<span class="sc">::</span><span class="fu">list_rbind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="four-plots-of-the-same-data" class="slide level2">
+<h2>Four plots of the same data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-all-values-density" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-all-values-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-all-values-density-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;11: Density plot."><img data-src="include/fig/fig-all-values-density-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-all-values-density-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Density plot.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-all-values-histogram" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-all-values-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-all-values-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Figure&nbsp;12: Histogram plot."><img data-src="include/fig/fig-all-values-histogram-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-all-values-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Histogram plot.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-all-values-violin" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-all-values-violin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-all-values-violin-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Figure&nbsp;13: Violin plot."><img data-src="include/fig/fig-all-values-violin-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-all-values-violin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Violin plot.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-all-values-boxplot" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-all-values-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-all-values-boxplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Figure&nbsp;14: Boxplot."><img data-src="include/fig/fig-all-values-boxplot-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-all-values-boxplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Boxplot.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="boxplot-anatomy" class="slide level2">
+<h2>Boxplot anatomy</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Bar, box &amp; whiskers (<code>geom_boxplot()</code>)
+<ul>
+<li>Bar: median</li>
+<li>Box: middle 50% (25th…75th percentile)</li>
+<li>Whiskers: middle 90% (5th…95th percentile)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><a href="https://miro.medium.com/v2/resize:fit:700/format:webp/1*JJSEEZ6cWNHJiYkb-y7lKg.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="https://miro.medium.com/v2/resize:fit:700/format:webp/1*JJSEEZ6cWNHJiYkb-y7lKg.png"></a></p>
+</div></div>
+</section>
+<section id="features" class="slide level2">
+<h2>Features</h2>
+<ul>
+<li>Don’t show raw data points (too many: 100*100 = 10,000)</li>
+<li>Do show shape, symmetry</li>
+<li>Mean ~ median are representative of “typical” values</li>
+</ul>
+</section>
+<section id="comparing-measures-of-uncertainty" class="slide level2">
+<h2>Comparing measures of uncertainty</h2>
+<div id="fig-wilke-16.3" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-wilke-16.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Figure&nbsp;15: @WilkeUnknown-qn Figure 16.3"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png" style="width:65.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-16.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: <span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.3
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ordinal or continous?</strong></p>
+</div>
+<div class="callout-content">
+<p>Are the flavor ratings nominal (ordinal) or continuous?</p>
+<p>Why do you think so?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="confidence-intervals" class="slide level2">
+<h2>Confidence intervals</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/mean-chocolate-ratings-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="@WilkeUnknown-qn Figure 16.7"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/mean-chocolate-ratings-1.png" alt="Wilke (n.d.) Figure 16.7"></a></p>
+<figcaption><span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.7</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-are-confidence-intervals" class="slide level2">
+<h2>What are confidence intervals?</h2>
+<ul>
+<li>If we did the same study multiple times under similar conditions…</li>
+<li>X% of the time the <em>confidence interval</em> would contain the true value of the parameter of interest (here, the mean)</li>
+<li>Calculated from standard error of the mean (SEM)</li>
+<li>Wilke recommends plotting multiple CIs</li>
+</ul>
+</section>
+<section id="calculating-cis" class="slide level2">
+<h2>Calculating CIs</h2>
+<ul>
+<li>CI_low = Sample_mean - Critical_value * SEM</li>
+<li>CI_high = Sample_mean + Critical_value * SEM</li>
+<li>Critical_value: output from <code>qnorm()</code> function
+<ul>
+<li>80% CI: -1.2815516</li>
+<li>95% CI: -1.9431338</li>
+<li>99% CI: -2.5758293</li>
+</ul></li>
+</ul>
+<!-- ## Let's make some data -->
+<!-- - Same *n* -->
+<!-- - Same standard deviation -->
+<!-- - Different means: 0 vs. 1 -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- x0 <- rnorm(n = 100, mean = 0, sd = 1)  -->
+<!-- x1 <- rnorm(n = 100, mean = 1, sd = 1) -->
+<!-- ``` -->
+<!-- ## Plot the data -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| label: fig-base-r-scatterplot -->
+<!-- #| code-fold: false -->
+<!-- #| fig-cap: "A scatterplot using the `plot()` function in base R." -->
+<!-- plot(x0, x1, asp = 1) -->
+<!-- ``` -->
+<!-- ## Histograms -->
+<!-- :::: {.columns} -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| fig-cap: "Histogram of x0 with mean 0" -->
+<!-- #| label: fig-base-r-histogram-x0 -->
+<!-- #| code-fold: false -->
+<!-- hist(x0) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| fig-cap: "Histogram of x1 with mean 1" -->
+<!-- #| label: fig-base-r-histogram-x1 -->
+<!-- #| code-fold: false -->
+<!-- hist(x1) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+<!-- ## Let's 'tidy'-up -->
+<!-- - "Tidy" data $\rightarrow$ rectangular data; columns are variables; rows are observations. -->
+<!-- - A data frame (`data.frame()`) is a useful way to store tidy data -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- two_sets <- data.frame(sample_name = c(rep("x0", 100),  -->
+<!--                                        rep("x1", 100)),  -->
+<!--                                        value = c(x0, x1)) -->
+<!-- dim(two_sets) # What is the dimension (size) of two_sets? -->
+<!-- ``` -->
+<!-- ```{r} -->
+<!-- readr::write_csv(two_sets, "../include/csv/two_sets_1_sd.csv") -->
+<!-- ``` -->
+<!-- ## Double-checking -->
+<!-- :::: {.columns} -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- head(two_sets) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- ::: {.column width=50%} -->
+<!-- ```{r} -->
+<!-- #| echo: true -->
+<!-- #| code-fold: false -->
+<!-- tail(two_sets) -->
+<!-- ``` -->
+<!-- ::: -->
+<!-- :::: -->
+<!-- --- -->
+<!-- ::: {.callout-note} -->
+<!-- `data.frame()`: makes a rectangular table of data with labeled columns. -->
+<!-- `rep()`: replicates or repeats its arguments. So `rep('x0', 100)` makes a vector/array with 100 copies of 'x0'. -->
+<!-- We use `value = c(x0, x1)` to combine x0 and x1 into one long set of values. -->
+<!-- **Wait!**: You said don't use the equal sign (`=`), but use it here. What gives? Long-story shortened: The equal sign (`=`) only works when we're defining parameters inside a function; the left arrow (`<-`) does not. So, use left arrows for assigning names outside a function and equal signs inside functions. -->
+<!-- Syntax is kind of a pain. Remember when you had to learn English grammar? -->
+<!-- ::: -->
+<!-- ## Another way to plot -->
+<!-- ```{r} -->
+<!-- #| label: fig-ggplot-side-by-side -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "|5" -->
+<!-- #| fig-cap: "Side by side histograms of the x0 and x1 variables using ggplot's `facet_grid()` function." -->
+<!-- two_sets |> -->
+<!--   ggplot() + -->
+<!--   aes(x = value) + -->
+<!--   geom_histogram() + -->
+<!--   facet_grid(cols = vars(sample_name)) -->
+<!-- ``` -->
+<!-- ::: {.fragment} -->
+<!-- - `facet_grid()` makes composite figures where the columns (`cols`) or rows (`rows`) specify which variables in the data frame to subset on -->
+<!-- ::: -->
+<!-- ## More histogram-like figures -->
+<!-- ```{r} -->
+<!-- #| label: fig-ggplot-density -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "|4|5" -->
+<!-- #| fig-cap: "A density plot of x0 and x1 using the `geom_density()` function." -->
+<!-- two_sets |> -->
+<!--   ggplot() + -->
+<!--   aes(x = value, fill = sample_name) + -->
+<!--   geom_density(alpha = .5) + -->
+<!--   theme(legend.position = "none") -->
+<!-- ``` -->
+<!-- ## Points + error bars -->
+<!-- ```{r} -->
+<!-- #| fig-cap: "Mean + 1 standard deviation" -->
+<!-- #| label: fig-ggplot-mean-sd  -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "|2|3|7-10" -->
+<!-- two_sets |> -->
+<!--   dplyr::group_by(sample_name) |> -->
+<!--   dplyr::mutate(mean_val = mean(value), sdev = sd(value)) |> -->
+<!--   dplyr::ungroup() |> -->
+<!--   ggplot() + -->
+<!--   aes(x = sample_name, y = mean_val) + -->
+<!--   geom_point() + -->
+<!--   geom_errorbar(aes(ymin = mean_val - sdev,  -->
+<!--                     ymax = mean_val + sdev,  -->
+<!--                     width = .1)) + -->
+<!--   ylim(-3, 3) -->
+<!-- ``` -->
+<!-- --- -->
+<!-- ```{r} -->
+<!-- #| fig-cap: "Mean + 1 standard error of the mean"  -->
+<!-- #| label: fig-ggplot-mean-sem -->
+<!-- #| code-fold: false -->
+<!-- #| echo: true -->
+<!-- #| output-location: slide -->
+<!-- #| code-line-numbers: "2|3-5|7|9-11" -->
+<!-- two_sets |> -->
+<!--   dplyr::group_by(sample_name) |> -->
+<!--   dplyr::summarise(mean_val = mean(value),  -->
+<!--                    sdev = sd(value), n = n(),  -->
+<!--                    sem = sdev/sqrt(n)) |> -->
+<!--   ggplot() + -->
+<!--   aes(x = sample_name, y = mean_val) + -->
+<!--   geom_point() + -->
+<!--   geom_errorbar(aes(ymin = mean_val - sem,  -->
+<!--                     ymax = mean_val + sem,  -->
+<!--                     width = .1)) + -->
+<!--   ylim(-3, 3) -->
+<!-- ``` -->
+<!-- ## SD vs. SEM vs. CIs? -->
+<!-- - Standard deviation (SD) -->
+<!--   - *Describes* this sample, but usually derives from population -->
+<!--   - Should stay the same with larger *n* -->
+<!-- - Standard error of the mean (SEM) -->
+<!--   - Makes an *inference* based on assumptions about the current sample -->
+<!--   - Shrinks with larger *n* -->
+<!-- - Confidence intervals (CIs) -->
+</section>
+<section id="cis-and-graphical-inference" class="slide level2">
+<h2>CIs and graphical inference</h2>
+<div id="fig-wilke-16.3" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-wilke-16.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;16: @WilkeUnknown-qn Figure 16.3"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png" style="width:65.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wilke-16.3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: <span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.3
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/chocolate-ratings-contrasts-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="@WilkeUnknown-qn Figure 16.8"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/chocolate-ratings-contrasts-1.png" alt="Wilke (n.d.) Figure 16.8"></a></p>
+<figcaption><span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.8</figcaption>
+</figure>
+</div>
+</section>
+<section id="alternatives" class="slide level2 scrollable">
+<h2>Alternatives</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/confidence-visualizations-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="@WilkeUnknown-qn Figure 16.9"><img data-src="https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/confidence-visualizations-1.png" alt="Wilke (n.d.) Figure 16.9"></a></p>
+<figcaption><span class="citation" data-cites="WilkeUnknown-qn">Wilke (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span> Figure 16.9</figcaption>
+</figure>
+</div>
+</section>
+<section id="do-cis-really-behave-that-way" class="slide level2">
+<h2>Do CIs really behave that way?</h2>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ci-80" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ci-80-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-ci-80-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figure&nbsp;17: 80% CI"><img data-src="include/fig/fig-ci-80-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ci-80-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: 80% CI
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ci-95" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ci-95-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-ci-95-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Figure&nbsp;18: 95% CI"><img data-src="include/fig/fig-ci-95-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ci-95-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18: 95% CI
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-ci-99" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ci-99-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-ci-99-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Figure&nbsp;19: 99% CI"><img data-src="include/fig/fig-ci-99-1.png" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ci-99-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19: 99% CI
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="wrap-up" class="title-slide slide level1 center">
+<h1>Wrap up</h1>
+
+</section>
+<section id="main-points" class="slide level2">
+<h2>Main points</h2>
+</section>
+<section id="next-time" class="slide level2">
+<h2>Next time</h2>
+<ul>
+<li>Work session</li>
+</ul>
+</section></section>
+<section>
+<section id="resources" class="title-slide slide level1 center">
+<h1>Resources</h1>
+
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-UnknownUnknown-rt" class="csl-entry" role="listitem">
+<span>“<span>FRED</span> Economic Data.”</span> n.d. Accessed November 2, 2026. <a href="https://fred.stlouisfed.org/graph/?g=1c0s">https://fred.stlouisfed.org/graph/?g=1c0s</a>.
+</div>
+<div id="ref-WilkeUnknown-qn" class="csl-entry" role="listitem">
+Wilke, Claus O. n.d. <span>“Fundamentals of Data Visualization.”</span> Accessed September 9, 2024. <a href="https://clauswilke.com/dataviz/">https://clauswilke.com/dataviz/</a>.
+</div>
+</div>
+</section></section>
+<section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A panacea is a hypothetical or actual remedy, cure-all, or general solution designed to fix all diseases, difficulties, or problem. Source: Dictionary.com</p></li>
+</ol>
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="https://brand.psu.edu/images/backgrounds/penn-state-shield.jpg" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://psu-psychology.github.io/psych-490-data-viz-2026-fall">PSY 490.007</a> | © 2026 Rick Gilmore under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // default icon
+                link.classList.add("external");
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>
