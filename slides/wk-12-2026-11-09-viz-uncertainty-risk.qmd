@@ -20,9 +20,9 @@ format: revealjs
 
 ## Today's topic
 
-- Communicating uncertainty and risk
+- Communicating uncertainty
   
-# Communicating uncertainty and risk
+# Communicating uncertainty
 
 ## Frequencies vs. probabilities
 
@@ -145,7 +145,7 @@ ggplot() +
 ```
 
 
-## Continuous variables
+## Violin + boxplot + points
 
 ```{r}
 #| label: fig-violin-box-pts-500
@@ -194,7 +194,7 @@ df |>
   geom_violin(aes(x = value, y = "")) +
   geom_boxplot(aes(x = value, y = ""), alpha = .2) +
   geom_jitter(aes(x = value, y = ""), height = .05, 
-              width = 0, alpha = .2) +
+              width = 0, alpha = .5) +
   theme_classic() +
   ylab("")
 ```
@@ -211,7 +211,7 @@ df |>
   ggplot() +
   geom_violin(aes(x = value, y = "")) +
   geom_boxplot(aes(x = value, y = ""), alpha = .2) +
-  geom_beeswarm(aes(x = value, y = ""), orientation = 'y', alpha = .4) +
+  geom_beeswarm(aes(x = value, y = ""), orientation = 'y', alpha = .5) +
   theme_classic() +
   ylab("")
 ```
@@ -222,10 +222,19 @@ df |>
 
 ## Types
 
+:::: {.columns}
+::: {.column width=50%}
 - Mean: center of mass
 - Median: middle-most
 - Mode: peak value(s)
 - Why use them?
+:::
+::: {.column width=50%}
+![https://statisticscalculators.com/mean-median-mode-calculator/](https://statisticscalculators.com/_assets/images/mmm-05-desktop.png)
+:::
+::::
+
+
 
 ## Occam's razor
 
@@ -241,7 +250,10 @@ df |>
 ::: {.column width=50%}
 - Point estimates are "models" of the data
 - Good models can be used to make predictions
-- "All models are wrong; Some are useful." -- attributed to George Box
+
+>"All models are wrong; Some are useful." 
+
+-- attributed to George Box
 :::
 ::: {.column width=50%}
 ![George Box. Wikipedia^["By DavidMCEddy at en.wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=115167166"]](https://upload.wikimedia.org/wikipedia/commons/0/03/GeorgeEPBox_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled){#fig-box width="65%"}
@@ -265,7 +277,20 @@ df |>
 
 ## When it matters...
 
-![Median income is now > 40% higher than mean income. Source: @UnknownUnknown-rt](../include/img/real-mean-median-us-income.png){#fig-fred-median-vs-mean-us-income}
+![Mean income is now > 40% higher than median income. Source: @UnknownUnknown-rt](../include/img/real-mean-median-us-income.png){#fig-fred-median-vs-mean-us-income}
+
+## So...
+
+![https://statisticscalculators.com/mean-median-mode-calculator/](https://statisticscalculators.com/_assets/images/mmm-05-desktop.png)
+
+---
+
+::: {#fig-owid-income}
+
+<iframe src="https://archive.ourworldindata.org/20261102-112946/grapher/mean-versus-median-monthly-per-capita-expenditure-or-income.html?tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"></iframe>
+
+@UnknownUnknown-mb
+:::
 
 ## When (else) it matters...
 
@@ -502,238 +527,11 @@ samples_df |>
 
 ## Histograms, violin plot, boxplots
 
-- Don't show raw data points (here too many: 100*100 = 10,000)
+- These don't show raw data points
+  - Unless we add them
 - Do show shape, symmetry
 - Show whether mean ~ median are representative of "typical" values
-
-## Comparing measures of uncertainty
-
-![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){#fig-wilke-16.3 width="65%"}
-
----
-
-::: {.question}
-## Ordinal or continous?
-
-Are the flavor ratings nominal (ordinal) or continuous?
-
-Why do you think so?
-:::
-
-![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){width="65%"}
-
-## Confidence intervals
-
-![@WilkeUnknown-qn Figure 16.7](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/mean-chocolate-ratings-1.png)
-
-## What are confidence intervals?
-
-- If we did the same study multiple times under similar conditions...
-- X% of the time the *confidence interval* would contain the true value^[of the parameter of interest (here, the mean)] 
-- Calculated from standard error of the mean (SEM)
-- Wilke recommends plotting multiple CIs with different "levels" of confidence
-
-## Calculating CIs
-
-- CI_low = Sample_mean - Critical_value * SEM
-- CI_high = Sample_mean + Critical_value * SEM
-- Critical_value: output from `qnorm()` function
-  - 80% CI: `{r} qnorm(p = .10)`
-  - 95% CI: `{r} qnorm(p = .026)`
-  - 99% CI: `{r} qnorm(p = .005)`
-
-## Do CIs really behave that way?
-
-```{r}
-#| label: make-ci-data
-#| echo: true
-#| code-fold: false
-random_normal_samples_df <- 
-  data.frame(i = rep(1:100, each=100),
-             value = rnorm(50*100, 0, 1))
-
-summary_stats_df <- random_normal_samples_df |>
-  group_by(i) |>
-  summarize(sample_n = n(),
-            sample_mean = mean(value),
-            sample_sd = sd(value),
-            sample_sem = sample_sd/sqrt(sample_n),
-                  ci80 = -sample_sem*qnorm(.1),
-                  ci95 = -sample_sem*qnorm(.025),
-                  ci99 = -sample_sem*qnorm(.005))
-```
-
----
-
-```{r}
-#| label: fig-show-sample-dists-histogram
-#| fig-cap: "Faceted histogram of 16 of the sample normal distributions."
-#| echo: true
-#| code-fold: false
-#| code-line-numbers: "1-2|4|5-6|7"
-#| output-location: slide
-
-random_normal_samples_df |>
-  head(n = 16*100) |>
-  
-  ggplot() +
-  aes(x = value) +
-  geom_histogram(bins = 20) +
-  facet_wrap(vars(i), nrow = 4, ncol = 4)
-```
-
----
-
-```{r}
-#| label: fig-show-sample-dists-violin-box
-#| fig-cap: "Faceted box and violin plot of 16 of the sample normal distributions."
-#| echo: true
-#| code-fold: false
-#| code-line-numbers: "1-2|4|5-6|7"
-#| output-location: slide
-random_normal_samples_df |>
-  head(n = 16*100) |>
-  
-  ggplot() +
-  geom_violin(aes(x = value, y = "")) +
-  geom_boxplot(aes(x = value, y = ""), alpha = .2) +
-  facet_wrap(vars(i), nrow = 4, ncol = 4)
-```
-
----
-
-```{r}
-#| label: fig-ci-80
-#| echo: true
-#| code-fold: false
-#| code-line-numbers: ""
-#| fig-cap: "80% CI"
-#| output-location: slide
-summary_stats_df |>
-  ggplot() +
-  aes(x = sample_mean, y = i) +
-  geom_point(size = .5) +
-  geom_errorbar(aes(xmin = sample_mean - ci80, xmax = sample_mean + ci80)) +
-  geom_linerange(aes(x = 0, y = i, ymin = 0, ymax = 50), color = "red") +
-  xlim(-2.5, 2.5)
-```
-
----
-
-::: {.question}
-## What do we expect?
-
-If we generate *n*=100 intervals at 80% confidence, how many intervals should **fall outside** the true population mean (0)?
-
-:::
-
-::: {.fragment}
-::: {.answer}
-
-$p_{outside} = 1-p_{inside} = 1-80\% = 1-.8$, so
-
-$$100*(1-.8)=20$$ 
-
-On average, we expect 20/100 80% CIs will fail to include 0 
-
-:::
-:::
-
----
-
-```{r}
-#| label: fig-ci-80-flag-dont-include-mean
-#| echo: true
-#| code-fold: false
-#| code-line-numbers: "2-3"
-#| fig-cap: "80% CI with indicator about whether the interval excludes the true mean."
-#| output-location: slide
-summary_stats_df |>
-  mutate(CI_excludes = ((sample_mean - ci80) > 0) |
-           ((sample_mean + ci80) < 0)) |>
-  
-  ggplot() +
-  aes(x = sample_mean, y = i) +
-  geom_point(size = .5) +
-  geom_errorbar(aes(
-    xmin = sample_mean - ci80,
-    xmax = sample_mean + ci80,
-    color = CI_excludes
-  )) +
-  geom_linerange(aes(
-    x = 0,
-    y = i,
-    ymin = 0,
-    ymax = 100
-  ), color = "blue") +
-  xlim(-2.5, 2.5)
-```
-
----
-
-```{r}
-#| label: fig-ci-95
-#| echo: false
-#| fig-cap: "95% CI with indicator about whether the interval excludes the true mean."
-#| output-location: slide
-summary_stats_df |>
-  mutate(CI_excludes = ((sample_mean - ci95) > 0) |
-           ((sample_mean + ci95) < 0)) |>
-  ggplot() +
-  aes(x = sample_mean, y = i) +
-  geom_point(size = .5) +
-  geom_errorbar(aes(
-    xmin = sample_mean - ci95,
-    xmax = sample_mean + ci95,
-    color = CI_excludes
-  )) +
-  geom_linerange(aes(
-    x = 0,
-    y = i,
-    ymin = 0,
-    ymax = 100
-  ), color = "blue") +
-  xlim(-2.5, 2.5)
-```
-
----
-
-```{r}
-#| label: fig-ci-99
-#| echo: false
-#| fig-cap: "99% CI with indicator about whether the interval excludes the true mean."
-#| output-location: slide
-summary_stats_df |>
-  mutate(CI_excludes = ((sample_mean - ci99) > 0) |
-           ((sample_mean + ci99) < 0)) |>
-  ggplot() +
-  aes(x = sample_mean, y = i) +
-  geom_point(size = .5) +
-  geom_errorbar(aes(
-    xmin = sample_mean - ci99,
-    xmax = sample_mean + ci99,
-    color = CI_excludes
-  )) +
-  geom_linerange(aes(
-    x = 0,
-    y = i,
-    ymin = 0,
-    ymax = 100
-  ), color = "blue") +
-  xlim(-2.5, 2.5)
-```
-
-## CIs and graphical inference
-
-![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){#fig-wilke-16.3 width="65%"}
-
----
-
-![@WilkeUnknown-qn Figure 16.8](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/chocolate-ratings-contrasts-1.png)
-
-## Alternatives {.scrollable}
-
-![@WilkeUnknown-qn Figure 16.9](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/confidence-visualizations-1.png){#fig-wilke-16.9 width="65%"}
+- *May* show whether distribution is a mix of subgroups
 
 # Wrap up
 
@@ -758,14 +556,6 @@ summary_stats_df |>
   - All models are wrong, some are useful
   - Think about when point estimates are useful
 - Plot your data!
-
-## Main points
-
-- Depicting variability via
-  - Standard deviation (SD)
-  - Standard error of the mean (SEM)
-  - Confidence Intervals (CI)
-  - Quantiles and whiskers (boxplot)
 
 ## Next time
 

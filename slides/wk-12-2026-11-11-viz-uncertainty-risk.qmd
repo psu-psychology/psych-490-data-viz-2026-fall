@@ -22,402 +22,239 @@ library(ggplot2)
 library(dplyr)
 ```
 
-## Let's make some data
+## Comparing measures of uncertainty
 
-- Same *n*
-- Same standard deviation
-- Different means: 0 vs. 1
-
-```{r}
-#| echo: true
-#| code-fold: false
-x0 <- rnorm(n = 100, mean = 0, sd = 1) 
-x1 <- rnorm(n = 100, mean = 1, sd = 1)
-```
-
-## Plot the data
-
-```{r}
-#| echo: true
-#| label: fig-base-r-scatterplot
-#| code-fold: false
-#| fig-cap: "A scatterplot using the `plot()` function in base R."
-plot(x0, x1)
-```
-
-## Histograms
-
-:::: {.columns}
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| fig-cap: "Histogram of x0 with mean 0"
-#| label: fig-base-r-histogram-x0
-#| code-fold: false
-hist(x0)
-```
-:::
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| fig-cap: "Histogram of x1 with mean 1"
-#| label: fig-base-r-histogram-x1
-#| code-fold: false
-hist(x1)
-```
-:::
-::::
-
-## Let's 'tidy'-up
-
-- "Tidy" data $\rightarrow$ rectangular data; columns are variables; rows are observations.
-- A data frame (`data.frame()`) is a useful way to store tidy data
-
-```{r}
-#| echo: true
-#| code-fold: false
-two_sets <- data.frame(sample_name = c(rep("x0", 100), 
-                                       rep("x1", 100)), 
-                                       value = c(x0, x1))
-
-dim(two_sets) # What is the dimension (size) of two_sets?
-```
-
-```{r}
-readr::write_csv(two_sets, "../include/csv/two_sets_1_sd.csv")
-```
-
-## Double-checking
-
-:::: {.columns}
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| code-fold: false
-head(two_sets)
-```
-:::
-::: {.column width=50%}
-```{r}
-#| echo: true
-#| code-fold: false
-tail(two_sets)
-```
-:::
-::::
+![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){#fig-wilke-16.3 width="65%"}
 
 ---
 
-::: {.callout-note}
-`data.frame()`: makes a rectangular table of data with labeled columns.
+::: {.question}
+## Ordinal or continous?
 
-`rep()`: replicates or repeats its arguments. So `rep('x0', 100)` makes a vector/array with 100 copies of 'x0'.
+Are the flavor ratings nominal (ordinal) or continuous?
 
-We use `value = c(x0, x1)` to combine x0 and x1 into one long set of values.
-
-**Wait!**: You said don't use the equal sign (`=`), but use it here. What gives? Long-story shortened: The equal sign (`=`) only works when we're defining parameters inside a function; the left arrow (`<-`) does not. So, use left arrows for assigning names outside a function and equal signs inside functions.
-
-Syntax is kind of a pain. Remember when you had to learn English grammar?
+Why do you think so?
 :::
 
-## Another way to plot
+![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){width="65%"}
+
+
+## Confidence intervals
+
+![@WilkeUnknown-qn Figure 16.7](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/mean-chocolate-ratings-1.png)
+
+## What are confidence intervals?
+
+- If we did the same study multiple times under similar conditions...
+- X% of the time the *confidence interval* would contain the true value^[of the parameter of interest (here, the mean)] 
+- Calculated from standard error of the mean (SEM)
+- Wilke recommends plotting multiple CIs with different "levels" of confidence
+
+## Calculating CIs
+
+- CI_low = Sample_mean - Critical_value * SEM
+- CI_high = Sample_mean + Critical_value * SEM
+- Critical_value: output from `qnorm()` function
+  - 80% CI: `{r} qnorm(p = .10)`
+  - 95% CI: `{r} qnorm(p = .026)`
+  - 99% CI: `{r} qnorm(p = .005)`
+
+## Do CIs really behave that way?
 
 ```{r}
-#| label: fig-ggplot-side-by-side
-#| code-fold: false
+#| label: make-ci-data
 #| echo: true
+#| code-fold: false
+random_normal_samples_df <- 
+  data.frame(i = rep(1:100, each=100),
+             value = rnorm(50*100, 0, 1))
+
+summary_stats_df <- random_normal_samples_df |>
+  group_by(i) |>
+  summarize(sample_n = n(),
+            sample_mean = mean(value),
+            sample_sd = sd(value),
+            sample_sem = sample_sd/sqrt(sample_n),
+                  ci80 = -sample_sem*qnorm(.1),
+                  ci95 = -sample_sem*qnorm(.025),
+                  ci99 = -sample_sem*qnorm(.005))
+```
+
+---
+
+```{r}
+#| label: fig-show-sample-dists-histogram
+#| fig-cap: "Faceted histogram of 16 of the sample normal distributions."
+#| echo: true
+#| code-fold: false
+#| code-line-numbers: "1-2|4|5-6|7"
 #| output-location: slide
-#| code-line-numbers: "|5"
-#| fig-cap: "Side by side histograms of the x0 and x1 variables using ggplot's `facet_grid()` function."
-two_sets |>
+
+random_normal_samples_df |>
+  head(n = 16*100) |>
+  
   ggplot() +
   aes(x = value) +
-  geom_histogram() +
-  facet_grid(cols = vars(sample_name))
+  geom_histogram(bins = 20) +
+  facet_wrap(vars(i), nrow = 4, ncol = 4)
 ```
+
+---
+
+```{r}
+#| label: fig-show-sample-dists-violin-box
+#| fig-cap: "Faceted box and violin plot of 16 of the sample normal distributions."
+#| echo: true
+#| code-fold: false
+#| code-line-numbers: "1-2|4|5-6|7"
+#| output-location: slide
+random_normal_samples_df |>
+  head(n = 16*100) |>
+  
+  ggplot() +
+  geom_violin(aes(x = value, y = "")) +
+  geom_boxplot(aes(x = value, y = ""), alpha = .2) +
+  facet_wrap(vars(i), nrow = 4, ncol = 4)
+```
+
+---
+
+```{r}
+#| label: fig-ci-80
+#| echo: true
+#| code-fold: false
+#| code-line-numbers: ""
+#| fig-cap: "80% CI"
+#| output-location: slide
+summary_stats_df |>
+  ggplot() +
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .5) +
+  geom_errorbar(aes(xmin = sample_mean - ci80, xmax = sample_mean + ci80)) +
+  geom_linerange(aes(x = 0, y = i, ymin = 0, ymax = 50), color = "red") +
+  xlim(-2.5, 2.5)
+```
+
+---
+
+::: {.question}
+## What do we expect?
+
+If we generate *n*=100 intervals at 80% confidence, how many intervals should **fall outside** the true population mean (0)?
+
+:::
 
 ::: {.fragment}
+::: {.answer}
 
-- `facet_grid()` makes composite figures where the columns (`cols`) or rows (`rows`) specify which variables in the data frame to subset on
+$p_{outside} = 1-p_{inside} = 1-80\% = 1-.8$, so
+
+$$100*(1-.8)=20$$ 
+
+On average, we expect 20/100 80% CIs will fail to include 0 
 
 :::
-
-## More histogram-like figures
-
-```{r}
-#| label: fig-ggplot-density
-#| code-fold: false
-#| echo: true
-#| output-location: slide
-#| code-line-numbers: "|4|5"
-#| fig-cap: "A density plot of x0 and x1 using the `geom_density()` function."
-two_sets |>
-  ggplot() +
-  aes(x = value, fill = sample_name) +
-  geom_density(alpha = .5) +
-  theme(legend.position = "none")
-```
-
-## Points + error bars
-
-```{r}
-#| fig-cap: "Mean + 1 standard deviation"
-#| label: fig-ggplot-mean-sd 
-#| code-fold: false
-#| echo: true
-#| output-location: slide
-#| code-line-numbers: "|2|3|7-10"
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), sdev = sd(value)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_point() +
-  geom_errorbar(aes(ymin = mean_val - sdev, 
-                    ymax = mean_val + sdev, 
-                    width = .1)) +
-  ylim(-3, 3)
-```
-
----
-
-```{r}
-#| fig-cap: "Mean + 1 standard error of the mean" 
-#| label: fig-ggplot-mean-sem
-#| code-fold: false
-#| echo: true
-#| output-location: slide
-#| code-line-numbers: "2|3-5|7|9-11"
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::summarise(mean_val = mean(value), 
-                   sdev = sd(value), n = n(), 
-                   sem = sdev/sqrt(n)) |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_point() +
-  geom_errorbar(aes(ymin = mean_val - sem, 
-                    ymax = mean_val + sem, 
-                    width = .1)) +
-  ylim(-3, 3)
-```
-
-## When to SD vs. SEM?
-
-:::: {.columns}
-::: {.column width=50%}
-### Standard deviation (SD)
-- *Describes* this sample
-- Should stay the same with larger *n*
-:::
-::: {.column width=50%}
-### Standard error of the mean (SEM)
-- Makes an *inference* based on assumptions about the current sample
-- Shrinks with larger *n*
-:::
-::::
-
-## Let's visualize that!
-
-```{r}
-#| label: viz-sd-vs-sem
-#| echo: true
-#| code-fold: false
-#| code-line-numbers: "1-2|4-13|15-17"
-in_df <- data.frame(sample_n = c(10, 10, 50, 50, 100, 100),
-                    mean = c(0, 1, 0, 1, 0, 1))
-
-make_data <- function(sample_n, sample_mean) {
-  x <- rnorm(sample_n, sample_mean)
-  df <- data.frame(n = sample_n, 
-                   target_mean = sample_mean, 
-                   value = x)
-  df |>
-    dplyr::mutate(mean_val = mean(value),
-                  sdev = sd(value),
-                  sem = sdev/sqrt(sample_n))
-}
-
-samples_df <- purrr::map2(in_df$sample_n, 
-                          in_df$mean, make_data) |>
-  purrr::list_rbind()
-```
-
----
-
-```{r}
-#| label: fig-sd-n-increase
-#| echo: true
-#| code-fold: false
-#| output-location: slide
-#| code-line-numbers: "2|3|4|6"
-#| fig-cap: "Visualizing the relationship between SD and n using simulated random data."
-samples_df |>
-  dplyr::select(n, target_mean, sdev, sem) |>
-  dplyr::mutate(target_mean = factor(target_mean)) |>
-  dplyr::distinct() |>
-  ggplot() +
-  aes(x = n, y = sdev, color = target_mean) + 
-  geom_point() +
-  ylim(0, 1.2) +
-  labs(title = "Standard deviation as n increases.")
-```
-
----
-
-```{r}
-#| label: fig-sem-n-increase
-#| echo: true
-#| code-fold: false
-#| output-location: slide
-#| fig-cap: "Visualizing the relationship between SEM and n using simulated random data."
-#| code-line-numbers: "|9"
-samples_df |>
-  dplyr::select(n, target_mean, sdev, sem) |>
-  dplyr::mutate(target_mean = factor(target_mean)) |>
-  dplyr::distinct() |>
-  ggplot() +
-  aes(x = n, y = sem, target_mean) + 
-  geom_point() +
-  ylim(0, 0.4) +
-  labs(title = "Standard error of the mean (SEM) as n increases.")
-```
-
-## Show me the data!
-
-```{r}
-#| label: fig-ggplot-mean-sd-pts
-#| code-fold: false
-#| echo: true
-#| output-location: slide
-#| fig-cap: "Using `geom_jitter()` to show all of the data, but with random 'jitter' in the x dimension."
-#| code-line-numbers: "|11"
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sdev, 
-                    ymax=mean_val + sdev, width = .1)) +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
-## Make the bars easier to see
-
-```{r}
-#| fig-cap: "Mean + 1 standard deviation + jittered points"
-#| label: fig-ggplot-mean-sd-pts-red
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sdev, 
-                    ymax=mean_val + sdev, width = .1),
-                color = "red") +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
----
-
-```{r}
-#| fig-cap: "Mean + 1 standard error of the mean + jittered points" 
-#| label: fig-ggplot-mean-sem-pts
-#| output-location: slide
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value), n = n(), 
-                sem = sdev/sqrt(n)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sem, 
-                    ymax=mean_val + sem, width = .1)) +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
----
-
-```{r}
-#| fig-cap: "Mean + 1 standard error of the mean + jittered points" 
-#| label: fig-ggplot-mean-sem-pts-red
-#| output-location: slide
-two_sets |>
-  dplyr::group_by(sample_name) |>
-  dplyr::mutate(mean_val = mean(value), 
-                sdev = sd(value), n = n(), 
-                sem = sdev/sqrt(n)) |>
-  dplyr::ungroup() |>
-  ggplot() +
-  aes(x = sample_name, y = mean_val) +
-  geom_errorbar(aes(ymin=mean_val - sem, 
-                    ymax=mean_val + sem, width = .1), 
-                color = "red") +
-  geom_jitter(aes(y = value), width = .1, height = 0) +
-  ylim(-3, 3)
-```
-
----
-
-::: {.callout-warning}
-## Adding random noise
-
-Notice that the two plots with jittered data are *not* identical.
-
-Why is that?
-
-The input data are the same, but separate calls to `geom_jitter()` add different amounts of random noise to the points.
 :::
 
-## Boxplot + violin + raw
+---
 
 ```{r}
+#| label: fig-ci-80-flag-dont-include-mean
 #| echo: true
-#| label: fig-violin-box-scatter
 #| code-fold: false
+#| code-line-numbers: "2-3"
+#| fig-cap: "80% CI with indicator about whether the interval excludes the true mean."
 #| output-location: slide
-#| fig-cap: "A combination of a jittered scatterplot with a boxplot and violin plot."
-two_sets |>
+summary_stats_df |>
+  mutate(CI_excludes = ((sample_mean - ci80) > 0) |
+           ((sample_mean + ci80) < 0)) |>
+  
   ggplot() +
-  aes(x = sample_name, y = value) +
-  geom_violin() +
-  geom_boxplot(alpha = .4) +
-  geom_jitter(width = .1, height = 0) +
-  theme(text = element_text(size = 14))
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .5) +
+  geom_errorbar(aes(
+    xmin = sample_mean - ci80,
+    xmax = sample_mean + ci80,
+    color = CI_excludes
+  )) +
+  geom_linerange(aes(
+    x = 0,
+    y = i,
+    ymin = 0,
+    ymax = 100
+  ), color = "blue") +
+  xlim(-2.5, 2.5)
 ```
 
-## Using "beeswarm"
+---
 
 ```{r}
-#| echo: true
-#| label: fig-violin-box-beeswarm
-#| code-fold: false
+#| label: fig-ci-95
+#| echo: false
+#| fig-cap: "95% CI with indicator about whether the interval excludes the true mean."
 #| output-location: slide
-#| fig-cap: "A combination of a 'beeswarm' scatterplot with a boxplot and violin plot."
-
-library(ggbeeswarm)
-two_sets |>
+summary_stats_df |>
+  mutate(CI_excludes = ((sample_mean - ci95) > 0) |
+           ((sample_mean + ci95) < 0)) |>
   ggplot() +
-  aes(x = sample_name, y = value) +
-  geom_violin() +
-  geom_boxplot(alpha = .4) +
-  # geom_jitter(width = .1, height = 0) +
-  geom_beeswarm(cex = 1.5) +
-  theme(text = element_text(size = 14))
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .5) +
+  geom_errorbar(aes(
+    xmin = sample_mean - ci95,
+    xmax = sample_mean + ci95,
+    color = CI_excludes
+  )) +
+  geom_linerange(aes(
+    x = 0,
+    y = i,
+    ymin = 0,
+    ymax = 100
+  ), color = "blue") +
+  xlim(-2.5, 2.5)
 ```
 
-## Visualizing relationships between variables
+---
 
-- $y=F(x) + error$
+```{r}
+#| label: fig-ci-99
+#| echo: false
+#| fig-cap: "99% CI with indicator about whether the interval excludes the true mean."
+#| output-location: slide
+summary_stats_df |>
+  mutate(CI_excludes = ((sample_mean - ci99) > 0) |
+           ((sample_mean + ci99) < 0)) |>
+  ggplot() +
+  aes(x = sample_mean, y = i) +
+  geom_point(size = .5) +
+  geom_errorbar(aes(
+    xmin = sample_mean - ci99,
+    xmax = sample_mean + ci99,
+    color = CI_excludes
+  )) +
+  geom_linerange(aes(
+    x = 0,
+    y = i,
+    ymin = 0,
+    ymax = 100
+  ), color = "blue") +
+  xlim(-2.5, 2.5)
+```
+
+## CIs and graphical inference
+
+![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){#fig-wilke-16.3 width="65%"}
+
+---
+
+![@WilkeUnknown-qn Figure 16.8](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/chocolate-ratings-contrasts-1.png)
+
+## Alternatives {.scrollable}
+
+![@WilkeUnknown-qn Figure 16.9](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/confidence-visualizations-1.png){#fig-wilke-16.9 width="65%"}
+
+## Visualizing relationships *between* variables
+
+- $y=F(x) + \epsilon$, where $\epislon$ is random error
 - e.g., shoe_size = F(height)
 - Make data that are related to one another
 - Can we see the relationship?
@@ -427,6 +264,7 @@ two_sets |>
 ```{r}
 #| echo: true
 #| code-fold: false
+#| code-line-numbers: "1|2|3-6|7"
 x <- runif(n = 100, min = 0, max = 1) # Uniform distribution with min 0 and max 1
 e <- rnorm(n = 100, mean = 0, sd = 1)
 y1 <- x + 0.5*e
@@ -435,74 +273,128 @@ y3 <- x + e
 y4 <- x + 1.5*e
 y5 <- e
 
-linear_df <- data.frame(x = x, y1 = y1, y2 = y2, y3 = y3, y4 = y4)
+linear_df <- data.frame(x = x, y1 = y1, 
+                        y2 = y2, y3 = y3,
+                        y4 = y4)
 ```
+
+::: {.fragment}
+::: {.question}
+## Why generate a *uniform* distribution in x?
+:::
+:::
+
+::: {.fragment}
+::: {.answer}
+## Want a roughly equal spread of x values.
+:::
+::: 
 
 ---
 
 ```{r}
 #| label: fig-lin-fit-sd-5
-#| fig-cap: "Linear fit with sd=.5"
+#| fig-cap: "Linear fit with sd=.5."
+#| echo: true
 #| code-fold: false
 #| output-location: slide
+#| code-line-numbers: "5|7"
 linear_df |>
   ggplot() +
   aes(x = x, y = y1) +
   geom_point() +
   geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y1))
+  ggtitle("Correlation ", cor(x, y1)) +
+  ylim(-2, 2)
 ```
 
 ---
 
 ```{r}
 #| label: fig-lin-fit-sd-75
-#| fig-cap: "Linear fit with sd=.75"
+#| fig-cap: "Linear fit with sd=.75."
 #| code-fold: false
+#| echo: true
 #| output-location: slide
 linear_df |>
   ggplot() +
   aes(x = x, y = y2) +
   geom_point() +
   geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y2)) 
+  ggtitle("Correlation ", cor(x, y2))  +
+  ylim(-2, 2)
 ```
 
 ---
 
 ```{r}
 #| label: fig-lin-fit-sd-1
-#| fig-cap: "Linear fit with sd=1"
+#| fig-cap: "Linear fit with sd=1."
 #| code-fold: false
+#| echo: true
 #| output-location: slide
 linear_df |>
   ggplot() +
   aes(x = x, y = y3) +
   geom_point() +
   geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y3))
+  ggtitle("Correlation ", cor(x, y3))  +
+  ylim(-2, 2)
 ```
 
 ---
 
 ```{r}
 #| label: fig-lin-fit-sd-1.5
-#| fig-cap: "Linear fit with sd=1.5"
+#| fig-cap: "Linear fit with sd=1.5."
 #| code-fold: false
+#| echo: true
 #| output-location: slide
 linear_df |>
   ggplot() +
   aes(x = x, y = y4) +
   geom_point() +
   geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y4))
+  ggtitle("Correlation ", cor(x, y4)) +
+  ylim(-2, 2)
 ```
+
+---
+
+::: {.question}
+## What happens to the correlation as SD increases?
+:::
+
+::: {.fragment}
+::: {.answer}
+## It drops!
+
+Even when we know that x and y are related because we made it that way.
+:::
+:::
+
+---
+
+::: {.question}
+## What happens to slope of the best-fitting line?
+:::
+
+::: {.fragment}
+
+::: {.answer}
+## It also drops!
+
+Even when we know that x and y are linearly related because we made it that way.
+:::
+
+:::
 
 ---
 
 ```{r}
 #| label: fig-lin-fit-indep-xy
 #| code-fold: false
+#| echo: true
 #| output-location: slide
 #| fig-cap: "Linear fit with *independent* unrelated variables"
 linear_df |>
@@ -510,7 +402,8 @@ linear_df |>
   aes(x = x, y = y5) +
   geom_point() +
   geom_smooth(method = "lm") +
-  ggtitle("Correlation ", cor(x, y5))
+  ggtitle("Correlation ", cor(x, y5))  +
+  ylim(-2, 2)
 ```
 
 

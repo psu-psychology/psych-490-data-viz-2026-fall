@@ -873,7 +873,7 @@
     "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#visualizing-relationships-between-variables",
     "title": "Communicating uncertainty and risk",
     "section": "Visualizing relationships between variables",
-    "text": "Visualizing relationships between variables\n\n\\(y=F(x) + error\\)\ne.g., shoe_size = F(height)\nMake data that are related to one another\nCan we see the relationship?"
+    "text": "Visualizing relationships between variables\n\n\\(y=F(x) + \\epsilon\\), where \\(\\epislon\\) is random error\ne.g., shoe_size = F(height)\nMake data that are related to one another\nCan we see the relationship?"
   },
   {
     "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#interim-summary",
@@ -894,7 +894,7 @@
     "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#section",
     "title": "Communicating uncertainty and risk",
     "section": "",
-    "text": "Figure 22: Figure 24 from Franconeri et al. (2021)"
+    "text": "Figure 16: Figure 24 from Franconeri et al. (2021)"
   },
   {
     "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#who-understands-what",
@@ -908,7 +908,7 @@
     "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#or-this",
     "title": "Communicating uncertainty and risk",
     "section": "Or this?",
-    "text": "Or this?\n\n\n\n\n\n\n\nFigure 25: “Rate of Measles Cases and Deaths in the United States, 1919 to 2024” (n.d.)"
+    "text": "Or this?\n\n\n\n\n\n\n\nFigure 19: “Rate of Measles Cases and Deaths in the United States, 1919 to 2024” (n.d.)"
   },
   {
     "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#next-time",
@@ -922,7 +922,7 @@
     "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#references",
     "title": "Communicating uncertainty and risk",
     "section": "References",
-    "text": "References\n\n\n\n\nFranconeri, Steven L, Lace M Padilla, Priti Shah, Jeffrey M Zacks, and Jessica Hullman. 2021. “The Science of Visual Data Communication: What Works.” Psychological Science in the Public Interest: A Journal of the American Psychological Society 22 (3): 110–61. https://doi.org/10.1177/15291006211051956.\n\n\n“How Are CO₂ Concentrations Related to Warming?” n.d. Accessed February 17, 2025. https://factsonclimate.org/infographics/concentration-warming-relationship.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\n“Rate of Measles Cases and Deaths in the United States, 1919 to 2024.” n.d. Accessed February 27, 2025. https://ourworldindata.org/grapher/measles-cases-and-death-rate.\n\n\nZikmund-Fisher, Brian J, Holly O Witteman, Mark Dickson, et al. 2014. “Blocks, Ovals, or People? Icon Type Affects Risk Perceptions and Recall of Pictographs.” Medical Decision Making: An International Journal of the Society for Medical Decision Making 34 (May): 443–53. https://doi.org/10.1177/0272989X13511706."
+    "text": "References\n\n\n\n\nFranconeri, Steven L, Lace M Padilla, Priti Shah, Jeffrey M Zacks, and Jessica Hullman. 2021. “The Science of Visual Data Communication: What Works.” Psychological Science in the Public Interest: A Journal of the American Psychological Society 22 (3): 110–61. https://doi.org/10.1177/15291006211051956.\n\n\n“How Are CO₂ Concentrations Related to Warming?” n.d. Accessed February 17, 2025. https://factsonclimate.org/infographics/concentration-warming-relationship.\n\n\nLindsey, Rebecca. 2024. “Climate Change: Atmospheric Carbon Dioxide.” April 9. http://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide.\n\n\n“Rate of Measles Cases and Deaths in the United States, 1919 to 2024.” n.d. Accessed February 27, 2025. https://ourworldindata.org/grapher/measles-cases-and-death-rate.\n\n\nWilke, Claus O. n.d. “Fundamentals of Data Visualization.” Accessed September 9, 2024. https://clauswilke.com/dataviz/.\n\n\nZikmund-Fisher, Brian J, Holly O Witteman, Mark Dickson, et al. 2014. “Blocks, Ovals, or People? Icon Type Affects Risk Perceptions and Recall of Pictographs.” Medical Decision Making: An International Journal of the Society for Medical Decision Making 34 (May): 443–53. https://doi.org/10.1177/0272989X13511706."
   },
   {
     "objectID": "slides/wk-11-2026-11-04-policy.html#announcements",
@@ -9869,7 +9869,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#todays-topic",
     "title": "Communicating uncertainty",
     "section": "Today’s topic",
-    "text": "Today’s topic\n\nCommunicating uncertainty and risk",
+    "text": "Today’s topic\n\nCommunicating uncertainty",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9935,7 +9935,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-it-matters",
     "title": "Communicating uncertainty",
     "section": "When it matters…",
-    "text": "When it matters…\n\n\n\n\n\n\nFigure 11: Median income is now &gt; 40% higher than mean income. Source: “FRED Economic Data” (n.d.)",
+    "text": "When it matters…\n\n\n\n\n\n\nFigure 11: Mean income is now &gt; 40% higher than median income. Source: “FRED Economic Data” (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10166,7 +10166,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#references",
     "title": "Communicating uncertainty",
     "section": "References",
-    "text": "References\n\n\n\n\n“FRED Economic Data.” n.d. Accessed November 2, 2026. https://fred.stlouisfed.org/graph/?g=1c0s.\n\n\nTheWhoVEVO. 2019. The Who - Won’t Get Fooled Again (Shepperton Studios / 1978). Youtube. https://www.youtube.com/watch?v=UDfAdHBtK_Q&list=RDUDfAdHBtK_Q&start_radio=1.\n\n\nWilke, Claus O. n.d. “Fundamentals of Data Visualization.” Accessed September 9, 2024. https://clauswilke.com/dataviz/.",
+    "text": "References\n\n\n\n\n“FRED Economic Data.” n.d. Accessed November 2, 2026. https://fred.stlouisfed.org/graph/?g=1c0s.\n\n\n“Mean Vs. Median Income or Consumption.” n.d. Accessed November 6, 2026. https://ourworldindata.org/grapher/mean-versus-median-monthly-per-capita-expenditure-or-income.\n\n\nTheWhoVEVO. 2019. The Who - Won’t Get Fooled Again (Shepperton Studios / 1978). Youtube. https://www.youtube.com/watch?v=UDfAdHBtK_Q&list=RDUDfAdHBtK_Q&start_radio=1.\n\n\nWilke, Claus O. n.d. “Fundamentals of Data Visualization.” Accessed September 9, 2024. https://clauswilke.com/dataviz/.",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10210,7 +10210,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#footnotes",
     "title": "Communicating uncertainty",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\n“By DavidMCEddy at en.wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=115167166”\nA panacea is a hypothetical or actual remedy, cure-all, or general solution designed to fix all diseases, difficulties, or problem. Source: Dictionary.com\nof the parameter of interest (here, the mean)",
+    "text": "Footnotes\n\n\n“By DavidMCEddy at en.wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=115167166”\nA panacea is a hypothetical or actual remedy, cure-all, or general solution designed to fix all diseases, difficulties, or problem. Source: Dictionary.com",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10342,7 +10342,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#another-reason",
     "title": "Communicating uncertainty",
     "section": "Another reason",
-    "text": "Another reason\n\n\n\nPoint estimates are “models” of the data\nGood models can be used to make predictions\n“All models are wrong; Some are useful.” – attributed to George Box\n\n\n\n\n\n\n\n\nFigure 9: George Box. Wikipedia1",
+    "text": "Another reason\n\n\n\nPoint estimates are “models” of the data\nGood models can be used to make predictions\n\n\n“All models are wrong; Some are useful.”\n\n– attributed to George Box\n\n\n\n\n\n\n\nFigure 9: George Box. Wikipedia1",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10353,7 +10353,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-your-data-1",
     "title": "Communicating uncertainty",
     "section": "“Plot your data!”",
-    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 18: Gilmore’s graduate statistics professor.",
+    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 19: Gilmore’s graduate statistics professor.",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10518,7 +10518,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#main-points-3",
     "title": "Communicating uncertainty",
     "section": "Main points",
-    "text": "Main points\n\nDepicting variability via\n\nStandard deviation (SD)\nStandard error of the mean (SEM)\nConfidence Intervals (CI)\nQuantiles and whiskers (boxplot)",
+    "text": "Main points\n\nDepicting variability via\n\nStandard deviation (SD)\nStandard error of the mean (SEM)\nQuantiles and whiskers (boxplot)\nConfidence Intervals (CI) (Next time!)",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10573,7 +10573,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#use-geom_jitter-alpha",
     "title": "Communicating uncertainty",
     "section": "Use geom_jitter() + alpha",
-    "text": "Use geom_jitter() + alpha\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_jitter(aes(x = value, y = \"\"), height = .05, \n              width = 0, alpha = .2) +\n  theme_classic() +\n  ylab(\"\")",
+    "text": "Use geom_jitter() + alpha\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_jitter(aes(x = value, y = \"\"), height = .05, \n              width = 0, alpha = .5) +\n  theme_classic() +\n  ylab(\"\")",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10595,7 +10595,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#geom_beeswarm-alpha",
     "title": "Communicating uncertainty",
     "section": "geom_beeswarm + alpha",
-    "text": "geom_beeswarm + alpha\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_beeswarm(aes(x = value, y = \"\"), orientation = 'y', alpha = .4) +\n  theme_classic() +\n  ylab(\"\")",
+    "text": "geom_beeswarm + alpha\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_beeswarm(aes(x = value, y = \"\"), orientation = 'y', alpha = .5) +\n  theme_classic() +\n  ylab(\"\")",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10617,7 +10617,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#types",
     "title": "Communicating uncertainty",
     "section": "Types",
-    "text": "Types\n\nMean: center of mass\nMedian: middle-most\nMode: peak value(s)\nWhy use them?",
+    "text": "Types\n\n\n\nMean: center of mass\nMedian: middle-most\nMode: peak value(s)\nWhy use them?\n\n\n\n\n\nhttps://statisticscalculators.com/mean-median-mode-calculator/",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -10650,7 +10650,96 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histograms-violin-plot-boxplots",
     "title": "Communicating uncertainty",
     "section": "Histograms, violin plot, boxplots",
-    "text": "Histograms, violin plot, boxplots\n\nDon’t show raw data points (here too many: 100*100 = 10,000)\nDo show shape, symmetry\nShow whether mean ~ median are representative of “typical” values",
+    "text": "Histograms, violin plot, boxplots\n\nThese don’t show raw data points\n\nUnless we add them\n\nDo show shape, symmetry\nShow whether mean ~ median are representative of “typical” values\nMay show whether distribution is a mix of subgroups",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#confidence-intervals",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#confidence-intervals",
+    "title": "Communicating uncertainty and risk",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\n\n\nWilke (n.d.) Figure 16.7"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#what-are-confidence-intervals",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#what-are-confidence-intervals",
+    "title": "Communicating uncertainty and risk",
+    "section": "What are confidence intervals?",
+    "text": "What are confidence intervals?\n\nIf we did the same study multiple times under similar conditions…\nX% of the time the confidence interval would contain the true value1\nCalculated from standard error of the mean (SEM)\nWilke recommends plotting multiple CIs with different “levels” of confidence"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#calculating-cis",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#calculating-cis",
+    "title": "Communicating uncertainty and risk",
+    "section": "Calculating CIs",
+    "text": "Calculating CIs\n\nCI_low = Sample_mean - Critical_value * SEM\nCI_high = Sample_mean + Critical_value * SEM\nCritical_value: output from qnorm() function\n\n80% CI: -1.2815516\n95% CI: -1.9431338\n99% CI: -2.5758293"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#do-cis-really-behave-that-way",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#do-cis-really-behave-that-way",
+    "title": "Communicating uncertainty and risk",
+    "section": "Do CIs really behave that way?",
+    "text": "Do CIs really behave that way?\n\nrandom_normal_samples_df &lt;- \n  data.frame(i = rep(1:100, each=100),\n             value = rnorm(50*100, 0, 1))\n\nsummary_stats_df &lt;- random_normal_samples_df |&gt;\n  group_by(i) |&gt;\n  summarize(sample_n = n(),\n            sample_mean = mean(value),\n            sample_sd = sd(value),\n            sample_sem = sample_sd/sqrt(sample_n),\n                  ci80 = -sample_sem*qnorm(.1),\n                  ci95 = -sample_sem*qnorm(.025),\n                  ci99 = -sample_sem*qnorm(.005))"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#cis-and-graphical-inference",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#cis-and-graphical-inference",
+    "title": "Communicating uncertainty and risk",
+    "section": "CIs and graphical inference",
+    "text": "CIs and graphical inference\n\n\n\n\n\n\nFigure 8: Wilke (n.d.) Figure 16.3"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#alternatives",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#alternatives",
+    "title": "Communicating uncertainty and risk",
+    "section": "Alternatives",
+    "text": "Alternatives\n\n\n\n\n\n\nFigure 9: Wilke (n.d.) Figure 16.9"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#footnotes",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#footnotes",
+    "title": "Communicating uncertainty and risk",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nof the parameter of interest (here, the mean)"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#comparing-measures-of-uncertainty",
+    "href": "slides/wk-12-2026-11-11-viz-uncertainty-risk.html#comparing-measures-of-uncertainty",
+    "title": "Communicating uncertainty and risk",
+    "section": "Comparing measures of uncertainty",
+    "text": "Comparing measures of uncertainty\n\n\n\n\n\n\nFigure 1: Wilke (n.d.) Figure 16.3"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#violin-boxplot-points",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#violin-boxplot-points",
+    "title": "Communicating uncertainty",
+    "section": "Violin + boxplot + points",
+    "text": "Violin + boxplot + points\n\ndf &lt;- data.frame(value = rnorm(500, 0, 1))\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_point(aes(x = value, y = \"\")) +\n  theme_classic() +\n  ylab(\"\")",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#violin-boxplot-points-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#violin-boxplot-points-output",
+    "title": "Communicating uncertainty",
+    "section": "Violin + boxplot + points",
+    "text": "Violin + boxplot + points\n\n\n\n\n\n\n\nFigure 4",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#so",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#so",
+    "title": "Communicating uncertainty",
+    "section": "So…",
+    "text": "So…\n\n\n\nhttps://statisticscalculators.com/mean-median-mode-calculator/",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
