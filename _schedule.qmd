@@ -301,6 +301,7 @@
 *Work session*
 
 - [Slides](slides/wk-11-2026-11-06-work-session.qmd)
+- Assigned: Final project [survey](https://forms.gle/T4JdvQYWE6sRjpV69)
 
 ## Week 12 {- #week-12}
 
@@ -334,7 +335,7 @@
 
 ### Mon, Nov 16 {-}
 
-*Synthesize before you analyze*
+*Simulate & Synthesize before you analyze*
 
 - [Slides](404.qmd)
 - {{< fa calendar >}} *Due* [Exercise-06](exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
@@ -359,7 +360,7 @@
 
 *Making data dashboards and apps*
 
-- Explore: 
+- Explore:
   - @Kohler2024-ig
 - [Slides](404.qmd)
 

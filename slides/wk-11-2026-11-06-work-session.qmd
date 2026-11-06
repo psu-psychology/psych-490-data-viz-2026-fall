@@ -22,6 +22,14 @@ params:
 ## Announcements
 
 - [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
+- Final project [survey](https://forms.gle/T4JdvQYWE6sRjpV69)
+
+## Student's choice
+
+- Which topic to drop?
+  - *Simulate & Synthesize before you analyze*
+  - *Alpha, Power, Effect size, & Sample Size*
+  - *Making data dashboards and apps*
 
 ## Today's topics
 

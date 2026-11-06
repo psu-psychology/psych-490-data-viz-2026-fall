@@ -15,11 +15,17 @@ format: revealjs
   
 # Communicating uncertainty and risk
 
+## Recap
+
+- 
+
 ## Setup
 
 ```{r}
 library(ggplot2)
 library(dplyr)
+library(purrr)
+library(beeswarm)
 ```
 
 ## Comparing measures of uncertainty
@@ -38,6 +44,110 @@ Why do you think so?
 
 ![@WilkeUnknown-qn Figure 16.3](https://clauswilke.com/dataviz/visualizing_uncertainty_files/figure-html/cocoa-data-vs-CI-1.png){width="65%"}
 
+## Visualizing uncertainty in point estimates
+
+- Standard deviation (SD)
+- Standard error (of the mean; SE or SEM)
+- Confidence intervals
+- *Quantiles (boxplots)*
+
+## Standard deviation
+
+:::: {.columns}
+::: {.column width=50%}
+- Variability in raw data
+- 68-95-99.7 rule
+:::
+::: {.column width=50%}
+![Wikipedia^[By Melikamp - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=65001875]](https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Empirical_rule_histogram.svg/1920px-Empirical_rule_histogram.svg.png)
+:::
+::::
+
+## Standard error of the mean
+
+- Variability in the sample mean
+- Shrinks with larger samples
+
+---
+
+```{r}
+#| label: generate-data-100-1000-10000
+y_10 <- rnorm(10)
+y_100 <- rnorm(100)
+y_1000 <- rnorm(1000)
+
+y_10_mean <- mean(y_10)
+y_100_mean <- mean(y_100)
+y_1000_mean <- mean(y_1000)
+
+y_10_sd <- sd(y_10)
+y_100_sd <- sd(y_100)
+y_1000_sd <- sd(y_1000)
+
+y_10_sem <- y_10_sd/sqrt(10)
+y_100_sem <- y_100_sd/sqrt(100)
+y_1000_sem <- y_1000_sd/sqrt(1000)
+
+raw_df <- data.frame(n = c(rep(10,10), 
+                 rep(100, 100), 
+                 rep(1000, 1000)), value = c(y_10, y_100, y_1000))
+
+sum_df <- data.frame(n = c(10, 100, 1000),
+                     mean = c(y_10_mean, y_100_mean, y_1000_mean),
+                     sd = c(y_10_sd, y_100_sd, y_1000_sd),
+                     sem = c(y_10_sem, y_100_sem, y_1000_sem))
+```
+
+---
+
+```{r}
+#| label: fig-violin-hist-10-100-1000
+raw_df |>
+  ggplot() +
+  geom_violin(aes(x = value, y = "")) +
+  geom_boxplot(aes(x = value, y = ""), alpha = .3) +
+  facet_grid(rows = vars(n))
+```
+
+---
+
+```{r}
+#| label: fig-10-100-1000-mean
+sum_df |>
+  ggplot() +
+  geom_point(aes(x = n, y = mean)) +
+  ylim(-.75, .75) +
+  geom_line(aes(x = c(10, 100, 1000), y = 0), color = "blue")
+```
+
+---
+
+```{r}
+#| label: fig-10-100-1000-sd
+sum_df |>
+  ggplot() +
+  geom_point(aes(x = n, y = sd)) +
+  ylim(0, 1.5) +
+  geom_line(aes(x = c(10, 100, 1000), y = 1), color = "blue")
+```
+
+---
+
+```{r}
+#| label: fig-10-100-1000-sem
+sum_df |>
+  ggplot() +
+  geom_point(aes(x = n, y = sem)) +
+  ylim(0, 0.5) 
+```
+
+## Mean, SD, SEM
+
+- As sample size *n* increases...
+  - Mean converges on expected value
+  - Standard deviation converges on expected value
+  - SEM gets smaller and smaller
+  - Increasingly precise (less variable) estimate of the true mean
 
 ## Confidence intervals
 

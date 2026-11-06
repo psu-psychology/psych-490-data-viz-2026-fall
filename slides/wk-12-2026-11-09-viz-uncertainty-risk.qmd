@@ -527,10 +527,10 @@ samples_df |>
 
 ## Histograms, violin plot, boxplots
 
-- These don't show raw data points
+- Don't show raw data points
   - Unless we add them
 - Do show shape, symmetry
-- Show whether mean ~ median are representative of "typical" values
+- Do show whether mean ~ median are representative of "typical" values
 - *May* show whether distribution is a mix of subgroups
 
 # Wrap up
@@ -559,7 +559,7 @@ samples_df |>
 
 ## Next time
 
-- Work session
+- Visualizing uncertainty & risk
 
 # Resources
 
