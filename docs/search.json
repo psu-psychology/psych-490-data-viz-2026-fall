@@ -9887,5 +9887,285 @@
       "Tutorials",
       "Visualizing sports data"
     ]
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#announcements",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#announcements",
+    "title": "Simulate",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due today, November 16, 2026."
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#todays-topic",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#todays-topic",
+    "title": "Simulate",
+    "section": "Today’s topic",
+    "text": "Today’s topic\n\nSimulation"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#the-stroop-effect",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#the-stroop-effect",
+    "title": "Simulate",
+    "section": "The Stroop Effect",
+    "text": "The Stroop Effect\n\nNaming the ink color of a word takes longer and is more error prone when the word does not match the color."
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#black",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#black",
+    "title": "Simulate",
+    "section": "Black",
+    "text": "Black"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#next-time",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#next-time",
+    "title": "Simulate",
+    "section": "Next time",
+    "text": "Next time\n\nWork session"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#references",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#references",
+    "title": "Simulate",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section",
+    "title": "Simulate",
+    "section": "",
+    "text": "Ready?"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-1",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-1",
+    "title": "Simulate",
+    "section": "",
+    "text": "Red"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-2",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-2",
+    "title": "Simulate",
+    "section": "",
+    "text": "Green"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-3",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-3",
+    "title": "Simulate",
+    "section": "",
+    "text": "Blue"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-4",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-4",
+    "title": "Simulate",
+    "section": "",
+    "text": "Black"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-5",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-5",
+    "title": "Simulate",
+    "section": "",
+    "text": "Red"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-6",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-6",
+    "title": "Simulate",
+    "section": "",
+    "text": "Blue"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-7",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-7",
+    "title": "Simulate",
+    "section": "",
+    "text": "Black"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-8",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-8",
+    "title": "Simulate",
+    "section": "",
+    "text": "Leaf"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-9",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-9",
+    "title": "Simulate",
+    "section": "",
+    "text": "Blood"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-10",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-10",
+    "title": "Simulate",
+    "section": "",
+    "text": "Sky"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-11",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-11",
+    "title": "Simulate",
+    "section": "",
+    "text": "Cloud"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#whats-the-data-picture-wed-expect",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#whats-the-data-picture-wed-expect",
+    "title": "Simulate",
+    "section": "What’s the data picture we’d expect?",
+    "text": "What’s the data picture we’d expect?\n\n\n\nResponse variables\n\nRT\nAccuracy\n\n\n\n\nPredictor variables\n\nInk color: {‘red’, ‘green’, ‘blue’, black’, …}\nCongruency (with color or not)\nWord type (color or not)"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#what-do-we-think-we-know",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#what-do-we-think-we-know",
+    "title": "Simulate",
+    "section": "What do we think we know?",
+    "text": "What do we think we know?\n\nRT continuous\n\nBounded from below: \\((0, RT_{max}]\\)1\nOr is there an \\(RT_{min}\\)?\n\n\\(RT_{congruent}&lt;RT_{incongruent}\\)\n\\(Accuracy_{congruent}&gt;Accuracy_{incongruent}\\)"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-12",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-12",
+    "title": "Simulate",
+    "section": "",
+    "text": "In Bayesian statistics, these might be called priors."
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#footnotes",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#footnotes",
+    "title": "Simulate",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe left parenthesis indicates we want to exclude zero; the right bracket indicates we want to include the maximum, but not anything above it.\nRandom normal with some standard deviation, sd"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model",
+    "title": "Simulate",
+    "section": "Specify a model",
+    "text": "Specify a model\n\nRT is equal to the time required to name a word’s color\n\nPlus more time if the color is…"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-1",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-1",
+    "title": "Simulate",
+    "section": "Specify a model",
+    "text": "Specify a model\n\nRT is equal to the time required to name a word’s color\n\nPlus more time if the color is…incongruent"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words",
+    "title": "Simulate",
+    "section": "Specify a model (in words)",
+    "text": "Specify a model (in words)\n\nRT is equal to the time required to name a word’s color\n\nPlus more time if the color is…"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words-1",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words-1",
+    "title": "Simulate",
+    "section": "Specify a model (in words)",
+    "text": "Specify a model (in words)\n\nRT is equal to the time required to name a word’s color\n\nPlus more time if the color is…incongruent"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words-2",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words-2",
+    "title": "Simulate",
+    "section": "Specify a model (in words)",
+    "text": "Specify a model (in words)\n\nRT is equal to the time required to name a word’s color\n\nPlus more time if the color is…incongruent\nPlus random error"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-quantitatively",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-quantitatively",
+    "title": "Simulate",
+    "section": "Specify a model (quantitatively)",
+    "text": "Specify a model (quantitatively)\n\nTime to name a word’s color: \\(RT_{name-a-color}\\)\nExtra time if the color is incongruent: \\(t_{incongruent}\\)\nRandom error: \\(N(0, sd)\\)2\n\n\n\\[ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)\\]"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-assumptions",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-assumptions",
+    "title": "Simulate",
+    "section": "More assumptions",
+    "text": "More assumptions\n\n\\(RT_{name-a-color}\\) is the same for all colors\n\\(RT_{name-a-color}\\) doesn’t change across the experiment\n\\(t_{incongruent}\\) doesn’t change across the experiment"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-assumptions-1",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-assumptions-1",
+    "title": "Simulate",
+    "section": "More assumptions",
+    "text": "More assumptions\n\n\n\n\n\n\nIs \\(RT_{name-a-color}\\) the same for all people?\n\n\n\n\n\n\n\n\n\n\n\n\nIs \\(t_{incongruent}\\) the same for all people?"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-simplifying-assumptions",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-simplifying-assumptions",
+    "title": "Simulate",
+    "section": "More (simplifying) assumptions",
+    "text": "More (simplifying) assumptions\n\n\\(RT_{name-a-color}\\) is the same for all colors\n\\(RT_{name-a-color}\\) doesn’t change across the experiment\n\\(t_{incongruent}\\) doesn’t change across the experiment"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-simplifying-assumptions-1",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#more-simplifying-assumptions-1",
+    "title": "Simulate",
+    "section": "More (simplifying) assumptions",
+    "text": "More (simplifying) assumptions\n\n\n\n\n\n\nIs \\(RT_{name-a-color}\\) the same for all people?\n\n\n\n\n\n\n\n\n\n\n\n\n\nIs \\(t_{incongruent}\\) the same for all people?"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-as-a-data-picture",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-as-a-data-picture",
+    "title": "Simulate",
+    "section": "Specify the model (as a data picture)",
+    "text": "Specify the model (as a data picture)\n\nA ____ plot of RT should show _____"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-in-code",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-in-code",
+    "title": "Simulate",
+    "section": "Specify the model (in code)",
+    "text": "Specify the model (in code)"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#how-many-congruent-vs.-incongruent-trials",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#how-many-congruent-vs.-incongruent-trials",
+    "title": "Simulate",
+    "section": "How many congruent vs. incongruent trials?",
+    "text": "How many congruent vs. incongruent trials?\n\nLet’s specify 3/4 trials will be congruent"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-13",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-13",
+    "title": "Simulate",
+    "section": "",
+    "text": "trial   word cong_incong\n1      1 Yellow        cong\n2      2  Black        cong\n3      3  Black        cong\n4      4    Red        cong\n5      5    Red        cong\n6      6  Black        cong\n7      7 Yellow        cong\n8      8    Red        cong\n9      9  Green        cong\n10    10  Black      incong\n11    11   Blue      incong\n12    12    Red      incong\n13    13  Black      incong\n14    14    Red        cong\n15    15  Black        cong"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#on-to-our-model",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#on-to-our-model",
+    "title": "Simulate",
+    "section": "On to our model",
+    "text": "On to our model\n\\[ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)\\]"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#howd-we-do",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#howd-we-do",
+    "title": "Simulate",
+    "section": "How’d we do?",
+    "text": "How’d we do?"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions",
+    "title": "Simulate",
+    "section": "Simulating different assumptions",
+    "text": "Simulating different assumptions"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-1",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-1",
+    "title": "Simulate",
+    "section": "Simulating different assumptions",
+    "text": "Simulating different assumptions"
   }
 ]

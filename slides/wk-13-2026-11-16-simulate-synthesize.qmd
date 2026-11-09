@@ -1,0 +1,321 @@
+---
+title: "Simulate"
+format: revealjs
+---
+
+# Preliminaries
+
+## Announcements
+
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due today, November 16, 2026.
+
+## Today's topic
+
+- Simulation
+  
+# Simulation
+
+## The Stroop Effect
+
+- Naming the ink color of a word takes longer and is more error prone when the word does not match the color.
+
+## {.center}
+
+### Ready? {style="text-align: center; color: #777777;"}
+
+## {.center}
+
+### Red {style="text-align: center; color: #ff0000;"}
+
+## {.center}
+
+### Green {style="text-align: center; color: #00ff00;"}
+
+## {.center}
+
+### Blue {style="text-align: center; color: #0000ff; "}
+
+## {.center}
+
+### Black {style="text-align: center; color: #000000;"}
+
+## {.center}
+
+### Red {style="text-align: center; color: #00ff00;"}
+
+## {.center}
+
+### Blue {style="text-align: center; color: #0000ff;"}
+
+## {.center}
+
+### Black {style="text-align: center; color: #00ff00;"}
+
+## {.center}
+
+### Leaf {style="text-align: center; color: #00ff00;"}
+
+## {.center}
+
+### Blood {style="text-align: center; color: #ff0000;"}
+
+## {.center}
+
+### Sky {style="text-align: center; color: #87CEEB;"}
+
+## {.center}
+
+### Cloud {style="text-align: center; color: #00ff00;"}
+
+## What's the data picture we'd expect?
+
+:::: {.columns}
+::: {.column width=50%}
+
+- Response variables
+  - RT
+  - Accuracy
+
+:::
+::: {.column width=50%}
+
+- Predictor variables
+  - Ink color: \{'red', 'green', 'blue', black', ...\}
+  - Congruency (with color or not)
+  - Word type (color or not)
+
+:::
+::::
+
+---
+
+::: {.question}
+## Which are the *independent* variables?
+:::
+
+::: {.question}
+## Which are the dependent variables?
+:::
+
+## What do we think we know?
+
+::: {.incremental}
+- RT continuous
+  - Bounded from below: $(0, RT_{max}]$^[The left parenthesis indicates we want to exclude zero; the right bracket indicates we want to include the maximum, but not anything above it.]
+  - Or is there an $RT_{min}$?
+- $RT_{congruent}<RT_{incongruent}$
+- $Accuracy_{congruent}>Accuracy_{incongruent}$
+:::
+
+## {.center}
+
+### In Bayesian statistics, these might be called *priors*. {style="text-align: center;"}
+
+## Specify a model (in words)
+
+- RT is equal to the time required to name a word's color
+  - Plus more time if the color is...
+  
+## Specify a model (in words)
+
+- RT is equal to the time required to name a word's color
+  - Plus more time if the color is...**incongruent**
+  
+## Specify a model (in words)
+
+- RT is equal to the time required to name a word's color
+  - Plus more time if the color is...**incongruent**
+  - Plus random error
+
+## Specify a model (quantitatively)
+
+::: {.incremental}
+- Time to name a word's color: $RT_{name-a-color}$
+- Extra time if the color is incongruent: $t_{incongruent}$
+- Random error: $N(0, sd)$^[Random normal with some standard deviation, *sd*]
+
+:::
+
+::: {.fragment}
+$$ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)$$
+:::
+
+## More (simplifying) assumptions
+
+::: {.incremental}
+- $RT_{name-a-color}$ is the same for all colors
+- $RT_{name-a-color}$ doesn't change across the experiment
+- $t_{incongruent}$ doesn't change across the experiment
+
+:::
+
+## More (simplifying) assumptions
+
+::: {.question}
+## Is $RT_{name-a-color}$ the same for all people?
+:::
+
+::: {.fragment}
+::: {.question}
+## Is $t_{incongruent}$ the same for all people?
+:::
+:::
+
+## Specify the model (as a data picture)
+
+- A ____ plot of RT should show _____
+
+## Specify the model (in code)
+
+```{r}
+#| label: setup
+
+library(ggplot2)
+library(dplyr)
+library(ggbeeswarm)
+```
+
+
+```{r}
+trial <- 1:100
+words <- rep(c("Red", "Green", "Blue", "Yellow", "Black"), 20)
+word <- sample(x = words, replace = FALSE)
+
+stroop_df <- data.frame(trial, word)
+
+stroop_df |>
+  ggplot() +
+  geom_bar(aes(x = word, fill = word)) +
+  scale_color_discrete(c("black", "blue", "green", "red", "yellow"))
+```
+
+## How many congruent vs. incongruent trials?
+
+- Let's specify 3/4 trials will be congruent
+
+```{r}
+congruency <- rep(c("cong", "cong", "cong", "incong"), 25)
+cong_incong <- sample(x = congruency, replace = FALSE)
+stroop_df$cong_incong <- cong_incong
+```
+
+##
+
+```{r}
+head(stroop_df, n = 15)
+```
+
+## 
+
+```{r}
+stroop_df |>
+  ggplot() +
+  geom_bar(aes(x = word, fill = word)) +
+  facet_grid(cols = vars(cong_incong))
+```
+
+## On to our model
+
+$$ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)$$
+
+```{r}
+rt_name_a_color <- 500 # milliseconds
+t_incong <- 20
+sd_rt <- 10
+
+stroop_df <- stroop_df |>
+  mutate(rt = rt_name_a_color + 
+           if_else(cong_incong == "incong", t_incong, 0) +
+           rnorm(n = 100, sd = sd_rt))
+```
+
+## How'd we do?
+
+```{r}
+stroop_df |>
+  ggplot() +
+  geom_histogram(aes(x = rt, 
+                     fill = cong_incong), bins = 20)
+```
+
+## 
+
+```{r}
+stroop_df |>
+  ggplot() +
+  geom_violin(aes(x = rt, y = cong_incong)) +
+  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +
+  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +
+  theme_classic() +
+  ylab("Congruency") +
+  xlab("RT (ms)") +
+  labs(title = "Simulation of a single subject's Stroop data with a 20 ms incongruency effect.")
+```
+
+---
+
+::: {.question}
+## What would happen if the incongruency effect was smaller (relative to the error)?
+:::
+
+::: {.fragment}
+::: {.question}
+## How would you simulate that?
+:::
+:::
+
+## Simulating different assumptions
+
+```{r}
+rt_name_a_color <- 500 # milliseconds
+t_incong <- 10
+sd_rt <- 10
+
+stroop_df <- stroop_df |>
+  mutate(rt = rt_name_a_color + 
+           if_else(cong_incong == "incong", t_incong, 0) +
+           rnorm(n = 100, sd = sd_rt))
+
+stroop_df |>
+  ggplot() +
+  geom_violin(aes(x = rt, y = cong_incong)) +
+  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +
+  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +
+  theme_classic() +
+  ylab("Congruency") +
+  xlab("RT (ms)") +
+  labs(title = "Simulation of a single subject's Stroop data with a 10 ms incongruency effect.")
+```
+
+## Simulating different assumptions
+
+```{r}
+rt_name_a_color <- 500 # milliseconds
+t_incong <- 5
+sd_rt <- 10
+
+stroop_df <- stroop_df |>
+  mutate(rt = rt_name_a_color + 
+           if_else(cong_incong == "incong", t_incong, 0) +
+           rnorm(n = 100, sd = sd_rt))
+
+stroop_df |>
+  ggplot() +
+  geom_violin(aes(x = rt, y = cong_incong)) +
+  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +
+  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +
+  theme_classic() +
+  ylab("Congruency") +
+  xlab("RT (ms)") +
+  labs(title ="Simulation of a single subject's Stroop data with a 5 ms incongruency effect.")
+```
+
+# Wrap up
+
+## Next time
+
+- Work session
+
+# Resources
+
+## References
