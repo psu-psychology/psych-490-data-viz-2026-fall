@@ -1,0 +1,29 @@
+---
+title: "Work session"
+format: revealjs
+---
+
+# Prelude
+
+## Announcements
+
+- [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due Monday, November 16, 2026.
+- Final project [survey](https://forms.gle/T4JdvQYWE6sRjpV69)
+
+## Today's topics
+
+- Work session
+  - [Exercise-06](../exercises/ex-06-making-maps.qmd)
+  - Final projects
+
+# Work session
+
+# Wrap up
+
+## Next time
+
+- Simulate & synthesize
+
+# Resources
+
+{{< include _about_refs.qmd >}}

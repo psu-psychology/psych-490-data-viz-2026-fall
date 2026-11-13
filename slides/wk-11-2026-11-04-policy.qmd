@@ -42,7 +42,7 @@ format: revealjs
 
 ---
 
-![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp?itok=piMD4hsA){#fig-harvard-poll-right-track width="75%"}
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp){#fig-harvard-poll-right-track width="75%"}
 
 ---
 

@@ -144,6 +144,37 @@ ggplot() +
 
 ```
 
+## Visualizing continuous data
+
+- Today: One variable
+- Options
+  - Histograms
+  - Density/violin plots
+  - Boxplots
+  - Combinations
+  
+## Histogram
+
+```{r}
+#| label: making-data
+#| echo: true
+#| code-fold: false
+df <- data.frame(value = rnorm(500, 0, 1))
+```
+
+```{r}
+#| label: fig-histogram-pts-500
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+
+df |>
+  ggplot() +
+  geom_histogram(aes(x = value), bins=20) +
+  theme_classic() +
+  ylab("")
+```
+ 
 
 ## Violin + boxplot + points
 
@@ -153,8 +184,6 @@ ggplot() +
 #| code-fold: false
 #| code-line-numbers: "1|4|5|6|7|8"
 #| output-location: slide
-df <- data.frame(value = rnorm(500, 0, 1))
-
 df |>
   ggplot() +
   geom_violin(aes(x = value, y = "")) +

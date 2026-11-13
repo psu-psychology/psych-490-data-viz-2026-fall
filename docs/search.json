@@ -5271,7 +5271,7 @@
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nMon, Nov 09\nCommunicating uncertainty: Part I\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nWed, Nov 11\nCommunicating uncertainty: Part II\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nFri, Nov 13\nWork Session\n\nSlides",
+    "text": "Week 12\n\nMon, Nov 09\nCommunicating uncertainty: Part I\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nWed, Nov 11\nCommunicating uncertainty: Part II\n\nRead:\n\nFranconeri et al. (2021), pp. 139-150, PDF on Canvas\nWilke (2019), Ch. 16, PDF on Canvas\n\nSlides\n\n\n\nFri, Nov 13\nWork Session\n\nSlides\nFinal project survey",
     "crumbs": [
       "Schedule"
     ]
@@ -5281,7 +5281,7 @@
     "href": "schedule.html#week-13",
     "title": "Schedule",
     "section": "Week 13",
-    "text": "Week 13\nData viz and quantitative inference\n\nMon, Nov 16\nSimulate & Synthesize before you analyze\n\nSlides\n Due Exercise-06 |  Canvas dropbox\n\n\n\nWed, Nov 18\nAlpha, Power, Effect size, & Sample Size\n\nSlides\n\n\n\nFri, Nov 20\nWork Session: Final projects",
+    "text": "Week 13\nData viz and quantitative inference\n\nMon, Nov 16\nSimulate & Synthesize before you analyze\n\nSlides\n Due Exercise-06 |  Canvas dropbox\n\n\n\nWed, Nov 18\n\nWork Session: Final projects\n\n\nFri, Nov 20\nWork Session: Final projects",
     "crumbs": [
       "Schedule"
     ]
@@ -9114,7 +9114,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#violin-boxplot-points",
     "title": "Communicating uncertainty",
     "section": "Violin + boxplot + points",
-    "text": "Violin + boxplot + points\n\ndf &lt;- data.frame(value = rnorm(500, 0, 1))\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_point(aes(x = value, y = \"\")) +\n  theme_classic() +\n  ylab(\"\")",
+    "text": "Violin + boxplot + points\n\ndf |&gt;\n  ggplot() +\n  geom_violin(aes(x = value, y = \"\")) +\n  geom_boxplot(aes(x = value, y = \"\"), alpha = .2) +\n  geom_point(aes(x = value, y = \"\")) +\n  theme_classic() +\n  ylab(\"\")",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9125,7 +9125,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#violin-boxplot-points-output",
     "title": "Communicating uncertainty",
     "section": "Violin + boxplot + points",
-    "text": "Violin + boxplot + points\n\n\n\n\n\n\n\nFigure 4",
+    "text": "Violin + boxplot + points\n\n\n\n\n\n\n\nFigure 5",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9147,7 +9147,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#alter-alpha-output",
     "title": "Communicating uncertainty",
     "section": "Alter alpha",
-    "text": "Alter alpha\n\n\n\n\n\n\n\nFigure 5",
+    "text": "Alter alpha\n\n\n\n\n\n\n\nFigure 6",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9169,7 +9169,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#use-geom_jitter-alpha-output",
     "title": "Communicating uncertainty",
     "section": "Use geom_jitter() + alpha",
-    "text": "Use geom_jitter() + alpha\n\n\n\n\n\n\n\nFigure 6",
+    "text": "Use geom_jitter() + alpha\n\n\n\n\n\n\n\nFigure 7",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9191,7 +9191,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#geom_beeswarm-alpha-output",
     "title": "Communicating uncertainty",
     "section": "geom_beeswarm + alpha",
-    "text": "geom_beeswarm + alpha\n\n\n\n\n\n\n\nFigure 7",
+    "text": "geom_beeswarm + alpha\n\n\n\n\n\n\n\nFigure 8",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9202,7 +9202,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#point-estimates",
     "title": "Communicating uncertainty",
     "section": "Point estimates",
-    "text": "Point estimates\n\n\n\n\n\n\nFigure 8: Wilke (n.d.) Figure 16.3",
+    "text": "Point estimates\n\n\n\n\n\n\nFigure 9: Wilke (n.d.) Figure 16.3",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9235,7 +9235,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#another-reason",
     "title": "Communicating uncertainty",
     "section": "Another reason",
-    "text": "Another reason\n\n\n\nPoint estimates are “models” of the data\nGood models can be used to make predictions\n\n\n“All models are wrong; Some are useful.”\n\n– attributed to George Box\n\n\n\n\n\n\n\nFigure 9: George Box. Wikipedia1",
+    "text": "Another reason\n\n\n\nPoint estimates are “models” of the data\nGood models can be used to make predictions\n\n\n“All models are wrong; Some are useful.”\n\n– attributed to George Box\n\n\n\n\n\n\n\nFigure 10: George Box. Wikipedia1",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9257,7 +9257,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-your-data",
     "title": "Communicating uncertainty",
     "section": "“Plot your data!”",
-    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 10: Gilmore’s graduate statistics professor.",
+    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 11: Gilmore’s graduate statistics professor.",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9268,7 +9268,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#when-it-matters",
     "title": "Communicating uncertainty",
     "section": "When it matters…",
-    "text": "When it matters…\n\n\n\n\n\n\nFigure 11: Mean income is now &gt; 40% higher than median income. Source: “FRED Economic Data” (n.d.)",
+    "text": "When it matters…\n\n\n\n\n\n\nFigure 12: Mean income is now &gt; 40% higher than median income. Source: “FRED Economic Data” (n.d.)",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9312,7 +9312,7 @@
     "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#plot-your-data-1",
     "title": "Communicating uncertainty",
     "section": "“Plot your data!”",
-    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 19: Gilmore’s graduate statistics professor.",
+    "text": "“Plot your data!”\n\n\n\n\n\n\nFigure 20: Gilmore’s graduate statistics professor.",
     "crumbs": [
       "Slides",
       "Wk 12 • Mon Nov 9"
@@ -9928,7 +9928,7 @@
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#references",
     "title": "Simulate",
     "section": "References",
-    "text": "References"
+    "text": "References\n\n\n\n\n“Harvard Youth Poll 53rd Edition - Fall 2026.” n.d. Accessed October 26, 2026. https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026."
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section",
@@ -10124,48 +10124,241 @@
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-in-code",
     "title": "Simulate",
     "section": "Specify the model (in code)",
-    "text": "Specify the model (in code)"
+    "text": "Specify the model (in code)\n\ntrial &lt;- 1:100\nwords &lt;- rep(c(\"Red\", \"Green\", \"Blue\", \"Yellow\", \"Black\"), 20)\nword &lt;- sample(x = words, replace = FALSE)\nstroop_df &lt;- data.frame(trial, word)\n\n\nstroop_df |&gt;\n  ggplot() +\n  geom_bar(aes(x = word, fill = word)) +\n  scale_color_discrete(c(\"black\", \"blue\", \"green\", \"red\", \"yellow\"))"
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#how-many-congruent-vs.-incongruent-trials",
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#how-many-congruent-vs.-incongruent-trials",
     "title": "Simulate",
     "section": "How many congruent vs. incongruent trials?",
-    "text": "How many congruent vs. incongruent trials?\n\nLet’s specify 3/4 trials will be congruent"
+    "text": "How many congruent vs. incongruent trials?\n\nLet’s specify 3/4 trials will be congruent\nMake attending to color of text more salient\n\n\ncongruency &lt;- rep(c(\"cong\", \"cong\", \"cong\", \"incong\"), 25)\ncong_incong &lt;- sample(x = congruency, replace = FALSE)\nstroop_df$cong_incong &lt;- cong_incong"
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-13",
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-13",
     "title": "Simulate",
     "section": "",
-    "text": "trial   word cong_incong\n1      1 Yellow        cong\n2      2  Black        cong\n3      3  Black        cong\n4      4    Red        cong\n5      5    Red        cong\n6      6  Black        cong\n7      7 Yellow        cong\n8      8    Red        cong\n9      9  Green        cong\n10    10  Black      incong\n11    11   Blue      incong\n12    12    Red      incong\n13    13  Black      incong\n14    14    Red        cong\n15    15  Black        cong"
+    "text": "stroop_df |&gt;\n  ggplot() +\n  geom_violin(aes(x = rt, y = cong_incong)) +\n  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +\n  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +\n  theme_classic() +\n  ylab(\"Congruency\") +\n  xlab(\"RT (ms)\") +\n  labs(title = \"Simulation of a single subject's Stroop data with a 20 ms incongruency effect.\")"
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#on-to-our-model",
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#on-to-our-model",
     "title": "Simulate",
     "section": "On to our model",
-    "text": "On to our model\n\\[ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)\\]"
+    "text": "On to our model\n\\[ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)\\]\n\nrt_name_a_color &lt;- 500 # milliseconds\nt_incong &lt;- 20\nsd_rt &lt;- 10\n\nstroop_df &lt;- stroop_df |&gt;\n  mutate(rt = rt_name_a_color + \n           if_else(cong_incong == \"incong\", t_incong, 0) +\n           rnorm(n = 100, sd = sd_rt))"
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#howd-we-do",
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#howd-we-do",
     "title": "Simulate",
     "section": "How’d we do?",
-    "text": "How’d we do?"
+    "text": "How’d we do?\n\nstroop_df |&gt;\n  ggplot() +\n  geom_histogram(aes(x = rt, \n                     fill = cong_incong), bins = 20)"
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions",
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions",
     "title": "Simulate",
     "section": "Simulating different assumptions",
-    "text": "Simulating different assumptions"
+    "text": "Simulating different assumptions\n\nrt_name_a_color &lt;- 500 # milliseconds\nt_incong &lt;- 10\nsd_rt &lt;- 10\n\nstroop_df &lt;- stroop_df |&gt;\n  mutate(rt = rt_name_a_color + \n           if_else(cong_incong == \"incong\", t_incong, 0) +\n           rnorm(n = 100, sd = sd_rt))\n\nstroop_df |&gt;\n  ggplot() +\n  geom_violin(aes(x = rt, y = cong_incong)) +\n  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +\n  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +\n  theme_classic() +\n  ylab(\"Congruency\") +\n  xlab(\"RT (ms)\") +\n  labs(title = \"Simulation of a single subject's Stroop data with a 10 ms incongruency effect.\")"
   },
   {
     "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-1",
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-1",
     "title": "Simulate",
     "section": "Simulating different assumptions",
-    "text": "Simulating different assumptions"
+    "text": "Simulating different assumptions\n\nrt_name_a_color &lt;- 500 # milliseconds\nt_incong &lt;- 5\nsd_rt &lt;- 10\n\nstroop_df &lt;- stroop_df |&gt;\n  mutate(rt = rt_name_a_color + \n           if_else(cong_incong == \"incong\", t_incong, 0) +\n           rnorm(n = 100, sd = sd_rt))\n\nstroop_df |&gt;\n  ggplot() +\n  geom_violin(aes(x = rt, y = cong_incong)) +\n  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +\n  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +\n  theme_classic() +\n  ylab(\"Congruency\") +\n  xlab(\"RT (ms)\") +\n  labs(title =\"Simulation of a single subject's Stroop data with a 5 ms incongruency effect.\")"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-in-code-output",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-the-model-in-code-output",
+    "title": "Simulate",
+    "section": "Specify the model (in code)",
+    "text": "Specify the model (in code)\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#interim-check-1-of-2",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#interim-check-1-of-2",
+    "title": "Simulate",
+    "section": "Interim check (1 of 2)",
+    "text": "Interim check (1 of 2)\n\nhead(stroop_df, n = 15)\n\n   trial   word cong_incong\n1      1 Yellow        cong\n2      2  Green        cong\n3      3   Blue        cong\n4      4 Yellow      incong\n5      5  Green        cong\n6      6  Black        cong\n7      7    Red      incong\n8      8    Red        cong\n9      9  Black        cong\n10    10   Blue      incong\n11    11    Red        cong\n12    12  Black        cong\n13    13   Blue        cong\n14    14  Green        cong\n15    15  Black        cong"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#interim-check-2-of-2",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#interim-check-2-of-2",
+    "title": "Simulate",
+    "section": "Interim check (2 of 2)",
+    "text": "Interim check (2 of 2)"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#howd-we-do-output",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#howd-we-do-output",
+    "title": "Simulate",
+    "section": "How’d we do?",
+    "text": "How’d we do?\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-13-output",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#section-13-output",
+    "title": "Simulate",
+    "section": "",
+    "text": "Figure 3"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-output",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-output",
+    "title": "Simulate",
+    "section": "Simulating different assumptions",
+    "text": "Simulating different assumptions\n\n\n\n\n\n\n\nFigure 4"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-1-output",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-1-output",
+    "title": "Simulate",
+    "section": "Simulating different assumptions",
+    "text": "Simulating different assumptions\n\n\n\n\n\n\n\nFigure 5"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#effect-size",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#effect-size",
+    "title": "Simulate",
+    "section": "Effect size",
+    "text": "Effect size\n\n\n\nThe “effect” of some manipulation\nIn standard deviation units\nSo, \\(\\frac{t_{incong}}{sd_{rt}}\\)\n\n\n\n\n\n\\(t_{incong}\\)\n\\(sd_{rt}\\)\neffect size\n\n\n\n\n20\n10\n2\n\n\n10\n10\n1\n\n\n5\n10\n0.5\n\n\n2.5\n10\n0.25"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-2",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-2",
+    "title": "Simulate",
+    "section": "Simulating different assumptions",
+    "text": "Simulating different assumptions\n\nrt_name_a_color &lt;- 500 # milliseconds\nt_incong &lt;- 2.5\nsd_rt &lt;- 10\n\nstroop_df &lt;- stroop_df |&gt;\n  mutate(rt = rt_name_a_color + \n           if_else(cong_incong == \"incong\", t_incong, 0) +\n           rnorm(n = 100, sd = sd_rt))\n\nstroop_df |&gt;\n  ggplot() +\n  geom_violin(aes(x = rt, y = cong_incong)) +\n  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +\n  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +\n  theme_classic() +\n  ylab(\"Congruency\") +\n  xlab(\"RT (ms)\") +\n  labs(title =\"Simulation of a single subject's Stroop data with a 2.5 ms incongruency effect.\")"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-2-output",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#simulating-different-assumptions-2-output",
+    "title": "Simulate",
+    "section": "Simulating different assumptions",
+    "text": "Simulating different assumptions\n\n\n\n\n\n\n\nFigure 6"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#why-should-we-care",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#why-should-we-care",
+    "title": "Simulate",
+    "section": "Why should we care?",
+    "text": "Why should we care?\n\nSimulate your design before you collect data\nWhat is the data picture you expect?\nBuild your data viz pipeline in advance\nSpecify your assumptions, check them\nSimulation cheaper than running a study678"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#how-would-you-simulate-survey-responses",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#how-would-you-simulate-survey-responses",
+    "title": "Simulate",
+    "section": "How would you simulate survey responses?",
+    "text": "How would you simulate survey responses?\n\n\n\nAll in all, do you think that things in the nation are…?\n\nGenerally headed in the right direction\nOff on the wrong track\nNot sure\n\n\n\n\n\n\n\n\n\nFigure 7: “Harvard Youth Poll 53rd Edition - Fall 2026” (n.d.)"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#modeling-right-directionwrong-track",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#modeling-right-directionwrong-track",
+    "title": "Simulate",
+    "section": "Modeling right direction/wrong track",
+    "text": "Modeling right direction/wrong track\n\nResponse variable\nPredictor variable(s)\n\nParty registration\nVote 2026 likelihood\n…"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words-3",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-words-3",
+    "title": "Simulate",
+    "section": "Specify a model (in words)",
+    "text": "Specify a model (in words)\n\nMore “Wrong track” among Democrats & Independents\n\nDemocrats == Independents?\n\nMore “Right direction” among Republicans\nWhat about Vote 2026 likelihood?"
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-code",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#specify-a-model-in-code",
+    "title": "Simulate",
+    "section": "Specify a model (in code)",
+    "text": "Specify a model (in code)"
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#visualizing-continuous-data",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#visualizing-continuous-data",
+    "title": "Communicating uncertainty",
+    "section": "Visualizing continuous data",
+    "text": "Visualizing continuous data\n\nToday: One variable\nOptions\n\nHistograms\nDensity/violin plots\nBoxplots\nCombinations",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histogram",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histogram",
+    "title": "Communicating uncertainty",
+    "section": "Histogram",
+    "text": "Histogram\n\ndf &lt;- data.frame(value = rnorm(500, 0, 1))\n\n\ndf |&gt;\n  ggplot() +\n  geom_histogram(aes(x = value), bins=20) +\n  theme_classic() +\n  ylab(\"\")",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histogram-output",
+    "href": "slides/wk-12-2026-11-09-viz-uncertainty-risk.html#histogram-output",
+    "title": "Communicating uncertainty",
+    "section": "Histogram",
+    "text": "Histogram\n\n\n\n\n\n\n\nFigure 4",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Mon Nov 9"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-13-work-session.html#announcements",
+    "href": "slides/wk-12-2026-11-13-work-session.html#announcements",
+    "title": "Work session",
+    "section": "Announcements",
+    "text": "Announcements\n\nExercise-06 |  Canvas dropbox due Monday, November 16, 2026.\nFinal project survey",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Fri Nov 13"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-13-work-session.html#todays-topics",
+    "href": "slides/wk-12-2026-11-13-work-session.html#todays-topics",
+    "title": "Work session",
+    "section": "Today’s topics",
+    "text": "Today’s topics\n\nWork session\n\nExercise-06\nFinal projects",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Fri Nov 13"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-13-work-session.html#next-time",
+    "href": "slides/wk-12-2026-11-13-work-session.html#next-time",
+    "title": "Work session",
+    "section": "Next time",
+    "text": "Next time\n\nSimulate & synthesize",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Fri Nov 13"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-13-work-session.html#about",
+    "href": "slides/wk-12-2026-11-13-work-session.html#about",
+    "title": "Work session",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.11.0.203.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Fri Nov 13"
+    ]
+  },
+  {
+    "objectID": "slides/wk-12-2026-11-13-work-session.html#references",
+    "href": "slides/wk-12-2026-11-13-work-session.html#references",
+    "title": "Work session",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Slides",
+      "Wk 12 • Fri Nov 13"
+    ]
   }
 ]

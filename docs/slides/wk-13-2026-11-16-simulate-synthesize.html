@@ -37,7 +37,92 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-16ee20bd6580499a27acc51087a76a1e.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -411,51 +496,75 @@ Rick Gilmore
 <section id="specify-the-model-in-code" class="slide level2">
 <h2>Specify the model (in code)</h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>trial <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb1-2"><a></a>words <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Red"</span>, <span class="st">"Green"</span>, <span class="st">"Blue"</span>, <span class="st">"Yellow"</span>, <span class="st">"Black"</span>), <span class="dv">20</span>)</span>
+<span id="cb1-3"><a></a>word <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> words, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-4"><a></a>stroop_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(trial, word)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb2-3"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> word, <span class="at">fill =</span> word)) <span class="sc">+</span></span>
+<span id="cb2-4"><a></a>  <span class="fu">scale_color_discrete</span>(<span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"yellow"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="specify-the-model-in-code-output" class="slide level2 output-location-slide"><h2>Specify the model (in code)</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div>
-<figure>
-<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="include/fig/unnamed-chunk-1-1.png" width="960"></a></p>
+<div id="fig-stroop-trials-by-color" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-trials-by-color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-stroop-trials-by-color-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img data-src="include/fig/fig-stroop-trials-by-color-1.png" id="fig-stroop-trials-by-color" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-trials-by-color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
 </figure>
 </div>
 </div>
-</div>
-</section>
-<section id="how-many-congruent-vs.-incongruent-trials" class="slide level2">
+</div></section><section id="how-many-congruent-vs.-incongruent-trials" class="slide level2">
 <h2>How many congruent vs.&nbsp;incongruent trials?</h2>
 <ul>
-<li>Let’s specify 3/4 trials will be congruent</li>
+<li>Let’s specify 3/4 trials will be <em>congruent</em></li>
+<li>Make attending to color of text more salient</li>
 </ul>
-</section>
-<section id="section-13" class="slide level2">
-<h2></h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>congruency <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"cong"</span>, <span class="st">"cong"</span>, <span class="st">"cong"</span>, <span class="st">"incong"</span>), <span class="dv">25</span>)</span>
+<span id="cb3-2"><a></a>cong_incong <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> congruency, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-3"><a></a>stroop_df<span class="sc">$</span>cong_incong <span class="ot">&lt;-</span> cong_incong</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="interim-check-1-of-2" class="slide level2">
+<h2>Interim check (1 of 2)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">head</span>(stroop_df, <span class="at">n =</span> <span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   trial   word cong_incong
 1      1 Yellow        cong
-2      2  Black        cong
-3      3  Black        cong
-4      4    Red        cong
-5      5    Red        cong
+2      2  Green        cong
+3      3   Blue        cong
+4      4 Yellow      incong
+5      5  Green        cong
 6      6  Black        cong
-7      7 Yellow        cong
+7      7    Red      incong
 8      8    Red        cong
-9      9  Green        cong
-10    10  Black      incong
-11    11   Blue      incong
-12    12    Red      incong
-13    13  Black      incong
-14    14    Red        cong
+9      9  Black        cong
+10    10   Blue      incong
+11    11    Red        cong
+12    12  Black        cong
+13    13   Blue        cong
+14    14  Green        cong
 15    15  Black        cong</code></pre>
 </div>
 </div>
 </section>
-<section id="section-14" class="slide level2">
-<h2></h2>
+<section id="interim-check-2-of-2" class="slide level2">
+<h2>Interim check (2 of 2)</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><a href="include/fig/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="include/fig/unnamed-chunk-4-1.png" width="960"></a></p>
+<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="include/fig/unnamed-chunk-1-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
@@ -464,32 +573,69 @@ Rick Gilmore
 <section id="on-to-our-model" class="slide level2">
 <h2>On to our model</h2>
 <p><span class="math display">\[ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)\]</span></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>rt_name_a_color <span class="ot">&lt;-</span> <span class="dv">500</span> <span class="co"># milliseconds</span></span>
+<span id="cb6-2"><a></a>t_incong <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb6-3"><a></a>sd_rt <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a>stroop_df <span class="ot">&lt;-</span> stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a></a>  <span class="fu">mutate</span>(<span class="at">rt =</span> rt_name_a_color <span class="sc">+</span> </span>
+<span id="cb6-7"><a></a>           <span class="fu">if_else</span>(cong_incong <span class="sc">==</span> <span class="st">"incong"</span>, t_incong, <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a></a>           <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">sd =</span> sd_rt))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="howd-we-do" class="slide level2">
 <h2>How’d we do?</h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, </span>
+<span id="cb7-4"><a></a>                     <span class="at">fill =</span> cong_incong), <span class="at">bins =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="howd-we-do-output" class="slide level2 output-location-slide"><h2>How’d we do?</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div>
-<figure>
-<p><a href="include/fig/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="include/fig/unnamed-chunk-6-1.png" width="960"></a></p>
+<div id="fig-stroop-histogram" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-stroop-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: "><img data-src="include/fig/fig-stroop-histogram-1.png" id="fig-stroop-histogram" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
 </figure>
 </div>
 </div>
-</div>
-</section>
-<section id="section-15" class="slide level2">
+</div></section><section id="section-13" class="slide level2">
 <h2></h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">geom_violin</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong)) <span class="sc">+</span></span>
+<span id="cb8-4"><a></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a></a>  <span class="fu">geom_beeswarm</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb8-6"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb8-7"><a></a>  <span class="fu">ylab</span>(<span class="st">"Congruency"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a></a>  <span class="fu">xlab</span>(<span class="st">"RT (ms)"</span>) <span class="sc">+</span></span>
+<span id="cb8-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulation of a single subject's Stroop data with a 20 ms incongruency effect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="section-13-output" class="slide level2 output-location-slide"><h2></h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div>
-<figure>
-<p><a href="include/fig/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="include/fig/unnamed-chunk-7-1.png" width="960"></a></p>
+<div id="fig-stroop-box-violin-effect-size-2.0" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-box-violin-effect-size-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-stroop-box-violin-effect-size-2.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-2.0-1.png" id="fig-stroop-box-violin-effect-size-2.0" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-effect-size-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3
+</figcaption>
 </figure>
 </div>
 </div>
-</div>
-</section>
-<section class="slide level2">
+</div></section><section class="slide level2">
 
 <div class="callout callout-question callout-titled callout-style-default">
 <div class="callout-body">
@@ -523,26 +669,240 @@ Rick Gilmore
 <section id="simulating-different-assumptions" class="slide level2">
 <h2>Simulating different assumptions</h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" data-code-line-numbers="2-3|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>rt_name_a_color <span class="ot">&lt;-</span> <span class="dv">500</span> <span class="co"># milliseconds</span></span>
+<span id="cb9-2"><a></a>t_incong <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb9-3"><a></a>sd_rt <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a>stroop_df <span class="ot">&lt;-</span> stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a></a>  <span class="fu">mutate</span>(<span class="at">rt =</span> rt_name_a_color <span class="sc">+</span> </span>
+<span id="cb9-7"><a></a>           <span class="fu">if_else</span>(cong_incong <span class="sc">==</span> <span class="st">"incong"</span>, t_incong, <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a></a>           <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">sd =</span> sd_rt))</span>
+<span id="cb9-9"><a></a></span>
+<span id="cb9-10"><a></a>stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb9-11"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-12"><a></a>  <span class="fu">geom_violin</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong)) <span class="sc">+</span></span>
+<span id="cb9-13"><a></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb9-14"><a></a>  <span class="fu">geom_beeswarm</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb9-15"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb9-16"><a></a>  <span class="fu">ylab</span>(<span class="st">"Congruency"</span>) <span class="sc">+</span></span>
+<span id="cb9-17"><a></a>  <span class="fu">xlab</span>(<span class="st">"RT (ms)"</span>) <span class="sc">+</span></span>
+<span id="cb9-18"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Simulation of a single subject's Stroop data with a 10 ms incongruency effect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="simulating-different-assumptions-output" class="slide level2 output-location-slide"><h2>Simulating different assumptions</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div>
-<figure>
-<p><a href="include/fig/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="include/fig/unnamed-chunk-8-1.png" width="960"></a></p>
+<div id="fig-stroop-box-violin-effect-size-1.0" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-box-violin-effect-size-1.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-stroop-box-violin-effect-size-1.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-1.0-1.png" id="fig-stroop-box-violin-effect-size-1.0" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-effect-size-1.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4
+</figcaption>
 </figure>
 </div>
 </div>
-</div>
-</section>
-<section id="simulating-different-assumptions-1" class="slide level2">
+</div></section><section id="simulating-different-assumptions-1" class="slide level2">
 <h2>Simulating different assumptions</h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" data-code-line-numbers="2-3|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>rt_name_a_color <span class="ot">&lt;-</span> <span class="dv">500</span> <span class="co"># milliseconds</span></span>
+<span id="cb10-2"><a></a>t_incong <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb10-3"><a></a>sd_rt <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb10-4"><a></a></span>
+<span id="cb10-5"><a></a>stroop_df <span class="ot">&lt;-</span> stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a></a>  <span class="fu">mutate</span>(<span class="at">rt =</span> rt_name_a_color <span class="sc">+</span> </span>
+<span id="cb10-7"><a></a>           <span class="fu">if_else</span>(cong_incong <span class="sc">==</span> <span class="st">"incong"</span>, t_incong, <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb10-8"><a></a>           <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">sd =</span> sd_rt))</span>
+<span id="cb10-9"><a></a></span>
+<span id="cb10-10"><a></a>stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb10-11"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb10-12"><a></a>  <span class="fu">geom_violin</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong)) <span class="sc">+</span></span>
+<span id="cb10-13"><a></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb10-14"><a></a>  <span class="fu">geom_beeswarm</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb10-15"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb10-16"><a></a>  <span class="fu">ylab</span>(<span class="st">"Congruency"</span>) <span class="sc">+</span></span>
+<span id="cb10-17"><a></a>  <span class="fu">xlab</span>(<span class="st">"RT (ms)"</span>) <span class="sc">+</span></span>
+<span id="cb10-18"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span><span class="st">"Simulation of a single subject's Stroop data with a 5 ms incongruency effect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="simulating-different-assumptions-1-output" class="slide level2 output-location-slide"><h2>Simulating different assumptions</h2><div class="cell output-location-slide">
 <div class="cell-output-display">
-<div>
-<figure>
-<p><a href="include/fig/unnamed-chunk-9-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="include/fig/unnamed-chunk-9-1.png" width="960"></a></p>
+<div id="fig-stroop-box-violin-effect-size-0.50" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-box-violin-effect-size-0.50-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-stroop-box-violin-effect-size-0.50-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-0.50-1.png" id="fig-stroop-box-violin-effect-size-0.50" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-effect-size-0.50-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5
+</figcaption>
 </figure>
 </div>
 </div>
+</div></section><section id="effect-size" class="slide level2">
+<h2>Effect size</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The “effect” of some manipulation</li>
+<li>In standard deviation units</li>
+<li>So, <span class="math inline">\(\frac{t_{incong}}{sd_{rt}}\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th><span class="math inline">\(t_{incong}\)</span></th>
+<th><span class="math inline">\(sd_{rt}\)</span></th>
+<th>effect size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>20</td>
+<td>10</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>10</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>2.5</td>
+<td>10</td>
+<td>0.25</td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+<section id="simulating-different-assumptions-2" class="slide level2">
+<h2>Simulating different assumptions</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" data-code-line-numbers="2-3|"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>rt_name_a_color <span class="ot">&lt;-</span> <span class="dv">500</span> <span class="co"># milliseconds</span></span>
+<span id="cb11-2"><a></a>t_incong <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb11-3"><a></a>sd_rt <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb11-4"><a></a></span>
+<span id="cb11-5"><a></a>stroop_df <span class="ot">&lt;-</span> stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb11-6"><a></a>  <span class="fu">mutate</span>(<span class="at">rt =</span> rt_name_a_color <span class="sc">+</span> </span>
+<span id="cb11-7"><a></a>           <span class="fu">if_else</span>(cong_incong <span class="sc">==</span> <span class="st">"incong"</span>, t_incong, <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb11-8"><a></a>           <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">100</span>, <span class="at">sd =</span> sd_rt))</span>
+<span id="cb11-9"><a></a></span>
+<span id="cb11-10"><a></a>stroop_df <span class="sc">|&gt;</span></span>
+<span id="cb11-11"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb11-12"><a></a>  <span class="fu">geom_violin</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong)) <span class="sc">+</span></span>
+<span id="cb11-13"><a></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">4</span>) <span class="sc">+</span></span>
+<span id="cb11-14"><a></a>  <span class="fu">geom_beeswarm</span>(<span class="fu">aes</span>(<span class="at">x =</span> rt, <span class="at">y =</span> cong_incong), <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb11-15"><a></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb11-16"><a></a>  <span class="fu">ylab</span>(<span class="st">"Congruency"</span>) <span class="sc">+</span></span>
+<span id="cb11-17"><a></a>  <span class="fu">xlab</span>(<span class="st">"RT (ms)"</span>) <span class="sc">+</span></span>
+<span id="cb11-18"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span><span class="st">"Simulation of a single subject's Stroop data with a 2.5 ms incongruency effect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+
+</section>
+<section id="simulating-different-assumptions-2-output" class="slide level2 output-location-slide"><h2>Simulating different assumptions</h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-stroop-box-violin-smaller-effect-size-0.25" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-box-violin-smaller-effect-size-0.25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-stroop-box-violin-smaller-effect-size-0.25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: "><img data-src="include/fig/fig-stroop-box-violin-smaller-effect-size-0.25-1.png" id="fig-stroop-box-violin-smaller-effect-size-0.25" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-smaller-effect-size-0.25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="how-would-you-simulate-survey-responses" class="slide level2">
+<h2>How would you simulate survey responses?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>All in all, do you think that things in the nation are…?
+<ul>
+<li>Generally headed in the right direction</li>
+<li>Off on the wrong track</li>
+<li>Not sure</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div id="fig-harvard-poll-right-track" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-harvard-poll-right-track-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: @UnknownUnknown-vw"><img data-src="https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp" style="width:75.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-harvard-poll-right-track-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: <span class="citation" data-cites="UnknownUnknown-vw"><span>“Harvard <span>Y</span>outh <span>P</span>oll <span>53rd</span> Edition - Fall 2026”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="modeling-right-directionwrong-track" class="slide level2">
+<h2>Modeling right direction/wrong track</h2>
+<ul>
+<li>Response variable</li>
+<li>Predictor variable(s)
+<ul>
+<li>Party registration</li>
+<li>Vote 2026 likelihood</li>
+<li>…</li>
+</ul></li>
+</ul>
+</section>
+<section id="specify-a-model-in-words-3" class="slide level2">
+<h2>Specify a model (in words)</h2>
+<ul>
+<li>More “Wrong track” among Democrats &amp; Independents
+<ul>
+<li>Democrats == Independents?</li>
+</ul></li>
+<li>More “Right direction” among Republicans</li>
+<li>What about Vote 2026 likelihood?</li>
+</ul>
+</section>
+<section id="specify-a-model-in-code" class="slide level2">
+<h2>Specify a model (in code)</h2>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>right_wrong_df <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb12-3"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> resp)) <span class="sc">+</span></span>
+<span id="cb12-4"><a></a>  <span class="fu">facet_grid</span>(<span class="at">rows =</span> <span class="fu">vars</span>(party))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+</section>
+<section id="" class="slide level2 output-location-slide"><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div id="fig-right-wrong-barplot" class="quarto-float quarto-figure quarto-figure-center" width="960">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-right-wrong-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="include/fig/fig-right-wrong-barplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: "><img data-src="include/fig/fig-right-wrong-barplot-1.png" id="fig-right-wrong-barplot" width="960"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-right-wrong-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div></section><section id="why-should-we-care" class="slide level2">
+<h2>Why should we care?</h2>
+<ul>
+<li>Simulate your design before you collect data</li>
+<li>What is the data picture you expect?</li>
+<li>Build your data viz pipeline in advance</li>
+<li>Specify your assumptions, check them</li>
+<li>Simulation cheaper than running a study678</li>
+</ul>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -560,10 +920,15 @@ Rick Gilmore
 <h1>Resources</h1>
 
 </section>
-<section id="references" class="slide level2">
+<section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-UnknownUnknown-vw" class="csl-entry" role="listitem">
+<span>“Harvard <span>Y</span>outh <span>P</span>oll <span>53rd</span> Edition - Fall 2026.”</span> n.d. Accessed October 26, 2026. <a href="https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026">https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026</a>.
+</div>
+</div>
 </section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
 

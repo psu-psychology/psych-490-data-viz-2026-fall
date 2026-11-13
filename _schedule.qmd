@@ -327,7 +327,8 @@
 
 *Work Session*
 
-- [Slides](404.qmd)
+- [Slides](slides/wk-12-2026-11-13-work-session.qmd)
+- Final project [survey](https://forms.gle/T4JdvQYWE6sRjpV69)
 
 ## Week 13 {- #week-13}
 
@@ -337,14 +338,13 @@
 
 *Simulate & Synthesize before you analyze*
 
-- [Slides](404.qmd)
+- [Slides](slides/wk-13-2026-11-16-simulate-synthesize.qmd)
 - {{< fa calendar >}} *Due* [Exercise-06](exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309)
 
 ### Wed, Nov 18 {-}
 
-*Alpha, Power, Effect size, & Sample Size*
-
-- [Slides](404.qmd)
+<!-- *Alpha, Power, Effect size, & Sample Size* -->
+*Work Session: Final projects*
 
 ### Fri, Nov 20 {-}
 

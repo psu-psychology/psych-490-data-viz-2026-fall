@@ -169,7 +169,6 @@ $$ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)$$
 
 ```{r}
 #| label: setup
-
 library(ggplot2)
 library(dplyr)
 library(ggbeeswarm)
@@ -177,12 +176,20 @@ library(ggbeeswarm)
 
 
 ```{r}
+#| label: make-stroop-data
+#| echo: true
+#| code-fold: false
 trial <- 1:100
 words <- rep(c("Red", "Green", "Blue", "Yellow", "Black"), 20)
 word <- sample(x = words, replace = FALSE)
-
 stroop_df <- data.frame(trial, word)
+```
 
+```{r}
+#| label: fig-stroop-trials-by-color
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 stroop_df |>
   ggplot() +
   geom_bar(aes(x = word, fill = word)) +
@@ -191,21 +198,28 @@ stroop_df |>
 
 ## How many congruent vs. incongruent trials?
 
-- Let's specify 3/4 trials will be congruent
+- Let's specify 3/4 trials will be *congruent*
+- Make attending to color of text more salient
 
 ```{r}
+#| label: make-cong-incong-stroop
+#| echo: true
+#| code-fold: false
 congruency <- rep(c("cong", "cong", "cong", "incong"), 25)
 cong_incong <- sample(x = congruency, replace = FALSE)
 stroop_df$cong_incong <- cong_incong
 ```
 
-##
+## Interim check (1 of 2)
 
 ```{r}
+#| label: view-stroop-data-head
+#| echo: true
+#| code-fold: false
 head(stroop_df, n = 15)
 ```
 
-## 
+## Interim check (2 of 2)
 
 ```{r}
 stroop_df |>
@@ -219,6 +233,9 @@ stroop_df |>
 $$ RT=RT_{name-a-color}+t_{incongruent}+N(0, sd)$$
 
 ```{r}
+#| label: make-stroop-rt-data
+#| echo: true
+#| code-fold: false
 rt_name_a_color <- 500 # milliseconds
 t_incong <- 20
 sd_rt <- 10
@@ -232,6 +249,10 @@ stroop_df <- stroop_df |>
 ## How'd we do?
 
 ```{r}
+#| label: fig-stroop-histogram
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 stroop_df |>
   ggplot() +
   geom_histogram(aes(x = rt, 
@@ -241,6 +262,10 @@ stroop_df |>
 ## 
 
 ```{r}
+#| label: fig-stroop-box-violin-effect-size-2.0
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 stroop_df |>
   ggplot() +
   geom_violin(aes(x = rt, y = cong_incong)) +
@@ -267,6 +292,11 @@ stroop_df |>
 ## Simulating different assumptions
 
 ```{r}
+#| label: fig-stroop-box-violin-effect-size-1.0
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+#| code-line-numbers: "2-3|"
 rt_name_a_color <- 500 # milliseconds
 t_incong <- 10
 sd_rt <- 10
@@ -290,6 +320,11 @@ stroop_df |>
 ## Simulating different assumptions
 
 ```{r}
+#| label: fig-stroop-box-violin-effect-size-0.50
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+#| code-line-numbers: "2-3|"
 rt_name_a_color <- 500 # milliseconds
 t_incong <- 5
 sd_rt <- 10
@@ -309,6 +344,117 @@ stroop_df |>
   xlab("RT (ms)") +
   labs(title ="Simulation of a single subject's Stroop data with a 5 ms incongruency effect.")
 ```
+
+## Effect size
+
+:::: {.columns}
+::: {.column width=50%}
+- The "effect" of some manipulation
+- In standard deviation units
+- So, $\frac{t_{incong}}{sd_{rt}}$
+:::
+::: {.column width=50%}
+| $t_{incong}$  | $sd_{rt}$ | effect size |
+|-----------|-------|-------------|
+| 20        | 10    | 2           |
+| 10        | 10    | 1           |
+| 5         | 10    | 0.5         |
+| 2.5       | 10    | 0.25        |
+:::
+::::
+
+## Simulating different assumptions
+
+```{r}
+#| label: fig-stroop-box-violin-smaller-effect-size-0.25
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+#| code-line-numbers: "2-3|"
+rt_name_a_color <- 500 # milliseconds
+t_incong <- 2.5
+sd_rt <- 10
+
+stroop_df <- stroop_df |>
+  mutate(rt = rt_name_a_color + 
+           if_else(cong_incong == "incong", t_incong, 0) +
+           rnorm(n = 100, sd = sd_rt))
+
+stroop_df |>
+  ggplot() +
+  geom_violin(aes(x = rt, y = cong_incong)) +
+  geom_boxplot(aes(x = rt, y = cong_incong), alpha = .4) +
+  geom_beeswarm(aes(x = rt, y = cong_incong), alpha = .5) +
+  theme_classic() +
+  ylab("Congruency") +
+  xlab("RT (ms)") +
+  labs(title ="Simulation of a single subject's Stroop data with a 2.5 ms incongruency effect.")
+```
+
+## How would you simulate survey responses?
+
+:::: {.columns}
+::: {.column width=50%}
+- All in all, do you think that things in the nation are...?
+  - Generally headed in the right direction
+  - Off on the wrong track
+  - Not sure
+:::
+::: {.column width=50%}
+![@UnknownUnknown-vw](https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp){#fig-harvard-poll-right-track width="75%"}
+:::
+::::
+
+
+## Modeling right direction/wrong track
+
+- Response variable
+- Predictor variable(s)
+  - Party registration
+  - Vote 2026 likelihood
+  - ...
+
+## Specify a model (in words)
+
+- More "Wrong track" among Democrats & Independents
+  - Democrats == Independents?
+- More "Right direction" among Republicans
+- What about Vote 2026 likelihood?
+
+## Specify a model (in code)
+
+```{r}
+#| label: right-wrong-make-data
+right_wrong_track <- c("wrong", "right", "not_sure")
+ds <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.7, .2, .1))
+rs <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.3, .5, .2))
+ins <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.6, .2, .2))
+
+right_wrong_df <- data.frame(party = rep(c("d", "r", "i"), each = 100),
+                             resp = c(ds, rs, ins))
+```
+
+---
+
+```{r}
+#| label: fig-right-wrong-barplot
+#| echo: true
+#| code-fold: false
+#| output-location: slide
+
+right_wrong_df |>
+  ggplot() +
+  geom_bar(aes(x = resp)) +
+  facet_grid(rows = vars(party))
+```
+
+## Why should we care?
+
+- Simulate your design before you collect data
+- What is the data picture you expect?
+- Build your data viz pipeline in advance
+- Specify your assumptions, check them
+- Simulation cheaper than running a study678
 
 # Wrap up
 
