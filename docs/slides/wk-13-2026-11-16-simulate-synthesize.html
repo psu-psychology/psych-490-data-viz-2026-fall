@@ -271,6 +271,19 @@ Rick Gilmore
 <h1>Preliminaries</h1>
 
 </section>
+<section id="in-the-news" class="slide level2">
+<h2>In the news…</h2>
+<div id="fig-ritchie-2026-mental-illness" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-ritchie-2026-mental-illness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/b50fb4bb-3541-43cd-740e-1776a8e0c800/w=2550.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: @Ritchie2026-nj"><img data-src="https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/b50fb4bb-3541-43cd-740e-1776a8e0c800/w=2550.png"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ritchie-2026-mental-illness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <span class="citation" data-cites="Ritchie2026-nj">Ritchie (<a href="#/references" role="doc-biblioref" onclick="">2026</a>)</span>
+</figcaption>
+</figure>
+</div>
+</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
@@ -505,7 +518,9 @@ Rick Gilmore
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>stroop_df <span class="sc">|&gt;</span></span>
 <span id="cb2-2"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb2-3"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> word, <span class="at">fill =</span> word)) <span class="sc">+</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">scale_color_discrete</span>(<span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"yellow"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-4"><a></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb2-5"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"blue"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"yellow"</span>))</span>
+<span id="cb2-6"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 </section>
@@ -514,10 +529,10 @@ Rick Gilmore
 <div id="fig-stroop-trials-by-color" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-stroop-trials-by-color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-stroop-trials-by-color-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: "><img data-src="include/fig/fig-stroop-trials-by-color-1.png" id="fig-stroop-trials-by-color" width="960"></a>
+<a href="include/fig/fig-stroop-trials-by-color-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: "><img data-src="include/fig/fig-stroop-trials-by-color-1.png" id="fig-stroop-trials-by-color" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-trials-by-color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
+Figure&nbsp;2
 </figcaption>
 </figure>
 </div>
@@ -540,21 +555,21 @@ Figure&nbsp;1
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">head</span>(stroop_df, <span class="at">n =</span> <span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   trial   word cong_incong
-1      1 Yellow        cong
-2      2  Green        cong
+1      1  Black        cong
+2      2  Black      incong
 3      3   Blue        cong
-4      4 Yellow      incong
-5      5  Green        cong
-6      6  Black        cong
-7      7    Red      incong
-8      8    Red        cong
-9      9  Black        cong
-10    10   Blue      incong
-11    11    Red        cong
-12    12  Black        cong
-13    13   Blue        cong
-14    14  Green        cong
-15    15  Black        cong</code></pre>
+4      4    Red        cong
+5      5 Yellow        cong
+6      6   Blue      incong
+7      7   Blue      incong
+8      8 Yellow      incong
+9      9 Yellow      incong
+10    10    Red        cong
+11    11  Green        cong
+12    12    Red        cong
+13    13  Green        cong
+14    14 Yellow        cong
+15    15   Blue        cong</code></pre>
 </div>
 </div>
 </section>
@@ -564,7 +579,7 @@ Figure&nbsp;1
 <div class="cell-output-display">
 <div>
 <figure>
-<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="include/fig/unnamed-chunk-1-1.png" width="960"></a></p>
+<p><a href="include/fig/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="include/fig/unnamed-chunk-1-1.png" width="960"></a></p>
 </figure>
 </div>
 </div>
@@ -599,10 +614,10 @@ Figure&nbsp;1
 <div id="fig-stroop-histogram" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-stroop-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-stroop-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: "><img data-src="include/fig/fig-stroop-histogram-1.png" id="fig-stroop-histogram" width="960"></a>
+<a href="include/fig/fig-stroop-histogram-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: "><img data-src="include/fig/fig-stroop-histogram-1.png" id="fig-stroop-histogram" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
+Figure&nbsp;3
 </figcaption>
 </figure>
 </div>
@@ -627,10 +642,10 @@ Figure&nbsp;2
 <div id="fig-stroop-box-violin-effect-size-2.0" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-stroop-box-violin-effect-size-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-stroop-box-violin-effect-size-2.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-2.0-1.png" id="fig-stroop-box-violin-effect-size-2.0" width="960"></a>
+<a href="include/fig/fig-stroop-box-violin-effect-size-2.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-2.0-1.png" id="fig-stroop-box-violin-effect-size-2.0" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-effect-size-2.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3
+Figure&nbsp;4
 </figcaption>
 </figure>
 </div>
@@ -695,10 +710,10 @@ Figure&nbsp;3
 <div id="fig-stroop-box-violin-effect-size-1.0" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-stroop-box-violin-effect-size-1.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-stroop-box-violin-effect-size-1.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-1.0-1.png" id="fig-stroop-box-violin-effect-size-1.0" width="960"></a>
+<a href="include/fig/fig-stroop-box-violin-effect-size-1.0-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-1.0-1.png" id="fig-stroop-box-violin-effect-size-1.0" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-effect-size-1.0-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4
+Figure&nbsp;5
 </figcaption>
 </figure>
 </div>
@@ -732,10 +747,10 @@ Figure&nbsp;4
 <div id="fig-stroop-box-violin-effect-size-0.50" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-stroop-box-violin-effect-size-0.50-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-stroop-box-violin-effect-size-0.50-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-0.50-1.png" id="fig-stroop-box-violin-effect-size-0.50" width="960"></a>
+<a href="include/fig/fig-stroop-box-violin-effect-size-0.50-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: "><img data-src="include/fig/fig-stroop-box-violin-effect-size-0.50-1.png" id="fig-stroop-box-violin-effect-size-0.50" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-effect-size-0.50-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5
+Figure&nbsp;6
 </figcaption>
 </figure>
 </div>
@@ -812,15 +827,28 @@ Figure&nbsp;5
 <div id="fig-stroop-box-violin-smaller-effect-size-0.25" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-stroop-box-violin-smaller-effect-size-0.25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-stroop-box-violin-smaller-effect-size-0.25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: "><img data-src="include/fig/fig-stroop-box-violin-smaller-effect-size-0.25-1.png" id="fig-stroop-box-violin-smaller-effect-size-0.25" width="960"></a>
+<a href="include/fig/fig-stroop-box-violin-smaller-effect-size-0.25-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: "><img data-src="include/fig/fig-stroop-box-violin-smaller-effect-size-0.25-1.png" id="fig-stroop-box-violin-smaller-effect-size-0.25" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-stroop-box-violin-smaller-effect-size-0.25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6
+Figure&nbsp;7
 </figcaption>
 </figure>
 </div>
 </div>
-</div></section><section id="how-would-you-simulate-survey-responses" class="slide level2">
+</div></section><section id="toward-a-better-simulation" class="slide level2">
+<h2>Toward a better simulation…</h2>
+<div id="fig-stroop-effect-ai-query" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-stroop-effect-ai-query-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="../include/img/stroop-effect-simulation-query.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: Gilmore’s 2026-11-15 query to Google: https://share.google/aimode/GgSvZ6PxxgI3Ee6oR"><img data-src="../include/img/stroop-effect-simulation-query.png" style="width:65.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stroop-effect-ai-query-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Gilmore’s 2026-11-15 query to Google: <a href="https://share.google/aimode/GgSvZ6PxxgI3Ee6oR" class="uri">https://share.google/aimode/GgSvZ6PxxgI3Ee6oR</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="how-would-you-simulate-survey-responses" class="slide level2">
 <h2>How would you simulate survey responses?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -836,10 +864,10 @@ Figure&nbsp;6
 <div id="fig-harvard-poll-right-track" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-harvard-poll-right-track-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: @UnknownUnknown-vw"><img data-src="https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp" style="width:75.0%"></a>
+<a href="https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;9: @UnknownUnknown-vw"><img data-src="https://iop.harvard.edu/sites/default/files/styles/responsive_image_2000/public/media/image/ejSUM-1.-all-in-all-do-you-think-that-things-in-the-nation-are-%20%282%29.webp" style="width:75.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-harvard-poll-right-track-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: <span class="citation" data-cites="UnknownUnknown-vw"><span>“Harvard <span>Y</span>outh <span>P</span>oll <span>53rd</span> Edition - Fall 2026”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
+Figure&nbsp;9: <span class="citation" data-cites="UnknownUnknown-vw"><span>“Harvard <span>Y</span>outh <span>P</span>oll <span>53rd</span> Edition - Fall 2026”</span> (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span>
 </figcaption>
 </figure>
 </div>
@@ -886,23 +914,52 @@ Figure&nbsp;7: <span class="citation" data-cites="UnknownUnknown-vw"><span>“Ha
 <div id="fig-right-wrong-barplot" class="quarto-float quarto-figure quarto-figure-center" width="960">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-right-wrong-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="include/fig/fig-right-wrong-barplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: "><img data-src="include/fig/fig-right-wrong-barplot-1.png" id="fig-right-wrong-barplot" width="960"></a>
+<a href="include/fig/fig-right-wrong-barplot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;10: "><img data-src="include/fig/fig-right-wrong-barplot-1.png" id="fig-right-wrong-barplot" width="960"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-right-wrong-barplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8
+Figure&nbsp;10
 </figcaption>
 </figure>
 </div>
 </div>
-</div></section><section id="why-should-we-care" class="slide level2">
-<h2>Why should we care?</h2>
+</div></section><section class="slide level2">
+
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Critique</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>This simulation only projects a single year’s data, not the time series reported in the survey.</li>
+<li>To depict changes over time, we’d need to specify about how <em>p</em>(wrong_track) changes over time.</li>
+<li><em>p</em>(wrong_track) + <em>p</em>(right_track) + <em>p</em>(not_sure) must always = 1.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="why-should-we-care-about-simulation" class="slide level2">
+<h2>Why should we care about simulation?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
 <li>Simulate your design before you collect data</li>
 <li>What is the data picture you expect?</li>
 <li>Build your data viz pipeline in advance</li>
 <li>Specify your assumptions, check them</li>
-<li>Simulation cheaper than running a study678</li>
 </ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Build your <em>data analysis</em> pipeline in advance</li>
+<li>Simulation cheaper than running a study</li>
+<li>“Don’t fool yourself because you are the easiest one to fool.”</li>
+<li>“All models are wrong; some are useful.”</li>
+</ul>
+</div></div>
 </section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
@@ -927,6 +984,9 @@ Figure&nbsp;8
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-UnknownUnknown-vw" class="csl-entry" role="listitem">
 <span>“Harvard <span>Y</span>outh <span>P</span>oll <span>53rd</span> Edition - Fall 2026.”</span> n.d. Accessed October 26, 2026. <a href="https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026">https://iop.harvard.edu/youth-poll/53rd-edition-fall-2026</a>.
+</div>
+<div id="ref-Ritchie2026-nj" class="csl-entry" role="listitem">
+Ritchie, Hannah. 2026. <span>“Around Half of People Will Experience a Mental Health Issue in Their Lifetime.”</span> <em>Our World in Data</em>, November 2. <a href="https://ourworldindata.org/around-half-of-people-will-experience-a-mental-health-issue-in-their-lifetime">https://ourworldindata.org/around-half-of-people-will-experience-a-mental-health-issue-in-their-lifetime</a>.
 </div>
 </div>
 </section></section>

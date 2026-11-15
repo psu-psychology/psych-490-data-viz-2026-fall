@@ -5,6 +5,10 @@ format: revealjs
 
 # Preliminaries
 
+## In the news...
+
+![@Ritchie2026-nj](https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/b50fb4bb-3541-43cd-740e-1776a8e0c800/w=2550){#fig-ritchie-2026-mental-illness width="}
+
 ## Announcements
 
 - [Exercise-06](../exercises/ex-06-making-maps.qmd) | [{{< fa folder >}} *Canvas dropbox*](https://psu.instructure.com/courses/2484925/assignments/18789309) due today, November 16, 2026.
@@ -193,7 +197,9 @@ stroop_df <- data.frame(trial, word)
 stroop_df |>
   ggplot() +
   geom_bar(aes(x = word, fill = word)) +
-  scale_color_discrete(c("black", "blue", "green", "red", "yellow"))
+  scale_fill_manual(
+    values = c(c("black", "blue", "green", "red", "yellow"))
+  )
 ```
 
 ## How many congruent vs. incongruent trials?
@@ -225,7 +231,8 @@ head(stroop_df, n = 15)
 stroop_df |>
   ggplot() +
   geom_bar(aes(x = word, fill = word)) +
-  facet_grid(cols = vars(cong_incong))
+  facet_grid(cols = vars(cong_incong)) +
+  scale_fill_manual(values = c("black", "blue", "green", "red", "yellow"))
 ```
 
 ## On to our model
@@ -391,6 +398,10 @@ stroop_df |>
   labs(title ="Simulation of a single subject's Stroop data with a 2.5 ms incongruency effect.")
 ```
 
+## Toward a better simulation...
+
+![Gilmore's 2026-11-15 query to Google: <https://share.google/aimode/GgSvZ6PxxgI3Ee6oR>](../include/img/stroop-effect-simulation-query.png){#fig-stroop-effect-ai-query width="65%"}
+
 ## How would you simulate survey responses?
 
 :::: {.columns}
@@ -427,7 +438,7 @@ stroop_df |>
 #| label: right-wrong-make-data
 right_wrong_track <- c("wrong", "right", "not_sure")
 ds <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.7, .2, .1))
-rs <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.3, .5, .2))
+rs <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.5, .3, .2))
 ins <- sample(right_wrong_track, 100, replace = TRUE, prob = c(.6, .2, .2))
 
 right_wrong_df <- data.frame(party = rep(c("d", "r", "i"), each = 100),
@@ -448,13 +459,32 @@ right_wrong_df |>
   facet_grid(rows = vars(party))
 ```
 
-## Why should we care?
+---
 
+::: {.callout-important}
+## Critique
+
+- This simulation only projects a single year's data, not the time series reported in the survey.
+- To depict changes over time, we'd need to specify about how *p*(wrong_track) changes over time.
+- *p*(wrong_track) + *p*(right_track) + *p*(not_sure) must always = 1.
+:::
+
+## Why should we care about simulation?
+
+:::: {.columns}
+::: {.column width=50%}
 - Simulate your design before you collect data
 - What is the data picture you expect?
 - Build your data viz pipeline in advance
 - Specify your assumptions, check them
-- Simulation cheaper than running a study678
+:::
+::: {.column width=50%}
+- Build your *data analysis* pipeline in advance
+- Simulation cheaper than running a study
+- "Don't fool yourself because you are the easiest one to fool."
+- "All models are wrong; some are useful."
+:::
+::::
 
 # Wrap up
 
