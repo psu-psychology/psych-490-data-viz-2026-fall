@@ -7,7 +7,7 @@ format: revealjs
 
 ## In the news...
 
-![@Ritchie2026-nj](https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/b50fb4bb-3541-43cd-740e-1776a8e0c800/w=2550){#fig-ritchie-2026-mental-illness width="}
+![@Ritchie2026-nj](https://ourworldindata.org/cdn-cgi/imagedelivery/qLq-8BTgXU8yG0N6HnOy8g/b50fb4bb-3541-43cd-740e-1776a8e0c800/w=2550){#fig-ritchie-2026-mental-illness width="65%"}
 
 ## Announcements
 

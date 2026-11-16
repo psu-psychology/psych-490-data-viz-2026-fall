@@ -10324,7 +10324,7 @@
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#interim-check-1-of-2",
     "title": "Simulate",
     "section": "Interim check (1 of 2)",
-    "text": "Interim check (1 of 2)\n\nhead(stroop_df, n = 15)\n\n   trial   word cong_incong\n1      1  Black        cong\n2      2  Black      incong\n3      3   Blue        cong\n4      4    Red        cong\n5      5 Yellow        cong\n6      6   Blue      incong\n7      7   Blue      incong\n8      8 Yellow      incong\n9      9 Yellow      incong\n10    10    Red        cong\n11    11  Green        cong\n12    12    Red        cong\n13    13  Green        cong\n14    14 Yellow        cong\n15    15   Blue        cong",
+    "text": "Interim check (1 of 2)\n\nhead(stroop_df, n = 15)\n\n   trial   word cong_incong\n1      1    Red        cong\n2      2  Green        cong\n3      3   Blue      incong\n4      4  Green        cong\n5      5  Black      incong\n6      6   Blue        cong\n7      7  Black      incong\n8      8  Black        cong\n9      9    Red        cong\n10    10 Yellow        cong\n11    11 Yellow        cong\n12    12    Red        cong\n13    13    Red        cong\n14    14  Black        cong\n15    15  Green        cong",
     "crumbs": [
       "Slides",
       "Wk 13 • Mon Nov 16"
