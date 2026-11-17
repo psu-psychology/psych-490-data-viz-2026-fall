@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-11-06">
+<meta name="dcterms.date" content="2026-11-17">
 
 <title>Exercise 04 – PSYCH 490.007</title>
 <style>
@@ -365,6 +365,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Wk 12 • Mon Nov 9</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-12-2026-11-11-viz-uncertainty-risk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 12 • Wed Nov 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-12-2026-11-13-work-session.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 12 • Fri Nov 13</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/wk-13-2026-11-16-simulate-synthesize.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Wk 13 • Mon Nov 16</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -383,8 +401,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
           <li class="sidebar-item">
- <span class="menu-text">exercises/ex-02-data-viz-outsid</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../exercises/ex-02-data-viz-outside-psych.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 02</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/ex-03-making-data.html" class="sidebar-item-text sidebar-link">
@@ -527,7 +548,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title d-none d-lg-block">Exercise 04</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Making figures with <code>ggplot</code></p>
+<p class="subtitle lead">Making figures with <em>ggplot</em></p>
 </div>
 
 
@@ -538,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 6, 2026</p>
+      <p class="date">November 17, 2026</p>
     </div>
   </div>
   
@@ -564,7 +585,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="assignment" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="assignment">Assignment</h2>
-<ol start="0" type="1">
+<ol type="1">
 <li>Pick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from <code>data()</code>), such as <em>diamonds</em> or <em>mtcars</em>, or the one of the datasets from the <code>nflreadr</code> package we explored previously.</li>
 <li>Create a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using <code>ggplot2</code> to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.
 <ul>
@@ -573,7 +594,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>For each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you expect to derive from it, and how the visualization you create answers (or doesn’t answer) the question.</li>
 <li>If your figure doesn’t clearly answer the question you posed, explain how the figure might be improved or clarified to do so. This critique could include a suggestion to use a different type of figure. You may, but do not have to improve your figure for this assignment.</li>
 <li>Include a short <code>Discussion and Conclusion</code> section where you summarize what you learned in a couple of sentences.</li>
+<li>Submit your rendered <code>.html</code> file. Make sure that your file has a suitable name, e.g., <code>psych-490.007-2026-ex-04-last_name-first_name.html</code>, where you substitute your first and last name.</li>
+<li>Tips</li>
 </ol>
+<ul>
+<li>Add <code>embed-resources: true</code> to the header of your Quarto document. This will generated a self-contained HTML file that you can submit via Canvas. If you have difficulty submitting your HTML file via Canvas, you mail email me your Quarto (<code>.qmd</code>) source file and your <code>.html</code> output file. I will upload them to Canvas as part of the grading process.</li>
+</ul>
 
 
 <!-- -->
@@ -1048,7 +1074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Exercise 04"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Making figures with `ggplot`"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Making figures with *ggplot*"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
@@ -1064,13 +1090,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Assignment {-}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">0. </span>Pick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from <span class="in">`data()`</span>), such as *diamonds* or *mtcars*, or the one of the datasets from the <span class="in">`nflreadr`</span> package we explored previously.</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using <span class="in">`ggplot2`</span> to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Pick a dataset to explore with visualizations. You may use a dataset built-in to R (see output from <span class="in">`data()`</span>), such as *diamonds* or *mtcars*, or the one of the datasets from the <span class="in">`nflreadr`</span> package we explored previously.</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Create a Quarto document where you load and explore the chosen dataset, then create at least three visualizations using <span class="in">`ggplot2`</span> to answer specific questions about the data. At least one of your figures should be a scatter plot comparing two numerical variables from the dataset, and at least one should involve a categorical (nominal or ordinal) variable.</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Your Quarto document should include an <span class="in">`About`</span> section, a <span class="in">`Setup`</span> section, and separate sections for each figure you generate.</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>For each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you expect to derive from it, and how the visualization you create answers (or doesn't answer) the question.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>If your figure doesn't clearly answer the question you posed, explain how the figure might be improved or clarified to do so.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>For each figure you make, write a short summary of the question you intended to ask with the figure, the key insights you expect to derive from it, and how the visualization you create answers (or doesn't answer) the question.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>If your figure doesn't clearly answer the question you posed, explain how the figure might be improved or clarified to do so.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>This critique could include a suggestion to use a different type of figure. You may, but do not have to improve your figure for this assignment.</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Include a short <span class="in">`Discussion and Conclusion`</span> section where you summarize what you learned in a couple of sentences.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Include a short <span class="in">`Discussion and Conclusion`</span> section where you summarize what you learned in a couple of sentences.</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Submit your rendered <span class="in">`.html`</span> file. Make sure that your file has a suitable name, e.g., <span class="in">`psych-490.007-2026-ex-04-last_name-first_name.html`</span>, where you substitute your first and last name.</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>Tips</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Add <span class="in">`embed-resources: true`</span> to the header of your Quarto document. This will generated a self-contained HTML file that you can submit via Canvas. If you have difficulty submitting your HTML file via Canvas, you mail email me your Quarto (<span class="in">`.qmd`</span>) source file and your <span class="in">`.html`</span> output file. I will upload them to Canvas as part of the grading process.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

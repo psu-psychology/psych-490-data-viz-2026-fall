@@ -102,6 +102,9 @@ sum_df <- data.frame(n = c(10, 100, 1000),
 
 ```{r}
 #| label: fig-violin-hist-10-100-1000
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 raw_df |>
   ggplot() +
   geom_violin(aes(x = value, y = "")) +
@@ -113,6 +116,9 @@ raw_df |>
 
 ```{r}
 #| label: fig-10-100-1000-mean
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 sum_df |>
   ggplot() +
   geom_point(aes(x = n, y = mean)) +
@@ -124,6 +130,9 @@ sum_df |>
 
 ```{r}
 #| label: fig-10-100-1000-sd
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 sum_df |>
   ggplot() +
   geom_point(aes(x = n, y = sd)) +
@@ -135,6 +144,9 @@ sum_df |>
 
 ```{r}
 #| label: fig-10-100-1000-sem
+#| echo: true
+#| code-fold: false
+#| output-location: slide
 sum_df |>
   ggplot() +
   geom_point(aes(x = n, y = sem)) +
