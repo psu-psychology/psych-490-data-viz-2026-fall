@@ -1,0 +1,192 @@
+---
+title: "Presentation schedule"
+---
+
+Tentative schedule as of `r Sys.time()`.
+
+## Background
+
+This page documents how the presentation schedule can be automatically generated from the student survey.
+
+## Download data
+
+```{r}
+googledrive::drive_auth(email = "rick.o.gilmore@gmail.com")
+```
+
+```{r}
+if (!dir.exists('csv')) {
+  dir.create('csv')
+}
+
+csv_fn <- "csv/psych-490-2026-fall-presentations.csv"
+
+googledrive::drive_download(
+  file = 'PSYCH 490.001 Fall 2026 Project Info (Responses)',
+  path = csv_fn,
+  type = 'csv',
+  overwrite = TRUE
+  
+)
+```
+
+```{r}
+if (file.exists(csv_fn)) {
+  presentations_df <- readr::read_csv(csv_fn, show_col_types = FALSE)
+} else {
+  message("File not found: ", csv_fn)
+  presentations_df <- NULL
+}
+```
+
+## Clean the data
+
+```{r}
+new_names <-
+  c(
+    "Timestamp",
+    "Authors",
+    "Title",
+    "Format",
+    "Give_talk",
+    "Preferred_date"
+  )
+
+# Make new data frame with long and short names for reference
+presentation_qs <- tibble::tibble(q_long = names(presentations_df), q_short = new_names)
+
+# Swap out old (long) names for new (short) names
+names(presentations_df) <- new_names
+```
+
+## Show all presenters
+
+### Presenters
+
+```{r}
+presentations_df |>
+  dplyr::filter(!stringr::str_detect(Preferred_date, "Not presenting")) |>
+  dplyr::arrange(Timestamp) |>
+  dplyr::select(Timestamp, Authors, Preferred_date) |>
+  kableExtra::kable(format = 'html')
+```
+
+### Not presenting
+
+```{r}
+presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "Not presenting")) |>
+  dplyr::arrange(Timestamp) |>
+  dplyr::select(Timestamp, Authors) |>
+  kableExtra::kable(format = 'html')
+```
+
+## Select subsets by preferred date
+
+I assigned students by preferred date and the date they completed the survey.
+Students who indicated no preference were added to open spots in the schedule in the order that they completed the survey.
+
+```{r}
+mon_07_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "07"),
+                Give_talk == "Yes")
+
+wed_09_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "09"),
+                Give_talk == "Yes")
+
+fri_11_df <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "11"),
+                Give_talk == "Yes")
+
+no_pref <- presentations_df |>
+  dplyr::filter(stringr::str_detect(Preferred_date, "No preference"),
+                Give_talk == "Yes")
+
+times <- c("03:40", "03:55", "04:10")
+```
+
+## Day 1: Mon, Dec 07
+
+```{r}
+#| label: tbl-mon-dec-07
+#| tbl-cap: "Presenters for Monday, December 7, 2026"
+n_mon_07_df <- dim(mon_07_df)[1]
+n_no_pref <- dim(no_pref)[1]
+
+n_mon_07_slots_free <- length(times) - n_mon_07_df
+
+if (n_mon_07_slots_free > 0) {
+  new_mon_07_df <- rbind(mon_07_df, no_pref[1:n_mon_07_slots_free,])
+} else {
+  new_mon_07_df <- mon_07_df
+}
+new_mon_07_df$Time <- times
+
+no_pref$assigned[1:n_mon_07_slots_free] <- TRUE
+
+new_mon_07_df |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+
+## Day 2: Wed, Dec 09
+
+```{r}
+#| label: tbl-wed-dec-09
+#| tbl-cap: "Presenters for December 9, 2026"
+n_wed_09_df <- dim(wed_09_df)[1]
+
+# no_pref_remaining <- no_pref[no_pref$assigned == FALSE,]
+# n_tue_29_remaining <- length(times) - n_wed_09_df
+# 
+# index_to_assign <- c(1:length(no_pref_remaining))[1:n_tue_29_remaining]
+# 
+# new_wed_09_df <- rbind(wed_09_df, 
+#                        no_pref_remaining[index_to_assign,])
+# new_wed_09_df$Time <- times
+
+# no_pref_remaining$assigned[index_to_assign] <- TRUE
+
+# new_wed_09_df |>
+wed_09_df |>
+  dplyr::mutate(Time = times[1:n_wed_09_df]) |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```
+
+## Day 3: Fri, Dec 11
+
+```{r}
+#| label: tbl-fri-dec-11
+#| tbl-cap: "Presenters for Friday, December 11, 2026"
+# no_pref_remaining <- no_pref_remaining[no_pref_remaining$assigned == FALSE,]
+# 
+# thu_01_times <- c("09:05", "09:20", "09:35", "09:50", "10:05")
+# 
+# n_thu_01_remaining <- length(thu_01_times) - n_wed_09_df
+# 
+# index_to_assign <- c(1:length(no_pref_remaining))[1:n_thu_01_remaining]
+# 
+# new_thu_01_df <- rbind(thu_01_df, 
+#                        no_pref_remaining[index_to_assign,])
+# new_thu_01_df$Time <- thu_01_times[1:dim(new_thu_01_df)[1]]
+# 
+# # no_pref$assigned[index_to_assign] <- TRUE
+n_fri_11_df <- dim(fri_11_df)[1]
+
+# new_thu_01_df |>
+  fri_11_df  |>
+  dplyr::mutate(Time = times[1:n_fri_11_df]) |>
+  dplyr::filter(!is.na(Authors)) |>
+  dplyr::arrange(Time) |>
+  dplyr::select(Time, Authors, Title, Format) |>
+  kableExtra::kable(format = 'html') |>
+  kableExtra::kable_classic()
+```

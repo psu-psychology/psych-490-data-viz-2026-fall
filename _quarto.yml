@@ -115,6 +115,8 @@ website:
         - tutorials/tutorial-more-ggplot2.qmd
     - section: Supplemental
       contents:
+        - text: "Final project presentations"
+          href: supplemental/presentation-schedule.qmd
         - supplemental/psych-sci-figs.qmd
         # - supplemental/other-field-figs.qmd
         - text: "Student-generated surveys"
