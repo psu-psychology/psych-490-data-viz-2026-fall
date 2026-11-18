@@ -492,6 +492,4 @@ right_wrong_df |>
 
 - Work session
 
-# Resources
-
-## References
+{{< include _about_refs.qmd >}}

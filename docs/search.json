@@ -1228,7 +1228,7 @@
     "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#interim-check-1-of-2",
     "title": "Simulate",
     "section": "Interim check (1 of 2)",
-    "text": "Interim check (1 of 2)\n\nhead(stroop_df, n = 15)\n\n   trial   word cong_incong\n1      1    Red        cong\n2      2  Green        cong\n3      3   Blue      incong\n4      4  Green        cong\n5      5  Black      incong\n6      6   Blue        cong\n7      7  Black      incong\n8      8  Black        cong\n9      9    Red        cong\n10    10 Yellow        cong\n11    11 Yellow        cong\n12    12    Red        cong\n13    13    Red        cong\n14    14  Black        cong\n15    15  Green        cong",
+    "text": "Interim check (1 of 2)\n\nhead(stroop_df, n = 15)\n\n   trial   word cong_incong\n1      1   Blue        cong\n2      2  Black        cong\n3      3  Green        cong\n4      4    Red        cong\n5      5    Red      incong\n6      6   Blue        cong\n7      7  Black        cong\n8      8  Black        cong\n9      9  Green      incong\n10    10 Yellow        cong\n11    11 Yellow        cong\n12    12 Yellow        cong\n13    13  Green        cong\n14    14   Blue      incong\n15    15 Yellow        cong",
     "crumbs": [
       "Slides",
       "Wk 13 • Mon Nov 16"
@@ -10794,5 +10794,16 @@
     "title": "Anatomy of a Quarto document",
     "section": "Resources",
     "text": "Resources\nPut your resources here."
+  },
+  {
+    "objectID": "slides/wk-13-2026-11-16-simulate-synthesize.html#about",
+    "href": "slides/wk-13-2026-11-16-simulate-synthesize.html#about",
+    "title": "Simulate",
+    "section": "About",
+    "text": "About\nThis talk was produced using Quarto, using the RStudio Integrated Development Environment (IDE), version 2026.11.0.203.\nThe source files are in R and R Markdown, then rendered to HTML using the revealJS framework. The HTML slides are hosted in a GitHub repo and served by GitHub pages at: https://psu-psychology.github.io/psych-490-data-viz-2026-fall",
+    "crumbs": [
+      "Slides",
+      "Wk 13 • Mon Nov 16"
+    ]
   }
 ]
