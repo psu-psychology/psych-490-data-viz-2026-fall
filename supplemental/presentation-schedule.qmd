@@ -53,10 +53,14 @@ new_names <-
   )
 
 # Make new data frame with long and short names for reference
-presentation_qs <- tibble::tibble(q_long = names(presentations_df), q_short = new_names)
+presentation_qs <- tibble::tibble(q_long = names(presentations_df), 
+                                  q_short = new_names)
 
 # Swap out old (long) names for new (short) names
 names(presentations_df) <- new_names
+
+presentations_df <- presentations_df |>
+  dplyr::mutate(Timestamp = lubridate::mdy_hms(Timestamp))
 ```
 
 ## Show all presenters

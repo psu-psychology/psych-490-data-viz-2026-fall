@@ -118,7 +118,7 @@ website:
         - text: "Final project presentations"
           href: supplemental/presentation-schedule.qmd
         - supplemental/psych-sci-figs.qmd
-        # - supplemental/other-field-figs.qmd
+        - supplemental/other-field-figs.qmd
         - text: "Student-generated surveys"
           href: supplemental/student-generated-surveys.qmd
         - text: "Visualizing data from the *NY Times*"

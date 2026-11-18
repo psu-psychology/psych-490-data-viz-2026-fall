@@ -103,7 +103,7 @@
     "href": "supplemental/psych-sci-figs.html#preparation",
     "title": "Findings: Data viz in psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x83ef6c350&gt;\n&lt;environment: 0x83ef6c628&gt;",
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x7f8dcc008&gt;\n&lt;environment: 0x7f8dcc2e0&gt;",
     "crumbs": [
       "Supplemental",
       "Findings: Data viz in psych sci"
@@ -214,56 +214,88 @@
     "href": "supplemental/other-field-figs.html",
     "title": "Findings: Data viz outside psych sci",
     "section": "",
-    "text": "This page extracts information about the data visualizations we explored in Exercise-02 from the shared Google Sheet."
+    "text": "This page extracts information about the data visualizations we explored in Exercise-02 from the shared Google Sheet.",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#about",
     "href": "supplemental/other-field-figs.html#about",
     "title": "Findings: Data viz outside psych sci",
     "section": "",
-    "text": "This page extracts information about the data visualizations we explored in Exercise-02 from the shared Google Sheet."
+    "text": "This page extracts information about the data visualizations we explored in Exercise-02 from the shared Google Sheet.",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#google-sheet",
     "href": "supplemental/other-field-figs.html#google-sheet",
     "title": "Findings: Data viz outside psych sci",
     "section": "Google Sheet",
-    "text": "Google Sheet\nDirect link:\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing"
+    "text": "Google Sheet\nDirect link:\nhttps://docs.google.com/spreadsheets/d/1bTMuWopvUz8M1OHQU5mnMvWXvBMb3tj2sLFLGXHzviI/edit?usp=sharing",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#preparation",
     "href": "supplemental/other-field-figs.html#preparation",
     "title": "Findings: Data viz outside psych sci",
     "section": "Preparation",
-    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0xc03c3fe38&gt;\n&lt;environment: 0xc03c3c200&gt;"
+    "text": "Preparation\nFirst, we load the external packages (groups of R commands) that we will be using.\n\n\n\n\n\n\nImportant\n\n\n\nThe code uses the quietly() function from the purrr package to suppress most of the feedback.\n\n\n\n\nCode\nlibrary('ggplot2')\nlibrary('dplyr')\n\nr_functions &lt;- list.files(file.path(here::here(), \"R\"), \"\\\\.R$\", full.names = TRUE)\n\npurrr::map(r_functions, source) |&gt;\n  purrr::quietly()\n\n\nfunction (...) \ncapture_output(.f(...))\n&lt;bytecode: 0x81a87c5b8&gt;\n&lt;environment: 0x81a87c200&gt;",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#gathering",
     "href": "supplemental/other-field-figs.html#gathering",
     "title": "Findings: Data viz outside psych sci",
     "section": "Gathering",
-    "text": "Gathering\nNext, we download the data from the Google Sheet where it is collected. Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command Sys.getenv(\"GMAIL_SURVEY\").\n\n\n\n\n\n\nTip\n\n\n\nIt’s vital to be very careful when creating and sharing code like this that involves sensitive information like login credentials.\nGilmore likes to put credentials in an .Renviron file that lives in his home directory. This is a recommended practice. On Mac OS and Linux, that’s ~/.Renviron. You can use the usethis::edit_r_profile() command at the R console (not the Terminal) to open your own .Renviron file. In Gilmore’s case, he has added the following line to that file:\nGMAIL_SURVEY=\"&lt;my-google-account&gt;\"\nHere, he has substituted his Google account with credentials/access to the required files for &lt;my-google-account&gt;. Then, when the R code below calls Sys.getenv(\"GMAIL_SURVEY\"), the value of those credentials is returned as a text string.\nMake sure to close and save the .Renviron file and restart your R session before testing this yourself.\n\n\n\n\nCode\nif (!dir.exists('csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"PSYCH-490.007-Fall-2026-Biz-Govt\",\n    path = file.path(\"csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\n\nThe data file has been saved as a comma-separated value (CSV) format data file in a special directory called csv/.\n\n\n\n\n\n\nNote\n\n\n\nBecause these data might contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special .gitignore file."
+    "text": "Gathering\nNext, we download the data from the Google Sheet where it is collected. Dr. Gilmore has stored his Google account credentials in a special environment file that can be accessed by the R command Sys.getenv(\"GMAIL_SURVEY\").\n\n\n\n\n\n\nTip\n\n\n\nIt’s vital to be very careful when creating and sharing code like this that involves sensitive information like login credentials.\nGilmore likes to put credentials in an .Renviron file that lives in his home directory. This is a recommended practice. On Mac OS and Linux, that’s ~/.Renviron. You can use the usethis::edit_r_profile() command at the R console (not the Terminal) to open your own .Renviron file. In Gilmore’s case, he has added the following line to that file:\nGMAIL_SURVEY=\"&lt;my-google-account&gt;\"\nHere, he has substituted his Google account with credentials/access to the required files for &lt;my-google-account&gt;. Then, when the R code below calls Sys.getenv(\"GMAIL_SURVEY\"), the value of those credentials is returned as a text string.\nMake sure to close and save the .Renviron file and restart your R session before testing this yourself.\n\n\n\n\nCode\nif (!dir.exists('csv')) {\n  message(\"Creating missing `csv/`.\")\n  dir.create(\"csv\")\n}\n\nif (params$update_data) {\n  options(gargle_oauth_email = Sys.getenv(\"GMAIL_SURVEY\"))\n  googledrive::drive_auth()\n\n  googledrive::drive_download(\n    \"PSYCH-490.007-Fall-2026-Biz-Govt\",\n    path = file.path(\"csv\", params$fn),\n    type = \"csv\",\n    overwrite = TRUE\n  )\n  message(\"Data updated.\")\n} else {\n  message(\"Using stored data.\")\n}\n\n\nThe data file has been saved as a comma-separated value (CSV) format data file in a special directory called csv/.\n\n\n\n\n\n\nNote\n\n\n\nBecause these data might contain sensitive or identifiable information, we only keep a local copy and do not share it publicly via GitHub. This is achieved by adding the name of the data directory to a special .gitignore file.",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#cleaning",
     "href": "supplemental/other-field-figs.html#cleaning",
     "title": "Findings: Data viz outside psych sci",
     "section": "Cleaning",
-    "text": "Cleaning\nNext we load the saved data file, and then proceed to clean it.\n\n\nCode\nex02 &lt;-\n  readr::read_csv(file.path(\"csv\", params$fn), show_col_types = FALSE)\n\n\nThere are 20 responses.\nThese are the column/variable names.\n\n\nCode\n# Google Forms puts the full question in the top row of the data file.\n# We use the names() function to extract and print the original questions.\nex02_qs &lt;- names(ex02)\nex02_qs\n\n\n [1] \"identifier\"      \"source_type\"     \"url_to_src\"      \"bar_column\"     \n [5] \"pie_ring\"        \"scatter\"         \"hist_box_violin\" \"other\"          \n [9] \"url_to_figure\"   \"why_selected\"    \"comment\"        \n\n\nFor simplicity, we visualize below only those with non-empty URLs to the specific figure."
+    "text": "Cleaning\nNext we load the saved data file, and then proceed to clean it.\n\n\nCode\nex02 &lt;-\n  readr::read_csv(file.path(\"csv\", params$fn), show_col_types = FALSE)\n\n\nThere are 20 responses.\nThese are the column/variable names.\n\n\nCode\n# Google Forms puts the full question in the top row of the data file.\n# We use the names() function to extract and print the original questions.\nex02_qs &lt;- names(ex02)\nex02_qs\n\n\n [1] \"identifier\"      \"source_type\"     \"url_to_src\"      \"bar_column\"     \n [5] \"pie_ring\"        \"scatter\"         \"hist_box_violin\" \"other\"          \n [9] \"url_to_figure\"   \"why_selected\"    \"comment\"        \n\n\nFor simplicity, we visualize below only those with non-empty URLs to the specific figure.",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#summary-data",
     "href": "supplemental/other-field-figs.html#summary-data",
     "title": "Findings: Data viz outside psych sci",
     "section": "Summary data",
-    "text": "Summary data\n\n\nCode\nfigs_w_urls &lt;- ex02 |&gt;\n  filter(!is.na(url_to_figure))\n\n\nThere were n=7 unique respondents.\nOf the 20 responses from these individuals or teams, n=16 had URLs we could link to directly."
+    "text": "Summary data\n\n\nCode\nfigs_w_urls &lt;- ex02 |&gt;\n  filter(!is.na(url_to_figure))\n\n\nThere were n=7 unique respondents.\nOf the 20 responses from these individuals or teams, n=16 had URLs we could link to directly.",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "supplemental/other-field-figs.html#figures-found",
     "href": "supplemental/other-field-figs.html#figures-found",
     "title": "Findings: Data viz outside psych sci",
     "section": "Figures found",
-    "text": "Figures found\n\nCode\nthese_figs &lt;- ex02 |&gt;\n  filter(!is.na(url_to_figure))\n\nres &lt;- invisible(lapply(1:dim(these_figs)[1], return_img_chunk, df = these_figs))\ncat(unlist(res), sep = \"\\n\")\n\n\nFigure 1\nSource: https://www.pewresearch.org/journalism/2026/07/16/how-americans-are-engaged-with-news-politics-religion-and-civic-life/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nreport\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 2\nSource: https://www.nature.com/articles/s41598-025-86883-2?fromPaywallRec=false\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nreport\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 3\nSource: https://www.pewresearch.org/short-reads/2025/10/29/how-americans-trust-in-information-from-news-organizations-and-social-media-sites-has-changed-over-time/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nresearch\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 4\nSource: https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/business-trends-2026\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nnatalie\nreport\nInteresting to see greater optimism for organizations compared to global/national economies\n\n\n\n\n\n\nComments\n\n\n\n\nExecutive Perspectives\n\n\n\n\n\nFigure 5\nSource: https://www.pewresearch.org/global/2026/02/17/where-in-the-world-are-people-proud-of-their-countrys-culture-and-lifestyle/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nnatalie\nreport\nShows differences in national pride for arts/cultures around the world\n\n\n\n\n\n\nComments\n\n\n\n\nBar graph descending by %\n\n\n\n\n\nFigure 6\nSource: https://www.pewresearch.org/short-reads/2024/02/05/by-a-wide-margin-americans-say-football-not-baseball-is-americas-sport/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nnatalie\nreport\nShows strong evidence that football is recognized as america’s sports even by those who don’t keep up with sports\n\n\n\n\n\n\nComments\n\n\n\n\nBar graph descending by %\n\n\n\n\n\nFigure 7\nSource: \n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 8\nSource: https://ourworldindata.org/data-insights/global-average-life-expectancy-has-more-than-doubled-since-1900\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 9\nSource: https://viziball.app/nba/en/player/20260605/20260613/fc/1/10/avg/DESC/0/48/0/100/all/all\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 10\nSource: https://www.statista.com/chart/32866/least-listened-to-genres/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 11\nSource: https://www.advancedfootballanalytics.com/2010/01/run-pass-balance-historical-analysis.html\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nResearch\nInteresting to show sports frequency changes over time in american football\n\n\n\n\n\n\nComments\n\n\n\n\nFootball, table\n\n\n\n\n\nFigure 12\nSource: https://www.oliverwyman.com/our-expertise/insights/2026/jan/impact-ai-bubble-burst-on-global-financial-markets.html\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nResearch\nInteresting data that shows swings in the AI bubble market over time\n\n\n\n\n\n\nComments\n\n\n\n\nEconomics, table\n\n\n\n\n\nFigure 13\nSource: https://www.economist.com/graphic-detail/2026/07/26/how-big-is-americas-obesity-penalty\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\njournalism\nI selected this because I find the rise of GLP-s very intresting\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nLine graph showing increase in rates of marriage, emplyment, and hours worked\n\n\n\n\n\nFigure 14\nSource: https://ourworldindata.org/a-never-ending-childhood-of-malaria\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nWebsite\neasy to see how frequently individual children experience malaria\n\n\n\n\n\n\nComments\n\n\n\n\nBar graph showing malaria infections\n\n\n\n\n\nFigure 15\nSource: https://www.bea.gov/data/special-topics/arts-and-culture\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nWebsite\neasy to understand arts and cultural economic activity across states\n\n\n\n\n\n\nComments\n\n\n\n\nGovernment/BEA source; includes state-level data\n\n\n\n\n\nFigure 16\nSource: https://ourworldindata.org/grapher/population-with-un-projections?\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nwebsite\nShows population changes over time and includes projections for future population\n\n\n\n\n\n\nComments\n\n\n\n\nNA"
+    "text": "Figures found\n\nCode\nthese_figs &lt;- ex02 |&gt;\n  filter(!is.na(url_to_figure))\n\nres &lt;- invisible(lapply(1:dim(these_figs)[1], return_img_chunk, df = these_figs))\ncat(unlist(res), sep = \"\\n\")\n\n\nFigure 1\nSource: https://www.pewresearch.org/journalism/2026/07/16/how-americans-are-engaged-with-news-politics-religion-and-civic-life/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nreport\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 2\nSource: https://www.nature.com/articles/s41598-025-86883-2?fromPaywallRec=false\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nreport\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 3\nSource: https://www.pewresearch.org/short-reads/2025/10/29/how-americans-trust-in-information-from-news-organizations-and-social-media-sites-has-changed-over-time/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nganiya\nresearch\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 4\nSource: https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/business-trends-2026\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nnatalie\nreport\nInteresting to see greater optimism for organizations compared to global/national economies\n\n\n\n\n\n\nComments\n\n\n\n\nExecutive Perspectives\n\n\n\n\n\nFigure 5\nSource: https://www.pewresearch.org/global/2026/02/17/where-in-the-world-are-people-proud-of-their-countrys-culture-and-lifestyle/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nnatalie\nreport\nShows differences in national pride for arts/cultures around the world\n\n\n\n\n\n\nComments\n\n\n\n\nBar graph descending by %\n\n\n\n\n\nFigure 6\nSource: https://www.pewresearch.org/short-reads/2024/02/05/by-a-wide-margin-americans-say-football-not-baseball-is-americas-sport/\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nnatalie\nreport\nShows strong evidence that football is recognized as america’s sports even by those who don’t keep up with sports\n\n\n\n\n\n\nComments\n\n\n\n\nBar graph descending by %\n\n\n\n\n\nFigure 7\nSource: \n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nDaniel\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 8\nSource: https://ourworldindata.org/data-insights/global-average-life-expectancy-has-more-than-doubled-since-1900\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 9\nSource: https://viziball.app/nba/en/player/20260605/20260613/fc/1/10/avg/DESC/0/48/0/100/all/all\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 10\nSource: https://www.statista.com/chart/32866/least-listened-to-genres/\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nPaul\nNA\nNA\n\n\n\n\n\n\nComments\n\n\n\n\nNA\n\n\n\n\n\nFigure 11\nSource: https://www.advancedfootballanalytics.com/2010/01/run-pass-balance-historical-analysis.html\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nResearch\nInteresting to show sports frequency changes over time in american football\n\n\n\n\n\n\nComments\n\n\n\n\nFootball, table\n\n\n\n\n\nFigure 12\nSource: https://www.oliverwyman.com/our-expertise/insights/2026/jan/impact-ai-bubble-burst-on-global-financial-markets.html\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\nResearch\nInteresting data that shows swings in the AI bubble market over time\n\n\n\n\n\n\nComments\n\n\n\n\nEconomics, table\n\n\n\n\n\nFigure 13\nSource: https://www.economist.com/graphic-detail/2026/07/26/how-big-is-americas-obesity-penalty\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nAiden/Luana\njournalism\nI selected this because I find the rise of GLP-s very intresting\n\n\n\n\n\n\n\n\n\nComments\n\n\n\n\nLine graph showing increase in rates of marriage, emplyment, and hours worked\n\n\n\n\n\nFigure 14\nSource: https://ourworldindata.org/a-never-ending-childhood-of-malaria\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nWebsite\neasy to see how frequently individual children experience malaria\n\n\n\n\n\n\nComments\n\n\n\n\nBar graph showing malaria infections\n\n\n\n\n\nFigure 15\nSource: https://www.bea.gov/data/special-topics/arts-and-culture\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nWebsite\neasy to understand arts and cultural economic activity across states\n\n\n\n\n\n\nComments\n\n\n\n\nGovernment/BEA source; includes state-level data\n\n\n\n\n\nFigure 16\nSource: https://ourworldindata.org/grapher/population-with-un-projections?\n\n\n\n\n\n\n\n\n\nAnalyst\nSource Type\nWhy Selected\n\n\n\n\nIshita\nwebsite\nShows population changes over time and includes projections for future population\n\n\n\n\n\n\nComments\n\n\n\n\nNA",
+    "crumbs": [
+      "Supplemental",
+      "Findings: Data viz outside psych sci"
+    ]
   },
   {
     "objectID": "tutorials/tutorial-tidying-data.html",
@@ -10557,7 +10589,7 @@
     "href": "supplemental/presentation-schedule.html",
     "title": "Presentation schedule",
     "section": "",
-    "text": "Tentative schedule as of 2026-11-17 13:00:22.936234.",
+    "text": "Tentative schedule as of 2026-11-17 18:10:55.348788.",
     "crumbs": [
       "Supplemental",
       "Final project presentations"
@@ -10590,7 +10622,7 @@
     "href": "supplemental/presentation-schedule.html#clean-the-data",
     "title": "Presentation schedule",
     "section": "Clean the data",
-    "text": "Clean the data\n\n\nCode\nnew_names &lt;-\n  c(\n    \"Timestamp\",\n    \"Authors\",\n    \"Title\",\n    \"Format\",\n    \"Give_talk\",\n    \"Preferred_date\"\n  )\n\n# Make new data frame with long and short names for reference\npresentation_qs &lt;- tibble::tibble(q_long = names(presentations_df), q_short = new_names)\n\n# Swap out old (long) names for new (short) names\nnames(presentations_df) &lt;- new_names",
+    "text": "Clean the data\n\n\nCode\nnew_names &lt;-\n  c(\n    \"Timestamp\",\n    \"Authors\",\n    \"Title\",\n    \"Format\",\n    \"Give_talk\",\n    \"Preferred_date\"\n  )\n\n# Make new data frame with long and short names for reference\npresentation_qs &lt;- tibble::tibble(q_long = names(presentations_df), \n                                  q_short = new_names)\n\n# Swap out old (long) names for new (short) names\nnames(presentations_df) &lt;- new_names\n\npresentations_df &lt;- presentations_df |&gt;\n  dplyr::mutate(Timestamp = lubridate::mdy_hms(Timestamp))",
     "crumbs": [
       "Supplemental",
       "Final project presentations"
@@ -10601,7 +10633,7 @@
     "href": "supplemental/presentation-schedule.html#show-all-presenters",
     "title": "Presentation schedule",
     "section": "Show all presenters",
-    "text": "Show all presenters\n\nPresenters\n\n\nCode\npresentations_df |&gt;\n  dplyr::filter(!stringr::str_detect(Preferred_date, \"Not presenting\")) |&gt;\n  dplyr::arrange(Timestamp) |&gt;\n  dplyr::select(Timestamp, Authors, Preferred_date) |&gt;\n  kableExtra::kable(format = 'html')\n\n\n\n\n\nTimestamp\nAuthors\nPreferred_date\n\n\n\n\n11/13/2026 15:51:13\nCallie Milionis\nNo preference\n\n\n11/13/2026 16:22:52\nGabrielle Courtright\nWed Dec 09\n\n\n11/6/2026 15:50:57\nNatalie Fabian\nNo preference\n\n\n11/6/2026 15:51:40\nGeorge Stevens\nMon Dec 07\n\n\n11/6/2026 15:52:00\nIshita Gupta\nWed Dec 09\n\n\n11/9/2026 15:36:26\nGaniya Gupta\nFri Dec 11\n\n\n\n\n\n\n\nNot presenting\n\n\nCode\npresentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Not presenting\")) |&gt;\n  dplyr::arrange(Timestamp) |&gt;\n  dplyr::select(Timestamp, Authors) |&gt;\n  kableExtra::kable(format = 'html')\n\n\n\n\n\nTimestamp\nAuthors\n\n\n\n\n11/13/2026 15:40:47\nDaniel Rodriguez\n\n\n11/13/2026 15:47:43\nMinjoo Kim\n\n\n11/6/2026 16:14:50\nMaria Leana, Elaina Steinberg, Olivia Gangi",
+    "text": "Show all presenters\n\nPresenters\n\n\nCode\npresentations_df |&gt;\n  dplyr::filter(!stringr::str_detect(Preferred_date, \"Not presenting\")) |&gt;\n  dplyr::arrange(Timestamp) |&gt;\n  dplyr::select(Timestamp, Authors, Preferred_date) |&gt;\n  kableExtra::kable(format = 'html')\n\n\n\n\n\nTimestamp\nAuthors\nPreferred_date\n\n\n\n\n2026-11-06 15:50:57\nNatalie Fabian\nNo preference\n\n\n2026-11-06 15:51:40\nGeorge Stevens\nMon Dec 07\n\n\n2026-11-06 15:52:00\nIshita Gupta\nWed Dec 09\n\n\n2026-11-09 15:36:26\nGaniya Gupta\nFri Dec 11\n\n\n2026-11-13 15:51:13\nCallie Milionis\nNo preference\n\n\n2026-11-13 16:22:52\nGabrielle Courtright\nWed Dec 09\n\n\n\n\n\n\n\nNot presenting\n\n\nCode\npresentations_df |&gt;\n  dplyr::filter(stringr::str_detect(Preferred_date, \"Not presenting\")) |&gt;\n  dplyr::arrange(Timestamp) |&gt;\n  dplyr::select(Timestamp, Authors) |&gt;\n  kableExtra::kable(format = 'html')\n\n\n\n\n\nTimestamp\nAuthors\n\n\n\n\n2026-11-06 16:14:50\nMaria Leana, Elaina Steinberg, Olivia Gangi\n\n\n2026-11-13 15:40:47\nDaniel Rodriguez\n\n\n2026-11-13 15:47:43\nMinjoo Kim",
     "crumbs": [
       "Supplemental",
       "Final project presentations"

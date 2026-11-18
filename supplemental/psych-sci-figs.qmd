@@ -1,6 +1,8 @@
 ---
 title: "Findings: Data viz in psych sci"
-format: html
+format: 
+  html:
+    embed-resources: true
 params:
   update_data: true
   fn: "ex01-figs-in-psych-sci.csv"
