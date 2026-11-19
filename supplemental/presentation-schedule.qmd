@@ -145,7 +145,12 @@ new_mon_07_df |>
 n_wed_09_df <- dim(wed_09_df)[1]
 
 # no_pref_remaining <- no_pref[no_pref$assigned == FALSE,]
-# n_tue_29_remaining <- length(times) - n_wed_09_df
+n_wed_09_remaining <- length(times) - n_wed_09_df
+if (n_wed_09_remaining <= 0) {
+  fri_11_df <- rbind(fri_11_df, wed_09_df[4,])
+  wed_09_df <- wed_09_df[1:length(times),]
+  n_wed_09_df <- length(times)
+}
 # 
 # index_to_assign <- c(1:length(no_pref_remaining))[1:n_tue_29_remaining]
 # 
@@ -186,7 +191,7 @@ wed_09_df |>
 n_fri_11_df <- dim(fri_11_df)[1]
 
 # new_thu_01_df |>
-  fri_11_df  |>
+fri_11_df  |>
   dplyr::mutate(Time = times[1:n_fri_11_df]) |>
   dplyr::filter(!is.na(Authors)) |>
   dplyr::arrange(Time) |>
